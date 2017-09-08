@@ -1,0 +1,9 @@
+app/
+css/
+node_modules/
+ships/
+src/
+vendor/
+*.xlsx
+index_Old.html
+*.lnk

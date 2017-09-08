@@ -1,0 +1,58 @@
+.sidebar {
+	background-color: #eee;
+	height: 100vh;
+	overflow-y: scroll;
+	padding: .5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+@media (max-width: $breakpoint-md - 1) {
+
+	.sidebar {
+		transition: transform 0.3s ease;
+		transform: translateY( -100vh ); /* Collapsed state */
+		width: 100vw;
+		z-index: 100;
+	}
+
+	#sidebar:target {
+		transform: translateY(0); /* Uncollapsed state */
+	}
+
+}
+
+@media (min-width: $breakpoint-md) {
+	.sidebar {
+		width: 35%;
+	}
+}
+
+@media (min-width: $breakpoint-lg) {
+	.sidebar {
+		width: 25%;
+	}
+}
+
+/*
+.sidebar {
+	background-color: $background-color-main;
+	-ms-flex-line-pack: justify;
+	align-content: space-between;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	height: 100%;
+	overflow-y: scroll;
+	padding: 1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20%;
+}
+
+
+*/

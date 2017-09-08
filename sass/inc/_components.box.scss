@@ -1,0 +1,46 @@
+.box {
+	background-color: $background-color-main;
+}
+
+.box__cost {
+	background-color: $background-color-highlight;
+}
+
+.box {
+	padding: 1em;
+}
+
+.box + .box {
+	margin-top: 2em;
+}
+
+ul.box__select {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.box__info,
+.box__cost {
+	margin-top: 1em;
+}
+
+.box__info--output h3 {
+	margin-bottom: 0;
+}
+
+.box__info--output p {
+	margin: 0;
+}
+
+.box__cost {
+	margin-left: -1em;
+	margin-bottom: -1em;
+	width: calc(100% + 2em);
+	padding: 1em;
+}
+
+.box__cost,
+.box__cost--list {
+	text-align: right;
+}
+
