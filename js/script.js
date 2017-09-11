@@ -8,18 +8,13 @@ var WEAPON_SORT = {
 	turret: 4
 };
 
+var WEAPON_ARCS = [
+	"forward", "aft", "port", "starboard"
+];
+
 /**
  * HELPERS
  */
-
-function getSortKeyForShipWeapon(shipWeaponId) {
-	var keyAr = shipWeaponId["position"].split("_");
-	var position = keyAr[0];
-	var index = parseInt(keyAr[1]);
-	var positionSort = WEAPON_SORT[position];
-	var sortKey = (positionSort * 10 + index);
-	return sortKey;
-}
 
 function maybeCreateProperty(obj, prop, type) {
 	if(typeof obj !== "object") {
@@ -106,10 +101,6 @@ function loadJSON(file, callback) {
     xobj.send(null);  
 }
 
-function pluralise(str, count) {
-	return str + (count == 1 ? "" : "s");
-}
-
 function addTimedClass( obj, className, duration )
 {
 	addClass( obj, className );
@@ -124,6 +115,16 @@ function addClass( obj, className ) {
 
 function removeClass( obj, className ) {
 	obj.className = obj.className.replace(className, '');
+}
+
+String.prototype.pluralise = function( count ) {
+	return this + (count == 1 ? "" : "s");
+}
+
+String.prototype.toTitleCase = function() {
+	return this.replace(/\w\S*/g, function(txt){
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	});
 }
 
 /**
@@ -180,7 +181,7 @@ function Ship(json) {
 				shipConcept:"",
 				tierId:"1",
 				frameId:"light-freighter",
-				powerCoreId:"none",
+				powerCoreIds:["none"],
 				thrustersId:"none",
 				armourId:"none",
 				computerId:"basic-computer",
@@ -195,28 +196,138 @@ function Ship(json) {
 				hasSelfDestructSystem:0,
 				sensorsId:"none",
 				shieldsId:"none",
-				shipWeaponIds:[
-					{
-						position:"forwardArc_0",
-						id:"none",
-						weight:"light"
-					},
-					{
-						position:"forwardArc_1",
-						id:"none",
-						weight:"light"
-					},
-					{
-						position:"portArc_0",
-						id:"none",
-						weight:"light"
-					},
-					{
-						position:"starboardArc_0",
-						id:"none",
-						weight:"light"
-					}
-				],
+				weaponMounts: {
+					forward: [
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true
+						},
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true
+						}
+					],
+					aft: [],
+					port: [
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true
+						}
+					],
+					starboard: [
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true
+						}
+					],
+					turret: []
+				},
+				crewSkills: {
+					captain: {
+						hasRole: true,
+						skills: {
+							bluff: {
+								modifier: 0,
+								ranks: 0,
+								level: "none"
+							},
+							computers: {
+								modifier: 0,
+								ranks: 0,
+								level: "good"
+							},
+							diplomacy: {
+								modifier: 0,
+								ranks: 0,
+								level: "good"
+							},
+							engineering: {
+								modifier: 0,
+								ranks: 0,
+								level: "none"
+							},
+							gunnery: {
+								modifier: 0,
+								level: "good"
+							},
+							intimidate: {
+								modifier: 0,
+								ranks: 0,
+								level: "good"
+							},
+							piloting: {
+								modifier: 0,
+								ranks: 0,
+								level: "good"
+							}
+						}
+					}, // captain
+					engineer: {
+						countOfficers: 1,
+						countOfficerCrew: 0,
+						hasRole: true,
+						skills: {
+							engineering: {
+								modifier: 0,
+								ranks: 0,
+								level: "good"
+							}
+						}
+					}, // engineer
+					gunner: {
+						countOfficers: 1,
+						countOfficerCrew: 0,
+						hasRole: true,
+						skills: {
+							gunnery: {
+								modifier: 0,
+								level: "good"
+							}
+						}
+					}, // gunner
+					pilot: {
+						countOfficers: 1,
+						countOfficerCrew: 0,
+						hasRole: true,
+						skills: {
+							computers: {
+								modifier: 0,
+								ranks: 0,
+								level: "none"
+							},
+							gunnery: {
+								modifier: 0,
+								level: "none"
+							},
+							piloting: {
+								modifier: 0,
+								ranks: 0,
+								level: "master"
+							},
+						}
+					}, // pilot
+					scienceOfficer: {
+						countOfficers: 1,
+						countOfficerCrew: 0,
+						hasRole: true,
+						skills: {
+							computers: {
+								modifier: 0,
+								ranks: 0,
+								level: "good"
+							}
+						}
+					} // scienceOfficer
+				} // crewSkills
+				/*
 				crewSkills: {
 					captain: {
 						hasRole: true,
@@ -301,6 +412,7 @@ function Ship(json) {
 						}
 					} // scienceOfficer
 				} // crewSkills
+			*/
 			},
 			params: {},
 			json: ""
@@ -393,6 +505,17 @@ function Ship(json) {
 				}
 				return cost;
 			},
+			countPowerCoreHousings: function() {
+				var countHousings = this.sizeCategory.countPowerCoreHousings;
+				if(
+					(this.sizeCategory.id == "Medium" || this.sizeCategory.id == "Large") &&
+					this.hasPowerCoreHousingExpansionBay
+				) {
+					countHousings++;
+				}
+				this.adjustPowerCoreIds(countHousings);
+				return countHousings;
+			},
 			crewQuarters: function() {
 				return this.getItemById("crewQuarters", this.params.crewQuartersId);
 			},
@@ -422,7 +545,7 @@ function Ship(json) {
 							desc[role] += this.getPrefixedModifier(modifier);
 							// skill ranks
 							if( isset(skillObj.ranks) ) {
-								desc[role] += " (" + skillObj.ranks + " " + pluralise("rank", skillObj.ranks) + ")";
+								desc[role] += " (" + skillObj.ranks + " " + "rank".pluralise(skillObj.ranks) + ")";
 							}
 							// comma
 							desc[role] += ", ";
@@ -489,10 +612,25 @@ function Ship(json) {
 			},
 			frame: function() {
 				var frame = this.getItemById("frame", this.params.frameId);
-				this.syncExpansionBays( frame.expansionBays );
-				this.syncShipWeapons( frame.mounts );
-				this.setCrewQuarters( frame.size );
 				return frame;
+			},
+			/*
+			frame: function() {
+				var frame = this.getItemById("frame", this.params.frameId);
+				this.syncExpansionBays( frame.expansionBays );
+				this.setCrewQuarters( frame.size );
+				this.setWeaponMounts( frame.mounts );
+				return frame;
+			},
+			*/
+			hasPowerCoreHousingExpansionBay: function() {
+				var result = false;
+				for( i in this.params.expansionBayIds ) {
+					if( this.params.expansionBayIds[i] == "power-core-housing") {
+						result =  true;
+					}
+				}
+				return result;
 			},
 			hasSecurity: function() {
 				return (this.params.hasAntiHackingSystems || this.params.antiPersonnelWeaponId !== "none" ||
@@ -513,7 +651,7 @@ function Ship(json) {
 				return isComplementValid;
 			},
 			isPcuCostOverBudget: function() {
-				return (this.totalPcuCost > this.powerCore.pcuBudget);
+				return (this.totalPcuCost.essential > this.pcuBudget);
 			},
 			isExpansionBaysCountOverBudget: function() {
 				return (this.expansionBaysCountUsed > this.frame.expansionBays);
@@ -552,11 +690,38 @@ function Ship(json) {
 				}
 				return pilotingRanks;
 			},
-			powerCore:function() {
-				return this.getItemById("powerCore", this.params.powerCoreId);
+			pcuBudget: function() {
+				var pcuBudget = 0;
+				for(i in this.powerCores) {
+					pcuBudget += this.powerCores[i].pcuBudget;
+				}
+				return pcuBudget;
 			},
-			powerCoreSizeList: function() {
-				return this.powerCore.sizes.join(", ");
+			powerCoreDescription: function() {
+				var desc = [];
+				for(i in this.powerCores) {
+					var powerCore = this.powerCores[i];
+					if(powerCore.id !== "none") {
+						desc.push(powerCore.name + " (" + powerCore.pcuBudget + " PCU)");
+					}
+				}
+				return desc.join(", ");
+			},
+			powerCores: function() {
+				powerCores = [];
+				for(i in this.params.powerCoreIds) {
+					var powerCore = cloneObject( this.getItemById("powerCore", this.params.powerCoreIds[i]) );
+					powerCore.sizeList = powerCore.sizes.join(", ");
+					powerCores.push( powerCore );
+				}
+				return powerCores;
+			},
+			powerCoresBpCost:function() {
+				var bpCost = 0;
+				for(i in this.powerCores) {
+					bpCost += this.powerCores[i].bpCost;
+				}
+				return bpCost;
 			},
 			roleDescription: function() {
 				roleDesc = {};
@@ -567,7 +732,7 @@ function Ship(json) {
 						if(isset(roleObj.countOfficerCrew) && roleObj.countOfficerCrew > 0) {
 							// at least one officer with large team
 							var officers = [];
-							officers.push( roleObj.countOfficers + " " + pluralise("officer", roleObj.countOfficers) );
+							officers.push( roleObj.countOfficers + " " + "officer".pluralise(roleObj.countOfficers) );
 							officers.push( roleObj.countOfficerCrew + " crew" + (roleObj.countOfficers > 1 ? " each" : ""));
 							roleDesc[role] += " (" + officers.join(", ") + ")";
 						} else if(roleObj.countOfficers > 1) {
@@ -660,23 +825,8 @@ function Ship(json) {
 				}
 				return shieldsByPosition;
 			},
-			shipWeapons: function() {
-				var shipWeapons = [];
-				var i = 0;
-				for(position in this.frame.mounts) {
-					for(index in this.frame.mounts[position]) {
-						shipWeapons[i] = cloneObject(this.getItemById("shipWeapon", this.params.shipWeaponIds[i].id));
-						shipWeapons[i].positionName = this.getItemById("weaponPosition", position).name;
-						i++;
-					}
-				}
-				return shipWeapons;
-			},
-			shipWeaponsTotalBpCost: function() {
-				return this.getSumOfPropertyValuesInCollection(this.shipWeapons, "bpCost");
-			},
-			shipWeaponsTotalPcuCost: function() {
-				return this.getSumOfPropertyValuesInCollection(this.shipWeapons, "pcuCost");
+			shipName: function() {
+				return (this.params.shipName == "" ? "New Ship" : this.params.shipName);
 			},
 			sizeCategory: function() {
 				return this.getItemById("sizeCategory", this.frame.size);
@@ -745,17 +895,18 @@ function Ship(json) {
 				return tier;
 			},
 			totalPcuCost: function() {
-				return this.thrusters.pcuCost +
-					this.computer.pcuCost +
-					this.defensiveCountermeasures.pcuCost +
-					this.expansionBaysTotalPcuCost +
-					this.shields.pcuCost +
-					this.shipWeaponsTotalPcuCost
-				;
+				return {
+					essential: this.thrusters.pcuCost +
+						this.defensiveCountermeasures.pcuCost +
+						this.shields.pcuCost +
+						this.weaponsTotalCosts.weaponsPcu,
+					nonEssential: this.computer.pcuCost +
+						this.expansionBaysTotalPcuCost
+				};
 			},
 			totalBpCost: function() {
 				return this.frame.bpCost +
-					this.powerCore.bpCost +
+					this.powerCoresBpCost +
 					this.thrusters.bpCost +
 					this.armourBpCost +
 					this.computer.bpCost +
@@ -770,8 +921,63 @@ function Ship(json) {
 					this.selfDestructSystemBpCost +
 					this.sensors.bpCost +
 					this.shields.bpCost +
-					this.shipWeaponsTotalBpCost
+					this.weaponsTotalCosts.weaponsBp +
+					this.weaponsTotalCosts.weaponMountsBp
 				;
+			},
+			weaponDescriptions: function() {
+				var desc = {};
+				for(position in this.weaponMounts) {
+					var positionDesc = [];
+					for(i in this.weaponMounts[position]) {
+						var mount = this.weaponMounts[position][i];
+						if(mount.weapon.id !== "none") {
+							positionDesc.push(mount.weapon.name + " (" + mount.weapon.damage + ")");
+						}
+					}
+					if(positionDesc.length > 0) {
+						desc[position] = positionDesc.join(", ");
+					}
+				}
+				return desc;
+			},
+			weaponMounts: function() {
+				var weaponMounts = {};
+				for(position in this.params.weaponMounts ) {
+					weaponMounts[position] = [];
+					for(i in this.params.weaponMounts[position]) {
+						var params = cloneObject(this.params.weaponMounts[position][i]);
+						params.position = position;
+						var mountObj = new WeaponMount(params);
+						var weaponObj = this.getItemById('shipWeapon', mountObj.weaponId);
+						weaponMounts[position][i] = {
+							weight: params.weight,
+							mountBpCost: mountObj.getCost(),
+							weapon: this.getItemById('shipWeapon', params.weaponId),
+							canBeUpgraded: this.canWeaponMountBeUpgraded(position, params.weight),
+							canBeDowngraded: this.canWeaponMountBeDowngraded(params.weight, params.isFromTemplate,
+								params.templateWeight),
+							isFromTemplate: params.isFromTemplate
+						};
+					}
+				}
+				return weaponMounts;
+			},
+			weaponsTotalCosts: function() {
+				var totals = {
+					weaponMountsBp: 0,
+					weaponsBp: 0,
+					weaponsPcu: 0
+				};
+				for(position in this.weaponMounts) {
+					for(i in this.weaponMounts[position]) {
+						totals.weaponMountsBp += this.weaponMounts[position][i].mountBpCost;
+						totals.weaponsBp += this.weaponMounts[position][i].weapon.bpCost;
+						totals.weaponsPcu += this.weaponMounts[position][i].weapon.pcuCost;
+					}
+				}
+				return totals;
+
 			}
 		},
 		methods: {
@@ -819,6 +1025,11 @@ function Ship(json) {
 				}
 				return item;
 			},
+			updateFrame: function() {
+				this.syncExpansionBays( this.frame.expansionBays );
+				this.setCrewQuarters( this.frame.size );
+				this.setWeaponMounts( this.frame.mounts );
+			},
 			syncExpansionBays: function( targetCountBays ) {
 				this.popExcessExpansionBays( targetCountBays );
 				this.maybeCreateExpansionBays(  targetCountBays );
@@ -838,57 +1049,6 @@ function Ship(json) {
 					}
 				}
 			},
-			syncShipWeapons: function( mounts ) {
-				this.popExcessShipWeapons( mounts );
-				this.maybeCreateShipWeapons( mounts );
-				this.sortShipWeapons();
-			},
-			popExcessShipWeapons: function( mounts ) {
-				for(var i = this.params.shipWeaponIds.length - 1; i >= 0; i--) {
-					var mountKey = this.params.shipWeaponIds[i].position;
-					if( !this.doesWeaponExistAtMountPosition(mounts, mountKey, i) ) {
-						this.params.shipWeaponIds.splice(i, 1);
-					}
-				}
-			},
-			doesWeaponExistAtMountPosition: function(mounts, mountKey, i) {
-				var mountKeyAr = mountKey.split("_");
-				var mountPosition = mountKeyAr[0];
-				var mountIndex = mountKeyAr[1];
-				var shipWeaponIdObj = this.params.shipWeaponIds.find(function(item) {
-					return item.position == mountKey;
-				});
-				if(
-					mounts.hasOwnProperty( mountPosition ) &&
-					shipWeaponIdObj.weight == mounts[mountPosition][mountIndex]
-				) {
-					return true;
-				}
-				return false;
-			},
-			maybeCreateShipWeapons: function( mounts ) {
-				for(position in mounts) {
-					for(index in mounts[position]) {
-						var mountKey = position + "_" + index;
-						var shipWeaponIdObj = this.params.shipWeaponIds.find(function(item) {
-							return item.position == mountKey;
-						});
-						if( !isset(shipWeaponIdObj) ) {
-							var obj = {
-								position: position + "_" + index,
-								id: "none",
-								weight: mounts[position][index]
-							};
-							this.params.shipWeaponIds.push(obj);
-						}
-					}
-				}
-			},
-			sortShipWeapons: function() {
-				this.params.shipWeaponIds.sort(function(weaponA, weaponB){
-					return getSortKeyForShipWeapon(weaponA) - getSortKeyForShipWeapon(weaponB);
-				});
-			},
 			setCrewQuarters: function( frameSize ) {
 				if( frameSize == "Tiny" ) {
 					if( this.params.crewQuartersId !== "none" ) {
@@ -907,15 +1067,33 @@ function Ship(json) {
 				}
 				return total;
 			},
-			getShipWeaponAtPosition: function(position, index) {
-				return this.getItemById("shipWeapon", this.params.shipWeaponIds[position][index]);
+			setWeaponMounts: function(mounts) {
+				this.clearWeaponMounts();
+				// console.log(this.params.weaponMounts);
+				var positions = ["forward", "aft", "port", "starboard", "turret"];
+				for(i in positions) {
+					var position = positions[i];
+					if( isset(mounts[position]) ) {
+						var mountsInCurrentPosition = mounts[position];
+						for(j in mountsInCurrentPosition) {
+							var mountWeight = mountsInCurrentPosition[j];
+							var objMount = {
+								weaponId: "none",
+								weight: mountWeight,
+								templateWeight: mountWeight,
+								isFromTemplate: true
+							}
+							this.params.weaponMounts[position].push(objMount);
+						} // for j
+					} // if
+				} // for i
 			},
-			getShipWeaponPositionName: function(position) {
-				var positionData = position.split("_");
-				var positionTitle = this.getItemById("weaponPosition", positionData[0]).name;
-				var positionIndex = parseInt(positionData[1]);
-				var positionWeight = this.getFrameMountWeaponWeight(positionData[0], positionIndex);
-				return positionTitle + " " + (positionIndex + 1) + " (" + positionWeight + ")";
+			clearWeaponMounts: function() {
+				for(position in this.params.weaponMounts) {
+					// var mountList = this.params.weaponMounts[position];
+					this.params.weaponMounts[position].splice(0, this.params.weaponMounts[position].length); // start, deleteCount
+				}
+				// console.log(this.params.weaponMounts);
 			},
 			getFrameMountWeaponWeight: function(position, index) {
 				return this.frame.mounts[position][index];
@@ -970,12 +1148,194 @@ function Ship(json) {
 						this.params[key] = cloneObject(this.paramsReset[key]);
 					}
 				}
+			},
+			createWeaponMount: function(position) {
+				var newMount = {
+					weaponId: "none",
+					weight: "light",
+					isFromTemplate: false
+				};
+				this.params.weaponMounts[position].push(newMount);
+			},
+			destroyWeaponMount: function(position, i) {
+				this.params.weaponMounts[position].splice(i, 1); // start, deleteCount
+			},
+			canWeaponMountBeCreated: function(position) {
+				var result = true;
+				var countMountsInPosition = this.params.weaponMounts[position].length;
+				if(countMountsInPosition >= this.sizeCategory.maxMounts) {
+					result = false;
+				}
+				return result;
+			},
+			upgradeWeaponMount: function(position, i) {
+				var weaponMount = this.params.weaponMounts[position][i];
+				if(weaponMount.weight == "light") {
+					weaponMount.weight = "heavy";
+				} else {
+					weaponMount.weight = "capital";
+				}
+				weaponMount.weaponId = "none";
+			},
+			downgradeWeaponMount: function(position, i) {
+				var weaponMount = this.params.weaponMounts[position][i];
+				if(weaponMount.weight == "capital") {
+					weaponMount.weight = "heavy";
+				} else {
+					weaponMount.weight = "light";
+				}
+				weaponMount.weaponId = "none";
+			},
+			canWeaponMountBeUpgraded: function(position, weight) {
+				var result = true;
+				var weights = {light: 0, heavy: 1, capital: 2};
+				// check weight
+				// Heavy weapon mounts can only appear on a Medium or larger ship,
+				// capital weapon mounts can only appear on a Huge or larger ship.
+				if(weights[weight] >= weights[this.sizeCategory.maxMountWeight]) {
+					result = false;
+				} else {
+					if(position == "turret") {
+						if( weight !== "light" ) {
+							result = false; 
+						}
+					} else {
+						if( weight == "capital") {
+							result = false;
+						}
+					}
+				}
+				return result;
+			},
+			canWeaponMountBeDowngraded: function(weight, isFromTemplate, templateWeight) {
+				var result = true;
+				if( weight == "light" ) {
+					result = false;
+				} else {
+					var weights = {
+						heavy: 1,
+						capital: 2
+					};
+					if( isFromTemplate ) {
+						if(weight == templateWeight ) {
+							result = false;
+						}
+					}
+				}
+				return result;
+			},
+			adjustPowerCoreIds: function(countHousings) {
+				if( this.params.powerCoreIds.length < countHousings ) {
+					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
+						this.params.powerCoreIds[i] = "none";
+					}
+				} else if( this.params.powerCoreIds.length > countHousings ) {
+					var splicePos = countHousings;
+					var spliceLen = this.params.powerCoreIds.length - countHousings;
+					this.params.powerCoreIds.splice(splicePos, spliceLen);
+				}
 			}
 		},
 		beforeMount: function() {
 			this.initParams();
 		}
 	});
+	
+} // Ship class
+
+function WeaponMount(params) {
+	// params expects: weaponMountId, position, weaponId, weight, isFromTemplate
+	// maybe expects templateWeight
+	this.id = params.weaponMountId;
+	this.position = params.position;
+	this.weaponId = params.weaponId;
+	this.weight = params.weight;
+	this.isFromTemplate = params.isFromTemplate;
+	if( this.isFromTemplate ) {
+		this.templateWeight = params.templateWeight;
+	} else {
+		this.templateWeight = "light";
+	}
+	
+	this.doTests = function() {
+		this.testThatPositionIsValid();
+		this.testThatWeightIsValid(this.weight);
+		this.testThatWeightIsValid(this.templateWeight);
+		this.testThatTemplateWeightIsSmallerThanWeight();
+		this.testThatTurretIsNotCapital();
+	}
+	
+	this.testThatPositionIsValid = function() {
+		if(["forward", "aft", "port", "starboard", "turret"].indexOf(this.position) == -1) {
+			throw "Invalid position in WeaponMount class: " + this.position;
+		}
+	}
+	
+	this.testThatWeightIsValid = function(weight) {
+		if(["light", "heavy", "capital"].indexOf(weight) == -1) {
+			throw "Invalid weight in WeaponMount class: " + weight;
+		}
+	}
+	
+	this.testThatTemplateWeightIsSmallerThanWeight = function() {
+		var weightVal = {
+			light: 0,
+			heavy: 1,
+			capital: 2
+		}
+		if( weightVal[this.weight] < weightVal[this.templateWeight] ) {
+			throw "Original weight must be equal to or lower than current weight";
+		}
+	}
+	
+	this.testThatTurretIsNotCapital = function() {
+		if( this.position == "turret" && (this.weight == "capital" || this.templateWeight == "capital") ) {
+			throw "Turrets cannot have weight 'capital' in WeaponMount";
+		}
+	}
+	
+	this.getUpgradeCost = function() {
+		var upgradeCost = 0;
+		if( this.weight !== this.templateWeight ) {
+			// if position is forward, aft, port or starboard arc
+			if( WEAPON_ARCS.indexOf(this.position) !== -1 ) {
+				// if templateWeight is light and weight is heavy
+				if(this.templateWeight == "light" && this.weight == "heavy") {
+					upgradeCost = 4;
+				} else if( this.templateWeight == "heavy" && this.weight == "capital" ) {
+				// if templateWeight is heavy and weight is capital
+					upgradeCost = 5;
+				} else {
+				// if templateWeight is light and weight is capital (i.e. 2 upgrades)
+					upgradeCost = 9;
+				}
+			} else {
+				// if position is turret
+				upgradeCost = 6;
+			}
+		}
+		return upgradeCost;
+	}
+	
+	this.getNewMountCost = function() {
+		var newMountCost = 0;
+		if(!this.isFromTemplate) {
+			if(this.position == "turret") {
+				newMountCost = 5;
+			} else {
+				newMountCost = 3;
+			}
+		}
+		return newMountCost;
+	}
+	
+	this.getCost = function() {
+		return this.getUpgradeCost() + this.getNewMountCost();
+	}
+	
+	// constructor???
+	
+	this.doTests();
 	
 }
 

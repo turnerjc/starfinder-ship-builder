@@ -3,7 +3,7 @@
 	width: 1em;
 }
 
-.icon:nth-of-type(2) {
+.icon:not(:first-of-type) {
 	margin-left: 1em;
 }
 

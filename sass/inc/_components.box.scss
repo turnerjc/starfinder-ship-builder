@@ -14,6 +14,13 @@
 	margin-top: 2em;
 }
 
+.box__header--btns,
+.box__group-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
 ul.box__select {
 	list-style-type: none;
 	padding-left: 0;
@@ -44,3 +51,6 @@ ul.box__select {
 	text-align: right;
 }
 
+.box__under-box {
+	margin: 1em 0 2em;
+}

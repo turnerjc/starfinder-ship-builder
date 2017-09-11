@@ -167,19 +167,19 @@
 	"weaponPosition": {
 		"data": [
 			{
-				"id": "forwardArc",
+				"id": "forward",
 				"name": "Forward Arc"
 			},
 			{
-				"id": "portArc",
+				"id": "port",
 				"name": "Port Arc"
 			},
 			{
-				"id": "starboardArc",
+				"id": "starboard",
 				"name": "Starboard Arc"
 			},
 			{
-				"id": "aftArc",
+				"id": "aft",
 				"name": "Aft Arc"
 			},
 			{
@@ -201,10 +201,10 @@
 				"dt": "n/a",
 				"ct": 4,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"light"
 					],
-					"aftArc": [
+					"aft": [
 						"light"
 					]
 				},
@@ -223,7 +223,7 @@
 				"dt": "n/a",
 				"ct": 6,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"light",
 						"light"
 					]
@@ -243,11 +243,11 @@
 				"dt": "n/a",
 				"ct": 7,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"light",
 						"light"
 					],
-					"aftArc": [
+					"aft": [
 						"light"
 					]
 				},
@@ -266,7 +266,7 @@
 				"dt": "n/a",
 				"ct": 7,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"light"
 					]
 				},
@@ -285,14 +285,14 @@
 				"dt": "n/a",
 				"ct": 8,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"light",
 						"light"
 					],
-					"portArc": [
+					"port": [
 						"light"
 					],
-					"starboardArc": [
+					"starboard": [
 						"light"
 					]
 				},
@@ -311,13 +311,13 @@
 				"dt": "n/a",
 				"ct": 11,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"light"
 					],
-					"portArc": [
+					"port": [
 						"light"
 					],
-					"starboardArc": [
+					"starboard": [
 						"light"
 					],
 					"turret": [
@@ -339,11 +339,11 @@
 				"dt": "n/a",
 				"ct": 14,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"heavy",
 						"light"
 					],
-					"aftArc": [
+					"aft": [
 						"light"
 					],
 					"turret": [
@@ -366,17 +366,17 @@
 				"dt": "n/a",
 				"ct": 30,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"heavy",
 						"heavy"
 					],
-					"portArc": [
+					"port": [
 						"light"
 					],
-					"starboardArc": [
+					"starboard": [
 						"light"
 					],
-					"aftArc": [
+					"aft": [
 						"light"
 					],
 					"turret": [
@@ -398,15 +398,15 @@
 				"dt": "n/a",
 				"ct": 24,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"heavy",
 						"light",
 						"light"
 					],
-					"portArc": [
+					"port": [
 						"heavy"
 					],
-					"starboardArc": [
+					"starboard": [
 						"heavy"
 					]
 				},
@@ -425,10 +425,10 @@
 				"dt": 5,
 				"ct": 32,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"heavy"
 					],
-					"aftArc": [
+					"aft": [
 						"heavy"
 					],
 					"turret": [
@@ -451,13 +451,13 @@
 				"dt": 5,
 				"ct": 36,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"capital"
 					],
-					"portArc": [
+					"port": [
 						"light"
 					],
-					"starboardArc": [
+					"starboard": [
 						"light"
 					],
 					"turret": [
@@ -480,15 +480,15 @@
 				"dt": 10,
 				"ct": 48,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"capital"
 					],
-					"portArc": [
+					"port": [
 						"heavy",
 						"heavy",
 						"heavy"
 					],
-					"starboardArc": [
+					"starboard": [
 						"heavy",
 						"heavy",
 						"heavy"
@@ -513,22 +513,22 @@
 				"dt": 10,
 				"ct": 56,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"capital",
 						"heavy",
 						"heavy"
 					],
-					"portArc": [
+					"port": [
 						"heavy",
 						"heavy",
 						"light"
 					],
-					"starboardArc": [
+					"starboard": [
 						"heavy",
 						"heavy",
 						"light"
 					],
-					"aftArc": [
+					"aft": [
 						"light"
 					],
 					"turret": [
@@ -551,19 +551,19 @@
 				"dt": 15,
 				"ct": 80,
 				"mounts": {
-					"forwardArc": [
+					"forward": [
 						"capital",
 						"capital",
 						"heavy",
 						"heavy"
 					],
-					"portArc": [
+					"port": [
 						"capital",
 						"heavy",
 						"heavy",
 						"heavy"
 					],
-					"starboardArc": [
+					"starboard": [
 						"capital",
 						"heavy",
 						"heavy",
@@ -1677,7 +1677,7 @@
 				"id": "none",
 				"name": "None",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 0,
 				"bpCost": 0
 			},
@@ -1685,7 +1685,7 @@
 				"id": "arcane-laboratory",
 				"name": "Arcane Laboratory",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 1,
 				"bpCost": 1
 			},
@@ -1693,7 +1693,7 @@
 				"id": "cargo-hold",
 				"name": "Cargo Hold",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 0,
 				"bpCost": 0
 			},
@@ -1701,7 +1701,7 @@
 				"id": "escape-pods",
 				"name": "Escape Pods",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 2,
 				"bpCost": 1
 			},
@@ -1709,7 +1709,7 @@
 				"id": "guest-quarters-common",
 				"name": "Guest Quarters (common)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 1,
 				"bpCost": 1
 			},
@@ -1717,7 +1717,7 @@
 				"id": "guest-quarters-good",
 				"name": "Guest Quarters (good)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 1,
 				"bpCost": 1
 			},
@@ -1725,7 +1725,7 @@
 				"id": "guest-quarters-luxurious",
 				"name": "Guest Quarters (luxurious)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 1,
 				"bpCost": 1
 			},
@@ -1733,7 +1733,7 @@
 				"id": "hangar-bay",
 				"name": "Hangar Bay",
 				"numBays": 4,
-				"minSize": 6,
+				"sizes": ["Gargantuan", "Colossal"],
 				"pcuCost": 30,
 				"bpCost": 10
 			},
@@ -1741,7 +1741,7 @@
 				"id": "life-boats",
 				"name": "Life Boats",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 5,
 				"bpCost": 3
 			},
@@ -1749,7 +1749,7 @@
 				"id": "medical-bay",
 				"name": "Medical Bay",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 4,
 				"bpCost": 8
 			},
@@ -1757,7 +1757,7 @@
 				"id": "passenger-seating",
 				"name": "Passenger Seating",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 0,
 				"bpCost": 0
 			},
@@ -1765,7 +1765,7 @@
 				"id": "power-core-housing",
 				"name": "Power Core Housing",
 				"numBays": 1,
-				"minSize": 3,
+				"sizes": ["Medium", "Large"],
 				"pcuCost": 0,
 				"bpCost": 10
 			},
@@ -1773,7 +1773,7 @@
 				"id": "recreation-suite-gym",
 				"name": "Recreation Suite (Gym)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 0,
 				"bpCost": 1
 			},
@@ -1781,7 +1781,7 @@
 				"id": "recreation-suite-trivid-den",
 				"name": "Recreation Suite (Trivid Den)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 1,
 				"bpCost": 1
 			},
@@ -1789,7 +1789,7 @@
 				"id": "recreation-suite-hac",
 				"name": "Recreation Suite (HAC)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 3,
 				"bpCost": 1
 			},
@@ -1797,7 +1797,7 @@
 				"id": "science-lab-general",
 				"name": "Science Lab (General)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 2,
 				"bpCost": 1
 			},
@@ -1805,7 +1805,7 @@
 				"id": "science-lab-life",
 				"name": "Science Lab (Life)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 2,
 				"bpCost": 1
 			},
@@ -1813,7 +1813,7 @@
 				"id": "science-lab-physical",
 				"name": "Science Lab (Physical)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 2,
 				"bpCost": 1
 			},
@@ -1821,7 +1821,7 @@
 				"id": "sealed-environment-chamber",
 				"name": "Sealed Environment Chamber",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 2,
 				"bpCost": 1
 			},
@@ -1829,7 +1829,7 @@
 				"id": "shuttle-bay",
 				"name": "Shuttle Bay",
 				"numBays": 2,
-				"minSize": 5,
+				"sizes": ["Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 10,
 				"bpCost": 4
 			},
@@ -1837,7 +1837,7 @@
 				"id": "smuggler-compartment-20",
 				"name": "Smuggler Compartment (DC 20)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 4,
 				"bpCost": 2
 			},
@@ -1845,7 +1845,7 @@
 				"id": "smuggler-compartment-25",
 				"name": "Smuggler Compartment (DC 25)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 5,
 				"bpCost": 3
 			},
@@ -1853,7 +1853,7 @@
 				"id": "smuggler-compartment-30",
 				"name": "Smuggler Compartment (DC 30)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 6,
 				"bpCost": 4
 			},
@@ -1861,7 +1861,7 @@
 				"id": "smuggler-compartment-35",
 				"name": "Smuggler Compartment (DC 35)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 7,
 				"bpCost": 5
 			},
@@ -1869,7 +1869,7 @@
 				"id": "smuggler-compartment-40",
 				"name": "Smuggler Compartment (DC 40)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 8,
 				"bpCost": 6
 			},
@@ -1877,7 +1877,7 @@
 				"id": "smuggler-compartment-45",
 				"name": "Smuggler Compartment (DC 45)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 9,
 				"bpCost": 7
 			},
@@ -1885,7 +1885,7 @@
 				"id": "smuggler-compartment-50",
 				"name": "Smuggler Compartment (DC 50)",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 10,
 				"bpCost": 8
 			},
@@ -1893,7 +1893,7 @@
 				"id": "synthesis-bay",
 				"name": "Synthesis Bay",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 2,
 				"bpCost": 1
 			},
@@ -1901,7 +1901,7 @@
 				"id": "tech-workshop",
 				"name": "Tech Workshop",
 				"numBays": 1,
-				"minSize": 0,
+				"sizes": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"],
 				"pcuCost": 3,
 				"bpCost": 1
 			}
@@ -4352,37 +4352,58 @@
 			{
 				"id": "Tiny",
 				"multiplier": 1,
-				"acAndTlModifier": 2
+				"acAndTlModifier": 2,
+				"maxMounts": 2,
+				"maxMountWeight": "light",
+				"countPowerCoreHousings": 1
 			},
 			{
 				"id": "Small",
 				"multiplier": 2,
-				"acAndTlModifier": 1
+				"acAndTlModifier": 1,
+				"maxMounts": 2,
+				"maxMountWeight": "light",
+				"countPowerCoreHousings": 1
 			},
 			{
 				"id": "Medium",
 				"multiplier": 3,
-				"acAndTlModifier": 0
+				"acAndTlModifier": 0,
+				"maxMounts": 3,
+				"maxMountWeight": "heavy",
+				"countPowerCoreHousings": 1
 			},
 			{
 				"id": "Large",
 				"multiplier": 4,
-				"acAndTlModifier": -1
+				"acAndTlModifier": -1,
+				"maxMounts": 3,
+				"maxMountWeight": "heavy",
+				"countPowerCoreHousings": 1
 			},
 			{
 				"id": "Huge",
 				"multiplier": 5,
-				"acAndTlModifier": -2
+				"acAndTlModifier": -2,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 2
 			},
 			{
 				"id": "Gargantuan",
 				"multiplier": 6,
-				"acAndTlModifier": -4
+				"acAndTlModifier": -4,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 3
 			},
 			{
 				"id": "Colossal",
 				"multiplier": 7,
-				"acAndTlModifier": -8
+				"acAndTlModifier": -8,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 4
 			}
 		]
 	},
@@ -4495,7 +4516,135 @@
 				"name": "Death's Head Necroglider",
 				"tier": "1/2",
 				"params": {
-					"version":"1.0.0","hasCrew":1,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"Death's Head Necroglider","shipConcept":"Tiny fighters made to resemble bone sarcophagi, Necrogliders are each just large enough for one undead pilot. These notorious pilots jack their brains directly into their ships’ sensors and controls, allowing them to recline in eerie repose as they direct the ships by thought alone.","tierId":"1_2","frameId":"interceptor","powerCoreId":"micron-heavy","thrustersId":"t12","armourId":"mk-3","computerId":"basic-computer","crewQuartersId":"none","defensiveCountermeasuresId":"mk-3","driftEngineId":"none","expansionBayIds":[],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-short-range","shieldsId":"basic-10","shipWeaponIds":[{"position":"forwardArc_0","id":"gyrolaser","weight":"light"},{"position":"forwardArc_1","id":"light-emp-cannon","weight":"light"}],"crewSkills":{"captain":{"count":0,"hasRole":false,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0,"ranks":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"hasRole":false,"skills":{"engineering":{"modifier":0,"ranks":0}},"countOfficers":0,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":0,"ranks":0}},"hasRole":false,"countOfficers":0,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":5},"piloting":{"modifier":9,"ranks":1}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":0,"ranks":0}},"hasRole":false,"countOfficers":0,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":1,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"Death's Head Necroglider",
+					"shipConcept":"Tiny fighters made to resemble bone sarcophagi, Necrogliders are each just large enough for one undead pilot. These notorious pilots jack their brains directly into their ships’ sensors and controls, allowing them to recline in eerie repose as they direct the ships by thought alone.",
+					"tierId":"1_2",
+					"frameId":"interceptor",
+					"powerCoreIds":["micron-heavy"],
+					"thrustersId":"t12",
+					"armourId":"mk-3",
+					"computerId":"basic-computer",
+					"crewQuartersId":"none",
+					"defensiveCountermeasuresId":"mk-3",
+					"driftEngineId":"none",
+					"expansionBayIds":[],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-short-range",
+					"shieldsId":"basic-10",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "gyrolaser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "light-emp-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[],
+						"port":[],
+						"starboard":[],
+						"turret":[]
+					},
+					"crewSkills":{
+						"captain":{
+							"hasRole":false,
+							"skills":{
+								"bluff":{
+									"modifier":0,
+									"ranks":0
+								},
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								},
+								"diplomacy":{
+									"modifier":0,
+									"ranks":0
+								},
+								"engineering":{
+									"modifier":0,
+									"ranks":0
+								},
+								"gunnery":{
+									"modifier":0,
+									"ranks":0
+								},
+								"intimidate":{
+									"modifier":0,
+									"ranks":0
+								},
+								"piloting":{
+									"modifier":0,
+									"ranks":0
+								}
+							}
+						},
+						"engineer":{
+							"hasRole":false,
+							"countOfficers":0,
+							"countOfficerCrew":0,
+							"skills":{
+								"engineering":{
+									"modifier":0,
+									"ranks":0
+								}
+							}
+						},
+						"gunner":{
+							"hasRole":false,
+							"countOfficers":0,
+							"countOfficerCrew":0,
+							"skills":{
+								"gunnery":{
+									"modifier":0,
+									"ranks":0
+								}
+							}
+						},
+						"pilot":{
+							"hasRole":1,
+							"countOfficers":1,
+							"countOfficerCrew":0,
+							"skills":{
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								},
+								"gunnery":{
+									"modifier":5
+								},
+								"piloting":{
+									"modifier":9,
+									"ranks":1
+								}
+							}
+						},
+						"scienceOfficer":{
+							"hasRole":false,
+							"countOfficers":0,
+							"countOfficerCrew":0,
+							"skills":{
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								}
+							}
+						}
+					}
 				}
 			},
 			{
@@ -4503,7 +4652,160 @@
 				"name": "Blackwind Sepulcher",
 				"tier": 5,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":false,"shipName":"Blackwind Sepulcher","shipConcept":"Sepulchers are easily recognized by their domelike bridge canopy, which resembles an eerie red eye. Though employed by plenty of private Eoxian corporations, their intimidating bone spurs make it hard to forget the ships’ origin (and still common use) as troop transport for undead marines.","tierId":"5","frameId":"transport","powerCoreId":"pulse-white","thrustersId":"m8","armourId":"mk-5","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-6","driftEngineId":"signal-booster","expansionBayIds":["cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"basic-long-range","shieldsId":"light-60","shipWeaponIds":[{"position":"forwardArc_0","id":"heavy-emp-cannon","weight":"heavy"},{"position":"forwardArc_1","id":"light-laser-cannon","weight":"light"},{"position":"aftArc_0","id":"gyrolaser","weight":"light"},{"position":"turret_0","id":"light-torpedo-launcher","weight":"light"},{"position":"turret_1","id":"light-torpedo-launcher","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":0,"ranks":"0"},"computers":{"modifier":0,"ranks":"0"},"diplomacy":{"modifier":0,"ranks":"0"},"engineering":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"11"},"intimidate":{"modifier":6,"ranks":"5"},"piloting":{"modifier":6,"ranks":"5"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":11,"ranks":"5"}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"11"}},"hasRole":1,"countOfficers":2,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"0"},"piloting":{"modifier":6,"ranks":"5"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":6,"ranks":"5"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":false,
+					"shipName":"Blackwind Sepulcher",
+					"shipConcept":"Sepulchers are easily recognized by their domelike bridge canopy, which resembles an eerie red eye. Though employed by plenty of private Eoxian corporations, their intimidating bone spurs make it hard to forget the ships’ origin (and still common use) as troop transport for undead marines.",
+					"tierId":"5",
+					"frameId":"transport",
+					"powerCoreIds":["pulse-white"],
+					"thrustersId":"m8",
+					"armourId":"mk-5",
+					"computerId":"basic-computer",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-6",
+					"driftEngineId":"signal-booster",
+					"expansionBayIds":[
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"basic-long-range",
+					"shieldsId":"light-60",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "heavy-emp-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "light-laser-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "gyrolaser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"port":[],
+						"starboard":[],
+						"turret":[
+							{
+								"weaponId": "light-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "light-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{
+						"captain":{
+							"count":1,
+							"hasRole":1,
+							"skills":{
+								"bluff":{
+									"modifier":0,
+									"ranks":0
+								},
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								},
+								"diplomacy":{
+									"modifier":0,
+									"ranks":0
+								},
+								"engineering":{
+									"modifier":0,
+									"ranks":0
+								},
+								"gunnery":{
+									"modifier":11
+								},
+								"intimidate":{
+									"modifier":6,
+									"ranks":5
+								},
+								"piloting":{
+									"modifier":6,
+									"ranks":5
+								}
+							}
+						},
+						"engineer":{
+							"hasRole":1,
+							"skills":{
+								"engineering":{
+									"modifier":11,
+									"ranks":5
+								}
+							},
+							"countOfficers":1,
+							"countOfficerCrew":0
+						},
+						"gunner":{
+							"skills":{
+								"gunnery":{
+									"modifier":11
+								}
+							},
+							"hasRole":1,
+							"countOfficers":2,
+							"countOfficerCrew":0
+						},
+						"pilot":{
+							"skills":{
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								},
+								"gunnery":{
+									"modifier":0
+								},
+								"piloting":{
+									"modifier":6,
+									"ranks":5
+								}
+							},
+							"hasRole":1,
+							"countOfficers":1,
+							"countOfficerCrew":0
+						},
+						"scienceOfficer":{
+							"skills":{
+								"computers":{
+									"modifier":6,
+									"ranks":5
+								}
+							},
+							"hasRole":1,
+							"countOfficers":1,
+							"countOfficerCrew":0
+						}
+					}
 				}
 			},
 			{
@@ -4511,7 +4813,206 @@
 				"name": "Thaumtech Omenbringer",
 				"tier": 14,
 				"params": {
-					"shipName":"Thaumtech Omenbringer","shipConcept":"The Omenbringer sails through the void like the corpse of some vast whale, but its organic aesthetics belie the cutting-edge technology of its construction. Within its gullet hang ranks of Necrogliders and other fighters, their undead pilots able to stay ready at their stations indefinitely. Without life support on many decks, the ship is very difficult to take down, and big sections (such as the hangars) stand airless and open to space by design.","tierId":"14","frameId":"battleship","powerCoreId":"gateway-heavy","thrustersId":"g4","armourId":"mk-7","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-8","driftEngineId":"signal-basic","expansionBayIds":["hangar-bay","hangar-bay","none","none","none","none","none","none"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":true,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"advanced-medium-range","shieldsId":"heavy-240","shipWeaponIds":[{"position":"forwardArc_0","id":"super-emp-cannon","weight":"capital"},{"position":"forwardArc_1","id":"heavy-laser-cannon","weight":"heavy"},{"position":"forwardArc_2","id":"none","weight":"heavy"},{"position":"portArc_0","id":"heavy-laser-array","weight":"heavy"},{"position":"portArc_1","id":"none","weight":"heavy"},{"position":"portArc_2","id":"none","weight":"light"},{"position":"starboardArc_0","id":"heavy-laser-array","weight":"heavy"},{"position":"starboardArc_1","id":"none","weight":"heavy"},{"position":"starboardArc_2","id":"none","weight":"light"},{"position":"aftArc_0","id":"tactical-nuclear-missile-launcher","weight":"light"},{"position":"turret_0","id":"heavy-torpedo-launcher","weight":"heavy"},{"position":"turret_1","id":"heavy-torpedo-launcher","weight":"heavy"}],"version":"1.0.0","hasCrew":1,"isSetDefaultCrewSkillValues":0,"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":0,"ranks":"0"},"computers":{"modifier":0,"ranks":"0"},"diplomacy":{"modifier":"11","ranks":"14"},"engineering":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"25"},"intimidate":{"modifier":16,"ranks":"14"},"piloting":{"modifier":9,"ranks":"14"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":11,"ranks":"14"}},"countOfficers":"3","countOfficerCrew":"35"},"gunner":{"skills":{"gunnery":{"modifier":"25"}},"hasRole":1,"countOfficers":"5","countOfficerCrew":"15"},"pilot":{"skills":{"computers":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"0"},"piloting":{"modifier":16,"ranks":"14"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":"5"},"scienceOfficer":{"skills":{"computers":{"modifier":11,"ranks":"14"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":"4"}},"isUseStrictRules":1
+					"isUseStrictRules":1,
+					"shipName":"Thaumtech Omenbringer",
+					"shipConcept":"The Omenbringer sails through the void like the corpse of some vast whale, but its organic aesthetics belie the cutting-edge technology of its construction. Within its gullet hang ranks of Necrogliders and other fighters, their undead pilots able to stay ready at their stations indefinitely. Without life support on many decks, the ship is very difficult to take down, and big sections (such as the hangars) stand airless and open to space by design.",
+					"tierId":"14",
+					"frameId":"battleship",
+					"powerCoreIds":["gateway-heavy"],
+					"thrustersId":"g4",
+					"armourId":"mk-7",
+					"computerId":"basic-computer",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-8",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"hangar-bay",
+						"hangar-bay",
+						"none",
+						"none",
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":true,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"advanced-medium-range",
+					"shieldsId":"heavy-240",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "super-emp-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "tactical-nuclear-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"port":[
+							{
+								"weaponId": "heavy-laser-array",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "heavy-laser-array",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+							{
+								"weaponId": "heavy-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "heavy-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"version":"1.0.0",
+					"hasCrew":1,
+					"isSetDefaultCrewSkillValues":0,
+					"crewSkills":{
+						"captain":{
+							"hasRole":1,
+							"skills":{
+								"bluff":{
+									"modifier":0,
+									"ranks":0
+								},
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								},
+								"diplomacy":{
+									"modifier":11,
+									"ranks":14
+								},
+								"engineering":{
+									"modifier":0,
+									"ranks":0
+								},
+								"gunnery":{
+									"modifier":25
+								},
+								"intimidate":{
+									"modifier":16,
+									"ranks":14
+								},
+								"piloting":{
+									"modifier":9,
+									"ranks":14
+								}
+							}
+						},
+						"engineer":{
+							"hasRole":1,
+							"skills":{
+								"engineering":{
+									"modifier":11,
+									"ranks":14
+								}
+							},
+							"countOfficers":3,
+							"countOfficerCrew":35
+						},
+						"gunner":{
+							"skills":{
+								"gunnery":{
+									"modifier":25
+								}
+							},
+							"hasRole":1,
+							"countOfficers":5,
+							"countOfficerCrew":15
+						},
+						"pilot":{
+							"skills":{
+								"computers":{
+									"modifier":0,
+									"ranks":0
+								},
+								"gunnery":{
+									"modifier":0
+								},
+								"piloting":{
+									"modifier":16,
+									"ranks":14
+								}
+							},
+							"hasRole":1,
+							"countOfficers":1,
+							"countOfficerCrew":5
+						},
+						"scienceOfficer":{
+							"skills":{
+								"computers":{
+									"modifier":11,
+									"ranks":14
+								}
+							},
+							"hasRole":1,
+							"countOfficers":1,
+							"countOfficerCrew":4
+						}
+					}
 				}
 			},
 			{
@@ -4519,7 +5020,89 @@
 				"name": "Idaran Voidrunner",
 				"tier": "1/3",
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"Idaran Voidrunner","shipConcept":"Few ships can match the speed and maneuverability of a Voidrunner, making it the perfect ship for daredevils, elite combat pilots looking to rely on skill rather than heavy arms and armor, and criminals in need of a fast getaway.","tierId":"1_3","frameId":"Racer","powerCoreId":"micron-heavy","thrustersId":"t12","armourId":"mk-2","computerId":"basic-computer","crewQuartersId":"none","defensiveCountermeasuresId":"mk-1","driftEngineId":"none","expansionBayIds":[],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"basic-medium-range","shieldsId":"basic-10","shipWeaponIds":[{"position":"forwardArc_0","id":"gyrolaser","weight":"light"},{"position":"aftArc_0","id":"none","weight":"light"}],"crewSkills":{"captain":{"count":0,"hasRole":false,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0,"ranks":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"hasRole":false,"skills":{"engineering":{"modifier":0,"ranks":0}},"countOfficers":0,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":0,"ranks":0}},"hasRole":false,"countOfficers":0,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":4,"ranks":"1"},"gunnery":{"modifier":"5"},"piloting":{"modifier":9,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":0,"ranks":0}},"hasRole":false,"countOfficers":0,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"Idaran Voidrunner",
+					"shipConcept":"Few ships can match the speed and maneuverability of a Voidrunner, making it the perfect ship for daredevils, elite combat pilots looking to rely on skill rather than heavy arms and armor, and criminals in need of a fast getaway.",
+					"tierId":"1_3",
+					"frameId":"Racer",
+					"powerCoreIds":["micron-heavy"],
+					"thrustersId":"t12",
+					"armourId":"mk-2",
+					"computerId":"basic-computer",
+					"crewQuartersId":"none",
+					"defensiveCountermeasuresId":"mk-1",
+					"driftEngineId":"none",
+					"expansionBayIds":[],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"basic-medium-range",
+					"shieldsId":"basic-10",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "gyrolaser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"port":[],
+						"starboard":[],
+						"turret":[]
+					},
+					"crewSkills":{"captain":{"count":0,
+					"hasRole":false,
+					"skills":{"bluff":{"modifier":0,
+					"ranks":0},
+					"computers":{"modifier":0,
+					"ranks":0},
+					"diplomacy":{"modifier":0,
+					"ranks":0},
+					"engineering":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0,
+					"ranks":0},
+					"intimidate":{"modifier":0,
+					"ranks":0},
+					"piloting":{"modifier":0,
+					"ranks":0}}},
+					"engineer":{"hasRole":false,
+					"skills":{"engineering":{"modifier":0,
+					"ranks":0}},
+					"countOfficers":0,
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":0,
+					"ranks":0}},
+					"hasRole":false,
+					"countOfficers":0,
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":4,
+					"ranks":"1"},
+					"gunnery":{"modifier":"5"},
+					"piloting":{"modifier":9,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":0,
+					"ranks":0}},
+					"hasRole":false,
+					"countOfficers":0,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4527,7 +5110,115 @@
 				"name": "Idaran Vanserai",
 				"tier": 4,
 				"params": {
-					"shipName":"Idaran Vanserai","shipConcept":"Big-bellied Vanserais resemble starfighters gone to fat. With prominent wing guns and a bridge canopy made to look like a much smaller cockpit, a Vanserai’s appearance is designed to make it clear that while it may be a freighter, it’s no easy target.","tierId":"4","frameId":"heavy-freighter","powerCoreId":"arcus-ultra","thrustersId":"l6","armourId":"mk-4","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-3","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-short-range","shieldsId":"basic-40","shipWeaponIds":[{"position":"forwardArc_0","id":"heavy-laser-cannon","weight":"heavy"},{"position":"forwardArc_1","id":"none","weight":"light"},{"position":"forwardArc_2","id":"none","weight":"light"},{"position":"portArc_0","id":"heavy-laser-cannon","weight":"heavy"},{"position":"starboardArc_0","id":"heavy-laser-cannon","weight":"heavy"}],"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":11,"ranks":"4"},"computers":{"modifier":6,"ranks":"4"},"diplomacy":{"modifier":11,"ranks":"4"},"engineering":{"modifier":6,"ranks":"4"},"gunnery":{"modifier":"10"},"intimidate":{"modifier":0,"ranks":"0"},"piloting":{"modifier":6,"ranks":"4"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":6,"ranks":"4"}},"countOfficers":"3","countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"10"}},"hasRole":1,"countOfficers":"3","countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"0"},"piloting":{"modifier":11,"ranks":"4"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":6,"ranks":"4"}},"hasRole":1,"countOfficers":"2","countOfficerCrew":0}},"isUseStrictRules":1
+					"shipName":"Idaran Vanserai",
+					"shipConcept":"Big-bellied Vanserais resemble starfighters gone to fat. With prominent wing guns and a bridge canopy made to look like a much smaller cockpit, a Vanserai’s appearance is designed to make it clear that while it may be a freighter, it’s no easy target.",
+					"tierId":"4",
+					"frameId":"heavy-freighter",
+					"powerCoreIds":["arcus-ultra"],
+					"thrustersId":"l6",
+					"armourId":"mk-4",
+					"computerId":"basic-computer",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-3",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-short-range",
+					"shieldsId":"basic-40",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[],
+						"port":[
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[]
+					},
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":11,
+					"ranks":"4"},
+					"computers":{"modifier":6,
+					"ranks":"4"},
+					"diplomacy":{"modifier":11,
+					"ranks":"4"},
+					"engineering":{"modifier":6,
+					"ranks":"4"},
+					"gunnery":{"modifier":"10"},
+					"intimidate":{"modifier":0,
+					"ranks":"0"},
+					"piloting":{"modifier":6,
+					"ranks":"4"}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":6,
+					"ranks":"4"}},
+					"countOfficers":"3",
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":"10"}},
+					"hasRole":1,
+					"countOfficers":"3",
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":"0"},
+					"gunnery":{"modifier":"0"},
+					"piloting":{"modifier":11,
+					"ranks":"4"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":6,
+					"ranks":"4"}},
+					"hasRole":1,
+					"countOfficers":"2",
+					"countOfficerCrew":0}},
+					"isUseStrictRules":1
 				}
 			},
 			{
@@ -4535,7 +5226,142 @@
 				"name": "Idaran Millenia",
 				"tier": 12,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"Idaran Millenia","shipConcept":"The Idaran Millennia resembles a sleek bird skull, with delicate, rippled fins. When cruising, the ship remains compact, yet in combat its “beak” opens to reveal a magnetic launch strip capable of firing a swarm of fighters into the fray with incredible speed. Even more disturbing, its fins detach, floating in a perfect magnetic field lock—their purpose is a highly classified secret.","tierId":"12","frameId":"carrier","powerCoreId":"gateway-heavy","thrustersId":"g4","armourId":"mk-5","computerId":"mk-2-trinode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-6","driftEngineId":"signal-basic","expansionBayIds":["hangar-bay","hangar-bay","cargo-hold","cargo-hold","none","none","none","none","none","none"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-long-range","shieldsId":"medium-160","shipWeaponIds":[{"position":"forwardArc_0","id":"super-plasma-cannon","weight":"capital"},{"position":"portArc_0","id":"heavy-laser-cannon","weight":"heavy"},{"position":"portArc_1","id":"none","weight":"heavy"},{"position":"portArc_2","id":"none","weight":"heavy"},{"position":"starboardArc_0","id":"heavy-laser-cannon","weight":"heavy"},{"position":"starboardArc_1","id":"none","weight":"heavy"},{"position":"starboardArc_2","id":"none","weight":"heavy"},{"position":"turret_0","id":"high-explosive-missile-launcher","weight":"light"},{"position":"turret_1","id":"high-explosive-missile-launcher","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":10,"ranks":"12"},"computers":{"modifier":0,"ranks":"0"},"diplomacy":{"modifier":10,"ranks":"12"},"engineering":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"22"},"intimidate":{"modifier":10,"ranks":"12"},"piloting":{"modifier":10,"ranks":"12"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":10,"ranks":"12"}},"countOfficers":"2","countOfficerCrew":"30"},"gunner":{"skills":{"gunnery":{"modifier":"22"}},"hasRole":1,"countOfficers":"3","countOfficerCrew":"15"},"pilot":{"skills":{"computers":{"modifier":0,"ranks":"0"},"gunnery":{"modifier":"0"},"piloting":{"modifier":15,"ranks":"12"}},"hasRole":1,"countOfficers":"1","countOfficerCrew":"4"},"scienceOfficer":{"skills":{"computers":{"modifier":10,"ranks":"12"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":"3"}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"Idaran Millenia",
+					"shipConcept":"The Idaran Millennia resembles a sleek bird skull, with delicate, rippled fins. When cruising, the ship remains compact, yet in combat its “beak” opens to reveal a magnetic launch strip capable of firing a swarm of fighters into the fray with incredible speed. Even more disturbing, its fins detach, floating in a perfect magnetic field lock—their purpose is a highly classified secret.",
+					"tierId":"12",
+					"frameId":"carrier",
+					"powerCoreIds":["gateway-heavy"],
+					"thrustersId":"g4",
+					"armourId":"mk-5",
+					"computerId":"mk-2-trinode",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-6",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"hangar-bay",
+						"hangar-bay",
+						"cargo-hold",
+						"cargo-hold",
+						"none",
+						"none",
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-long-range",
+					"shieldsId":"medium-160",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "super-plasma-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[],
+						"port":[
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+							{
+								"weaponId": "high-explosive-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "high-explosive-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":10,
+					"ranks":"12"},
+					"computers":{"modifier":0,
+					"ranks":"0"},
+					"diplomacy":{"modifier":10,
+					"ranks":"12"},
+					"engineering":{"modifier":0,
+					"ranks":"0"},
+					"gunnery":{"modifier":"22"},
+					"intimidate":{"modifier":10,
+					"ranks":"12"},
+					"piloting":{"modifier":10,
+					"ranks":"12"}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":10,
+					"ranks":"12"}},
+					"countOfficers":"2",
+					"countOfficerCrew":"30"},
+					"gunner":{"skills":{"gunnery":{"modifier":"22"}},
+					"hasRole":1,
+					"countOfficers":"3",
+					"countOfficerCrew":"15"},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":"0"},
+					"gunnery":{"modifier":"0"},
+					"piloting":{"modifier":15,
+					"ranks":"12"}},
+					"hasRole":1,
+					"countOfficers":"1",
+					"countOfficerCrew":"4"},
+					"scienceOfficer":{"skills":{"computers":{"modifier":10,
+					"ranks":"12"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":"3"}}
 				}
 			},
 			{
@@ -4543,7 +5369,89 @@
 				"name": "Ringworks Wanderer",
 				"tier": "1/4",
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":false,"shipName":"Ringworks Wanderer","shipConcept":"One of Ringworks’ most versatile designs, the Wanderer evolved out of early aerospace fighters and spaceplanes and still maintains much of their sleek design. Many organizations and governments use a slimmed-down and armed-up version of the Wanderer—sometimes called a Starwasp—for planetary defense or as a short-range fighter.","tierId":"1_4","frameId":"shuttle","powerCoreId":"micron-light","thrustersId":"s6","armourId":"mk-2","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-1","driftEngineId":"none","expansionBayIds":["cargo-hold","cargo-hold","passenger-seating"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-short-range","shieldsId":"basic-10","shipWeaponIds":[{"position":"forwardArc_0","id":"light-laser-cannon","weight":"light"}],"crewSkills":{"captain":{"count":0,"hasRole":false,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0,"ranks":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":4,"ranks":"1"}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"5"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":"0","ranks":"0"},"gunnery":{"modifier":"0"},"piloting":{"modifier":9,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":4,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":false,
+					"shipName":"Ringworks Wanderer",
+					"shipConcept":"One of Ringworks’ most versatile designs, the Wanderer evolved out of early aerospace fighters and spaceplanes and still maintains much of their sleek design. Many organizations and governments use a slimmed-down and armed-up version of the Wanderer—sometimes called a Starwasp—for planetary defense or as a short-range fighter.",
+					"tierId":"1_4",
+					"frameId":"shuttle",
+					"powerCoreIds":["micron-light"],
+					"thrustersId":"s6",
+					"armourId":"mk-2",
+					"computerId":"basic-computer",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-1",
+					"driftEngineId":"none",
+					"expansionBayIds":[
+						"cargo-hold",
+						"cargo-hold",
+						"passenger-seating"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-short-range",
+					"shieldsId":"basic-10",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "light-laser-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+						],
+						"port":[
+						],
+						"starboard":[
+						],
+						"turret":[
+						]
+					},
+					"crewSkills":{"captain":{"count":0,
+					"hasRole":false,
+					"skills":{"bluff":{"modifier":0,
+					"ranks":0},
+					"computers":{"modifier":0,
+					"ranks":0},
+					"diplomacy":{"modifier":0,
+					"ranks":0},
+					"engineering":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0,
+					"ranks":0},
+					"intimidate":{"modifier":0,
+					"ranks":0},
+					"piloting":{"modifier":0,
+					"ranks":0}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":4,
+					"ranks":"1"}},
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":"5"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":"0",
+					"ranks":"0"},
+					"gunnery":{"modifier":"0"},
+					"piloting":{"modifier":9,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":4,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4551,7 +5459,107 @@
 				"name": "Kevolari Venture",
 				"tier": 1,
 				"params": {
-					"shipName":"Kevolari Venture","shipConcept":"Thoroughly industrial in its aesthetics, the Venture is a ship designed to keep its crew alive in unfriendly systems—everything else is secondary. Inside, however, the Venture is surprisingly comfortable, making it perfect for exploration, permanent residency, and long-haul shipping.","tierId":"1","frameId":"explorer","powerCoreId":"pulse-gray","thrustersId":"m6","armourId":"mk-3","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-3","driftEngineId":"signal-basic","expansionBayIds":["science-lab-physical","cargo-hold","cargo-hold","cargo-hold"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-medium-range","shieldsId":"basic-20","shipWeaponIds":[{"position":"forwardArc_0","id":"light-laser-cannon","weight":"light"},{"position":"portArc_0","id":"none","weight":"light"},{"position":"starboardArc_0","id":"none","weight":"light"},{"position":"turret_0","id":"high-explosive-missile-launcher","weight":"light"}],"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":"0","crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":4,"ranks":"1"},"computers":{"modifier":4,"ranks":"1"},"diplomacy":{"modifier":4,"ranks":"1"},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":"5"},"intimidate":{"modifier":4,"ranks":"1"},"piloting":{"modifier":4,"ranks":"1"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":4,"ranks":"1"}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"5"}},"hasRole":1,"countOfficers":"2","countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":9,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":9,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"shipName":"Kevolari Venture",
+					"shipConcept":"Thoroughly industrial in its aesthetics, the Venture is a ship designed to keep its crew alive in unfriendly systems—everything else is secondary. Inside, however, the Venture is surprisingly comfortable, making it perfect for exploration, permanent residency, and long-haul shipping.",
+					"tierId":"1",
+					"frameId":"explorer",
+					"powerCoreIds":["pulse-gray"],
+					"thrustersId":"m6",
+					"armourId":"mk-3",
+					"computerId":"basic-computer",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-3",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"science-lab-physical",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-medium-range",
+					"shieldsId":"basic-20",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "light-laser-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+						],
+						"port":[
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+							{
+								"weaponId": "high-explosive-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":"0",
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":4,
+					"ranks":"1"},
+					"computers":{"modifier":4,
+					"ranks":"1"},
+					"diplomacy":{"modifier":4,
+					"ranks":"1"},
+					"engineering":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":"5"},
+					"intimidate":{"modifier":4,
+					"ranks":"1"},
+					"piloting":{"modifier":4,
+					"ranks":"1"}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":4,
+					"ranks":"1"}},
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":"5"}},
+					"hasRole":1,
+					"countOfficers":"2",
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":9,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":9,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4559,7 +5567,108 @@
 				"name": "Atech Immortal",
 				"tier": 10,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":true,"shipName":"Atech Immortal","shipConcept":"Severe and pugnacious, the Immortal is the workhorse capital ship of military fleets like those of the Stewards and the Knights of Golarion. Thickly armored and loaded with weapons, this cruiser rarely needs to fire a shot in most conflicts, as its mere appearance in-system can stop a conflict cold and send all but the most militant threats running for the safety of the Drift.","tierId":"10","frameId":"cruiser","powerCoreId":"nova-ultra","thrustersId":"h8","armourId":"mk-4","computerId":"mk-3-duonode","crewQuartersId":"good","defensiveCountermeasuresId":"mk-4","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","cargo-hold","cargo-hold","life-boats","medical-bay","shuttle-bay"],"expansionBaysCountUsed":0,"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"basic-long-range","shieldsId":"medium-200","shipWeaponIds":[{"position":"forwardArc_0","id":"particle-beam-cannon","weight":"capital"},{"position":"portArc_0","id":"light-plasma-cannon","weight":"light"},{"position":"starboardArc_0","id":"light-plasma-cannon","weight":"light"},{"position":"turret_0","id":"heavy-plasma-torpedo-launcher","weight":"heavy"},{"position":"turret_1","id":"none","weight":"heavy"}],"hasCrewGunner":1,"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":9,"ranks":"10"},"computers":{"modifier":9,"ranks":"10"},"diplomacy":{"modifier":9,"ranks":"10"},"engineering":{"modifier":9,"ranks":"10"},"gunnery":{"modifier":"19"},"intimidate":{"modifier":9,"ranks":"10"},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":9,"ranks":"10"}},"countOfficers":1,"countOfficerCrew":"20"},"gunner":{"skills":{"gunnery":{"modifier":"24"}},"hasRole":1,"countOfficers":"3","countOfficerCrew":"10"},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":9,"ranks":"10"}},"hasRole":1,"countOfficers":"1","countOfficerCrew":"3"},"scienceOfficer":{"skills":{"computers":{"modifier":9,"ranks":"10"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":true,
+					"shipName":"Atech Immortal",
+					"shipConcept":"Severe and pugnacious, the Immortal is the workhorse capital ship of military fleets like those of the Stewards and the Knights of Golarion. Thickly armored and loaded with weapons, this cruiser rarely needs to fire a shot in most conflicts, as its mere appearance in-system can stop a conflict cold and send all but the most militant threats running for the safety of the Drift.",
+					"tierId":"10",
+					"frameId":"cruiser",
+					"powerCoreIds":["nova-ultra"],
+					"thrustersId":"h8",
+					"armourId":"mk-4",
+					"computerId":"mk-3-duonode",
+					"crewQuartersId":"good",
+					"defensiveCountermeasuresId":"mk-4",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":["cargo-hold",
+					"cargo-hold",
+					"cargo-hold",
+					"life-boats",
+					"medical-bay",
+					"shuttle-bay"],
+					"expansionBaysCountUsed":0,
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"basic-long-range",
+					"shieldsId":"medium-200",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "particle-beam-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+						],
+						"port":[
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+							{
+								"weaponId": "heavy-plasma-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":9,
+					"ranks":"10"},
+					"computers":{"modifier":9,
+					"ranks":"10"},
+					"diplomacy":{"modifier":9,
+					"ranks":"10"},
+					"engineering":{"modifier":9,
+					"ranks":"10"},
+					"gunnery":{"modifier":"19"},
+					"intimidate":{"modifier":9,
+					"ranks":"10"},
+					"piloting":{"modifier":0,
+					"ranks":0}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":9,
+					"ranks":"10"}},
+					"countOfficers":1,
+					"countOfficerCrew":"20"},
+					"gunner":{"skills":{"gunnery":{"modifier":"24"}},
+					"hasRole":1,
+					"countOfficers":"3",
+					"countOfficerCrew":"10"},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":9,
+					"ranks":"10"}},
+					"hasRole":1,
+					"countOfficers":"1",
+					"countOfficerCrew":"3"},
+					"scienceOfficer":{"skills":{"computers":{"modifier":9,
+					"ranks":"10"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4567,7 +5676,106 @@
 				"name": "Starhive Drone Mk III",
 				"tier": 1,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"Starhive Drone Mk III","shipConcept":"As befits their name, Drones are extremely common and used as freight, personnel transport, light colonial defense, and more. Despite the ships’ mass production, Starhive takes a natural shirren pride in making sure each ship’s iridescent paint job is unique.","tierId":"1","frameId":"light-freighter","powerCoreId":"pulse-brown","thrustersId":"s8","armourId":"mk-2","computerId":"mk-1-mononode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-1","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","cargo-hold","escape-pods"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-medium-range","shieldsId":"basic-10","shipWeaponIds":[{"position":"forwardArc_0","id":"gyrolaser","weight":"light"},{"position":"forwardArc_1","id":"gyrolaser","weight":"light"},{"position":"portArc_0","id":"light-torpedo-launcher","weight":"light"},{"position":"starboardArc_0","id":"light-torpedo-launcher","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":4,"ranks":"1"},"diplomacy":{"modifier":4,"ranks":"1"},"engineering":{"modifier":4,"ranks":"1"},"gunnery":{"modifier":"5"},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":9,"ranks":"1"}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"5"}},"hasRole":1,"countOfficers":"2","countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":4,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":4,"ranks":"1"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"Starhive Drone Mk III",
+					"shipConcept":"As befits their name, Drones are extremely common and used as freight, personnel transport, light colonial defense, and more. Despite the ships’ mass production, Starhive takes a natural shirren pride in making sure each ship’s iridescent paint job is unique.",
+					"tierId":"1",
+					"frameId":"light-freighter",
+					"powerCoreIds":["pulse-brown"],
+					"thrustersId":"s8",
+					"armourId":"mk-2",
+					"computerId":"mk-1-mononode",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-1",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"cargo-hold",
+						"cargo-hold",
+						"escape-pods"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-medium-range",
+					"shieldsId":"basic-10",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "gyrolaser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "gyrolaser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+						],
+						"port":[
+							{
+								"weaponId": "light-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "light-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":0,
+					"ranks":0},
+					"computers":{"modifier":4,
+					"ranks":"1"},
+					"diplomacy":{"modifier":4,
+					"ranks":"1"},
+					"engineering":{"modifier":4,
+					"ranks":"1"},
+					"gunnery":{"modifier":"5"},
+					"intimidate":{"modifier":0,
+					"ranks":0},
+					"piloting":{"modifier":0,
+					"ranks":0}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":9,
+					"ranks":"1"}},
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":"5"}},
+					"hasRole":1,
+					"countOfficers":"2",
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":4,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":4,
+					"ranks":"1"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4575,7 +5783,119 @@
 				"name": "UIE Hiveguard",
 				"tier": 6,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"UIE Hiveguard","shipConcept":"Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.","tierId":"6","frameId":"destroyer","powerCoreId":"arcus-maximum","thrustersId":"l8","armourId":"mk-4","computerId":"mk-1-trinode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-4","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","escape-pods","escape-pods","escape-pods"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"basic-long-range","shieldsId":"light-60","shipWeaponIds":[{"position":"forwardArc_0","id":"heavy-laser-net","weight":"heavy"},{"position":"forwardArc_1","id":"twin-laser","weight":"heavy"},{"position":"portArc_0","id":"flak-thrower","weight":"light"},{"position":"starboardArc_0","id":"flak-thrower","weight":"light"},{"position":"aftArc_0","id":"none","weight":"light"},{"position":"turret_0","id":"light-torpedo-launcher","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":7,"ranks":"6"},"computers":{"modifier":7,"ranks":"6"},"diplomacy":{"modifier":7,"ranks":"6"},"engineering":{"modifier":7,"ranks":"6"},"gunnery":{"modifier":"13"},"intimidate":{"modifier":7,"ranks":"6"},"piloting":{"modifier":7,"ranks":"6"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":12,"ranks":"6"}},"countOfficers":1,"countOfficerCrew":"3"},"gunner":{"skills":{"gunnery":{"modifier":"13"}},"hasRole":1,"countOfficers":"2","countOfficerCrew":"2"},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":7,"ranks":"6"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":7,"ranks":"6"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"UIE Hiveguard",
+					"shipConcept":"Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.",
+					"tierId":"6",
+					"frameId":"destroyer",
+					"powerCoreIds":["arcus-maximum"],
+					"thrustersId":"l8",
+					"armourId":"mk-4",
+					"computerId":"mk-1-trinode",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-4",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"cargo-hold",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"basic-long-range",
+					"shieldsId":"light-60",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"port":[
+							{
+								"weaponId": "flak-thrower",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "flak-thrower",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+							{
+								"weaponId": "light-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":7,
+					"ranks":"6"},
+					"computers":{"modifier":7,
+					"ranks":"6"},
+					"diplomacy":{"modifier":7,
+					"ranks":"6"},
+					"engineering":{"modifier":7,
+					"ranks":"6"},
+					"gunnery":{"modifier":"13"},
+					"intimidate":{"modifier":7,
+					"ranks":"6"},
+					"piloting":{"modifier":7,
+					"ranks":"6"}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":12,
+					"ranks":"6"}},
+					"countOfficers":1,
+					"countOfficerCrew":"3"},
+					"gunner":{"skills":{"gunnery":{"modifier":"13"}},
+					"hasRole":1,
+					"countOfficers":"2",
+					"countOfficerCrew":"2"},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":7,
+					"ranks":"6"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":7,
+					"ranks":"6"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4583,7 +5903,113 @@
 				"name": "Hivonyx Titan Mauler",
 				"tier": 9,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":false,"shipName":"Hivonyx Titan Hauler","shipConcept":"Despite its formidable array of weapons and sensors, the Titan Hauler is optimized for freight, carrying huge loads within its beetle-like frame. Its partially organic nature aids in this capacity, as sphincter doors and expandable chambers can resize themselves to accommodate any cargo.","tierId":"9","frameId":"bulk-freighter","powerCoreId":"nova-ultra","thrustersId":"h6","armourId":"mk-5","computerId":"mk-3-mononode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-5","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","escape-pods","escape-pods","escape-pods","escape-pods","escape-pods"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"basic-long-range","shieldsId":"medium-100","shipWeaponIds":[{"position":"forwardArc_0","id":"maser","weight":"heavy"},{"position":"aftArc_0","id":"particle-beam","weight":"heavy"},{"position":"turret_0","id":"light-plasma-torpedo-launcher","weight":"light"},{"position":"turret_1","id":"light-plasma-torpedo-launcher","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":true,"skills":{"bluff":{"modifier":"8","ranks":9},"computers":{"modifier":"8","ranks":9},"diplomacy":{"modifier":"8","ranks":9},"engineering":{"modifier":"8","ranks":9},"gunnery":{"modifier":"17"},"intimidate":{"modifier":"8","ranks":9},"piloting":{"modifier":"8","ranks":9}}},"engineer":{"hasRole":true,"skills":{"engineering":{"modifier":"8","ranks":9}},"countOfficers":"1","countOfficerCrew":"15"},"gunner":{"hasRole":true,"skills":{"gunnery":{"modifier":"17"}},"countOfficers":"2","countOfficerCrew":"5"},"pilot":{"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":"13","ranks":9}},"countOfficers":"1","countOfficerCrew":"2"},"scienceOfficer":{"hasRole":true,"skills":{"computers":{"modifier":"8","ranks":9}},"countOfficers":1,"countOfficerCrew":"2"}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":false,
+					"shipName":"Hivonyx Titan Hauler",
+					"shipConcept":"Despite its formidable array of weapons and sensors, the Titan Hauler is optimized for freight, carrying huge loads within its beetle-like frame. Its partially organic nature aids in this capacity, as sphincter doors and expandable chambers can resize themselves to accommodate any cargo.",
+					"tierId":"9",
+					"frameId":"bulk-freighter",
+					"powerCoreIds":["nova-ultra"],
+					"thrustersId":"h6",
+					"armourId":"mk-5",
+					"computerId":"mk-3-mononode",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-5",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"basic-long-range",
+					"shieldsId":"medium-100",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "maser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"port":[
+						],
+						"starboard":[
+						],
+						"turret":[
+							{
+								"weaponId": "light-plasma-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "light-plasma-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":true,
+					"skills":{"bluff":{"modifier":"8",
+					"ranks":9},
+					"computers":{"modifier":"8",
+					"ranks":9},
+					"diplomacy":{"modifier":"8",
+					"ranks":9},
+					"engineering":{"modifier":"8",
+					"ranks":9},
+					"gunnery":{"modifier":"17"},
+					"intimidate":{"modifier":"8",
+					"ranks":9},
+					"piloting":{"modifier":"8",
+					"ranks":9}}},
+					"engineer":{"hasRole":true,
+					"skills":{"engineering":{"modifier":"8",
+					"ranks":9}},
+					"countOfficers":"1",
+					"countOfficerCrew":"15"},
+					"gunner":{"hasRole":true,
+					"skills":{"gunnery":{"modifier":"17"}},
+					"countOfficers":"2",
+					"countOfficerCrew":"5"},
+					"pilot":{"hasRole":true,
+					"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":"13",
+					"ranks":9}},
+					"countOfficers":"1",
+					"countOfficerCrew":"2"},
+					"scienceOfficer":{"hasRole":true,
+					"skills":{"computers":{"modifier":"8",
+					"ranks":9}},
+					"countOfficers":1,
+					"countOfficerCrew":"2"}}
 				}
 			},
 			{
@@ -4591,7 +6017,98 @@
 				"name": "BMC Mauler",
 				"tier": 2,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"BMC Mauler","shipConcept":"While Maulers can be flown in combat by a single person, making them popular with bounty hunters and other lone wolves, militaries usually staff them with two: a pilot seated upright in the bubble canopy, and a gunner behind the pilot operating via screens.","tierId":"2","frameId":"fighter","powerCoreId":"pulse-brown","thrustersId":"t10","armourId":"mk-5","computerId":"mk-1-mononode","crewQuartersId":"none","defensiveCountermeasuresId":"mk-5","driftEngineId":"signal-basic","expansionBayIds":[],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"advanced-medium-range","shieldsId":"basic-40","shipWeaponIds":[{"position":"forwardArc_0","id":"light-plasma-cannon","weight":"light"},{"position":"forwardArc_1","id":"tactical-nuclear-missile-launcher","weight":"light"},{"position":"aftArc_0","id":"flak-thrower","weight":"light"}],"crewSkills":{"captain":{"count":0,"hasRole":false,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0,"ranks":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"hasRole":false,"skills":{"engineering":{"modifier":0,"ranks":0}},"countOfficers":0,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"12"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":5,"ranks":"2"},"gunnery":{"modifier":"7"},"piloting":{"modifier":9,"ranks":"2"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":0,"ranks":0}},"hasRole":false,"countOfficers":0,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"BMC Mauler",
+					"shipConcept":"While Maulers can be flown in combat by a single person, making them popular with bounty hunters and other lone wolves, militaries usually staff them with two: a pilot seated upright in the bubble canopy, and a gunner behind the pilot operating via screens.",
+					"tierId":"2",
+					"frameId":"fighter",
+					"powerCoreIds":["pulse-brown"],
+					"thrustersId":"t10",
+					"armourId":"mk-5",
+					"computerId":"mk-1-mononode",
+					"crewQuartersId":"none",
+					"defensiveCountermeasuresId":"mk-5",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"advanced-medium-range",
+					"shieldsId":"basic-40",
+					
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "tactical-nuclear-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "flak-thrower",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"port":[
+						],
+						"starboard":[
+						],
+						"turret":[
+						]
+					},
+					"crewSkills":{"captain":{"count":0,
+					"hasRole":false,
+					"skills":{"bluff":{"modifier":0,
+					"ranks":0},
+					"computers":{"modifier":0,
+					"ranks":0},
+					"diplomacy":{"modifier":0,
+					"ranks":0},
+					"engineering":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0,
+					"ranks":0},
+					"intimidate":{"modifier":0,
+					"ranks":0},
+					"piloting":{"modifier":0,
+					"ranks":0}}},
+					"engineer":{"hasRole":false,
+					"skills":{"engineering":{"modifier":0,
+					"ranks":0}},
+					"countOfficers":0,
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":"12"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":5,
+					"ranks":"2"},
+					"gunnery":{"modifier":"7"},
+					"piloting":{"modifier":9,
+					"ranks":"2"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":0,
+					"ranks":0}},
+					"hasRole":false,
+					"countOfficers":0,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4599,7 +6116,115 @@
 				"name": "Norikama Dropship",
 				"tier": 8,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"Norikama Dropship","shipConcept":"Styled as a miniature version of larger vesk warships, the Norikama Dropship is designed as a fleet transport ship, but it has no problem picking a fight on its own.","tierId":"8","frameId":"transport","powerCoreId":"pulse-orange","thrustersId":"m12","armourId":"mk-6","computerId":"mk-3-duonode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-6","driftEngineId":"signal-booster","expansionBayIds":["guest-quarters-common","guest-quarters-common","guest-quarters-common","guest-quarters-common","guest-quarters-common"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"basic-long-range","shieldsId":"light-80","shipWeaponIds":[{"position":"forwardArc_0","id":"persistent-particle-beam","weight":"heavy"},{"position":"forwardArc_1","id":"coilgun","weight":"light"},{"position":"aftArc_0","id":"coilgun","weight":"light"},{"position":"turret_0","id":"light-plasma-cannon","weight":"light"},{"position":"turret_1","id":"light-plasma-cannon","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":8,"ranks":"8"},"gunnery":{"modifier":"16"},"intimidate":{"modifier":8,"ranks":"8"},"piloting":{"modifier":8,"ranks":"8"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":8,"ranks":"8"}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":"16"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":13,"ranks":"8"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":8,"ranks":"8"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"Norikama Dropship",
+					"shipConcept":"Styled as a miniature version of larger vesk warships, the Norikama Dropship is designed as a fleet transport ship, but it has no problem picking a fight on its own.",
+					"tierId":"8",
+					"frameId":"transport",
+					"powerCoreIds":["pulse-orange"],
+					"thrustersId":"m12",
+					"armourId":"mk-6",
+					"computerId":"mk-3-duonode",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-6",
+					"driftEngineId":"signal-booster",
+					"expansionBayIds":[
+						"guest-quarters-common",
+						"guest-quarters-common",
+						"guest-quarters-common",
+						"guest-quarters-common",
+						"guest-quarters-common"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"basic-long-range",
+					"shieldsId":"light-80",
+					
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "persistent-particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						],
+						"port":[
+						],
+						"starboard":[
+						],
+						"turret":[
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":0,
+					"ranks":0},
+					"computers":{"modifier":0,
+					"ranks":0},
+					"diplomacy":{"modifier":0,
+					"ranks":0},
+					"engineering":{"modifier":8,
+					"ranks":"8"},
+					"gunnery":{"modifier":"16"},
+					"intimidate":{"modifier":8,
+					"ranks":"8"},
+					"piloting":{"modifier":8,
+					"ranks":"8"}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":8,
+					"ranks":"8"}},
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"gunner":{"skills":{"gunnery":{"modifier":"16"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":13,
+					"ranks":"8"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0},
+					"scienceOfficer":{"skills":{"computers":{"modifier":8,
+					"ranks":"8"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":0}}
 				}
 			},
 			{
@@ -4607,7 +6232,195 @@
 				"name": "Vindicas Tyrant",
 				"tier": 16,
 				"params": {
-					"version":"1.0.0","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"Vindicas Tyrant","shipConcept":"Feared across multiple star systems, the Tyrant lives up to its name. Huge weapon batteries tear through even the most formidable capital ships, while its hangars unleash squadrons of Maulers to mop up foes too insignificant to be worth the Tyrant’s direct attention.","tierId":"16","frameId":"dreadnought","powerCoreId":"gateway-ultra","thrustersId":"c4","armourId":"mk-10","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-10","driftEngineId":"signal-basic","expansionBayIds":["hangar-bay","hangar-bay","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","cargo-hold","none","none","none","none","none","none"],"hasAntiHackingSystems":0,"antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasuresId":"none","hasSelfDestructSystem":0,"sensorsId":"budget-medium-range","shieldsId":"medium-200","shipWeaponIds":[{"position":"forwardArc_0","id":"particle-beam-cannon","weight":"capital"},{"position":"forwardArc_1","id":"none","weight":"capital"},{"position":"forwardArc_2","id":"heavy-laser-cannon","weight":"heavy"},{"position":"forwardArc_3","id":"none","weight":"heavy"},{"position":"portArc_0","id":"superlaser","weight":"capital"},{"position":"portArc_1","id":"heavy-torpedo-launcher","weight":"heavy"},{"position":"portArc_2","id":"none","weight":"heavy"},{"position":"portArc_3","id":"none","weight":"heavy"},{"position":"starboardArc_0","id":"superlaser","weight":"capital"},{"position":"starboardArc_1","id":"heavy-torpedo-launcher","weight":"heavy"},{"position":"starboardArc_2","id":"none","weight":"heavy"},{"position":"starboardArc_3","id":"none","weight":"heavy"},{"position":"turret_0","id":"coilgun","weight":"light"},{"position":"turret_1","id":"coilgun","weight":"light"},{"position":"turret_2","id":"none","weight":"light"},{"position":"turret_3","id":"none","weight":"light"}],"crewSkills":{"captain":{"count":1,"hasRole":1,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":12,"ranks":"16"},"engineering":{"modifier":12,"ranks":"16"},"gunnery":{"modifier":"28"},"intimidate":{"modifier":17,"ranks":"16"},"piloting":{"modifier":12,"ranks":"16"}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":12,"ranks":"16"}},"countOfficers":"3","countOfficerCrew":"45"},"gunner":{"skills":{"gunnery":{"modifier":"33"}},"hasRole":1,"countOfficers":"5","countOfficerCrew":"25"},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":12,"ranks":"16"}},"hasRole":1,"countOfficers":1,"countOfficerCrew":"12"},"scienceOfficer":{"skills":{"computers":{"modifier":12,"ranks":"16"}},"hasRole":1,"countOfficers":"2","countOfficerCrew":"8"}}
+					"version":"1.0.0",
+					"hasCrew":true,
+					"isSetDefaultCrewSkillValues":0,
+					"isUseStrictRules":1,
+					"shipName":"Vindicas Tyrant",
+					"shipConcept":"Feared across multiple star systems, the Tyrant lives up to its name. Huge weapon batteries tear through even the most formidable capital ships, while its hangars unleash squadrons of Maulers to mop up foes too insignificant to be worth the Tyrant’s direct attention.",
+					"tierId":"16",
+					"frameId":"dreadnought",
+					"powerCoreIds":["gateway-ultra"],
+					"thrustersId":"c4",
+					"armourId":"mk-10",
+					"computerId":"basic-computer",
+					"crewQuartersId":"common",
+					"defensiveCountermeasuresId":"mk-10",
+					"driftEngineId":"signal-basic",
+					"expansionBayIds":[
+						"hangar-bay",
+						"hangar-bay",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"none",
+						"none",
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"hasAntiHackingSystems":0,
+					"antiPersonnelWeaponId":"none",
+					"hasBiometricLocks":0,
+					"computerCountermeasuresId":"none",
+					"hasSelfDestructSystem":0,
+					"sensorsId":"budget-medium-range",
+					"shieldsId":"medium-200",
+					"weaponMounts":{
+						"forward":[
+							{
+								"weaponId": "particle-beam-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"aft":[
+						],
+						"port":[
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "heavy-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"starboard":[
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "heavy-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true
+							}
+						],
+						"turret":[
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true
+							}
+						]
+					},
+					"crewSkills":{"captain":{"count":1,
+					"hasRole":1,
+					"skills":{"bluff":{"modifier":0,
+					"ranks":0},
+					"computers":{"modifier":0,
+					"ranks":0},
+					"diplomacy":{"modifier":12,
+					"ranks":"16"},
+					"engineering":{"modifier":12,
+					"ranks":"16"},
+					"gunnery":{"modifier":"28"},
+					"intimidate":{"modifier":17,
+					"ranks":"16"},
+					"piloting":{"modifier":12,
+					"ranks":"16"}}},
+					"engineer":{"hasRole":1,
+					"skills":{"engineering":{"modifier":12,
+					"ranks":"16"}},
+					"countOfficers":"3",
+					"countOfficerCrew":"45"},
+					"gunner":{"skills":{"gunnery":{"modifier":"33"}},
+					"hasRole":1,
+					"countOfficers":"5",
+					"countOfficerCrew":"25"},
+					"pilot":{"skills":{"computers":{"modifier":0,
+					"ranks":0},
+					"gunnery":{"modifier":0},
+					"piloting":{"modifier":12,
+					"ranks":"16"}},
+					"hasRole":1,
+					"countOfficers":1,
+					"countOfficerCrew":"12"},
+					"scienceOfficer":{"skills":{"computers":{"modifier":12,
+					"ranks":"16"}},
+					"hasRole":1,
+					"countOfficers":"2",
+					"countOfficerCrew":"8"}}
 				}
 			}
 		]

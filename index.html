@@ -30,7 +30,7 @@
 		
 			<a href="#" class="sidebar__close">Close Menu</a>
 			
-			<h3>{{ params.shipName}} (Tier&nbsp;{{ tier.name }})</h3>
+			<h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
 
 			<nav class="contents">
 				<ul class="contents__0">
@@ -74,9 +74,14 @@
 					<span class="cost__name">Power Core Units</span>
 					<span class="cost__values">
 						<svg class="icon"><use xlink:href="#icon-power" /></svg> 
+						<span class="cost__budget"
+							title="Total PCU cost, including both essential and non-essential systems">
+							{{ totalPcuCost.essential + totalPcuCost.nonEssential }}</span> /
 						<span class="cost__current"
-							v-bind:class="{ 'cost__current--danger': isPcuCostOverBudget }">{{ totalPcuCost }}</span> /
-							<span class="cost__budget">{{ powerCore.pcuBudget }}</span>
+							v-bind:class="{ 'cost__current--danger': isPcuCostOverBudget }"
+							title="Total PCU cost of essential systems only (weapons, shields, thrusters and defensive countermeasures)">
+							{{ totalPcuCost.essential }}</span> /
+							<span class="cost__budget">{{ pcuBudget }}</span>
 					</span>
 				</p>
 			</div>
@@ -96,6 +101,19 @@
 
 			</header>
 
+
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				INPUT
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="input">Input</h2>
@@ -127,7 +145,19 @@
 				</div>
 				
 			</div>
+
+
 			
+			
+			
+			
+			
+			
+			<!--
+			
+				CONCEPT
+				
+			-->
 			
 			<div class="box">
 				<header class="box__header">
@@ -156,8 +186,20 @@
 					</div>
 				</div>
 			</div>
-			
 
+
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				TIER
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="tier">Step 1: Tier</h2>
@@ -176,8 +218,20 @@
 					<strong>HP Increase</strong>: {{ tier.hpIncrease }}
 				</div>
 			</div>
-			
 
+
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				FRAME
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="frame">Step 2: Frame</h2>
@@ -185,7 +239,7 @@
 				<div class="box__select">
 					<div class="form-group">
 						<label for="frameSelect">Frame</label>
-						<select name="frame" id="frameSelect" class="form-control" v-model="params.frameId">
+						<select name="frame" id="frameSelect" class="form-control" v-model="params.frameId" @change="updateFrame">
 							<option v-for="option in selectOptions.frame" :value="option.id">{{ option.name }}</option>
 						</select>
 					</div>
@@ -206,14 +260,26 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				POWER CORE
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="powerCore">Step 3: Power Core</h2>
 				</header>
 				<div class="box__select">
-					<div class="form-group">
-						<label for="powerCoreSelect">Power Core</label>
-						<select id="powerCoreSelect" class="form-control" v-model="params.powerCoreId">
+					<div class="form-group" v-for="i in countPowerCoreHousings">
+						<label :for="'powerCoreSelect_' + i">Power Core {{ i }}</label>
+						<select :id="'powerCoreSelect_' + i" class="form-control" v-model="params.powerCoreIds[i-1]">
 							<template v-for="option in selectOptions.powerCore"
 								v-if="(!params.isUseStrictRules) || (option.sizes.indexOf(frame.size) > -1)">
 								<option :value="option.id">{{ option.name }} (PCU {{ option.pcuBudget }})</option>
@@ -222,14 +288,26 @@
 					</div>
 				</div>
 				<div class="box__info">
-					<strong>PCU Budget</strong> {{ powerCore.pcuBudget }}
+					<strong>PCU Budget</strong> {{ pcuBudget }}
 				</div>
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ powerCore.bpCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ powerCoresBpCost }}
 				</div>
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				THRUSTERS
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="thrusters">Step 4: Thrusters</h2>
@@ -256,6 +334,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				OTHER SYSTEMS / ARMOUR
+				
+			-->
+			
 			<h2 id="otherSystems">Step 5: Other Systems</h2>
 
 			<div class="box">
@@ -280,6 +370,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				COMPUTER
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="computer">Computer</h3>
@@ -303,6 +405,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				CREW QUARTERS
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="crewQuarters">Crew Quarters</h3>
@@ -325,6 +439,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				DEFENSIVE COUNTERMEASURES
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="defensiveCountermeasures">Defensive Countermeasures</h3>
@@ -347,6 +473,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				DRIFT ENGINE
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="driftEngine">Drift Engine</h3>
@@ -356,7 +494,7 @@
 						<label for="driftEngineSelect">Drift Engine</label>
 						<select v-model="params.driftEngineId" id="driftEngineSelect" class="form-control">
 							<template v-for="option in selectOptions.driftEngine"
-								v-if="(!params.isUseStrictRules) || ( (powerCore.pcuBudget >= option.minPcu) && (sizeCategory.multiplier <= option.maxSize) )">
+								v-if="(!params.isUseStrictRules) || ( (pcuBudget >= option.minPcu) && (sizeCategory.multiplier <= option.maxSize) )">
 								<option :value="option.id">{{ option.name }}</option>
 							</template>
 						</select>
@@ -371,6 +509,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				EXPANSION BAYS
+				
+			-->
+			
 			<div class="box" v-if="frame.expansionBays > 0">
 				<header class="box__header">
 					<h3 id="expansionBays">Expansion Bays</h3>
@@ -391,7 +541,7 @@
 								<select v-model="params.expansionBayIds[i]" :id="'expansionBaySelect'+i" class="form-control">
 									<option
 										v-for="option in selectOptions.expansionBay"
-										v-if="(!params.isUseStrictRules) || (option.minSize <= sizeCategory.multiplier)"
+										v-if="(!params.isUseStrictRules) || (option.sizes.indexOf(sizeCategory.id) !== -1 )"
 										:value="option.id">{{ option.name + ((option.numBays > 1) ? ' (' + option.numBays + ' Slots)' : '') }}</option>
 								</select>
 							</div>
@@ -409,6 +559,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				SECURITY
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="security">Security</h3>
@@ -487,6 +649,18 @@
 			</div><!-- box -->
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				SENSORS
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="sensors">Sensors</h3>
@@ -509,6 +683,18 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				SHIELDS
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h3 id="shields">Shields</h3>
@@ -532,50 +718,120 @@
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				WEAPON MOUNTS
+				
+			-->
+			
+			<h3 id="weapons">Weapons</h3>
+			<template v-for="(weaponList, position) in weaponMounts">
+			
+				<header class="box__header">
+					<h4 id="weapons_test">{{ position.toTitleCase() + (position == "turret" ? "" : " Arc" ) }}</h4>
+				</header>
+				
+				
+				<template v-for="(weaponMount, i) in weaponList">
+					
+					<div class="box">
+				
+						<div class="box__header--btns">
+							<h4>Weapon Mount {{ i+1 }} ({{ weaponMount.weight }})</h4>
+							<div>
+								<button class="btn btn-primary btn-sm"
+									:disabled="!weaponMount.canBeUpgraded"
+									@click="upgradeWeaponMount(position, i)">Upgrade Mount</button>
+								<button class="btn btn-primary btn-sm"
+									:disabled="!weaponMount.canBeDowngraded"
+									@click="downgradeWeaponMount(position, i)">Downgrade Mount</button>
+								<button class="btn btn-danger btn-sm"
+									:disabled="weaponMount.isFromTemplate"
+									@click="destroyWeaponMount(position, i)">Delete Mount</button>
+							</div>
+						</div>
+						
+						
+						<div class="box__select">
+							<div class="form-group">
+								<label :for="'shipWeaponSelect_' + i">Weapon
+								</label>
+								<select
+									v-model="params.weaponMounts[position][i].weaponId"
+									:id="'shipWeaponSelect_' + i"
+									class="form-control">
+									<option value="none">None</option>
+									<template v-for="option in selectOptions.shipWeapon"
+										v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)">
+										<option :value="option.id">{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})</option>
+									</template>
+								</select>
+							</div><!-- .form-group -->
+						</div><!-- .box__select -->
+
+						<div class="box__info">
+							<strong>Range</strong> {{ weaponMount.weapon.range }};
+							<strong>Speed</strong> {{ weaponMount.weapon.speed }};
+							<strong>Damage</strong> {{ weaponMount.weapon.damage }};
+							<strong>Special Properties</strong> {{ weaponMount.weapon.specialProperties }}
+						</div>
+
+						<div class="box__cost">
+							<svg class="icon"><use xlink:href="#icon-power" /></svg>
+							{{ weaponMount.weapon.pcuCost }}
+							<svg class="icon"><use xlink:href="#icon-build" /></svg>
+							{{ weaponMount.weapon.bpCost + weaponMount.mountBpCost }}
+							(weapon {{ weaponMount.weapon.bpCost }} +
+							mount {{ weaponMount.mountBpCost }})
+						</div>
+						
+					</div><!-- .box -->
+				
+				</template>
+					
+				
+				<div class="box__under-box align-right">
+					<button @click="createWeaponMount(position)"
+						:disabled="!canWeaponMountBeCreated(position)"
+						class="btn btn-primary">Create New {{ position.toTitleCase() }} Mount</button>
+				</div>
+				
+				
+			</template>
+			
 			<div class="box">
 				<header class="box__header">
-					<h3 id="weapons">Weapons</h3>
+					<h3 id="weapons">Weapons Summary</h3>
 				</header>
-				<ul class="box__select">
-					<template v-for="(weapon, i) in params.shipWeaponIds">
-						<li>
-							<div class="box__select">
-								<div class="form-group">
-									<label :for="'shipWeaponSelect_' + i">
-										{{ shipWeapons[i].positionName }} ({{ params.shipWeaponIds[i].weight }})
-									</label>
-									<select
-										v-model="params.shipWeaponIds[i].id"
-										:id="'shipWeaponSelect_' + i"
-										class="form-control">
-										<option value="none">None</option>
-										<template v-for="option in selectOptions.shipWeapon"
-											v-if="(!params.isUseStrictRules) || (option.weight == weapon.weight)">
-											<option :value="option.id">{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})</option>
-										</template>
-									</select>
-								</div>
-							</div>
-							<div class="box__info">
-								<strong>Range</strong> {{ shipWeapons[i].range }};
-								<strong>Speed</strong> {{ shipWeapons[i].speed }};
-								<strong>Damage</strong> {{ shipWeapons[i].damage }};
-								<strong>Special Properties</strong> {{ shipWeapons[i].specialProperties }}
-							</div>
-							<div class="box__cost--list">
-								<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ shipWeapons[i].pcuCost }}
-								<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ shipWeapons[i].bpCost }}
-							</div>
-						</li>
-					</template>
-				</ul>
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ shipWeaponsTotalPcuCost }}
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ shipWeaponsTotalBpCost }}
+					<svg class="icon"><use xlink:href="#icon-power" /></svg>
+					{{ weaponsTotalCosts.weaponsPcu }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg>
+					{{ weaponsTotalCosts.weaponsBp + weaponsTotalCosts.weaponMountsBp }}
+					(weapons {{ weaponsTotalCosts.weaponsBp }} +
+					mounts {{ weaponsTotalCosts.weaponMountsBp }})
 				</div>
 			</div>
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				CREW
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="crew">Step 6: Crew</h2>
@@ -626,6 +882,7 @@
 								</div>
 							</div> <!-- .crew__officers -->
 							<div class="crew__role__header">
+								<span class="crew__skill__label">Level</span>
 								<span class="crew__skill__label">Skill</span>
 								<span class="crew__skill__ranks">Ranks</span>
 								<span class="crew__skill__mod">+ Mod.</span>
@@ -634,6 +891,13 @@
 							</div> <!-- .crew__role__header -->
 							<template v-for="skillId in role.skills">
 								<div class="crew__role__skills">
+									<span class="crew__skill__label">
+										<select class="form-control" v-model="params.crewSkills[role.id].skills[skillId].level">
+											<option value="none">None</option>
+											<option value="good">Good</option>
+											<option value="master">Master</option>
+										</select>
+									</span>
 									<span class="crew__skill__label">{{ getItemById('skill', skillId).name }}</span>
 									<!-- TODO: default skill buttons -->
 									<span class="crew__skill__ranks">
@@ -660,6 +924,18 @@
 			</div> <!-- box -->
 
 
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				OUTPUT
+				
+			-->
+			
 			<div class="box">
 				<header class="box__header">
 					<h2 id="output">Output</h2>
@@ -667,7 +943,7 @@
 				</header>
 				<div class="box__info box__info--output">
 					<div id="outputText">
-						<h3>{{ params.shipName }} (Tier {{ tier.name }})</h3>
+						<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
 						<p>{{ frame.size }} {{ frame.name.toLowerCase() }}</p>
 						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ maneuverabilityRating.turn }})<span v-if="driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
 						<p><strong>AC</strong> {{ armourClass }}; <strong>TL</strong> {{ targetLock }}</p>
@@ -677,8 +953,12 @@
 							port {{ shieldsByPosition.port }},
 							starboard {{ shieldsByPosition.starboard }},
 							aft {{ shieldsByPosition.aft }})</p>
-						<p v-for="shipWeapon in shipWeapons" v-if="shipWeapon.id !== 'none'"><strong>Attack ({{ shipWeapon.positionName }})</strong> {{ shipWeapon.name}} ({{ shipWeapon.damage }})</p>
-						<p><strong>Power Core</strong> {{ powerCore.name }} ({{ powerCore.pcuBudget }} PCU);
+						<p v-for="(weaponDescription, position) in weaponDescriptions">
+							<strong>Attack ({{ position.toTitleCase() }})</strong>
+							{{ weaponDescription }}
+						</p>
+						<p>
+							<strong>Power Core(s)</strong> {{ powerCoreDescription }};
 							<strong>Drift Engine</strong> {{ driftEngine.name }};
 							<strong>Systems</strong> {{ systemsDescription }}<span v-if="hasSecurity">; 
 							<strong>Security</strong> {{ securityDescription }}</span><span v-if="expansionBays.length > 0">; 
@@ -722,8 +1002,8 @@
 		
 	</div><!-- .wrapper -->
 	
-	<!-- <script src="https://unpkg.com/vue"></script> -->
-	<script src="vendor/vue/vue.min.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<!-- <script src="vendor/vue/vue.min.js"></script> -->
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
