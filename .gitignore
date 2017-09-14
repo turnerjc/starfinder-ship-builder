@@ -1,4 +1,5 @@
 .sass-cache/
+.sass-cache/*
 app/
 css/
 node_modules/

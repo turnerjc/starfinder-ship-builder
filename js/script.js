@@ -236,37 +236,30 @@ function Ship(json) {
 						skills: {
 							bluff: {
 								modifier: 0,
-								ranks: 0,
-								level: "none"
+								ranks: 0
 							},
 							computers: {
 								modifier: 0,
-								ranks: 0,
-								level: "good"
+								ranks: 0
 							},
 							diplomacy: {
 								modifier: 0,
-								ranks: 0,
-								level: "good"
+								ranks: 0
 							},
 							engineering: {
 								modifier: 0,
-								ranks: 0,
-								level: "none"
+								ranks: 0
 							},
 							gunnery: {
-								modifier: 0,
-								level: "good"
+								modifier: 0
 							},
 							intimidate: {
 								modifier: 0,
-								ranks: 0,
-								level: "good"
+								ranks: 0
 							},
 							piloting: {
 								modifier: 0,
-								ranks: 0,
-								level: "good"
+								ranks: 0
 							}
 						}
 					}, // captain
@@ -277,8 +270,7 @@ function Ship(json) {
 						skills: {
 							engineering: {
 								modifier: 0,
-								ranks: 0,
-								level: "good"
+								ranks: 0
 							}
 						}
 					}, // engineer
@@ -288,8 +280,7 @@ function Ship(json) {
 						hasRole: true,
 						skills: {
 							gunnery: {
-								modifier: 0,
-								level: "good"
+								modifier: 0
 							}
 						}
 					}, // gunner
@@ -300,17 +291,14 @@ function Ship(json) {
 						skills: {
 							computers: {
 								modifier: 0,
-								ranks: 0,
-								level: "none"
+								ranks: 0
 							},
 							gunnery: {
-								modifier: 0,
-								level: "none"
+								modifier: 0
 							},
 							piloting: {
 								modifier: 0,
-								ranks: 0,
-								level: "master"
+								ranks: 0
 							},
 						}
 					}, // pilot
@@ -321,8 +309,7 @@ function Ship(json) {
 						skills: {
 							computers: {
 								modifier: 0,
-								ranks: 0,
-								level: "good"
+								ranks: 0
 							}
 						}
 					} // scienceOfficer
@@ -360,7 +347,7 @@ function Ship(json) {
 								ranks: 0
 							}
 						}
-					}, // captain
+					}, 
 					engineer: {
 						countOfficers: 1,
 						countOfficerCrew: 0,

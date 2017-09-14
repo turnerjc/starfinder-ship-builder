@@ -1,11 +1,23 @@
 .sidebar {
-	background-color: #eee;
+	background: #eee url("../img/ship-blue.jpg") no-repeat center top;
+	background-size: auto auto;
 	height: 100vh;
 	overflow-y: scroll;
 	padding: .5rem;
 	position: fixed;
 	top: 0;
 	left: 0;
+}
+
+.sidebar h3,
+.sidebar p,
+.contents li a {
+	color: $background-color-highlight;
+}
+
+.sidebar .icon,
+.sidebar__control {
+	fill: $background-color-highlight;
 }
 
 @media (max-width: $breakpoint-md - 1) {
@@ -20,12 +32,34 @@
 	#sidebar:target {
 		transform: translateY(0); /* Uncollapsed state */
 	}
+	
+	// NOTE: .sidebar__open is actually under .main, but I've put it here
+	// because I feel it's more closely connected with .sidebar.
+	.sidebar__control {
+		background-color: $background-color-main;
+		border-bottom: 1px solid $background-color-highlight;
+		position: fixed;
+		top: 0; left: 0;
+		width: 100%;
+		padding: 1em;
+		text-align: right;
+		z-index: 100;
+	}
+	
+	.main,
+	.sidebar {
+		padding-top: 3em;
+	}
 
 }
 
 @media (min-width: $breakpoint-md) {
 	.sidebar {
 		width: 35%;
+	}
+	
+	.sidebar__control {
+		display: none;
 	}
 }
 
@@ -34,25 +68,3 @@
 		width: 25%;
 	}
 }
-
-/*
-.sidebar {
-	background-color: $background-color-main;
-	-ms-flex-line-pack: justify;
-	align-content: space-between;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	height: 100%;
-	overflow-y: scroll;
-	padding: 1em;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 20%;
-}
-
-
-*/

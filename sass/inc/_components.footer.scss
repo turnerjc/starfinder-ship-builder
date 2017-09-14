@@ -1,0 +1,16 @@
+footer > ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+footer > ul > ul {
+	list-style-type: none;
+}
+
+footer .icon {
+	fill: $background-color-highlight;
+}
+
+footer .icon + .icon {
+	margin-left: 0;
+}

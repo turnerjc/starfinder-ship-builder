@@ -1,6 +1,15 @@
 .main {
+	background-color: $background-color-main;
 	padding: .5rem;
 	/*width: 100%;*/
+}
+
+.main * {
+	color: $background-color-highlight;
+}
+
+.main option {
+	color: #000;
 }
 
 @media (max-width: $breakpoint-md - 1) {
