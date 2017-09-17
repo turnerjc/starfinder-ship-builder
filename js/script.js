@@ -189,7 +189,8 @@ function Ship(json) {
 				defensiveCountermeasuresId:"none",
 				driftEngineId:"none",
 				expansionBayIds:["none","none","none"],
-				hasAntiHackingSystems:0,
+				/* hasAntiHackingSystems:0, */
+				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
 				hasBiometricLocks:0,
 				computerCountermeasuresId:"none",
@@ -405,8 +406,16 @@ function Ship(json) {
 			json: ""
 		},
 		computed: {
-			antiHackingSystemsBpCost: function() {
-				return 3 * this.params.hasAntiHackingSystems;
+			antiHackingSystems: function() {
+				var antiHackingSystems = this.getItemById("antiHackingSystems", this.params.antiHackingSystemsId);
+				antiHackingSystems.getOutputName = function() {
+					var outputName = this.name.toLowerCase();
+					if(this.id !== "none") {
+						outputName += " (DC +" + this.dcMod + ")";
+					}
+					return outputName;
+				};
+				return antiHackingSystems;
 			},
 			antiPersonnelWeapon: function() {
 				return this.getItemById("personalWeapon", this.params.antiPersonnelWeaponId);
@@ -620,8 +629,10 @@ function Ship(json) {
 				return result;
 			},
 			hasSecurity: function() {
-				return (this.params.hasAntiHackingSystems || this.params.antiPersonnelWeaponId !== "none" ||
-					this.params.hasBiometricLocks || this.params.computerCountermeasuresId !== "none" ||
+				return (this.params.antiHackingSystemsId !== "none" ||
+					this.params.antiPersonnelWeaponId !== "none" ||
+					this.params.hasBiometricLocks ||
+					this.params.computerCountermeasuresId !== "none" ||
 					this.params.hasSelfDestructSystem);
 			},
 			hp: function() {
@@ -732,8 +743,8 @@ function Ship(json) {
 			},
 			securityDescription: function() {
 				var desc = [];
-				if(this.params.hasAntiHackingSystems) {
-					desc.push("anti-hacking systems");
+				if(this.params.antiHackingSystemsId !== "none") {
+					desc.push(this.antiHackingSystems.getOutputName());
 				}
 				if(this.params.antiPersonnelWeaponId !== "none") {
 					desc.push( "anti-personnel weapon (" + this.antiPersonnelWeapon.name.toLowerCase() + ")" );
@@ -750,7 +761,7 @@ function Ship(json) {
 				return desc.join(", ");
 			},
 			securityTotalBpCost: function() {
-				return this.antiHackingSystemsBpCost + 
+				return this.antiHackingSystems.bpCost + 
 					this.antiPersonnelWeaponBpCost +
 					this.biometricLocksBpCost +
 					this.computerCountermeasuresBpCost +
@@ -769,6 +780,7 @@ function Ship(json) {
 					"defensiveCountermeasures",
 					"driftEngine",
 					"expansionBay",
+					"antiHackingSystems",
 					"personalWeapon",
 					"computerCountermeasures",
 					"sensors",
@@ -901,7 +913,7 @@ function Ship(json) {
 					this.defensiveCountermeasures.bpCost +
 					this.driftEngineBpCost +
 					this.expansionBaysTotalBpCost +
-					this.antiHackingSystemsBpCost + 
+					this.antiHackingSystems.bpCost + 
 					this.antiPersonnelWeaponBpCost +
 					this.biometricLocksBpCost +
 					this.computerCountermeasuresBpCost +

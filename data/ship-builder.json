@@ -2228,6 +2228,40 @@
 			}
 		]
 	},
+	"antiHackingSystems": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"dcMod": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "mk1",
+				"name": "Anti-Hacking Systems Mk 1",
+				"dcMod": 1,
+				"bpCost": 3
+			},
+			{
+				"id": "mk2",
+				"name": "Anti-Hacking Systems Mk 2",
+				"dcMod": 2,
+				"bpCost": 6
+			},
+			{
+				"id": "mk3",
+				"name": "Anti-Hacking Systems Mk 3",
+				"dcMod": 3,
+				"bpCost": 9
+			},
+			{
+				"id": "mk4",
+				"name": "Anti-Hacking Systems Mk 4",
+				"dcMod": 4,
+				"bpCost": 12
+			}
+		]
+	},
 	"personalWeapon": {
 		"data": [
 			{
@@ -4873,7 +4907,7 @@
 					"defensiveCountermeasuresId": "mk-3",
 					"driftEngineId": "none",
 					"expansionBayIds": [],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -5017,7 +5051,7 @@
 						"cargo-hold",
 						"cargo-hold"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -5180,7 +5214,7 @@
 						"none",
 						"none"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": true,
 					"computerCountermeasuresId": "none",
@@ -5383,7 +5417,7 @@
 					"defensiveCountermeasuresId": "mk-1",
 					"driftEngineId": "none",
 					"expansionBayIds": [],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -5527,7 +5561,7 @@
 						"cargo-hold",
 						"cargo-hold"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -5698,7 +5732,7 @@
 						"none",
 						"none"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -5884,7 +5918,7 @@
 						"cargo-hold",
 						"passenger-seating"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6017,7 +6051,7 @@
 						"cargo-hold",
 						"cargo-hold"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6181,7 +6215,7 @@
 						"shuttle-bay"
 					],
 					"expansionBaysCountUsed": 0,
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6337,7 +6371,7 @@
 						"cargo-hold",
 						"escape-pods"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6493,7 +6527,7 @@
 						"escape-pods",
 						"escape-pods"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6669,7 +6703,7 @@
 						"escape-pods",
 						"escape-pods"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6820,7 +6854,7 @@
 					"defensiveCountermeasuresId": "mk-5",
 					"driftEngineId": "signal-basic",
 					"expansionBayIds": [],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -6971,7 +7005,7 @@
 						"guest-quarters-common",
 						"guest-quarters-common"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",
@@ -7149,7 +7183,7 @@
 						"none",
 						"none"
 					],
-					"hasAntiHackingSystems": 0,
+					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
 					"computerCountermeasuresId": "none",

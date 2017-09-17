@@ -606,22 +606,32 @@
 			-->
 			
 			<div class="box">
+			
+			
 				<header class="box__header">
 					<h3 id="security">Security</h3>
 				</header>
+				
+				
+				<!-- Anti-Hacking Systems -->
 				<div class="box__list-item">
 					<div class="box__select">
-						<div class="checkbox">
-							<label for="hasAntiHackingSystems">
-								<input type="checkbox" v-model="params.hasAntiHackingSystems" id="hasAntiHackingSystems">
-								Anti-Hacking Systems
-							</label>
+						<div class="form-group">
+							<label for="antiHackingSystemsSelect">Anti-Hacking Systems</label>
+							<select v-model="params.antiHackingSystemsId" id="antiHackingSystemsSelect" class="form-control">
+								<template v-for="option in selectOptions.antiHackingSystems">
+									<option :value="option.id">{{ option.name }}</option>
+								</template>
+							</select>
 						</div>
 					</div>
 					<div class="box__cost--list">
-						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ antiHackingSystemsBpCost }}
+						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ antiHackingSystems.bpCost }}
 					</div>
 				</div>
+				
+				
+				<!-- Anti-Personnel Weapon -->
 				<div class="box__list-item" v-if="sizeCategory.multiplier <= 3">
 					<div class="box__select">
 						<div class="form-group">
@@ -638,6 +648,9 @@
 						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ antiPersonnelWeaponBpCost }}
 					</div>
 				</div>
+				
+				
+				<!-- Biometric Locks -->
 				<div class="box__list-item">
 					<div class="box__select">
 						<div class="checkbox">
@@ -651,6 +664,9 @@
 						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ biometricLocksBpCost }}
 					</div>
 				</div>
+				
+				
+				<!-- Computer Countermeasures -->
 				<div class="box__list-item">
 					<div class="box__select">
 						<div class="form-group">
@@ -664,6 +680,9 @@
 						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ computerCountermeasuresBpCost }}
 					</div>
 				</div>
+				
+				
+				<!-- Self-Destruct System -->
 				<div class="box__list-item">
 					<div class="box__select">
 						<div class="checkbox">
@@ -677,9 +696,14 @@
 						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ selfDestructSystemBpCost }}
 					</div>
 				</div>
+				
+				
+				<!-- Total -->
 				<div class="box__cost">
 					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ securityTotalBpCost }}
 				</div>
+				
+				
 			</div><!-- box -->
 
 
