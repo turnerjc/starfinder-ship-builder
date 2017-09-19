@@ -127,6 +127,11 @@ String.prototype.toTitleCase = function() {
 	});
 }
 
+function isEven(num) {
+	var isEven = (num % 2) == 0;
+	return isEven;
+}
+
 /**
  * CLIPBOARD.JS
  * https://clipboardjs.com/
@@ -203,13 +208,17 @@ function Ship(json) {
 							weaponId: "none",
 							weight: "light",
 							templateWeight: "light",
-							isFromTemplate: true
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
 						},
 						{
 							weaponId: "none",
 							weight: "light",
 							templateWeight: "light",
-							isFromTemplate: true
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
 						}
 					],
 					aft: [],
@@ -218,7 +227,9 @@ function Ship(json) {
 							weaponId: "none",
 							weight: "light",
 							templateWeight: "light",
-							isFromTemplate: true
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
 						}
 					],
 					starboard: [
@@ -226,7 +237,9 @@ function Ship(json) {
 							weaponId: "none",
 							weight: "light",
 							templateWeight: "light",
-							isFromTemplate: true
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
 						}
 					],
 					turret: []
@@ -921,7 +934,8 @@ function Ship(json) {
 					this.sensors.bpCost +
 					this.shields.bpCost +
 					this.weaponsTotalCosts.weaponsBp +
-					this.weaponsTotalCosts.weaponMountsBp
+					this.weaponsTotalCosts.weaponMountsBp +
+					this.weaponsTotalCosts.weaponLinksBp
 				;
 			},
 			weaponDescriptions: function() {
@@ -930,8 +944,27 @@ function Ship(json) {
 					var positionDesc = [];
 					for(i in this.weaponMounts[position]) {
 						var mount = this.weaponMounts[position][i];
+						var prevI = parseInt(i) - 1;
+						var mountDesc = "";
+						
+						// if this is the second of a linked set, skip this mount
+						if(
+							isset( this.weaponMounts[position][prevI] ) &&
+							this.weaponMounts[position][prevI].isLinked
+						) {
+							continue;
+						}
+						
+						console.log(i, "desc");
+						// get description
 						if(mount.weapon.id !== "none") {
-							positionDesc.push(mount.weapon.name + " (" + mount.weapon.damage + ")");
+							var weaponName = mount.weapon.name.toLowerCase();
+							if( mount.isLinked ) {
+								mountDesc = "linked " + weaponName.pluralise(2) + " (" + mount.weapon.damage + ")"
+							} else {
+								mountDesc = weaponName + " (" + mount.weapon.damage + ")"
+							}
+							positionDesc.push(mountDesc);
 						}
 					}
 					if(positionDesc.length > 0) {
@@ -956,7 +989,9 @@ function Ship(json) {
 							canBeUpgraded: this.canWeaponMountBeUpgraded(position, params.weight),
 							canBeDowngraded: this.canWeaponMountBeDowngraded(params.weight, params.isFromTemplate,
 								params.templateWeight),
-							isFromTemplate: params.isFromTemplate
+							isFromTemplate: params.isFromTemplate,
+							isLinked: params.isLinked,
+							linkCost: params.isLinked ? Math.floor(weaponObj.bpCost * 0.5) : 0
 						};
 					}
 				}
@@ -964,15 +999,18 @@ function Ship(json) {
 			},
 			weaponsTotalCosts: function() {
 				var totals = {
+					weaponLinksBp: 0,
 					weaponMountsBp: 0,
 					weaponsBp: 0,
 					weaponsPcu: 0
 				};
 				for(position in this.weaponMounts) {
 					for(i in this.weaponMounts[position]) {
-						totals.weaponMountsBp += this.weaponMounts[position][i].mountBpCost;
-						totals.weaponsBp += this.weaponMounts[position][i].weapon.bpCost;
-						totals.weaponsPcu += this.weaponMounts[position][i].weapon.pcuCost;
+						var mount = this.weaponMounts[position][i];
+						totals.weaponMountsBp += mount.mountBpCost;
+						totals.weaponsBp += mount.weapon.bpCost;
+						totals.weaponsPcu += mount.weapon.pcuCost;
+						totals.weaponLinksBp += mount.linkCost;
 					}
 				}
 				return totals;
@@ -1080,7 +1118,9 @@ function Ship(json) {
 								weaponId: "none",
 								weight: mountWeight,
 								templateWeight: mountWeight,
-								isFromTemplate: true
+								isFromTemplate: true,
+								canBeLinked: false,
+								isLinked: false
 							}
 							this.params.weaponMounts[position].push(objMount);
 						} // for j
@@ -1223,6 +1263,23 @@ function Ship(json) {
 				}
 				return result;
 			},
+			setWeaponLinking: function(position) {
+				var mountsInArc = this.params.weaponMounts[position];
+				for(i in mountsInArc) {
+					var nextI = parseInt(i) + 1;
+					if(
+						mountsInArc[i].weaponId !== "none" &&
+						isEven(i) &&
+						isset( mountsInArc[nextI] ) &&
+						mountsInArc[i].weaponId == mountsInArc[nextI].weaponId
+					) {
+						mountsInArc[i].canBeLinked = true;
+					} else {
+						mountsInArc[i].canBeLinked = false;
+						mountsInArc[i].isLinked = false;
+					}
+				}
+			},
 			adjustPowerCoreIds: function(countHousings) {
 				if( this.params.powerCoreIds.length < countHousings ) {
 					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
@@ -1243,7 +1300,7 @@ function Ship(json) {
 } // Ship class
 
 function WeaponMount(params) {
-	// params expects: weaponMountId, position, weaponId, weight, isFromTemplate
+	// params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, isLinked
 	// maybe expects templateWeight
 	this.id = params.weaponMountId;
 	this.position = params.position;
@@ -1255,6 +1312,8 @@ function WeaponMount(params) {
 	} else {
 		this.templateWeight = "light";
 	}
+	this.canBeLinked = params.canBeLinked;
+	this.isLinked = params.isLinked;
 	
 	this.doTests = function() {
 		this.testThatPositionIsValid();

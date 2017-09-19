@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-	<meta name="description" content="Build and level up starships for your Starfinder RPG game. Create ships from scratch or customise sample ships from the Core Rulebook. Build ships in minutes without the hassle of manual calculations.">
+	<meta name="description" content="Build and level up starships for your Starfinder RPG game. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy.">
 	<meta name="viewport" content="initial-scale=1">
 	<title>Starfinder RPG Ship Builder</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700" rel="stylesheet">
@@ -800,6 +800,7 @@
 					
 					<div class="box">
 				
+						<!-- Header, upgrade, downgrade, delete buttons -->
 						<div class="box__header--btns">
 							<h4>Weapon Mount {{ i+1 }} ({{ weaponMount.weight }})</h4>
 							<div>
@@ -820,6 +821,7 @@
 						</div>
 						
 						
+						<!-- Weapon select -->
 						<div class="box__select">
 							<div class="form-group">
 								<label :for="'shipWeaponSelect_' + i">Weapon
@@ -827,7 +829,8 @@
 								<select
 									v-model="params.weaponMounts[position][i].weaponId"
 									:id="'shipWeaponSelect_' + i"
-									class="form-control">
+									class="form-control"
+									@change="setWeaponLinking(position, i)">
 									<option value="none">None</option>
 									<template v-for="option in selectOptions.shipWeapon"
 										v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)">
@@ -836,21 +839,40 @@
 								</select>
 							</div><!-- .form-group -->
 						</div><!-- .box__select -->
+						
 
+						<!-- Weapon info -->
 						<div class="box__info">
 							<strong>Range</strong> {{ weaponMount.weapon.range }};
 							<strong>Speed</strong> {{ weaponMount.weapon.speed }};
 							<strong>Damage</strong> {{ weaponMount.weapon.damage }};
 							<strong>Special Properties</strong> {{ weaponMount.weapon.specialProperties }}
 						</div>
+						
 
+						<!-- Is Linked -->
+						<div class="box__select">
+							<div class="checkbox">
+								<label :for="'isLinked' + i" v-if="params.weaponMounts[position][i].canBeLinked">
+									<input type="checkbox"
+										v-model="params.weaponMounts[position][i].isLinked"
+										:id="'isLinked' + i">
+									Linked?
+								</label>
+							</div>
+						</div>
+
+
+						<!-- Weapon cost -->
 						<div class="box__cost">
 							<svg class="icon"><use xlink:href="#icon-power" /></svg>
 							{{ weaponMount.weapon.pcuCost }}
 							<svg class="icon"><use xlink:href="#icon-build" /></svg>
-							{{ weaponMount.weapon.bpCost + weaponMount.mountBpCost }}
+							{{ weaponMount.weapon.bpCost + weaponMount.mountBpCost + weaponMount.linkCost }}
 							(weapon {{ weaponMount.weapon.bpCost }} +
-							mount {{ weaponMount.mountBpCost }})
+							mount {{ weaponMount.mountBpCost }}<span v-if="weaponMount.linkCost > 0"> + 
+							link {{ weaponMount.linkCost }}
+							</span>)
 						</div>
 						
 					</div><!-- .box -->
@@ -875,9 +897,10 @@
 					<svg class="icon"><use xlink:href="#icon-power" /></svg>
 					{{ weaponsTotalCosts.weaponsPcu }}
 					<svg class="icon"><use xlink:href="#icon-build" /></svg>
-					{{ weaponsTotalCosts.weaponsBp + weaponsTotalCosts.weaponMountsBp }}
+					{{ weaponsTotalCosts.weaponsBp + weaponsTotalCosts.weaponMountsBp + weaponsTotalCosts.weaponLinksBp }}
 					(weapons {{ weaponsTotalCosts.weaponsBp }} +
-					mounts {{ weaponsTotalCosts.weaponMountsBp }})
+					mounts {{ weaponsTotalCosts.weaponMountsBp }} +
+					links {{ weaponsTotalCosts.weaponLinksBp }})
 				</div>
 			</div>
 

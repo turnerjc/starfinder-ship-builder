@@ -4920,13 +4920,17 @@
 								"weaponId": "gyrolaser",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "light-emp-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -5064,13 +5068,17 @@
 								"weaponId": "heavy-emp-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "light-laser-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [
@@ -5078,7 +5086,9 @@
 								"weaponId": "gyrolaser",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"port": [],
@@ -5088,13 +5098,17 @@
 								"weaponId": "light-torpedo-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
 							},
 							{
 								"weaponId": "light-torpedo-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -5227,19 +5241,25 @@
 								"weaponId": "super-emp-cannon",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [
@@ -5247,7 +5267,9 @@
 								"weaponId": "tactical-nuclear-missile-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"port": [
@@ -5255,19 +5277,25 @@
 								"weaponId": "heavy-laser-array",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -5275,19 +5303,25 @@
 								"weaponId": "heavy-laser-array",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": [
@@ -5295,13 +5329,17 @@
 								"weaponId": "heavy-torpedo-launcher",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
 							},
 							{
 								"weaponId": "heavy-torpedo-launcher",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -5430,7 +5468,9 @@
 								"weaponId": "gyrolaser",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [
@@ -5438,7 +5478,9 @@
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"port": [],
@@ -5574,19 +5616,25 @@
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -5595,7 +5643,9 @@
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -5603,7 +5653,9 @@
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": []
@@ -5745,7 +5797,9 @@
 								"weaponId": "super-plasma-cannon",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -5754,19 +5808,25 @@
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -5774,19 +5834,25 @@
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": [
@@ -5794,13 +5860,17 @@
 								"weaponId": "high-explosive-missile-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
 							},
 							{
 								"weaponId": "high-explosive-missile-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -5931,7 +6001,9 @@
 								"weaponId": "light-laser-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -6064,7 +6136,9 @@
 								"weaponId": "light-laser-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -6073,7 +6147,9 @@
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -6081,7 +6157,9 @@
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": [
@@ -6089,7 +6167,9 @@
 								"weaponId": "high-explosive-missile-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -6228,7 +6308,9 @@
 								"weaponId": "particle-beam-cannon",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -6237,7 +6319,9 @@
 								"weaponId": "light-plasma-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -6245,7 +6329,9 @@
 								"weaponId": "light-plasma-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": [
@@ -6253,7 +6339,9 @@
 								"weaponId": "heavy-plasma-torpedo-launcher",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -6384,13 +6472,17 @@
 								"weaponId": "gyrolaser",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true
 							},
 							{
 								"weaponId": "gyrolaser",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -6540,13 +6632,17 @@
 								"weaponId": "heavy-laser-net",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "twin-laser",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [
@@ -6554,7 +6650,9 @@
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"port": [
@@ -6562,7 +6660,9 @@
 								"weaponId": "flak-thrower",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -6570,7 +6670,9 @@
 								"weaponId": "flak-thrower",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": [
@@ -6578,7 +6680,9 @@
 								"weaponId": "light-torpedo-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -6867,13 +6971,17 @@
 								"weaponId": "light-plasma-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "tactical-nuclear-missile-launcher",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [
@@ -6881,7 +6989,9 @@
 								"weaponId": "flak-thrower",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"port": [],
@@ -7018,13 +7128,17 @@
 								"weaponId": "persistent-particle-beam",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "coilgun",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [
@@ -7032,7 +7146,9 @@
 								"weaponId": "coilgun",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"port": [],
@@ -7042,13 +7158,17 @@
 								"weaponId": "light-plasma-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
 							},
 							{
 								"weaponId": "light-plasma-cannon",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
@@ -7196,25 +7316,33 @@
 								"weaponId": "particle-beam-cannon",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "heavy-laser-cannon",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"aft": [],
@@ -7223,25 +7351,33 @@
 								"weaponId": "superlaser",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "heavy-torpedo-launcher",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"starboard": [
@@ -7249,25 +7385,33 @@
 								"weaponId": "superlaser",
 								"weight": "capital",
 								"templateWeight": "capital",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "heavy-torpedo-launcher",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "heavy",
 								"templateWeight": "heavy",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						],
 						"turret": [
@@ -7275,25 +7419,33 @@
 								"weaponId": "coilgun",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true
 							},
 							{
 								"weaponId": "coilgun",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							},
 							{
 								"weaponId": "none",
 								"weight": "light",
 								"templateWeight": "light",
-								"isFromTemplate": true
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
 							}
 						]
 					},
