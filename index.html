@@ -1086,7 +1086,7 @@
 					<div id="outputText">
 						<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
 						<p>{{ frame.size }} {{ frame.name.toLowerCase() }}</p>
-						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ maneuverabilityRating.turn }})<span v-if="driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
+						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
 						<p><strong>AC</strong> {{ armourClass }}; <strong>TL</strong> {{ targetLock }}</p>
 						<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ frame.dt }}; <strong>CT</strong> {{ criticalThreshold }}</p>
 						<p><strong>Shields</strong> {{ shields.name }}
@@ -1165,6 +1165,7 @@
 					<li><a href="http://paizo.com/starfinder/">Starfinder RPG</a> &copy; Paizo Inc, 2017</li>
 					<li>Open Game Licence</li>
 					<li>Made with <a href="https://vuejs.org/">Vue.js</a></li>
+					<li>Artwork by <a href="https://www.shue-digital.com/">Sebastien Hue</a> (used without permission)</li>
 					<li>Icons by the <a href="https://thenounproject.com/">Noun Project</a>:</li>
 					<ul>
 						<li>

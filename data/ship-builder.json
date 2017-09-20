@@ -6115,7 +6115,7 @@
 					"armourId": "mk-3",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
-					"defensiveCountermeasuresId": "mk-3",
+					"defensiveCountermeasuresId": "mk-1",
 					"driftEngineId": "signal-basic",
 					"expansionBayIds": [
 						"science-lab-physical",

@@ -938,6 +938,9 @@ function Ship(json) {
 					this.weaponsTotalCosts.weaponLinksBp
 				;
 			},
+			turn: function() {
+				return this.maneuverabilityRating.turn + this.armour.turnDistanceModifier;
+			},
 			weaponDescriptions: function() {
 				var desc = {};
 				for(position in this.weaponMounts) {

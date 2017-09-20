@@ -9,5 +9,6 @@ vendor/
 *.xlsx
 index_Old.html
 *.lnk
-*.txt
 *.psd
+*.txt
+*.url
