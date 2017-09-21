@@ -38,12 +38,22 @@
 	.sidebar__control {
 		background-color: $background-color-main;
 		border-bottom: 1px solid $background-color-highlight;
+		font-size: .9em;
 		position: fixed;
 		top: 0; left: 0;
 		width: 100%;
 		padding: 1em;
-		text-align: right;
+		text-decoration: none;
 		z-index: 100;
+	}
+	
+	.sidebar__open {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.sidebar__close {
+		text-align: right;
 	}
 	
 	.main,
