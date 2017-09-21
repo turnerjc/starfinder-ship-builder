@@ -716,7 +716,9 @@
 						<div class="form-group">
 							<label for="shockGridSelect">Shock Grid</label>
 							<select v-model="params.computerCountermeasures.shockGridId" id="shockGridSelect" class="form-control">
-								<option v-for="option in selectOptions.shockGrid" :value="option.id">{{ option.name }}</option>
+								<option v-for="option in selectOptions.shockGrid" :value="option.id">
+									{{ option.id == "none" ? "None" : option.name + ' (DC ' + option.dc + ', ' + option.damage + ')' }}
+								</option>
 							</select>
 						</div>
 						
