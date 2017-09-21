@@ -178,7 +178,7 @@ function Ship(json) {
 		data: {
 			data: json,
 			paramsReset: {
-				version:"1.0.0",
+				version:"1.0.1",
 				hasCrew:1,
 				isSetDefaultCrewSkillValues:1,
 				isUseStrictRules:1,
@@ -194,11 +194,18 @@ function Ship(json) {
 				defensiveCountermeasuresId:"none",
 				driftEngineId:"none",
 				expansionBayIds:["none","none","none"],
-				/* hasAntiHackingSystems:0, */
 				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
 				hasBiometricLocks:0,
-				computerCountermeasuresId:"none",
+				computerCountermeasures: {
+					alarm: false,
+					fakeShell: false,
+					feedback: false,
+					firewall: false,
+					lockout: false,
+					shockGridId: "none",
+					wipe: false
+				},
 				hasSelfDestructSystem:0,
 				sensorsId:"none",
 				shieldsId:"none",
@@ -504,15 +511,41 @@ function Ship(json) {
 				}
 				return desc;
 			},
-			computerCountermeasures: function() {
-				return this.getItemById("computerCountermeasures", this.params.computerCountermeasuresId);
-			},
 			computerCountermeasuresBpCost: function() {
-				var cost = 0;
-				if(this.computerCountermeasures.id !== "none") {
-					cost = Math.round(this.tier.value / 2);
+				var total = 0;
+				for(measure in this.params.computerCountermeasures) {
+					if( measure == "shockGridId" ) {
+						total += this.shockGridBpCost;
+					} else {
+						if( this.params.computerCountermeasures[measure] == true ) {
+							total += this.computerTier;
+						}
+					}
 				}
-				return cost;
+				return total;
+			},
+			computerCountermeasuresDescription: function() {
+				var desc = [];
+				for(measure in this.params.computerCountermeasures) {
+					if( measure == 'shockGridId') {
+						if(this.params.computerCountermeasures[measure] !== "none") {
+							var shockGridDesc = 'shock grid ' + this.shockGrid.rank +
+								' [DC ' + this.shockGrid.dc +
+								', ' + this.shockGrid.damage + ']';
+							desc.push(shockGridDesc);
+						}
+					} else {
+						if(this.params.computerCountermeasures[measure] == true) {
+							var cmName = this.getItemById('computerCountermeasures', measure).name.toLowerCase();
+							desc.push(cmName);
+						}
+					}
+				}
+				return desc.join(', ');
+			},
+			computerTier: function() {
+				var shipTier = this.tier.value;
+				return ( shipTier < 2 ? 1 : Math.floor( shipTier * 0.5 ) );
 			},
 			countPowerCoreHousings: function() {
 				var countHousings = this.sizeCategory.countPowerCoreHousings;
@@ -623,15 +656,20 @@ function Ship(json) {
 				var frame = this.getItemById("frame", this.params.frameId);
 				return frame;
 			},
-			/*
-			frame: function() {
-				var frame = this.getItemById("frame", this.params.frameId);
-				this.syncExpansionBays( frame.expansionBays );
-				this.setCrewQuarters( frame.size );
-				this.setWeaponMounts( frame.mounts );
-				return frame;
+			hasComputerCountermeasures: function() {
+				for(measure in this.params.computerCountermeasures) {
+					if( measure == 'shockGridId') {
+						if(this.params.computerCountermeasures[measure] !== "none") {
+							return true;
+						}
+					} else {
+						if(this.params.computerCountermeasures[measure] == true) {
+							return true;
+						}
+					}
+				}
+				return false;
 			},
-			*/
 			hasPowerCoreHousingExpansionBay: function() {
 				var result = false;
 				for( i in this.params.expansionBayIds ) {
@@ -645,7 +683,7 @@ function Ship(json) {
 				return (this.params.antiHackingSystemsId !== "none" ||
 					this.params.antiPersonnelWeaponId !== "none" ||
 					this.params.hasBiometricLocks ||
-					this.params.computerCountermeasuresId !== "none" ||
+					this.hasComputerCountermeasures ||
 					this.params.hasSelfDestructSystem);
 			},
 			hp: function() {
@@ -763,10 +801,10 @@ function Ship(json) {
 					desc.push( "anti-personnel weapon (" + this.antiPersonnelWeapon.name.toLowerCase() + ")" );
 				}
 				if(this.params.hasBiometricLocks) {
-				   desc.push("biometric locks");
+				    desc.push("biometric locks");
 				}
-				if(this.params.computerCountermeasuresId !== "none") {
-				   desc.push( "computer countermeasures (" + this.computerCountermeasures.name.toLowerCase() + ")" );
+				if(this.hasComputerCountermeasures) {
+					desc.push("computer countermeasures (" + this.computerCountermeasuresDescription + ")");
 				}
 				if(this.params.hasSelfDestructSystem) {
 				   desc.push( "self-destruct system" );
@@ -796,6 +834,7 @@ function Ship(json) {
 					"antiHackingSystems",
 					"personalWeapon",
 					"computerCountermeasures",
+					"shockGrid",
 					"sensors",
 					"shields",
 					"shipWeapon",
@@ -839,6 +878,12 @@ function Ship(json) {
 			},
 			shipName: function() {
 				return (this.params.shipName == "" ? "New Ship" : this.params.shipName);
+			},
+			shockGrid: function() {
+				return this.getItemById("shockGrid", this.params.computerCountermeasures.shockGridId);
+			},
+			shockGridBpCost: function() {
+				return this.shockGrid.bpCostMultiplier * this.computerTier;
 			},
 			sizeCategory: function() {
 				return this.getItemById("sizeCategory", this.frame.size);
@@ -958,7 +1003,6 @@ function Ship(json) {
 							continue;
 						}
 						
-						console.log(i, "desc");
 						// get description
 						if(mount.weapon.id !== "none") {
 							var weaponName = mount.weapon.name.toLowerCase();

@@ -668,17 +668,40 @@
 				
 				<!-- Computer Countermeasures -->
 				<div class="box__list-item">
+				
+					<p>Computer Countermeasures</p>
+				
 					<div class="box__select">
+					
+						<!-- true/false countermeasures -->
+						<div class="box__select box__select--computerCountermeasures">
+							<div
+								class="checkbox"
+								v-for="option in selectOptions.computerCountermeasures"
+								v-if="option.id !== 'shock-grid'">
+								<label :for="'computerCountermeasures_' + option.id">
+									<input type="checkbox"
+										v-model="params.computerCountermeasures[option.id]"
+										:id="'computerCountermeasures_' + option.id">
+									{{ option.name }}
+								</label>
+							</div>
+						</div>
+					
+						<!-- shock grid -->
 						<div class="form-group">
-							<label for="computerCountermeasuresSelect">Computer Countermeasures</label>
-							<select v-model="params.computerCountermeasuresId" id="computerCountermeasuresSelect" class="form-control">
-								<option v-for="option in selectOptions.computerCountermeasures" :value="option.id">{{ option.name }}</option>
+							<label for="shockGridSelect">Shock Grid</label>
+							<select v-model="params.computerCountermeasures.shockGridId" id="shockGridSelect" class="form-control">
+								<option v-for="option in selectOptions.shockGrid" :value="option.id">{{ option.name }}</option>
 							</select>
 						</div>
+						
 					</div>
+					
 					<div class="box__cost--list">
 						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ computerCountermeasuresBpCost }}
 					</div>
+					
 				</div>
 				
 				

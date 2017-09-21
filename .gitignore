@@ -7,8 +7,9 @@ ships/
 src/
 vendor/
 *.xlsx
-index_Old.html
 *.lnk
 *.psd
 *.txt
 *.url
+data-versions.md
+index_Old.html

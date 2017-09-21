@@ -58,3 +58,21 @@ ul.box__select {
 .box--json * + * {
 	margin-top: 1em;
 }
+
+@media (min-width: $breakpoint-md) {
+	
+	.box__select--computerCountermeasures {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.box__select--computerCountermeasures .checkbox {
+		flex-basis: 50%;
+	}
+	
+	.box__select--computerCountermeasures .checkbox,
+	.box__select--computerCountermeasures .checkbox + .checkbox {
+		margin-top: 0;
+	}
+
+}

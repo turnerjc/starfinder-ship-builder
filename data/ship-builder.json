@@ -2228,6 +2228,90 @@
 			}
 		]
 	},
+	"computerCountermeasures": {
+		"data": [
+			{
+				"id": "alarm",
+				"name": "Alarm"
+			},
+			{
+				"id": "fake-shell",
+				"name": "Fake Shell"
+			},
+			{
+				"id": "feedback",
+				"name": "Feedback"
+			},
+			{
+				"id": "firewall",
+				"name": "Firewall"
+			},
+			{
+				"id": "lockout",
+				"name": "Lockout"
+			},
+			{
+				"id": "shock-grid",
+				"name": "Shock Grid"
+			},
+			{
+				"id": "wipe",
+				"name": "Wipe"
+			}
+		]
+	},
+	"shockGrid": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"rank": 0,
+				"dc": 0,
+				"damage": "None",
+				"bpCostMultiplier": 0
+			},
+			{
+				"id": "rank-1",
+				"name": "Shock Grid, Rank 1",
+				"rank": 1,
+				"dc": 20,
+				"damage": "8d6",
+				"bpCostMultiplier": 1
+			},
+			{
+				"id": "rank-2",
+				"name": "Shock Grid, Rank 2",
+				"rank": 2,
+				"dc": 22,
+				"damage": "10d6",
+				"bpCostMultiplier": 2
+			},
+			{
+				"id": "rank-3",
+				"name": "Shock Grid, Rank 3",
+				"rank": 3,
+				"dc": 24,
+				"damage": "12d6",
+				"bpCostMultiplier": 3
+			},
+			{
+				"id": "rank-4",
+				"name": "Shock Grid, Rank 4",
+				"rank": 4,
+				"dc": 27,
+				"damage": "14d6",
+				"bpCostMultiplier": 4
+			},
+			{
+				"id": "rank-5",
+				"name": "Shock Grid, Rank 5",
+				"rank": 5,
+				"dc": 30,
+				"damage": "16d6",
+				"bpCostMultiplier": 5
+			}
+		]
+	},
 	"antiHackingSystems": {
 		"data": [
 			{
@@ -3817,42 +3901,6 @@
 			}
 		]
 	},
-	"computerCountermeasures": {
-		"data": [
-			{
-				"id": "none",
-				"name": "None"
-			},
-			{
-				"id": "alarm",
-				"name": "Alarm"
-			},
-			{
-				"id": "fake-shell",
-				"name": "Fake Shell"
-			},
-			{
-				"id": "feedback",
-				"name": "Feedback"
-			},
-			{
-				"id": "firewall",
-				"name": "Firewall"
-			},
-			{
-				"id": "lockout",
-				"name": "Lockout"
-			},
-			{
-				"id": "shock-grid",
-				"name": "Shock Grid"
-			},
-			{
-				"id": "wipe",
-				"name": "Wipe"
-			}
-		]
-	},
 	"sensors": {
 		"data": [
 			{
@@ -4889,7 +4937,7 @@
 				"name": "Death's Head Necroglider",
 				"tier": "1/2",
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": 1,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -4910,6 +4958,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"computerCountermeasuresId": "none",
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-short-range",
@@ -5031,7 +5088,7 @@
 				"name": "Blackwind Sepulcher",
 				"tier": 5,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": false,
@@ -5058,7 +5115,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "light-60",
@@ -5204,6 +5269,7 @@
 				"name": "Thaumtech Omenbringer",
 				"tier": 14,
 				"params": {
+					"version": "1.0.1",
 					"isUseStrictRules": 1,
 					"shipName": "Thaumtech Omenbringer",
 					"shipConcept": "The Omenbringer sails through the void like the corpse of some vast whale, but its organic aesthetics belie the cutting-edge technology of its construction. Within its gullet hang ranks of Necrogliders and other fighters, their undead pilots able to stay ready at their stations indefinitely. Without life support on many decks, the ship is very difficult to take down, and big sections (such as the hangars) stand airless and open to space by design.",
@@ -5231,7 +5297,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": true,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "advanced-medium-range",
 					"shieldsId": "heavy-240",
@@ -5343,7 +5417,6 @@
 							}
 						]
 					},
-					"version": "1.0.0",
 					"hasCrew": 1,
 					"isSetDefaultCrewSkillValues": 0,
 					"crewSkills": {
@@ -5437,7 +5510,7 @@
 				"name": "Idaran Voidrunner",
 				"tier": "1/3",
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -5458,7 +5531,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "basic-medium-range",
 					"shieldsId": "basic-10",
@@ -5580,6 +5661,7 @@
 				"name": "Idaran Vanserai",
 				"tier": 4,
 				"params": {
+					"version": "1.0.1",
 					"shipName": "Idaran Vanserai",
 					"shipConcept": "Big-bellied Vanserais resemble starfighters gone to fat. With prominent wing guns and a bridge canopy made to look like a much smaller cockpit, a Vanserai’s appearance is designed to make it clear that while it may be a freighter, it’s no easy target.",
 					"tierId": "4",
@@ -5606,7 +5688,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-short-range",
 					"shieldsId": "basic-40",
@@ -5660,7 +5750,6 @@
 						],
 						"turret": []
 					},
-					"version": "1.0.0",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"crewSkills": {
@@ -5755,7 +5844,7 @@
 				"name": "Idaran Millenia",
 				"tier": 12,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -5787,7 +5876,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-long-range",
 					"shieldsId": "medium-160",
@@ -5966,7 +6063,7 @@
 				"name": "Ringworks Wanderer",
 				"tier": "1/4",
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": false,
@@ -5991,7 +6088,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-short-range",
 					"shieldsId": "basic-10",
@@ -6104,6 +6209,7 @@
 				"name": "Kevolari Venture",
 				"tier": 1,
 				"params": {
+					"version": "1.0.1",
 					"shipName": "Kevolari Venture",
 					"shipConcept": "Thoroughly industrial in its aesthetics, the Venture is a ship designed to keep its crew alive in unfriendly systems—everything else is secondary. Inside, however, the Venture is surprisingly comfortable, making it perfect for exploration, permanent residency, and long-haul shipping.",
 					"tierId": "1",
@@ -6126,7 +6232,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-medium-range",
 					"shieldsId": "basic-20",
@@ -6173,7 +6287,6 @@
 							}
 						]
 					},
-					"version": "1.0.0",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": "0",
@@ -6269,7 +6382,7 @@
 				"name": "Atech Immortal",
 				"tier": 10,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": true,
@@ -6298,7 +6411,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "medium-200",
@@ -6437,7 +6558,7 @@
 				"name": "Starhive Drone Mk III",
 				"tier": 1,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -6462,7 +6583,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-medium-range",
 					"shieldsId": "basic-10",
@@ -6596,7 +6725,7 @@
 				"name": "UIE Hiveguard",
 				"tier": 6,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -6622,7 +6751,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "light-60",
@@ -6778,7 +6915,7 @@
 				"name": "Hivonyx Titan Mauler",
 				"tier": 9,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": false,
@@ -6810,7 +6947,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "medium-100",
@@ -6940,7 +7085,7 @@
 				"name": "BMC Mauler",
 				"tier": 2,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -6961,7 +7106,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "advanced-medium-range",
 					"shieldsId": "basic-40",
@@ -7091,7 +7244,7 @@
 				"name": "Norikama Dropship",
 				"tier": 8,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -7118,7 +7271,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "light-80",
@@ -7264,7 +7425,7 @@
 				"name": "Vindicas Tyrant",
 				"tier": 16,
 				"params": {
-					"version": "1.0.0",
+					"version": "1.0.1",
 					"hasCrew": true,
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
@@ -7306,7 +7467,15 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasuresId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
 					"hasSelfDestructSystem": 0,
 					"sensorsId": "budget-medium-range",
 					"shieldsId": "medium-200",
