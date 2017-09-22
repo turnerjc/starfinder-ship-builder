@@ -1,6 +1,7 @@
 .sidebar {
 	background: #eee url("../img/ship-blue.jpg") no-repeat center top;
 	background-size: auto auto;
+	background-color: $background-color-main;
 	height: 100vh;
 	overflow-y: scroll;
 	padding: .5rem;
