@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-	<meta name="description" content="Build and level up starships for your Starfinder RPG game. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy.">
+	<meta name="description" content="Build and level up starships for your Starfinder RPG game by Paizo Inc. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy.">
 	<meta name="viewport" content="initial-scale=1">
 	<title>Starfinder RPG Ship Builder</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700" rel="stylesheet">
@@ -14,14 +14,14 @@
 	<meta name="twitter:site" content="@james_c_turner" />
 	<!--
 	<meta name="twitter:title" content="Starfinder RPG Ship Builder" />
-	<meta name="twitter:description" content="Build and level up starships for your Starfinder RPG game. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy." />
+	<meta name="twitter:description" content="Build and level up starships for your Starfinder RPG game by Paizo Inc. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy." />
 	<meta name="twitter:image" content="http://www.jamesturneronline.net/starfinder-ship-builder/img/twitter-card.jpg" />	
 	-->
 	<meta name="twitter:image:alt" content="Artwork by Sebastien Hue" />
 	<meta name="twitter:creator" content="@james_c_turner" />
 	<meta property="og:url" content="http://www.jamesturneronline.net/starfinder-ship-builder/" />
 	<meta property="og:title" content="Starfinder RPG Ship Builder" />
-	<meta property="og:description" content="Build and level up starships for your Starfinder RPG game. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy." />
+	<meta property="og:description" content="Build and level up starships for your Starfinder RPG game by Paizo Inc. Create ships from scratch or customise sample ships from the Core Rulebook. Quick and easy." />
 	<meta property="og:image" content="http://www.jamesturneronline.net/starfinder-ship-builder/img/twitter-card.jpg" />
 	
 	<!-- Favicons -->
@@ -480,7 +480,8 @@
 				</div>
 				<div class="box__info">
 					<strong>Skill Bonus</strong> {{ getPrefixedModifier(computer.bonus) }};
-					<strong>Nodes</strong> {{ computer.nodes }}
+					<strong>Nodes</strong> {{ computer.nodes }};
+					<strong>Tier</strong> {{ computerTier }}
 				</div>
 				<div class="box__cost">
 					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ computer.pcuCost }}
@@ -1236,7 +1237,11 @@
 			
 			<footer>
 				<ul>
-					<li>Starfinder RPG Ship Builder by <a href="http://www.jamesturneronline.net">James Turner</a>, Sep 2017</li>
+					<li>
+						Starfinder RPG Ship Builder by <a href="http://www.jamesturneronline.net">James Turner</a> &bull;
+						<a href="https://twitter.com/james_c_turner">@james_c_turner</a>  &bull;
+						Sep 2017
+					</li>
 					<li><a href="http://paizo.com/starfinder/">Starfinder RPG</a> &copy; Paizo Inc, 2017</li>
 					<li>Open Game Licence</li>
 					<li>Made with <a href="https://vuejs.org/">Vue.js</a></li>

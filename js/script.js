@@ -847,7 +847,10 @@ function Ship(json) {
 					desc.push( this.defensiveCountermeasures.name.toLowerCase() );
 				}
 				// computer
-				desc.push( this.computer.name.toLowerCase() + (this.computer.id == "basic-computer" ? "" : " computer") );
+				var computerDesc = this.computer.name.toLowerCase() +
+					(this.computer.id == "basic-computer" ? "" : " computer") +
+					" (tier " + this.computerTier + ")";
+				desc.push( computerDesc );
 				return desc.join(", ");
 			},
 			targetLock: function() {
@@ -1158,6 +1161,7 @@ function Ship(json) {
 				this.params.weaponMounts[position].push(newMount);
 			},
 			destroyWeaponMount: function(position, i) {
+				this.unlinkWeaponMounts(position, i);
 				this.params.weaponMounts[position].splice(i, 1); // start, deleteCount
 			},
 			canWeaponMountBeCreated: function(position) {
@@ -1176,6 +1180,8 @@ function Ship(json) {
 					weaponMount.weight = "capital";
 				}
 				weaponMount.weaponId = "none";
+				weaponMount.isLinked = false;
+				this.unlinkWeaponMounts(position, i);
 			},
 			downgradeWeaponMount: function(position, i) {
 				var weaponMount = this.params.weaponMounts[position][i];
@@ -1185,6 +1191,21 @@ function Ship(json) {
 					weaponMount.weight = "light";
 				}
 				weaponMount.weaponId = "none";
+				this.unlinkWeaponMounts(position, i);
+			},
+			unlinkWeaponMounts: function(position, i) {
+				var mounts = this.params.weaponMounts[position];
+				if( isEven( i ) ) {
+					// unlink this weapon mount
+					mounts[i].isLinked = false;
+					mounts[i].canBeLinked = false;
+				} else {
+					// unlink preceding weapon mount
+					if( isset( mounts[i - 1] ) ) {
+						mounts[i - 1].isLinked = false;
+						mounts[i - 1].canBeLinked = false;
+					}
+				}
 			},
 			canWeaponMountBeUpgraded: function(position, weight) {
 				var result = true;
