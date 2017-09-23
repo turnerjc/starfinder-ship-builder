@@ -1156,13 +1156,15 @@ function Ship(json) {
 				var newMount = {
 					weaponId: "none",
 					weight: "light",
-					isFromTemplate: false
+					isFromTemplate: false,
+					canBeLinked: false,
+					isLinked: false
 				};
 				this.params.weaponMounts[position].push(newMount);
 			},
 			destroyWeaponMount: function(position, i) {
-				this.unlinkWeaponMounts(position, i);
 				this.params.weaponMounts[position].splice(i, 1); // start, deleteCount
+				this.setWeaponLinking(position);
 			},
 			canWeaponMountBeCreated: function(position) {
 				var result = true;
@@ -1181,7 +1183,7 @@ function Ship(json) {
 				}
 				weaponMount.weaponId = "none";
 				weaponMount.isLinked = false;
-				this.unlinkWeaponMounts(position, i);
+				this.setWeaponLinking(position);
 			},
 			downgradeWeaponMount: function(position, i) {
 				var weaponMount = this.params.weaponMounts[position][i];
@@ -1191,21 +1193,7 @@ function Ship(json) {
 					weaponMount.weight = "light";
 				}
 				weaponMount.weaponId = "none";
-				this.unlinkWeaponMounts(position, i);
-			},
-			unlinkWeaponMounts: function(position, i) {
-				var mounts = this.params.weaponMounts[position];
-				if( isEven( i ) ) {
-					// unlink this weapon mount
-					mounts[i].isLinked = false;
-					mounts[i].canBeLinked = false;
-				} else {
-					// unlink preceding weapon mount
-					if( isset( mounts[i - 1] ) ) {
-						mounts[i - 1].isLinked = false;
-						mounts[i - 1].canBeLinked = false;
-					}
-				}
+				this.setWeaponLinking(position);
 			},
 			canWeaponMountBeUpgraded: function(position, weight) {
 				var result = true;
@@ -1246,21 +1234,42 @@ function Ship(json) {
 				return result;
 			},
 			setWeaponLinking: function(position) {
-				var mountsInArc = this.params.weaponMounts[position];
-				for(i in mountsInArc) {
-					var nextI = parseInt(i) + 1;
+				var mounts = this.params.weaponMounts[position];
+				for(i in mounts) {
 					if(
-						mountsInArc[i].weaponId !== "none" &&
-						isEven(i) &&
-						isset( mountsInArc[nextI] ) &&
-						mountsInArc[i].weaponId == mountsInArc[nextI].weaponId
+						mounts[i].weaponId !== "none" &&
+						!this.isWeaponMountLinked(position, i - 1) &&
+						!this.isWeaponMountLinked(position, parseInt(i) + 1) &&
+						this.doesNextMountHaveSameWeaponId(position, i)
 					) {
-						mountsInArc[i].canBeLinked = true;
+						mounts[i].canBeLinked = true;
 					} else {
-						mountsInArc[i].canBeLinked = false;
-						mountsInArc[i].isLinked = false;
+						mounts[i].canBeLinked = false;
+						mounts[i].isLinked = false;
 					}
 				}
+			},
+			isWeaponMountLinked: function(position, i) {
+				var result = false;
+				if(
+					isset( this.params.weaponMounts[position][i] ) &&
+					this.params.weaponMounts[position][i].isLinked === true
+				) {
+					result = true;
+				}
+				return result;
+			},
+			doesNextMountHaveSameWeaponId: function(position, i) {
+				var result = false;
+				var nextI = parseInt(i) + 1;
+				var mounts = this.params.weaponMounts[position];
+				if(
+					isset( this.params.weaponMounts[position][nextI] ) &&
+					mounts[i].weaponId == mounts[nextI].weaponId
+				) {
+					result = true;
+				}
+				return result;
 			},
 			adjustPowerCoreIds: function(countHousings) {
 				if( this.params.powerCoreIds.length < countHousings ) {

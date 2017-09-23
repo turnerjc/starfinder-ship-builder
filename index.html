@@ -932,7 +932,8 @@
 								<label :for="'isLinked' + i" v-if="params.weaponMounts[position][i].canBeLinked">
 									<input type="checkbox"
 										v-model="params.weaponMounts[position][i].isLinked"
-										:id="'isLinked' + i">
+										:id="'isLinked' + i"
+										@change="setWeaponLinking(position)">
 									Linked?
 								</label>
 							</div>
