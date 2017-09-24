@@ -7704,6 +7704,186 @@
 						}
 					}
 				}
+			},
+			{
+				"id": "sunrise-maiden",
+				"name": "Sunrise Maiden",
+				"tier": 3,
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": false,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"shipName": "Sunrise Maiden",
+					"shipConcept": "",
+					"tierId": "3",
+					"frameId": "explorer",
+					"powerCoreIds": [
+						"pulse-green"
+					],
+					"thrustersId": "m10",
+					"armourId": "mk-3",
+					"computerId": "mk-1-duonode",
+					"crewQuartersId": "good",
+					"defensiveCountermeasuresId": "mk-3",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"cargo-hold",
+						"cargo-hold",
+						"escape-pods",
+						"recreation-suite-hac"
+					],
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+					"sensorsId": "basic-medium-range",
+					"shieldsId": "light-60",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "gyrolaser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "flak-thrower",
+								"weight": "light",
+								"isFromTemplate": false,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"port": [
+							{
+								"weaponId": "light-laser-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "light-laser-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "light-particle-beam",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						]
+					},
+					"crewSkills": {
+						"captain": {
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"diplomacy": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"engineering": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"gunnery": {
+						  			"modifier": 0
+								},
+								"intimidate": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"piloting": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": true,
+							"skills": {
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": true,
+							"skills": {
+								"gunnery": {
+									"modifier": 0
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"piloting": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					}
+				}
 			}
 		]
 	}

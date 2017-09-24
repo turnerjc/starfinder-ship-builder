@@ -929,10 +929,10 @@
 						<!-- Is Linked -->
 						<div class="box__select">
 							<div class="checkbox">
-								<label :for="'isLinked' + i" v-if="params.weaponMounts[position][i].canBeLinked">
+								<label :for="'isLinked_' + position + '_' + i" v-if="params.weaponMounts[position][i].canBeLinked">
 									<input type="checkbox"
 										v-model="params.weaponMounts[position][i].isLinked"
-										:id="'isLinked' + i"
+										:id="'isLinked_' + position + '_' + i"
 										@change="setWeaponLinking(position)">
 									Linked?
 								</label>
@@ -946,10 +946,15 @@
 							{{ weaponMount.weapon.pcuCost }}
 							<svg class="icon"><use xlink:href="#icon-build" /></svg>
 							{{ weaponMount.weapon.bpCost + weaponMount.mountBpCost + weaponMount.linkCost }}
-							(weapon {{ weaponMount.weapon.bpCost }} +
-							mount {{ weaponMount.mountBpCost }}<span v-if="weaponMount.linkCost > 0"> + 
-							link {{ weaponMount.linkCost }}
-							</span>)
+							<span v-if="weaponMount.linkCost > 0 || weaponMount.mountBpCost > 0">
+								(weapon {{ weaponMount.weapon.bpCost }}
+								<span v-if="weaponMount.mountBpCost > 0">
+									+ mount {{ weaponMount.mountBpCost }}
+								</span>
+								<span v-if="weaponMount.linkCost > 0">
+									+ link {{ weaponMount.linkCost }}
+								</span>)
+							</span>
 						</div>
 						
 					</div><!-- .box -->
