@@ -1,3 +1,7 @@
+footer {
+	margin-bottom: 4em;
+}
+
 footer > ul {
 	list-style-type: none;
 	padding-left: 0;
@@ -5,6 +9,12 @@ footer > ul {
 
 footer > ul > ul {
 	list-style-type: none;
+	padding-left: 1em;
+}
+
+footer li + li,
+footer li + ul {
+	margin-top: .5em;
 }
 
 footer .icon {

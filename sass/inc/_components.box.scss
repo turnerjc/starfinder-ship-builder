@@ -8,11 +8,24 @@
 	margin-top: 2em;
 }
 
-.box__header--btns,
 .box__group-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
+}
+
+@media (max-width: $breakpoint-sm - 1) {
+	.box__header--btns {
+		margin-bottom: 1em;
+	}
+}
+
+@media (min-width: $breakpoint-sm) {
+	.box__header--btns {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
 }
 
 ul.box__select {
