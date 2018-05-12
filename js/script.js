@@ -438,7 +438,7 @@ function Ship(json) {
 				var complement = 0;
 
                 for(roleIndex in this.params.crewSkills) {
-                    let role = this.params.crewSkills[roleIndex];
+                    var role = this.params.crewSkills[roleIndex];
                     
 					if( !role.hasRole ) continue;
                     
@@ -446,8 +446,8 @@ function Ship(json) {
                         complement++;
                     }
 
-                    let countOfficers = role.countOfficers ? parseInt(role.countOfficers) : 0;
-                    let countOfficerCrew = role.countOfficerCrew ? parseInt(role.countOfficerCrew) : 0;
+                    var countOfficers = role.countOfficers ? parseInt(role.countOfficers) : 0;
+                    var countOfficerCrew = role.countOfficerCrew ? parseInt(role.countOfficerCrew) : 0;
 
                     complement += countOfficers;
                     complement += (countOfficers * countOfficerCrew);
@@ -856,7 +856,7 @@ function Ship(json) {
 				roleDesc = {};
 				for(role in this.params.crewSkills) {
 					roleDesc[role] = this.getItemById("role", role).name;
-					let roleObj = this.params.crewSkills[role];
+					var roleObj = this.params.crewSkills[role];
 					if(isset(roleObj.countOfficers) && roleObj.countOfficers > 0) {
 						if(isset(roleObj.countOfficerCrew) && roleObj.countOfficerCrew > 0) {
 							// at least one officer with large team
@@ -1046,7 +1046,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			systemsDescription: function(){
-				let desc = [];
+				var desc = [];
 				// sensors
 				desc.push( this.sensors.id == "none" ? "no sensors" : this.sensors.name.toLowerCase() + " sensors" );
 				// crew quarters
@@ -1062,7 +1062,7 @@ function Ship(json) {
 					desc.push( this.defensiveCountermeasures.name.toLowerCase() );
 				}
 				// computer
-				let computerDesc = this.computer.name.toLowerCase() +
+				var computerDesc = this.computer.name.toLowerCase() +
 					(this.computer.id == "basic-computer" ? "" : " computer") +
 					" (tier " + this.computerTier + ")";
 				desc.push( computerDesc );
@@ -1371,10 +1371,10 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
             getWeaponDamage: function(mount) {
-                let mult = (mount.isLinked ? 2 : 1);
-                let split = mount.weapon.damage.split('d');
+                var mult = (mount.isLinked ? 2 : 1);
+                var split = mount.weapon.damage.split('d');
                 if(split.length != 2) return 'error';
-                let countDice = split[0];
+                var countDice = split[0];
                 return (mult * countDice) + 'd' + split[1];
             },
             /*
@@ -1384,20 +1384,20 @@ function Ship(json) {
 
                 this.clearWeaponMounts();
 
-                let arcs = ["forward", "aft", "port", "starboard", "turret"];
+                var arcs = ["forward", "aft", "port", "starboard", "turret"];
 
                 for(arcIndex in arcs) {
-					let arc = arcs[ arcIndex ];
+					var arc = arcs[ arcIndex ];
 
                     if( !isset(mounts[arc]) ) continue;
                         
-                    let arcMounts = mounts[arc];
+                    var arcMounts = mounts[arc];
                     
                     for(mountIndex in arcMounts) {
                         
-                        let mountWeight = arcMounts[ mountIndex ];
+                        var mountWeight = arcMounts[ mountIndex ];
 
-                        let objMount = {
+                        var objMount = {
                             weaponId: "none",
                             weight: mountWeight,
                             templateWeight: mountWeight,
