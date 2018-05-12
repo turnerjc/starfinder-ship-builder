@@ -11,11 +11,11 @@ var WEAPON_SORT = {
 var WEAPON_ARCS = [
 	"forward", "aft", "port", "starboard"
 ];
-
-/**
- * HELPERS
- */
-
+/*
+|------------------------------------------------------------------------------------------
+| HELPERS
+|------------------------------------------------------------------------------------------
+*/
 function maybeCreateProperty(obj, prop, type) {
 	if(typeof obj !== "object") {
 		throw "Not an object";
@@ -37,18 +37,24 @@ function maybeCreateProperty(obj, prop, type) {
 		}
 	}
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function isset(obj) {
 	if(typeof obj === "undefined") {
 		return false;
 	}
 	return true;
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function cloneObject( obj ) {
 	return JSON.parse(JSON.stringify(obj));
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function integerToWord( int ) {
 	var word = "";
 	switch(int) {
@@ -87,7 +93,9 @@ function integerToWord( int ) {
 	}
 	return word;
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function loadJSON(file, callback) {   
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -100,7 +108,9 @@ function loadJSON(file, callback) {
     };
     xobj.send(null);  
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function addTimedClass( obj, className, duration )
 {
 	addClass( obj, className );
@@ -108,44 +118,45 @@ function addTimedClass( obj, className, duration )
 		removeClass( obj, className );
 	}, duration);
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function addClass( obj, className ) {
 	obj.className += ' ' + className;
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function removeClass( obj, className ) {
 	obj.className = obj.className.replace(className, '');
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 String.prototype.pluralise = function( count ) {
 	return this + (count == 1 ? "" : "s");
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 String.prototype.toTitleCase = function() {
 	return this.replace(/\w\S*/g, function(txt){
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
 	});
 }
-
+/*
+|------------------------------------------------------------------------------------------
+*/
 function isEven(num) {
 	var isEven = (num % 2) == 0;
 	return isEven;
 }
 
-/**
- * CLIPBOARD.JS
- * https://clipboardjs.com/
- */
-
 /*
-var clipboardOutput = new Clipboard('#copyOutputBtn', {
-	text: function( trigger ) {
-		var el = document.getElementById('outputText');
-		return el.innerHTML;
-	}
-});
+|------------------------------------------------------------------------------------------
+| CLIPBOARD.JS
+|------------------------------------------------------------------------------------------
 */
-
 var clipboardJson = new Clipboard('#copyJsonBtn', {
 	text: function( trigger ) {
 		var el = document.getElementById('outputJson');
@@ -154,27 +165,21 @@ var clipboardJson = new Clipboard('#copyJsonBtn', {
 	}
 });
 
-//clipboard.on('success', function(e) {
-//	doCopyFeedback('success');
-//    e.clearSelection();
-//});
-//
-//clipboard.on('error', function(e) {
-//	doCopyFeedback('error');
-//    console.error('Action:', e.action);
-//    console.error('Trigger:', e.trigger);
-//});
-
-
-
-/**
- * SHIP
- */
-
+/*
+|------------------------------------------------------------------------------------------
+| SHIP
+|------------------------------------------------------------------------------------------
+*/
 function Ship(json) {
 	
 	this.app = new Vue({
+        /*
+        |----------------------------------------------------------------------------------
+        */
 		el: "#app",
+        /*
+        |----------------------------------------------------------------------------------
+        */
 		data: {
 			data: json,
 			paramsReset: {
@@ -207,6 +212,8 @@ function Ship(json) {
 					wipe: false
 				},
 				hasSelfDestructSystem:0,
+				hasDataNet:0,
+				hasHiveJoining:0,
 				sensorsId:"none",
 				shieldsId:"none",
 				weaponMounts: {
@@ -253,6 +260,7 @@ function Ship(json) {
 				},
 				crewSkills: {
 					captain: {
+						countOfficers: 0,
 						hasRole: true,
 						skills: {
 							bluff: {
@@ -339,7 +347,13 @@ function Ship(json) {
 			params: {},
 			json: ""
 		},
+        /*
+        |----------------------------------------------------------------------------------
+        */
 		computed: {
+            /*
+            |------------------------------------------------------------------------------
+            */
 			antiHackingSystems: function() {
 				var antiHackingSystems = this.getItemById("antiHackingSystems", this.params.antiHackingSystemsId);
 				antiHackingSystems.getOutputName = function() {
@@ -351,18 +365,33 @@ function Ship(json) {
 				};
 				return antiHackingSystems;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			antiPersonnelWeapon: function() {
 				return this.getItemById("personalWeapon", this.params.antiPersonnelWeaponId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			antiPersonnelWeaponBpCost: function() {
 				return (this.antiPersonnelWeapon.type == "heavy" ? 5 : 0) + this.antiPersonnelWeapon.level;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			armour: function () {
 				return this.getItemById("armour", this.params.armourId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			armourBpCost: function() {
 				return this.armour.bpCostMultiplier * this.sizeCategory.multiplier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			armourClass: function() {
 				return 10 +
 					this.armour.bonusToAc +
@@ -370,6 +399,9 @@ function Ship(json) {
 					this.pilotingRanks
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			armourSpecial: function() {
 				var output = [];
 				var outputStr = "n/a";
@@ -393,28 +425,45 @@ function Ship(json) {
 				}
 				return outputStr;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			biometricLocksBpCost: function() {
 				return 5 * this.params.hasBiometricLocks;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			complement: function() {
 				var complement = 0;
-				for(role in this.params.crewSkills) {
-					if( this.params.crewSkills[role].hasRole ) {
-						if( role == 'captain' ) {
-							complement++;
-						} else {
-							var countOfficers = parseInt(this.params.crewSkills[role].countOfficers);
-							var countOfficerCrew = parseInt(this.params.crewSkills[role].countOfficerCrew);
-							complement += countOfficers;
-							complement += (countOfficers * countOfficerCrew);
-						}
-					}
+
+                for(roleIndex in this.params.crewSkills) {
+                    let role = this.params.crewSkills[roleIndex];
+                    
+					if( !role.hasRole ) continue;
+                    
+                    if( roleIndex == 'captain' ) {
+                        complement++;
+                    }
+
+                    let countOfficers = role.countOfficers ? parseInt(role.countOfficers) : 0;
+                    let countOfficerCrew = role.countOfficerCrew ? parseInt(role.countOfficerCrew) : 0;
+
+                    complement += countOfficers;
+                    complement += (countOfficers * countOfficerCrew);
 				}
-				return complement;
+
+                return complement;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			computer: function() {
 				return this.getItemById("computer", this.params.computerId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			computerDescription: function() {
 				var desc = "";
 				if(this.computer.id !== "basic-computer") {
@@ -425,6 +474,9 @@ function Ship(json) {
 				}
 				return desc;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			computerCountermeasuresBpCost: function() {
 				var total = 0;
 				for(measure in this.params.computerCountermeasures) {
@@ -438,6 +490,9 @@ function Ship(json) {
 				}
 				return total;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			computerCountermeasuresDescription: function() {
 				var desc = [];
 				for(measure in this.params.computerCountermeasures) {
@@ -457,10 +512,16 @@ function Ship(json) {
 				}
 				return desc.join(', ');
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			computerTier: function() {
 				var shipTier = this.tier.value;
 				return ( shipTier < 2 ? 1 : Math.floor( shipTier * 0.5 ) );
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			countPowerCoreHousings: function() {
 				var countHousings = this.sizeCategory.countPowerCoreHousings;
 				if(
@@ -472,9 +533,15 @@ function Ship(json) {
 				this.adjustPowerCoreIds(countHousings);
 				return countHousings;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			crewQuarters: function() {
 				return this.getItemById("crewQuarters", this.params.crewQuartersId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			crewDescriptions: function() {
 				var desc = {};
 				for(role in this.params.crewSkills) {
@@ -512,18 +579,45 @@ function Ship(json) {
 				}
 				return desc;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			criticalThreshold: function() {
 				return Math.round(this.hp / 5);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			dataNetBpCost: function() {
+				return (this.params.hasDataNet ? 5 : 0);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			dataNetPcuCost: function() {
+				return (this.params.hasDataNet ? 3 : 0);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			defensiveCountermeasures: function() {
 				return this.getItemById("defensiveCountermeasures", this.params.defensiveCountermeasuresId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			driftEngine: function() {
 				return this.getItemById("driftEngine", this.params.driftEngineId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			driftEngineBpCost: function() {
 				return this.driftEngine.bpCostMultiplier * this.sizeCategory.multiplier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			expansionBays: function() {
 				var expansionBays = [];
 				for(var i = 0; i < this.frame.expansionBays; i++) {
@@ -531,6 +625,9 @@ function Ship(json) {
 				}
 				return expansionBays;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			expansionBaysCountUsed: function() {
 				var countUsed = 0;
 				for(i in this.expansionBays) {
@@ -540,6 +637,9 @@ function Ship(json) {
 				}
 				return countUsed;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			expansionBaysDescription: function() {
 				var expansionBaysByType = {};
 				for(index in this.expansionBays) {
@@ -560,16 +660,28 @@ function Ship(json) {
 				expansionBaysDescription = expansionBaysDescription.substr(0, expansionBaysDescription.length - sep.length);
 				return expansionBaysDescription;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			expansionBaysTotalBpCost: function() {
 				return this.getSumOfPropertyValuesInCollection(this.expansionBays, "bpCost");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			expansionBaysTotalPcuCost: function() {
 				return this.getSumOfPropertyValuesInCollection(this.expansionBays, "pcuCost");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			frame: function() {
 				var frame = this.getItemById("frame", this.params.frameId);
 				return frame;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			hasComputerCountermeasures: function() {
 				for(measure in this.params.computerCountermeasures) {
 					if( measure == 'shockGridId') {
@@ -584,6 +696,9 @@ function Ship(json) {
 				}
 				return false;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			hasPowerCoreHousingExpansionBay: function() {
 				var result = false;
 				for( i in this.params.expansionBayIds ) {
@@ -593,6 +708,9 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			hasSecurity: function() {
 				return (this.params.antiHackingSystemsId !== "none" ||
 					this.params.antiPersonnelWeaponId !== "none" ||
@@ -600,12 +718,27 @@ function Ship(json) {
 					this.hasComputerCountermeasures ||
 					this.params.hasSelfDestructSystem);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			hiveJoiningBpCost: function() {
+				return (this.params.hasHiveJoining ? 1 : 0);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			hp: function() {
 				return this.frame.hp + (this.tier.hpIncrease * this.frame.hpIncrement);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isBpCostOverBudget: function() {
 				return (this.totalBpCost > this.tier.bpBudget);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isComplementValid: function() {
 				var isComplementValid = true;
 				if( this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {
@@ -613,20 +746,35 @@ function Ship(json) {
 				}
 				return isComplementValid;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isPcuCostOverBudget: function() {
 				return (this.totalPcuCost.essential > this.pcuBudget);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isExpansionBaysCountOverBudget: function() {
 				return (this.expansionBaysCountUsed > this.frame.expansionBays);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			jsonParams: function() {
 				var jsonParams = cloneObject(this.params);
 				jsonParams["isSetDefaultCrewSkillValues"] = 0; // Because otherwise crew skills get overwritten!
 				return JSON.stringify(jsonParams);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			maneuverabilityRating: function() {
 				return this.getItemById("maneuverabilityRating", this.frame.maneuverability);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			modifiersDescription: function() {
 				var desc = [];
 				// computer nodes
@@ -643,6 +791,9 @@ function Ship(json) {
 				}
 				return desc.join(", ");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			pilotingRanks: function() {
 				var pilotingRanks = 0;
 				var crewSkills = this.params.crewSkills;
@@ -653,6 +804,9 @@ function Ship(json) {
 				}
 				return pilotingRanks;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			pcuBudget: function() {
 				var pcuBudget = 0;
 				for(i in this.powerCores) {
@@ -660,6 +814,9 @@ function Ship(json) {
 				}
 				return pcuBudget;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			powerCoreDescription: function() {
 				var desc = [];
 				for(i in this.powerCores) {
@@ -670,6 +827,9 @@ function Ship(json) {
 				}
 				return desc.join(", ");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			powerCores: function() {
 				powerCores = [];
 				for(i in this.params.powerCoreIds) {
@@ -679,6 +839,9 @@ function Ship(json) {
 				}
 				return powerCores;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			powerCoresBpCost:function() {
 				var bpCost = 0;
 				for(i in this.powerCores) {
@@ -686,11 +849,14 @@ function Ship(json) {
 				}
 				return bpCost;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			roleDescription: function() {
 				roleDesc = {};
 				for(role in this.params.crewSkills) {
 					roleDesc[role] = this.getItemById("role", role).name;
-					var roleObj = this.params.crewSkills[role];
+					let roleObj = this.params.crewSkills[role];
 					if(isset(roleObj.countOfficers) && roleObj.countOfficers > 0) {
 						if(isset(roleObj.countOfficerCrew) && roleObj.countOfficerCrew > 0) {
 							// at least one officer with large team
@@ -700,12 +866,19 @@ function Ship(json) {
 							roleDesc[role] += " (" + officers.join(", ") + ")";
 						} else if(roleObj.countOfficers > 1) {
 							// more than one officer
-							roleDesc[role] += " (" + roleObj.countOfficers + ")";
+                            if (role == 'captain') {
+                                roleDesc[role] += " (plus " + roleObj.countOfficers + " " + "officer".pluralise(roleObj.countOfficers) + ")";
+                            } else {
+                                roleDesc[role] += " (" + roleObj.countOfficers + ")";
+                            }
 						}
 					}
 				}
 				return roleDesc;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			securityDescription: function() {
 				var desc = [];
 				if(this.params.antiHackingSystemsId !== "none") {
@@ -725,6 +898,9 @@ function Ship(json) {
 				}
 				return desc.join(", ");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			securityTotalBpCost: function() {
 				return this.antiHackingSystems.bpCost + 
 					this.antiPersonnelWeaponBpCost +
@@ -732,6 +908,9 @@ function Ship(json) {
 					this.computerCountermeasuresBpCost +
 					this.selfDestructSystemBpCost;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			selectOptions: function() {
 				var selectOptions = {};
 				var fields = [
@@ -762,15 +941,27 @@ function Ship(json) {
 				}
 				return selectOptions;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			selfDestructSystemBpCost: function() {
 				return this.params.hasSelfDestructSystem * 5 * this.sizeCategory.multiplier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			sensors: function() {
 				return this.getItemById("sensors", this.params.sensorsId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			shields: function() {
 				return this.getItemById("shields", this.params.shieldsId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			shieldsByPosition: function() {
 				var totalSp = this.shields.totalSp;
 				var positions = ["forward", "aft", "port", "starboard"];
@@ -790,26 +981,47 @@ function Ship(json) {
 				}
 				return shieldsByPosition;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			shipName: function() {
 				return (this.params.shipName == "" ? "New Ship" : this.params.shipName);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			shockGrid: function() {
 				return this.getItemById("shockGrid", this.params.computerCountermeasures.shockGridId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			shockGridBpCost: function() {
 				return this.shockGrid.bpCostMultiplier * this.computerTier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			sizeCategory: function() {
 				return this.getItemById("sizeCategory", this.frame.size);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			skillModifierComputers: function() {
 				return this.sensors.modifier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			skillModifierPiloting: function() {
 				return this.maneuverabilityRating.pilotingModifier +
 					this.thrusters.pilotingModifier
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			skillTotals: function() {
 				var skillTotals = {};
 				for(role in this.params.crewSkills) {
@@ -830,8 +1042,11 @@ function Ship(json) {
 				}
 				return skillTotals;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			systemsDescription: function(){
-				var desc = [];
+				let desc = [];
 				// sensors
 				desc.push( this.sensors.id == "none" ? "no sensors" : this.sensors.name.toLowerCase() + " sensors" );
 				// crew quarters
@@ -847,12 +1062,24 @@ function Ship(json) {
 					desc.push( this.defensiveCountermeasures.name.toLowerCase() );
 				}
 				// computer
-				var computerDesc = this.computer.name.toLowerCase() +
+				let computerDesc = this.computer.name.toLowerCase() +
 					(this.computer.id == "basic-computer" ? "" : " computer") +
 					" (tier " + this.computerTier + ")";
 				desc.push( computerDesc );
-				return desc.join(", ");
+                
+                // data net
+                if (this.params.hasDataNet) {
+                    desc.push('data net');
+                }
+                // hive joining
+                if (this.params.hasHiveJoining) {
+                    desc.push('hive joining');
+                }
+                return desc.join(", ");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			targetLock: function() {
 				return 10 +
 					this.defensiveCountermeasures.defCMBonusToTl +
@@ -861,13 +1088,22 @@ function Ship(json) {
 					this.pilotingRanks
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			thrusters: function () {
 				return this.getItemById("thrusters", this.params.thrustersId);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			tier: function() {
 				var tier = this.getItemById("tier", this.params.tierId);
 				return tier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			totalPcuCost: function() {
 				return {
 					essential: this.thrusters.pcuCost +
@@ -875,9 +1111,13 @@ function Ship(json) {
 						this.shields.pcuCost +
 						this.weaponsTotalCosts.weaponsPcu,
 					nonEssential: this.computer.pcuCost +
-						this.expansionBaysTotalPcuCost
+						this.expansionBaysTotalPcuCost +
+                        this.dataNetPcuCost
 				};
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			totalBpCost: function() {
 				return this.frame.bpCost +
 					this.powerCoresBpCost +
@@ -893,6 +1133,8 @@ function Ship(json) {
 					this.biometricLocksBpCost +
 					this.computerCountermeasuresBpCost +
 					this.selfDestructSystemBpCost +
+					this.dataNetBpCost +
+					this.hiveJoiningBpCost +
 					this.sensors.bpCost +
 					this.shields.bpCost +
 					this.weaponsTotalCosts.weaponsBp +
@@ -900,9 +1142,15 @@ function Ship(json) {
 					this.weaponsTotalCosts.weaponLinksBp
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			turn: function() {
 				return this.maneuverabilityRating.turn + this.armour.turnDistanceModifier;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			weaponDescriptions: function() {
 				var desc = {};
 				for(position in this.weaponMounts) {
@@ -921,15 +1169,19 @@ function Ship(json) {
 						}
 						
 						// get description
-						if(mount.weapon.id !== "none") {
-							var weaponName = mount.weapon.name.toLowerCase();
-							if( mount.isLinked ) {
-								mountDesc = "linked " + weaponName.pluralise(2) + " (" + mount.weapon.damage + ")"
-							} else {
-								mountDesc = weaponName + " (" + mount.weapon.damage + ")"
-							}
-							positionDesc.push(mountDesc);
-						}
+                        if(mount.weapon.id == "none") continue;
+
+                        var weaponName = mount.weapon.name.toLowerCase();
+                        
+                        if( mount.isLinked ) {
+                            // mountDesc = "linked " + weaponName.pluralise(2) + " (" + mount.weapon.damage + ")"
+                            mountDesc = "linked " + weaponName.pluralise(2) + " (" + this.getWeaponDamage(mount) + ")"
+                        } else {
+                            // mountDesc = weaponName + " (" + mount.weapon.damage + ")"
+                            mountDesc = weaponName + " (" + this.getWeaponDamage(mount) + ")"
+                        }
+                        
+                        positionDesc.push(mountDesc);
 					}
 					if(positionDesc.length > 0) {
 						desc[position] = positionDesc.join(", ");
@@ -937,6 +1189,9 @@ function Ship(json) {
 				}
 				return desc;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			weaponMounts: function() {
 				var weaponMounts = {};
 				for(position in this.params.weaponMounts ) {
@@ -961,6 +1216,9 @@ function Ship(json) {
 				}
 				return weaponMounts;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			weaponsTotalCosts: function() {
 				var totals = {
 					weaponLinksBp: 0,
@@ -978,10 +1236,18 @@ function Ship(json) {
 					}
 				}
 				return totals;
-
 			}
+            /*
+            |------------------------------------------------------------------------------
+            */
 		},
+        /*
+        |----------------------------------------------------------------------------------
+        */
 		methods: {
+            /*
+            |------------------------------------------------------------------------------
+            */
 			getSelectOptionsFor: function(prop) {
 				this.testThatPropExists(prop);
 				this.testThatPropIsArray(prop);
@@ -991,26 +1257,41 @@ function Ship(json) {
 				}
 				return this.data[prop].data;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			testThatPropExists: function(prop) {
 				if( !isset(this.data[prop]) ) {
 					throw "Property " + prop + " does not exist";
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			testThatPropIsArray: function(prop) {
 				if(typeof this.data[prop].data !== "object") {
 					throw "Property " + prop + " is not an array";
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			testThatItemHasId: function(prop, item) {
 				if( !isset(this.data[prop].data[item].id) ) {
 					throw "Property " + prop + "[" + item + "] does not have an id";
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			testThatItemHasName: function(prop, item) {
 				if( !isset(this.data[prop].data[item].name) ) {
 					throw "Property " + prop + "[" + item + "] does not have a name";
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			getItemById: function(prop, id) {
 				this.testThatPropExists(prop);
 				// find item
@@ -1026,15 +1307,24 @@ function Ship(json) {
 				}
 				return item;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			updateFrame: function() {
 				this.syncExpansionBays( this.frame.expansionBays );
 				this.setCrewQuarters( this.frame.size );
 				this.setWeaponMounts( this.frame.mounts );
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			syncExpansionBays: function( targetCountBays ) {
 				this.popExcessExpansionBays( targetCountBays );
 				this.maybeCreateExpansionBays(  targetCountBays );
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			popExcessExpansionBays: function( targetCountBays ) {
 				var countBays = this.params.expansionBayIds.length;
 				if( countBays > targetCountBays ) {
@@ -1043,6 +1333,9 @@ function Ship(json) {
 					}
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			maybeCreateExpansionBays: function( targetCountBays ) {
 				for(var i = 0; i < targetCountBays; i++) {
 					if( !isset(this.params.expansionBayIds[i]) ) {
@@ -1050,6 +1343,9 @@ function Ship(json) {
 					}
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			setCrewQuarters: function( frameSize ) {
 				if( frameSize == "Tiny" ) {
 					if( this.params.crewQuartersId !== "none" ) {
@@ -1061,6 +1357,9 @@ function Ship(json) {
 					}
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			getSumOfPropertyValuesInCollection: function(collection, property) {
 				var total = 0;
 				for(i in collection) {
@@ -1068,29 +1367,53 @@ function Ship(json) {
 				}
 				return total;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            getWeaponDamage: function(mount) {
+                let mult = (mount.isLinked ? 2 : 1);
+                let split = mount.weapon.damage.split('d');
+                if(split.length != 2) return 'error';
+                let countDice = split[0];
+                return (mult * countDice) + 'd' + split[1];
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			setWeaponMounts: function(mounts) {
-				this.clearWeaponMounts();
-				// console.log(this.params.weaponMounts);
-				var positions = ["forward", "aft", "port", "starboard", "turret"];
-				for(i in positions) {
-					var position = positions[i];
-					if( isset(mounts[position]) ) {
-						var mountsInCurrentPosition = mounts[position];
-						for(j in mountsInCurrentPosition) {
-							var mountWeight = mountsInCurrentPosition[j];
-							var objMount = {
-								weaponId: "none",
-								weight: mountWeight,
-								templateWeight: mountWeight,
-								isFromTemplate: true,
-								canBeLinked: false,
-								isLinked: false
-							}
-							this.params.weaponMounts[position].push(objMount);
-						} // for j
-					} // if
-				} // for i
+
+                this.clearWeaponMounts();
+
+                let arcs = ["forward", "aft", "port", "starboard", "turret"];
+
+                for(arcIndex in arcs) {
+					let arc = arcs[ arcIndex ];
+
+                    if( !isset(mounts[arc]) ) continue;
+                        
+                    let arcMounts = mounts[arc];
+                    
+                    for(mountIndex in arcMounts) {
+                        
+                        let mountWeight = arcMounts[ mountIndex ];
+
+                        let objMount = {
+                            weaponId: "none",
+                            weight: mountWeight,
+                            templateWeight: mountWeight,
+                            isFromTemplate: true,
+                            canBeLinked: false,
+                            isLinked: false
+                        }
+                        
+                        this.params.weaponMounts[arc].push(objMount);
+                    }
+
+				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			clearWeaponMounts: function() {
 				for(position in this.params.weaponMounts) {
 					// var mountList = this.params.weaponMounts[position];
@@ -1098,9 +1421,15 @@ function Ship(json) {
 				}
 				// console.log(this.params.weaponMounts);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			getFrameMountWeaponWeight: function(position, index) {
 				return this.frame.mounts[position][index];
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			setDefaultCrewSkillValues: function() {
 				if(this.params.isSetDefaultCrewSkillValues) {
 					var tier = this.getItemById("tier", this.params.tierId).value;
@@ -1117,23 +1446,38 @@ function Ship(json) {
 					}
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			getPrefixedModifier: function(val) {
 				var prefix = (val >= 0) ? "+" : "";
 				return prefix + val;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			convertJsonInput: function() {
 				var params = JSON.parse(this.json);
 				this.params = params;
 				this.fixMissingParamsValues();
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			clearAll: function() {
 				this.params = cloneObject(this.paramsReset);
 				this.json = "";
 				document.getElementById("sampleShipSelect").value = "none";
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			initParams: function() {
 				this.params = cloneObject(this.paramsReset);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			inputSampleShipParams: function() {
 				var sampleShipSelect = document.getElementById("sampleShipSelect");
 				var sampleShipId = sampleShipSelect.value;
@@ -1144,14 +1488,20 @@ function Ship(json) {
 					this.fixMissingParamsValues();
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			fixMissingParamsValues: function() {
 				for(key in this.paramsReset){
 					if( !isset(this.params[key]) ) {
-						console.log("Missing param: " + key);
+						console.log("Missing param, " + key + ", added to ship");
 						this.params[key] = cloneObject(this.paramsReset[key]);
 					}
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			createWeaponMount: function(position) {
 				var newMount = {
 					weaponId: "none",
@@ -1162,10 +1512,16 @@ function Ship(json) {
 				};
 				this.params.weaponMounts[position].push(newMount);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			destroyWeaponMount: function(position, i) {
 				this.params.weaponMounts[position].splice(i, 1); // start, deleteCount
 				this.setWeaponLinking(position);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			canWeaponMountBeCreated: function(position) {
 				var result = true;
 				var countMountsInPosition = this.params.weaponMounts[position].length;
@@ -1174,6 +1530,9 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			upgradeWeaponMount: function(position, i) {
 				var weaponMount = this.params.weaponMounts[position][i];
 				if(weaponMount.weight == "light") {
@@ -1185,6 +1544,9 @@ function Ship(json) {
 				weaponMount.isLinked = false;
 				this.setWeaponLinking(position);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			downgradeWeaponMount: function(position, i) {
 				var weaponMount = this.params.weaponMounts[position][i];
 				if(weaponMount.weight == "capital") {
@@ -1195,6 +1557,9 @@ function Ship(json) {
 				weaponMount.weaponId = "none";
 				this.setWeaponLinking(position);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			canWeaponMountBeUpgraded: function(position, weight) {
 				var result = true;
 				var weights = {light: 0, heavy: 1, capital: 2};
@@ -1216,6 +1581,9 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			canWeaponMountBeDowngraded: function(weight, isFromTemplate, templateWeight) {
 				var result = true;
 				if( weight == "light" ) {
@@ -1233,6 +1601,9 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			setWeaponLinking: function(position) {
 				var mounts = this.params.weaponMounts[position];
 				for(i in mounts) {
@@ -1249,6 +1620,9 @@ function Ship(json) {
 					}
 				}
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isWeaponMountLinked: function(position, i) {
 				var result = false;
 				if(
@@ -1259,6 +1633,9 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			doesNextMountHaveSameWeaponId: function(position, i) {
 				var result = false;
 				var nextI = parseInt(i) + 1;
@@ -1271,6 +1648,9 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			adjustPowerCoreIds: function(countHousings) {
 				if( this.params.powerCoreIds.length < countHousings ) {
 					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
@@ -1282,31 +1662,41 @@ function Ship(json) {
 					this.params.powerCoreIds.splice(splicePos, spliceLen);
 				}
 			}
+            /*
+            |------------------------------------------------------------------------------
+            */
 		},
+        /*
+        |----------------------------------------------------------------------------------
+        */
 		beforeMount: function() {
 			this.initParams();
 		}
+        /*
+        |----------------------------------------------------------------------------------
+        */
 	});
 	
 } // Ship class
 
+
+
+/*
+|------------------------------------------------------------------------------------------
+| WEAPON MOUNT
+|------------------------------------------------------------------------------------------
+|
+| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, isLinked
+| maybe expects templateWeight
+|
+|------------------------------------------------------------------------------------------
+*/
 function WeaponMount(params) {
-	// params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, isLinked
-	// maybe expects templateWeight
-	this.id = params.weaponMountId;
-	this.position = params.position;
-	this.weaponId = params.weaponId;
-	this.weight = params.weight;
-	this.isFromTemplate = params.isFromTemplate;
-	if( this.isFromTemplate ) {
-		this.templateWeight = params.templateWeight;
-	} else {
-		this.templateWeight = "light";
-	}
-	this.canBeLinked = params.canBeLinked;
-	this.isLinked = params.isLinked;
-	
-	this.doTests = function() {
+
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+    this.doTests = function() {
 		this.testThatPositionIsValid();
 		this.testThatWeightIsValid(this.weight);
 		this.testThatWeightIsValid(this.templateWeight);
@@ -1314,18 +1704,27 @@ function WeaponMount(params) {
 		this.testThatTurretIsNotCapital();
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.testThatPositionIsValid = function() {
 		if(["forward", "aft", "port", "starboard", "turret"].indexOf(this.position) == -1) {
 			throw "Invalid position in WeaponMount class: " + this.position;
 		}
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.testThatWeightIsValid = function(weight) {
 		if(["light", "heavy", "capital"].indexOf(weight) == -1) {
 			throw "Invalid weight in WeaponMount class: " + weight;
 		}
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.testThatTemplateWeightIsSmallerThanWeight = function() {
 		var weightVal = {
 			light: 0,
@@ -1337,12 +1736,18 @@ function WeaponMount(params) {
 		}
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.testThatTurretIsNotCapital = function() {
 		if( this.position == "turret" && (this.weight == "capital" || this.templateWeight == "capital") ) {
 			throw "Turrets cannot have weight 'capital' in WeaponMount";
 		}
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.getUpgradeCost = function() {
 		var upgradeCost = 0;
 		if( this.weight !== this.templateWeight ) {
@@ -1366,6 +1771,9 @@ function WeaponMount(params) {
 		return upgradeCost;
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.getNewMountCost = function() {
 		var newMountCost = 0;
 		if(!this.isFromTemplate) {
@@ -1378,20 +1786,48 @@ function WeaponMount(params) {
 		return newMountCost;
 	}
 	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 	this.getCost = function() {
 		return this.getUpgradeCost() + this.getNewMountCost();
 	}
-	
-	// constructor???
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+
+    
+    
+    /*
+    |--------------------------------------------------------------------------------------
+    | CONSTRUCTOR
+    |--------------------------------------------------------------------------------------
+    */
+	this.id = params.weaponMountId;
+	this.position = params.position;
+	this.weaponId = params.weaponId;
+	this.weight = params.weight;
+	this.isFromTemplate = params.isFromTemplate;
+	if( this.isFromTemplate ) {
+		this.templateWeight = params.templateWeight;
+	} else {
+		this.templateWeight = "light";
+	}
+	this.canBeLinked = params.canBeLinked;
+	this.isLinked = params.isLinked;
 	
 	this.doTests();
-	
+
+    /*
+    |--------------------------------------------------------------------------------------
+    */
 }
 
-/**
- * MAIN
- */
-
+/*
+|------------------------------------------------------------------------------------------
+| MAIN
+|------------------------------------------------------------------------------------------
+*/
 loadJSON(JSON_FILE, function(response) {
 	var actual_JSON = JSON.parse(response);
 	// console.log(actual_JSON);

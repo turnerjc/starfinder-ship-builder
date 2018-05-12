@@ -867,6 +867,67 @@
 			
 			<!--
 			
+				DATA NET
+				
+			-->
+			
+			<div class="box">
+				<header class="box__header">
+					<h3 id="sensors">Data Net</h3>
+				</header>
+                <div class="box__select">
+                    <div class="checkbox">
+                        <label for="hasDataNet">
+                            <input type="checkbox" v-model="params.hasDataNet" id="hasDataNet">
+                            Data Net (see <em>Pact Worlds</em>, p152)
+                        </label>
+                    </div>
+                </div>
+                <div class="box__cost--list">
+                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetBpCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetPcuCost }}
+                </div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				HIVE JOINING
+				
+			-->
+			
+			<div class="box">
+				<header class="box__header">
+					<h3 id="sensors">Hive Joining</h3>
+				</header>
+                <div class="box__select">
+                    <div class="checkbox">
+                        <label for="hasHiveJoining">
+                            <input type="checkbox" v-model="params.hasHiveJoining" id="hasHiveJoining">
+                            Hive Joining (see <em>Pact Worlds</em>, p152)
+                        </label>
+                    </div>
+                </div>
+                <div class="box__cost--list">
+                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ hiveJoiningBpCost }}
+                </div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			
 				WEAPON MOUNTS
 				
 			-->
@@ -1204,7 +1265,7 @@
 
 
 						<h3>Concept</h3>
-						<p>{{ params.shipConcept }}</p>
+						<p v-html="params.shipConcept"></p>
 					</div> <!-- #outputText -->
 					
 				</div>
@@ -1290,10 +1351,10 @@
 		
 	</div><!-- .wrapper -->
 	
-	<!--
 	<script src="https://unpkg.com/vue"></script>
-	-->
+	<!--
 	<script src="vendor/vue/vue.min.js"></script>
+	-->
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

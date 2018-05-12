@@ -203,7 +203,7 @@
 		],
 		"data": [
 			{
-				"id": "Racer",
+				"id": "racer",
 				"name": "Racer",
 				"size": "Tiny",
 				"maneuverability": "perfect",
@@ -1778,6 +1778,7 @@
 		"data": [
 			{
 				"id": "none",
+                "src": "core",
 				"name": "None",
 				"numBays": 1,
 				"sizes": [
@@ -1794,6 +1795,7 @@
 			},
 			{
 				"id": "arcane-laboratory",
+                "src": "core",
 				"name": "Arcane Laboratory",
 				"numBays": 1,
 				"sizes": [
@@ -1810,6 +1812,7 @@
 			},
 			{
 				"id": "cargo-hold",
+                "src": "core",
 				"name": "Cargo Hold",
 				"numBays": 1,
 				"sizes": [
@@ -1826,6 +1829,7 @@
 			},
 			{
 				"id": "escape-pods",
+                "src": "core",
 				"name": "Escape Pods",
 				"numBays": 1,
 				"sizes": [
@@ -1842,6 +1846,7 @@
 			},
 			{
 				"id": "guest-quarters-common",
+                "src": "core",
 				"name": "Guest Quarters (common)",
 				"numBays": 1,
 				"sizes": [
@@ -1858,6 +1863,7 @@
 			},
 			{
 				"id": "guest-quarters-good",
+                "src": "core",
 				"name": "Guest Quarters (good)",
 				"numBays": 1,
 				"sizes": [
@@ -1874,6 +1880,7 @@
 			},
 			{
 				"id": "guest-quarters-luxurious",
+                "src": "core",
 				"name": "Guest Quarters (luxurious)",
 				"numBays": 1,
 				"sizes": [
@@ -1890,6 +1897,7 @@
 			},
 			{
 				"id": "hangar-bay",
+                "src": "core",
 				"name": "Hangar Bay",
 				"numBays": 4,
 				"sizes": [
@@ -1901,6 +1909,7 @@
 			},
 			{
 				"id": "life-boats",
+                "src": "core",
 				"name": "Life Boats",
 				"numBays": 1,
 				"sizes": [
@@ -1917,6 +1926,7 @@
 			},
 			{
 				"id": "medical-bay",
+                "src": "core",
 				"name": "Medical Bay",
 				"numBays": 1,
 				"sizes": [
@@ -1933,6 +1943,7 @@
 			},
 			{
 				"id": "passenger-seating",
+                "src": "core",
 				"name": "Passenger Seating",
 				"numBays": 1,
 				"sizes": [
@@ -1949,6 +1960,7 @@
 			},
 			{
 				"id": "power-core-housing",
+                "src": "core",
 				"name": "Power Core Housing",
 				"numBays": 1,
 				"sizes": [
@@ -1960,6 +1972,7 @@
 			},
 			{
 				"id": "recreation-suite-gym",
+                "src": "core",
 				"name": "Recreation Suite (Gym)",
 				"numBays": 1,
 				"sizes": [
@@ -1976,6 +1989,7 @@
 			},
 			{
 				"id": "recreation-suite-trivid-den",
+                "src": "core",
 				"name": "Recreation Suite (Trivid Den)",
 				"numBays": 1,
 				"sizes": [
@@ -1992,6 +2006,7 @@
 			},
 			{
 				"id": "recreation-suite-hac",
+                "src": "core",
 				"name": "Recreation Suite (HAC)",
 				"numBays": 1,
 				"sizes": [
@@ -2008,6 +2023,7 @@
 			},
 			{
 				"id": "science-lab-general",
+                "src": "core",
 				"name": "Science Lab (General)",
 				"numBays": 1,
 				"sizes": [
@@ -2024,6 +2040,7 @@
 			},
 			{
 				"id": "science-lab-life",
+                "src": "core",
 				"name": "Science Lab (Life)",
 				"numBays": 1,
 				"sizes": [
@@ -2040,6 +2057,7 @@
 			},
 			{
 				"id": "science-lab-physical",
+                "src": "core",
 				"name": "Science Lab (Physical)",
 				"numBays": 1,
 				"sizes": [
@@ -2056,6 +2074,7 @@
 			},
 			{
 				"id": "sealed-environment-chamber",
+                "src": "core",
 				"name": "Sealed Environment Chamber",
 				"numBays": 1,
 				"sizes": [
@@ -2072,6 +2091,7 @@
 			},
 			{
 				"id": "shuttle-bay",
+                "src": "core",
 				"name": "Shuttle Bay",
 				"numBays": 2,
 				"sizes": [
@@ -2084,6 +2104,7 @@
 			},
 			{
 				"id": "smuggler-compartment-20",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 20)",
 				"numBays": 1,
 				"sizes": [
@@ -2100,6 +2121,7 @@
 			},
 			{
 				"id": "smuggler-compartment-25",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 25)",
 				"numBays": 1,
 				"sizes": [
@@ -2116,6 +2138,7 @@
 			},
 			{
 				"id": "smuggler-compartment-30",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 30)",
 				"numBays": 1,
 				"sizes": [
@@ -2132,6 +2155,7 @@
 			},
 			{
 				"id": "smuggler-compartment-35",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 35)",
 				"numBays": 1,
 				"sizes": [
@@ -2148,6 +2172,7 @@
 			},
 			{
 				"id": "smuggler-compartment-40",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 40)",
 				"numBays": 1,
 				"sizes": [
@@ -2164,6 +2189,7 @@
 			},
 			{
 				"id": "smuggler-compartment-45",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 45)",
 				"numBays": 1,
 				"sizes": [
@@ -2180,6 +2206,7 @@
 			},
 			{
 				"id": "smuggler-compartment-50",
+                "src": "core",
 				"name": "Smuggler Compartment (DC 50)",
 				"numBays": 1,
 				"sizes": [
@@ -2196,6 +2223,7 @@
 			},
 			{
 				"id": "synthesis-bay",
+                "src": "core",
 				"name": "Synthesis Bay",
 				"numBays": 1,
 				"sizes": [
@@ -2212,6 +2240,7 @@
 			},
 			{
 				"id": "tech-workshop",
+                "src": "core",
 				"name": "Tech Workshop",
 				"numBays": 1,
 				"sizes": [
@@ -2225,6 +2254,86 @@
 				],
 				"pcuCost": 3,
 				"bpCost": 1
+			},
+			{
+				"id": "brig",
+                "src": "pact",
+				"name": "Brig",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"pcuCost": 1,
+				"bpCost": 1
+			},
+			{
+				"id": "drift-shadow-projector",
+                "src": "pact",
+				"name": "Drift Shadow Projector",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 15
+			},
+			{
+				"id": "hive-bay",
+                "src": "pact",
+				"name": "Hive Bay",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 10
+			},
+			{
+				"id": "hydroponic-garden",
+                "src": "pact",
+				"name": "Hydroponic Garden",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"pcuCost": 0,
+				"bpCost": 5
+			},
+			{
+				"id": "launch-tubes",
+                "src": "pact",
+				"name": "Launch Tubes",
+				"numBays": 2,
+				"sizes": [
+					"Medium",
+					"Large"
+				],
+				"pcuCost": 10,
+				"bpCost": 5
 			}
 		]
 	},
@@ -4293,6 +4402,19 @@
 				"type": "Direct-Fire"
 			},
 			{
+				"id": "mining-laser",
+                "src": "pact",
+				"name": "Mining laser",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "2d6",
+				"pcuCost": 10,
+				"bpCost": 5,
+				"specialProperties": "Burrowing",
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
 				"id": "high-explosive-missile-launcher",
 				"name": "High explosive missile launcher",
 				"range": "Long",
@@ -4353,6 +4475,19 @@
 				"type": "Tracking"
 			},
 			{
+				"id": "light-spore-torpedo-launcher",
+                "src": "pact",
+				"name": "Light spore torpedo launcher",
+				"range": "Medium",
+				"speed": "14",
+				"damage": "3d6",
+				"pcuCost": 5,
+				"bpCost": 5,
+				"specialProperties": "Limited fire 5, spore",
+				"weight": "light",
+				"type": "Tracking"
+			},
+            {
 				"id": "graser",
 				"name": "Graser",
 				"range": "Short",
@@ -4553,6 +4688,19 @@
 				"pcuCost": 10,
 				"bpCost": 8,
 				"specialProperties": "Limited fire 5",
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-spore-torpedo-launcher",
+                "src": "pact",
+				"name": "Heavy spore torpedo launcher",
+				"range": "Medium",
+				"speed": "12",
+				"damage": "5d8",
+				"pcuCost": 10,
+				"bpCost": 10,
+				"specialProperties": "Limited fire 5, spore",
 				"weight": "heavy",
 				"type": "Tracking"
 			},
@@ -4934,6 +5082,7 @@
 		"data": [
 			{
 				"id": "deaths-head-necroglider",
+                "src": "core",
 				"name": "Death's Head Necroglider",
 				"tier": "1/2",
 				"params": {
@@ -4969,6 +5118,8 @@
 					},
 					"computerCountermeasuresId": "none",
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-short-range",
 					"shieldsId": "basic-10",
 					"weaponMounts": {
@@ -4997,6 +5148,7 @@
 					},
 					"crewSkills": {
 						"captain": {
+                            "countOfficers": 0,
 							"hasRole": false,
 							"skills": {
 								"bluff": {
@@ -5085,6 +5237,7 @@
 			},
 			{
 				"id": "blackwind-sepulcher",
+                "src": "core",
 				"name": "Blackwind Sepulcher",
 				"tier": 5,
 				"params": {
@@ -5125,6 +5278,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "light-60",
 					"weaponMounts": {
@@ -5180,6 +5335,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -5266,6 +5422,7 @@
 			},
 			{
 				"id": "thaumtech-omenbringer",
+                "src": "core",
 				"name": "Thaumtech Omenbringer",
 				"tier": 14,
 				"params": {
@@ -5307,6 +5464,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "advanced-medium-range",
 					"shieldsId": "heavy-240",
 					"weaponMounts": {
@@ -5421,6 +5580,7 @@
 					"isSetDefaultCrewSkillValues": 0,
 					"crewSkills": {
 						"captain": {
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -5507,6 +5667,7 @@
 			},
 			{
 				"id": "idaran-voidrunner",
+                "src": "core",
 				"name": "Idaran Voidrunner",
 				"tier": "1/3",
 				"params": {
@@ -5517,7 +5678,7 @@
 					"shipName": "Idaran Voidrunner",
 					"shipConcept": "Few ships can match the speed and maneuverability of a Voidrunner, making it the perfect ship for daredevils, elite combat pilots looking to rely on skill rather than heavy arms and armor, and criminals in need of a fast getaway.",
 					"tierId": "1_3",
-					"frameId": "Racer",
+					"frameId": "racer",
 					"powerCoreIds": [
 						"micron-heavy"
 					],
@@ -5541,6 +5702,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-medium-range",
 					"shieldsId": "basic-10",
 					"weaponMounts": {
@@ -5570,6 +5733,7 @@
 					},
 					"crewSkills": {
 						"captain": {
+                            "countOfficers": 0,
 							"hasRole": false,
 							"skills": {
 								"bluff": {
@@ -5658,6 +5822,7 @@
 			},
 			{
 				"id": "idaran-vanserai",
+                "src": "core",
 				"name": "Idaran Vanserai",
 				"tier": 4,
 				"params": {
@@ -5698,6 +5863,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-short-range",
 					"shieldsId": "basic-40",
 					"weaponMounts": {
@@ -5754,6 +5921,7 @@
 					"isSetDefaultCrewSkillValues": 0,
 					"crewSkills": {
 						"captain": {
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -5841,6 +6009,7 @@
 			},
 			{
 				"id": "idaran-millenia",
+                "src": "core",
 				"name": "Idaran Millenia",
 				"tier": 12,
 				"params": {
@@ -5886,6 +6055,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-long-range",
 					"shieldsId": "medium-160",
 					"weaponMounts": {
@@ -5974,6 +6145,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -6060,6 +6232,7 @@
 			},
 			{
 				"id": "ringworks-wanderer",
+                "src": "core",
 				"name": "Ringworks Wanderer",
 				"tier": "1/4",
 				"params": {
@@ -6098,6 +6271,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-short-range",
 					"shieldsId": "basic-10",
 					"weaponMounts": {
@@ -6119,6 +6294,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 0,
+                            "countOfficers": 0,
 							"hasRole": false,
 							"skills": {
 								"bluff": {
@@ -6206,6 +6382,7 @@
 			},
 			{
 				"id": "kevolari-venture",
+                "src": "core",
 				"name": "Kevolari Venture",
 				"tier": 1,
 				"params": {
@@ -6242,6 +6419,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-medium-range",
 					"shieldsId": "basic-20",
 					"weaponMounts": {
@@ -6293,6 +6472,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -6379,6 +6559,7 @@
 			},
 			{
 				"id": "atech-immortal",
+                "src": "core",
 				"name": "Atech Immortal",
 				"tier": 10,
 				"params": {
@@ -6421,6 +6602,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "medium-200",
 					"weaponMounts": {
@@ -6469,6 +6652,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -6555,6 +6739,7 @@
 			},
 			{
 				"id": "starhive-drone-mk-iii",
+                "src": "core",
 				"name": "Starhive Drone Mk III",
 				"tier": 1,
 				"params": {
@@ -6593,6 +6778,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-medium-range",
 					"shieldsId": "basic-10",
 					"weaponMounts": {
@@ -6636,6 +6823,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -6722,6 +6910,7 @@
 			},
 			{
 				"id": "uie-hiveguard",
+                "src": "core",
 				"name": "UIE Hiveguard",
 				"tier": 6,
 				"params": {
@@ -6761,6 +6950,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "light-60",
 					"weaponMounts": {
@@ -6826,6 +7017,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -6912,6 +7104,7 @@
 			},
 			{
 				"id": "hivonyx-titan-mauler",
+                "src": "core",
 				"name": "Hivonyx Titan Mauler",
 				"tier": 9,
 				"params": {
@@ -6957,6 +7150,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "medium-100",
 					"weaponMounts": {
@@ -6996,6 +7191,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": true,
 							"skills": {
 								"bluff": {
@@ -7082,6 +7278,7 @@
 			},
 			{
 				"id": "bmc-mauler",
+                "src": "core",
 				"name": "BMC Mauler",
 				"tier": 2,
 				"params": {
@@ -7116,6 +7313,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "advanced-medium-range",
 					"shieldsId": "basic-40",
 					"weaponMounts": {
@@ -7154,6 +7353,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 0,
+                            "countOfficers": 0,
 							"hasRole": false,
 							"skills": {
 								"bluff": {
@@ -7241,6 +7441,7 @@
 			},
 			{
 				"id": "norikama-dropship",
+                "src": "core",
 				"name": "Norikama Dropship",
 				"tier": 8,
 				"params": {
@@ -7281,6 +7482,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-long-range",
 					"shieldsId": "light-80",
 					"weaponMounts": {
@@ -7336,6 +7539,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -7422,6 +7626,7 @@
 			},
 			{
 				"id": "vindicas-tyrant",
+                "src": "core",
 				"name": "Vindicas Tyrant",
 				"tier": 16,
 				"params": {
@@ -7477,6 +7682,8 @@
 						"wipe": false
 					},
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "budget-medium-range",
 					"shieldsId": "medium-200",
 					"weaponMounts": {
@@ -7621,6 +7828,7 @@
 					"crewSkills": {
 						"captain": {
 							"count": 1,
+                            "countOfficers": 0,
 							"hasRole": 1,
 							"skills": {
 								"bluff": {
@@ -7707,6 +7915,7 @@
 			},
 			{
 				"id": "sunrise-maiden",
+                "src": "core",
 				"name": "Sunrise Maiden",
 				"tier": 3,
 				"params": {
@@ -7736,7 +7945,7 @@
 					"antiHackingSystemsId": "none",
 					"antiPersonnelWeaponId": "none",
 					"hasBiometricLocks": 0,
-					"computerCountermeasures": {
+					"computerCountermeasuEes": {
 						"alarm": false,
 						"fakeShell": false,
 						"feedback": false,
@@ -7744,12 +7953,14 @@
 						"lockout": false,
 						"shockGridId": "none",
 						"wipe": false
-					},
+                    },
 					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
 					"sensorsId": "basic-medium-range",
 					"shieldsId": "light-60",
 					"weaponMounts": {
-						"forward": [
+						"foEward": [
 							{
 								"weaponId": "gyrolaser",
 								"weight": "light",
@@ -7801,6 +8012,7 @@
 					},
 					"crewSkills": {
 						"captain": {
+                            "countOfficers": 0,
 							"hasRole": true,
 							"skills": {
 								"bluff": {
@@ -7884,7 +8096,2777 @@
 						}
 					}
 				}
-			}
-		]
+			},
+			{
+				"id": "compent-aev",
+                "src": "pact",
+				"name": "CompEnt AEV",
+				"tier": "1/3",
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 0,
+					"shipName": "CompEnt AEV",
+					"shipConcept": "The anacite pilot of a specific Autonomous Exploration Vehicle is often created and programmed to fit inside of and operateEtEat vessel. Once its mission has been completed, its consciousness is usually transferred to another shell.",
+					"tierId": "1_3",
+					"frameId": "racer",
+					"powerCoreIds": [
+						"micron-light"
+					],
+					"thrustersId": "t8",
+					"armourId": "mk-3",
+				    "computerId": "basic-computer",
+					"crewQuartersId": "none",
+					"defensiveCountermeasuresId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+					],
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 1,
+                    "hasHiveJoining": 0,
+					"sensorsId": "basic-short-range",
+					"shieldsId": "basic-10",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "mining-laser",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"port": [
+						],
+						"starboard": [
+						],
+						"turret": [
+						]
+					},
+					"crewSkills": {
+						"captain": {
+                            "countOfficers": 0,
+							"hasRole": false,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"diplomacy": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"engineering": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"gunnery": {
+						  			"modifier": 0
+								},
+								"intimidate": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"piloting": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 0,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 0,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"gunnery": {
+									"modifier": 0
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 0,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"piloting": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 12,
+									"ranks": 1
+								},
+								"gunnery": {
+									"modifier": 4
+								},
+								"piloting": {
+									"modifier": 7,
+									"ranks": 1
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "compent-group-defense-frigate",
+                "src": "pact",
+				"name": "CompEnt Group Defense Frigate",
+				"tier": "8",
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 0,
+					"shipName": "CompEnt Group Defense Frigate",
+					"shipConcept": "CompEnt engineers design Group Defense Frigates with little regard to aesthetic concerns, though some find their stark utilitarianism an enticing feature.",
+					"tierId": "8",
+					"frameId": "destroyer",
+					"powerCoreIds": [
+						"pulse-orange"
+					],
+					"thrustersId": "l6",
+					"armourId": "mk-6",
+					"computerId": "mk-2-trinode",
+					"crewQuartersId": "common",
+					"defensiveCountermeasuresId": "mk-4",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+                        "launch-tubes",
+                        "launch-tubes",
+                        "none",
+                        "none"
+					],
+					"antiHackingSystemsId": "mk1",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 1,
+                    "hasHiveJoining": 0,
+					"sensorsId": "advanced-medium-range",
+					"shieldsId": "medium-140",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"port": [
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "flak-thrower",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						]
+					},
+					"crewSkills": {
+						"captain": {
+                            "countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 18,
+						  			"ranks": 8
+								},
+								"diplomacy": {
+						  			"modifier": 8,
+						  			"ranks": 8
+								},
+								"engineering": {
+						  			"modifier": 13,
+						  			"ranks": 8
+								},
+								"gunnery": {
+						  			"modifier": 13
+								},
+								"intimidate": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"piloting": {
+						  			"modifier": 9,
+						  			"ranks": 8
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 2,
+							"hasRole": true,
+							"skills": {
+								"engineering": {
+									"modifier": 13,
+									"ranks": 8
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 2,
+							"countOfficerCrew": 2,
+							"hasRole": true,
+							"skills": {
+								"gunnery": {
+									"modifier": 19
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 3,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"piloting": {
+									"modifier": 14,
+									"ranks": 8
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 2,
+							"countOfficerCrew": 2,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 17,
+									"ranks": 8
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "multifold-seedship",
+                "src": "pact",
+				"name": "Multifold Seedship",
+				"tier": "11",
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"shipName": "Multifold Seedship",
+					"shipConcept": "These large freighters are built to serve a practical purpose: conveying and protecting a multitude of mechanical equipment and its operators to new frontiers. Its mostly anacite crew require very little in the way of comforts.",
+					"tierId": "11",
+					"frameId": "bulk-freighter",
+					"powerCoreIds": [
+						"nova-ultra"
+					],
+					"thrustersId": "h6",
+					"armourId": "mk-7",
+					"computerId": "mk-4-trinode",
+					"crewQuartersId": "common",
+					"defensiveCountermeasuresId": "mk-7",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+                        "cargo-hold",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "science-lab-general",
+                        "tech-workshop"
+					],
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 1,
+                    "hasHiveJoining": 0,
+					"sensorsId": "advanced-medium-range",
+					"shieldsId": "medium-200",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "gravity-gun",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"port": [
+						],
+						"starboard": [
+						],
+						"turret": [
+							{
+								"weaponId": "flak-thrower",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "high-explosive-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						]
+					},
+					"crewSkills": {
+						"captain": {
+                            "countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 18,
+						  			"ranks": 11
+								},
+								"diplomacy": {
+						  			"modifier": 9,
+						  			"ranks": 11
+								},
+								"engineering": {
+						  			"modifier": 9,
+						  			"ranks": 11
+								},
+								"gunnery": {
+						  			"modifier": 17
+								},
+								"intimidate": {
+						  			"modifier": 9,
+						  			"ranks": 11
+								},
+								"piloting": {
+						  			"modifier": 9,
+						  			"ranks": 11
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 4,
+							"hasRole": true,
+							"skills": {
+								"engineering": {
+									"modifier": 14,
+									"ranks": 11
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 2,
+							"countOfficerCrew": 3,
+							"hasRole": true,
+							"skills": {
+								"gunnery": {
+									"modifier": 22
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 3,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"piloting": {
+									"modifier": 14,
+									"ranks": 11
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 2,
+							"countOfficerCrew": 5,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 18,
+									"ranks": 11
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "infernex-burning-nail",
+                "src": "pact",
+				"name": "Infernex Burning Nail",
+				"tier": "1",
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"shipName": "Infernex Burning Nail",
+					"shipConcept": "A standard fighter in the Hellknight navy, an Infernex Burning Nail offers both speed and firepower, though its lack of port and starboard weapons is a known weakness. Burning Nail pilots are trained to compensate for this flaw by employing daring piloting maneuvers.",
+					"tierId": "1",
+					"frameId": "fighter",
+					"powerCoreIds": [
+						"micron-ultra"
+					],
+					"thrustersId": "t10",
+					"armourId": "mk-3",
+					"computerId": "mk-1-mononode",
+					"crewQuartersId": "none",
+					"defensiveCountermeasuresId": "mk-2",
+					"driftEngineId": "none",
+					"expansionBayIds": [
+					],
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+					"sensorsId": "basic-short-range",
+					"shieldsId": "basic-20",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "light-particle-beam",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "light-plasma-torpedo-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "coilgun",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"port": [
+						],
+						"starboard": [
+						],
+						"turret": [
+						]
+					},
+					"crewSkills": {
+						"captain": {
+                            "countOfficers": 0,
+							"hasRole": false,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"diplomacy": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"engineering": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"gunnery": {
+						  			"modifier": 0
+								},
+								"intimidate": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"piloting": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 0,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 0,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"gunnery": {
+									"modifier": 0
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 6,
+									"ranks": 1
+								},
+								"gunnery": {
+									"modifier": 5
+								},
+								"piloting": {
+									"modifier": 9,
+									"ranks": 1
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 0,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "infernex-interdictus",
+                "src": "pact",
+				"name": "Infernex Interdictus",
+				"tier": "13",
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"shipName": "Infernex Interdictus",
+					"shipConcept": "The Hellknights send in an Infernex Interdictus when they wish to stop other vessels in their tracks and bring in their crews alive. The combination of gravity gun and Drift shadow projector makes an Interdictus difficult to escape from.",
+					"tierId": "13",
+					"frameId": "cruiser",
+					"powerCoreIds": [
+						"nova-heavy",
+						"nova-light"
+					],
+					"thrustersId": "h8",
+					"armourId": "mk-7",
+					"computerId": "mk-4-duonode",
+					"crewQuartersId": "common",
+					"defensiveCountermeasuresId": "mk-5",
+					"driftEngineId": "signal-booster",
+					"expansionBayIds": [
+                        "brig",
+                        "brig",
+                        "cargo-hold",
+                        "cargo-hold",
+                        "drift-shadow-projector",
+                        "medical-bay"
+					],
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+					"sensorsId": "advanced-medium-range",
+					"shieldsId": "heavy-280",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "super-x-laser-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"aft": [
+						],
+						"port": [
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "light-plasma-cannon",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "gravity-gun",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						]
+					},
+					"crewSkills": {
+						"captain": {
+                            "countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 14,
+						  			"ranks": 13
+								},
+								"diplomacy": {
+						  			"modifier": 15,
+						  			"ranks": 13
+								},
+								"engineering": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"gunnery": {
+						  			"modifier": 20
+								},
+								"intimidate": {
+						  			"modifier": 15,
+						  			"ranks": 13
+								},
+								"piloting": {
+						  			"modifier": 10,
+						  			"ranks": 13
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 2,
+							"countOfficerCrew": 6,
+							"hasRole": true,
+							"skills": {
+								"engineering": {
+									"modifier": 15,
+									"ranks": 13
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 3,
+							"countOfficerCrew": 4,
+							"hasRole": true,
+							"skills": {
+								"gunnery": {
+									"modifier": 25
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 3,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"piloting": {
+									"modifier": 15,
+									"ranks": 13
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 2,
+							"countOfficerCrew": 3,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 19,
+									"ranks": 13
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "infernex-keep-diabolical",
+                "src": "pact",
+				"name": "Infernex Keep Diabolical",
+				"tier": "16",
+				"params": {
+					"version": "1.0.1",
+					"hasCrew": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"shipName": "Infernex Keep Diabolical",
+					"shipConcept": "Bristling with weapons&mdash;not to mention wicked-looking barbs&mdash;a Hellknight Keep Diabolical is among the most feared starships both within the Pact Worlds system and in deep space. NOTE: non-standard shield distribution: forward 100, port 80, starboard 80, aft 100.",
+					"tierId": "16",
+					"frameId": "battleship",
+					"powerCoreIds": [
+						"gateway-light",
+						"nova-heavy"
+					],
+					"thrustersId": "g6",
+					"armourId": "mk-9",
+					"computerId": "mk-5-duonode",
+					"crewQuartersId": "common",
+					"defensiveCountermeasuresId": "mk-10",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+                        "escape-pods",
+                        "guest-quarters-luxurious",
+                        "hangar-bay",
+                        "medical-bay",
+                        "tech-workshop",
+                        "none",
+                        "none",
+                        "none"
+					],
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"hasBiometricLocks": 0,
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+					"sensorsId": "advanced-long-range",
+					"shieldsId": "heavy-360",
+					"weaponMounts": {
+					"forward": [
+						"capital",
+						"heavy",
+						"heavy"
+					],
+					"port": [
+						"heavy",
+						"heavy",
+						"light"
+					],
+					"starboard": [
+						"heavy",
+						"heavy",
+						"light"
+					],
+					"aft": [
+						"light"
+					],
+					"turret": [
+						"heavy",
+						"heavy"
+					],
+						"forward": [
+							{
+								"weaponId": "particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true
+							},
+							{
+								"weaponId": "particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "hellfire-torpedo-launcher",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"port": [
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "micromissile-battery",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "micromissile-battery",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							},
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false
+							}
+						]
+					},
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 2,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+						  			"modifier": 0,
+						  			"ranks": 0
+								},
+								"computers": {
+						  			"modifier": 16,
+						  			"ranks": 16
+								},
+								"diplomacy": {
+						  			"modifier": 17,
+						  			"ranks": 16
+								},
+								"engineering": {
+						  			"modifier": 12,
+						  			"ranks": 16
+								},
+								"gunnery": {
+						  			"modifier": 25
+								},
+								"intimidate": {
+						  			"modifier": 17,
+						  			"ranks": 16
+								},
+								"piloting": {
+						  			"modifier": 13,
+						  			"ranks": 16
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 6,
+							"countOfficerCrew": 12,
+							"hasRole": true,
+							"skills": {
+								"engineering": {
+									"modifier": 17,
+									"ranks": 16
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 8,
+							"countOfficerCrew": 8,
+							"hasRole": true,
+							"skills": {
+								"gunnery": {
+									"modifier": 30
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 10,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"piloting": {
+									"modifier": 18,
+									"ranks": 16
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 6,
+							"countOfficerCrew": 5,
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 21,
+									"ranks": 16
+								}
+							}
+						}
+					}
+				}
+			},
+            {
+				"id": "inheritorworks-brightsword",
+                "src": "pact",
+				"name": "Inheritorworks Brightsword",
+				"tier": "2",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "Inheritorworks Brightsword",
+                    "shipConcept": "An Inheritorworks Brightsword's main weapon&mdash;a light plasma cannon&mdash;is mounted within a blade-shaped housing in the front of the vessel. This imposing feature acts as a deterrent to enemy ships when they spot a wave of Brightswords streaking through the sky.",
+                    "tierId": "2",
+                    "frameId": "fighter",
+                    "powerCoreIds": [
+                        "arcus-light"
+                    ],
+                    "thrustersId": "t12",
+                    "armourId": "mk-7",
+                    "computerId": "basic-computer",
+                    "crewQuartersId": "none",
+                    "defensiveCountermeasuresId": "mk-5",
+                    "driftEngineId": "signal-basic",
+                    "expansionBayIds": [],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "advanced-medium-range",
+                    "shieldsId": "basic-40",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "light-plasma-cannon",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "light-plasma-torpedo-launcher",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [
+                            {
+                                "weaponId": "light-laser-cannon",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "port": [],
+                        "starboard": [],
+                        "turret": []
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "diplomacy": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": "8"
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "9",
+                                    "ranks": "2"
+                                },
+                                "gunnery": {
+                                    "modifier": "0"
+                                },
+                                "piloting": {
+                                    "modifier": "10",
+                                    "ranks": "2"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "inheritorworks-shieldcraft",
+                "src": "pact",
+				"name": "Inheritorworks Shieldcraft",
+				"tier": "8",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "Inheritorworks Shieldcraft",
+                    "shipConcept": "Iomedaean Shieldcrafts serve as transports for platoons of crusaders journeying to the front in their fight against evil. These soldiers store their suits of powered armor in the ship's cargo bays on the voyage as they await deployment. NOTE: non-standard shields: forward 160, port 40, starboard 40, aft 40",
+                    "tierId": "8",
+                    "frameId": "transport",
+                    "powerCoreIds": [
+                        "pulse-orange"
+                    ],
+                    "thrustersId": "m6",
+                    "armourId": "mk-7",
+                    "computerId": "mk-2-trinode",
+                    "crewQuartersId": "common",
+                    "defensiveCountermeasuresId": "mk-6",
+                    "driftEngineId": "signal-basic",
+                    "expansionBayIds": [
+                        "cargo-hold",
+                        "cargo-hold",
+                        "guest-quarters-common",
+                        "guest-quarters-common",
+                        "medical-bay"
+                    ],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "advanced-medium-range",
+                    "shieldsId": "heavy-280",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "persistent-particle-beam",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "tactical-nuclear-missile-launcher",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [
+                            {
+                                "weaponId": "flak-thrower",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "port": [],
+                        "starboard": [],
+                        "turret": [
+                            {
+                                "weaponId": "laser-net",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "light-particle-beam",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ]
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": "12",
+                                    "ranks": "8"
+                                },
+                                "diplomacy": {
+                                    "modifier": "13",
+                                    "ranks": "8"
+                                },
+                                "engineering": {
+                                    "modifier": "8",
+                                    "ranks": "8"
+                                },
+                                "gunnery": {
+                                    "modifier": "15"
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": "10",
+                                    "ranks": "8"
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": "13",
+                                    "ranks": "8"
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": "2",
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": "19"
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "piloting": {
+                                    "modifier": "15",
+                                    "ranks": "8"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "17",
+                                    "ranks": "8"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "inheritorworks-cathedralship",
+                "src": "pact",
+				"name": "Inheritorworks Cathedralship",
+				"tier": "16",
+				"params": {
+                   "version":"1.0.1",
+                   "hasCrew":1,
+                   "isSetDefaultCrewSkillValues":0,
+                   "isUseStrictRules":1,
+                   "shipName":"Inheritorworks Cathedralship",
+                   "shipConcept":"Massive, grandiose vessels, the Inheritorworks Cathedralships are the pride of the Iomedaean navy. In addition to being capable of carrying 16 Brightswords within its hangars, a Cathedralship has the capital weaponry to be a formidable foe in its own right.",
+                   "tierId":"16",
+                   "frameId":"carrier",
+                   "powerCoreIds":[
+                      "gateway-ultra",
+                      "none",
+                      "none"
+                   ],
+                   "thrustersId":"g6",
+                   "armourId":"mk-11",
+                   "computerId":"mk-5-duonode",
+                   "crewQuartersId":"common",
+                   "defensiveCountermeasuresId":"mk-10",
+                   "driftEngineId":"signal-basic",
+                   "expansionBayIds":[
+                      "hangar-bay",
+                      "hangar-bay",
+                      "medical-bay",
+                      "tech-workshop",
+                      "none",
+                      "none",
+                      "none",
+                      "none",
+                      "none",
+                      "none"
+                   ],
+                   "antiHackingSystemsId":"none",
+                   "antiPersonnelWeaponId":"none",
+                   "hasBiometricLocks":0,
+                   "computerCountermeasures":{
+                      "alarm":false,
+                      "fakeShell":false,
+                      "feedback":false,
+                      "firewall":false,
+                      "lockout":false,
+                      "shockGridId":"none",
+                      "wipe":false
+                   },
+                   "hasSelfDestructSystem":0,
+                   "hasDataNet":0,
+                   "hasHiveJoining":0,
+                   "sensorsId":"advanced-long-range",
+                   "shieldsId":"heavy-360",
+                   "weaponMounts":{
+                      "forward":[
+                         {
+                            "weaponId":"particle-beam-cannon",
+                            "weight":"capital",
+                            "templateWeight":"capital",
+                            "isFromTemplate":true,
+                            "canBeLinked":false,
+                            "isLinked":false
+                         }
+                      ],
+                      "aft":[
+
+                      ],
+                      "port":[
+                         {
+                            "weaponId":"railgun",
+                            "weight":"heavy",
+                            "templateWeight":"heavy",
+                            "isFromTemplate":true,
+                            "canBeLinked":true,
+                            "isLinked":false
+                         },
+                         {
+                            "weaponId":"railgun",
+                            "weight":"heavy",
+                            "templateWeight":"heavy",
+                            "isFromTemplate":true,
+                            "canBeLinked":false,
+                            "isLinked":false
+                         },
+                         {
+                            "weaponId":"none",
+                            "weight":"heavy",
+                            "templateWeight":"heavy",
+                            "isFromTemplate":true,
+                            "canBeLinked":false,
+                            "isLinked":false
+                         }
+                      ],
+                      "starboard":[
+                         {
+                            "weaponId":"railgun",
+                            "weight":"heavy",
+                            "templateWeight":"heavy",
+                            "isFromTemplate":true,
+                            "canBeLinked":true,
+                            "isLinked":false
+                         },
+                         {
+                            "weaponId":"railgun",
+                            "weight":"heavy",
+                            "templateWeight":"heavy",
+                            "isFromTemplate":true,
+                            "canBeLinked":false,
+                            "isLinked":false
+                         },
+                         {
+                            "weaponId":"none",
+                            "weight":"heavy",
+                            "templateWeight":"heavy",
+                            "isFromTemplate":true,
+                            "canBeLinked":false,
+                            "isLinked":false
+                         }
+                      ],
+                      "turret":[
+                         {
+                            "weaponId":"laser-net",
+                            "weight":"light",
+                            "templateWeight":"light",
+                            "isFromTemplate":true,
+                            "canBeLinked":true,
+                            "isLinked":false
+                         },
+                         {
+                            "weaponId":"laser-net",
+                            "weight":"light",
+                            "templateWeight":"light",
+                            "isFromTemplate":true,
+                            "canBeLinked":false,
+                            "isLinked":false
+                         }
+                      ]
+                   },
+                   "crewSkills":{
+                      "captain":{
+                         "countOfficers": 0,
+                         "hasRole":true,
+                         "skills":{
+                            "bluff":{
+                               "modifier":0,
+                               "ranks":0
+                            },
+                            "computers":{
+                               "modifier":"16",
+                               "ranks":"16"
+                            },
+                            "diplomacy":{
+                               "modifier":"17",
+                               "ranks":"16"
+                            },
+                            "engineering":{
+                               "modifier":"12",
+                               "ranks":"16"
+                            },
+                            "gunnery":{
+                               "modifier":"25"
+                            },
+                            "intimidate":{
+                               "modifier":"17",
+                               "ranks":"16"
+                            },
+                            "piloting":{
+                               "modifier":"12",
+                               "ranks":"16"
+                            }
+                         }
+                      },
+                      "engineer":{
+                         "countOfficers":"4",
+                         "countOfficerCrew":"14",
+                         "hasRole":true,
+                         "skills":{
+                            "engineering":{
+                               "modifier":"17",
+                               "ranks":"16"
+                            }
+                         }
+                      },
+                      "gunner":{
+                         "countOfficers":"6",
+                         "countOfficerCrew":"5",
+                         "hasRole":true,
+                         "skills":{
+                            "gunnery":{
+                               "modifier":"30"
+                            }
+                         }
+                      },
+                      "pilot":{
+                         "countOfficers":"1",
+                         "countOfficerCrew":"10",
+                         "hasRole":true,
+                         "skills":{
+                            "computers":{
+                               "modifier":"0",
+                               "ranks":"0"
+                            },
+                            "gunnery":{
+                               "modifier":"0"
+                            },
+                            "piloting":{
+                               "modifier":"17",
+                               "ranks":"16"
+                            }
+                         }
+                      },
+                      "scienceOfficer":{
+                         "countOfficers":"6",
+                         "countOfficerCrew":"5",
+                         "hasRole":true,
+                         "skills":{
+                            "computers":{
+                               "modifier":"21",
+                               "ranks":"16"
+                            }
+                         }
+                      }
+                   }
+                }
+            },
+            {
+				"id": "terminator-star-drake",
+                "src": "pact",
+				"name": "Terminator Star Drake",
+				"tier": "1/4",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "Terminator Star Drake",
+                    "shipConcept": "Vercite pilots favor Terminator Star Drakes as their vessels of choice for the Absalom Run, a race from Verces to Absalom Station and back that occurs once every 3 years. The winner of the race becomes an instant celebrity throughout the system.",
+                    "tierId": "1_4",
+                    "frameId": "racer",
+                    "powerCoreIds": [
+                        "micron-light"
+                    ],
+                    "thrustersId": "t14",
+                    "armourId": "mk-3",
+                    "computerId": "basic-computer",
+                    "crewQuartersId": "none",
+                    "defensiveCountermeasuresId": "none",
+                    "driftEngineId": "none",
+                    "expansionBayIds": [],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "basic-short-range",
+                    "shieldsId": "basic-10",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "light-laser-cannon",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [
+                            {
+                                "weaponId": "none",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "port": [],
+                        "starboard": [],
+                        "turret": []
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "diplomacy": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": 0
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": "5"
+                                },
+                                "piloting": {
+                                    "modifier": "9",
+                                    "ranks": "1"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "redshift-pleasure-sail",
+                "src": "pact",
+				"name": "Redshift Pleasure Sail",
+				"tier": "3",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "Redshift Pleasure Sail",
+                    "shipConcept": "The most striking feature of a Redshift Pleasure Sail&mdash;its enormous solar sail&mdash;is more of a throwback to its original, antiquated design than an actually functional system. These luxury vessels are popular with the Pact Worlds' rich and powerful.",
+                    "tierId": "3",
+                    "frameId": "explorer",
+                    "powerCoreIds": [
+                        "pulse-green"
+                    ],
+                    "thrustersId": "m12",
+                    "armourId": "mk-5",
+                    "computerId": "basic-computer",
+                    "crewQuartersId": "common",
+                    "defensiveCountermeasuresId": "mk-5",
+                    "driftEngineId": "signal-basic",
+                    "expansionBayIds": [
+                        "escape-pods",
+                        "guest-quarters-good",
+                        "recreation-suite-hac",
+                        "recreation-suite-trivid-den"
+                    ],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "basic-short-range",
+                    "shieldsId": "basic-40",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "coilgun",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [],
+                        "port": [
+                            {
+                                "weaponId": "light-laser-cannon",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "starboard": [
+                            {
+                                "weaponId": "light-laser-cannon",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "turret": [
+                            {
+                                "weaponId": "flak-thrower",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ]
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": "12",
+                                    "ranks": "3"
+                                },
+                                "diplomacy": {
+                                    "modifier": "10",
+                                    "ranks": "3"
+                                },
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": "5",
+                                    "ranks": "3"
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": "10",
+                                    "ranks": "3"
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": "10"
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "piloting": {
+                                    "modifier": "10",
+                                    "ranks": "3"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "opulos-drift-cruiser",
+                "src": "pact",
+				"name": "Opulos Drift Cruiser",
+				"tier": "11",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": false,
+                    "shipName": "Opulos Drift Cruiser",
+                    "shipConcept": "The recent disappearance of the Drift Cruiser <i>Utopia</i> while taking guests to see a comet plunge into a brown dwarf star in the Vast has done little to dissuade those clamoring for tickets aboard these opulent vessels.",
+                    "tierId": "11",
+                    "frameId": "bulk-freighter",
+                    "powerCoreIds": [
+                        "nova-ultra",
+                        "none"
+                    ],
+                    "thrustersId": "h6",
+                    "armourId": "mk-7",
+                    "computerId": "mk-3-trinode",
+                    "crewQuartersId": "common",
+                    "defensiveCountermeasuresId": "mk-8",
+                    "driftEngineId": "signal-booster",
+                    "expansionBayIds": [
+                        "escape-pods",
+                        "escape-pods",
+                        "guest-quarters-luxurious",
+                        "guest-quarters-good",
+                        "guest-quarters-good",
+                        "guest-quarters-good",
+                        "recreation-suite-gym",
+                        "recreation-suite-hac",
+                        "shuttle-bay",
+                        "none"
+                    ],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "advanced-long-range",
+                    "shieldsId": "heavy-240",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "plasma-cannon",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [
+                            {
+                                "weaponId": "light-emp-cannon",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "port": [],
+                        "starboard": [],
+                        "turret": [
+                            {
+                                "weaponId": "flak-thrower",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": true,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "flak-thrower",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ]
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": "13",
+                                    "ranks": "11"
+                                },
+                                "diplomacy": {
+                                    "modifier": "14",
+                                    "ranks": "11"
+                                },
+                                "engineering": {
+                                    "modifier": "9",
+                                    "ranks": "11"
+                                },
+                                "gunnery": {
+                                    "modifier": "17"
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": "9",
+                                    "ranks": "11"
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": "2",
+                            "countOfficerCrew": "3",
+                            "hasRole": true,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": "14",
+                                    "ranks": "11"
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": "1",
+                            "countOfficerCrew": "2",
+                            "hasRole": true,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": "22"
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": "1",
+                            "countOfficerCrew": "5",
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "piloting": {
+                                    "modifier": "14",
+                                    "ranks": "11"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": "2",
+                            "countOfficerCrew": "3",
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "18",
+                                    "ranks": "11"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "uc-pod",
+                "src": "pact",
+				"name": "UC Pod",
+				"tier": "1/2",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "UC Pod",
+                    "shipConcept": "Sleek and maneuverable, UC Pods dart around the battlefield and harry their enemies with spore pod launchers, leaving larger ships to finish the fight. Pods tend to have more flighty empathetic responses, much like those of small birds.",
+                    "tierId": "1_2",
+                    "frameId": "interceptor",
+                    "powerCoreIds": [
+                        "micron-heavy"
+                    ],
+                    "thrustersId": "t12",
+                    "armourId": "mk-3",
+                    "computerId": "mk-1-mononode",
+                    "crewQuartersId": "none",
+                    "defensiveCountermeasuresId": "mk-3",
+                    "driftEngineId": "none",
+                    "expansionBayIds": [],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": true,
+                    "sensorsId": "basic-medium-range",
+                    "shieldsId": "basic-10",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "gyrolaser",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "light-spore-torpedo-launcher",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [],
+                        "port": [],
+                        "starboard": [],
+                        "turret": []
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "diplomacy": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": 0
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "6",
+                                    "ranks": "1"
+                                },
+                                "gunnery": {
+                                    "modifier": "6"
+                                },
+                                "piloting": {
+                                    "modifier": "10",
+                                    "ranks": "1"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": false,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "uc-arkship",
+                "src": "pact",
+				"name": "UC Arkship",
+				"tier": "10",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "UC Arkship",
+                    "shipConcept": "Though they are composed of several UC Pod ships fused together, UC Arkships have a single sentience that acts in a very protective manner toward its component vessels. A crew must learn to comfort an Arkship when these pods are lost in battle.",
+                    "tierId": "10",
+                    "frameId": "destroyer",
+                    "powerCoreIds": [
+                        "pulse-orange"
+                    ],
+                    "thrustersId": "l8",
+                    "armourId": "mk-9",
+                    "computerId": "mk-2-tetranode",
+                    "crewQuartersId": "common",
+                    "defensiveCountermeasuresId": "mk-6",
+                    "driftEngineId": "signal-booster",
+                    "expansionBayIds": [
+                        "cargo-hold",
+                        "cargo-hold",
+                        "hive-bay",
+                        "hive-bay"
+                    ],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "advanced-medium-range",
+                    "shieldsId": "medium-100",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "heavy-laser-array",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "heavy-spore-torpedo-launcher",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [
+                            {
+                                "weaponId": "coilgun",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "port": [
+                            {
+                                "weaponId": "coilgun",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "starboard": [
+                            {
+                                "weaponId": "coilgun",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "turret": [
+                            {
+                                "weaponId": "laser-net",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ]
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": "13",
+                                    "ranks": "10"
+                                },
+                                "diplomacy": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                },
+                                "engineering": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": "16"
+                                },
+                                "intimidate": {
+                                    "modifier": "9",
+                                    "ranks": "10"
+                                },
+                                "piloting": {
+                                    "modifier": "9",
+                                    "ranks": "10"
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": "3",
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": "3",
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": "21"
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "0",
+                                    "ranks": "0"
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "piloting": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": "2",
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "18",
+                                    "ranks": "10"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+				"id": "uc-gardenship",
+                "src": "pact",
+				"name": "UC Gardenship",
+				"tier": "10",
+				"params": {
+                    "version": "1.0.1",
+                    "hasCrew": 1,
+                    "isSetDefaultCrewSkillValues": 0,
+                    "isUseStrictRules": 1,
+                    "shipName": "UC Gardenship",
+                    "shipConcept": "A UC Gardenship is a sight to behold drifting through space, a mass of bright green set against inky darkness and bringing life wherever it goes. Its foliage is protected from the harshness of vacuum by powerful (and nearly invisible) forcefields.",
+                    "tierId": "10",
+                    "frameId": "bulk-freighter",
+                    "powerCoreIds": [
+                        "nova-heavy",
+                        "none"
+                    ],
+                    "thrustersId": "h4",
+                    "armourId": "mk-8",
+                    "computerId": "mk-3-mononode",
+                    "crewQuartersId": "common",
+                    "defensiveCountermeasuresId": "mk-6",
+                    "driftEngineId": "signal-basic",
+                    "expansionBayIds": [
+                        "hydroponic-garden",
+                        "hydroponic-garden",
+                        "hydroponic-garden",
+                        "hydroponic-garden",
+                        "medical-bay",
+                        "synthesis-bay",
+                        "none",
+                        "none",
+                        "none",
+                        "none"
+                    ],
+                    "antiHackingSystemsId": "none",
+                    "antiPersonnelWeaponId": "none",
+                    "hasBiometricLocks": 0,
+                    "computerCountermeasures": {
+                        "alarm": false,
+                        "fakeShell": false,
+                        "feedback": false,
+                        "firewall": false,
+                        "lockout": false,
+                        "shockGridId": "none",
+                        "wipe": false
+                    },
+                    "hasSelfDestructSystem": 0,
+                    "hasDataNet": 0,
+                    "hasHiveJoining": 0,
+                    "sensorsId": "budget-medium-range",
+                    "shieldsId": "medium-160",
+                    "weaponMounts": {
+                        "forward": [
+                            {
+                                "weaponId": "heavy-laser-array",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "aft": [
+                            {
+                                "weaponId": "heavy-laser-array",
+                                "weight": "heavy",
+                                "templateWeight": "heavy",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ],
+                        "port": [],
+                        "starboard": [],
+                        "turret": [
+                            {
+                                "weaponId": "light-spore-torpedo-launcher",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": true,
+                                "isLinked": false
+                            },
+                            {
+                                "weaponId": "light-spore-torpedo-launcher",
+                                "weight": "light",
+                                "templateWeight": "light",
+                                "isFromTemplate": true,
+                                "canBeLinked": false,
+                                "isLinked": false
+                            }
+                        ]
+                    },
+                    "crewSkills": {
+                        "captain": {
+                            "countOfficers": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "bluff": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "computers": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                },
+                                "diplomacy": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                },
+                                "engineering": {
+                                    "modifier": "9",
+                                    "ranks": "10"
+                                },
+                                "gunnery": {
+                                    "modifier": "16"
+                                },
+                                "intimidate": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "piloting": {
+                                    "modifier": "10",
+                                    "ranks": "10"
+                                }
+                            }
+                        },
+                        "engineer": {
+                            "countOfficers": "2",
+                            "countOfficerCrew": "3",
+                            "hasRole": true,
+                            "skills": {
+                                "engineering": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                }
+                            }
+                        },
+                        "gunner": {
+                            "countOfficers": "2",
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "gunnery": {
+                                    "modifier": "21"
+                                }
+                            }
+                        },
+                        "pilot": {
+                            "countOfficers": 1,
+                            "countOfficerCrew": 0,
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": 0,
+                                    "ranks": 0
+                                },
+                                "gunnery": {
+                                    "modifier": 0
+                                },
+                                "piloting": {
+                                    "modifier": "15",
+                                    "ranks": "10"
+                                }
+                            }
+                        },
+                        "scienceOfficer": {
+                            "countOfficers": "3",
+                            "countOfficerCrew": "4",
+                            "hasRole": true,
+                            "skills": {
+                                "computers": {
+                                    "modifier": "14",
+                                    "ranks": "10"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ]
 	}
 }
