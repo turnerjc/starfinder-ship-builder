@@ -7960,7 +7960,7 @@
 					"sensorsId": "basic-medium-range",
 					"shieldsId": "light-60",
 					"weaponMounts": {
-						"foEward": [
+						"forward": [
 							{
 								"weaponId": "gyrolaser",
 								"weight": "light",
@@ -9001,7 +9001,7 @@
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 1,
 					"shipName": "Infernex Keep Diabolical",
-					"shipConcept": "Bristling with weapons&mdash;not to mention wicked-looking barbs&mdash;a Hellknight Keep Diabolical is among the most feared starships both within the Pact Worlds system and in deep space. NOTE: non-standard shield distribution: forward 100, port 80, starboard 80, aft 100.",
+					"shipConcept": "Bristling with weapons&mdash;not to mention wicked-looking barbs&mdash;a Hellknight Keep Diabolical is among the most feared starships both within the Pact Worlds system and in deep space.",
 					"tierId": "16",
 					"frameId": "battleship",
 					"powerCoreIds": [
@@ -9041,6 +9041,12 @@
                     "hasHiveJoining": 0,
 					"sensorsId": "advanced-long-range",
 					"shieldsId": "heavy-360",
+                    "shieldsByPosition": {
+                        "forward": "100",
+                        "port": "80",
+                        "starboard": "80",
+                        "aft": "100"
+                    },
 					"weaponMounts": {
 					"forward": [
 						"capital",
@@ -9430,7 +9436,7 @@
                     "isSetDefaultCrewSkillValues": 0,
                     "isUseStrictRules": 1,
                     "shipName": "Inheritorworks Shieldcraft",
-                    "shipConcept": "Iomedaean Shieldcrafts serve as transports for platoons of crusaders journeying to the front in their fight against evil. These soldiers store their suits of powered armor in the ship's cargo bays on the voyage as they await deployment. NOTE: non-standard shields: forward 160, port 40, starboard 40, aft 40",
+                    "shipConcept": "Iomedaean Shieldcrafts serve as transports for platoons of crusaders journeying to the front in their fight against evil. These soldiers store their suits of powered armor in the ship's cargo bays on the voyage as they await deployment.",
                     "tierId": "8",
                     "frameId": "transport",
                     "powerCoreIds": [
@@ -9466,6 +9472,12 @@
                     "hasHiveJoining": 0,
                     "sensorsId": "advanced-medium-range",
                     "shieldsId": "heavy-280",
+                    "shieldsByPosition": {
+                        "forward": "160",
+                        "port": "40",
+                        "starboard": "40",
+                        "aft": "40"
+                    },
                     "weaponMounts": {
                         "forward": [
                             {

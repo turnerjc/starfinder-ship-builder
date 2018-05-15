@@ -17,11 +17,11 @@ var WEAPON_ARCS = [
 |------------------------------------------------------------------------------------------
 */
 function maybeCreateProperty(obj, prop, type) {
-	if(typeof obj !== "object") {
+	if (typeof obj !== "object") {
 		throw "Not an object";
 	}
-	if(typeof obj[prop] === "undefined") {
-		switch(type) {
+	if (typeof obj[prop] === "undefined") {
+		switch (type) {
 			case "Array":
 				obj[prop] = [];
 				break;
@@ -41,7 +41,7 @@ function maybeCreateProperty(obj, prop, type) {
 |------------------------------------------------------------------------------------------
 */
 function isset(obj) {
-	if(typeof obj === "undefined") {
+	if (typeof obj === "undefined") {
 		return false;
 	}
 	return true;
@@ -49,7 +49,7 @@ function isset(obj) {
 /*
 |------------------------------------------------------------------------------------------
 */
-function cloneObject( obj ) {
+function cloneObject(obj) {
 	return JSON.parse(JSON.stringify(obj));
 }
 /*
@@ -57,7 +57,7 @@ function cloneObject( obj ) {
 */
 function integerToWord( int ) {
 	var word = "";
-	switch(int) {
+	switch (int) {
 		case 1:
 			word = "one";
 			break;
@@ -216,6 +216,12 @@ function Ship(json) {
 				hasHiveJoining:0,
 				sensorsId:"none",
 				shieldsId:"none",
+                shieldsByPosition: {
+                    forward: 0,
+                    aft: 0,
+                    port: 0,
+                    starboard: 0
+                },
 				weaponMounts: {
 					forward: [
 						{
@@ -358,7 +364,7 @@ function Ship(json) {
 				var antiHackingSystems = this.getItemById("antiHackingSystems", this.params.antiHackingSystemsId);
 				antiHackingSystems.getOutputName = function() {
 					var outputName = this.name.toLowerCase();
-					if(this.id !== "none") {
+					if (this.id !== "none") {
 						outputName += " (DC +" + this.dcMod + ")";
 					}
 					return outputName;
@@ -406,21 +412,21 @@ function Ship(json) {
 				var output = [];
 				var outputStr = "n/a";
 				// targetLockModifier
-				if(
+				if (
 					isset(this.armour.targetLockModifier) &&
 					this.armour.targetLockModifier < 0
 				) {
 					output.push(this.armour.targetLockModifier + " TL");
 				}
 				// turnDistanceModifier
-				if(
+				if (
 					isset(this.armour.turnDistanceModifier) &&
 					this.armour.turnDistanceModifier > 0
 				) {
 					output.push("+" + this.armour.turnDistanceModifier + " turn distance");
 				}
 				// output
-				if( output.length > 0 ) {
+				if ( output.length > 0 ) {
 					outputStr = output.join("; ");
 				}
 				return outputStr;
@@ -440,9 +446,9 @@ function Ship(json) {
                 for(roleIndex in this.params.crewSkills) {
                     var role = this.params.crewSkills[roleIndex];
                     
-					if( !role.hasRole ) continue;
+					if ( !role.hasRole ) continue;
                     
-                    if( roleIndex == 'captain' ) {
+                    if ( roleIndex == 'captain' ) {
                         complement++;
                     }
 
@@ -466,7 +472,7 @@ function Ship(json) {
             */
 			computerDescription: function() {
 				var desc = "";
-				if(this.computer.id !== "basic-computer") {
+				if (this.computer.id !== "basic-computer") {
 					var nodes = this.computer.nodes;
 					var bonus = "+" + this.computer.bonus;
 					var nodesWord = integerToWord(nodes);
@@ -480,10 +486,10 @@ function Ship(json) {
 			computerCountermeasuresBpCost: function() {
 				var total = 0;
 				for(measure in this.params.computerCountermeasures) {
-					if( measure == "shockGridId" ) {
+					if ( measure == "shockGridId" ) {
 						total += this.shockGridBpCost;
 					} else {
-						if( this.params.computerCountermeasures[measure] == true ) {
+						if ( this.params.computerCountermeasures[measure] == true ) {
 							total += this.computerTier;
 						}
 					}
@@ -496,15 +502,15 @@ function Ship(json) {
 			computerCountermeasuresDescription: function() {
 				var desc = [];
 				for(measure in this.params.computerCountermeasures) {
-					if( measure == 'shockGridId') {
-						if(this.params.computerCountermeasures[measure] !== "none") {
+					if ( measure == 'shockGridId') {
+						if (this.params.computerCountermeasures[measure] !== "none") {
 							var shockGridDesc = 'shock grid ' + this.shockGrid.rank +
 								' [DC ' + this.shockGrid.dc +
 								', ' + this.shockGrid.damage + ']';
 							desc.push(shockGridDesc);
 						}
 					} else {
-						if(this.params.computerCountermeasures[measure] == true) {
+						if (this.params.computerCountermeasures[measure] == true) {
 							var cmName = this.getItemById('computerCountermeasures', measure).name.toLowerCase();
 							desc.push(cmName);
 						}
@@ -524,7 +530,7 @@ function Ship(json) {
             */
 			countPowerCoreHousings: function() {
 				var countHousings = this.sizeCategory.countPowerCoreHousings;
-				if(
+				if (
 					(this.sizeCategory.id == "Medium" || this.sizeCategory.id == "Large") &&
 					this.hasPowerCoreHousingExpansionBay
 				) {
@@ -548,7 +554,7 @@ function Ship(json) {
 					desc[role] = "";
 					for(skill in this.params.crewSkills[role].skills) {
 						var skillObj = this.params.crewSkills[role].skills[skill];
-						if(
+						if (
 							skillObj.modifier != 0 ||
 							(typeof skillObj.ranks !== "undefined" && skillObj.ranks != 0)
 						) {
@@ -556,18 +562,18 @@ function Ship(json) {
 							desc[role] += this.getItemById("skill", skill).name + " ";
 							// skill modifier
 							var modifier = parseInt(skillObj.modifier);
-							if( isset(skillObj.ranks) ) {
+							if ( isset(skillObj.ranks) ) {
 								modifier += parseInt(skillObj.ranks);
 							}
-							if( skill == "computers") {
+							if ( skill == "computers") {
 								modifier += parseInt(this.skillModifierComputers);
 							}
-							if( skill == "piloting") {
+							if ( skill == "piloting") {
 								modifier += parseInt(this.skillModifierPiloting);
 							}
 							desc[role] += this.getPrefixedModifier(modifier);
 							// skill ranks
-							if( isset(skillObj.ranks) ) {
+							if ( isset(skillObj.ranks) ) {
 								desc[role] += " (" + skillObj.ranks + " " + "rank".pluralise(skillObj.ranks) + ")";
 							}
 							// comma
@@ -631,7 +637,7 @@ function Ship(json) {
 			expansionBaysCountUsed: function() {
 				var countUsed = 0;
 				for(i in this.expansionBays) {
-					if(this.expansionBays[i].id !== "none") {
+					if (this.expansionBays[i].id !== "none") {
 						countUsed += this.expansionBays[i].numBays;
 					}
 				}
@@ -650,7 +656,7 @@ function Ship(json) {
 				var expansionBaysDescription = "";
 				var sep = ", ";
 				for(id in expansionBaysByType) {
-					if(id !== "none") {
+					if (id !== "none") {
 						var expansionBayName = this.getItemById("expansionBay", id).name.toLowerCase();
 						var expansionBayQuantity = expansionBaysByType[id] == 1 ? "" : " (" + expansionBaysByType[id] + ")";
 						var expansionBayDesc = expansionBayName + expansionBayQuantity + sep;
@@ -684,12 +690,12 @@ function Ship(json) {
             */
 			hasComputerCountermeasures: function() {
 				for(measure in this.params.computerCountermeasures) {
-					if( measure == 'shockGridId') {
-						if(this.params.computerCountermeasures[measure] !== "none") {
+					if ( measure == 'shockGridId') {
+						if (this.params.computerCountermeasures[measure] !== "none") {
 							return true;
 						}
 					} else {
-						if(this.params.computerCountermeasures[measure] == true) {
+						if (this.params.computerCountermeasures[measure] == true) {
 							return true;
 						}
 					}
@@ -702,7 +708,7 @@ function Ship(json) {
 			hasPowerCoreHousingExpansionBay: function() {
 				var result = false;
 				for( i in this.params.expansionBayIds ) {
-					if( this.params.expansionBayIds[i] == "power-core-housing") {
+					if ( this.params.expansionBayIds[i] == "power-core-housing") {
 						result =  true;
 					}
 				}
@@ -741,7 +747,7 @@ function Ship(json) {
             */
 			isComplementValid: function() {
 				var isComplementValid = true;
-				if( this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {
+				if ( this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {
 					isComplementValid = false;
 				}
 				return isComplementValid;
@@ -778,15 +784,15 @@ function Ship(json) {
 			modifiersDescription: function() {
 				var desc = [];
 				// computer nodes
-				if(this.computer.id !== "basic-computer") {
+				if (this.computer.id !== "basic-computer") {
 					desc.push(this.computerDescription);
 				}
 				// Computers skill
-				if(this.skillModifierComputers !== 0) {
+				if (this.skillModifierComputers !== 0) {
 					desc.push(this.getPrefixedModifier(this.skillModifierComputers) + " Computers");
 				}
 				// Piloting skill
-				if(this.skillModifierPiloting !== 0) {
+				if (this.skillModifierPiloting !== 0) {
 					desc.push(this.getPrefixedModifier(this.skillModifierPiloting) + " Piloting");
 				}
 				return desc.join(", ");
@@ -797,9 +803,9 @@ function Ship(json) {
 			pilotingRanks: function() {
 				var pilotingRanks = 0;
 				var crewSkills = this.params.crewSkills;
-				if(crewSkills.pilot.hasRole) {
+				if (crewSkills.pilot.hasRole) {
 					pilotingRanks = parseInt(crewSkills.pilot.skills.piloting.ranks);
-				} else if( crewSkills.captain.hasRole ) {
+				} else if ( crewSkills.captain.hasRole ) {
 					pilotingRanks = parseInt(crewSkills.captain.skills.piloting.ranks);
 				}
 				return pilotingRanks;
@@ -821,7 +827,7 @@ function Ship(json) {
 				var desc = [];
 				for(i in this.powerCores) {
 					var powerCore = this.powerCores[i];
-					if(powerCore.id !== "none") {
+					if (powerCore.id !== "none") {
 						desc.push(powerCore.name + " (" + powerCore.pcuBudget + " PCU)");
 					}
 				}
@@ -857,14 +863,14 @@ function Ship(json) {
 				for(role in this.params.crewSkills) {
 					roleDesc[role] = this.getItemById("role", role).name;
 					var roleObj = this.params.crewSkills[role];
-					if(isset(roleObj.countOfficers) && roleObj.countOfficers > 0) {
-						if(isset(roleObj.countOfficerCrew) && roleObj.countOfficerCrew > 0) {
+					if (isset(roleObj.countOfficers) && roleObj.countOfficers > 0) {
+						if (isset(roleObj.countOfficerCrew) && roleObj.countOfficerCrew > 0) {
 							// at least one officer with large team
 							var officers = [];
 							officers.push( roleObj.countOfficers + " " + "officer".pluralise(roleObj.countOfficers) );
 							officers.push( roleObj.countOfficerCrew + " crew" + (roleObj.countOfficers > 1 ? " each" : ""));
 							roleDesc[role] += " (" + officers.join(", ") + ")";
-						} else if(roleObj.countOfficers > 1) {
+						} else if (roleObj.countOfficers > 1) {
 							// more than one officer
                             if (role == 'captain') {
                                 roleDesc[role] += " (plus " + roleObj.countOfficers + " " + "officer".pluralise(roleObj.countOfficers) + ")";
@@ -881,19 +887,19 @@ function Ship(json) {
             */
 			securityDescription: function() {
 				var desc = [];
-				if(this.params.antiHackingSystemsId !== "none") {
+				if (this.params.antiHackingSystemsId !== "none") {
 					desc.push(this.antiHackingSystems.getOutputName());
 				}
-				if(this.params.antiPersonnelWeaponId !== "none") {
+				if (this.params.antiPersonnelWeaponId !== "none") {
 					desc.push( "anti-personnel weapon (" + this.antiPersonnelWeapon.name.toLowerCase() + ")" );
 				}
-				if(this.params.hasBiometricLocks) {
+				if (this.params.hasBiometricLocks) {
 				    desc.push("biometric locks");
 				}
-				if(this.hasComputerCountermeasures) {
+				if (this.hasComputerCountermeasures) {
 					desc.push("computer countermeasures (" + this.computerCountermeasuresDescription + ")");
 				}
-				if(this.params.hasSelfDestructSystem) {
+				if (this.params.hasSelfDestructSystem) {
 				   desc.push( "self-destruct system" );
 				}
 				return desc.join(", ");
@@ -962,25 +968,14 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-			shieldsByPosition: function() {
-				var totalSp = this.shields.totalSp;
-				var positions = ["forward", "aft", "port", "starboard"];
-				var shieldsByPosition = {};
-				for(position in positions) {
-					shieldsByPosition[positions[position]] = 0;
-				}
-				var position = 0;
-				while (totalSp > 0) {
-					shieldsByPosition[positions[position]]++;
-					totalSp--;
-					if(position == positions.length - 1) {
-						position = 0;
-					} else {
-						position++;
-					}
-				}
-				return shieldsByPosition;
-			},
+            shieldsByPositionTotal: function() {
+                console.log('shieldsByPositionTotal');
+                var total = 0;
+                for(position in this.params.shieldsByPosition) {
+                    total += parseInt(this.params.shieldsByPosition[position]);
+                }
+                return total;
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1029,13 +1024,13 @@ function Ship(json) {
 					for(skill in this.params.crewSkills[role].skills) {
 						var skillObj = this.params.crewSkills[role].skills[skill];
 						skillTotals[role][skill] = parseInt(skillObj.modifier);
-						if( isset(skillObj.ranks) ) {
+						if ( isset(skillObj.ranks) ) {
 							skillTotals[role][skill] += parseInt(skillObj.ranks);
 						}
-						if( skill == "computers" ) {
+						if ( skill == "computers" ) {
 							skillTotals[role][skill] += this.skillModifierComputers;
 						}
-						if( skill == "piloting" ) {
+						if ( skill == "piloting" ) {
 							skillTotals[role][skill] += this.skillModifierPiloting;
 						}
 					}
@@ -1050,15 +1045,15 @@ function Ship(json) {
 				// sensors
 				desc.push( this.sensors.id == "none" ? "no sensors" : this.sensors.name.toLowerCase() + " sensors" );
 				// crew quarters
-				if( this.params.crewQuartersId !== "none" ) {
+				if ( this.params.crewQuartersId !== "none" ) {
 					desc.push( "crew quarters (" + this.crewQuarters.name.toLowerCase() + ")" );
 				} 
 				// armour
-				if( this.params.armourId !== "none" ) {
+				if ( this.params.armourId !== "none" ) {
 					desc.push( this.armour.name.toLowerCase() );
 				}
 				// defences
-				if( this.params.defensiveCountermeasuresId !== "none" ) {
+				if ( this.params.defensiveCountermeasuresId !== "none" ) {
 					desc.push( this.defensiveCountermeasures.name.toLowerCase() );
 				}
 				// computer
@@ -1161,7 +1156,7 @@ function Ship(json) {
 						var mountDesc = "";
 						
 						// if this is the second of a linked set, skip this mount
-						if(
+						if (
 							isset( this.weaponMounts[position][prevI] ) &&
 							this.weaponMounts[position][prevI].isLinked
 						) {
@@ -1169,11 +1164,11 @@ function Ship(json) {
 						}
 						
 						// get description
-                        if(mount.weapon.id == "none") continue;
+                        if (mount.weapon.id == "none") continue;
 
                         var weaponName = mount.weapon.name.toLowerCase();
                         
-                        if( mount.isLinked ) {
+                        if ( mount.isLinked ) {
                             // mountDesc = "linked " + weaponName.pluralise(2) + " (" + mount.weapon.damage + ")"
                             mountDesc = "linked " + weaponName.pluralise(2) + " (" + this.getWeaponDamage(mount) + ")"
                         } else {
@@ -1183,7 +1178,7 @@ function Ship(json) {
                         
                         positionDesc.push(mountDesc);
 					}
-					if(positionDesc.length > 0) {
+					if (positionDesc.length > 0) {
 						desc[position] = positionDesc.join(", ");
 					}
 				}
@@ -1261,7 +1256,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			testThatPropExists: function(prop) {
-				if( !isset(this.data[prop]) ) {
+				if ( !isset(this.data[prop]) ) {
 					throw "Property " + prop + " does not exist";
 				}
 			},
@@ -1269,7 +1264,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			testThatPropIsArray: function(prop) {
-				if(typeof this.data[prop].data !== "object") {
+				if (typeof this.data[prop].data !== "object") {
 					throw "Property " + prop + " is not an array";
 				}
 			},
@@ -1277,7 +1272,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			testThatItemHasId: function(prop, item) {
-				if( !isset(this.data[prop].data[item].id) ) {
+				if ( !isset(this.data[prop].data[item].id) ) {
 					throw "Property " + prop + "[" + item + "] does not have an id";
 				}
 			},
@@ -1285,7 +1280,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			testThatItemHasName: function(prop, item) {
-				if( !isset(this.data[prop].data[item].name) ) {
+				if ( !isset(this.data[prop].data[item].name) ) {
 					throw "Property " + prop + "[" + item + "] does not have a name";
 				}
 			},
@@ -1299,7 +1294,7 @@ function Ship(json) {
 					return item.id === id;
 				});
 				// test that item exists
-				if(typeof item === "undefined") {
+				if (typeof item === "undefined") {
 					console.log("There is no item " + prop + " that matches id " + id);
 					item = this.data[prop].data.find(function(item) {
 						return item.id === "none";
@@ -1327,7 +1322,7 @@ function Ship(json) {
             */
 			popExcessExpansionBays: function( targetCountBays ) {
 				var countBays = this.params.expansionBayIds.length;
-				if( countBays > targetCountBays ) {
+				if ( countBays > targetCountBays ) {
 					for(var i = 0; i < countBays - targetCountBays; i++) {
 						this.params.expansionBayIds.pop();
 					}
@@ -1338,7 +1333,7 @@ function Ship(json) {
             */
 			maybeCreateExpansionBays: function( targetCountBays ) {
 				for(var i = 0; i < targetCountBays; i++) {
-					if( !isset(this.params.expansionBayIds[i]) ) {
+					if ( !isset(this.params.expansionBayIds[i]) ) {
 						this.params.expansionBayIds[i] = "none";
 					}
 				}
@@ -1347,12 +1342,12 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			setCrewQuarters: function( frameSize ) {
-				if( frameSize == "Tiny" ) {
-					if( this.params.crewQuartersId !== "none" ) {
+				if ( frameSize == "Tiny" ) {
+					if ( this.params.crewQuartersId !== "none" ) {
 						this.params.crewQuartersId = "none";
 					}
 				} else {
-					if( this.params.crewQuartersId == "none" ) {
+					if ( this.params.crewQuartersId == "none" ) {
 						this.params.crewQuartersId = "common";
 					}
 				}
@@ -1373,9 +1368,30 @@ function Ship(json) {
             getWeaponDamage: function(mount) {
                 var mult = (mount.isLinked ? 2 : 1);
                 var split = mount.weapon.damage.split('d');
-                if(split.length != 2) return 'error';
+                if (split.length != 2) return 'error';
                 var countDice = split[0];
                 return (mult * countDice) + 'd' + split[1];
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            setDefaultShieldsByPosition: function(shieldsId) {
+				var totalSp = this.shields.totalSp;
+                var positions = [];
+				for(position in this.params.shieldsByPosition) {
+                    positions.push(position);
+					this.params.shieldsByPosition[position] = 0;
+				}
+				var positionIndex = 0;
+				while (totalSp > 0) {
+					this.params.shieldsByPosition[positions[positionIndex]]++;
+					totalSp--;
+					if (positionIndex == positions.length - 1) {
+						positionIndex = 0;
+					} else {
+						positionIndex++;
+					}
+				}
             },
             /*
             |------------------------------------------------------------------------------
@@ -1389,7 +1405,7 @@ function Ship(json) {
                 for(arcIndex in arcs) {
 					var arc = arcs[ arcIndex ];
 
-                    if( !isset(mounts[arc]) ) continue;
+                    if ( !isset(mounts[arc]) ) continue;
                         
                     var arcMounts = mounts[arc];
                     
@@ -1431,15 +1447,15 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			setDefaultCrewSkillValues: function() {
-				if(this.params.isSetDefaultCrewSkillValues) {
+				if (this.params.isSetDefaultCrewSkillValues) {
 					var tier = this.getItemById("tier", this.params.tierId).value;
-					if(tier < 1) {
+					if (tier < 1) {
 						tier = 1;
 					}
 					for(role in this.params.crewSkills) {
 						for(skill in this.params.crewSkills[role].skills) {
 							var skillObj = this.params.crewSkills[role].skills[skill];
-							if( skillObj.ranks > 0 ) {
+							if ( skillObj.ranks > 0 ) {
 								skillObj.ranks = tier;
 							}
 						}
@@ -1481,7 +1497,7 @@ function Ship(json) {
 			inputSampleShipParams: function() {
 				var sampleShipSelect = document.getElementById("sampleShipSelect");
 				var sampleShipId = sampleShipSelect.value;
-				if(sampleShipId !== "none") {
+				if (sampleShipId !== "none") {
 					var sampleShipObj = this.getItemById("sampleShip", sampleShipId);
 					var sampleShipParams = cloneObject(sampleShipObj.params);
 					this.params = sampleShipParams;
@@ -1493,10 +1509,15 @@ function Ship(json) {
             */
 			fixMissingParamsValues: function() {
 				for(key in this.paramsReset){
-					if( !isset(this.params[key]) ) {
-						console.log("Missing param, " + key + ", added to ship");
-						this.params[key] = cloneObject(this.paramsReset[key]);
-					}
+                    if (isset(this.params[key])) continue;
+
+                    console.log("Missing param, " + key + ", added to ship");
+                    this.params[key] = cloneObject(this.paramsReset[key]);
+
+                    // shields by position
+                    if (key == 'shieldsByPosition') {
+                        this.setDefaultShieldsByPosition();
+                    }
 				}
 			},
             /*
@@ -1525,7 +1546,7 @@ function Ship(json) {
 			canWeaponMountBeCreated: function(position) {
 				var result = true;
 				var countMountsInPosition = this.params.weaponMounts[position].length;
-				if(countMountsInPosition >= this.sizeCategory.maxMounts) {
+				if (countMountsInPosition >= this.sizeCategory.maxMounts) {
 					result = false;
 				}
 				return result;
@@ -1535,7 +1556,7 @@ function Ship(json) {
             */
 			upgradeWeaponMount: function(position, i) {
 				var weaponMount = this.params.weaponMounts[position][i];
-				if(weaponMount.weight == "light") {
+				if (weaponMount.weight == "light") {
 					weaponMount.weight = "heavy";
 				} else {
 					weaponMount.weight = "capital";
@@ -1549,7 +1570,7 @@ function Ship(json) {
             */
 			downgradeWeaponMount: function(position, i) {
 				var weaponMount = this.params.weaponMounts[position][i];
-				if(weaponMount.weight == "capital") {
+				if (weaponMount.weight == "capital") {
 					weaponMount.weight = "heavy";
 				} else {
 					weaponMount.weight = "light";
@@ -1566,15 +1587,15 @@ function Ship(json) {
 				// check weight
 				// Heavy weapon mounts can only appear on a Medium or larger ship,
 				// capital weapon mounts can only appear on a Huge or larger ship.
-				if(weights[weight] >= weights[this.sizeCategory.maxMountWeight]) {
+				if (weights[weight] >= weights[this.sizeCategory.maxMountWeight]) {
 					result = false;
 				} else {
-					if(position == "turret") {
-						if( weight !== "light" ) {
+					if (position == "turret") {
+						if ( weight !== "light" ) {
 							result = false; 
 						}
 					} else {
-						if( weight == "capital") {
+						if ( weight == "capital") {
 							result = false;
 						}
 					}
@@ -1586,15 +1607,15 @@ function Ship(json) {
             */
 			canWeaponMountBeDowngraded: function(weight, isFromTemplate, templateWeight) {
 				var result = true;
-				if( weight == "light" ) {
+				if ( weight == "light" ) {
 					result = false;
 				} else {
 					var weights = {
 						heavy: 1,
 						capital: 2
 					};
-					if( isFromTemplate ) {
-						if(weight == templateWeight ) {
+					if ( isFromTemplate ) {
+						if (weight == templateWeight ) {
 							result = false;
 						}
 					}
@@ -1607,7 +1628,7 @@ function Ship(json) {
 			setWeaponLinking: function(position) {
 				var mounts = this.params.weaponMounts[position];
 				for(i in mounts) {
-					if(
+					if (
 						mounts[i].weaponId !== "none" &&
 						!this.isWeaponMountLinked(position, i - 1) &&
 						!this.isWeaponMountLinked(position, parseInt(i) + 1) &&
@@ -1625,7 +1646,7 @@ function Ship(json) {
             */
 			isWeaponMountLinked: function(position, i) {
 				var result = false;
-				if(
+				if (
 					isset( this.params.weaponMounts[position][i] ) &&
 					this.params.weaponMounts[position][i].isLinked === true
 				) {
@@ -1640,7 +1661,7 @@ function Ship(json) {
 				var result = false;
 				var nextI = parseInt(i) + 1;
 				var mounts = this.params.weaponMounts[position];
-				if(
+				if (
 					isset( this.params.weaponMounts[position][nextI] ) &&
 					mounts[i].weaponId == mounts[nextI].weaponId
 				) {
@@ -1652,11 +1673,11 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			adjustPowerCoreIds: function(countHousings) {
-				if( this.params.powerCoreIds.length < countHousings ) {
+				if ( this.params.powerCoreIds.length < countHousings ) {
 					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
 						this.params.powerCoreIds[i] = "none";
 					}
-				} else if( this.params.powerCoreIds.length > countHousings ) {
+				} else if ( this.params.powerCoreIds.length > countHousings ) {
 					var splicePos = countHousings;
 					var spliceLen = this.params.powerCoreIds.length - countHousings;
 					this.params.powerCoreIds.splice(splicePos, spliceLen);
@@ -1708,7 +1729,7 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
 	this.testThatPositionIsValid = function() {
-		if(["forward", "aft", "port", "starboard", "turret"].indexOf(this.position) == -1) {
+		if (["forward", "aft", "port", "starboard", "turret"].indexOf(this.position) == -1) {
 			throw "Invalid position in WeaponMount class: " + this.position;
 		}
 	}
@@ -1717,7 +1738,7 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
 	this.testThatWeightIsValid = function(weight) {
-		if(["light", "heavy", "capital"].indexOf(weight) == -1) {
+		if (["light", "heavy", "capital"].indexOf(weight) == -1) {
 			throw "Invalid weight in WeaponMount class: " + weight;
 		}
 	}
@@ -1731,7 +1752,7 @@ function WeaponMount(params) {
 			heavy: 1,
 			capital: 2
 		}
-		if( weightVal[this.weight] < weightVal[this.templateWeight] ) {
+		if ( weightVal[this.weight] < weightVal[this.templateWeight] ) {
 			throw "Original weight must be equal to or lower than current weight";
 		}
 	}
@@ -1740,7 +1761,7 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
 	this.testThatTurretIsNotCapital = function() {
-		if( this.position == "turret" && (this.weight == "capital" || this.templateWeight == "capital") ) {
+		if ( this.position == "turret" && (this.weight == "capital" || this.templateWeight == "capital") ) {
 			throw "Turrets cannot have weight 'capital' in WeaponMount";
 		}
 	}
@@ -1750,13 +1771,13 @@ function WeaponMount(params) {
     */
 	this.getUpgradeCost = function() {
 		var upgradeCost = 0;
-		if( this.weight !== this.templateWeight ) {
+		if ( this.weight !== this.templateWeight ) {
 			// if position is forward, aft, port or starboard arc
-			if( WEAPON_ARCS.indexOf(this.position) !== -1 ) {
+			if ( WEAPON_ARCS.indexOf(this.position) !== -1 ) {
 				// if templateWeight is light and weight is heavy
-				if(this.templateWeight == "light" && this.weight == "heavy") {
+				if (this.templateWeight == "light" && this.weight == "heavy") {
 					upgradeCost = 4;
-				} else if( this.templateWeight == "heavy" && this.weight == "capital" ) {
+				} else if ( this.templateWeight == "heavy" && this.weight == "capital" ) {
 				// if templateWeight is heavy and weight is capital
 					upgradeCost = 5;
 				} else {
@@ -1776,8 +1797,8 @@ function WeaponMount(params) {
     */
 	this.getNewMountCost = function() {
 		var newMountCost = 0;
-		if(!this.isFromTemplate) {
-			if(this.position == "turret") {
+		if (!this.isFromTemplate) {
+			if (this.position == "turret") {
 				newMountCost = 5;
 			} else {
 				newMountCost = 3;
@@ -1808,7 +1829,7 @@ function WeaponMount(params) {
 	this.weaponId = params.weaponId;
 	this.weight = params.weight;
 	this.isFromTemplate = params.isFromTemplate;
-	if( this.isFromTemplate ) {
+	if ( this.isFromTemplate ) {
 		this.templateWeight = params.templateWeight;
 	} else {
 		this.templateWeight = "light";
