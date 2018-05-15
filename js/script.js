@@ -969,7 +969,6 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
             shieldsByPositionTotal: function() {
-                console.log('shieldsByPositionTotal');
                 var total = 0;
                 for(position in this.params.shieldsByPosition) {
                     total += parseInt(this.params.shieldsByPosition[position]);
