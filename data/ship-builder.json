@@ -262,7 +262,7 @@
 						"light"
 					]
 				},
-                "weaponInfo": "On a fighter, one of the light weapon mounts must be a tracking weapon",
+                "weaponInfo": "On a fighter, one of the forward arc light weapon mounts must be a tracking weapon",
 				"expansionBays": 0,
 				"minCrew": 1,
 				"maxCrew": 2,
