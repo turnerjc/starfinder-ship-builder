@@ -8108,7 +8108,7 @@
 					"isSetDefaultCrewSkillValues": 0,
 					"isUseStrictRules": 0,
 					"shipName": "CompEnt AEV",
-					"shipConcept": "The anacite pilot of a specific Autonomous Exploration Vehicle is often created and programmed to fit inside of and operateEtEat vessel. Once its mission has been completed, its consciousness is usually transferred to another shell.",
+					"shipConcept": "The anacite pilot of a specific Autonomous Exploration Vehicle is often created and programmed to fit inside of and operate that vessel. Once its mission has been completed, its consciousness is usually transferred to another shell.",
 					"tierId": "1_3",
 					"frameId": "racer",
 					"powerCoreIds": [

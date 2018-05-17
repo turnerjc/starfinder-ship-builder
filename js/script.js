@@ -1511,7 +1511,7 @@ function Ship(json) {
                     if (isset(this.params[key])) continue;
 
                     console.log("Missing param, " + key + ", added to ship");
-                    this.params[key] = cloneObject(this.paramsReset[key]);
+                    this.$set(this.params, key, cloneObject(this.paramsReset[key]));
 
                     // shields by position
                     if (key == 'shieldsByPosition') {
