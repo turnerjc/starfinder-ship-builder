@@ -8,6 +8,14 @@ For development, work on the base folder.
 
 When ready to deploy, run Grunt. Minified files will appear in the `app` folder. Just copy this folder to the server.
 
+To use Vue.js browser extension (dev mode) add this script towards end of `index.php`:
+
+    <script src="https://unpkg.com/vue"></script>
+
+For production, use:
+
+    <script src="vendor/vue/vue.min.js"></script>
+
 ### Dependencies: Sass
 
 Run `sass` to compile CSS. Sass is not included in Grunt watch; I didn't think styles would change that much. May need to create `/css` folder manually. To install sass, make sure Ruby is installed, then:
@@ -45,7 +53,7 @@ Expected file structure of /app
     .htaccess
     index.html
     
-### Data entry
+### Data
 
 A few things to note:
 

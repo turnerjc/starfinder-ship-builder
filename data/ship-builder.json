@@ -262,6 +262,7 @@
 						"light"
 					]
 				},
+                "weaponInfo": "On a fighter, one of the light weapon mounts must be a tracking weapon",
 				"expansionBays": 0,
 				"minCrew": 1,
 				"maxCrew": 2,
@@ -510,6 +511,7 @@
 					]
 				},
 				"expansionBays": 10,
+                "expansionBayInfo": "On a carrier, one of the expansion bays must be a hangar bay",
 				"minCrew": 75,
 				"maxCrew": 200,
 				"bpCost": 120

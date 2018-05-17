@@ -621,6 +621,7 @@
 				<header class="box__header">
 					<h3 id="expansionBays">Expansion Bays</h3>
 				</header>
+    			<p v-if="frame.expansionBayInfo">FOR INFORMATION: {{ frame.expansionBayInfo }}.</p>
 				<div class="cost__item">
 					<span class="cost__name">Slots used</span>
 					<span class="cost__values">
@@ -962,6 +963,9 @@
 			-->
 			
 			<h3 id="weapons">Weapons</h3>
+			
+			<p v-if="frame.weaponInfo">FOR INFORMATION: {{ frame.weaponInfo }}.</p>
+			
 			<template v-for="(weaponList, position) in weaponMounts">
 			
 				<header class="box__header">
@@ -1381,10 +1385,10 @@
 		
 	</div><!-- .wrapper -->
 	
-	<script src="https://unpkg.com/vue"></script>
 	<!--
-	<script src="vendor/vue/vue.min.js"></script>
+	<script src="https://unpkg.com/vue"></script>
 	-->
+	<script src="vendor/vue/vue.min.js"></script>
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
 	<script src="js/script.js?v=20180515a"></script>
 </body>
