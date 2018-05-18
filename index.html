@@ -8,9 +8,6 @@
 	<title>Starfinder RPG Ship Builder | James Turner</title>
 	
 	<!-- Google Fonts -->
-	<!--
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700" rel="stylesheet">
-	-->
 	<link href="https://fonts.googleapis.com/css?family=Saira:400,400italic,700" rel="stylesheet">
 		
 	<!-- Stylesheet -->
@@ -219,7 +216,7 @@
 						<label for="sampleShipSelect">Select a sample ship</label>
 						<select class="form-control" id="sampleShipSelect" v-on:change="inputSampleShipParams">
 							<option value="none">None</option>
-							<option v-for="option in selectOptions.sampleShip" :value="option.id">{{ option.name }} (Tier {{ option.tier }})</option>
+							<option v-for="option in selectOptions.sampleShip" :value="option.id">{{ option.name }} (Tier {{ option.tier }} {{ getItemById('frame', option.params.frameId).name }})</option>
 						</select>
 					</div>
 				</div>
@@ -235,6 +232,7 @@
 							cols="30" rows="5"></textarea>
 					</div>
 					<div class="form-group">
+					    <p>Or start building your ship from scratch</p>
 						<button class="btn btn-lg btn-primary" v-on:click="clearAll">Clear All</button>
 					</div>
 				</div>
@@ -1385,10 +1383,10 @@
 		
 	</div><!-- .wrapper -->
 	
-	<!--
 	<script src="https://unpkg.com/vue"></script>
-	-->
+	<!--
 	<script src="vendor/vue/vue.min.js"></script>
+	-->
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
 	<script src="js/script.js?v=20180517"></script>
 </body>
