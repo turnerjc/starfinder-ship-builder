@@ -682,8 +682,18 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			frame: function() {
-				var frame = this.getItemById("frame", this.params.frameId);
-				return frame;
+                if(this.params.frameId == "custom") {
+                    // custom frame
+                    if (!this.params.customFrame)
+                        this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", "custom")) );
+                    return this.params.customFrame;
+                    
+                } else {
+                    // standard frame
+                    // if(this.params.customFrame) this.$delete(this.params, 'customFrame');
+                    var frame = this.getItemById("frame", this.params.frameId);
+                    return frame;
+                }
 			},
             /*
             |------------------------------------------------------------------------------
@@ -937,6 +947,7 @@ function Ship(json) {
 					"sensors",
 					"shields",
 					"shipWeapon",
+                    "sizeCategory",
 					"role",
 					"skill",
 					"sampleShip"
@@ -1113,27 +1124,27 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			totalBpCost: function() {
-				return this.frame.bpCost +
-					this.powerCoresBpCost +
-					this.thrusters.bpCost +
-					this.armourBpCost +
-					this.computer.bpCost +
-					this.crewQuarters.bpCost +
-					this.defensiveCountermeasures.bpCost +
-					this.driftEngineBpCost +
-					this.expansionBaysTotalBpCost +
-					this.antiHackingSystems.bpCost + 
-					this.antiPersonnelWeaponBpCost +
-					this.biometricLocksBpCost +
-					this.computerCountermeasuresBpCost +
-					this.selfDestructSystemBpCost +
-					this.dataNetBpCost +
-					this.hiveJoiningBpCost +
-					this.sensors.bpCost +
-					this.shields.bpCost +
-					this.weaponsTotalCosts.weaponsBp +
-					this.weaponsTotalCosts.weaponMountsBp +
-					this.weaponsTotalCosts.weaponLinksBp
+				return parseInt(this.frame.bpCost) +
+					parseInt(this.powerCoresBpCost) +
+					parseInt(this.thrusters.bpCost) +
+					parseInt(this.armourBpCost) +
+					parseInt(this.computer.bpCost) +
+					parseInt(this.crewQuarters.bpCost) +
+					parseInt(this.defensiveCountermeasures.bpCost) +
+					parseInt(this.driftEngineBpCost) +
+					parseInt(this.expansionBaysTotalBpCost) +
+					parseInt(this.antiHackingSystems.bpCost )+ 
+					parseInt(this.antiPersonnelWeaponBpCost) +
+					parseInt(this.biometricLocksBpCost) +
+					parseInt(this.computerCountermeasuresBpCost) +
+					parseInt(this.selfDestructSystemBpCost) +
+					parseInt(this.dataNetBpCost) +
+					parseInt(this.hiveJoiningBpCost) +
+					parseInt(this.sensors.bpCost) +
+					parseInt(this.shields.bpCost) +
+					parseInt(this.weaponsTotalCosts.weaponsBp) +
+					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
+					parseInt(this.weaponsTotalCosts.weaponLinksBp)
 				;
 			},
             /*
@@ -1441,6 +1452,24 @@ function Ship(json) {
             */
 			getFrameMountWeaponWeight: function(position, index) {
 				return this.frame.mounts[position][index];
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			addCustomFrameMount: function(position) {
+                if (!isset(this.params.customFrame.mounts[position]))
+                    this.$set(this.params.customFrame.mounts, position, []);
+				this.params.customFrame.mounts[position].push('light');
+				this.setWeaponMounts( this.frame.mounts );
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			removeCustomFrameMount: function(position, index) {
+				this.params.customFrame.mounts[position].splice(index, 1);
+                if (!this.params.customFrame.mounts[position].length)
+                    this.$delete(this.params.customFrame.mounts, position);
+				this.setWeaponMounts( this.frame.mounts );
 			},
             /*
             |------------------------------------------------------------------------------

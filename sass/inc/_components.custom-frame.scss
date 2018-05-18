@@ -1,0 +1,14 @@
+.form-group--custom-frame-mount {
+
+    .form-control {
+        display: inline-block;
+        width: calc(100% - 3em);
+    }
+
+}
+
+.custom-weapon-mount-position {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}

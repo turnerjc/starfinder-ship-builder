@@ -203,6 +203,32 @@
 		],
 		"data": [
 			{
+				"id": "custom",
+				"name": "Custom",
+				"size": "Small",
+				"maneuverability": "good",
+				"hp": 40,
+				"hpIncrement": 10,
+				"dt": "n/a",
+				"ct": 8,
+				"mounts": {
+					"forward": [
+						"light",
+						"light"
+					],
+					"port": [
+						"light"
+					],
+					"starboard": [
+						"light"
+					]
+				},
+				"expansionBays": 3,
+				"minCrew": 1,
+				"maxCrew": 6,
+				"bpCost": 10
+			},
+			{
 				"id": "racer",
 				"name": "Racer",
 				"size": "Tiny",
@@ -4904,6 +4930,7 @@
 		"data": [
 			{
 				"id": "Tiny",
+				"name": "Tiny",
 				"multiplier": 1,
 				"acAndTlModifier": 2,
 				"maxMounts": 2,
@@ -4912,6 +4939,7 @@
 			},
 			{
 				"id": "Small",
+				"name": "Small",
 				"multiplier": 2,
 				"acAndTlModifier": 1,
 				"maxMounts": 2,
@@ -4920,6 +4948,7 @@
 			},
 			{
 				"id": "Medium",
+				"name": "Medium",
 				"multiplier": 3,
 				"acAndTlModifier": 0,
 				"maxMounts": 3,
@@ -4928,6 +4957,7 @@
 			},
 			{
 				"id": "Large",
+				"name": "Large",
 				"multiplier": 4,
 				"acAndTlModifier": -1,
 				"maxMounts": 3,
@@ -4936,6 +4966,7 @@
 			},
 			{
 				"id": "Huge",
+				"name": "Huge",
 				"multiplier": 5,
 				"acAndTlModifier": -2,
 				"maxMounts": 4,
@@ -4944,6 +4975,7 @@
 			},
 			{
 				"id": "Gargantuan",
+				"name": "Gargantuan",
 				"multiplier": 6,
 				"acAndTlModifier": -4,
 				"maxMounts": 4,
@@ -4952,6 +4984,7 @@
 			},
 			{
 				"id": "Colossal",
+				"name": "Colossal",
 				"multiplier": 7,
 				"acAndTlModifier": -8,
 				"maxMounts": 4,
