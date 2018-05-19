@@ -351,7 +351,8 @@ function Ship(json) {
 				} // crewSkills
 			},
 			params: {},
-			json: ""
+			json: "",
+            customFrameBaseId: "light-freighter"
 		},
         /*
         |----------------------------------------------------------------------------------
@@ -684,8 +685,8 @@ function Ship(json) {
 			frame: function() {
                 if(this.params.frameId == "custom") {
                     // custom frame
-                    if (!this.params.customFrame)
-                        this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", "custom")) );
+                    // if (!this.params.customFrame)
+                        this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", this.customFrameBaseId)) );
                     return this.params.customFrame;
                     
                 } else {
