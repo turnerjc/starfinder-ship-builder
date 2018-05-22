@@ -595,6 +595,14 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            customFrameSize: function() {
+            	if(!isset(this.params.customFrame)) return {};
+
+            	return this.getItemById('sizeCategory', this.params.customFrame.size);
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			dataNetBpCost: function() {
 				return (this.params.hasDataNet ? 5 : 0);
 			},
@@ -685,8 +693,8 @@ function Ship(json) {
 			frame: function() {
                 if(this.params.frameId == "custom") {
                     // custom frame
-                    // if (!this.params.customFrame)
-                        this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", this.customFrameBaseId)) );
+                    if (!this.params.customFrame)
+                        this.setCustomFrame();
                     return this.params.customFrame;
                     
                 } else {
@@ -745,7 +753,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			hp: function() {
-				return this.frame.hp + (this.tier.hpIncrease * this.frame.hpIncrement);
+				return parseInt(this.frame.hp) + (parseInt(this.tier.hpIncrease) * this.frame.hpIncrement);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1313,6 +1321,19 @@ function Ship(json) {
 				}
 				return item;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            resetCustomFrame: function() {
+            	this.setCustomFrame();
+            	this.updateFrame();
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            setCustomFrame: function() {
+            	this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", this.customFrameBaseId)) );
+            },
             /*
             |------------------------------------------------------------------------------
             */
