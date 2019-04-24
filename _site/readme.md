@@ -4,7 +4,7 @@ A single-page web app for building starships for the Starfinder RPG, by Paizo In
 
 ## Production and Development Modes
 
-For development, work on the base folder. Run `grunt watch` to compile in dev mode. Run `grunt` to compile once for production deployment.
+For development, work on the base folder.
 
 When ready to deploy, run Grunt. Minified files will appear in the `app` folder. Just copy this folder to the server.
 

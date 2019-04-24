@@ -34,9 +34,9 @@
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
 	
 	<!-- Google Analytics -->
-	<!-- <script>
+	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-47769832-1', 'auto');ga('send', 'pageview');
-	</script> -->
+	</script>
 </head>
 
 <body>
@@ -194,31 +194,16 @@
 				
 			</header>
 
-			<!--
-			|------------------------------------------------------------
-			|	RECENT UPDATES
-			|------------------------------------------------------------
-			-->
-			<div class="box">
-				<p><strong>Announcement:</strong> Hi there, I&apos;m considering running a design challenge for building a Starfinder ship, maybe make it a monthly thing. Anyone interested? If so, let me know via <a href="https://twitter.com/james_c_turner">Twitter</a> or <a href="http://www.jamesturneronline.net">Mail</a>. If I get at least a few responses, I&apos;ll set something up for May. Happy gaming, James (<time datetime="2019-04-24">24/04/2019</time>)</p>
-			</div>
+            <div class="app-message">
+                <strong>Recent updates 2018/05/19</strong>: Custom frames; <strong>2018/05/12</strong>: New ships and rules from <em>Pact Worlds</em>
+            </div>
 
-			<!--
-			|------------------------------------------------------------
-			|	PATREON
-			|------------------------------------------------------------
-			-->
-			
-			<div class="box">
-				<p>Huge thanks to Patreon supporters: Anish Hermon, Shaun Wolf, Toby Dillon.</p>
-
-	            <div class="app-message" style="text-align: left;">
-	            	Want to support this site?
-	            	<a href="https://www.patreon.com/user?u=15502682" target="_blank">
-	            		<img height="auto" width="150" style="margin-bottom: -12px;" src="img/become_a_patron_button.png" alt="Become a patron">
-	            	</a>
-	            </div>
-			</div>
+            <div class="app-message" style="text-align: left;">
+            	Want to support this site?
+            	<a href="https://www.patreon.com/user?u=15502682" target="_blank">
+            		<img height="auto" width="150" style="margin-bottom: -12px;" src="img/become_a_patron_button.png" alt="Become a patron">
+            	</a>
+            </div>
 
 
 			
@@ -228,9 +213,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				INPUT
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -274,9 +259,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				CONCEPT
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -315,9 +300,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				TIER
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -347,9 +332,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				FRAME
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -387,9 +372,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				CUSTOM FRAME
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box" v-if="this.params.frameId == 'custom'">
@@ -591,9 +576,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				POWER CORE
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -665,9 +650,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				OTHER SYSTEMS / ARMOUR
-			|------------------------------------------------------------
+				
 			-->
 			
 			<h2 id="otherSystems">Step 5: Other Systems</h2>
@@ -701,9 +686,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				COMPUTER
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -737,9 +722,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				CREW QUARTERS
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -771,9 +756,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				DEFENSIVE COUNTERMEASURES
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -805,9 +790,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				DRIFT ENGINE
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -841,9 +826,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				EXPANSION BAYS
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box" v-if="frame.expansionBays > 0">
@@ -892,9 +877,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				SECURITY
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -1031,9 +1016,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				SENSORS
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
@@ -1065,9 +1050,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			
 				SHIELDS
-			|------------------------------------------------------------
+				
 			-->
 			
 			<div class="box">
