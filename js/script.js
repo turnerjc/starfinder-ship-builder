@@ -157,13 +157,18 @@ function isEven(num) {
 | CLIPBOARD.JS
 |------------------------------------------------------------------------------------------
 */
-var clipboardJson = new Clipboard('#copyJsonBtn', {
-	text: function( trigger ) {
-		var el = document.getElementById('outputJson');
-		addTimedClass( el, 'js-anim-border', 500 );
-		return el.innerHTML;
-	}
-});
+var clipboardJson = {};
+
+// if (typeof window.Clipboard == 'function') {
+if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') {
+	clipboardJson = new Clipboard('#copyJsonBtn', {
+		text: function( trigger ) {
+			var el = document.getElementById('outputJson');
+			addTimedClass( el, 'js-anim-border', 500 );
+			return el.innerHTML;
+		}
+	});
+}
 
 /*
 |------------------------------------------------------------------------------------------
@@ -183,25 +188,9 @@ function Ship(json) {
 		data: {
 			data: json,
 			paramsReset: {
-				version:"1.0.1",
-				hasCrew:1,
-				isSetDefaultCrewSkillValues:1,
-				isUseStrictRules:1,
-				shipName:"",
-				shipConcept:"",
-				tierId:"1",
-				frameId:"light-freighter",
-				powerCoreIds:["none"],
-				thrustersId:"none",
-				armourId:"none",
-				computerId:"basic-computer",
-				crewQuartersId:"common",
-				defensiveCountermeasuresId:"none",
-				driftEngineId:"none",
-				expansionBayIds:["none","none","none"],
 				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
-				hasBiometricLocks:0,
+				armourId:"none",
 				computerCountermeasures: {
 					alarm: false,
 					fakeShell: false,
@@ -211,59 +200,8 @@ function Ship(json) {
 					shockGridId: "none",
 					wipe: false
 				},
-				hasSelfDestructSystem:0,
-				hasDataNet:0,
-				hasHiveJoining:0,
-				sensorsId:"none",
-				shieldsId:"none",
-                shieldsByPosition: {
-                    forward: 0,
-                    aft: 0,
-                    port: 0,
-                    starboard: 0
-                },
-				weaponMounts: {
-					forward: [
-						{
-							weaponId: "none",
-							weight: "light",
-							templateWeight: "light",
-							isFromTemplate: true,
-							canBeLinked: false,
-							isLinked: false
-						},
-						{
-							weaponId: "none",
-							weight: "light",
-							templateWeight: "light",
-							isFromTemplate: true,
-							canBeLinked: false,
-							isLinked: false
-						}
-					],
-					aft: [],
-					port: [
-						{
-							weaponId: "none",
-							weight: "light",
-							templateWeight: "light",
-							isFromTemplate: true,
-							canBeLinked: false,
-							isLinked: false
-						}
-					],
-					starboard: [
-						{
-							weaponId: "none",
-							weight: "light",
-							templateWeight: "light",
-							isFromTemplate: true,
-							canBeLinked: false,
-							isLinked: false
-						}
-					],
-					turret: []
-				},
+				computerId:"basic-computer",
+				crewQuartersId:"common",
 				crewSkills: {
 					captain: {
 						countOfficers: 0,
@@ -348,11 +286,79 @@ function Ship(json) {
 							}
 						}
 					} // scienceOfficer
-				} // crewSkills
-			},
+				}, // crewSkills
+	            customFrameBaseId: "light-freighter",
+	            customComponents: [],
+				defensiveCountermeasuresId:"none",
+				driftEngineId:"none",
+				expansionBayIds:["none","none","none"],
+				frameId:"light-freighter",
+				hasBiometricLocks:0,
+				hasCrew:1,
+				hasDataNet:0,
+				hasHiveJoining:0,
+				hasSelfDestructSystem:0,
+				isSetDefaultCrewSkillValues:1,
+				isUseStrictRules:1,
+				powerCoreIds:["none"],
+				sensorsId:"none",
+                shieldsByPosition: {
+                    forward: 0,
+                    aft: 0,
+                    port: 0,
+                    starboard: 0
+                },
+				shieldsId:"none",
+				shipConcept:"",
+				shipName:"",
+				thrustersId:"none",
+				tierId:"1",
+				version:"1.0.1",
+				weaponMounts: {
+					forward: [
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
+						},
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
+						}
+					],
+					aft: [],
+					port: [
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
+						}
+					],
+					starboard: [
+						{
+							weaponId: "none",
+							weight: "light",
+							templateWeight: "light",
+							isFromTemplate: true,
+							canBeLinked: false,
+							isLinked: false
+						}
+					],
+					turret: []
+				},
+			}, // paramsReset
 			params: {},
 			json: "",
-            customFrameBaseId: "light-freighter"
 		},
         /*
         |----------------------------------------------------------------------------------
@@ -595,6 +601,50 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            customComponentBpTotal: function() {
+            	if(!isset(this.params.customComponents)) return 0;
+
+            	var total = 0;
+            	this.params.customComponents.forEach(function(customComponent) {
+            		total += parseInt(customComponent.bpCost);
+            	});
+
+            	return total;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            customComponentPcuTotal: function() {
+            	if(!isset(this.params.customComponents)) return 0;
+
+            	var total = { essential: 0, nonEssential: 0 };
+            	this.params.customComponents.forEach(function(customComponent) {
+            		if (customComponent.isEssential) {
+            			total.essential += parseInt(customComponent.pcuCost);
+            		} else {
+            			total.nonEssential += parseInt(customComponent.pcuCost);
+            		}
+            	});
+
+            	return total;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			customComponentsDescription: function() {
+				if (this.params.customComponents.length == 0) return "None";
+
+				var components = [];
+
+				this.params.customComponents.forEach(function(component) {
+					components.push(component.name + (component.notes ? (" (" + component.notes + ")") : ""));
+				});
+
+				return components.join("; ");
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
             customFrameSize: function() {
             	if(!isset(this.params.customFrame)) return {};
 
@@ -604,13 +654,13 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			dataNetBpCost: function() {
-				return (this.params.hasDataNet ? 5 : 0);
+				return (this.params.hasDataNet ? 3 : 0);
 			},
             /*
             |------------------------------------------------------------------------------
             */
 			dataNetPcuCost: function() {
-				return (this.params.hasDataNet ? 3 : 0);
+				return (this.params.hasDataNet ? 5 : 0);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1123,10 +1173,12 @@ function Ship(json) {
 					essential: this.thrusters.pcuCost +
 						this.defensiveCountermeasures.pcuCost +
 						this.shields.pcuCost +
-						this.weaponsTotalCosts.weaponsPcu,
+						this.weaponsTotalCosts.weaponsPcu +
+						parseInt(this.customComponentPcuTotal.essential),
 					nonEssential: this.computer.pcuCost +
 						this.expansionBaysTotalPcuCost +
-                        this.dataNetPcuCost
+                        this.dataNetPcuCost +
+                        parseInt(this.customComponentPcuTotal.nonEssential),
 				};
 			},
             /*
@@ -1153,7 +1205,8 @@ function Ship(json) {
 					parseInt(this.shields.bpCost) +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
-					parseInt(this.weaponsTotalCosts.weaponLinksBp)
+					parseInt(this.weaponsTotalCosts.weaponLinksBp) +
+					parseInt(this.customComponentBpTotal)
 				;
 			},
             /*
@@ -1257,51 +1310,202 @@ function Ship(json) {
 		},
         /*
         |----------------------------------------------------------------------------------
+        |  METHODS
+        |----------------------------------------------------------------------------------
         */
 		methods: {
             /*
             |------------------------------------------------------------------------------
             */
-			getSelectOptionsFor: function(prop) {
-				this.testThatPropExists(prop);
-				this.testThatPropIsArray(prop);
-				for(item in this.data[prop].data) {
-					this.testThatItemHasId(prop, item);
-					this.testThatItemHasName(prop, item);
-				}
-				return this.data[prop].data;
+			addCustomFrameMount: function(position) {
+                if (!isset(this.params.customFrame.mounts[position]))
+                    this.$set(this.params.customFrame.mounts, position, []);
+				this.params.customFrame.mounts[position].push('light');
+				this.setWeaponMounts( this.frame.mounts );
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			testThatPropExists: function(prop) {
-				if ( !isset(this.data[prop]) ) {
-					throw "Property " + prop + " does not exist";
-				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			testThatPropIsArray: function(prop) {
-				if (typeof this.data[prop].data !== "object") {
-					throw "Property " + prop + " is not an array";
+			adjustPowerCoreIds: function(countHousings) {
+				if ( this.params.powerCoreIds.length < countHousings ) {
+					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
+						this.params.powerCoreIds[i] = "none";
+					}
+				} else if ( this.params.powerCoreIds.length > countHousings ) {
+					var splicePos = countHousings;
+					var spliceLen = this.params.powerCoreIds.length - countHousings;
+					this.params.powerCoreIds.splice(splicePos, spliceLen);
 				}
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			testThatItemHasId: function(prop, item) {
-				if ( !isset(this.data[prop].data[item].id) ) {
-					throw "Property " + prop + "[" + item + "] does not have an id";
+			canWeaponMountBeCreated: function(position) {
+				var result = true;
+				var countMountsInPosition = this.params.weaponMounts[position].length;
+				if (countMountsInPosition >= this.sizeCategory.maxMounts) {
+					result = false;
+				}
+				return result;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			canWeaponMountBeDowngraded: function(weight, isFromTemplate, templateWeight) {
+				var result = true;
+				if ( weight == "light" ) {
+					result = false;
+				} else {
+					var weights = {
+						heavy: 1,
+						capital: 2
+					};
+					if ( isFromTemplate ) {
+						if (weight == templateWeight ) {
+							result = false;
+						}
+					}
+				}
+				return result;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			canWeaponMountBeUpgraded: function(position, weight) {
+				var result = true;
+				var weights = {light: 0, heavy: 1, capital: 2};
+				// check weight
+				// Heavy weapon mounts can only appear on a Medium or larger ship,
+				// capital weapon mounts can only appear on a Huge or larger ship.
+				if (weights[weight] >= weights[this.sizeCategory.maxMountWeight]) {
+					result = false;
+				} else {
+					if (position == "turret") {
+						if ( weight !== "light" ) {
+							result = false; 
+						}
+					} else {
+						if ( weight == "capital") {
+							result = false;
+						}
+					}
+				}
+				return result;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			clearAll: function() {
+				this.params = cloneObject(this.paramsReset);
+				this.json = "";
+				document.getElementById("sampleShipSelect").value = "none";
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			clearWeaponMounts: function() {
+				for(position in this.params.weaponMounts) {
+					// var mountList = this.params.weaponMounts[position];
+					this.params.weaponMounts[position].splice(0, this.params.weaponMounts[position].length); // start, deleteCount
+				}
+				// console.log(this.params.weaponMounts);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			convertJsonInput: function() {
+				var params = JSON.parse(this.json);
+				this.params = params;
+				this.fixMissingParamsValues();
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			createCustomComponent: function() {
+				// initialise on older builds
+				if (!isset(this.params.customComponents)) {
+                    this.$set(this.params, "customComponents", []);
+				}
+
+				this.params.customComponents.push({
+					name: "",
+					notes: "",
+					isEssential: false,
+					pcuCost: 0,
+					bpCost: 0,
+				});
+
+                return;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			createWeaponMount: function(position) {
+				var newMount = {
+					weaponId: "none",
+					weight: "light",
+					isFromTemplate: false,
+					canBeLinked: false,
+					isLinked: false
+				};
+				this.params.weaponMounts[position].push(newMount);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			destroyWeaponMount: function(position, i) {
+				this.params.weaponMounts[position].splice(i, 1); // start, deleteCount
+				this.setWeaponLinking(position);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			doesNextMountHaveSameWeaponId: function(position, i) {
+				var result = false;
+				var nextI = parseInt(i) + 1;
+				var mounts = this.params.weaponMounts[position];
+				if (
+					isset( this.params.weaponMounts[position][nextI] ) &&
+					mounts[i].weaponId == mounts[nextI].weaponId
+				) {
+					result = true;
+				}
+				return result;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			downgradeWeaponMount: function(position, i) {
+				var weaponMount = this.params.weaponMounts[position][i];
+				if (weaponMount.weight == "capital") {
+					weaponMount.weight = "heavy";
+				} else {
+					weaponMount.weight = "light";
+				}
+				weaponMount.weaponId = "none";
+				this.setWeaponLinking(position);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			fixMissingParamsValues: function() {
+				for(key in this.paramsReset){
+                    if (isset(this.params[key])) continue;
+
+                    console.log("Missing param, " + key + ", added to ship");
+                    this.$set(this.params, key, cloneObject(this.paramsReset[key]));
+
+                    // shields by position
+                    if (key == 'shieldsByPosition') {
+                        this.setDefaultShieldsByPosition();
+                    }
 				}
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			testThatItemHasName: function(prop, item) {
-				if ( !isset(this.data[prop].data[item].name) ) {
-					throw "Property " + prop + "[" + item + "] does not have a name";
-				}
+			getFrameMountWeaponWeight: function(position, index) {
+				return this.frame.mounts[position][index];
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1324,65 +1528,21 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-            resetCustomFrame: function() {
-            	this.setCustomFrame();
-            	this.updateFrame();
-            },
-            /*
-            |------------------------------------------------------------------------------
-            */
-            setCustomFrame: function() {
-            	this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", this.customFrameBaseId)) );
-            },
-            /*
-            |------------------------------------------------------------------------------
-            */
-			updateFrame: function() {
-				this.syncExpansionBays( this.frame.expansionBays );
-				this.setCrewQuarters( this.frame.size );
-				this.setWeaponMounts( this.frame.mounts );
+			getPrefixedModifier: function(val) {
+				var prefix = (val >= 0) ? "+" : "";
+				return prefix + val;
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			syncExpansionBays: function( targetCountBays ) {
-				this.popExcessExpansionBays( targetCountBays );
-				this.maybeCreateExpansionBays(  targetCountBays );
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			popExcessExpansionBays: function( targetCountBays ) {
-				var countBays = this.params.expansionBayIds.length;
-				if ( countBays > targetCountBays ) {
-					for(var i = 0; i < countBays - targetCountBays; i++) {
-						this.params.expansionBayIds.pop();
-					}
+			getSelectOptionsFor: function(prop) {
+				this.testThatPropExists(prop);
+				this.testThatPropIsArray(prop);
+				for(item in this.data[prop].data) {
+					this.testThatItemHasId(prop, item);
+					this.testThatItemHasName(prop, item);
 				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			maybeCreateExpansionBays: function( targetCountBays ) {
-				for(var i = 0; i < targetCountBays; i++) {
-					if ( !isset(this.params.expansionBayIds[i]) ) {
-						this.params.expansionBayIds[i] = "none";
-					}
-				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			setCrewQuarters: function( frameSize ) {
-				if ( frameSize == "Tiny" ) {
-					if ( this.params.crewQuartersId !== "none" ) {
-						this.params.crewQuartersId = "none";
-					}
-				} else {
-					if ( this.params.crewQuartersId == "none" ) {
-						this.params.crewQuartersId = "common";
-					}
-				}
+				return this.data[prop].data;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1407,6 +1567,126 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+			initParams: function() {
+				if (window.JTOStarshipSheetModel === undefined) {
+					this.params = cloneObject(this.paramsReset);
+				} else {
+					this.params = cloneObject(window.JTOStarshipSheetModel);
+				}
+
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			inputSampleShipParams: function() {
+				var sampleShipSelect = document.getElementById("sampleShipSelect");
+				var sampleShipId = sampleShipSelect.value;
+				if (sampleShipId !== "none") {
+					var sampleShipObj = this.getItemById("sampleShip", sampleShipId);
+					var sampleShipParams = cloneObject(sampleShipObj.params);
+					this.params = sampleShipParams;
+					this.fixMissingParamsValues();
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			isWeaponMountLinked: function(position, i) {
+				var result = false;
+				if (
+					isset( this.params.weaponMounts[position][i] ) &&
+					this.params.weaponMounts[position][i].isLinked === true
+				) {
+					result = true;
+				}
+				return result;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			maybeCreateExpansionBays: function( targetCountBays ) {
+				for(var i = 0; i < targetCountBays; i++) {
+					if ( !isset(this.params.expansionBayIds[i]) ) {
+						this.params.expansionBayIds[i] = "none";
+					}
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			popExcessExpansionBays: function( targetCountBays ) {
+				var countBays = this.params.expansionBayIds.length;
+				if ( countBays > targetCountBays ) {
+					for(var i = 0; i < countBays - targetCountBays; i++) {
+						this.params.expansionBayIds.pop();
+					}
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			removeCustomComponent: function(index) {
+				this.params.customComponents.splice(index, 1);
+				return;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			removeCustomFrameMount: function(position, index) {
+				this.params.customFrame.mounts[position].splice(index, 1);
+                if (!this.params.customFrame.mounts[position].length)
+                    this.$delete(this.params.customFrame.mounts, position);
+				this.setWeaponMounts( this.frame.mounts );
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            resetCustomFrame: function() {
+            	this.setCustomFrame();
+            	this.updateFrame();
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			setCrewQuarters: function( frameSize ) {
+				if ( frameSize == "Tiny" ) {
+					if ( this.params.crewQuartersId !== "none" ) {
+						this.params.crewQuartersId = "none";
+					}
+				} else {
+					if ( this.params.crewQuartersId == "none" ) {
+						this.params.crewQuartersId = "common";
+					}
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            setCustomFrame: function() {
+            	this.$set(this.params, 'customFrame', cloneObject(this.getItemById("frame", this.params.customFrameBaseId)) );
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			setDefaultCrewSkillValues: function() {
+				if (this.params.isSetDefaultCrewSkillValues) {
+					var tier = this.getItemById("tier", this.params.tierId).value;
+					if (tier < 1) {
+						tier = 1;
+					}
+					for(role in this.params.crewSkills) {
+						for(skill in this.params.crewSkills[role].skills) {
+							var skillObj = this.params.crewSkills[role].skills[skill];
+							if ( skillObj.ranks > 0 ) {
+								skillObj.ranks = tier;
+							}
+						}
+					}
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
             setDefaultShieldsByPosition: function(shieldsId) {
 				var totalSp = this.shields.totalSp;
                 var positions = [];
@@ -1425,6 +1705,25 @@ function Ship(json) {
 					}
 				}
             },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			setWeaponLinking: function(position) {
+				var mounts = this.params.weaponMounts[position];
+				for(i in mounts) {
+					if (
+						mounts[i].weaponId !== "none" &&
+						!this.isWeaponMountLinked(position, i - 1) &&
+						!this.isWeaponMountLinked(position, parseInt(i) + 1) &&
+						this.doesNextMountHaveSameWeaponId(position, i)
+					) {
+						mounts[i].canBeLinked = true;
+					} else {
+						mounts[i].canBeLinked = false;
+						mounts[i].isLinked = false;
+					}
+				}
+			},
             /*
             |------------------------------------------------------------------------------
             */
@@ -1462,144 +1761,49 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-			clearWeaponMounts: function() {
-				for(position in this.params.weaponMounts) {
-					// var mountList = this.params.weaponMounts[position];
-					this.params.weaponMounts[position].splice(0, this.params.weaponMounts[position].length); // start, deleteCount
+			syncExpansionBays: function( targetCountBays ) {
+				this.popExcessExpansionBays( targetCountBays );
+				this.maybeCreateExpansionBays(  targetCountBays );
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			testThatItemHasId: function(prop, item) {
+				if ( !isset(this.data[prop].data[item].id) ) {
+					throw "Property " + prop + "[" + item + "] does not have an id";
 				}
-				// console.log(this.params.weaponMounts);
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			getFrameMountWeaponWeight: function(position, index) {
-				return this.frame.mounts[position][index];
+			testThatItemHasName: function(prop, item) {
+				if ( !isset(this.data[prop].data[item].name) ) {
+					throw "Property " + prop + "[" + item + "] does not have a name";
+				}
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			addCustomFrameMount: function(position) {
-                if (!isset(this.params.customFrame.mounts[position]))
-                    this.$set(this.params.customFrame.mounts, position, []);
-				this.params.customFrame.mounts[position].push('light');
+			testThatPropExists: function(prop) {
+				if ( !isset(this.data[prop]) ) {
+					throw "Property " + prop + " does not exist";
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			testThatPropIsArray: function(prop) {
+				if (typeof this.data[prop].data !== "object") {
+					throw "Property " + prop + " is not an array";
+				}
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			updateFrame: function() {
+				this.syncExpansionBays( this.frame.expansionBays );
+				this.setCrewQuarters( this.frame.size );
 				this.setWeaponMounts( this.frame.mounts );
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			removeCustomFrameMount: function(position, index) {
-				this.params.customFrame.mounts[position].splice(index, 1);
-                if (!this.params.customFrame.mounts[position].length)
-                    this.$delete(this.params.customFrame.mounts, position);
-				this.setWeaponMounts( this.frame.mounts );
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			setDefaultCrewSkillValues: function() {
-				if (this.params.isSetDefaultCrewSkillValues) {
-					var tier = this.getItemById("tier", this.params.tierId).value;
-					if (tier < 1) {
-						tier = 1;
-					}
-					for(role in this.params.crewSkills) {
-						for(skill in this.params.crewSkills[role].skills) {
-							var skillObj = this.params.crewSkills[role].skills[skill];
-							if ( skillObj.ranks > 0 ) {
-								skillObj.ranks = tier;
-							}
-						}
-					}
-				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			getPrefixedModifier: function(val) {
-				var prefix = (val >= 0) ? "+" : "";
-				return prefix + val;
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			convertJsonInput: function() {
-				var params = JSON.parse(this.json);
-				this.params = params;
-				this.fixMissingParamsValues();
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			clearAll: function() {
-				this.params = cloneObject(this.paramsReset);
-				this.json = "";
-				document.getElementById("sampleShipSelect").value = "none";
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			initParams: function() {
-				this.params = cloneObject(this.paramsReset);
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			inputSampleShipParams: function() {
-				var sampleShipSelect = document.getElementById("sampleShipSelect");
-				var sampleShipId = sampleShipSelect.value;
-				if (sampleShipId !== "none") {
-					var sampleShipObj = this.getItemById("sampleShip", sampleShipId);
-					var sampleShipParams = cloneObject(sampleShipObj.params);
-					this.params = sampleShipParams;
-					this.fixMissingParamsValues();
-				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			fixMissingParamsValues: function() {
-				for(key in this.paramsReset){
-                    if (isset(this.params[key])) continue;
-
-                    console.log("Missing param, " + key + ", added to ship");
-                    this.$set(this.params, key, cloneObject(this.paramsReset[key]));
-
-                    // shields by position
-                    if (key == 'shieldsByPosition') {
-                        this.setDefaultShieldsByPosition();
-                    }
-				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			createWeaponMount: function(position) {
-				var newMount = {
-					weaponId: "none",
-					weight: "light",
-					isFromTemplate: false,
-					canBeLinked: false,
-					isLinked: false
-				};
-				this.params.weaponMounts[position].push(newMount);
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			destroyWeaponMount: function(position, i) {
-				this.params.weaponMounts[position].splice(i, 1); // start, deleteCount
-				this.setWeaponLinking(position);
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			canWeaponMountBeCreated: function(position) {
-				var result = true;
-				var countMountsInPosition = this.params.weaponMounts[position].length;
-				if (countMountsInPosition >= this.sizeCategory.maxMounts) {
-					result = false;
-				}
-				return result;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1615,124 +1819,6 @@ function Ship(json) {
 				weaponMount.isLinked = false;
 				this.setWeaponLinking(position);
 			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			downgradeWeaponMount: function(position, i) {
-				var weaponMount = this.params.weaponMounts[position][i];
-				if (weaponMount.weight == "capital") {
-					weaponMount.weight = "heavy";
-				} else {
-					weaponMount.weight = "light";
-				}
-				weaponMount.weaponId = "none";
-				this.setWeaponLinking(position);
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			canWeaponMountBeUpgraded: function(position, weight) {
-				var result = true;
-				var weights = {light: 0, heavy: 1, capital: 2};
-				// check weight
-				// Heavy weapon mounts can only appear on a Medium or larger ship,
-				// capital weapon mounts can only appear on a Huge or larger ship.
-				if (weights[weight] >= weights[this.sizeCategory.maxMountWeight]) {
-					result = false;
-				} else {
-					if (position == "turret") {
-						if ( weight !== "light" ) {
-							result = false; 
-						}
-					} else {
-						if ( weight == "capital") {
-							result = false;
-						}
-					}
-				}
-				return result;
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			canWeaponMountBeDowngraded: function(weight, isFromTemplate, templateWeight) {
-				var result = true;
-				if ( weight == "light" ) {
-					result = false;
-				} else {
-					var weights = {
-						heavy: 1,
-						capital: 2
-					};
-					if ( isFromTemplate ) {
-						if (weight == templateWeight ) {
-							result = false;
-						}
-					}
-				}
-				return result;
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			setWeaponLinking: function(position) {
-				var mounts = this.params.weaponMounts[position];
-				for(i in mounts) {
-					if (
-						mounts[i].weaponId !== "none" &&
-						!this.isWeaponMountLinked(position, i - 1) &&
-						!this.isWeaponMountLinked(position, parseInt(i) + 1) &&
-						this.doesNextMountHaveSameWeaponId(position, i)
-					) {
-						mounts[i].canBeLinked = true;
-					} else {
-						mounts[i].canBeLinked = false;
-						mounts[i].isLinked = false;
-					}
-				}
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			isWeaponMountLinked: function(position, i) {
-				var result = false;
-				if (
-					isset( this.params.weaponMounts[position][i] ) &&
-					this.params.weaponMounts[position][i].isLinked === true
-				) {
-					result = true;
-				}
-				return result;
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			doesNextMountHaveSameWeaponId: function(position, i) {
-				var result = false;
-				var nextI = parseInt(i) + 1;
-				var mounts = this.params.weaponMounts[position];
-				if (
-					isset( this.params.weaponMounts[position][nextI] ) &&
-					mounts[i].weaponId == mounts[nextI].weaponId
-				) {
-					result = true;
-				}
-				return result;
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			adjustPowerCoreIds: function(countHousings) {
-				if ( this.params.powerCoreIds.length < countHousings ) {
-					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
-						this.params.powerCoreIds[i] = "none";
-					}
-				} else if ( this.params.powerCoreIds.length > countHousings ) {
-					var splicePos = countHousings;
-					var spliceLen = this.params.powerCoreIds.length - countHousings;
-					this.params.powerCoreIds.splice(splicePos, spliceLen);
-				}
-			}
             /*
             |------------------------------------------------------------------------------
             */

@@ -1,0 +1,41 @@
+/*
+|-------------------------------------------------------
+| GENERIC
+|-------------------------------------------------------
+*/
+
+html {
+	letter-spacing: .25pt;
+	line-height: $sheet-line-height;
+}
+
+@page {
+ 	size: A4 portrait;
+}
+
+@page @bottom-center {
+    content: counter(page);
+}
+
+@media screen {
+	body {
+		background-color: hsl(156, 38%, 94%);
+		margin: 0;
+	}
+}
+
+@media print {
+	html, body {
+		width: 210mm;
+		height: 297mm;
+	}
+
+	body {
+ 		/* Ensures shading is printed in tables; only in Chrome; no fix for other browsers, apparently */
+		-webkit-print-color-adjust: exact;
+	}
+
+  	.controls {
+		display: none !important;
+	}
+}

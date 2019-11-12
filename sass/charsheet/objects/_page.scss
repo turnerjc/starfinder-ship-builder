@@ -1,0 +1,20 @@
+/*
+|-------------------------------------------------------
+| Page - General Styles
+|-------------------------------------------------------
+*/
+
+
+.page {
+	display: grid;
+
+	@media screen {
+		background-color: #fff;
+		margin-bottom: $spacer-xl;
+		padding: 2em 2em 5em;
+	}
+}
+
+.page + .page {
+	page-break-before: always;
+}

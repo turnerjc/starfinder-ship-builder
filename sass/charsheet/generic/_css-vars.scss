@@ -1,0 +1,12 @@
+/*
+|-------------------------------------------------------
+| CSS VARIABLES
+|-------------------------------------------------------
+*/
+
+html {
+	--sheet-font-family: #{$sheet-font-family};
+	--sheet-font-size: #{$sheet-font-size};
+	--values-font-family: #{$values-font-family};
+	--values-font-size: #{$values-font-size};
+}

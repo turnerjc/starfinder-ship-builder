@@ -1,0 +1,65 @@
+/*
+|-------------------------------------------------------
+| Page 1
+|-------------------------------------------------------
+*/
+
+.page-1 {
+	grid-template-columns: 5fr 7fr 2fr 10fr; /* Ensures reference tables don't take up too much horizontal space */
+	grid-template-areas:
+		"p1logo	p1details	p1details	p1details"
+		"p1stats	p1stats	p1languages	p1languages"
+		"p1stats	p1stats	p1dr	p1cultures"
+		"p1physical	p1physical	p1parryBlock	p1reactions"
+		"p1physical	p1physical	p1parryBlock	p1reactions"
+		"p1advantages	p1advantages	p1skills	p1skills"
+		"p1advantages	p1advantages	p1skills	p1skills";
+	grid-gap: $spacer-sm $spacer-sm;
+}
+
+.section--p1languages,
+.section--p1dr,
+.section--p1parryBlock,
+.section--p1cultures,
+.section--p1reactions,
+.section--p1advantages,
+.section--p1skills,
+.physical__field-list
+{
+	border: 1px solid #000;
+	padding: $spacer-xs;
+}
+
+.section--p1parryBlock
+{
+	padding: $spacer-xs 0;
+}
+
+
+.section--p1logo          { grid-area: p1logo; }
+.section--p1details       { grid-area: p1details; }
+.section--p1stats         { grid-area: p1stats; }
+.section--p1languages     { grid-area: p1languages; }
+.section--p1dr            { grid-area: p1dr; }
+.section--p1parryBlock    { grid-area: p1parryBlock; }
+.section--p1cultures      { grid-area: p1cultures; }
+.section--p1physical      { grid-area: p1physical; }
+.section--p1reactions     { grid-area: p1reactions; }
+.section--p1advantages    { grid-area: p1advantages; }
+.section--p1disadvantages { grid-area: p1disadvantages; }
+.section--p1skills        { grid-area: p1skills; }
+
+/*.section--p1logo          { background-color: hotpink; }*/
+/*.section--p1details       { background-color: mediumseagreen; }*/
+/*.section--p1stats         { background-color: dodgerblue; }*/
+/*.section--p1languages     { background-color: chocolate; }*/
+/*.section--p1dr            { background-color: darkgoldenrod; }*/
+/*.section--p1parryBlock    { background-color: limegreen; }*/
+/*.section--p1parry         { background-color: firebrick; }*/
+/*.section--p1block         { background-color: peru; }*/
+/*.section--p1cultures      { background-color: darksalmon; }*/
+/*.section--p1physical      { background-color: deepskyblue; }*/
+/*.section--p1reactions     { background-color: greenyellow; }*/
+/*.section--p1advantages    { background-color: lightpink; }*/
+/*.section--p1disadvantages { background-color: mediumspringgreen; }*/
+/*.section--p1skills        { background-color: orange; }*/

@@ -1,0 +1,36 @@
+/*
+|-------------------------------------------------------
+| Physical
+|-------------------------------------------------------
+*/
+.physical__fields {
+	display: grid;
+	grid-template-areas:
+		"basicLift	basicLift	damageThrust	damageThrust	damageSwing	damageSwing"
+		"basicSpeed	basicSpeed	basicSpeed	basicMove	basicMove	basicMove";
+	grid-gap: 0 0;
+	margin-bottom: $spacer-md;
+
+	.field:not(:last-child) {
+		margin-bottom: 0;
+	}
+
+
+}
+
+.field--basicLift    { grid-area: basicLift; }
+.field--damageThrust { grid-area: damageThrust; }
+.field--damageSwing  { grid-area: damageSwing; }
+.field--basicSpeed   { grid-area: basicSpeed; }
+.field--basicMove    { grid-area: basicMove; }
+
+.physical__field-list {
+
+	font-family: var(--sheet-font-family);
+	font-size: calc(var(--sheet-font-size) * 1pt);
+
+	.field__value {
+		min-width: 2em;
+	}
+
+}

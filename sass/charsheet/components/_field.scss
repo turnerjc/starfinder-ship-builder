@@ -1,0 +1,59 @@
+/*
+|-------------------------------------------------------
+| Fields (simple)
+|-------------------------------------------------------
+*/
+
+.field {
+	display: flex;
+	padding: $spacer-sm;
+}
+
+.field__label {
+	font-weight: $sheet-font-weight;
+	white-space: nowrap;
+	font-family: var(--sheet-font-family);
+	font-size: calc(var(--sheet-font-size) * 1pt);
+}
+
+.field__value,
+.field__cost
+{
+	font-family: var(--values-font-family);
+	font-size: calc(var(--values-font-size) * 1pt);
+	line-height: $values-line-height;
+}
+
+.field__value {
+	border-bottom: 1px solid #000;
+	flex-basis: 100%;
+	margin-left: $spacer-sm;
+}
+
+.field__cost {
+	margin-left: $spacer-sm;
+	text-align: center;
+
+	&::before {
+		content: "[";
+		margin-right: $spacer-xs;
+	}
+
+	&::after {
+		content: "]";
+		margin-left: $spacer-xs;
+	}
+}
+
+.field.field--basicMove 
+{
+	margin-bottom: 0;
+}
+
+.section--p1details,
+.section--p2notes
+{
+	& > .field:not(:last-child) {
+		margin-bottom: 0;
+	}
+}

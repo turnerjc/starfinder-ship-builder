@@ -1,0 +1,19 @@
+/*
+|-------------------------------------------------------
+| Section
+|-------------------------------------------------------
+*/
+
+.section {
+	// min-width: 0;
+	// white-space: normal;
+}
+
+.section--p2notes,
+.section--p2copyright
+{
+	p {
+		font-family: var(--sheet-font-family);
+		font-size: calc(var(--sheet-font-size) * 1pt);
+	}
+}

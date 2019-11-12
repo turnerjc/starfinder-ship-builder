@@ -2,7 +2,7 @@
 .sass-cache/*
 app/
 css/
-node_modules/
+node_modules*/
 node_modules_grunt/
 ships/
 src/

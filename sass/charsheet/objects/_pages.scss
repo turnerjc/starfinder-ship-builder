@@ -1,0 +1,22 @@
+/*
+|-------------------------------------------------------
+| OBJECTS - PAGES
+|-------------------------------------------------------
+*/
+
+.pages {
+	@media screen {
+		/* TODO: Prevent controls from scrolling to the left on mobile */
+		// overflow: auto;
+		// white-space: nowrap;
+		width: $page-width;
+	}
+
+	@media screen and (min-width: $page-width) {
+		margin: 0 auto;
+	}
+
+	@media screen and (min-width: $bp-tablet) {
+		margin-top: $spacer-xl;
+	}
+}

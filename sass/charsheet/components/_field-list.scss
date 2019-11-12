@@ -1,0 +1,71 @@
+/*
+|-------------------------------------------------------
+| Field list
+|-------------------------------------------------------
+*/
+.field-list {
+
+	font-family: var(--sheet-font-family);
+	font-size: calc(var(--sheet-font-size) * 1pt);
+	
+	table {
+		width: 100%;
+
+	}
+
+	td {
+		vertical-align: top;
+	}
+
+	sup {
+		font-size: 0.83em;
+		vertical-align: top;
+	}
+
+	.field__value {
+		border-bottom: none;
+
+		/* hanging indent */
+		padding-left: calc(1em + #{$spacer-sm});
+		text-indent: -1em;
+	}
+
+	& + & {
+		margin-top: $spacer-xl;
+	}
+
+}
+
+.field-list__footnotes-separator {
+	height: 10px;
+}
+
+.field-list__shaded {
+	background-color: #ddd;
+}
+
+.field-list__totals {
+	td {
+		vertical-align: bottom;
+	}
+}
+
+.field-list__total {
+	font-family: var(--sheet-font-family);
+	font-size: var(--sheet-font-size);
+	font-weight: 700;
+}
+
+/* Remove hanging indents from these tables, as they waste valuable horizontal space */
+.section--p2speedRange,
+.section--p2hitLocation
+{
+	.field-list
+	{
+		.field__value
+		{
+			padding-left: 0;
+			text-indent: 0;
+		}
+	}
+}

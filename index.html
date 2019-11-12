@@ -116,6 +116,7 @@
 						<li><a href="#shields">Shields</a></li>
 						<li><a href="#weapons">Weapons</a></li>
 					</ul>
+					<li><a href="#custom-components">Custom Components</a></li>
 					<li><a href="#crew">Crew</a></li>
 					<li><a href="#output">Output</a></li>
 				</ul>
@@ -199,9 +200,9 @@
 			|	RECENT UPDATES
 			|------------------------------------------------------------
 			-->
-			<!-- <div class="box">
-				<p><strong>Announcement:</strong> Hi there, I&apos;m considering running a design challenge for building a Starfinder ship, maybe make it a monthly thing. Anyone interested? If so, let me know via <a href="https://twitter.com/james_c_turner">Twitter</a> or <a href="http://www.jamesturneronline.net">Mail</a>. If I get at least a few responses, I&apos;ll set something up for May. Happy gaming, James (<time datetime="2019-04-24">24/04/2019</time>)</p>
-			</div> -->
+			<div class="box">
+				<p><strong>Recent Updates:</strong> Fixed incorrect costs for Data Net; added custom components; BP and PCU breakdown in output (<time datetime="2019-11-12">11/12/2019</time>)</p>
+			</div>
 
 			<!--
 			|------------------------------------------------------------
@@ -253,6 +254,20 @@
 							<option value="none">None</option>
 							<option v-for="option in selectOptions.sampleShip" :value="option.id">{{ option.name }} (Tier {{ option.tier }} {{ getItemById('frame', option.params.frameId).name }})</option>
 						</select>
+					</div>
+				</div>
+
+				<div class="box__select">
+					<div class="form-group">
+						<form class=""
+							action="./starshipSheet.php" 
+							method="post"
+							target="_blank">
+								<input type="hidden" :value="jsonParams" name="json">
+								<button type="submit" class="btn btn-lg btn-primary">
+									Open Character Sheet
+								</button>
+						</form>
 					</div>
 				</div>
 				
@@ -1140,7 +1155,7 @@
 			
 			<div class="box">
 				<header class="box__header">
-					<h3 id="sensors">Data Net</h3>
+					<h3 id="data-net">Data Net</h3>
 				</header>
                 <div class="box__select">
                     <div class="checkbox">
@@ -1171,7 +1186,7 @@
 			
 			<div class="box">
 				<header class="box__header">
-					<h3 id="sensors">Hive Joining</h3>
+					<h3 id="hive-joining">Hive Joining</h3>
 				</header>
                 <div class="box__select">
                     <div class="checkbox">
@@ -1322,6 +1337,101 @@
 					mounts {{ weaponsTotalCosts.weaponMountsBp }} +
 					links {{ weaponsTotalCosts.weaponLinksBp }})
 				</div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			
+				CUSTOM COMPONENTS
+				
+			-->
+			
+			<div class="box">
+				<header class="box__header">
+					<h2 id="custom-components">Step 5a: Custom Components</h2>
+				</header>
+
+				<template v-for="customComponent, index in params.customComponents">
+
+					<!-- delete button -->
+					<div class="box__header--btns">
+						<h4>{{ customComponent.name ? customComponent.name : "New Custom Component" }}</h4>
+						<div>
+							<button class="btn btn-danger btn-sm"
+								@click="removeCustomComponent(index)">
+								<svg class="icon"><use xlink:href="#icon-trash" /></svg>
+							</button>
+						</div>
+					</div>
+
+					<!-- component name -->
+					<div class="form-group">
+						<label :for="'customComponentName' + index">Component Name</label>
+						<input type="text"
+							:id="'customComponentName' + index"
+							v-model="customComponent.name"
+							class="form-control">
+					</div>
+
+					<!-- notes -->
+					<div class="form-group">
+						<label for="'customComponentNotes' + index">Notes</label>
+						<textarea id="'customComponentNotes' + index"
+							cols="30" rows="2"
+							v-model="customComponent.notes"
+							class="form-control"></textarea>
+					</div>
+
+					<!-- is essential -->
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"
+								:id="'isEssential' + index"
+								v-model="customComponent.isEssential">
+								Is this an essential system?
+						</label>
+					</div>
+
+					<div class="box--flex">
+						<!-- PCU -->
+					    <div class="form-group col-sm-1-1 col-lg-1-2">
+					        <label for="'customComponentPcuCost' + index">PCU Cost</label>
+					        <input type="number"
+					        	:id="'customComponentPcuCost' + index"
+					        	class="form-control"
+					        	v-model="customComponent.pcuCost">
+					    </div>
+
+						<!-- BP -->
+					    <div class="form-group col-sm-1-1 col-lg-1-2">
+					        <label for="'customComponentBpCost' + index">BP Cost</label>
+					        <input type="number"
+					        	:id="'customComponentBpCost' + index"
+					        	class="form-control"
+					        	v-model="customComponent.bpCost">
+					    </div>
+					</div>
+				</template>
+
+				<!-- Totals -->
+
+				<div class="box__cost">
+					<svg class="icon"><use xlink:href="#icon-power" /></svg>
+						{{ parseInt(customComponentPcuTotal.essential) + parseInt(customComponentPcuTotal.nonEssential) }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ parseInt(customComponentBpTotal) }}
+				</div>
+
+			</div>
+
+			<div class="box__under-box align-right">
+				<button @click="createCustomComponent()"
+					class="btn btn-primary">Create New Custom Component</button>
 			</div>
 
 
@@ -1504,7 +1614,6 @@
 			<div class="box">
 				<header class="box__header">
 					<h2 id="output">Output</h2>
-					<!-- <button id="copyOutputBtn" class="btn btn-primary" data-clipboard-target="#outputText">Copy summary to clipboard</button> -->
 				</header>
 				<div class="box__info box__info--output">
 					<div id="outputText">
@@ -1531,6 +1640,11 @@
 							<strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span>
 						</p>
 						<p><strong>Modifiers</strong> {{ modifiersDescription }}<span v-if="params.hasCrew">; <strong>Complement</strong> {{ complement }}</span></p>
+						<p><strong>Custom Components</strong> {{ customComponentsDescription }}</p>
+						<p>
+							<strong>Build Points</strong> cost {{ totalBpCost }}, max {{ tier.bpBudget }}
+							<strong>Power Core Units</strong> non-essential {{ totalPcuCost.essential + totalPcuCost.nonEssential }}, essential {{ totalPcuCost.essential }}, max {{ pcuBudget }}
+						</p>
 
 
 						<div v-if="params.hasCrew">
@@ -1589,7 +1703,7 @@
 					<li>
 						Starfinder RPG Ship Builder by <a href="http://www.jamesturneronline.net">James Turner</a> &bull;
 						<a href="https://twitter.com/james_c_turner">@james_c_turner</a>  &bull;
-						Sep 2017
+						Sep 2017 (last updated Nov 2019)
 					</li>
 					<li><a href="http://paizo.com/starfinder/">Starfinder RPG</a> &copy; Paizo Inc, 2017</li>
 					<li>Open Game Licence</li>
@@ -1630,10 +1744,10 @@
 		
 	</div><!-- .wrapper -->
 	
-	<!--
 	<script src="https://unpkg.com/vue"></script>
-	-->
-	<script src="vendor/vue/vue.min.js"></script>
+	
+	<!-- <script src="vendor/vue/vue.min.js"></script> -->
+	
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
 	<script src="js/script.js?v=20180522a"></script>
 </body>
