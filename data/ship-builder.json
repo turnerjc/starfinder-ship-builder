@@ -5025,6 +5025,16 @@
 	"skill": {
 		"data": [
 			{
+				"id": "acrobatics",
+				"name": "Acrobatics",
+				"hasRanks": true
+			},
+			{
+				"id": "athletics",
+				"name": "Athletics",
+				"hasRanks": true
+			},
+			{
 				"id": "bluff",
 				"name": "Bluff",
 				"hasRanks": true
@@ -5052,6 +5062,11 @@
 			{
 				"id": "intimidate",
 				"name": "Intimidate",
+				"hasRanks": true
+			},
+			{
+				"id": "mysticism",
+				"name": "Mysticism",
 				"hasRanks": true
 			},
 			{
@@ -5109,6 +5124,23 @@
 				"hasRoleQuestion": "Is there a science officer?",
 				"skills": [
 					"computers"
+				]
+			},
+			{
+				"id": "chiefMate",
+				"name": "Chief Mate",
+				"hasRoleQuestion": "Is there a chief mate?",
+				"skills": [
+					"acrobatics",
+					"athletics"
+				]
+			},
+			{
+				"id": "magicOfficer",
+				"name": "Magic Officer",
+				"hasRoleQuestion": "Is there a magic officer?",
+				"skills": [
+					"mysticism"
 				]
 			}
 		]

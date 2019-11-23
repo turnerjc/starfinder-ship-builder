@@ -285,7 +285,33 @@ function Ship(json) {
 								ranks: 0
 							}
 						}
-					} // scienceOfficer
+					}, // scienceOfficer
+					chiefMate: {
+						countOfficers: 1,
+						countOfficerCrew: 0,
+						hasRole: true,
+						skills: {
+							acrobatics: {
+								modifier: 0,
+								ranks: 0
+							},
+							athletics: {
+								modifier: 0,
+								ranks: 0
+							},
+						}
+					}, // scienceOfficer
+					magicOfficer: {
+						countOfficers: 1,
+						countOfficerCrew: 0,
+						hasRole: true,
+						skills: {
+							mysticism: {
+								modifier: 0,
+								ranks: 0
+							}
+						}
+					}, // scienceOfficer
 				}, // crewSkills
 	            customFrameBaseId: "light-freighter",
 	            customComponents: [],
