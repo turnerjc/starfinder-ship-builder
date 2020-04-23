@@ -1,0 +1,9 @@
+.icon {
+	height: 16px;
+	width: 16px;
+}
+
+.icon:not(:first-of-type) {
+	margin-left: 1em;
+}
+

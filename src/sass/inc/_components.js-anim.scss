@@ -1,0 +1,29 @@
+@-webkit-keyframes anim-border {
+	0%   { box-shadow: none; }
+	10%  { box-shadow: 0 0 10px $background-color-highlight; }
+	100% { box-shadow: none; }
+}
+@keyframes anim-border {
+	0%   { box-shadow: none; }
+	10%  { box-shadow: 0 0 10px $background-color-highlight; }
+	100% { box-shadow: none; }
+}
+
+/*
+@-webkit-keyframes anim-border {
+	0%   { border-color: #cccccc; }
+	10%  { border-color: hsl(215, 50%, 92%); box-shadow: 0 0 2 hsl(215, 50%, 92%); }
+	100% { border-color: #cccccc; }
+}
+@keyframes anim-border {
+	0%   { border-color: #cccccc; }
+	10%  { border-color: hsl(215, 50%, 92%); box-shadow: 0 0 2 hsl(215, 50%, 92%); }
+	100% { border-color: #cccccc; }
+}
+*/
+
+.js-anim-border {
+	-webkit-animation: anim-border .5s;
+	animation: anim-border .5s;
+}
+

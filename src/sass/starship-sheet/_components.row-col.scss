@@ -1,0 +1,23 @@
+/*
+|--------------------------------------------------------------------------
+| STARSHIP SHEET > COMPONENTS > ROW/COL
+|--------------------------------------------------------------------------
+*/
+
+.row {
+	display: flex;
+	margin-left: #{ 0 - $spacer * .25 };
+
+	.field + .field {
+		margin-top: 0;
+	}
+}
+
+[class^=col] {
+	margin-left: $spacer * .25;
+}
+
+.col-1-of-2 { flex-basis: 50%; }
+
+.col-1-of-4 { flex-basis: 25%; }
+.col-3-of-4 { flex-basis: 75%; }

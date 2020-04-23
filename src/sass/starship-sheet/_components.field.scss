@@ -1,0 +1,23 @@
+/*
+|--------------------------------------------------------------------------
+| STARSHIP SHEET > COMPONENTS > FIELD
+|--------------------------------------------------------------------------
+*/
+
+.field + .field,
+.row + .row,
+.field + .row,
+.row + .field
+{
+	margin-top: $spacer;
+}
+
+.field-label {
+	text-transform: uppercase;
+}
+
+.field-data {
+	border: 2px solid #000;
+	border-radius: 4px;
+	padding: $spacer * .25;
+}

@@ -1,0 +1,31 @@
+/*
+|--------------------------------------------------------------------------
+| STARSHIP SHEET > OBJECTS > GRID
+|--------------------------------------------------------------------------
+*/
+
+.app {
+	display: grid;
+	grid-template-areas: "header header header"
+		"details shields stats"
+		"weapons weapons weapons"
+		"crew crew crew"
+		"systems systems systems";
+	grid-template-columns: 3fr 2fr 3fr;
+	grid-gap: $spacer * .5;
+}
+
+.details { grid-area: details; }
+.shields { grid-area: shields; }
+.stats   { grid-area: stats; }
+.weapons { grid-area: weapons; }
+.crew    { grid-area: crew; }
+.systems { grid-area: systems; }
+
+.details { background-color: hsl(0, 50, 50); }
+.shields { background-color: hsl(40, 50, 50); }
+.stats   { background-color: hsl(80, 50, 50); }
+.weapons { background-color: hsl(120, 50, 50); }
+.crew    { background-color: hsl(160, 50, 50); }
+.systems { background-color: hsl(200, 50, 50); }
+

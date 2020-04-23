@@ -1,0 +1,25 @@
+/*
+|--------------------------------------------------------------------------
+| STARSHIP SHEET > GENERIC > PRINT
+|--------------------------------------------------------------------------
+*/
+
+@page {
+ 	size: A4 portrait;
+}
+
+@page @bottom-center {
+    content: counter(page);
+}
+
+@media print {
+	html, body {
+		width: 210mm;
+		height: 297mm;
+	}
+
+	body {
+ 		/* Ensures shading is printed in tables; only in Chrome; no fix for other browsers, apparently */
+		-webkit-print-color-adjust: exact;
+	}
+}

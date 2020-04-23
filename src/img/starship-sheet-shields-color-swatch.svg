@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="624.99994"
+   height="125.00001"
+   viewBox="0 0 165.36456 33.07292"
+   version="1.1"
+   id="svg1307"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="starship-sheet-shields-color-swatch.svg">
+  <defs
+     id="defs1301" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="378.08627"
+     inkscape:cy="42.783689"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1852"
+       spacingx="33.072916"
+       spacingy="33.072916"
+       empspacing="5"
+       originx="0"
+       originy="-99.21876" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1304">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-164.70831)"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#00aeef;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1854"
+       width="33.072918"
+       height="33.072918"
+       x="33.072918"
+       y="164.70831" />
+    <rect
+       style="opacity:1;fill:#addede;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1856"
+       width="33.072918"
+       height="33.072918"
+       x="99.21875"
+       y="164.70831" />
+    <rect
+       style="opacity:1;fill:#254190;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1858"
+       width="33.072918"
+       height="33.072918"
+       x="0"
+       y="164.70831" />
+    <rect
+       style="opacity:1;fill:#8ed8f8;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1860"
+       width="33.072918"
+       height="33.072918"
+       x="66.145828"
+       y="164.70831" />
+    <rect
+       style="opacity:1;fill:#c1e5df;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1862"
+       width="33.072918"
+       height="33.072918"
+       x="132.29166"
+       y="164.70831" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="3.3317537"
+       y="182.76871"
+       id="text1866"><tspan
+         sodipodi:role="line"
+         id="tspan1864"
+         x="3.3317537"
+         y="182.76871"
+         style="font-size:7.05555534px;fill:#ffffff;stroke-width:0.26458332">254190</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="36.482956"
+       y="182.76871"
+       id="text1870"><tspan
+         sodipodi:role="line"
+         id="tspan1868"
+         x="36.482956"
+         y="182.76871"
+         style="font-size:7.05555534px;stroke-width:0.26458332">00aeef</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="69.849998"
+       y="182.76871"
+       id="text1874"><tspan
+         sodipodi:role="line"
+         id="tspan1872"
+         x="69.849998"
+         y="182.76871"
+         style="stroke-width:0.26458332">8ed8f8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="102.92288"
+       y="182.76871"
+       id="text1878"><tspan
+         sodipodi:role="line"
+         id="tspan1876"
+         x="102.92288"
+         y="182.76871"
+         style="stroke-width:0.26458332">addede</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="135.99579"
+       y="182.76871"
+       id="text1882"><tspan
+         sodipodi:role="line"
+         id="tspan1880"
+         x="135.99579"
+         y="182.76871"
+         style="stroke-width:0.26458332">c1e5df</tspan></text>
+  </g>
+</svg>

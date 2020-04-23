@@ -1,0 +1,26 @@
+.wrapper {
+	margin: 0;
+	overflow-y: hidden; /* So that nav can appear without creating a scroll bar */
+	padding: 0;
+}
+
+/*
+.wrapper { 
+	margin-left: 20%;
+	padding: 0 1em;
+	position: relative; 
+}
+
+@media (min-width: $breakpoint-md) {
+	.wrapper {
+		margin-left: 35%;
+	}
+}
+
+@media (min-width: $breakpoint-lg) {
+	.wrapper {
+		margin-left: 25%;
+	}
+}
+
+*/
