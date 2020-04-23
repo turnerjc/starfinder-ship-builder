@@ -1,11 +1,10 @@
 .sass-cache/
 .sass-cache/*
-app/
 css/
+charsheet.php
 node_modules*/
 node_modules_grunt/
 ships/
-src/
 vendor/
 dist/
 *.xlsx
