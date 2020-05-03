@@ -12,8 +12,8 @@ module.exports = function(grunt) {
 				}
 			},
 			build: {
-				src: 'js/script.js',
-				dest: 'app/js/script.js'
+				src: 'src/js/script.js',
+				dest: 'dist/js/script.js'
 			}
 		},
 		// minify CSS
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				files: {
-					'app/css/style.css': 'css/style.css'
+					'dist/css/style.css': 'src/css/style.css'
 				}
 			}
 		},
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 		minjson: {
 			compile: {
 				files: {
-					'app/data/ship-builder.json': 'data/ship-builder.json'
+					'dist/data/ship-builder.json': 'src/data/ship-builder.json'
 				}
 			}
 		},
@@ -44,14 +44,14 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {                                   // Dictionary of files
-					'app/index.html': 'index.html'     // 'destination': 'source'
+					'dist/index.html': 'src/index.html'     // 'destination': 'source'
 				}
 			}
 		},
 		// Watch
 		watch: {
 			scripts: {
-				files: ['js/script.js', 'css/style.css', 'data/ship-builder.json', 'index.html'],
+				files: ['src/js/script.js', 'src/css/style.css', 'src/data/ship-builder.json', 'src/index.html'],
 				tasks: ['uglify', 'cssmin', 'minjson', 'htmlmin'],
 				options: {
 					/*
