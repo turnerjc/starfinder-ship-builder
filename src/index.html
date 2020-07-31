@@ -190,7 +190,7 @@
 			|------------------------------------------------------------
 			-->
 			<div class="box">
-				<p><strong>Recent Updates:</strong> Added chief mate and magic officer crew roles from Character Operations Manual (11/23/2019); Fixed incorrect costs for Data Net; added custom components; BP and PCU breakdown in output (<time datetime="2019-11-12">11/12/2019</time>)</p>
+				<p><strong>Coming Soon:</strong> New material from <em>Starship Operations Manual</em>, released <time datetime="2020-07-30">30/07/2020</time></p>
 			</div>
 
 			<!--
@@ -205,6 +205,7 @@
 					<li>Anish Hermon</li>
 					<li>Charles Mitchell</li>
 					<li>Corey Piper</li>
+					<li>Frank Broadway</li>
 					<li>Geoff Sears</li>
 					<li>Michael Ross</li>
 					<li>Noble Hays</li>
@@ -216,6 +217,7 @@
 					<li>Thomas P Felder</li>
 					<li>Toby Dillon</li>
 					<li>William Refsland</li>
+					<li>Yami</li>
 				</ul>
 
 	            <div class="app-message" style="text-align: left;">
@@ -846,6 +848,9 @@
 							</template>
 						</select>
 					</div>
+				</div>
+				<div class="box__info" v-if="driftEngine.notes !== undefined">
+					<em>Note: </em>{{ driftEngine.notes }}
 				</div>
 				<div class="box__info">
 					<strong>Engine Rating</strong> {{ driftEngine.engineRating }}
@@ -1598,7 +1603,7 @@
 					<div id="outputText">
 						<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
 						<p>{{ frame.size }} {{ frame.name.toLowerCase() }}</p>
-						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
+						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
 						<p><strong>AC</strong> {{ armourClass }}; <strong>TL</strong> {{ targetLock }}</p>
 						<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ frame.dt }}; <strong>CT</strong> {{ criticalThreshold }}</p>
 						<p><strong>Shields</strong> {{ shields.name }}
