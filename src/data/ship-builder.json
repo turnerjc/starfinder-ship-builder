@@ -619,6 +619,45 @@
 				"minCrew": 125,
 				"maxCrew": 500,
 				"bpCost": 200
+			},
+			{
+				"id": "base-ship",
+				"name": "Base Ship",
+				"src": "SOM",
+				"size": "Supercolossal",
+				"maneuverability": "clumsy",
+				"hp": 450,
+				"hpIncrement": 75,
+				"dt": 15,
+				"ct": 90,
+				"mounts": {
+					"forward": [
+						"heavy",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"port": [
+						"heavy",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"starboard": [
+						"heavy",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"turret": [
+						"capital",
+						"capital"
+					]
+				},
+				"expansionBays": "Unlimited",
+				"minCrew": 150,
+				"maxCrew": 100000,
+				"bpCost": 250
 			}
 		]
 	},
@@ -1896,7 +1935,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 0,
 				"bpCost": 0
@@ -1913,7 +1953,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 1,
 				"bpCost": 1
@@ -1930,7 +1971,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 0,
 				"bpCost": 0
@@ -1947,7 +1989,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 2,
 				"bpCost": 1
@@ -1964,7 +2007,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 1,
 				"bpCost": 1
@@ -1981,7 +2025,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 1,
 				"bpCost": 1
@@ -1998,7 +2043,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 1,
 				"bpCost": 1
@@ -2010,7 +2056,8 @@
 				"numBays": 4,
 				"sizes": [
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 30,
 				"bpCost": 10
@@ -2027,7 +2074,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 5,
 				"bpCost": 3
@@ -2044,7 +2092,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 4,
 				"bpCost": 8
@@ -2061,7 +2110,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 0,
 				"bpCost": 0
@@ -2090,7 +2140,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 0,
 				"bpCost": 1
@@ -2107,7 +2158,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 1,
 				"bpCost": 1
@@ -2124,7 +2176,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 3,
 				"bpCost": 1
@@ -2141,7 +2194,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 2,
 				"bpCost": 1
@@ -2158,7 +2212,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 2,
 				"bpCost": 1
@@ -2175,7 +2230,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 2,
 				"bpCost": 1
@@ -2192,7 +2248,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 2,
 				"bpCost": 1
@@ -2205,7 +2262,8 @@
 				"sizes": [
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 10,
 				"bpCost": 4
@@ -2222,7 +2280,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 4,
 				"bpCost": 2
@@ -2239,7 +2298,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 5,
 				"bpCost": 3
@@ -2256,7 +2316,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 6,
 				"bpCost": 4
@@ -2273,7 +2334,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 7,
 				"bpCost": 5
@@ -2290,7 +2352,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 8,
 				"bpCost": 6
@@ -2307,7 +2370,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 9,
 				"bpCost": 7
@@ -2324,7 +2388,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 10,
 				"bpCost": 8
@@ -2341,7 +2406,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 2,
 				"bpCost": 1
@@ -2358,7 +2424,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 3,
 				"bpCost": 1
@@ -2375,7 +2442,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 1,
 				"bpCost": 1
@@ -2392,7 +2460,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 5,
 				"bpCost": 15
@@ -2409,7 +2478,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 5,
 				"bpCost": 10
@@ -2426,7 +2496,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuCost": 0,
 				"bpCost": 5
@@ -4397,7 +4468,7 @@
 				"damage": "n/a",
 				"pcuCost": 0,
 				"bpCost": 0,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "n/a",
 				"type": "n/a"
 			},
@@ -4409,7 +4480,7 @@
 				"damage": "6d4",
 				"pcuCost": 15,
 				"bpCost": 15,
-				"specialProperties": "Ripper",
+				"specialProperties": ["ripper"],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4421,7 +4492,7 @@
 				"damage": "4d4",
 				"pcuCost": 10,
 				"bpCost": 6,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4433,7 +4504,7 @@
 				"damage": "3d4",
 				"pcuCost": 10,
 				"bpCost": 5,
-				"specialProperties": "Point (+8)",
+				"specialProperties": ["point-8"],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4445,7 +4516,7 @@
 				"damage": "1d8",
 				"pcuCost": 10,
 				"bpCost": 3,
-				"specialProperties": "Broad arc",
+				"specialProperties": ["broad-arc"],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4457,7 +4528,7 @@
 				"damage": "2d6",
 				"pcuCost": 10,
 				"bpCost": 9,
-				"specialProperties": "Point (+10)",
+				"specialProperties": ["point-10"],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4469,7 +4540,7 @@
 				"damage": "Special",
 				"pcuCost": 10,
 				"bpCost": 8,
-				"specialProperties": "EMP",
+				"specialProperties": ["emp"],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4481,7 +4552,7 @@
 				"damage": "2d4",
 				"pcuCost": 5,
 				"bpCost": 2,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4493,7 +4564,7 @@
 				"damage": "3d6",
 				"pcuCost": 10,
 				"bpCost": 10,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4505,7 +4576,7 @@
 				"damage": "2d12",
 				"pcuCost": 10,
 				"bpCost": 12,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4518,7 +4589,7 @@
 				"damage": "2d6",
 				"pcuCost": 10,
 				"bpCost": 5,
-				"specialProperties": "Burrowing",
+				"specialProperties": ["burrowing"],
 				"weight": "light",
 				"type": "Direct-Fire"
 			},
@@ -4530,7 +4601,7 @@
 				"damage": "4d8",
 				"pcuCost": 10,
 				"bpCost": 4,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
 			},
@@ -4542,7 +4613,7 @@
 				"damage": "3d8",
 				"pcuCost": 5,
 				"bpCost": 5,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
 			},
@@ -4554,7 +4625,7 @@
 				"damage": "2d8",
 				"pcuCost": 5,
 				"bpCost": 4,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "light",
 				"type": "Tracking"
 			},
@@ -4566,7 +4637,7 @@
 				"damage": "2d6",
 				"pcuCost": 10,
 				"bpCost": 3,
-				"specialProperties": "Array, limited fire 5",
+				"specialProperties": ["array", "limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
 			},
@@ -4578,7 +4649,7 @@
 				"damage": "5d8",
 				"pcuCost": 10,
 				"bpCost": 5,
-				"specialProperties": "Irradiate (low), limited fire 5",
+				"specialProperties": ["irradiate-low", "limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
 			},
@@ -4591,7 +4662,7 @@
 				"damage": "3d6",
 				"pcuCost": 5,
 				"bpCost": 5,
-				"specialProperties": "Limited fire 5, spore",
+				"specialProperties": ["limited-fire-5", "spore"],
 				"weight": "light",
 				"type": "Tracking"
 			},
@@ -4603,7 +4674,7 @@
 				"damage": "7d10",
 				"pcuCost": 40,
 				"bpCost": 35,
-				"specialProperties": "Irradiate (medium)",
+				"specialProperties": ["irradiate-medium"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4615,7 +4686,7 @@
 				"damage": "6d6",
 				"pcuCost": 40,
 				"bpCost": 30,
-				"specialProperties": "Tractor beam",
+				"specialProperties": ["tractor-beam"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4627,7 +4698,7 @@
 				"damage": "Special",
 				"pcuCost": 30,
 				"bpCost": 24,
-				"specialProperties": "EMP",
+				"specialProperties": ["emp"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4639,7 +4710,7 @@
 				"damage": "6d4",
 				"pcuCost": 15,
 				"bpCost": 10,
-				"specialProperties": "Array",
+				"specialProperties": ["array"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4651,7 +4722,7 @@
 				"damage": "4d8",
 				"pcuCost": 10,
 				"bpCost": 8,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4663,7 +4734,7 @@
 				"damage": "5d6",
 				"pcuCost": 15,
 				"bpCost": 12,
-				"specialProperties": "Point (+12)",
+				"specialProperties": ["point-12"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4675,7 +4746,7 @@
 				"damage": "6d10",
 				"pcuCost": 35,
 				"bpCost": 22,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4687,7 +4758,7 @@
 				"damage": "8d6",
 				"pcuCost": 25,
 				"bpCost": 15,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4699,7 +4770,7 @@
 				"damage": "10d6",
 				"pcuCost": 40,
 				"bpCost": 25,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4711,7 +4782,7 @@
 				"damage": "5d12",
 				"pcuCost": 30,
 				"bpCost": 20,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4723,7 +4794,7 @@
 				"damage": "8d4",
 				"pcuCost": 20,
 				"bpCost": 15,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4735,7 +4806,7 @@
 				"damage": "5d8",
 				"pcuCost": 15,
 				"bpCost": 12,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4747,7 +4818,7 @@
 				"damage": "8d6",
 				"pcuCost": 40,
 				"bpCost": 35,
-				"specialProperties": "Line",
+				"specialProperties": ["line"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
 			},
@@ -4759,7 +4830,7 @@
 				"damage": "10d10",
 				"pcuCost": 15,
 				"bpCost": 12,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
 			},
@@ -4771,7 +4842,7 @@
 				"damage": "10d8",
 				"pcuCost": 15,
 				"bpCost": 10,
-				"specialProperties": "Irradiate (medium), limited",
+				"specialProperties": ["irradiate-medium", "limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
 			},
@@ -4783,7 +4854,7 @@
 				"damage": "5d10",
 				"pcuCost": 10,
 				"bpCost": 10,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
 			},
@@ -4795,7 +4866,7 @@
 				"damage": "5d8",
 				"pcuCost": 10,
 				"bpCost": 8,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
 			},
@@ -4808,7 +4879,7 @@
 				"damage": "5d8",
 				"pcuCost": 10,
 				"bpCost": 10,
-				"specialProperties": "Limited fire 5, spore",
+				"specialProperties": ["limited-fire-5", "spore"],
 				"weight": "heavy",
 				"type": "Tracking"
 			},
@@ -4820,7 +4891,7 @@
 				"damage": "2d6×10",
 				"pcuCost": 40,
 				"bpCost": 50,
-				"specialProperties": "Tractor beam",
+				"specialProperties": ["tractor-beam"],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4832,7 +4903,7 @@
 				"damage": "2d6×10",
 				"pcuCost": 25,
 				"bpCost": 25,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4844,7 +4915,7 @@
 				"damage": "3d4×10",
 				"pcuCost": 30,
 				"bpCost": 30,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4856,7 +4927,7 @@
 				"damage": "2d10×10",
 				"pcuCost": 50,
 				"bpCost": 40,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4868,7 +4939,7 @@
 				"damage": "Special",
 				"pcuCost": 45,
 				"bpCost": 45,
-				"specialProperties": "EMP",
+				"specialProperties": ["emp"],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4880,7 +4951,7 @@
 				"damage": "3d6×10",
 				"pcuCost": 45,
 				"bpCost": 35,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4892,7 +4963,7 @@
 				"damage": "3d4×10",
 				"pcuCost": 50,
 				"bpCost": 60,
-				"specialProperties": "Line",
+				"specialProperties": ["line"],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4904,7 +4975,7 @@
 				"damage": "2d8×10",
 				"pcuCost": 50,
 				"bpCost": 60,
-				"specialProperties": "Irradiate (high)",
+				"specialProperties": ["irradiate-high"],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4916,7 +4987,7 @@
 				"damage": "2d4×10",
 				"pcuCost": 20,
 				"bpCost": 20,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4928,7 +4999,7 @@
 				"damage": "2d8×10",
 				"pcuCost": 40,
 				"bpCost": 35,
-				"specialProperties": "n/a",
+				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4940,7 +5011,7 @@
 				"damage": "2d12×10",
 				"pcuCost": 55,
 				"bpCost": 75,
-				"specialProperties": "Vortex",
+				"specialProperties": ["vortex"],
 				"weight": "capital",
 				"type": "Direct-Fire"
 			},
@@ -4952,7 +5023,7 @@
 				"damage": "4d10×10",
 				"pcuCost": 15,
 				"bpCost": 25,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
 			},
@@ -4964,7 +5035,7 @@
 				"damage": "2d10×10",
 				"pcuCost": 10,
 				"bpCost": 25,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
 			},
@@ -4976,7 +5047,7 @@
 				"damage": "4d8×10",
 				"pcuCost": 15,
 				"bpCost": 20,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
 			},
@@ -4988,7 +5059,7 @@
 				"damage": "2d8×10",
 				"pcuCost": 15,
 				"bpCost": 20,
-				"specialProperties": "Limited fire 5, quantum",
+				"specialProperties": ["limited-fire-5", "quantum"],
 				"weight": "capital",
 				"type": "Tracking"
 			},
@@ -5000,9 +5071,129 @@
 				"damage": "2d6×10",
 				"pcuCost": 10,
 				"bpCost": 20,
-				"specialProperties": "Limited fire 5",
+				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
+			}
+		]
+	},
+	"weaponSpecialProperty": {
+		"data": [
+			{
+				"id": "array",
+				"name": "Array",
+				"src": "SCR",
+				"ctMounts": 2
+			},
+			{
+				"id": "automated",
+				"name": "Automated",
+				"src": "SOM",
+				"isUpgrade": 1,
+				"bpMultiplier": 1.5
+			},
+			{
+				"id": "broad-arc",
+				"name": "Broad arc",
+				"src": "SCR"
+			},
+			{
+				"id": "burrowing",
+				"name": "Burrowing",
+				"src": "SCR"
+			},
+			{
+				"id": "deployed",
+				"name": "Deployed",
+				"src": "SOM",
+				"isUpgrade": 1,
+				"bpMultiplier": 2
+			},
+			{
+				"id": "emp",
+				"name": "EMP",
+				"src": "SCR"
+			},
+			{
+				"id": "irradiate-low",
+				"name": "Irradiate (low)",
+				"src": "SCR"
+			},
+			{
+				"id": "irradiate-medium",
+				"name": "Irradiate (medium)",
+				"src": "SCR"
+			},
+			{
+				"id": "irradiate-high",
+				"name": "Irradiate (high)",
+				"src": "SCR"
+			},
+			{
+				"id": "limited-fire-5",
+				"name": "Limited fire 5",
+				"src": "SCR"
+			},
+			{
+				"id": "line",
+				"name": "Line",
+				"src": "SOM",
+				"isUpgrade": 1,
+				"bpMultiplier": 1.75
+			},
+			{
+				"id": "mystical",
+				"name": "Mystical",
+				"src": "SOM",
+				"isUpgrade": 1,
+				"bpMultiplier": 1.25
+			},
+			{
+				"id": "point-8",
+				"name": "Point +8",
+				"src": "SCR"
+			},
+			{
+				"id": "point-10",
+				"name": "Point +10",
+				"src": "SCR"
+			},
+			{
+				"id": "point-12",
+				"name": "Point +12",
+				"src": "SCR"
+			},
+			{
+				"id": "quantum",
+				"name": "Quantum",
+				"src": "SCR"
+			},
+			{
+				"id": "ripper",
+				"name": "Ripper",
+				"src": "SCR"
+			},
+			{
+				"id": "smart",
+				"name": "Smart",
+				"src": "SOM",
+				"isUpgrade": 1,
+				"bpMultiplier": 1.5
+			},
+			{
+				"id": "spore",
+				"name": "Spore",
+				"src": "SCR"
+			},
+			{
+				"id": "tractor-beam",
+				"name": "Tractor Beam",
+				"src": "SCR"
+			},
+			{
+				"id": "vortex",
+				"name": "Vortex",
+				"src": "SCR"
 			}
 		]
 	},
@@ -5070,6 +5261,16 @@
 				"maxMounts": 4,
 				"maxMountWeight": "capital",
 				"countPowerCoreHousings": 4
+			},
+			{
+				"id": "Supercolossal",
+				"name": "Supercolossal",
+				"multiplier": 8,
+				"acAndTlModifier": -8,
+				"maxMounts": 4,
+				"maxMountWeight": "spinal-mount",
+				"countPowerCoreHousings": 4,
+				"countSupercolossalCoreHousings": 1
 			}
 		]
 	},

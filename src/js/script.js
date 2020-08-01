@@ -187,6 +187,8 @@ function Ship(json) {
         */
 		data: {
 			data: json,
+			paramsReset: {"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armourId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"basic-computer","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"defensiveCountermeasuresId":"none","driftEngineId":"none","expansionBayIds":[],"frameId":"base-ship","hasBiometricLocks":0,"hasCrew":1,"hasDataNet":0,"hasHiveJoining":0,"hasSelfDestructSystem":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none","none","none","none"],"sensorsId":"none","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","thrustersId":"none","tierId":"20","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"aft":[],"port":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"starboard":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"turret":[{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false}]}},
+			/*
 			paramsReset: {
 				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
@@ -383,6 +385,7 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
+			*/
 			params: {},
 			json: "",
 		},
@@ -710,10 +713,11 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			expansionBays: function() {
+				var that = this;
 				var expansionBays = [];
-				for(var i = 0; i < this.frame.expansionBays; i++) {
-					expansionBays[i] = this.getItemById("expansionBay", this.params.expansionBayIds[i]);
-				}
+				this.params.expansionBayIds.forEach(function(id) {
+					expansionBays.push(that.getItemById("expansionBay", id));
+				});
 				return expansionBays;
 			},
             /*
@@ -1292,6 +1296,7 @@ function Ship(json) {
 					for(i in this.params.weaponMounts[position]) {
 						var params = cloneObject(this.params.weaponMounts[position][i]);
 						params.position = position;
+						params.sizeCategoryId = this.sizeCategory.id;
 						var mountObj = new WeaponMount(params);
 						var weaponObj = this.getItemById('shipWeapon', mountObj.weaponId);
 						weaponMounts[position][i] = {
@@ -1541,6 +1546,12 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            getAvailableWeaponUpgrades: function(weapon) {
+            	return [{id: "test", name: "Test"}];
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			getFrameMountWeaponWeight: function(position, index) {
 				return this.frame.mounts[position][index];
 			},
@@ -1562,6 +1573,22 @@ function Ship(json) {
 				}
 				return item;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            getNamesFromIds: function(prop, ids, emptyString) {
+            	if (!ids || ids.length == 0) return emptyString ? emptyString : "";
+
+            	var that = this;
+
+				var names = [];
+				ids.forEach(function(id) {
+					var obj = that.getItemById(prop, id);
+					names.push(obj.name);
+				});
+
+				return names.join(", ");
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1797,11 +1824,11 @@ function Ship(json) {
 			},
             /*
             |------------------------------------------------------------------------------
-            */
 			syncExpansionBays: function( targetCountBays ) {
 				this.popExcessExpansionBays( targetCountBays );
 				this.maybeCreateExpansionBays(  targetCountBays );
 			},
+            */
             /*
             |------------------------------------------------------------------------------
             */
@@ -1880,7 +1907,7 @@ function Ship(json) {
 | WEAPON MOUNT
 |------------------------------------------------------------------------------------------
 |
-| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, isLinked
+| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, isLinked, sizeCategoryId
 | maybe expects templateWeight
 |
 |------------------------------------------------------------------------------------------
@@ -1934,6 +1961,8 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
 	this.testThatTurretIsNotCapital = function() {
+		if ( this.sizeCategoryId == "Supercolossal" ) return;
+
 		if ( this.position == "turret" && (this.weight == "capital" || this.templateWeight == "capital") ) {
 			throw "Turrets cannot have weight 'capital' in WeaponMount";
 		}
@@ -2009,6 +2038,7 @@ function WeaponMount(params) {
 	}
 	this.canBeLinked = params.canBeLinked;
 	this.isLinked = params.isLinked;
+	this.sizeCategoryId = params.sizeCategoryId; // of ship
 	
 	this.doTests();
 

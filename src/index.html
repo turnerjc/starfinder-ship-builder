@@ -72,6 +72,11 @@
 			<desc>Add</desc>
 			<path d="M2.474 6.955h5.72v-5.72c0-3.3 4.974-3.3 4.974 0v5.72h5.72c3.273 0 3.273 4.973 0 4.973h-5.72v5.721c0 3.273-4.974 3.273-4.974 0v-5.72h-5.72c-3.299 0-3.299-4.974 0-4.974z"/>
 		</symbol>
+		<symbol id="icon-duplicate" viewBox="0 0 20 20">
+			<title>Duplicate</title>
+			<desc>Duplicate</desc>
+			<path d="M8.546 13.207h6.578c.511 0 1.011-.52.985-1.13-.027-.61-.434-1.13-.985-1.13H8.546c-.513 0-1.01.52-.984 1.13.026.61.433 1.13.984 1.13z"/><path d="M4.549 4.154a.835.835 0 00-.837.837v14.172c0 .464.372.837.837.837h14.57a.836.836 0 00.84-.837V4.99a.836.836 0 00-.84-.837zm1.72 2.435H17.4c.066 0 .118.052.118.117v10.742a.117.117 0 01-.118.118H6.27a.117.117 0 01-.118-.118V6.706c0-.065.053-.117.118-.117z"/><path d="M.863.023A.834.834 0 00.025.86v14.172c0 .465.374.838.838.838h2.848v-2.435H2.582a.116.116 0 01-.117-.118V2.574c0-.065.052-.117.117-.117h11.13c.066 0 .118.052.118.117v1.58h2.441V.86a.834.834 0 00-.837-.836H.864z"/><path d="M10.706 8.788v6.578c0 .512.52 1.011 1.13.985.608-.027 1.129-.434 1.129-.985V8.788c0-.513-.52-1.01-1.13-.984-.61.026-1.13.433-1.13.984z"/>
+		</symbol>
 	</svg>	
 	
 	<div id="app" class="wrapper">
@@ -99,7 +104,7 @@
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
 						<li><a href="#driftEngine">Drift Engine</a></li>
-						<li v-if="frame.expansionBays > 0"><a href="#expansionBays">Expansion Bays</a></li>
+						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
 						<li><a href="#security">Security</a></li>
 						<li><a href="#sensors">Sensors</a></li>
 						<li><a href="#shields">Shields</a></li>
@@ -202,6 +207,7 @@
 			<div class="box">
 				<p>Huge thanks to Patreon supporters:</p>
 				<ul class="supporters">
+					<li>Albert Scott Bodenhamer</li>
 					<li>Anish Hermon</li>
 					<li>Charles Mitchell</li>
 					<li>Corey Piper</li>
@@ -873,7 +879,7 @@
 			|------------------------------------------------------------
 			-->
 			
-			<div class="box" v-if="frame.expansionBays > 0">
+			<div class="box" v-if="frame.expansionBays !== 0">
 				<header class="box__header">
 					<h3 id="expansionBays">Expansion Bays</h3>
 				</header>
@@ -883,28 +889,54 @@
 					<span class="cost__values">
 						<span class="cost__current"
 							v-bind:class="{ 'cost__current--danger': isExpansionBaysCountOverBudget }">{{ expansionBaysCountUsed }}</span> /
-							<span class="cost__budget">{{ this.frame.expansionBays }}</span>
+							<span class="cost__budget">{{ frame.expansionBays }}</span>
 					</span>
 				</div>
 				<ul class="box__select">
 					<template v-for="(expansionBay, i) in expansionBays">
 						<li>
+							<div class="box__header--btns">
+								<h4>
+									<label :for="'expansionBaySelect'+i">Expansion Bay {{ i+1 }}</label>
+								</h4>
+								<div>
+									<!-- duplicate -->
+									<button class="btn btn-primary btn-sm"
+										:disabled="frame.expansionBays != 'Unlimited' && expansionBaysCountUsed >= frame.expansionBays"
+										@click="params.expansionBayIds.splice(i+1, 0, params.expansionBayIds[i]);">
+										<svg class="icon"><use xlink:href="#icon-duplicate" /></svg>
+									</button>
+
+									<!-- delete -->
+									<button class="btn btn-danger btn-sm"
+										@click="params.expansionBayIds.splice(i, 1);">
+										<svg class="icon"><use xlink:href="#icon-trash" /></svg>
+									</button>
+								</div>
+							</div>
+
+							<!-- select -->
 							<div class="form-group">
-								<label :for="'expansionBaySelect'+i">Expansion Bay {{ i+1 }}</label>
 								<select v-model="params.expansionBayIds[i]" :id="'expansionBaySelect'+i" class="form-control">
-									<option
-										v-for="option in selectOptions.expansionBay"
-										v-if="(!params.isUseStrictRules) || (option.sizes.indexOf(sizeCategory.id) !== -1 )"
-										:value="option.id">{{ option.name + ((option.numBays > 1) ? ' (' + option.numBays + ' Slots)' : '') }}</option>
+									<option v-for="option in selectOptions.expansionBay" v-if="(!params.isUseStrictRules) || (option.sizes.indexOf(sizeCategory.id) !== -1 )" :value="option.id">{{ option.name + ((option.numBays > 1) ? ' (' + option.numBays + ' Slots)' : '') }}</option>
 								</select>
 							</div>
+
 							<div class="box__cost--list">
 								<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ expansionBay.pcuCost }}
 								<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ expansionBay.bpCost }}
 							</div>
+
 						</li>
 					</template>
 				</ul>
+
+				<div class="box__under-box align-right">
+					<button @click="params.expansionBayIds.push('none')"
+						:disabled="frame.expansionBays != 'Unlimited' && expansionBaysCountUsed >= frame.expansionBays"
+						class="btn btn-primary">Create New Expansion Bay</button>
+				</div>
+
 				<div class="box__cost">
 					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ expansionBaysTotalPcuCost }}
 					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ expansionBaysTotalBpCost }}
@@ -1279,8 +1311,21 @@
 							<strong>Range</strong> {{ weaponMount.weapon.range }};
 							<strong>Speed</strong> {{ weaponMount.weapon.speed }};
 							<strong>Damage</strong> {{ weaponMount.weapon.damage }};
-							<strong>Special Properties</strong> {{ weaponMount.weapon.specialProperties }}
+							<strong>Special Properties</strong> {{ getNamesFromIds("weaponSpecialProperty", weaponMount.weapon.specialProperties, "n/a") }}
 						</div>
+						
+
+						<!-- Upgrades -->
+						<!-- <div class="box__select">
+							<div><strong>Upgrades Available</strong></div>
+							<div class="checkbox" v-for="(upgrade, j) in getAvailableWeaponUpgrades(weaponMount.weapon)">
+								<label :for="'upgrade_' + position + '_' + j">
+									<input type="checkbox"
+										:id="'upgrade_' + position + '_' + j">
+									{{ upgrade.name }}
+								</label>
+							</div>
+						</div> -->
 						
 
 						<!-- Is Linked -->
@@ -1687,7 +1732,7 @@
 					<li>
 						Starfinder RPG Ship Builder by <a href="http://www.jamesturneronline.net">James Turner</a> &bull;
 						<a href="https://twitter.com/james_c_turner">@james_c_turner</a>  &bull;
-						Sep 2017 (last updated May 2020)
+						Sep 2017 (last updated August 2020)
 					</li>
 					<li><a href="http://paizo.com/starfinder/">Starfinder RPG</a> &copy; Paizo Inc, 2017</li>
 					<li>Open Game Licence</li>
@@ -1719,6 +1764,10 @@
 							<svg class="icon"><use xlink:href="#icon-plus" /></svg>
 							created by <a href="https://thenounproject.com/bunkgensara/">Bismillah</a>
 						</li>
+						<li>
+							<svg class="icon"><use xlink:href="#icon-duplicate" /></svg>
+							created by <a href="https://thenounproject.com/tyagineha.2112/">Neha Tyagi</a>
+						</li>
 					</ul>
 				</ul>
 			</footer>
@@ -1747,6 +1796,6 @@
 	<script src="https://unpkg.com/vue"></script>
 
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
-	<script src="js/script.js?v=20200503"></script>
+	<script src="js/script.js?v=20200801"></script>
 </body>
 </html>
