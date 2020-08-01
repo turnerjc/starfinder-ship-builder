@@ -251,10 +251,28 @@
 				<header class="box__header">
 					<h2 id="input">Input</h2>
 				</header>
-				
+
 				<div class="box__select">
 					<div class="form-group">
 						<label for="sampleShipSelect">Select a sample ship</label>
+
+						<!-- sort by -->
+						<div class="form-inline">
+							Sort by:
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="selectSampleShipSortOrder" value="name" v-model="selectSampleShipSortOrder">
+							    Name
+							  </label>
+							</div>
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="selectSampleShipSortOrder" value="tier" v-model="selectSampleShipSortOrder">
+							    Tier
+							  </label>
+							</div>
+						</div>
+						
 						<select class="form-control" id="sampleShipSelect" v-on:change="inputSampleShipParams">
 							<option value="none">None</option>
 							<option v-for="option in selectOptions.sampleShip" :value="option.id">{{ option.name }} (Tier {{ option.tier }} {{ getItemById('frame', option.params.frameId).name }})</option>

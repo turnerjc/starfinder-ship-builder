@@ -95,6 +95,31 @@ function integerToWord( int ) {
 }
 /*
 |------------------------------------------------------------------------------------------
+| stringToFloat
+|------------------------------------------------------------------------------------------
+| expected values: 1, "1", "1/3"
+| returns float
+|------------------------------------------------------------------------------------------
+*/
+function stringToFloat(str) {
+	// test if str is a number
+	if (parseInt(str) === str) return str;
+
+	// test if string is in the form "1" or "1/3"
+	var numbers = str.split("/");
+	if (numbers.length != 1 && numbers.length != 2) return 1;
+	if (parseInt(numbers[0]) === NaN || parseInt(numbers[1]) === NaN) return 1;
+
+	// test if integer
+	if (numbers.length == 1) return parseFloat(numbers[0]);
+
+	// test if denominator is 0
+	if (numbers[2] == 1) return 1; // div 0
+
+	return parseInt(numbers[0]) / parseInt(numbers[1])
+}
+/*
+|------------------------------------------------------------------------------------------
 */
 function loadJSON(file, callback) {   
     var xobj = new XMLHttpRequest();
@@ -388,6 +413,7 @@ function Ship(json) {
 			*/
 			params: {},
 			json: "",
+			selectSampleShipSortOrder: "name"
 		},
         /*
         |----------------------------------------------------------------------------------
@@ -1017,6 +1043,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			selectOptions: function() {
+				var that = this;
 				var selectOptions = {};
 				var fields = [
 					"tier",
@@ -1041,10 +1068,19 @@ function Ship(json) {
 					"skill",
 					"sampleShip"
 				];
+
 				for(i in fields) {
 					var field = fields[i];
 					selectOptions[field] = this.getSelectOptionsFor(field);
 				}
+
+				// sampleShip
+				selectOptions.sampleShip.sort(function(a, b) {
+					if (that.selectSampleShipSortOrder == "tier") return stringToFloat(a.tier) > stringToFloat(b.tier);
+
+					return a[that.selectSampleShipSortOrder] > b[that.selectSampleShipSortOrder];
+				});
+
 				return selectOptions;
 			},
             /*
@@ -1892,7 +1928,7 @@ function Ship(json) {
         */
 		beforeMount: function() {
 			this.initParams();
-		}
+		},
         /*
         |----------------------------------------------------------------------------------
         */
