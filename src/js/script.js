@@ -386,6 +386,7 @@ function Ship(json) {
 	            customFrameBaseId: "light-freighter",
 	            customComponents: [],
 				defensiveCountermeasuresId:"none",
+				deflectorShieldId: "none",
 				driftEngineId:"none",
 				expansionBayIds:["none","none","none"],
 				frameId:"light-freighter",
@@ -398,6 +399,7 @@ function Ship(json) {
 				isUseStrictRules:1,
 				powerCoreIds:["none"],
 				sensorsId:"none",
+				shieldType: "shields",
                 shieldsByPosition: {
                     forward: 0,
                     aft: 0,
@@ -455,7 +457,7 @@ function Ship(json) {
 			}, // paramsReset
 			params: {},
 			json: "",
-			selectSampleShipSortOrder: "name"
+			selectSampleShipSortOrder: "name",
 		},
         /*
         |----------------------------------------------------------------------------------
@@ -522,7 +524,8 @@ function Ship(json) {
 				return 10 +
 					this.armor.bonusToAc +
 					this.sizeCategory.acAndTlModifier +
-					this.pilotingRanks
+					this.pilotingRanks +
+					this.deflectorShield.bonusToAc
 				;
 			},
             /*
@@ -780,6 +783,12 @@ function Ship(json) {
             */
 			defensiveCountermeasures: function() {
 				return this.getItemById("defensiveCountermeasures", this.params.defensiveCountermeasuresId);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			deflectorShield: function() {
+				return this.getItemById("deflectorShield", this.params.deflectorShieldId);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1122,6 +1131,7 @@ function Ship(json) {
 					"computerCountermeasures",
 					"crewQuarters",
 					"defensiveCountermeasures",
+					"deflectorShield",
 					"driftEngine",
 					"expansionBay",
 					"frame",
@@ -1291,7 +1301,8 @@ function Ship(json) {
 					this.sizeCategory.acAndTlModifier +
 					this.armor.targetLockModifier +
 					this.pilotingRanks +
-					this.ablativeArmor.tlMod
+					this.ablativeArmor.tlMod +
+					this.deflectorShield.bonusToTl
 				;
 			},
             /*
@@ -1321,6 +1332,7 @@ function Ship(json) {
 					essential: this.thrusters.pcuCost +
 						this.defensiveCountermeasures.pcuCost +
 						this.shields.pcuCost +
+						this.deflectorShield.pcuCost +
 						this.weaponsTotalCosts.weaponsPcu +
 						parseInt(this.customComponentPcuTotal.essential),
 					nonEssential: this.computer.pcuCost +
@@ -1344,6 +1356,7 @@ function Ship(json) {
 					parseInt(this.crewQuarters.bpCost) +
 					parseInt(this.dataNetBpCost) +
 					parseInt(this.defensiveCountermeasures.bpCost) +
+					parseInt(this.deflectorShield.bpCost) +
 					parseInt(this.driftEngineBpCost) +
 					parseInt(this.expansionBaysTotalBpCost) +
 					parseInt(this.frame.bpCost) +

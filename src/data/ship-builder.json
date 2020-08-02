@@ -187,6 +187,245 @@
 			}
 		]
 	},
+	"armor": {
+		"props": [
+			"bonusToAc"
+		],
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"bonusToAc": 0,
+				"targetLockModifier": 0,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 0
+			},
+			{
+				"id": "mk-1",
+				"name": "Mk 1 armor",
+				"bonusToAc": 1,
+				"targetLockModifier": 0,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 1
+			},
+			{
+				"id": "mk-2",
+				"name": "Mk 2 armor",
+				"bonusToAc": 2,
+				"targetLockModifier": 0,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 2
+			},
+			{
+				"id": "mk-3",
+				"name": "Mk 3 armor",
+				"bonusToAc": 3,
+				"targetLockModifier": 0,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 3
+			},
+			{
+				"id": "mk-4",
+				"name": "Mk 4 armor",
+				"bonusToAc": 4,
+				"targetLockModifier": 0,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 5
+			},
+			{
+				"id": "mk-5",
+				"name": "Mk 5 armor",
+				"bonusToAc": 5,
+				"targetLockModifier": -1,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 7
+			},
+			{
+				"id": "mk-6",
+				"name": "Mk 6 armor",
+				"bonusToAc": 6,
+				"targetLockModifier": -1,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 9
+			},
+			{
+				"id": "mk-7",
+				"name": "Mk 7 armor",
+				"bonusToAc": 7,
+				"targetLockModifier": -1,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 12
+			},
+			{
+				"id": "mk-8",
+				"name": "Mk 8 armor",
+				"bonusToAc": 8,
+				"targetLockModifier": -1,
+				"turnDistanceModifier": 0,
+				"bpCostMultiplier": 15
+			},
+			{
+				"id": "mk-9",
+				"name": "Mk 9 armor",
+				"bonusToAc": 9,
+				"targetLockModifier": -2,
+				"turnDistanceModifier": 1,
+				"bpCostMultiplier": 18
+			},
+			{
+				"id": "mk-10",
+				"name": "Mk 10 armor",
+				"bonusToAc": 10,
+				"targetLockModifier": -2,
+				"turnDistanceModifier": 1,
+				"bpCostMultiplier": 21
+			},
+			{
+				"id": "mk-11",
+				"name": "Mk 11 armor",
+				"bonusToAc": 11,
+				"targetLockModifier": -2,
+				"turnDistanceModifier": 1,
+				"bpCostMultiplier": 25
+			},
+			{
+				"id": "mk-12",
+				"name": "Mk 12 armor",
+				"bonusToAc": 12,
+				"targetLockModifier": -3,
+				"turnDistanceModifier": 2,
+				"bpCostMultiplier": 30
+			},
+			{
+				"id": "mk-13",
+				"name": "Mk 13 armor",
+				"bonusToAc": 13,
+				"targetLockModifier": -3,
+				"turnDistanceModifier": 2,
+				"bpCostMultiplier": 35
+			},
+			{
+				"id": "mk-14",
+				"name": "Mk 14 armor",
+				"bonusToAc": 14,
+				"targetLockModifier": -3,
+				"turnDistanceModifier": 2,
+				"bpCostMultiplier": 40
+			},
+			{
+				"id": "mk-15",
+				"name": "Mk 15 armor",
+				"bonusToAc": 15,
+				"targetLockModifier": -4,
+				"turnDistanceModifier": 3,
+				"bpCostMultiplier": 45
+			}
+		]
+	},
+	"deflectorShield": {
+		"src": "SOM",
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"defenseValue": 0,
+				"bonusToAc": 0,
+				"bonusToTl": 0,
+				"pcuCost": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "basic-1",
+				"name": "Basic deflector shield 1",
+				"defenseValue": 1,
+				"bonusToAc": 1,
+				"bonusToTl": 1,
+				"pcuCost": 5,
+				"bpCost": 4
+			},
+			{
+				"id": "basic-3",
+				"name": "Basic deflector shield 3",
+				"defenseValue": 3,
+				"bonusToAc": 1,
+				"bonusToTl": 1,
+				"pcuCost": 5,
+				"bpCost": 6
+			},
+			{
+				"id": "light-5",
+				"name": "Light deflector shield 5",
+				"defenseValue": 5,
+				"bonusToAc": 1,
+				"bonusToTl": 2,
+				"pcuCost": 10,
+				"bpCost": 12
+			},
+			{
+				"id": "light-8",
+				"name": "Light deflector shield 8",
+				"defenseValue": 8,
+				"bonusToAc": 1,
+				"bonusToTl": 2,
+				"pcuCost": 15,
+				"bpCost": 15
+			},
+			{
+				"id": "medium-10",
+				"name": "Medium deflector shield 10",
+				"defenseValue": 10,
+				"bonusToAc": 2,
+				"bonusToTl": 2,
+				"pcuCost": 30,
+				"bpCost": 22
+			},
+			{
+				"id": "medium-12",
+				"name": "Medium deflector shield 12",
+				"defenseValue": 12,
+				"bonusToAc": 2,
+				"bonusToTl": 2,
+				"pcuCost": 45,
+				"bpCost": 26
+			},
+			{
+				"id": "heavy-13",
+				"name": "Heavy deflector shield 13",
+				"defenseValue": 13,
+				"bonusToAc": 2,
+				"bonusToTl": 3,
+				"pcuCost": 60,
+				"bpCost": 33
+			},
+			{
+				"id": "heavy-15",
+				"name": "Heavy deflector shield 15",
+				"defenseValue": 15,
+				"bonusToAc": 2,
+				"bonusToTl": 3,
+				"pcuCost": 80,
+				"bpCost": 36
+			},
+			{
+				"id": "superior-18",
+				"name": "Superior deflector shield 18",
+				"defenseValue": 18,
+				"bonusToAc": 3,
+				"bonusToTl": 3,
+				"pcuCost": 100,
+				"bpCost": 45
+			},
+			{
+				"id": "superior-20",
+				"name": "Superior deflector shield 20",
+				"defenseValue": 20,
+				"bonusToAc": 3,
+				"bonusToTl": 3,
+				"pcuCost": 120,
+				"bpCost": 50
+			}
+		]
+	},
 	"tier": {
 		"data": [
 			{
@@ -1483,141 +1722,6 @@
 				"pilotingModifier": 0,
 				"pcuCost": 400,
 				"bpCost": 16
-			}
-		]
-	},
-	"armor": {
-		"props": [
-			"bonusToAc"
-		],
-		"data": [
-			{
-				"id": "none",
-				"name": "None",
-				"bonusToAc": 0,
-				"targetLockModifier": 0,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 0
-			},
-			{
-				"id": "mk-1",
-				"name": "Mk 1 armor",
-				"bonusToAc": 1,
-				"targetLockModifier": 0,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 1
-			},
-			{
-				"id": "mk-2",
-				"name": "Mk 2 armor",
-				"bonusToAc": 2,
-				"targetLockModifier": 0,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 2
-			},
-			{
-				"id": "mk-3",
-				"name": "Mk 3 armor",
-				"bonusToAc": 3,
-				"targetLockModifier": 0,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 3
-			},
-			{
-				"id": "mk-4",
-				"name": "Mk 4 armor",
-				"bonusToAc": 4,
-				"targetLockModifier": 0,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 5
-			},
-			{
-				"id": "mk-5",
-				"name": "Mk 5 armor",
-				"bonusToAc": 5,
-				"targetLockModifier": -1,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 7
-			},
-			{
-				"id": "mk-6",
-				"name": "Mk 6 armor",
-				"bonusToAc": 6,
-				"targetLockModifier": -1,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 9
-			},
-			{
-				"id": "mk-7",
-				"name": "Mk 7 armor",
-				"bonusToAc": 7,
-				"targetLockModifier": -1,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 12
-			},
-			{
-				"id": "mk-8",
-				"name": "Mk 8 armor",
-				"bonusToAc": 8,
-				"targetLockModifier": -1,
-				"turnDistanceModifier": 0,
-				"bpCostMultiplier": 15
-			},
-			{
-				"id": "mk-9",
-				"name": "Mk 9 armor",
-				"bonusToAc": 9,
-				"targetLockModifier": -2,
-				"turnDistanceModifier": 1,
-				"bpCostMultiplier": 18
-			},
-			{
-				"id": "mk-10",
-				"name": "Mk 10 armor",
-				"bonusToAc": 10,
-				"targetLockModifier": -2,
-				"turnDistanceModifier": 1,
-				"bpCostMultiplier": 21
-			},
-			{
-				"id": "mk-11",
-				"name": "Mk 11 armor",
-				"bonusToAc": 11,
-				"targetLockModifier": -2,
-				"turnDistanceModifier": 1,
-				"bpCostMultiplier": 25
-			},
-			{
-				"id": "mk-12",
-				"name": "Mk 12 armor",
-				"bonusToAc": 12,
-				"targetLockModifier": -3,
-				"turnDistanceModifier": 2,
-				"bpCostMultiplier": 30
-			},
-			{
-				"id": "mk-13",
-				"name": "Mk 13 armor",
-				"bonusToAc": 13,
-				"targetLockModifier": -3,
-				"turnDistanceModifier": 2,
-				"bpCostMultiplier": 35
-			},
-			{
-				"id": "mk-14",
-				"name": "Mk 14 armor",
-				"bonusToAc": 14,
-				"targetLockModifier": -3,
-				"turnDistanceModifier": 2,
-				"bpCostMultiplier": 40
-			},
-			{
-				"id": "mk-15",
-				"name": "Mk 15 armor",
-				"bonusToAc": 15,
-				"targetLockModifier": -4,
-				"turnDistanceModifier": 3,
-				"bpCostMultiplier": 45
 			}
 		]
 	},
