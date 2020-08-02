@@ -5,7 +5,8 @@ var WEAPON_SORT = {
 	portArc: 1,
 	starboardArc: 2,
 	aftArc: 3,
-	turret: 4
+	turret: 4,
+	spinal: 5
 };
 
 var WEAPON_ARCS = [
@@ -120,6 +121,42 @@ function stringToFloat(str) {
 }
 /*
 |------------------------------------------------------------------------------------------
+| stringToDice
+|------------------------------------------------------------------------------------------
+| expected values: "Special", "1d4", "3d4+6", "5d10×10"
+| returns object
+|------------------------------------------------------------------------------------------
+*/
+function stringToDice(str) {
+	// validate input
+	if (str == "Special") return "Special";
+
+	var formula = {
+		ctDice: 0,
+		ctFaces: 0,
+		mod: 0,
+		mult: 1
+	};
+
+    // mult
+    var multSplit = str.split('×');
+    if (multSplit.length == 2) formula.mult = parseInt(multSplit[1]);
+
+    // modifier
+    var modSplit = str.split('+');
+    if (modSplit.length == 2) formula.mod = parseInt(modSplit[1]);
+
+    // dice
+    var dieSplit = str.split('d');
+    if (dieSplit.length != 2) return 'error';
+
+    formula.ctDice = parseInt(dieSplit[0]);
+    formula.ctFaces = parseInt(dieSplit[1]);
+
+    return formula;
+}
+/*
+|------------------------------------------------------------------------------------------
 */
 function loadJSON(file, callback) {   
     var xobj = new XMLHttpRequest();
@@ -212,12 +249,12 @@ function Ship(json) {
         */
 		data: {
 			data: json,
-			paramsReset: {"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armourId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"basic-computer","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"defensiveCountermeasuresId":"none","driftEngineId":"none","expansionBayIds":[],"frameId":"base-ship","hasBiometricLocks":0,"hasCrew":1,"hasDataNet":0,"hasHiveJoining":0,"hasSelfDestructSystem":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none","none","none","none"],"sensorsId":"none","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","thrustersId":"none","tierId":"20","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"aft":[],"port":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"starboard":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"turret":[{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false}]}},
-			/*
+			// paramsReset: {"version":"1.0.1","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"UIE Hiveguard","shipConcept":"Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.","tierId":"6","frameId":"destroyer","powerCoreIds":["arcus-maximum"],"thrustersId":"l8","armorId":"mk-4","computerId":"mk-1-trinode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-4","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","escape-pods","escape-pods","escape-pods"],"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"hasSelfDestructSystem":0,"hasDataNet":0,"hasHiveJoining":0,"sensorsId":"basic-long-range","shieldsId":"light-60","weaponMounts":{"forward":[{"weaponId":"heavy-laser-net","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"twin-laser","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"aft":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"port":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"starboard":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"turret":[{"weaponId":"light-torpedo-launcher","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}]},"crewSkills":{"captain":{"count":1,"countOfficers":0,"hasRole":1,"skills":{"bluff":{"modifier":7,"ranks":6},"computers":{"modifier":7,"ranks":6},"diplomacy":{"modifier":7,"ranks":6},"engineering":{"modifier":7,"ranks":6},"gunnery":{"modifier":13},"intimidate":{"modifier":7,"ranks":6},"piloting":{"modifier":7,"ranks":6}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":12,"ranks":6}},"countOfficers":1,"countOfficerCrew":3},"gunner":{"skills":{"gunnery":{"modifier":13}},"hasRole":1,"countOfficers":2,"countOfficerCrew":2},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"shieldsByPosition":{"forward":15,"aft":15,"port":15,"starboard":15}},
 			paramsReset: {
+				ablativeArmorId: "none",
 				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
-				armourId:"none",
+				armorId:"none",
 				computerCountermeasures: {
 					alarm: false,
 					fakeShell: false,
@@ -410,7 +447,6 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
-			*/
 			params: {},
 			json: "",
 			selectSampleShipSortOrder: "name"
@@ -448,21 +484,21 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-			armour: function () {
-				return this.getItemById("armour", this.params.armourId);
+			armor: function () {
+				return this.getItemById("armor", this.params.armorId);
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			armourBpCost: function() {
-				return this.armour.bpCostMultiplier * this.sizeCategory.multiplier;
+			armorBpCost: function() {
+				return this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
 			},
             /*
             |------------------------------------------------------------------------------
             */
-			armourClass: function() {
+			armorClass: function() {
 				return 10 +
-					this.armour.bonusToAc +
+					this.armor.bonusToAc +
 					this.sizeCategory.acAndTlModifier +
 					this.pilotingRanks
 				;
@@ -470,22 +506,22 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-			armourSpecial: function() {
+			armorSpecial: function() {
 				var output = [];
 				var outputStr = "n/a";
 				// targetLockModifier
 				if (
-					isset(this.armour.targetLockModifier) &&
-					this.armour.targetLockModifier < 0
+					isset(this.armor.targetLockModifier) &&
+					this.armor.targetLockModifier < 0
 				) {
-					output.push(this.armour.targetLockModifier + " TL");
+					output.push(this.armor.targetLockModifier + " TL");
 				}
 				// turnDistanceModifier
 				if (
-					isset(this.armour.turnDistanceModifier) &&
-					this.armour.turnDistanceModifier > 0
+					isset(this.armor.turnDistanceModifier) &&
+					this.armor.turnDistanceModifier > 0
 				) {
-					output.push("+" + this.armour.turnDistanceModifier + " turn distance");
+					output.push("+" + this.armor.turnDistanceModifier + " turn distance");
 				}
 				// output
 				if ( output.length > 0 ) {
@@ -1050,7 +1086,7 @@ function Ship(json) {
 					"frame",
 					"powerCore",
 					"thrusters",
-					"armour",
+					"armor",
 					"computer",
 					"crewQuarters",
 					"defensiveCountermeasures",
@@ -1079,6 +1115,11 @@ function Ship(json) {
 					if (that.selectSampleShipSortOrder == "tier") return stringToFloat(a.tier) > stringToFloat(b.tier);
 
 					return a[that.selectSampleShipSortOrder] > b[that.selectSampleShipSortOrder];
+				});
+
+				// ship weapon
+				selectOptions.shipWeapon.sort(function(a, b) {
+					return a.name > b.name;
 				});
 
 				return selectOptions;
@@ -1183,9 +1224,9 @@ function Ship(json) {
 				if ( this.params.crewQuartersId !== "none" ) {
 					desc.push( "crew quarters (" + this.crewQuarters.name.toLowerCase() + ")" );
 				} 
-				// armour
-				if ( this.params.armourId !== "none" ) {
-					desc.push( this.armour.name.toLowerCase() );
+				// armor
+				if ( this.params.armorId !== "none" ) {
+					desc.push( this.armor.name.toLowerCase() );
 				}
 				// defences
 				if ( this.params.defensiveCountermeasuresId !== "none" ) {
@@ -1214,7 +1255,7 @@ function Ship(json) {
 				return 10 +
 					this.defensiveCountermeasures.defCMBonusToTl +
 					this.sizeCategory.acAndTlModifier +
-					this.armour.targetLockModifier +
+					this.armor.targetLockModifier +
 					this.pilotingRanks
 				;
 			},
@@ -1254,7 +1295,7 @@ function Ship(json) {
 				return parseInt(this.frame.bpCost) +
 					parseInt(this.powerCoresBpCost) +
 					parseInt(this.thrusters.bpCost) +
-					parseInt(this.armourBpCost) +
+					parseInt(this.armorBpCost) +
 					parseInt(this.computer.bpCost) +
 					parseInt(this.crewQuarters.bpCost) +
 					parseInt(this.defensiveCountermeasures.bpCost) +
@@ -1279,7 +1320,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			turn: function() {
-				return this.maneuverabilityRating.turn + this.armour.turnDistanceModifier;
+				return this.maneuverabilityRating.turn + this.armor.turnDistanceModifier;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1306,14 +1347,24 @@ function Ship(json) {
 
                         var weaponName = mount.weapon.name.toLowerCase();
                         
+                        // weapon name
                         if ( mount.isLinked ) {
-                            // mountDesc = "linked " + weaponName.pluralise(2) + " (" + mount.weapon.damage + ")"
-                            mountDesc = "linked " + weaponName.pluralise(2) + " (" + this.getWeaponDamage(mount) + ")"
+                            mountDesc = "linked " + weaponName.pluralise(2);
                         } else {
-                            // mountDesc = weaponName + " (" + mount.weapon.damage + ")"
-                            mountDesc = weaponName + " (" + this.getWeaponDamage(mount) + ")"
+                            mountDesc = weaponName;
                         }
-                        
+
+                        // weapon damage and special properties
+                        mountDesc += " (" + this.getWeaponDamage(mount);
+                        if (mount.weapon.specialProperties.length > 0) {
+                        	let wpnSpcPropDesc = ", ";
+                        	wpnSpcPropDesc += this.getNamesFromIds("weaponSpecialProperty", mount.weapon.specialProperties, "").toLowerCase();
+                        	wpnSpcPropDesc = wpnSpcPropDesc.replace("(", "[");
+                        	wpnSpcPropDesc = wpnSpcPropDesc.replace(")", "]");
+                        	mountDesc += wpnSpcPropDesc;
+                        }
+                        mountDesc += ")";
+
                         positionDesc.push(mountDesc);
 					}
 					if (positionDesc.length > 0) {
@@ -1658,11 +1709,20 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
             getWeaponDamage: function(mount) {
+            	if (mount.weapon.damage == "Special") return "Special";
+
+            	var dice = stringToDice(mount.weapon.damage);
+            	if (dice === "error") return "error";
+
+            	// multiplier for linked weapons
                 var mult = (mount.isLinked ? 2 : 1);
-                var split = mount.weapon.damage.split('d');
-                if (split.length != 2) return 'error';
-                var countDice = split[0];
-                return (mult * countDice) + 'd' + split[1];
+                
+                var result = "";
+                result += mult * dice.ctDice;
+                result += "d" + dice.ctFaces;
+                if (dice.mod > 0) result += "+" + mult * dice.mod;
+
+                return result;
             },
             /*
             |------------------------------------------------------------------------------
@@ -1831,7 +1891,7 @@ function Ship(json) {
 
                 this.clearWeaponMounts();
 
-                var arcs = ["forward", "aft", "port", "starboard", "turret"];
+                var arcs = ["forward", "aft", "port", "starboard", "turret", "spinal"];
 
                 for(arcIndex in arcs) {
 					var arc = arcs[ arcIndex ];
@@ -1901,7 +1961,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			updateFrame: function() {
-				this.syncExpansionBays( this.frame.expansionBays );
+				// this.syncExpansionBays( this.frame.expansionBays );
 				this.setCrewQuarters( this.frame.size );
 				this.setWeaponMounts( this.frame.mounts );
 			},
@@ -1965,7 +2025,7 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
 	this.testThatPositionIsValid = function() {
-		if (["forward", "aft", "port", "starboard", "turret"].indexOf(this.position) == -1) {
+		if (["forward", "aft", "port", "starboard", "turret", "spinal"].indexOf(this.position) == -1) {
 			throw "Invalid position in WeaponMount class: " + this.position;
 		}
 	}
@@ -1974,7 +2034,7 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
 	this.testThatWeightIsValid = function(weight) {
-		if (["light", "heavy", "capital"].indexOf(weight) == -1) {
+		if (["light", "heavy", "capital", "spinal"].indexOf(weight) == -1) {
 			throw "Invalid weight in WeaponMount class: " + weight;
 		}
 	}

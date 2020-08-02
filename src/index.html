@@ -99,7 +99,7 @@
 					<li><a href="#thrusters">Thrusters</a></li>
 					<li><a href="#otherSystems">Other Systems</a></li>
 					<ul class="contents__1">
-						<li><a href="#armour">Armour</a></li>
+						<li><a href="#armor">Armor</a></li>
 						<li><a href="#computer">Computer</a></li>
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
@@ -712,32 +712,67 @@
 			
 			
 			
+			<h2 id="otherSystems">Step 5: Other Systems</h2>
+
 			<!--
 			|------------------------------------------------------------
-			|	OTHER SYSTEMS / ARMOUR
+			|	OTHER SYSTEMS / ABLATIVE ARMOR
 			|------------------------------------------------------------
 			-->
 			
-			<h2 id="otherSystems">Step 5: Other Systems</h2>
-
 			<div class="box">
 				<header class="box__header">
-					<h3 id="armour">Armour</h3>
+					<h3 id="armor">Ablative Armor</h3>
 				</header>
 				<div class="box__select">
 					<div class="form-group">
-						<label for="armourSelect">Armour</label>
-						<select id="armourSelect" class="form-control" v-model="params.armourId">
-							<option v-for="option in selectOptions.armour" :value="option.id">{{ option.name }}</option>
+						<label for="ablativeArmorSelect">Ablative Armor</label>
+						<select id="ablativeArmorSelect" class="form-control" v-model="params.ablativeArmorId">
+							<option v-for="option in selectOptions.ablativeArmor" :value="option.id">{{ option.name }}</option>
 						</select>
 					</div>
 				</div>
 				<div class="box__info">
-					<strong>Bonus to AC</strong> {{ getPrefixedModifier(armour.bonusToAc) }};
-					<strong>Special</strong> {{ armourSpecial }}
+					<strong>Temporary HP</strong> {{ ablativeArmor.tempHP }};
+					<strong>TL Modifier</strong> {{ ablativeArmor.tlMod }};
+					<strong>Turn Distance</strong> {{ ablativeArmor.turn }};
 				</div>
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ armourBpCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ ablativeArmorBpCost }}
+				</div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			|------------------------------------------------------------
+			|	ARMOR
+			|------------------------------------------------------------
+			-->
+			
+			<div class="box">
+				<header class="box__header">
+					<h3 id="armor">Armor</h3>
+				</header>
+				<div class="box__select">
+					<div class="form-group">
+						<label for="armorSelect">Armor</label>
+						<select id="armorSelect" class="form-control" v-model="params.armorId">
+							<option v-for="option in selectOptions.armor" :value="option.id">{{ option.name }}</option>
+						</select>
+					</div>
+				</div>
+				<div class="box__info">
+					<strong>Bonus to AC</strong> {{ getPrefixedModifier(armor.bonusToAc) }};
+					<strong>Special</strong> {{ armorSpecial }}
+				</div>
+				<div class="box__cost">
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ armorBpCost }}
 				</div>
 			</div>
 
@@ -1315,10 +1350,12 @@
 									class="form-control"
 									@change="setWeaponLinking(position, i)">
 									<option value="none">None</option>
-									<template v-for="option in selectOptions.shipWeapon"
-										v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)">
-										<option :value="option.id">{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})</option>
-									</template>
+									<optgroup v-for="wpnType in data.shipWeaponType.data" :label="wpnType">
+										<template v-for="option in selectOptions.shipWeapon.filter(wpn => wpn.type == wpnType)"
+											v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)">
+											<option :value="option.id">{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})</option>
+										</template>
+									</optgroup>
 								</select>
 							</div><!-- .form-group -->
 						</div><!-- .box__select -->
@@ -1667,7 +1704,7 @@
 						<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
 						<p>{{ frame.size }} {{ frame.name.toLowerCase() }}</p>
 						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
-						<p><strong>AC</strong> {{ armourClass }}; <strong>TL</strong> {{ targetLock }}</p>
+						<p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
 						<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ frame.dt }}; <strong>CT</strong> {{ criticalThreshold }}</p>
 						<p><strong>Shields</strong> {{ shields.name }}
 							(forward {{ params.shieldsByPosition.forward }},

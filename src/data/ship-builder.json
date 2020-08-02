@@ -1,4 +1,192 @@
 {
+	"ablativeArmor": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"tempHp": 0,
+				"tlMod": 0,
+				"turnMod": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "basic-8",
+				"name": "Basic ablative armor 8HP",
+				"tempHp": 8,
+				"tlMod": 0,
+				"turnMod": 0,
+				"bpCost": 2
+			},
+			{
+				"id": "basic-16",
+				"name": "Basic ablative armor 16HP",
+				"tempHp": 16,
+				"tlMod": 0,
+				"turnMod": 0,
+				"bpCost": 3
+			},
+			{
+				"id": "basic-24",
+				"name": "Basic ablative armor 24HP",
+				"tempHp": 24,
+				"tlMod": 0,
+				"turnMod": 0,
+				"bpCost": 4
+			},
+			{
+				"id": "basic-32",
+				"name": "Basic ablative armor 32HP",
+				"tempHp": 32,
+				"tlMod": 0,
+				"turnMod": 0,
+				"bpCost": 5
+			},
+			{
+				"id": "basic-40",
+				"name": "Basic ablative armor 40HP",
+				"tempHp": 40,
+				"tlMod": 0,
+				"turnMod": 0,
+				"bpCost": 6
+			},
+			{
+				"id": "light-52",
+				"name": "Light ablative armor 52HP",
+				"tempHp": 52,
+				"tlMod": -1,
+				"turnMod": 0,
+				"bpCost": 8
+			},
+			{
+				"id": "light-64",
+				"name": "Light ablative armor 64HP",
+				"tempHp": 64,
+				"tlMod": -1,
+				"turnMod": 0,
+				"bpCost": 10
+			},
+			{
+				"id": "light-76",
+				"name": "Light ablative armor 76HP",
+				"tempHp": 76,
+				"tlMod": -1,
+				"turnMod": 0,
+				"bpCost": 12
+			},
+			{
+				"id": "light-88",
+				"name": "Light ablative armor 88HP",
+				"tempHp": 88,
+				"tlMod": -1,
+				"turnMod": 0,
+				"bpCost": 13
+			},
+			{
+				"id": "light-100",
+				"name": "Light ablative armor 100HP",
+				"tempHp": 100,
+				"tlMod": -1,
+				"turnMod": 0,
+				"bpCost": 14
+			},
+			{
+				"id": "medium-120",
+				"name": "Medium ablative armor 120HP",
+				"tempHp": 120,
+				"tlMod": -2,
+				"turnMod": 1,
+				"bpCost": 16
+			},
+			{
+				"id": "medium-140",
+				"name": "Medium ablative armor 140HP",
+				"tempHp": 140,
+				"tlMod": -2,
+				"turnMod": 1,
+				"bpCost": 17
+			},
+			{
+				"id": "medium-160",
+				"name": "Medium ablative armor 160HP",
+				"tempHp": 160,
+				"tlMod": -2,
+				"turnMod": 1,
+				"bpCost": 19
+			},
+			{
+				"id": "medium-180",
+				"name": "Medium ablative armor 180HP",
+				"tempHp": 180,
+				"tlMod": -2,
+				"turnMod": 1,
+				"bpCost": 21
+			},
+			{
+				"id": "medium-200",
+				"name": "Medium ablative armor 200HP",
+				"tempHp": 200,
+				"tlMod": -2,
+				"turnMod": 1,
+				"bpCost": 22
+			},
+			{
+				"id": "heavy-240",
+				"name": "Heavy ablative armor 240HP",
+				"tempHp": 240,
+				"tlMod": -2,
+				"turnMod": 2,
+				"bpCost": 24
+			},
+			{
+				"id": "heavy-280",
+				"name": "Heavy ablative armor 280HP",
+				"tempHp": 280,
+				"tlMod": -2,
+				"turnMod": 2,
+				"bpCost": 27
+			},
+			{
+				"id": "heavy-320",
+				"name": "Heavy ablative armor 320HP",
+				"tempHp": 320,
+				"tlMod": -2,
+				"turnMod": 2,
+				"bpCost": 29
+			},
+			{
+				"id": "heavy-360",
+				"name": "Heavy ablative armor 360HP",
+				"tempHp": 360,
+				"tlMod": -2,
+				"turnMod": 2,
+				"bpCost": 31
+			},
+			{
+				"id": "heavy-400",
+				"name": "Heavy ablative armor 400HP",
+				"tempHp": 400,
+				"tlMod": -2,
+				"turnMod": 2,
+				"bpCost": 34
+			},
+			{
+				"id": "superior-460",
+				"name": "Superior ablative armor 460HP",
+				"tempHp": 460,
+				"tlMod": -3,
+				"turnMod": 2,
+				"bpCost": 38
+			},
+			{
+				"id": "superior-520",
+				"name": "Superior ablative armor 520HP",
+				"tempHp": 520,
+				"tlMod": -4,
+				"turnMod": 2,
+				"bpCost": 45
+			}
+		]
+	},
 	"tier": {
 		"data": [
 			{
@@ -185,6 +373,10 @@
 			{
 				"id": "turret",
 				"name": "Turret"
+			},
+			{
+				"id": "spinal",
+				"name": "Spinal Mount"
 			}
 		]
 	},
@@ -658,6 +850,49 @@
 				"minCrew": 150,
 				"maxCrew": 100000,
 				"bpCost": 250
+			},
+			{
+				"id": "ultranought",
+				"name": "Ultranought",
+				"src": "SOM",
+				"size": "Supercolossal",
+				"maneuverability": "clumsy",
+				"hp": 550,
+				"hpIncrement": 100,
+				"dt": 20,
+				"ct": 110,
+				"mounts": {
+					"forward": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy",
+						"spinal"
+					],
+					"port": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"starboard": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"turret": [
+						"capital",
+						"heavy",
+						"heavy"
+					]
+				},
+				"expansionBays": "Unlimited",
+				"minCrew": 250,
+				"maxCrew": 5000,
+				"bpCost": 350
 			}
 		]
 	},
@@ -1251,7 +1486,7 @@
 			}
 		]
 	},
-	"armour": {
+	"armor": {
 		"props": [
 			"bonusToAc"
 		],
@@ -4475,6 +4710,7 @@
 			{
 				"id": "chain-cannon",
 				"name": "Chain cannon",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "6d4",
@@ -4487,6 +4723,7 @@
 			{
 				"id": "coilgun",
 				"name": "Coilgun",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "4d4",
@@ -4499,6 +4736,7 @@
 			{
 				"id": "flak-thrower",
 				"name": "Flak thrower",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "3d4",
@@ -4511,6 +4749,7 @@
 			{
 				"id": "gyrolaser",
 				"name": "Gyrolaser",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "1d8",
@@ -4523,6 +4762,7 @@
 			{
 				"id": "laser-net",
 				"name": "Laser net",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d6",
@@ -4535,6 +4775,7 @@
 			{
 				"id": "light-emp-cannon",
 				"name": "Light EMP cannon",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "Special",
@@ -4547,6 +4788,7 @@
 			{
 				"id": "light-laser-cannon",
 				"name": "Light laser cannon",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d4",
@@ -4559,6 +4801,7 @@
 			{
 				"id": "light-particle-beam",
 				"name": "Light particle beam",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d6",
@@ -4571,6 +4814,7 @@
 			{
 				"id": "light-plasma-cannon",
 				"name": "Light plasma cannon",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d12",
@@ -4584,6 +4828,7 @@
 				"id": "mining-laser",
                 "src": "pact",
 				"name": "Mining laser",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d6",
@@ -4596,6 +4841,7 @@
 			{
 				"id": "high-explosive-missile-launcher",
 				"name": "High explosive missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "12",
 				"damage": "4d8",
@@ -4608,6 +4854,7 @@
 			{
 				"id": "light-plasma-torpedo-launcher",
 				"name": "Light plasma torpedo launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "14",
 				"damage": "3d8",
@@ -4620,6 +4867,7 @@
 			{
 				"id": "light-torpedo-launcher",
 				"name": "Light torpedo launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "16",
 				"damage": "2d8",
@@ -4632,6 +4880,7 @@
 			{
 				"id": "micromissile-battery",
 				"name": "Micromissile battery",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "10",
 				"damage": "2d6",
@@ -4644,6 +4893,7 @@
 			{
 				"id": "tactical-nuclear-missile-launcher",
 				"name": "Tactical nuclear missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "10",
 				"damage": "5d8",
@@ -4657,6 +4907,7 @@
 				"id": "light-spore-torpedo-launcher",
                 "src": "pact",
 				"name": "Light spore torpedo launcher",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "14",
 				"damage": "3d6",
@@ -4669,6 +4920,7 @@
             {
 				"id": "graser",
 				"name": "Graser",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "7d10",
@@ -4681,6 +4933,7 @@
 			{
 				"id": "gravity-gun",
 				"name": "Gravity gun",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d6",
@@ -4693,6 +4946,7 @@
 			{
 				"id": "heavy-emp-cannon",
 				"name": "Heavy EMP cannon",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -4705,6 +4959,7 @@
 			{
 				"id": "heavy-laser-array",
 				"name": "Heavy laser array",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "6d4",
@@ -4717,6 +4972,7 @@
 			{
 				"id": "heavy-laser-cannon",
 				"name": "Heavy laser cannon",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "4d8",
@@ -4729,6 +4985,7 @@
 			{
 				"id": "heavy-laser-net",
 				"name": "Heavy laser net",
+				"src": "SCR",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "5d6",
@@ -4741,6 +4998,7 @@
 			{
 				"id": "maser",
 				"name": "Maser",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d10",
@@ -4753,6 +5011,7 @@
 			{
 				"id": "particle-beam",
 				"name": "Particle beam",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d6",
@@ -4765,6 +5024,7 @@
 			{
 				"id": "persistent-particle-beam",
 				"name": "Persistent particle beam",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "10d6",
@@ -4777,6 +5037,7 @@
 			{
 				"id": "plasma-cannon",
 				"name": "Plasma cannon",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "5d12",
@@ -4789,6 +5050,7 @@
 			{
 				"id": "railgun",
 				"name": "Railgun",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d4",
@@ -4801,6 +5063,7 @@
 			{
 				"id": "twin-laser",
 				"name": "Twin laser",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "5d8",
@@ -4813,6 +5076,7 @@
 			{
 				"id": "x-laser-cannon",
 				"name": "X-laser cannon",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d6",
@@ -4825,6 +5089,7 @@
 			{
 				"id": "heavy-antimatter-missile-launcher",
 				"name": "Heavy antimatter missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "8",
 				"damage": "10d10",
@@ -4837,6 +5102,7 @@
 			{
 				"id": "heavy-nuclear-missile-launcher",
 				"name": "Heavy nuclear missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "10",
 				"damage": "10d8",
@@ -4849,6 +5115,7 @@
 			{
 				"id": "heavy-plasma-torpedo-launcher",
 				"name": "Heavy plasma torpedo launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "12",
 				"damage": "5d10",
@@ -4861,6 +5128,7 @@
 			{
 				"id": "heavy-torpedo-launcher",
 				"name": "Heavy torpedo launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "14",
 				"damage": "5d8",
@@ -4874,6 +5142,7 @@
 				"id": "heavy-spore-torpedo-launcher",
                 "src": "pact",
 				"name": "Heavy spore torpedo launcher",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "12",
 				"damage": "5d8",
@@ -4886,6 +5155,7 @@
 			{
 				"id": "gravity-cannon",
 				"name": "Gravity cannon",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d6×10",
@@ -4898,6 +5168,7 @@
 			{
 				"id": "mass-driver",
 				"name": "Mass driver",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d6×10",
@@ -4910,6 +5181,7 @@
 			{
 				"id": "particle-beam-cannon",
 				"name": "Particle beam cannon",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "3d4×10",
@@ -4922,6 +5194,7 @@
 			{
 				"id": "persistent-particle-beam-cannon",
 				"name": "Persistent particle beam cannon",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d10×10",
@@ -4934,6 +5207,7 @@
 			{
 				"id": "super-emp-cannon",
 				"name": "Super EMP cannon",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "Special",
@@ -4946,6 +5220,7 @@
 			{
 				"id": "super-plasma-cannon",
 				"name": "Super plasma cannon",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d6×10",
@@ -4958,6 +5233,7 @@
 			{
 				"id": "super-x-laser-cannon",
 				"name": "Super X-laser cannon",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "3d4×10",
@@ -4970,6 +5246,7 @@
 			{
 				"id": "supergraser",
 				"name": "Supergraser",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -4982,6 +5259,7 @@
 			{
 				"id": "superlaser",
 				"name": "Superlaser",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d4×10",
@@ -4994,6 +5272,7 @@
 			{
 				"id": "supermaser",
 				"name": "Supermaser",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -5006,6 +5285,7 @@
 			{
 				"id": "vortex-cannon",
 				"name": "Vortex cannon",
+				"src": "SCR",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "2d12×10",
@@ -5018,6 +5298,7 @@
 			{
 				"id": "antimatter-mega-missile-launcher",
 				"name": "Antimatter mega-missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "6",
 				"damage": "4d10×10",
@@ -5030,6 +5311,7 @@
 			{
 				"id": "hellfire-torpedo-launcher",
 				"name": "Hellfire torpedo launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "8",
 				"damage": "2d10×10",
@@ -5042,6 +5324,7 @@
 			{
 				"id": "nuclear-mega-missile-launcher",
 				"name": "Nuclear mega-missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "8",
 				"damage": "4d8×10",
@@ -5054,6 +5337,7 @@
 			{
 				"id": "quantum-missile-launcher",
 				"name": "Quantum missile launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "12",
 				"damage": "2d8×10",
@@ -5066,6 +5350,7 @@
 			{
 				"id": "solar-torpedo-launcher",
 				"name": "Solar torpedo launcher",
+				"src": "SCR",
 				"range": "Long",
 				"speed": "10",
 				"damage": "2d6×10",
@@ -5074,7 +5359,1263 @@
 				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
+			},
+			{
+				"id": "aeon-caster",
+				"name": "Aeon caster",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "3d4",
+				"pcuCost": 10,
+				"bpCost": 7,
+				"specialProperties": ["mystical", "restricted-imperial-fleet"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "decorative-ramming-prow",
+				"name": "Decorative ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "2d4",
+				"pcuCost": 0,
+				"bpCost": 5,
+				"specialProperties": ["intimidating", "ramming"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "force-projector",
+				"name": "Force projector",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "1d10",
+				"pcuCost": 10,
+				"bpCost": 7,
+				"specialProperties": ["force-field-15"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "garbage-ejection-system",
+				"name": "Garbage ejection system",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "8",
+				"damage": "1d6",
+				"pcuCost": 1,
+				"bpCost": 1,
+				"specialProperties": ["limited-fire-1", "point-8"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "light-buster-cannon",
+				"name": "Light buster cannon",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "3d8",
+				"pcuCost": 10,
+				"bpCost": 9,
+				"specialProperties": ["buster"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "light-force-ramming-prow",
+				"name": "Light force ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "0",
+				"pcuCost": 5,
+				"bpCost": 3,
+				"specialProperties": ["force-field-20", "ramming"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "light-orbital-death-knell",
+				"name": "Light orbital death knell",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "3d10",
+				"pcuCost": 20,
+				"bpCost": 18,
+				"specialProperties": ["orbital-3"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "light-orbital-particle-cannon",
+				"name": "Light orbital particle cannon",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "2d10",
+				"pcuCost": 20,
+				"bpCost": 21,
+				"specialProperties": ["line", "orbital-2"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "light-teleportation-beam",
+				"name": "Light teleportation beam",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "1d20",
+				"pcuCost": 15,
+				"bpCost": 14,
+				"specialProperties": ["teleportation-1"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "minor-ramming-prow",
+				"name": "Minor ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "2d4",
+				"pcuCost": 1,
+				"bpCost": 4,
+				"specialProperties": ["ramming"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "rail-launcher",
+				"name": "Rail launcher",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "2d8",
+				"pcuCost": 15,
+				"bpCost": 10,
+				"specialProperties": ["rail-1d8"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "shadow-bolt-projector",
+				"name": "Shadow bolt projector",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "1d10",
+				"pcuCost": 15,
+				"bpCost": 7,
+				"specialProperties": ["intimidating", "mystical"],
+				"weight": "light",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "digital-strike-conduit",
+				"name": "Digital strike conduit",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 10,
+				"bpCost": 10,
+				"specialProperties": ["hacking"],
+				"weight": "light",
+				"type": "ECM"
+			},
+			{
+				"id": "gravity-generator",
+				"name": "Gravity generator",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 10,
+				"bpCost": 9,
+				"specialProperties": ["gravity-well"],
+				"weight": "light",
+				"type": "ECM"
+			},
+			{
+				"id": "nav-scram-projector",
+				"name": "Nav-scram projector",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 5,
+				"bpCost": 10,
+				"specialProperties": ["nav-scram"],
+				"weight": "light",
+				"type": "ECM"
+			},
+			{
+				"id": "warp-puck-launcher",
+				"name": "Warp puck launcher",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 5,
+				"bpCost": 10,
+				"specialProperties": ["limited-fire-3", "mine-1", "transposition-1"],
+				"weight": "light",
+				"type": "ECM"
+			},
+			{
+				"id": "light-explosion-injector",
+				"name": "Light explosion injector",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "3d10",
+				"pcuCost": 5,
+				"bpCost": 13,
+				"specialProperties": ["burrowing", "limited-fire-5"],
+				"weight": "light",
+				"type": "Melee"
+			},
+			{
+				"id": "light-hacksaw-arm",
+				"name": "Light hacksaw arm",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "4d6",
+				"pcuCost": 10,
+				"bpCost": 8,
+				"specialProperties": ["ripper"],
+				"weight": "light",
+				"type": "Melee"
+			},
+			{
+				"id": "light-ship-tether",
+				"name": "Light ship tether",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "2d6",
+				"pcuCost": 5,
+				"bpCost": 6,
+				"specialProperties": ["anchoring"],
+				"weight": "light",
+				"type": "Melee"
+			},
+			{
+				"id": "light-blade-hull",
+				"name": "Light-blade hull",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "3d8",
+				"pcuCost": 5,
+				"bpCost": 10,
+				"specialProperties": [],
+				"weight": "light",
+				"type": "Melee"
+			},
+			{
+				"id": "light-aeon-torpedo-launcher",
+				"name": "Light aeon torpedo launcher",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "12",
+				"damage": "3d6",
+				"pcuCost": 10,
+				"bpCost": 8,
+				"specialProperties": ["limited-fire-5", "mystical", "restricted-imperial-fleet"],
+				"weight": "light",
+				"type": "Tracking"
+			},
+			{
+				"id": "light-frag-mines",
+				"name": "Light frag mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "8d4",
+				"pcuCost": 5,
+				"bpCost": 12,
+				"specialProperties": ["limited-fire-5", "mine-3", "ripper"],
+				"weight": "light",
+				"type": "Tracking"
+			},
+			{
+				"id": "light-plasma-mines",
+				"name": "Light plasma mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "2d12",
+				"pcuCost": 5,
+				"bpCost": 12,
+				"specialProperties": ["limited-fire-5", "mine-4"],
+				"weight": "light",
+				"type": "Tracking"
+			},
+			{
+				"id": "light-plasma-torpedo-pod",
+				"name": "Light plasma torpedo pod",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "14",
+				"damage": "3d8",
+				"pcuCost": 0,
+				"bpCost": 11,
+				"specialProperties": ["limited-fire-3", "pod"],
+				"weight": "light",
+				"type": "Tracking"
+			},
+			{
+				"id": "magic-torpedo-unit",
+				"name": "Magic torpedo unit",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "18",
+				"damage": "2d4+2",
+				"pcuCost": 10,
+				"bpCost": 10,
+				"specialProperties": ["broad-arc", "mystical", "quantum"],
+				"weight": "light",
+				"type": "Tracking"
+			},
+			{
+				"id": "mini-nuke-mines",
+				"name": "Mini-nuke mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "5d8",
+				"pcuCost": 5,
+				"bpCost": 8,
+				"specialProperties": ["irradiate-low", "limited-fire-3", "mine-1"],
+				"weight": "light",
+				"type": "Tracking"
+			},
+			{
+				"id": "force-blaster",
+				"name": "Force blaster",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "3d10",
+				"pcuCost": 25,
+				"bpCost": 18,
+				"specialProperties": ["force-field-40"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "gatling-cannon",
+				"name": "Gatling cannon",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "15d4",
+				"pcuCost": 20,
+				"bpCost": 20,
+				"specialProperties": ["ripper"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "gyrocannon",
+				"name": "Gyrocannon",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "3d10",
+				"pcuCost": 20,
+				"bpCost": 14,
+				"specialProperties": ["broad-arc"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-aeon-caster",
+				"name": "Heavy aeon caster",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "6d6",
+				"pcuCost": 20,
+				"bpCost": 18,
+				"specialProperties": ["mystical", "restricted-imperial-fleet"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-buster-cannon",
+				"name": "Heavy buster cannon",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "6d8",
+				"pcuCost": 15,
+				"bpCost": 16,
+				"specialProperties": ["buster"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-force-ramming-prow",
+				"name": "Heavy force ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "3d4",
+				"pcuCost": 10,
+				"bpCost": 10,
+				"specialProperties": ["force-field-40", "ramming"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-orbital-death-knell",
+				"name": "Heavy orbital death knell",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "7d10",
+				"pcuCost": 40,
+				"bpCost": 36,
+				"specialProperties": ["orbital-7"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-orbital-particle-cannon",
+				"name": "Heavy orbital particle cannon",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "5d10",
+				"pcuCost": 40,
+				"bpCost": 42,
+				"specialProperties": ["line", "orbital-5"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-ramming-prow",
+				"name": "Heavy ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "5d4",
+				"pcuCost": 1,
+				"bpCost": 8,
+				"specialProperties": ["ramming"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "heavy-teleportation-beam",
+				"name": "Heavy teleportation beam",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "3d20",
+				"pcuCost": 40,
+				"bpCost": 35,
+				"specialProperties": ["teleportation-2"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "imposing-ramming-prow",
+				"name": "Imposing ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "4d4",
+				"pcuCost": 1,
+				"bpCost": 10,
+				"specialProperties": ["intimidating", "ramming"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "rail-ballista",
+				"name": "Rail ballista",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "6d8",
+				"pcuCost": 35,
+				"bpCost": 22,
+				"specialProperties": ["rail-3d8"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "shadow-beam-projector",
+				"name": "Shadow beam projector",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "4d10",
+				"pcuCost": 40,
+				"bpCost": 30,
+				"specialProperties": ["intimidating", "line", "mystical"],
+				"weight": "heavy",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "digital-raid-node",
+				"name": "Digital raid node",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 15,
+				"bpCost": 15,
+				"specialProperties": ["hacking"],
+				"weight": "heavy",
+				"type": "ECM"
+			},
+			{
+				"id": "fractal-nav-scram-projector",
+				"name": "Fractal nav-scram projector",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 10,
+				"bpCost": 16,
+				"specialProperties": ["nav-scram"],
+				"weight": "heavy",
+				"type": "ECM"
+			},
+			{
+				"id": "gravity-well-generator",
+				"name": "Gravity well generator",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 15,
+				"bpCost": 20,
+				"specialProperties": ["gravity-well"],
+				"weight": "heavy",
+				"type": "ECM"
+			},
+			{
+				"id": "warp-puck-bank",
+				"name": "Warp puck bank",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 5,
+				"bpCost": 20,
+				"specialProperties": ["limited-fire-3", "mine-2", "transposition-2"],
+				"weight": "heavy",
+				"type": "ECM"
+			},
+			{
+				"id": "heavy-explosion-injector",
+				"name": "Heavy explosion injector",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "6d12",
+				"pcuCost": 10,
+				"bpCost": 26,
+				"specialProperties": ["burrowing", "limited-fire-5"],
+				"weight": "heavy",
+				"type": "Melee"
+			},
+			{
+				"id": "heavy-hacksaw-arm",
+				"name": "Heavy hacksaw arm",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "10d6",
+				"pcuCost": 20,
+				"bpCost": 15,
+				"specialProperties": ["ripper"],
+				"weight": "heavy",
+				"type": "Melee"
+			},
+			{
+				"id": "heavy-ship-tether",
+				"name": "Heavy ship tether",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "4d8",
+				"pcuCost": 10,
+				"bpCost": 14,
+				"specialProperties": ["anchoring"],
+				"weight": "heavy",
+				"type": "Melee"
+			},
+			{
+				"id": "heavy-blade-hull",
+				"name": "Heavy-blade hull",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "6d8",
+				"pcuCost": 10,
+				"bpCost": 17,
+				"specialProperties": [],
+				"weight": "heavy",
+				"type": "Melee"
+			},
+			{
+				"id": "counter-missile-bank",
+				"name": "Counter-missile bank",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "14",
+				"damage": "8d6",
+				"pcuCost": 10,
+				"bpCost": 11,
+				"specialProperties": ["limited-fire-6", "point-12"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-aeon-torpedo-launcher",
+				"name": "Heavy aeon torpedo launcher",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "12",
+				"damage": "6d8",
+				"pcuCost": 15,
+				"bpCost": 20,
+				"specialProperties": ["limited-fire-5", "mystical", "restricted-imperial-fleet"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-frag-mines",
+				"name": "Heavy frag mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "8d8",
+				"pcuCost": 5,
+				"bpCost": 15,
+				"specialProperties": ["limited-fire-5", "mine-3", "ripper"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-nuclear-mines",
+				"name": "Heavy nuclear mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "10d8",
+				"pcuCost": 10,
+				"bpCost": 14,
+				"specialProperties": ["irradiate-medium", "limited-fire-3", "mine-1"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-nuclear-silo",
+				"name": "Heavy nuclear silo",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "5",
+				"damage": "10d10",
+				"pcuCost": 15,
+				"bpCost": 35,
+				"specialProperties": ["irradiate-medium", "limited-fire-3", "orbital-10"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-plasma-mines",
+				"name": "Heavy plasma mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "4d12",
+				"pcuCost": 10,
+				"bpCost": 18,
+				"specialProperties": ["limited-fire-5", "mine-4"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heavy-plasma-torpedo-pod",
+				"name": "Heavy plasma torpedo pod",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "12",
+				"damage": "5d10",
+				"pcuCost": 0,
+				"bpCost": 18,
+				"specialProperties": ["limited-fire-3", "pod"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "heightened-magic-torpedo-unit",
+				"name": "Heightened magic torpedo unit",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "18",
+				"damage": "5d4+5",
+				"pcuCost": 20,
+				"bpCost": 20,
+				"specialProperties": ["broad-arc", "mystical", "quantum"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "vortex-mouth-mines",
+				"name": "Vortex mouth mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "7d12",
+				"pcuCost": 20,
+				"bpCost": 30,
+				"specialProperties": ["limited-fire-3", "mine-3", "vortex"],
+				"weight": "heavy",
+				"type": "Tracking"
+			},
+			{
+				"id": "extreme-force-ramming-prow",
+				"name": "Extreme force ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "5d4",
+				"pcuCost": 30,
+				"bpCost": 10,
+				"specialProperties": ["force-field-100", "ramming"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "gatling-cannon-array",
+				"name": "Gatling cannon array",
+				"src": "SOM",
+				"range": "Short",
+				"speed": "n/a",
+				"damage": "4d4×10",
+				"pcuCost": 30,
+				"bpCost": 25,
+				"specialProperties": ["array", "ripper"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "massive-ramming-prow",
+				"name": "Massive ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "2d4×10",
+				"pcuCost": 5,
+				"bpCost": 20,
+				"specialProperties": ["ramming"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "mega-teleportation-beam",
+				"name": "Mega teleportation beam",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "1d20×10",
+				"pcuCost": 55,
+				"bpCost": 65,
+				"specialProperties": ["teleportation-3"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "monolith-ramming-prow",
+				"name": "Monolith ramming prow",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "12d4",
+				"pcuCost": 1,
+				"bpCost": 15,
+				"specialProperties": ["intimidating", "ramming"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "prismatic-beam",
+				"name": "Prismatic beam",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "2d8×10",
+				"pcuCost": 60,
+				"bpCost": 55,
+				"specialProperties": ["line", "mystical"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "shadow-bolt-array",
+				"name": "Shadow bolt array",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "1d10×10",
+				"pcuCost": 45,
+				"bpCost": 25,
+				"specialProperties": ["array", "intimidating", "mystical"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "starspear-rail-launcher",
+				"name": "Starspear rail launcher",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "2d8×10",
+				"pcuCost": 50,
+				"bpCost": 35,
+				"specialProperties": ["rail-1d8-10"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "super-buster-cannon",
+				"name": "Super buster cannon",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "3d8×10",
+				"pcuCost": 35,
+				"bpCost": 35,
+				"specialProperties": ["buster"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "super-orbital-death-knell",
+				"name": "Super orbital death knell",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "3d6×10",
+				"pcuCost": 50,
+				"bpCost": 57,
+				"specialProperties": ["orbital-10"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "super-orbital-particle-cannon",
+				"name": "Super orbital particle cannon",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "2d6×10",
+				"pcuCost": 50,
+				"bpCost": 60,
+				"specialProperties": ["line", "orbital-10"],
+				"weight": "capital",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "black-hole-generator",
+				"name": "Black hole generator",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 20,
+				"bpCost": 25,
+				"specialProperties": ["gravity-well"],
+				"weight": "capital",
+				"type": "ECM"
+			},
+			{
+				"id": "digital-assault-torrent",
+				"name": "Digital assault torrent",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 15,
+				"bpCost": 25,
+				"specialProperties": ["hacking"],
+				"weight": "capital",
+				"type": "ECM"
+			},
+			{
+				"id": "super-nav-scram-projector",
+				"name": "Super nav-scram projector",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 20,
+				"bpCost": 25,
+				"specialProperties": ["nav-scram"],
+				"weight": "capital",
+				"type": "ECM"
+			},
+			{
+				"id": "warp-puck-battery",
+				"name": "Warp puck battery",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "Special",
+				"pcuCost": 5,
+				"bpCost": 30,
+				"specialProperties": ["limited-fire-3", "mine-2", "transposition-3"],
+				"weight": "capital",
+				"type": "ECM"
+			},
+			{
+				"id": "super-explosion-injector",
+				"name": "Super explosion injector",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "3d6×10",
+				"pcuCost": 30,
+				"bpCost": 50,
+				"specialProperties": ["burrowing", "limited-fire-3"],
+				"weight": "capital",
+				"type": "Melee"
+			},
+			{
+				"id": "super-hacksaw-arm",
+				"name": "Super hacksaw arm",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "4d6×10",
+				"pcuCost": 40,
+				"bpCost": 25,
+				"specialProperties": ["ripper"],
+				"weight": "capital",
+				"type": "Melee"
+			},
+			{
+				"id": "super-ship-tether",
+				"name": "Super ship tether",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "10d8",
+				"pcuCost": 15,
+				"bpCost": 18,
+				"specialProperties": ["anchoring"],
+				"weight": "capital",
+				"type": "Melee"
+			},
+			{
+				"id": "super-blade-hull",
+				"name": "Super-blade hull",
+				"src": "SOM",
+				"range": "1 hex",
+				"speed": "n/a",
+				"damage": "3d8×10",
+				"pcuCost": 30,
+				"bpCost": 40,
+				"specialProperties": [],
+				"weight": "capital",
+				"type": "Melee"
+			},
+			{
+				"id": "heavy-frag-mines",
+				"name": "Heavy frag mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "4d8×10",
+				"pcuCost": 10,
+				"bpCost": 45,
+				"specialProperties": ["limited-fire-5", "mine-3", "ripper"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "hellfire-mines",
+				"name": "Hellfire mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "2d10×10",
+				"pcuCost": 10,
+				"bpCost": 40,
+				"specialProperties": ["limited-fire-5", "mine-4"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "nuclear-mega-mines",
+				"name": "Nuclear mega mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "4d8×10",
+				"pcuCost": 15,
+				"bpCost": 30,
+				"specialProperties": ["irradiate-high", "limited-fire-3", "mine-1"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "quantum-mines",
+				"name": "Quantum mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "2d8×10",
+				"pcuCost": 25,
+				"bpCost": 40,
+				"specialProperties": ["limited-fire-3", "mine-5", "quantum"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "quantum-missile-pod",
+				"name": "Quantum missile pod",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "12",
+				"damage": "2d8×10",
+				"pcuCost": 0,
+				"bpCost": 35,
+				"specialProperties": ["limited-fire-3", "pod", "quantum"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "super-nuclear-silo",
+				"name": "Super nuclear silo",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "5",
+				"damage": "3d8×10",
+				"pcuCost": 15,
+				"bpCost": 40,
+				"specialProperties": ["irradiate-high", "limited-fire-2", "orbital-14"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "vortex-maw-mines",
+				"name": "Vortex maw mines",
+				"src": "SOM",
+				"range": "n/a",
+				"speed": "n/a",
+				"damage": "3d12×10",
+				"pcuCost": 35,
+				"bpCost": 60,
+				"specialProperties": ["limited-fire-3", "mine-3", "vortex"],
+				"weight": "capital",
+				"type": "Tracking"
+			},
+			{
+				"id": "gravity-annihilator",
+				"name": "Gravity annihilator",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "8d6×10",
+				"pcuCost": 50,
+				"bpCost": 60,
+				"specialProperties": ["tractor-beam"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "hypermass-cannon",
+				"name": "Hypermass cannon",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "6d6×10",
+				"pcuCost": 40,
+				"bpCost": 40,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "nova-ram",
+				"name": "Nova ram",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "6d10×10",
+				"pcuCost": 75,
+				"bpCost": 55,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "orbital-devastator",
+				"name": "Orbital devastator",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "8d6×10",
+				"pcuCost": 60,
+				"bpCost": 54,
+				"specialProperties": ["orbital-18"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "particle-acceleration-gun",
+				"name": "Particle acceleration gun",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "9d4×10",
+				"pcuCost": 50,
+				"bpCost": 40,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "prismatic-torrent",
+				"name": "Prismatic torrent",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "5d8×10",
+				"pcuCost": 60,
+				"bpCost": 45,
+				"specialProperties": ["line", "mystical"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "summon-planetoid-module",
+				"name": "Summon planetoid module",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "4d6×10",
+				"pcuCost": 20,
+				"bpCost": 40,
+				"specialProperties": ["limited-fire-3", "mystical", "point-15"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "titan-bolter",
+				"name": "Titan bolter",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "6d8×10",
+				"pcuCost": 50,
+				"bpCost": 50,
+				"specialProperties": ["rail-2d8-10"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "ultra-plasma-cannon",
+				"name": "Ultra plasma cannon",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "9d6×10",
+				"pcuCost": 80,
+				"bpCost": 45,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "ultra-x-laser-cannon",
+				"name": "Ultra x-laser cannon",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "6d8×10",
+				"pcuCost": 90,
+				"bpCost": 45,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "ultragraser",
+				"name": "Ultragraser",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "6d8×10",
+				"pcuCost": 75,
+				"bpCost": 55,
+				"specialProperties": ["irradiate-high", "line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "ultralaser",
+				"name": "Ultralaser",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "6d4×10",
+				"pcuCost": 30,
+				"bpCost": 25,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "ultramaser",
+				"name": "Ultramaser",
+				"src": "SOM",
+				"range": "Long",
+				"speed": "n/a",
+				"damage": "6d8×10",
+				"pcuCost": 60,
+				"bpCost": 45,
+				"specialProperties": ["line"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
+			},
+			{
+				"id": "vortex-devourer",
+				"name": "Vortex devourer",
+				"src": "SOM",
+				"range": "Medium",
+				"speed": "n/a",
+				"damage": "6d12×10",
+				"pcuCost": 80,
+				"bpCost": 65,
+				"specialProperties": ["vortex"],
+				"weight": "spinal",
+				"type": "Direct-Fire"
 			}
+		]
+	},
+	"shipWeaponType": {
+		"data": [
+			"Direct-Fire",
+			"ECM",
+			"Melee",
+			"Tracking"
 		]
 	},
 	"weaponSpecialProperty": {
@@ -5103,6 +6644,11 @@
 				"src": "SCR"
 			},
 			{
+				"id": "buster",
+				"name": "Buster",
+				"src": "SOM"
+			},
+			{
 				"id": "deployed",
 				"name": "Deployed",
 				"src": "SOM",
@@ -5115,23 +6661,73 @@
 				"src": "SCR"
 			},
 			{
+				"id": "force-field-15",
+				"name": "Force field 15",
+				"src": "SCR"
+			},
+			{
+				"id": "force-field-20",
+				"name": "Force field 20",
+				"src": "SCR"
+			},
+			{
+				"id": "force-field-40",
+				"name": "Force field 40",
+				"src": "SCR"
+			},
+			{
+				"id": "force-field-100",
+				"name": "Force field 100",
+				"src": "SCR"
+			},
+			{
+				"id": "gravity-well",
+				"name": "Gravity well",
+				"src": "SOM"
+			},
+			{
+				"id": "hacking",
+				"name": "hacking",
+				"src": "SOM"
+			},
+			{
 				"id": "irradiate-low",
-				"name": "Irradiate (low)",
+				"name": "Irradiate low",
 				"src": "SCR"
 			},
 			{
 				"id": "irradiate-medium",
-				"name": "Irradiate (medium)",
+				"name": "Irradiate medium",
 				"src": "SCR"
 			},
 			{
 				"id": "irradiate-high",
-				"name": "Irradiate (high)",
+				"name": "Irradiate high",
+				"src": "SCR"
+			},
+			{
+				"id": "limited-fire-1",
+				"name": "Limited fire 1",
+				"src": "SCR"
+			},
+			{
+				"id": "limited-fire-2",
+				"name": "Limited fire 2",
+				"src": "SCR"
+			},
+			{
+				"id": "limited-fire-3",
+				"name": "Limited fire 3",
 				"src": "SCR"
 			},
 			{
 				"id": "limited-fire-5",
 				"name": "Limited fire 5",
+				"src": "SCR"
+			},
+			{
+				"id": "limited-fire-6",
+				"name": "Limited fire 6",
 				"src": "SCR"
 			},
 			{
@@ -5142,11 +6738,76 @@
 				"bpMultiplier": 1.75
 			},
 			{
+				"id": "mine-1",
+				"name": "Mine 1",
+				"src": "SOM"
+			},
+			{
+				"id": "mine-3",
+				"name": "Mine 3",
+				"src": "SOM"
+			},
+			{
+				"id": "mine-4",
+				"name": "Mine 4",
+				"src": "SOM"
+			},
+			{
+				"id": "mine-5",
+				"name": "Mine 5",
+				"src": "SOM"
+			},
+			{
 				"id": "mystical",
 				"name": "Mystical",
 				"src": "SOM",
 				"isUpgrade": 1,
 				"bpMultiplier": 1.25
+			},
+			{
+				"id": "nav-scram",
+				"name": "Nav-scram",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-2",
+				"name": "Orbital 2",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-3",
+				"name": "Orbital 3",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-5",
+				"name": "Orbital 5",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-7",
+				"name": "Orbital 7",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-10",
+				"name": "Orbital 10",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-14",
+				"name": "Orbital 14",
+				"src": "SOM"
+			},
+			{
+				"id": "orbital-18",
+				"name": "Orbital 18",
+				"src": "SOM"
+			},
+			{
+				"id": "pod",
+				"name": "Pod",
+				"src": "SCR"
 			},
 			{
 				"id": "point-8",
@@ -5164,9 +6825,44 @@
 				"src": "SCR"
 			},
 			{
+				"id": "point-15",
+				"name": "Point +15",
+				"src": "SCR"
+			},
+			{
 				"id": "quantum",
 				"name": "Quantum",
 				"src": "SCR"
+			},
+			{
+				"id": "rail-1d8",
+				"name": "Rail 1d8",
+				"src": "SOM"
+			},
+			{
+				"id": "rail-3d8",
+				"name": "Rail 3d8",
+				"src": "SOM"
+			},
+			{
+				"id": "rail-1d8-10",
+				"name": "Rail 1d8 x 10",
+				"src": "SOM"
+			},
+			{
+				"id": "rail-2d8-10",
+				"name": "Rail 2d8 x 10",
+				"src": "SOM"
+			},
+			{
+				"id": "ramming",
+				"name": "Ramming",
+				"src": "SOM"
+			},
+			{
+				"id": "restricted-imperial-fleet",
+				"name": "Restricted Imperial Fleet",
+				"src": "SOM"
 			},
 			{
 				"id": "ripper",
@@ -5186,9 +6882,39 @@
 				"src": "SCR"
 			},
 			{
+				"id": "teleportation-1",
+				"name": "Teleportation 1",
+				"src": "SOM"
+			},
+			{
+				"id": "teleportation-2",
+				"name": "Teleportation 2",
+				"src": "SOM"
+			},
+			{
+				"id": "teleportation-3",
+				"name": "Teleportation 3",
+				"src": "SOM"
+			},
+			{
 				"id": "tractor-beam",
 				"name": "Tractor Beam",
 				"src": "SCR"
+			},
+			{
+				"id": "transposition-1",
+				"name": "transposition 1",
+				"src": "SOM"
+			},
+			{
+				"id": "transposition-2",
+				"name": "transposition 2",
+				"src": "SOM"
+			},
+			{
+				"id": "transposition-3",
+				"name": "transposition 3",
+				"src": "SOM"
 			},
 			{
 				"id": "vortex",
@@ -5446,7 +7172,7 @@
 						"micron-heavy"
 					],
 					"thrustersId": "t12",
-					"armourId": "mk-3",
+					"armorId": "mk-3",
 					"computerId": "basic-computer",
 					"crewQuartersId": "none",
 					"defensiveCountermeasuresId": "mk-3",
@@ -5601,7 +7327,7 @@
 						"pulse-white"
 					],
 					"thrustersId": "m8",
-					"armourId": "mk-5",
+					"armorId": "mk-5",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-6",
@@ -5784,7 +7510,7 @@
 						"gateway-heavy"
 					],
 					"thrustersId": "g4",
-					"armourId": "mk-7",
+					"armorId": "mk-7",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-8",
@@ -6031,7 +7757,7 @@
 						"micron-heavy"
 					],
 					"thrustersId": "t12",
-					"armourId": "mk-2",
+					"armorId": "mk-2",
 					"computerId": "basic-computer",
 					"crewQuartersId": "none",
 					"defensiveCountermeasuresId": "mk-1",
@@ -6183,7 +7909,7 @@
 						"arcus-ultra"
 					],
 					"thrustersId": "l6",
-					"armourId": "mk-4",
+					"armorId": "mk-4",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-3",
@@ -6373,7 +8099,7 @@
 						"gateway-heavy"
 					],
 					"thrustersId": "g4",
-					"armourId": "mk-5",
+					"armorId": "mk-5",
 					"computerId": "mk-2-trinode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-6",
@@ -6596,7 +8322,7 @@
 						"micron-light"
 					],
 					"thrustersId": "s6",
-					"armourId": "mk-2",
+					"armorId": "mk-2",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-1",
@@ -6743,7 +8469,7 @@
 						"pulse-gray"
 					],
 					"thrustersId": "m6",
-					"armourId": "mk-3",
+					"armorId": "mk-3",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-1",
@@ -6923,7 +8649,7 @@
 						"nova-ultra"
 					],
 					"thrustersId": "h8",
-					"armourId": "mk-4",
+					"armorId": "mk-4",
 					"computerId": "mk-3-duonode",
 					"crewQuartersId": "good",
 					"defensiveCountermeasuresId": "mk-4",
@@ -7103,7 +8829,7 @@
 						"pulse-brown"
 					],
 					"thrustersId": "s8",
-					"armourId": "mk-2",
+					"armorId": "mk-2",
 					"computerId": "mk-1-mononode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-1",
@@ -7274,7 +9000,7 @@
 						"arcus-maximum"
 					],
 					"thrustersId": "l8",
-					"armourId": "mk-4",
+					"armorId": "mk-4",
 					"computerId": "mk-1-trinode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-4",
@@ -7468,7 +9194,7 @@
 						"nova-ultra"
 					],
 					"thrustersId": "h6",
-					"armourId": "mk-5",
+					"armorId": "mk-5",
 					"computerId": "mk-3-mononode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-5",
@@ -7642,7 +9368,7 @@
 						"pulse-brown"
 					],
 					"thrustersId": "t10",
-					"armourId": "mk-5",
+					"armorId": "mk-5",
 					"computerId": "mk-1-mononode",
 					"crewQuartersId": "none",
 					"defensiveCountermeasuresId": "mk-5",
@@ -7805,7 +9531,7 @@
 						"pulse-orange"
 					],
 					"thrustersId": "m12",
-					"armourId": "mk-6",
+					"armorId": "mk-6",
 					"computerId": "mk-3-duonode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-6",
@@ -7990,7 +9716,7 @@
 						"gateway-ultra"
 					],
 					"thrustersId": "c4",
-					"armourId": "mk-10",
+					"armorId": "mk-10",
 					"computerId": "basic-computer",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-10",
@@ -8279,7 +10005,7 @@
 						"pulse-green"
 					],
 					"thrustersId": "m10",
-					"armourId": "mk-3",
+					"armorId": "mk-3",
 					"computerId": "mk-1-duonode",
 					"crewQuartersId": "good",
 					"defensiveCountermeasuresId": "mk-3",
@@ -8463,7 +10189,7 @@
 						"micron-light"
 					],
 					"thrustersId": "t8",
-					"armourId": "mk-3",
+					"armorId": "mk-3",
 				    "computerId": "basic-computer",
 					"crewQuartersId": "none",
 					"defensiveCountermeasuresId": "none",
@@ -8627,7 +10353,7 @@
 						"pulse-orange"
 					],
 					"thrustersId": "l6",
-					"armourId": "mk-6",
+					"armorId": "mk-6",
 					"computerId": "mk-2-trinode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-4",
@@ -8820,7 +10546,7 @@
 						"nova-ultra"
 					],
 					"thrustersId": "h6",
-					"armourId": "mk-7",
+					"armorId": "mk-7",
 					"computerId": "mk-4-trinode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-7",
@@ -9003,7 +10729,7 @@
 						"micron-ultra"
 					],
 					"thrustersId": "t10",
-					"armourId": "mk-3",
+					"armorId": "mk-3",
 					"computerId": "mk-1-mononode",
 					"crewQuartersId": "none",
 					"defensiveCountermeasuresId": "mk-2",
@@ -9169,7 +10895,7 @@
 						"nova-light"
 					],
 					"thrustersId": "h8",
-					"armourId": "mk-7",
+					"armorId": "mk-7",
 					"computerId": "mk-4-duonode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-5",
@@ -9357,7 +11083,7 @@
 						"nova-heavy"
 					],
 					"thrustersId": "g6",
-					"armourId": "mk-9",
+					"armorId": "mk-9",
 					"computerId": "mk-5-duonode",
 					"crewQuartersId": "common",
 					"defensiveCountermeasuresId": "mk-10",
@@ -9630,7 +11356,7 @@
                         "arcus-light"
                     ],
                     "thrustersId": "t12",
-                    "armourId": "mk-7",
+                    "armorId": "mk-7",
                     "computerId": "basic-computer",
                     "crewQuartersId": "none",
                     "defensiveCountermeasuresId": "mk-5",
@@ -9791,7 +11517,7 @@
                         "pulse-orange"
                     ],
                     "thrustersId": "m6",
-                    "armourId": "mk-7",
+                    "armorId": "mk-7",
                     "computerId": "mk-2-trinode",
                     "crewQuartersId": "common",
                     "defensiveCountermeasuresId": "mk-6",
@@ -9983,7 +11709,7 @@
                       "none"
                    ],
                    "thrustersId":"g6",
-                   "armourId":"mk-11",
+                   "armorId":"mk-11",
                    "computerId":"mk-5-duonode",
                    "crewQuartersId":"common",
                    "defensiveCountermeasuresId":"mk-10",
@@ -10207,7 +11933,7 @@
                         "micron-light"
                     ],
                     "thrustersId": "t14",
-                    "armourId": "mk-3",
+                    "armorId": "mk-3",
                     "computerId": "basic-computer",
                     "crewQuartersId": "none",
                     "defensiveCountermeasuresId": "none",
@@ -10360,7 +12086,7 @@
                         "pulse-green"
                     ],
                     "thrustersId": "m12",
-                    "armourId": "mk-5",
+                    "armorId": "mk-5",
                     "computerId": "basic-computer",
                     "crewQuartersId": "common",
                     "defensiveCountermeasuresId": "mk-5",
@@ -10537,7 +12263,7 @@
                         "none"
                     ],
                     "thrustersId": "h6",
-                    "armourId": "mk-7",
+                    "armorId": "mk-7",
                     "computerId": "mk-3-trinode",
                     "crewQuartersId": "common",
                     "defensiveCountermeasuresId": "mk-8",
@@ -10718,7 +12444,7 @@
                         "micron-heavy"
                     ],
                     "thrustersId": "t12",
-                    "armourId": "mk-3",
+                    "armorId": "mk-3",
                     "computerId": "mk-1-mononode",
                     "crewQuartersId": "none",
                     "defensiveCountermeasuresId": "mk-3",
@@ -10870,7 +12596,7 @@
                         "pulse-orange"
                     ],
                     "thrustersId": "l8",
-                    "armourId": "mk-9",
+                    "armorId": "mk-9",
                     "computerId": "mk-2-tetranode",
                     "crewQuartersId": "common",
                     "defensiveCountermeasuresId": "mk-6",
@@ -11064,7 +12790,7 @@
                         "none"
                     ],
                     "thrustersId": "h4",
-                    "armourId": "mk-8",
+                    "armorId": "mk-8",
                     "computerId": "mk-3-mononode",
                     "crewQuartersId": "common",
                     "defensiveCountermeasuresId": "mk-6",
