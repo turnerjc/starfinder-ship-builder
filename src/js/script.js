@@ -389,6 +389,7 @@ function Ship(json) {
 				deflectorShieldId: "none",
 				driftEngineId:"none",
 				expansionBayIds:["none","none","none"],
+				fortifiedHullId: "none",
 				frameId:"light-freighter",
 				hasBiometricLocks:0,
 				hasCrew:1,
@@ -712,7 +713,9 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			criticalThreshold: function() {
-				return Math.round(this.hp / 5);
+				return Math.round(this.hp / 5) +
+					this.fortifiedHull.bonusToCt
+				;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -829,12 +832,19 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			expansionBaysDescription: function() {
+				// test if no expansion bays
+				if (this.expansionBays.length == 0) return "None";
+				if (this.expansionBays.filter(bay => bay.id != "none").length == 0) return "None";
+
+				// collect expansion bays by type
 				var expansionBaysByType = {};
 				for(index in this.expansionBays) {
 					var expansionBayId = this.expansionBays[index].id;
 					maybeCreateProperty(expansionBaysByType, expansionBayId, "Integer");
 					expansionBaysByType[expansionBayId]++;
 				}
+
+				// get description
 				var expansionBaysDescription = "";
 				var sep = ", ";
 				for(id in expansionBaysByType) {
@@ -859,6 +869,23 @@ function Ship(json) {
             */
 			expansionBaysTotalPcuCost: function() {
 				return this.getSumOfPropertyValuesInCollection(this.expansionBays, "pcuCost");
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			fortifiedHull: function() {
+				var fortifiedHull = {};
+
+				var data = this.getItemById("fortifiedHull", this.params.fortifiedHullId);
+
+				Object.keys(data).forEach(function(key) {
+					fortifiedHull[key] = data[key];
+				});
+
+				fortifiedHull.bonusToCt = fortifiedHull.bonusToCtMultiplier * this.sizeCategory.multiplier;
+				fortifiedHull.bpCost = fortifiedHull.bpCostMultiplier * this.sizeCategory.multiplier;
+
+				return fortifiedHull;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1134,6 +1161,7 @@ function Ship(json) {
 					"deflectorShield",
 					"driftEngine",
 					"expansionBay",
+					"fortifiedHull",
 					"frame",
 					"personalWeapon",
 					"powerCore",
@@ -1359,6 +1387,7 @@ function Ship(json) {
 					(this.params.shieldType == "deflector-shield" ? parseInt(this.deflectorShield.bpCost) : 0) +
 					parseInt(this.driftEngineBpCost) +
 					parseInt(this.expansionBaysTotalBpCost) +
+					parseInt(this.fortifiedHull.bpCost) +
 					parseInt(this.frame.bpCost) +
 					parseInt(this.hiveJoiningBpCost) +
 					parseInt(this.powerCoresBpCost) +

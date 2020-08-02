@@ -426,196 +426,43 @@
 			}
 		]
 	},
-	"tier": {
+	"fortifiedHull": {
 		"data": [
 			{
-				"id": "1_4",
-				"name": "1/4",
-				"value": 0.25,
-				"bpBudget": 25,
-				"hpIncrease": 0
+				"id": "none",
+				"name": "None",
+				"bonusToCtMultiplier": 0,
+				"bpCostMultiplier": 0
 			},
 			{
-				"id": "1_3",
-				"name": "1/3",
-				"value": 0.33333333333,
-				"bpBudget": 30,
-				"hpIncrease": 0
+				"id": "steel-composite",
+				"name": "Steel composite",
+				"bonusToCtMultiplier": 1,
+				"bpCostMultiplier": 2
 			},
 			{
-				"id": "1_2",
-				"name": "1/2",
-				"value": 0.5,
-				"bpBudget": 40,
-				"hpIncrease": 0
+				"id": "adamantine-alloy",
+				"name": "Adamantine alloy",
+				"bonusToCtMultiplier": 2,
+				"bpCostMultiplier": 4
 			},
 			{
-				"id": "1",
-				"name": "1",
-				"value": 1,
-				"bpBudget": 55,
-				"hpIncrease": 0
+				"id": "nanocarbon-plate",
+				"name": "Nanocarbon plate",
+				"bonusToCtMultiplier": 3,
+				"bpCostMultiplier": 6
 			},
 			{
-				"id": "2",
-				"name": "2",
-				"value": 2,
-				"bpBudget": 75,
-				"hpIncrease": 0
+				"id": "polycarbon-plate",
+				"name": "Polycarbon plate",
+				"bonusToCtMultiplier": 4,
+				"bpCostMultiplier": 9
 			},
 			{
-				"id": "3",
-				"name": "3",
-				"value": 3,
-				"bpBudget": 95,
-				"hpIncrease": 0
-			},
-			{
-				"id": "4",
-				"name": "4",
-				"value": 4,
-				"bpBudget": 115,
-				"hpIncrease": 1
-			},
-			{
-				"id": "5",
-				"name": "5",
-				"value": 5,
-				"bpBudget": 135,
-				"hpIncrease": 1
-			},
-			{
-				"id": "6",
-				"name": "6",
-				"value": 6,
-				"bpBudget": 155,
-				"hpIncrease": 1
-			},
-			{
-				"id": "7",
-				"name": "7",
-				"value": 7,
-				"bpBudget": 180,
-				"hpIncrease": 1
-			},
-			{
-				"id": "8",
-				"name": "8",
-				"value": 8,
-				"bpBudget": 205,
-				"hpIncrease": 2
-			},
-			{
-				"id": "9",
-				"name": "9",
-				"value": 9,
-				"bpBudget": 230,
-				"hpIncrease": 2
-			},
-			{
-				"id": "10",
-				"name": "10",
-				"value": 10,
-				"bpBudget": 270,
-				"hpIncrease": 2
-			},
-			{
-				"id": "11",
-				"name": "11",
-				"value": 11,
-				"bpBudget": 310,
-				"hpIncrease": 2
-			},
-			{
-				"id": "12",
-				"name": "12",
-				"value": 12,
-				"bpBudget": 350,
-				"hpIncrease": 3
-			},
-			{
-				"id": "13",
-				"name": "13",
-				"value": 13,
-				"bpBudget": 400,
-				"hpIncrease": 3
-			},
-			{
-				"id": "14",
-				"name": "14",
-				"value": 14,
-				"bpBudget": 450,
-				"hpIncrease": 3
-			},
-			{
-				"id": "15",
-				"name": "15",
-				"value": 15,
-				"bpBudget": 500,
-				"hpIncrease": 3
-			},
-			{
-				"id": "16",
-				"name": "16",
-				"value": 16,
-				"bpBudget": 600,
-				"hpIncrease": 4
-			},
-			{
-				"id": "17",
-				"name": "17",
-				"value": 17,
-				"bpBudget": 700,
-				"hpIncrease": 4
-			},
-			{
-				"id": "18",
-				"name": "18",
-				"value": 18,
-				"bpBudget": 800,
-				"hpIncrease": 4
-			},
-			{
-				"id": "19",
-				"name": "19",
-				"value": 19,
-				"bpBudget": 900,
-				"hpIncrease": 4
-			},
-			{
-				"id": "20",
-				"name": "20",
-				"value": 20,
-				"bpBudget": 1000,
-				"hpIncrease": 5
-			}
-		]
-	},
-	"weaponPosition": {
-		"data": [
-			{
-				"id": "forward",
-				"name": "Forward Arc"
-			},
-			{
-				"id": "port",
-				"name": "Port Arc"
-			},
-			{
-				"id": "starboard",
-				"name": "Starboard Arc"
-			},
-			{
-				"id": "aft",
-				"name": "Aft Arc"
-			},
-			{
-				"id": "turret",
-				"name": "Turret"
-			},
-			{
-				"id": "spinal",
-				"name": "Spinal Mount"
+				"id": "pure-adamantine",
+				"name": "Pure adamantine",
+				"bonusToCtMultiplier": 5,
+				"bpCostMultiplier": 12
 			}
 		]
 	},
@@ -1387,341 +1234,6 @@
 				],
 				"pcuBudget": 500,
 				"bpCost": 50
-			}
-		]
-	},
-	"thrusters": {
-		"props": [
-			"speed",
-			"pilotingModifier",
-			"pcuCost",
-			"bpCost"
-		],
-		"data": [
-			{
-				"id": "none",
-				"name": "None",
-				"size": [
-					"Tiny",
-					"Small",
-					"Medium",
-					"Large",
-					"Huge",
-					"Gargantuan",
-					"Colossal"
-				],
-				"speed": 0,
-				"pilotingModifier": 0,
-				"pcuCost": 0,
-				"bpCost": 0
-			},
-			{
-				"id": "t6",
-				"name": "T6 Thrusters",
-				"size": [
-					"Tiny"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 20,
-				"bpCost": 3
-			},
-			{
-				"id": "t8",
-				"name": "T8 Thrusters",
-				"size": [
-					"Tiny"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 25,
-				"bpCost": 4
-			},
-			{
-				"id": "t10",
-				"name": "T10 Thrusters",
-				"size": [
-					"Tiny"
-				],
-				"speed": 10,
-				"pilotingModifier": 0,
-				"pcuCost": 30,
-				"bpCost": 5
-			},
-			{
-				"id": "t12",
-				"name": "T12 Thrusters",
-				"size": [
-					"Tiny"
-				],
-				"speed": 12,
-				"pilotingModifier": -1,
-				"pcuCost": 35,
-				"bpCost": 6
-			},
-			{
-				"id": "t14",
-				"name": "T14 Thrusters",
-				"size": [
-					"Tiny"
-				],
-				"speed": 14,
-				"pilotingModifier": -2,
-				"pcuCost": 40,
-				"bpCost": 7
-			},
-			{
-				"id": "s6",
-				"name": "S6 Thrusters",
-				"size": [
-					"Small"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 30,
-				"bpCost": 3
-			},
-			{
-				"id": "s8",
-				"name": "S8 Thrusters",
-				"size": [
-					"Small"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 40,
-				"bpCost": 4
-			},
-			{
-				"id": "s10",
-				"name": "S10 Thrusters",
-				"size": [
-					"Small"
-				],
-				"speed": 10,
-				"pilotingModifier": 0,
-				"pcuCost": 50,
-				"bpCost": 5
-			},
-			{
-				"id": "s12",
-				"name": "S12 Thrusters",
-				"size": [
-					"Small"
-				],
-				"speed": 12,
-				"pilotingModifier": -1,
-				"pcuCost": 60,
-				"bpCost": 6
-			},
-			{
-				"id": "m4",
-				"name": "M4 Thrusters",
-				"size": [
-					"Medium"
-				],
-				"speed": 4,
-				"pilotingModifier": 2,
-				"pcuCost": 40,
-				"bpCost": 2
-			},
-			{
-				"id": "m6",
-				"name": "M6 Thrusters",
-				"size": [
-					"Medium"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 50,
-				"bpCost": 3
-			},
-			{
-				"id": "m8",
-				"name": "M8 Thrusters",
-				"size": [
-					"Medium"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 60,
-				"bpCost": 4
-			},
-			{
-				"id": "m10",
-				"name": "M10 Thrusters",
-				"size": [
-					"Medium"
-				],
-				"speed": 10,
-				"pilotingModifier": 0,
-				"pcuCost": 70,
-				"bpCost": 5
-			},
-			{
-				"id": "m12",
-				"name": "M12 Thrusters",
-				"size": [
-					"Medium"
-				],
-				"speed": 12,
-				"pilotingModifier": -1,
-				"pcuCost": 80,
-				"bpCost": 6
-			},
-			{
-				"id": "l4",
-				"name": "L4 Thrusters",
-				"size": [
-					"Large"
-				],
-				"speed": 4,
-				"pilotingModifier": 2,
-				"pcuCost": 60,
-				"bpCost": 4
-			},
-			{
-				"id": "l6",
-				"name": "L6 Thrusters",
-				"size": [
-					"Large"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 80,
-				"bpCost": 6
-			},
-			{
-				"id": "l8",
-				"name": "L8 Thrusters",
-				"size": [
-					"Large"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 100,
-				"bpCost": 8
-			},
-			{
-				"id": "l10",
-				"name": "L10 Thrusters",
-				"size": [
-					"Large"
-				],
-				"speed": 10,
-				"pilotingModifier": 0,
-				"pcuCost": 120,
-				"bpCost": 10
-			},
-			{
-				"id": "h4",
-				"name": "H4 Thrusters",
-				"size": [
-					"Huge"
-				],
-				"speed": 4,
-				"pilotingModifier": 2,
-				"pcuCost": 80,
-				"bpCost": 4
-			},
-			{
-				"id": "h6",
-				"name": "H6 Thrusters",
-				"size": [
-					"Huge"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 120,
-				"bpCost": 6
-			},
-			{
-				"id": "h8",
-				"name": "H8 Thrusters",
-				"size": [
-					"Huge"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 140,
-				"bpCost": 8
-			},
-			{
-				"id": "h10",
-				"name": "H10 Thrusters",
-				"size": [
-					"Huge"
-				],
-				"speed": 10,
-				"pilotingModifier": 0,
-				"pcuCost": 160,
-				"bpCost": 10
-			},
-			{
-				"id": "g4",
-				"name": "G4 Thrusters",
-				"size": [
-					"Gargantuan"
-				],
-				"speed": 4,
-				"pilotingModifier": 2,
-				"pcuCost": 120,
-				"bpCost": 8
-			},
-			{
-				"id": "g6",
-				"name": "G6 Thrusters",
-				"size": [
-					"Gargantuan"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 180,
-				"bpCost": 12
-			},
-			{
-				"id": "g8",
-				"name": "G8 Thrusters",
-				"size": [
-					"Gargantuan"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 240,
-				"bpCost": 16
-			},
-			{
-				"id": "c4",
-				"name": "C4 Thrusters",
-				"size": [
-					"Colossal"
-				],
-				"speed": 4,
-				"pilotingModifier": 2,
-				"pcuCost": 200,
-				"bpCost": 8
-			},
-			{
-				"id": "c6",
-				"name": "C6 Thrusters",
-				"size": [
-					"Colossal"
-				],
-				"speed": 6,
-				"pilotingModifier": 1,
-				"pcuCost": 300,
-				"bpCost": 12
-			},
-			{
-				"id": "c8",
-				"name": "C8 Thrusters",
-				"size": [
-					"Colossal"
-				],
-				"speed": 8,
-				"pilotingModifier": 0,
-				"pcuCost": 400,
-				"bpCost": 16
 			}
 		]
 	},
@@ -2852,6 +2364,83 @@
 				],
 				"pcuCost": 10,
 				"bpCost": 5
+			}
+		]
+	},
+	"sizeCategory": {
+		"data": [
+			{
+				"id": "Tiny",
+				"name": "Tiny",
+				"multiplier": 1,
+				"acAndTlModifier": 2,
+				"maxMounts": 2,
+				"maxMountWeight": "light",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Small",
+				"name": "Small",
+				"multiplier": 2,
+				"acAndTlModifier": 1,
+				"maxMounts": 2,
+				"maxMountWeight": "light",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Medium",
+				"name": "Medium",
+				"multiplier": 3,
+				"acAndTlModifier": 0,
+				"maxMounts": 3,
+				"maxMountWeight": "heavy",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Large",
+				"name": "Large",
+				"multiplier": 4,
+				"acAndTlModifier": -1,
+				"maxMounts": 3,
+				"maxMountWeight": "heavy",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Huge",
+				"name": "Huge",
+				"multiplier": 5,
+				"acAndTlModifier": -2,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 2
+			},
+			{
+				"id": "Gargantuan",
+				"name": "Gargantuan",
+				"multiplier": 6,
+				"acAndTlModifier": -4,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 3
+			},
+			{
+				"id": "Colossal",
+				"name": "Colossal",
+				"multiplier": 7,
+				"acAndTlModifier": -8,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 4
+			},
+			{
+				"id": "Supercolossal",
+				"name": "Supercolossal",
+				"multiplier": 8,
+				"acAndTlModifier": -8,
+				"maxMounts": 4,
+				"maxMountWeight": "spinal-mount",
+				"countPowerCoreHousings": 4,
+				"countSupercolossalCoreHousings": 1
 			}
 		]
 	},
@@ -7024,83 +6613,6 @@
 				"id": "vortex",
 				"name": "Vortex",
 				"src": "SCR"
-			}
-		]
-	},
-	"sizeCategory": {
-		"data": [
-			{
-				"id": "Tiny",
-				"name": "Tiny",
-				"multiplier": 1,
-				"acAndTlModifier": 2,
-				"maxMounts": 2,
-				"maxMountWeight": "light",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Small",
-				"name": "Small",
-				"multiplier": 2,
-				"acAndTlModifier": 1,
-				"maxMounts": 2,
-				"maxMountWeight": "light",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Medium",
-				"name": "Medium",
-				"multiplier": 3,
-				"acAndTlModifier": 0,
-				"maxMounts": 3,
-				"maxMountWeight": "heavy",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Large",
-				"name": "Large",
-				"multiplier": 4,
-				"acAndTlModifier": -1,
-				"maxMounts": 3,
-				"maxMountWeight": "heavy",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Huge",
-				"name": "Huge",
-				"multiplier": 5,
-				"acAndTlModifier": -2,
-				"maxMounts": 4,
-				"maxMountWeight": "capital",
-				"countPowerCoreHousings": 2
-			},
-			{
-				"id": "Gargantuan",
-				"name": "Gargantuan",
-				"multiplier": 6,
-				"acAndTlModifier": -4,
-				"maxMounts": 4,
-				"maxMountWeight": "capital",
-				"countPowerCoreHousings": 3
-			},
-			{
-				"id": "Colossal",
-				"name": "Colossal",
-				"multiplier": 7,
-				"acAndTlModifier": -8,
-				"maxMounts": 4,
-				"maxMountWeight": "capital",
-				"countPowerCoreHousings": 4
-			},
-			{
-				"id": "Supercolossal",
-				"name": "Supercolossal",
-				"multiplier": 8,
-				"acAndTlModifier": -8,
-				"maxMounts": 4,
-				"maxMountWeight": "spinal-mount",
-				"countPowerCoreHousings": 4,
-				"countSupercolossalCoreHousings": 1
 			}
 		]
 	},
@@ -13058,5 +12570,533 @@
                 }
             }
         ]
+	},
+	"thrusters": {
+		"props": [
+			"speed",
+			"pilotingModifier",
+			"pcuCost",
+			"bpCost"
+		],
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"size": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"speed": 0,
+				"pilotingModifier": 0,
+				"pcuCost": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "t6",
+				"name": "T6 Thrusters",
+				"size": [
+					"Tiny"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 20,
+				"bpCost": 3
+			},
+			{
+				"id": "t8",
+				"name": "T8 Thrusters",
+				"size": [
+					"Tiny"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 25,
+				"bpCost": 4
+			},
+			{
+				"id": "t10",
+				"name": "T10 Thrusters",
+				"size": [
+					"Tiny"
+				],
+				"speed": 10,
+				"pilotingModifier": 0,
+				"pcuCost": 30,
+				"bpCost": 5
+			},
+			{
+				"id": "t12",
+				"name": "T12 Thrusters",
+				"size": [
+					"Tiny"
+				],
+				"speed": 12,
+				"pilotingModifier": -1,
+				"pcuCost": 35,
+				"bpCost": 6
+			},
+			{
+				"id": "t14",
+				"name": "T14 Thrusters",
+				"size": [
+					"Tiny"
+				],
+				"speed": 14,
+				"pilotingModifier": -2,
+				"pcuCost": 40,
+				"bpCost": 7
+			},
+			{
+				"id": "s6",
+				"name": "S6 Thrusters",
+				"size": [
+					"Small"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 30,
+				"bpCost": 3
+			},
+			{
+				"id": "s8",
+				"name": "S8 Thrusters",
+				"size": [
+					"Small"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 40,
+				"bpCost": 4
+			},
+			{
+				"id": "s10",
+				"name": "S10 Thrusters",
+				"size": [
+					"Small"
+				],
+				"speed": 10,
+				"pilotingModifier": 0,
+				"pcuCost": 50,
+				"bpCost": 5
+			},
+			{
+				"id": "s12",
+				"name": "S12 Thrusters",
+				"size": [
+					"Small"
+				],
+				"speed": 12,
+				"pilotingModifier": -1,
+				"pcuCost": 60,
+				"bpCost": 6
+			},
+			{
+				"id": "m4",
+				"name": "M4 Thrusters",
+				"size": [
+					"Medium"
+				],
+				"speed": 4,
+				"pilotingModifier": 2,
+				"pcuCost": 40,
+				"bpCost": 2
+			},
+			{
+				"id": "m6",
+				"name": "M6 Thrusters",
+				"size": [
+					"Medium"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 50,
+				"bpCost": 3
+			},
+			{
+				"id": "m8",
+				"name": "M8 Thrusters",
+				"size": [
+					"Medium"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 60,
+				"bpCost": 4
+			},
+			{
+				"id": "m10",
+				"name": "M10 Thrusters",
+				"size": [
+					"Medium"
+				],
+				"speed": 10,
+				"pilotingModifier": 0,
+				"pcuCost": 70,
+				"bpCost": 5
+			},
+			{
+				"id": "m12",
+				"name": "M12 Thrusters",
+				"size": [
+					"Medium"
+				],
+				"speed": 12,
+				"pilotingModifier": -1,
+				"pcuCost": 80,
+				"bpCost": 6
+			},
+			{
+				"id": "l4",
+				"name": "L4 Thrusters",
+				"size": [
+					"Large"
+				],
+				"speed": 4,
+				"pilotingModifier": 2,
+				"pcuCost": 60,
+				"bpCost": 4
+			},
+			{
+				"id": "l6",
+				"name": "L6 Thrusters",
+				"size": [
+					"Large"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 80,
+				"bpCost": 6
+			},
+			{
+				"id": "l8",
+				"name": "L8 Thrusters",
+				"size": [
+					"Large"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 100,
+				"bpCost": 8
+			},
+			{
+				"id": "l10",
+				"name": "L10 Thrusters",
+				"size": [
+					"Large"
+				],
+				"speed": 10,
+				"pilotingModifier": 0,
+				"pcuCost": 120,
+				"bpCost": 10
+			},
+			{
+				"id": "h4",
+				"name": "H4 Thrusters",
+				"size": [
+					"Huge"
+				],
+				"speed": 4,
+				"pilotingModifier": 2,
+				"pcuCost": 80,
+				"bpCost": 4
+			},
+			{
+				"id": "h6",
+				"name": "H6 Thrusters",
+				"size": [
+					"Huge"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 120,
+				"bpCost": 6
+			},
+			{
+				"id": "h8",
+				"name": "H8 Thrusters",
+				"size": [
+					"Huge"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 140,
+				"bpCost": 8
+			},
+			{
+				"id": "h10",
+				"name": "H10 Thrusters",
+				"size": [
+					"Huge"
+				],
+				"speed": 10,
+				"pilotingModifier": 0,
+				"pcuCost": 160,
+				"bpCost": 10
+			},
+			{
+				"id": "g4",
+				"name": "G4 Thrusters",
+				"size": [
+					"Gargantuan"
+				],
+				"speed": 4,
+				"pilotingModifier": 2,
+				"pcuCost": 120,
+				"bpCost": 8
+			},
+			{
+				"id": "g6",
+				"name": "G6 Thrusters",
+				"size": [
+					"Gargantuan"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 180,
+				"bpCost": 12
+			},
+			{
+				"id": "g8",
+				"name": "G8 Thrusters",
+				"size": [
+					"Gargantuan"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 240,
+				"bpCost": 16
+			},
+			{
+				"id": "c4",
+				"name": "C4 Thrusters",
+				"size": [
+					"Colossal"
+				],
+				"speed": 4,
+				"pilotingModifier": 2,
+				"pcuCost": 200,
+				"bpCost": 8
+			},
+			{
+				"id": "c6",
+				"name": "C6 Thrusters",
+				"size": [
+					"Colossal"
+				],
+				"speed": 6,
+				"pilotingModifier": 1,
+				"pcuCost": 300,
+				"bpCost": 12
+			},
+			{
+				"id": "c8",
+				"name": "C8 Thrusters",
+				"size": [
+					"Colossal"
+				],
+				"speed": 8,
+				"pilotingModifier": 0,
+				"pcuCost": 400,
+				"bpCost": 16
+			}
+		]
+	},
+	"tier": {
+		"data": [
+			{
+				"id": "1_4",
+				"name": "1/4",
+				"value": 0.25,
+				"bpBudget": 25,
+				"hpIncrease": 0
+			},
+			{
+				"id": "1_3",
+				"name": "1/3",
+				"value": 0.33333333333,
+				"bpBudget": 30,
+				"hpIncrease": 0
+			},
+			{
+				"id": "1_2",
+				"name": "1/2",
+				"value": 0.5,
+				"bpBudget": 40,
+				"hpIncrease": 0
+			},
+			{
+				"id": "1",
+				"name": "1",
+				"value": 1,
+				"bpBudget": 55,
+				"hpIncrease": 0
+			},
+			{
+				"id": "2",
+				"name": "2",
+				"value": 2,
+				"bpBudget": 75,
+				"hpIncrease": 0
+			},
+			{
+				"id": "3",
+				"name": "3",
+				"value": 3,
+				"bpBudget": 95,
+				"hpIncrease": 0
+			},
+			{
+				"id": "4",
+				"name": "4",
+				"value": 4,
+				"bpBudget": 115,
+				"hpIncrease": 1
+			},
+			{
+				"id": "5",
+				"name": "5",
+				"value": 5,
+				"bpBudget": 135,
+				"hpIncrease": 1
+			},
+			{
+				"id": "6",
+				"name": "6",
+				"value": 6,
+				"bpBudget": 155,
+				"hpIncrease": 1
+			},
+			{
+				"id": "7",
+				"name": "7",
+				"value": 7,
+				"bpBudget": 180,
+				"hpIncrease": 1
+			},
+			{
+				"id": "8",
+				"name": "8",
+				"value": 8,
+				"bpBudget": 205,
+				"hpIncrease": 2
+			},
+			{
+				"id": "9",
+				"name": "9",
+				"value": 9,
+				"bpBudget": 230,
+				"hpIncrease": 2
+			},
+			{
+				"id": "10",
+				"name": "10",
+				"value": 10,
+				"bpBudget": 270,
+				"hpIncrease": 2
+			},
+			{
+				"id": "11",
+				"name": "11",
+				"value": 11,
+				"bpBudget": 310,
+				"hpIncrease": 2
+			},
+			{
+				"id": "12",
+				"name": "12",
+				"value": 12,
+				"bpBudget": 350,
+				"hpIncrease": 3
+			},
+			{
+				"id": "13",
+				"name": "13",
+				"value": 13,
+				"bpBudget": 400,
+				"hpIncrease": 3
+			},
+			{
+				"id": "14",
+				"name": "14",
+				"value": 14,
+				"bpBudget": 450,
+				"hpIncrease": 3
+			},
+			{
+				"id": "15",
+				"name": "15",
+				"value": 15,
+				"bpBudget": 500,
+				"hpIncrease": 3
+			},
+			{
+				"id": "16",
+				"name": "16",
+				"value": 16,
+				"bpBudget": 600,
+				"hpIncrease": 4
+			},
+			{
+				"id": "17",
+				"name": "17",
+				"value": 17,
+				"bpBudget": 700,
+				"hpIncrease": 4
+			},
+			{
+				"id": "18",
+				"name": "18",
+				"value": 18,
+				"bpBudget": 800,
+				"hpIncrease": 4
+			},
+			{
+				"id": "19",
+				"name": "19",
+				"value": 19,
+				"bpBudget": 900,
+				"hpIncrease": 4
+			},
+			{
+				"id": "20",
+				"name": "20",
+				"value": 20,
+				"bpBudget": 1000,
+				"hpIncrease": 5
+			}
+		]
+	},
+	"weaponPosition": {
+		"data": [
+			{
+				"id": "forward",
+				"name": "Forward Arc"
+			},
+			{
+				"id": "port",
+				"name": "Port Arc"
+			},
+			{
+				"id": "starboard",
+				"name": "Starboard Arc"
+			},
+			{
+				"id": "aft",
+				"name": "Aft Arc"
+			},
+			{
+				"id": "turret",
+				"name": "Turret"
+			},
+			{
+				"id": "spinal",
+				"name": "Spinal Mount"
+			}
+		]
 	}
 }

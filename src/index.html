@@ -106,6 +106,7 @@
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
 						<li><a href="#driftEngine">Drift Engine</a></li>
 						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
+						<li><a href="#fortified-hull">Fortified Hull</a></li>
 						<li><a href="#security">Security</a></li>
 						<li><a href="#sensors">Sensors</a></li>
 						<li><a href="#shields">Shields</a></li>
@@ -1059,6 +1060,39 @@
 			
 			<!--
 			|------------------------------------------------------------
+			|	FORTIFIED HULL
+			|------------------------------------------------------------
+			-->
+			
+			<div class="box">
+				<header class="box__header">
+					<h3 id="fortified-hull">Fortified Hull</h3>
+				</header>
+				<div class="box__select">
+					<div class="form-group">
+						<label for="fortifiedHullSelect">Fortified Hull</label>
+						<select v-model="params.fortifiedHullId" id="fortifiedHullSelect" class="form-control">
+							<option v-for="option in selectOptions.fortifiedHull" :value="option.id">{{ option.name }}</option>
+						</select>
+					</div>
+				</div>
+				<div class="box__info">
+					<strong>Bonus To CT</strong> {{ fortifiedHull.bonusToCt }}
+				</div>
+				<div class="box__cost">
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ fortifiedHull.bpCost }}
+				</div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			|------------------------------------------------------------
 				SECURITY
 			|------------------------------------------------------------
 			-->
@@ -1832,9 +1866,7 @@
 						<p>
 							<strong>Power Core(s)</strong> {{ powerCoreDescription }};
 							<strong>Drift Engine</strong> {{ driftEngine.name }};
-							<strong>Systems</strong> {{ systemsDescription }}<span v-if="hasSecurity">; 
-							<strong>Security</strong> {{ securityDescription }}</span><span v-if="expansionBays.length > 0">; 
-							<strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span>
+							<strong>Systems</strong> {{ systemsDescription }}<span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span><span v-if="expansionBaysDescription != 'None'">; <strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span><span v-if="params.fortifiedHullId != 'none'">; <strong>Fortified Hull</strong> {{ fortifiedHull.name }}</span>
 						</p>
 						<p><strong>Modifiers</strong> {{ modifiersDescription }}<span v-if="params.hasCrew">; <strong>Complement</strong> {{ complement }}</span></p>
 						<p><strong>Custom Components</strong> {{ customComponentsDescription }}</p>
