@@ -33,6 +33,7 @@ module.exports = function(grunt) {
 			compile: {
 				files: {
 					'dist/data/ship-builder.json': 'src/data/ship-builder.json'
+					// 'dist/data/ship-builder.json': ['src/data/test1.json', 'src/data/test2.json']
 				}
 			}
 		},

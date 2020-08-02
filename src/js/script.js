@@ -834,7 +834,9 @@ function Ship(json) {
 			expansionBaysDescription: function() {
 				// test if no expansion bays
 				if (this.expansionBays.length == 0) return "None";
-				if (this.expansionBays.filter(bay => bay.id != "none").length == 0) return "None";
+				if (this.expansionBays.filter(function(bay) {
+					return bay.id != "none";
+				}).length == 0) return "None";
 
 				// collect expansion bays by type
 				var expansionBaysByType = {};
@@ -1444,7 +1446,7 @@ function Ship(json) {
                         // weapon damage and special properties
                         mountDesc += " (" + this.getWeaponDamage(mount);
                         if (mount.weapon.specialProperties.length > 0) {
-                        	let wpnSpcPropDesc = ", ";
+                        	var wpnSpcPropDesc = ", ";
                         	wpnSpcPropDesc += this.getNamesFromIds("weaponSpecialProperty", mount.weapon.specialProperties, "").toLowerCase();
                         	wpnSpcPropDesc = wpnSpcPropDesc.replace("(", "[");
                         	wpnSpcPropDesc = wpnSpcPropDesc.replace(")", "]");

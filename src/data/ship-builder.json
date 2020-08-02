@@ -187,6 +187,40 @@
 			}
 		]
 	},
+	"antiHackingSystems": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"dcMod": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "mk1",
+				"name": "Anti-Hacking Systems Mk 1",
+				"dcMod": 1,
+				"bpCost": 3
+			},
+			{
+				"id": "mk2",
+				"name": "Anti-Hacking Systems Mk 2",
+				"dcMod": 2,
+				"bpCost": 6
+			},
+			{
+				"id": "mk3",
+				"name": "Anti-Hacking Systems Mk 3",
+				"dcMod": 3,
+				"bpCost": 9
+			},
+			{
+				"id": "mk4",
+				"name": "Anti-Hacking Systems Mk 4",
+				"dcMod": 4,
+				"bpCost": 12
+			}
+		]
+	},
 	"armor": {
 		"props": [
 			"bonusToAc"
@@ -319,921 +353,6 @@
 				"targetLockModifier": -4,
 				"turnDistanceModifier": 3,
 				"bpCostMultiplier": 45
-			}
-		]
-	},
-	"deflectorShield": {
-		"src": "SOM",
-		"data": [
-			{
-				"id": "none",
-				"name": "None",
-				"defenseValue": 0,
-				"bonusToAc": 0,
-				"bonusToTl": 0,
-				"pcuCost": 0,
-				"bpCost": 0
-			},
-			{
-				"id": "basic-1",
-				"name": "Basic deflector shield 1",
-				"defenseValue": 1,
-				"bonusToAc": 1,
-				"bonusToTl": 1,
-				"pcuCost": 5,
-				"bpCost": 4
-			},
-			{
-				"id": "basic-3",
-				"name": "Basic deflector shield 3",
-				"defenseValue": 3,
-				"bonusToAc": 1,
-				"bonusToTl": 1,
-				"pcuCost": 5,
-				"bpCost": 6
-			},
-			{
-				"id": "light-5",
-				"name": "Light deflector shield 5",
-				"defenseValue": 5,
-				"bonusToAc": 1,
-				"bonusToTl": 2,
-				"pcuCost": 10,
-				"bpCost": 12
-			},
-			{
-				"id": "light-8",
-				"name": "Light deflector shield 8",
-				"defenseValue": 8,
-				"bonusToAc": 1,
-				"bonusToTl": 2,
-				"pcuCost": 15,
-				"bpCost": 15
-			},
-			{
-				"id": "medium-10",
-				"name": "Medium deflector shield 10",
-				"defenseValue": 10,
-				"bonusToAc": 2,
-				"bonusToTl": 2,
-				"pcuCost": 30,
-				"bpCost": 22
-			},
-			{
-				"id": "medium-12",
-				"name": "Medium deflector shield 12",
-				"defenseValue": 12,
-				"bonusToAc": 2,
-				"bonusToTl": 2,
-				"pcuCost": 45,
-				"bpCost": 26
-			},
-			{
-				"id": "heavy-13",
-				"name": "Heavy deflector shield 13",
-				"defenseValue": 13,
-				"bonusToAc": 2,
-				"bonusToTl": 3,
-				"pcuCost": 60,
-				"bpCost": 33
-			},
-			{
-				"id": "heavy-15",
-				"name": "Heavy deflector shield 15",
-				"defenseValue": 15,
-				"bonusToAc": 2,
-				"bonusToTl": 3,
-				"pcuCost": 80,
-				"bpCost": 36
-			},
-			{
-				"id": "superior-18",
-				"name": "Superior deflector shield 18",
-				"defenseValue": 18,
-				"bonusToAc": 3,
-				"bonusToTl": 3,
-				"pcuCost": 100,
-				"bpCost": 45
-			},
-			{
-				"id": "superior-20",
-				"name": "Superior deflector shield 20",
-				"defenseValue": 20,
-				"bonusToAc": 3,
-				"bonusToTl": 3,
-				"pcuCost": 120,
-				"bpCost": 50
-			}
-		]
-	},
-	"fortifiedHull": {
-		"data": [
-			{
-				"id": "none",
-				"name": "None",
-				"bonusToCtMultiplier": 0,
-				"bpCostMultiplier": 0
-			},
-			{
-				"id": "steel-composite",
-				"name": "Steel composite",
-				"bonusToCtMultiplier": 1,
-				"bpCostMultiplier": 2
-			},
-			{
-				"id": "adamantine-alloy",
-				"name": "Adamantine alloy",
-				"bonusToCtMultiplier": 2,
-				"bpCostMultiplier": 4
-			},
-			{
-				"id": "nanocarbon-plate",
-				"name": "Nanocarbon plate",
-				"bonusToCtMultiplier": 3,
-				"bpCostMultiplier": 6
-			},
-			{
-				"id": "polycarbon-plate",
-				"name": "Polycarbon plate",
-				"bonusToCtMultiplier": 4,
-				"bpCostMultiplier": 9
-			},
-			{
-				"id": "pure-adamantine",
-				"name": "Pure adamantine",
-				"bonusToCtMultiplier": 5,
-				"bpCostMultiplier": 12
-			}
-		]
-	},
-	"frame": {
-		"props": [
-			"size",
-			"maneuverability",
-			"hp",
-			"hpIncrement",
-			"dt",
-			"ct",
-			"expansionBays",
-			"minCrew",
-			"maxCrew",
-			"bpCost"
-		],
-		"data": [
-			{
-				"id": "custom",
-				"name": "Custom",
-				"size": "Small",
-				"maneuverability": "good",
-				"hp": 40,
-				"hpIncrement": 10,
-				"dt": "n/a",
-				"ct": 8,
-				"mounts": {
-					"forward": [
-						"light",
-						"light"
-					],
-					"port": [
-						"light"
-					],
-					"starboard": [
-						"light"
-					]
-				},
-				"expansionBays": 3,
-				"minCrew": 1,
-				"maxCrew": 6,
-				"bpCost": 10
-			},
-			{
-				"id": "racer",
-				"name": "Racer",
-				"size": "Tiny",
-				"maneuverability": "perfect",
-				"hp": 20,
-				"hpIncrement": 5,
-				"dt": "n/a",
-				"ct": 4,
-				"mounts": {
-					"forward": [
-						"light"
-					],
-					"aft": [
-						"light"
-					]
-				},
-				"expansionBays": 0,
-				"minCrew": 1,
-				"maxCrew": 1,
-				"bpCost": 4
-			},
-			{
-				"id": "interceptor",
-				"name": "Interceptor",
-				"size": "Tiny",
-				"maneuverability": "perfect",
-				"hp": 30,
-				"hpIncrement": 5,
-				"dt": "n/a",
-				"ct": 6,
-				"mounts": {
-					"forward": [
-						"light",
-						"light"
-					]
-				},
-				"expansionBays": 0,
-				"minCrew": 1,
-				"maxCrew": 1,
-				"bpCost": 6
-			},
-			{
-				"id": "fighter",
-				"name": "Fighter",
-				"size": "Tiny",
-				"maneuverability": "good",
-				"hp": 35,
-				"hpIncrement": 5,
-				"dt": "n/a",
-				"ct": 7,
-				"mounts": {
-					"forward": [
-						"light",
-						"light"
-					],
-					"aft": [
-						"light"
-					]
-				},
-                "weaponInfo": "On a fighter, one of the forward arc light weapon mounts must be a tracking weapon",
-				"expansionBays": 0,
-				"minCrew": 1,
-				"maxCrew": 2,
-				"bpCost": 8
-			},
-			{
-				"id": "shuttle",
-				"name": "Shuttle",
-				"size": "Small",
-				"maneuverability": "perfect",
-				"hp": 35,
-				"hpIncrement": 5,
-				"dt": "n/a",
-				"ct": 7,
-				"mounts": {
-					"forward": [
-						"light"
-					]
-				},
-				"expansionBays": 3,
-				"minCrew": 1,
-				"maxCrew": 4,
-				"bpCost": 6
-			},
-			{
-				"id": "light-freighter",
-				"name": "Light Freighter",
-				"size": "Small",
-				"maneuverability": "good",
-				"hp": 40,
-				"hpIncrement": 10,
-				"dt": "n/a",
-				"ct": 8,
-				"mounts": {
-					"forward": [
-						"light",
-						"light"
-					],
-					"port": [
-						"light"
-					],
-					"starboard": [
-						"light"
-					]
-				},
-				"expansionBays": 3,
-				"minCrew": 1,
-				"maxCrew": 6,
-				"bpCost": 10
-			},
-			{
-				"id": "explorer",
-				"name": "Explorer",
-				"size": "Medium",
-				"maneuverability": "good",
-				"hp": 55,
-				"hpIncrement": 10,
-				"dt": "n/a",
-				"ct": 11,
-				"mounts": {
-					"forward": [
-						"light"
-					],
-					"port": [
-						"light"
-					],
-					"starboard": [
-						"light"
-					],
-					"turret": [
-						"light"
-					]
-				},
-				"expansionBays": 4,
-				"minCrew": 1,
-				"maxCrew": 6,
-				"bpCost": 12
-			},
-			{
-				"id": "transport",
-				"name": "Transport",
-				"size": "Medium",
-				"maneuverability": "average",
-				"hp": 70,
-				"hpIncrement": 15,
-				"dt": "n/a",
-				"ct": 14,
-				"mounts": {
-					"forward": [
-						"heavy",
-						"light"
-					],
-					"aft": [
-						"light"
-					],
-					"turret": [
-						"light",
-						"light"
-					]
-				},
-				"expansionBays": 5,
-				"minCrew": 1,
-				"maxCrew": 6,
-				"bpCost": 15
-			},
-			{
-				"id": "destroyer",
-				"name": "Destroyer",
-				"size": "Large",
-				"maneuverability": "average",
-				"hp": 150,
-				"hpIncrement": 20,
-				"dt": "n/a",
-				"ct": 30,
-				"mounts": {
-					"forward": [
-						"heavy",
-						"heavy"
-					],
-					"port": [
-						"light"
-					],
-					"starboard": [
-						"light"
-					],
-					"aft": [
-						"light"
-					],
-					"turret": [
-						"light"
-					]
-				},
-				"expansionBays": 4,
-				"minCrew": 6,
-				"maxCrew": 20,
-				"bpCost": 30
-			},
-			{
-				"id": "heavy-freighter",
-				"name": "Heavy Freighter",
-				"size": "Large",
-				"maneuverability": "average",
-				"hp": 120,
-				"hpIncrement": 20,
-				"dt": "n/a",
-				"ct": 24,
-				"mounts": {
-					"forward": [
-						"heavy",
-						"light",
-						"light"
-					],
-					"port": [
-						"heavy"
-					],
-					"starboard": [
-						"heavy"
-					]
-				},
-				"expansionBays": 8,
-				"minCrew": 6,
-				"maxCrew": 20,
-				"bpCost": 40
-			},
-			{
-				"id": "bulk-freighter",
-				"name": "Bulk Freighter",
-				"size": "Huge",
-				"maneuverability": "poor",
-				"hp": 160,
-				"hpIncrement": 20,
-				"dt": 5,
-				"ct": 32,
-				"mounts": {
-					"forward": [
-						"heavy"
-					],
-					"aft": [
-						"heavy"
-					],
-					"turret": [
-						"light",
-						"light"
-					]
-				},
-				"expansionBays": 10,
-				"minCrew": 20,
-				"maxCrew": 50,
-				"bpCost": 55
-			},
-			{
-				"id": "cruiser",
-				"name": "Cruiser",
-				"size": "Huge",
-				"maneuverability": "average",
-				"hp": 180,
-				"hpIncrement": 25,
-				"dt": 5,
-				"ct": 36,
-				"mounts": {
-					"forward": [
-						"capital"
-					],
-					"port": [
-						"light"
-					],
-					"starboard": [
-						"light"
-					],
-					"turret": [
-						"heavy",
-						"heavy"
-					]
-				},
-				"expansionBays": 6,
-				"minCrew": 20,
-				"maxCrew": 100,
-				"bpCost": 60
-			},
-			{
-				"id": "carrier",
-				"name": "Carrier",
-				"size": "Gargantuan",
-				"maneuverability": "poor",
-				"hp": 240,
-				"hpIncrement": 30,
-				"dt": 10,
-				"ct": 48,
-				"mounts": {
-					"forward": [
-						"capital"
-					],
-					"port": [
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"starboard": [
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"turret": [
-						"light",
-						"light"
-					]
-				},
-				"expansionBays": 10,
-                "expansionBayInfo": "On a carrier, one of the expansion bays must be a hangar bay",
-				"minCrew": 75,
-				"maxCrew": 200,
-				"bpCost": 120
-			},
-			{
-				"id": "battleship",
-				"name": "Battleship",
-				"size": "Gargantuan",
-				"maneuverability": "average",
-				"hp": 280,
-				"hpIncrement": 40,
-				"dt": 10,
-				"ct": 56,
-				"mounts": {
-					"forward": [
-						"capital",
-						"heavy",
-						"heavy"
-					],
-					"port": [
-						"heavy",
-						"heavy",
-						"light"
-					],
-					"starboard": [
-						"heavy",
-						"heavy",
-						"light"
-					],
-					"aft": [
-						"light"
-					],
-					"turret": [
-						"heavy",
-						"heavy"
-					]
-				},
-				"expansionBays": 8,
-				"minCrew": 100,
-				"maxCrew": 300,
-				"bpCost": 150
-			},
-			{
-				"id": "dreadnought",
-				"name": "Dreadnought",
-				"size": "Colossal",
-				"maneuverability": "clumsy",
-				"hp": 400,
-				"hpIncrement": 50,
-				"dt": 15,
-				"ct": 80,
-				"mounts": {
-					"forward": [
-						"capital",
-						"capital",
-						"heavy",
-						"heavy"
-					],
-					"port": [
-						"capital",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"starboard": [
-						"capital",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"turret": [
-						"light",
-						"light",
-						"light",
-						"light"
-					]
-				},
-				"expansionBays": 20,
-				"minCrew": 125,
-				"maxCrew": 500,
-				"bpCost": 200
-			},
-			{
-				"id": "base-ship",
-				"name": "Base Ship",
-				"src": "SOM",
-				"size": "Supercolossal",
-				"maneuverability": "clumsy",
-				"hp": 450,
-				"hpIncrement": 75,
-				"dt": 15,
-				"ct": 90,
-				"mounts": {
-					"forward": [
-						"heavy",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"port": [
-						"heavy",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"starboard": [
-						"heavy",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"turret": [
-						"capital",
-						"capital"
-					]
-				},
-				"expansionBays": "Unlimited",
-				"minCrew": 150,
-				"maxCrew": 100000,
-				"bpCost": 250
-			},
-			{
-				"id": "ultranought",
-				"name": "Ultranought",
-				"src": "SOM",
-				"size": "Supercolossal",
-				"maneuverability": "clumsy",
-				"hp": 550,
-				"hpIncrement": 100,
-				"dt": 20,
-				"ct": 110,
-				"mounts": {
-					"forward": [
-						"capital",
-						"capital",
-						"heavy",
-						"heavy",
-						"spinal"
-					],
-					"port": [
-						"capital",
-						"capital",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"starboard": [
-						"capital",
-						"capital",
-						"heavy",
-						"heavy",
-						"heavy"
-					],
-					"turret": [
-						"capital",
-						"heavy",
-						"heavy"
-					]
-				},
-				"expansionBays": "Unlimited",
-				"minCrew": 250,
-				"maxCrew": 5000,
-				"bpCost": 350
-			}
-		]
-	},
-	"powerCore": {
-		"props": [
-			"pcuBudget",
-			"bpCost"
-		],
-		"data": [
-			{
-				"id": "none",
-				"name": "None",
-				"sizes": [
-					"Tiny",
-					"Small",
-					"Medium",
-					"Large",
-					"Huge",
-					"Gargantuan",
-					"Colossal"
-				],
-				"pcuBudget": 0,
-				"bpCost": 0
-			},
-			{
-				"id": "micron-light",
-				"name": "Micron Light",
-				"sizes": [
-					"Tiny"
-				],
-				"pcuBudget": 50,
-				"bpCost": 4
-			},
-			{
-				"id": "micron-heavy",
-				"name": "Micron Heavy",
-				"sizes": [
-					"Tiny"
-				],
-				"pcuBudget": 70,
-				"bpCost": 6
-			},
-			{
-				"id": "micron-ultra",
-				"name": "Micron Ultra",
-				"sizes": [
-					"Tiny"
-				],
-				"pcuBudget": 80,
-				"bpCost": 8
-			},
-			{
-				"id": "arcus-light",
-				"name": "Arcus Light",
-				"sizes": [
-					"Tiny",
-					"Small"
-				],
-				"pcuBudget": 75,
-				"bpCost": 7
-			},
-			{
-				"id": "pulse-brown",
-				"name": "Pulse Brown",
-				"sizes": [
-					"Tiny",
-					"Small"
-				],
-				"pcuBudget": 90,
-				"bpCost": 9
-			},
-			{
-				"id": "pulse-black",
-				"name": "Pulse Black",
-				"sizes": [
-					"Tiny",
-					"Small"
-				],
-				"pcuBudget": 120,
-				"bpCost": 12
-			},
-			{
-				"id": "pulse-white",
-				"name": "Pulse White",
-				"sizes": [
-					"Tiny",
-					"Small"
-				],
-				"pcuBudget": 140,
-				"bpCost": 14
-			},
-			{
-				"id": "pulse-gray",
-				"name": "Pulse Gray",
-				"sizes": [
-					"Tiny",
-					"Small",
-					"Medium"
-				],
-				"pcuBudget": 100,
-				"bpCost": 10
-			},
-			{
-				"id": "arcus-heavy",
-				"name": "Arcus Heavy",
-				"sizes": [
-					"Tiny",
-					"Small",
-					"Medium"
-				],
-				"pcuBudget": 130,
-				"bpCost": 13
-			},
-			{
-				"id": "pulse-green",
-				"name": "Pulse Green",
-				"sizes": [
-					"Tiny",
-					"Small",
-					"Medium"
-				],
-				"pcuBudget": 150,
-				"bpCost": 15
-			},
-			{
-				"id": "pulse-red",
-				"name": "Pulse Red",
-				"sizes": [
-					"Tiny",
-					"Small",
-					"Medium"
-				],
-				"pcuBudget": 175,
-				"bpCost": 17
-			},
-			{
-				"id": "pulse-blue",
-				"name": "Pulse Blue",
-				"sizes": [
-					"Tiny",
-					"Small",
-					"Medium"
-				],
-				"pcuBudget": 200,
-				"bpCost": 20
-			},
-			{
-				"id": "arcus-ultra",
-				"name": "Arcus Ultra",
-				"sizes": [
-					"Small",
-					"Medium",
-					"Large"
-				],
-				"pcuBudget": 150,
-				"bpCost": 15
-			},
-			{
-				"id": "arcus-maximum",
-				"name": "Arcus Maximum",
-				"sizes": [
-					"Small",
-					"Medium",
-					"Large"
-				],
-				"pcuBudget": 200,
-				"bpCost": 20
-			},
-			{
-				"id": "pulse-orange",
-				"name": "Pulse Orange",
-				"sizes": [
-					"Small",
-					"Medium",
-					"Large"
-				],
-				"pcuBudget": 250,
-				"bpCost": 25
-			},
-			{
-				"id": "pulse-prismatic",
-				"name": "Pulse Prismatic",
-				"sizes": [
-					"Small",
-					"Medium",
-					"Large"
-				],
-				"pcuBudget": 300,
-				"bpCost": 30
-			},
-			{
-				"id": "nova-light",
-				"name": "Nova Light",
-				"sizes": [
-					"Medium",
-					"Large",
-					"Huge"
-				],
-				"pcuBudget": 150,
-				"bpCost": 15
-			},
-			{
-				"id": "nova-heavy",
-				"name": "Nova Heavy",
-				"sizes": [
-					"Medium",
-					"Large",
-					"Huge"
-				],
-				"pcuBudget": 200,
-				"bpCost": 20
-			},
-			{
-				"id": "nova-ultra",
-				"name": "Nova Ultra",
-				"sizes": [
-					"Medium",
-					"Large",
-					"Huge"
-				],
-				"pcuBudget": 300,
-				"bpCost": 30
-			},
-			{
-				"id": "gateway-light",
-				"name": "Gateway Light",
-				"sizes": [
-					"Large",
-					"Huge",
-					"Gargantuan"
-				],
-				"pcuBudget": 300,
-				"bpCost": 30
-			},
-			{
-				"id": "gateway-heavy",
-				"name": "Gateway Heavy",
-				"sizes": [
-					"Large",
-					"Huge",
-					"Gargantuan"
-				],
-				"pcuBudget": 400,
-				"bpCost": 40
-			},
-			{
-				"id": "gateway-ultra",
-				"name": "Gateway Ultra",
-				"sizes": [
-					"Huge",
-					"Gargantuan",
-					"Colossal"
-				],
-				"pcuBudget": 500,
-				"bpCost": 50
 			}
 		]
 	},
@@ -1479,6 +598,38 @@
 			}
 		]
 	},
+	"computerCountermeasures": {
+		"data": [
+			{
+				"id": "alarm",
+				"name": "Alarm"
+			},
+			{
+				"id": "fake-shell",
+				"name": "Fake Shell"
+			},
+			{
+				"id": "feedback",
+				"name": "Feedback"
+			},
+			{
+				"id": "firewall",
+				"name": "Firewall"
+			},
+			{
+				"id": "lockout",
+				"name": "Lockout"
+			},
+			{
+				"id": "shock-grid",
+				"name": "Shock Grid"
+			},
+			{
+				"id": "wipe",
+				"name": "Wipe"
+			}
+		]
+	},
 	"crewQuarters": {
 		"props": [
 			"bpCost"
@@ -1628,6 +779,110 @@
 				"defCMBonusToTl": 15,
 				"pcuCost": 45,
 				"bpCost": 90
+			}
+		]
+	},
+	"deflectorShield": {
+		"src": "SOM",
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"defenseValue": 0,
+				"bonusToAc": 0,
+				"bonusToTl": 0,
+				"pcuCost": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "basic-1",
+				"name": "Basic deflector shield 1",
+				"defenseValue": 1,
+				"bonusToAc": 1,
+				"bonusToTl": 1,
+				"pcuCost": 5,
+				"bpCost": 4
+			},
+			{
+				"id": "basic-3",
+				"name": "Basic deflector shield 3",
+				"defenseValue": 3,
+				"bonusToAc": 1,
+				"bonusToTl": 1,
+				"pcuCost": 5,
+				"bpCost": 6
+			},
+			{
+				"id": "light-5",
+				"name": "Light deflector shield 5",
+				"defenseValue": 5,
+				"bonusToAc": 1,
+				"bonusToTl": 2,
+				"pcuCost": 10,
+				"bpCost": 12
+			},
+			{
+				"id": "light-8",
+				"name": "Light deflector shield 8",
+				"defenseValue": 8,
+				"bonusToAc": 1,
+				"bonusToTl": 2,
+				"pcuCost": 15,
+				"bpCost": 15
+			},
+			{
+				"id": "medium-10",
+				"name": "Medium deflector shield 10",
+				"defenseValue": 10,
+				"bonusToAc": 2,
+				"bonusToTl": 2,
+				"pcuCost": 30,
+				"bpCost": 22
+			},
+			{
+				"id": "medium-12",
+				"name": "Medium deflector shield 12",
+				"defenseValue": 12,
+				"bonusToAc": 2,
+				"bonusToTl": 2,
+				"pcuCost": 45,
+				"bpCost": 26
+			},
+			{
+				"id": "heavy-13",
+				"name": "Heavy deflector shield 13",
+				"defenseValue": 13,
+				"bonusToAc": 2,
+				"bonusToTl": 3,
+				"pcuCost": 60,
+				"bpCost": 33
+			},
+			{
+				"id": "heavy-15",
+				"name": "Heavy deflector shield 15",
+				"defenseValue": 15,
+				"bonusToAc": 2,
+				"bonusToTl": 3,
+				"pcuCost": 80,
+				"bpCost": 36
+			},
+			{
+				"id": "superior-18",
+				"name": "Superior deflector shield 18",
+				"defenseValue": 18,
+				"bonusToAc": 3,
+				"bonusToTl": 3,
+				"pcuCost": 100,
+				"bpCost": 45
+			},
+			{
+				"id": "superior-20",
+				"name": "Superior deflector shield 20",
+				"defenseValue": 20,
+				"bonusToAc": 3,
+				"bonusToTl": 3,
+				"pcuCost": 120,
+				"bpCost": 50
 			}
 		]
 	},
@@ -2367,198 +1622,588 @@
 			}
 		]
 	},
-	"sizeCategory": {
-		"data": [
-			{
-				"id": "Tiny",
-				"name": "Tiny",
-				"multiplier": 1,
-				"acAndTlModifier": 2,
-				"maxMounts": 2,
-				"maxMountWeight": "light",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Small",
-				"name": "Small",
-				"multiplier": 2,
-				"acAndTlModifier": 1,
-				"maxMounts": 2,
-				"maxMountWeight": "light",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Medium",
-				"name": "Medium",
-				"multiplier": 3,
-				"acAndTlModifier": 0,
-				"maxMounts": 3,
-				"maxMountWeight": "heavy",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Large",
-				"name": "Large",
-				"multiplier": 4,
-				"acAndTlModifier": -1,
-				"maxMounts": 3,
-				"maxMountWeight": "heavy",
-				"countPowerCoreHousings": 1
-			},
-			{
-				"id": "Huge",
-				"name": "Huge",
-				"multiplier": 5,
-				"acAndTlModifier": -2,
-				"maxMounts": 4,
-				"maxMountWeight": "capital",
-				"countPowerCoreHousings": 2
-			},
-			{
-				"id": "Gargantuan",
-				"name": "Gargantuan",
-				"multiplier": 6,
-				"acAndTlModifier": -4,
-				"maxMounts": 4,
-				"maxMountWeight": "capital",
-				"countPowerCoreHousings": 3
-			},
-			{
-				"id": "Colossal",
-				"name": "Colossal",
-				"multiplier": 7,
-				"acAndTlModifier": -8,
-				"maxMounts": 4,
-				"maxMountWeight": "capital",
-				"countPowerCoreHousings": 4
-			},
-			{
-				"id": "Supercolossal",
-				"name": "Supercolossal",
-				"multiplier": 8,
-				"acAndTlModifier": -8,
-				"maxMounts": 4,
-				"maxMountWeight": "spinal-mount",
-				"countPowerCoreHousings": 4,
-				"countSupercolossalCoreHousings": 1
-			}
-		]
-	},
-	"computerCountermeasures": {
-		"data": [
-			{
-				"id": "alarm",
-				"name": "Alarm"
-			},
-			{
-				"id": "fake-shell",
-				"name": "Fake Shell"
-			},
-			{
-				"id": "feedback",
-				"name": "Feedback"
-			},
-			{
-				"id": "firewall",
-				"name": "Firewall"
-			},
-			{
-				"id": "lockout",
-				"name": "Lockout"
-			},
-			{
-				"id": "shock-grid",
-				"name": "Shock Grid"
-			},
-			{
-				"id": "wipe",
-				"name": "Wipe"
-			}
-		]
-	},
-	"shockGrid": {
+	"fortifiedHull": {
 		"data": [
 			{
 				"id": "none",
 				"name": "None",
-				"rank": 0,
-				"dc": 0,
-				"damage": "None",
+				"bonusToCtMultiplier": 0,
 				"bpCostMultiplier": 0
 			},
 			{
-				"id": "rank-1",
-				"name": "Shock Grid, Rank 1",
-				"rank": 1,
-				"dc": 20,
-				"damage": "8d6",
-				"bpCostMultiplier": 1
-			},
-			{
-				"id": "rank-2",
-				"name": "Shock Grid, Rank 2",
-				"rank": 2,
-				"dc": 22,
-				"damage": "10d6",
+				"id": "steel-composite",
+				"name": "Steel composite",
+				"bonusToCtMultiplier": 1,
 				"bpCostMultiplier": 2
 			},
 			{
-				"id": "rank-3",
-				"name": "Shock Grid, Rank 3",
-				"rank": 3,
-				"dc": 24,
-				"damage": "12d6",
-				"bpCostMultiplier": 3
-			},
-			{
-				"id": "rank-4",
-				"name": "Shock Grid, Rank 4",
-				"rank": 4,
-				"dc": 27,
-				"damage": "14d6",
+				"id": "adamantine-alloy",
+				"name": "Adamantine alloy",
+				"bonusToCtMultiplier": 2,
 				"bpCostMultiplier": 4
 			},
 			{
-				"id": "rank-5",
-				"name": "Shock Grid, Rank 5",
-				"rank": 5,
-				"dc": 30,
-				"damage": "16d6",
-				"bpCostMultiplier": 5
+				"id": "nanocarbon-plate",
+				"name": "Nanocarbon plate",
+				"bonusToCtMultiplier": 3,
+				"bpCostMultiplier": 6
+			},
+			{
+				"id": "polycarbon-plate",
+				"name": "Polycarbon plate",
+				"bonusToCtMultiplier": 4,
+				"bpCostMultiplier": 9
+			},
+			{
+				"id": "pure-adamantine",
+				"name": "Pure adamantine",
+				"bonusToCtMultiplier": 5,
+				"bpCostMultiplier": 12
 			}
 		]
 	},
-	"antiHackingSystems": {
+	"frame": {
+		"props": [
+			"size",
+			"maneuverability",
+			"hp",
+			"hpIncrement",
+			"dt",
+			"ct",
+			"expansionBays",
+			"minCrew",
+			"maxCrew",
+			"bpCost"
+		],
 		"data": [
 			{
-				"id": "none",
-				"name": "None",
-				"dcMod": 0,
-				"bpCost": 0
+				"id": "custom",
+				"name": "Custom",
+				"size": "Small",
+				"maneuverability": "good",
+				"hp": 40,
+				"hpIncrement": 10,
+				"dt": "n/a",
+				"ct": 8,
+				"mounts": {
+					"forward": [
+						"light",
+						"light"
+					],
+					"port": [
+						"light"
+					],
+					"starboard": [
+						"light"
+					]
+				},
+				"expansionBays": 3,
+				"minCrew": 1,
+				"maxCrew": 6,
+				"bpCost": 10
 			},
 			{
-				"id": "mk1",
-				"name": "Anti-Hacking Systems Mk 1",
-				"dcMod": 1,
-				"bpCost": 3
+				"id": "racer",
+				"name": "Racer",
+				"size": "Tiny",
+				"maneuverability": "perfect",
+				"hp": 20,
+				"hpIncrement": 5,
+				"dt": "n/a",
+				"ct": 4,
+				"mounts": {
+					"forward": [
+						"light"
+					],
+					"aft": [
+						"light"
+					]
+				},
+				"expansionBays": 0,
+				"minCrew": 1,
+				"maxCrew": 1,
+				"bpCost": 4
 			},
 			{
-				"id": "mk2",
-				"name": "Anti-Hacking Systems Mk 2",
-				"dcMod": 2,
+				"id": "interceptor",
+				"name": "Interceptor",
+				"size": "Tiny",
+				"maneuverability": "perfect",
+				"hp": 30,
+				"hpIncrement": 5,
+				"dt": "n/a",
+				"ct": 6,
+				"mounts": {
+					"forward": [
+						"light",
+						"light"
+					]
+				},
+				"expansionBays": 0,
+				"minCrew": 1,
+				"maxCrew": 1,
 				"bpCost": 6
 			},
 			{
-				"id": "mk3",
-				"name": "Anti-Hacking Systems Mk 3",
-				"dcMod": 3,
-				"bpCost": 9
+				"id": "fighter",
+				"name": "Fighter",
+				"size": "Tiny",
+				"maneuverability": "good",
+				"hp": 35,
+				"hpIncrement": 5,
+				"dt": "n/a",
+				"ct": 7,
+				"mounts": {
+					"forward": [
+						"light",
+						"light"
+					],
+					"aft": [
+						"light"
+					]
+				},
+                "weaponInfo": "On a fighter, one of the forward arc light weapon mounts must be a tracking weapon",
+				"expansionBays": 0,
+				"minCrew": 1,
+				"maxCrew": 2,
+				"bpCost": 8
 			},
 			{
-				"id": "mk4",
-				"name": "Anti-Hacking Systems Mk 4",
-				"dcMod": 4,
+				"id": "shuttle",
+				"name": "Shuttle",
+				"size": "Small",
+				"maneuverability": "perfect",
+				"hp": 35,
+				"hpIncrement": 5,
+				"dt": "n/a",
+				"ct": 7,
+				"mounts": {
+					"forward": [
+						"light"
+					]
+				},
+				"expansionBays": 3,
+				"minCrew": 1,
+				"maxCrew": 4,
+				"bpCost": 6
+			},
+			{
+				"id": "light-freighter",
+				"name": "Light Freighter",
+				"size": "Small",
+				"maneuverability": "good",
+				"hp": 40,
+				"hpIncrement": 10,
+				"dt": "n/a",
+				"ct": 8,
+				"mounts": {
+					"forward": [
+						"light",
+						"light"
+					],
+					"port": [
+						"light"
+					],
+					"starboard": [
+						"light"
+					]
+				},
+				"expansionBays": 3,
+				"minCrew": 1,
+				"maxCrew": 6,
+				"bpCost": 10
+			},
+			{
+				"id": "explorer",
+				"name": "Explorer",
+				"size": "Medium",
+				"maneuverability": "good",
+				"hp": 55,
+				"hpIncrement": 10,
+				"dt": "n/a",
+				"ct": 11,
+				"mounts": {
+					"forward": [
+						"light"
+					],
+					"port": [
+						"light"
+					],
+					"starboard": [
+						"light"
+					],
+					"turret": [
+						"light"
+					]
+				},
+				"expansionBays": 4,
+				"minCrew": 1,
+				"maxCrew": 6,
 				"bpCost": 12
+			},
+			{
+				"id": "transport",
+				"name": "Transport",
+				"size": "Medium",
+				"maneuverability": "average",
+				"hp": 70,
+				"hpIncrement": 15,
+				"dt": "n/a",
+				"ct": 14,
+				"mounts": {
+					"forward": [
+						"heavy",
+						"light"
+					],
+					"aft": [
+						"light"
+					],
+					"turret": [
+						"light",
+						"light"
+					]
+				},
+				"expansionBays": 5,
+				"minCrew": 1,
+				"maxCrew": 6,
+				"bpCost": 15
+			},
+			{
+				"id": "destroyer",
+				"name": "Destroyer",
+				"size": "Large",
+				"maneuverability": "average",
+				"hp": 150,
+				"hpIncrement": 20,
+				"dt": "n/a",
+				"ct": 30,
+				"mounts": {
+					"forward": [
+						"heavy",
+						"heavy"
+					],
+					"port": [
+						"light"
+					],
+					"starboard": [
+						"light"
+					],
+					"aft": [
+						"light"
+					],
+					"turret": [
+						"light"
+					]
+				},
+				"expansionBays": 4,
+				"minCrew": 6,
+				"maxCrew": 20,
+				"bpCost": 30
+			},
+			{
+				"id": "heavy-freighter",
+				"name": "Heavy Freighter",
+				"size": "Large",
+				"maneuverability": "average",
+				"hp": 120,
+				"hpIncrement": 20,
+				"dt": "n/a",
+				"ct": 24,
+				"mounts": {
+					"forward": [
+						"heavy",
+						"light",
+						"light"
+					],
+					"port": [
+						"heavy"
+					],
+					"starboard": [
+						"heavy"
+					]
+				},
+				"expansionBays": 8,
+				"minCrew": 6,
+				"maxCrew": 20,
+				"bpCost": 40
+			},
+			{
+				"id": "bulk-freighter",
+				"name": "Bulk Freighter",
+				"size": "Huge",
+				"maneuverability": "poor",
+				"hp": 160,
+				"hpIncrement": 20,
+				"dt": 5,
+				"ct": 32,
+				"mounts": {
+					"forward": [
+						"heavy"
+					],
+					"aft": [
+						"heavy"
+					],
+					"turret": [
+						"light",
+						"light"
+					]
+				},
+				"expansionBays": 10,
+				"minCrew": 20,
+				"maxCrew": 50,
+				"bpCost": 55
+			},
+			{
+				"id": "cruiser",
+				"name": "Cruiser",
+				"size": "Huge",
+				"maneuverability": "average",
+				"hp": 180,
+				"hpIncrement": 25,
+				"dt": 5,
+				"ct": 36,
+				"mounts": {
+					"forward": [
+						"capital"
+					],
+					"port": [
+						"light"
+					],
+					"starboard": [
+						"light"
+					],
+					"turret": [
+						"heavy",
+						"heavy"
+					]
+				},
+				"expansionBays": 6,
+				"minCrew": 20,
+				"maxCrew": 100,
+				"bpCost": 60
+			},
+			{
+				"id": "carrier",
+				"name": "Carrier",
+				"size": "Gargantuan",
+				"maneuverability": "poor",
+				"hp": 240,
+				"hpIncrement": 30,
+				"dt": 10,
+				"ct": 48,
+				"mounts": {
+					"forward": [
+						"capital"
+					],
+					"port": [
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"starboard": [
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"turret": [
+						"light",
+						"light"
+					]
+				},
+				"expansionBays": 10,
+                "expansionBayInfo": "On a carrier, one of the expansion bays must be a hangar bay",
+				"minCrew": 75,
+				"maxCrew": 200,
+				"bpCost": 120
+			},
+			{
+				"id": "battleship",
+				"name": "Battleship",
+				"size": "Gargantuan",
+				"maneuverability": "average",
+				"hp": 280,
+				"hpIncrement": 40,
+				"dt": 10,
+				"ct": 56,
+				"mounts": {
+					"forward": [
+						"capital",
+						"heavy",
+						"heavy"
+					],
+					"port": [
+						"heavy",
+						"heavy",
+						"light"
+					],
+					"starboard": [
+						"heavy",
+						"heavy",
+						"light"
+					],
+					"aft": [
+						"light"
+					],
+					"turret": [
+						"heavy",
+						"heavy"
+					]
+				},
+				"expansionBays": 8,
+				"minCrew": 100,
+				"maxCrew": 300,
+				"bpCost": 150
+			},
+			{
+				"id": "dreadnought",
+				"name": "Dreadnought",
+				"size": "Colossal",
+				"maneuverability": "clumsy",
+				"hp": 400,
+				"hpIncrement": 50,
+				"dt": 15,
+				"ct": 80,
+				"mounts": {
+					"forward": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy"
+					],
+					"port": [
+						"capital",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"starboard": [
+						"capital",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"turret": [
+						"light",
+						"light",
+						"light",
+						"light"
+					]
+				},
+				"expansionBays": 20,
+				"minCrew": 125,
+				"maxCrew": 500,
+				"bpCost": 200
+			},
+			{
+				"id": "base-ship",
+				"name": "Base Ship",
+				"src": "SOM",
+				"size": "Supercolossal",
+				"maneuverability": "clumsy",
+				"hp": 450,
+				"hpIncrement": 75,
+				"dt": 15,
+				"ct": 90,
+				"mounts": {
+					"forward": [
+						"heavy",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"port": [
+						"heavy",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"starboard": [
+						"heavy",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"turret": [
+						"capital",
+						"capital"
+					]
+				},
+				"expansionBays": "Unlimited",
+				"minCrew": 150,
+				"maxCrew": 100000,
+				"bpCost": 250
+			},
+			{
+				"id": "ultranought",
+				"name": "Ultranought",
+				"src": "SOM",
+				"size": "Supercolossal",
+				"maneuverability": "clumsy",
+				"hp": 550,
+				"hpIncrement": 100,
+				"dt": 20,
+				"ct": 110,
+				"mounts": {
+					"forward": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy",
+						"spinal"
+					],
+					"port": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"starboard": [
+						"capital",
+						"capital",
+						"heavy",
+						"heavy",
+						"heavy"
+					],
+					"turret": [
+						"capital",
+						"heavy",
+						"heavy"
+					]
+				},
+				"expansionBays": "Unlimited",
+				"minCrew": 250,
+				"maxCrew": 5000,
+				"bpCost": 350
+			}
+		]
+	},
+	"maneuverabilityRating": {
+		"data": [
+			{
+				"id": "perfect",
+				"pilotingModifier": 2,
+				"turn": 0
+			},
+			{
+				"id": "good",
+				"pilotingModifier": 1,
+				"turn": 1
+			},
+			{
+				"id": "average",
+				"pilotingModifier": 0,
+				"turn": 2
+			},
+			{
+				"id": "poor",
+				"pilotingModifier": -1,
+				"turn": 3
+			},
+			{
+				"id": "clumsy",
+				"pilotingModifier": -2,
+				"turn": 4
 			}
 		]
 	},
@@ -4114,6 +3759,338 @@
 				"bulk": 2,
 				"special": "n/a",
 				"type": "heavy"
+			}
+		]
+	},
+	"powerCore": {
+		"props": [
+			"pcuBudget",
+			"bpCost"
+		],
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"pcuBudget": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "micron-light",
+				"name": "Micron Light",
+				"sizes": [
+					"Tiny"
+				],
+				"pcuBudget": 50,
+				"bpCost": 4
+			},
+			{
+				"id": "micron-heavy",
+				"name": "Micron Heavy",
+				"sizes": [
+					"Tiny"
+				],
+				"pcuBudget": 70,
+				"bpCost": 6
+			},
+			{
+				"id": "micron-ultra",
+				"name": "Micron Ultra",
+				"sizes": [
+					"Tiny"
+				],
+				"pcuBudget": 80,
+				"bpCost": 8
+			},
+			{
+				"id": "arcus-light",
+				"name": "Arcus Light",
+				"sizes": [
+					"Tiny",
+					"Small"
+				],
+				"pcuBudget": 75,
+				"bpCost": 7
+			},
+			{
+				"id": "pulse-brown",
+				"name": "Pulse Brown",
+				"sizes": [
+					"Tiny",
+					"Small"
+				],
+				"pcuBudget": 90,
+				"bpCost": 9
+			},
+			{
+				"id": "pulse-black",
+				"name": "Pulse Black",
+				"sizes": [
+					"Tiny",
+					"Small"
+				],
+				"pcuBudget": 120,
+				"bpCost": 12
+			},
+			{
+				"id": "pulse-white",
+				"name": "Pulse White",
+				"sizes": [
+					"Tiny",
+					"Small"
+				],
+				"pcuBudget": 140,
+				"bpCost": 14
+			},
+			{
+				"id": "pulse-gray",
+				"name": "Pulse Gray",
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium"
+				],
+				"pcuBudget": 100,
+				"bpCost": 10
+			},
+			{
+				"id": "arcus-heavy",
+				"name": "Arcus Heavy",
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium"
+				],
+				"pcuBudget": 130,
+				"bpCost": 13
+			},
+			{
+				"id": "pulse-green",
+				"name": "Pulse Green",
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium"
+				],
+				"pcuBudget": 150,
+				"bpCost": 15
+			},
+			{
+				"id": "pulse-red",
+				"name": "Pulse Red",
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium"
+				],
+				"pcuBudget": 175,
+				"bpCost": 17
+			},
+			{
+				"id": "pulse-blue",
+				"name": "Pulse Blue",
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium"
+				],
+				"pcuBudget": 200,
+				"bpCost": 20
+			},
+			{
+				"id": "arcus-ultra",
+				"name": "Arcus Ultra",
+				"sizes": [
+					"Small",
+					"Medium",
+					"Large"
+				],
+				"pcuBudget": 150,
+				"bpCost": 15
+			},
+			{
+				"id": "arcus-maximum",
+				"name": "Arcus Maximum",
+				"sizes": [
+					"Small",
+					"Medium",
+					"Large"
+				],
+				"pcuBudget": 200,
+				"bpCost": 20
+			},
+			{
+				"id": "pulse-orange",
+				"name": "Pulse Orange",
+				"sizes": [
+					"Small",
+					"Medium",
+					"Large"
+				],
+				"pcuBudget": 250,
+				"bpCost": 25
+			},
+			{
+				"id": "pulse-prismatic",
+				"name": "Pulse Prismatic",
+				"sizes": [
+					"Small",
+					"Medium",
+					"Large"
+				],
+				"pcuBudget": 300,
+				"bpCost": 30
+			},
+			{
+				"id": "nova-light",
+				"name": "Nova Light",
+				"sizes": [
+					"Medium",
+					"Large",
+					"Huge"
+				],
+				"pcuBudget": 150,
+				"bpCost": 15
+			},
+			{
+				"id": "nova-heavy",
+				"name": "Nova Heavy",
+				"sizes": [
+					"Medium",
+					"Large",
+					"Huge"
+				],
+				"pcuBudget": 200,
+				"bpCost": 20
+			},
+			{
+				"id": "nova-ultra",
+				"name": "Nova Ultra",
+				"sizes": [
+					"Medium",
+					"Large",
+					"Huge"
+				],
+				"pcuBudget": 300,
+				"bpCost": 30
+			},
+			{
+				"id": "gateway-light",
+				"name": "Gateway Light",
+				"sizes": [
+					"Large",
+					"Huge",
+					"Gargantuan"
+				],
+				"pcuBudget": 300,
+				"bpCost": 30
+			},
+			{
+				"id": "gateway-heavy",
+				"name": "Gateway Heavy",
+				"sizes": [
+					"Large",
+					"Huge",
+					"Gargantuan"
+				],
+				"pcuBudget": 400,
+				"bpCost": 40
+			},
+			{
+				"id": "gateway-ultra",
+				"name": "Gateway Ultra",
+				"sizes": [
+					"Huge",
+					"Gargantuan",
+					"Colossal"
+				],
+				"pcuBudget": 500,
+				"bpCost": 50
+			}
+		]
+	},
+	"sizeCategory": {
+		"data": [
+			{
+				"id": "Tiny",
+				"name": "Tiny",
+				"multiplier": 1,
+				"acAndTlModifier": 2,
+				"maxMounts": 2,
+				"maxMountWeight": "light",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Small",
+				"name": "Small",
+				"multiplier": 2,
+				"acAndTlModifier": 1,
+				"maxMounts": 2,
+				"maxMountWeight": "light",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Medium",
+				"name": "Medium",
+				"multiplier": 3,
+				"acAndTlModifier": 0,
+				"maxMounts": 3,
+				"maxMountWeight": "heavy",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Large",
+				"name": "Large",
+				"multiplier": 4,
+				"acAndTlModifier": -1,
+				"maxMounts": 3,
+				"maxMountWeight": "heavy",
+				"countPowerCoreHousings": 1
+			},
+			{
+				"id": "Huge",
+				"name": "Huge",
+				"multiplier": 5,
+				"acAndTlModifier": -2,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 2
+			},
+			{
+				"id": "Gargantuan",
+				"name": "Gargantuan",
+				"multiplier": 6,
+				"acAndTlModifier": -4,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 3
+			},
+			{
+				"id": "Colossal",
+				"name": "Colossal",
+				"multiplier": 7,
+				"acAndTlModifier": -8,
+				"maxMounts": 4,
+				"maxMountWeight": "capital",
+				"countPowerCoreHousings": 4
+			},
+			{
+				"id": "Supercolossal",
+				"name": "Supercolossal",
+				"multiplier": 8,
+				"acAndTlModifier": -8,
+				"maxMounts": 4,
+				"maxMountWeight": "spinal-mount",
+				"countPowerCoreHousings": 4,
+				"countSupercolossalCoreHousings": 1
 			}
 		]
 	},
@@ -6311,6 +6288,58 @@
 			"Tracking"
 		]
 	},
+	"shockGrid": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"rank": 0,
+				"dc": 0,
+				"damage": "None",
+				"bpCostMultiplier": 0
+			},
+			{
+				"id": "rank-1",
+				"name": "Shock Grid, Rank 1",
+				"rank": 1,
+				"dc": 20,
+				"damage": "8d6",
+				"bpCostMultiplier": 1
+			},
+			{
+				"id": "rank-2",
+				"name": "Shock Grid, Rank 2",
+				"rank": 2,
+				"dc": 22,
+				"damage": "10d6",
+				"bpCostMultiplier": 2
+			},
+			{
+				"id": "rank-3",
+				"name": "Shock Grid, Rank 3",
+				"rank": 3,
+				"dc": 24,
+				"damage": "12d6",
+				"bpCostMultiplier": 3
+			},
+			{
+				"id": "rank-4",
+				"name": "Shock Grid, Rank 4",
+				"rank": 4,
+				"dc": 27,
+				"damage": "14d6",
+				"bpCostMultiplier": 4
+			},
+			{
+				"id": "rank-5",
+				"name": "Shock Grid, Rank 5",
+				"rank": 5,
+				"dc": 30,
+				"damage": "16d6",
+				"bpCostMultiplier": 5
+			}
+		]
+	},
 	"weaponSpecialProperty": {
 		"data": [
 			{
@@ -6613,35 +6642,6 @@
 				"id": "vortex",
 				"name": "Vortex",
 				"src": "SCR"
-			}
-		]
-	},
-	"maneuverabilityRating": {
-		"data": [
-			{
-				"id": "perfect",
-				"pilotingModifier": 2,
-				"turn": 0
-			},
-			{
-				"id": "good",
-				"pilotingModifier": 1,
-				"turn": 1
-			},
-			{
-				"id": "average",
-				"pilotingModifier": 0,
-				"turn": 2
-			},
-			{
-				"id": "poor",
-				"pilotingModifier": -1,
-				"turn": 3
-			},
-			{
-				"id": "clumsy",
-				"pilotingModifier": -2,
-				"turn": 4
 			}
 		]
 	},
