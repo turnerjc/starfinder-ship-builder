@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Saira:400,400italic,700" rel="stylesheet">
 		
 	<!-- Stylesheet -->
-	<link rel="stylesheet" href="css/style.css?v=20200503">
+	<link rel="stylesheet" href="css/style.css?v=20200802">
 	
 	<!-- Twitter card & Open Graph -->
 	<meta name="twitter:card" content="summary" />
@@ -99,6 +99,7 @@
 					<li><a href="#thrusters">Thrusters</a></li>
 					<li><a href="#otherSystems">Other Systems</a></li>
 					<ul class="contents__1">
+						<li><a href="#ablativeArmor">Ablative Armor</a></li>
 						<li><a href="#armor">Armor</a></li>
 						<li><a href="#computer">Computer</a></li>
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
@@ -712,33 +713,86 @@
 			
 			
 			
+			<!--
+			|------------------------------------------------------------
+			|	OTHER SYSTEMS
+			|------------------------------------------------------------
+			-->
+			
 			<h2 id="otherSystems">Step 5: Other Systems</h2>
+
+
+
+
 
 			<!--
 			|------------------------------------------------------------
-			|	OTHER SYSTEMS / ABLATIVE ARMOR
+			|	ABLATIVE ARMOR
 			|------------------------------------------------------------
 			-->
 			
 			<div class="box">
 				<header class="box__header">
-					<h3 id="armor">Ablative Armor</h3>
+					<h3 id="ablativeArmor">Ablative Armor</h3>
 				</header>
 				<div class="box__select">
 					<div class="form-group">
 						<label for="ablativeArmorSelect">Ablative Armor</label>
-						<select id="ablativeArmorSelect" class="form-control" v-model="params.ablativeArmorId">
-							<option v-for="option in selectOptions.ablativeArmor" :value="option.id">{{ option.name }}</option>
+						<select id="ablativeArmorSelect"
+							class="form-control"
+							@change="setDefaultPositionDependentValues('ablativeArmor', 'tempHp')"
+							v-model="params.ablativeArmorId">
+							<option v-for="option in selectOptions.ablativeArmor"
+								v-if="option.tempHp <= hp * 2"
+								:value="option.id">
+									{{ option.name }}
+							</option>
 						</select>
 					</div>
+
+					<h4>Temporary HP by position:</h4>
+					<div class="box--flex">
+					    <div class="form-group col-sm-1-2 col-lg-1-4">
+					        <label for="">Forward</label>
+					        <input type="number"
+					        	class="form-control"
+					        	v-model="params.ablativeArmorByPosition.forward" />
+					    </div>
+					    <div class="form-group col-sm-1-2 col-lg-1-4">
+					        <label for="">Port</label>
+					        <input type="number"
+					        	class="form-control"
+					        	v-model="params.ablativeArmorByPosition.port" />
+					    </div>
+					    <div class="form-group col-sm-1-2 col-lg-1-4">
+					        <label for="">Starboard</label>
+					        <input type="number"
+					        	class="form-control"
+					        	v-model="params.ablativeArmorByPosition.starboard" />
+					    </div>
+					    <div class="form-group col-sm-1-2 col-lg-1-4">
+					        <label for="">Aft</label>
+					        <input type="number"
+					        	class="form-control"
+					        	v-model="params.ablativeArmorByPosition.aft" />
+					    </div>
+					</div>
+
+					<p v-if="ablativeArmorByPositionTotal != ablativeArmor.tempHp" class="text-danger">Make sure your ablative armor adds up to {{ ablativeArmor.tempHp }}.</p>
+
+					<p v-if="!isAblativeArmorBalanced()" class="text-warning">NOTE: The ship has a -1 penalty to Piloting because temporary HP from ablative armor is not balanced.</p>
+
+					<p v-if="ablativeArmor.tempHp > hp" class="text-warning">NOTE: The ship has a -1 penalty to Piloting because temporary HP exceeds the ship&apos;s HP.</p>
 				</div>
+
 				<div class="box__info">
-					<strong>Temporary HP</strong> {{ ablativeArmor.tempHP }};
+					<strong>Temporary HP</strong> {{ ablativeArmor.tempHp }};
 					<strong>TL Modifier</strong> {{ ablativeArmor.tlMod }};
-					<strong>Turn Distance</strong> {{ ablativeArmor.turn }};
+					<strong>Turn Distance</strong> {{ ablativeArmor.turnMod }}
 				</div>
+
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ ablativeArmorBpCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ ablativeArmor.bpCost }}
 				</div>
 			</div>
 
@@ -1192,7 +1246,7 @@
 						<select v-model="params.shieldsId"
 						    id="shieldsSelect"
 						    class="form-control"
-						    @change="setDefaultShieldsByPosition">
+						    @change="setDefaultPositionDependentValues('shields', 'totalSp')">
 							<option v-for="option in selectOptions.shields" :value="option.id">{{ option.name }}</option>
 						</select>
 					</div>
@@ -1706,6 +1760,13 @@
 						<p><strong>Speed</strong> {{ thrusters.speed }}; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
 						<p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
 						<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ frame.dt }}; <strong>CT</strong> {{ criticalThreshold }}</p>
+						<p v-if="tempHp > 0"><strong>Temporary HP</strong> {{ tempHp }}
+							(forward {{ params.ablativeArmorByPosition.forward }},
+							port {{ params.ablativeArmorByPosition.port }},
+							starboard {{ params.ablativeArmorByPosition.starboard }},
+							aft {{ params.ablativeArmorByPosition.aft }});
+							<strong>Ablative Armor</strong> {{ ablativeArmor.name }}
+						</p>
 						<p><strong>Shields</strong> {{ shields.name }}
 							(forward {{ params.shieldsByPosition.forward }},
 							port {{ params.shieldsByPosition.port }},

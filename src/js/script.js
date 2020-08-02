@@ -252,6 +252,12 @@ function Ship(json) {
 			// paramsReset: {"version":"1.0.1","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"UIE Hiveguard","shipConcept":"Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.","tierId":"6","frameId":"destroyer","powerCoreIds":["arcus-maximum"],"thrustersId":"l8","armorId":"mk-4","computerId":"mk-1-trinode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-4","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","escape-pods","escape-pods","escape-pods"],"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"hasSelfDestructSystem":0,"hasDataNet":0,"hasHiveJoining":0,"sensorsId":"basic-long-range","shieldsId":"light-60","weaponMounts":{"forward":[{"weaponId":"heavy-laser-net","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"twin-laser","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"aft":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"port":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"starboard":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"turret":[{"weaponId":"light-torpedo-launcher","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}]},"crewSkills":{"captain":{"count":1,"countOfficers":0,"hasRole":1,"skills":{"bluff":{"modifier":7,"ranks":6},"computers":{"modifier":7,"ranks":6},"diplomacy":{"modifier":7,"ranks":6},"engineering":{"modifier":7,"ranks":6},"gunnery":{"modifier":13},"intimidate":{"modifier":7,"ranks":6},"piloting":{"modifier":7,"ranks":6}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":12,"ranks":6}},"countOfficers":1,"countOfficerCrew":3},"gunner":{"skills":{"gunnery":{"modifier":13}},"hasRole":1,"countOfficers":2,"countOfficerCrew":2},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"shieldsByPosition":{"forward":15,"aft":15,"port":15,"starboard":15}},
 			paramsReset: {
 				ablativeArmorId: "none",
+                ablativeArmorByPosition: {
+                    forward: 0,
+                    aft: 0,
+                    port: 0,
+                    starboard: 0
+                },
 				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
 				armorId:"none",
@@ -455,6 +461,22 @@ function Ship(json) {
         |----------------------------------------------------------------------------------
         */
 		computed: {
+            /*
+            |------------------------------------------------------------------------------
+            */
+            ablativeArmor: function() {
+				return this.getItemById("ablativeArmor", this.params.ablativeArmorId);
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            ablativeArmorByPositionTotal: function() {
+                var total = 0;
+                for(position in this.params.ablativeArmorByPosition) {
+                    total += parseInt(this.params.ablativeArmorByPosition[position]);
+                }
+                return total;
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -969,6 +991,17 @@ function Ship(json) {
 				} else if ( crewSkills.captain.hasRole ) {
 					pilotingRanks = parseInt(crewSkills.captain.skills.piloting.ranks);
 				}
+
+				// penalty for unevenly distributed ablative armor
+				if (pilotingRanks > -2 && !this.isAblativeArmorBalanced) {
+					pilotingRanks--;
+				}
+
+				// penalty for ablative armor > hp
+				if (this.ablativeArmor.tempHp > this.hp) {
+					pilotingRanks--;
+				}
+
 				return pilotingRanks;
 			},
             /*
@@ -1082,27 +1115,28 @@ function Ship(json) {
 				var that = this;
 				var selectOptions = {};
 				var fields = [
-					"tier",
-					"frame",
-					"powerCore",
-					"thrusters",
+					"ablativeArmor",
+					"antiHackingSystems",
 					"armor",
 					"computer",
+					"computerCountermeasures",
 					"crewQuarters",
 					"defensiveCountermeasures",
 					"driftEngine",
 					"expansionBay",
-					"antiHackingSystems",
+					"frame",
 					"personalWeapon",
-					"computerCountermeasures",
+					"powerCore",
+					"role",
+					"sampleShip",
 					"shockGrid",
 					"sensors",
 					"shields",
 					"shipWeapon",
                     "sizeCategory",
-					"role",
 					"skill",
-					"sampleShip"
+					"thrusters",
+					"tier"
 				];
 
 				for(i in fields) {
@@ -1256,9 +1290,16 @@ function Ship(json) {
 					this.defensiveCountermeasures.defCMBonusToTl +
 					this.sizeCategory.acAndTlModifier +
 					this.armor.targetLockModifier +
-					this.pilotingRanks
+					this.pilotingRanks +
+					this.ablativeArmor.tlMod
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            tempHp: function() {
+            	return this.ablativeArmor.tempHp;
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1292,35 +1333,39 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			totalBpCost: function() {
-				return parseInt(this.frame.bpCost) +
-					parseInt(this.powerCoresBpCost) +
-					parseInt(this.thrusters.bpCost) +
+				return parseInt(this.ablativeArmor.bpCost) +
+					parseInt(this.antiHackingSystems.bpCost )+ 
+					parseInt(this.antiPersonnelWeaponBpCost) +
 					parseInt(this.armorBpCost) +
+					parseInt(this.biometricLocksBpCost) +
 					parseInt(this.computer.bpCost) +
+					parseInt(this.computerCountermeasuresBpCost) +
+					parseInt(this.customComponentBpTotal) +
 					parseInt(this.crewQuarters.bpCost) +
+					parseInt(this.dataNetBpCost) +
 					parseInt(this.defensiveCountermeasures.bpCost) +
 					parseInt(this.driftEngineBpCost) +
 					parseInt(this.expansionBaysTotalBpCost) +
-					parseInt(this.antiHackingSystems.bpCost )+ 
-					parseInt(this.antiPersonnelWeaponBpCost) +
-					parseInt(this.biometricLocksBpCost) +
-					parseInt(this.computerCountermeasuresBpCost) +
-					parseInt(this.selfDestructSystemBpCost) +
-					parseInt(this.dataNetBpCost) +
+					parseInt(this.frame.bpCost) +
 					parseInt(this.hiveJoiningBpCost) +
+					parseInt(this.powerCoresBpCost) +
+					parseInt(this.selfDestructSystemBpCost) +
 					parseInt(this.sensors.bpCost) +
 					parseInt(this.shields.bpCost) +
+					parseInt(this.thrusters.bpCost) +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
-					parseInt(this.weaponsTotalCosts.weaponLinksBp) +
-					parseInt(this.customComponentBpTotal)
+					parseInt(this.weaponsTotalCosts.weaponLinksBp)
 				;
 			},
             /*
             |------------------------------------------------------------------------------
             */
 			turn: function() {
-				return this.maneuverabilityRating.turn + this.armor.turnDistanceModifier;
+				return this.maneuverabilityRating.turn +
+					this.armor.turnDistanceModifier +
+					this.ablativeArmor.turnMod
+				;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1628,6 +1673,12 @@ function Ship(json) {
                     if (key == 'shieldsByPosition') {
                         this.setDefaultShieldsByPosition();
                     }
+
+                    // convert legacy armour to armor
+                    if (key == "armorId" && isset(this.params.armourId)) {
+                    	this.params.armorId = this.params.armourId;
+                    	delete this.params.armourId;
+                    }
 				}
 			},
             /*
@@ -1751,6 +1802,23 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            isAblativeArmorBalanced: function() {
+            	var positions = this.params.ablativeArmorByPosition;
+            	var isBalanced = true;
+
+            	if (
+            		positions.forward != positions.aft ||
+            		positions.forward != positions.port ||
+            		positions.forward != positions.starboard
+        		) {
+            		isBalanced = false;
+            	}
+            	
+            	return isBalanced;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isWeaponMountLinked: function(position, i) {
 				var result = false;
 				if (
@@ -1847,17 +1915,35 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-            setDefaultShieldsByPosition: function(shieldsId) {
-				var totalSp = this.shields.totalSp;
+            setDefaultPositionDependentValues: function(param, key) {
+            	// test that computed param exists
+            	if (!isset(this[param])) {
+            		console.log("Missing computed param: " + param);
+            		return;
+            	}
+
+            	// test that computed param resource key exists
+            	if (!isset(this[param][key])) {
+            		console.log("Missing key in " + param + ": " + key);
+            		return;
+            	}
+
+            	// test that [param] by position exists
+            	if (!isset(this.params[param + 'ByPosition'])) {
+            		console.log("Missing param: " + param + "ByPosition");
+            		return;
+            	}
+
+				var total = this[param][key];
                 var positions = [];
-				for(position in this.params.shieldsByPosition) {
+				for (position in this.params[param + 'ByPosition']) {
                     positions.push(position);
-					this.params.shieldsByPosition[position] = 0;
+					this.params[param + 'ByPosition'][position] = 0;
 				}
 				var positionIndex = 0;
-				while (totalSp > 0) {
-					this.params.shieldsByPosition[positions[positionIndex]]++;
-					totalSp--;
+				while (total > 0) {
+					this.params[param + 'ByPosition'][positions[positionIndex]]++;
+					total--;
 					if (positionIndex == positions.length - 1) {
 						positionIndex = 0;
 					} else {

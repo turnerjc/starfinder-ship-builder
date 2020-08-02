@@ -2,7 +2,7 @@
 |------------------------------------------------------------
 | COMMAND LINE
 |------------------------------------------------------------
-| cd \xampp\htdocs\starfinder-ship-builder\src & sass --watch sass:css --style compressed
+| cd \xampp\htdocs\starfinder-ship-builder\src & sass --watch src\sass:src\css --style compressed
 |------------------------------------------------------------
 */
 
@@ -30,4 +30,5 @@
 @import 'inc/_components.bootstrap.forms.scss';
 @import 'inc/_components.shields.scss';
 @import 'inc/_components.supporters.scss';
+@import 'inc/_components.text.scss';
 @import 'inc/_trumps.scss';
