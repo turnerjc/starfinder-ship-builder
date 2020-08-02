@@ -1252,7 +1252,7 @@
 					</div>
 					<div class="radio">
 					  <label>
-					    <input type="radio" name="shieldType" value="deflector-shields" v-model="params.shieldType">
+					    <input type="radio" name="shieldType" value="deflector-shield" v-model="params.shieldType">
 					    Deflector Shields (Starship Operations Manual)
 					  </label>
 					</div>
@@ -1812,12 +1812,19 @@
 							aft {{ params.ablativeArmorByPosition.aft }});
 							<strong>Ablative Armor</strong> {{ ablativeArmor.name }}
 						</p>
-						<p><strong>Shields</strong> {{ shields.name }}
-							(forward {{ params.shieldsByPosition.forward }},
-							port {{ params.shieldsByPosition.port }},
-							starboard {{ params.shieldsByPosition.starboard }},
-							aft {{ params.shieldsByPosition.aft }})
-							</p>
+						<!-- shields -->
+						<p v-if="params.shieldType == 'shields'">
+							<strong>Shields</strong> {{ shields.name }}
+								(forward {{ params.shieldsByPosition.forward }},
+								port {{ params.shieldsByPosition.port }},
+								starboard {{ params.shieldsByPosition.starboard }},
+								aft {{ params.shieldsByPosition.aft }})
+						</p>
+						<!-- deflector shields -->
+						<p v-else>
+							<strong>Deflector Shield</strong> {{ deflectorShield.name }};
+							<strong>DV</strong> {{ deflectorShield.defenseValue }}/&ndash;
+						</p>
 						<p v-for="(weaponDescription, position) in weaponDescriptions">
 							<strong>Attack ({{ position.toTitleCase() }})</strong>
 							{{ weaponDescription }}

@@ -1331,8 +1331,8 @@ function Ship(json) {
 				return {
 					essential: this.thrusters.pcuCost +
 						this.defensiveCountermeasures.pcuCost +
-						this.shields.pcuCost +
-						this.deflectorShield.pcuCost +
+						(this.params.shieldType == "shields" ? this.shields.pcuCost : 0) +
+						(this.params.shieldType == "deflector-shield" ? this.deflectorShield.pcuCost : 0) +
 						this.weaponsTotalCosts.weaponsPcu +
 						parseInt(this.customComponentPcuTotal.essential),
 					nonEssential: this.computer.pcuCost +
@@ -1356,7 +1356,7 @@ function Ship(json) {
 					parseInt(this.crewQuarters.bpCost) +
 					parseInt(this.dataNetBpCost) +
 					parseInt(this.defensiveCountermeasures.bpCost) +
-					parseInt(this.deflectorShield.bpCost) +
+					(this.params.shieldType == "deflector-shield" ? parseInt(this.deflectorShield.bpCost) : 0) +
 					parseInt(this.driftEngineBpCost) +
 					parseInt(this.expansionBaysTotalBpCost) +
 					parseInt(this.frame.bpCost) +
@@ -1364,7 +1364,7 @@ function Ship(json) {
 					parseInt(this.powerCoresBpCost) +
 					parseInt(this.selfDestructSystemBpCost) +
 					parseInt(this.sensors.bpCost) +
-					parseInt(this.shields.bpCost) +
+					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
 					parseInt(this.thrusters.bpCost) +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
