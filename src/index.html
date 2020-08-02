@@ -135,10 +135,12 @@
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
 						<li v-if="params.sources.pw"><a href="#data-net">Data Net</a></li>
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
-						<li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
 						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
 						<li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
 						<li v-if="params.sources.pw"><a href="#hive-joining">Hive Joining</a></li>
+						<li v-if="params.sources.som">
+							<a href="#reinforced-bulkhead">Reinforced Bulkhead</a>
+						</li>
 						<li><a href="#security">Security</a></li>
 						<li><a href="#sensors">Sensors</a></li>
 						<li><a href="#shields">Shields</a></li>
@@ -203,7 +205,7 @@
 		|	MAIN
 		| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 		-->
-		
+
 		<div class="main">
 
 			<a href="#sidebar" class="sidebar__control sidebar__open">
@@ -1257,6 +1259,39 @@
 			
 			<!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	REINFORCED BULKHEAD
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
+			
+			<div class="box" v-if="params.sources.som == true">
+				<header class="box__header">
+					<h3 id="reinforced-bulkhead">Reinforced Bulkhead</h3>
+				</header>
+				<div class="box__select">
+					<div class="form-group">
+						<label for="reinforcedBulkheadSelect">Reinforced Bulkhead</label>
+						<select id="reinforcedBulkheadSelect" class="form-control" v-model="params.reinforcedBulkheadId">
+							<option v-for="option in selectOptions.reinforcedBulkhead" :value="option.id">{{ option.name }}</option>
+						</select>
+					</div>
+				</div>
+				<div class="box__info">
+					<strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
+				</div>
+				<div class="box__cost">
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ reinforcedBulkhead.bpCost }}
+				</div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	SECURITY
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
@@ -1964,6 +1999,12 @@
 							<strong>Deflector Shield</strong> {{ deflectorShield.name }};
 							<strong>DV</strong> {{ deflectorShield.defenseValue }}/&ndash;
 						</p>
+						<!-- reinforced bulkheads -->
+						<p v-if="params.sources.som && params.reinforcedBulkheadId != 'none'">
+							<strong>Reinforced Bulkheads</strong> {{ reinforcedBulkhead.name }};
+							<strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
+						</p>
+						<!-- weapons -->
 						<p v-for="(weaponDescription, position) in weaponDescriptions">
 							<strong>Attack ({{ position.toTitleCase() }})</strong>
 							{{ weaponDescription }}

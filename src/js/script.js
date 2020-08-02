@@ -401,6 +401,7 @@ function Ship(json) {
 				isSetDefaultCrewSkillValues:1,
 				isUseStrictRules:1,
 				powerCoreIds:["none"],
+				reinforcedBulkheadId: "none",
 				sensorsId:"none",
 				shieldType: "shields",
                 shieldsByPosition: {
@@ -1104,6 +1105,22 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            reinforcedBulkhead: function() {
+				var reinforcedBulkhead = {};
+
+				var data = this.getItemById("reinforcedBulkhead", this.params.reinforcedBulkheadId);
+
+				Object.keys(data).forEach(function(key) {
+					reinforcedBulkhead[key] = data[key];
+				});
+
+				reinforcedBulkhead.bpCost = reinforcedBulkhead.bpCostMultiplier * this.sizeCategory.multiplier;
+
+				return reinforcedBulkhead;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			roleDescription: function() {
 				roleDesc = {};
 				for(role in this.params.crewSkills) {
@@ -1181,6 +1198,7 @@ function Ship(json) {
 					"frame",
 					"personalWeapon",
 					"powerCore",
+					"reinforcedBulkhead",
 					"role",
 					"sampleShip",
 					"shockGrid",
@@ -1407,6 +1425,7 @@ function Ship(json) {
 					parseInt(this.frame.bpCost) +
 					parseInt(this.hiveJoiningBpCost) +
 					parseInt(this.powerCoresBpCost) +
+					parseInt(this.reinforcedBulkhead.bpCost) +
 					parseInt(this.selfDestructSystemBpCost) +
 					parseInt(this.sensors.bpCost) +
 					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
