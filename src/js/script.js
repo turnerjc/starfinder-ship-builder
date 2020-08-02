@@ -250,6 +250,8 @@ function Ship(json) {
 		data: {
 			data: json,
 			// paramsReset: {"version":"1.0.1","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"UIE Hiveguard","shipConcept":"Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.","tierId":"6","frameId":"destroyer","powerCoreIds":["arcus-maximum"],"thrustersId":"l8","armorId":"mk-4","computerId":"mk-1-trinode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-4","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","escape-pods","escape-pods","escape-pods"],"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"hasSelfDestructSystem":0,"hasDataNet":0,"hasHiveJoining":0,"sensorsId":"basic-long-range","shieldsId":"light-60","weaponMounts":{"forward":[{"weaponId":"heavy-laser-net","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"twin-laser","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"aft":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"port":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"starboard":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"turret":[{"weaponId":"light-torpedo-launcher","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}]},"crewSkills":{"captain":{"count":1,"countOfficers":0,"hasRole":1,"skills":{"bluff":{"modifier":7,"ranks":6},"computers":{"modifier":7,"ranks":6},"diplomacy":{"modifier":7,"ranks":6},"engineering":{"modifier":7,"ranks":6},"gunnery":{"modifier":13},"intimidate":{"modifier":7,"ranks":6},"piloting":{"modifier":7,"ranks":6}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":12,"ranks":6}},"countOfficers":1,"countOfficerCrew":3},"gunner":{"skills":{"gunnery":{"modifier":13}},"hasRole":1,"countOfficers":2,"countOfficerCrew":2},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"shieldsByPosition":{"forward":15,"aft":15,"port":15,"starboard":15}},
+			json: "",
+			params: {},
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -410,6 +412,10 @@ function Ship(json) {
 				shieldsId:"none",
 				shipConcept:"",
 				shipName:"",
+				sources: {
+					pw: true,
+					som: true,
+				},
 				thrustersId:"none",
 				tierId:"1",
 				version:"1.0.1",
@@ -456,9 +462,17 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
-			params: {},
-			json: "",
 			selectSampleShipSortOrder: "name",
+			sources: [
+				{
+					id: "pw",
+					name: "Pact Worlds",
+				},
+				{
+					id: "som",
+					name: "Starship Operations Manual",
+				},
+			],
 		},
         /*
         |----------------------------------------------------------------------------------
@@ -1715,7 +1729,8 @@ function Ship(json) {
 
                     // shields by position
                     if (key == 'shieldsByPosition') {
-                        this.setDefaultShieldsByPosition();
+                        // this.setDefaultShieldsByPosition();
+                        this.setDefaultPositionDependentValues('shields', 'totalSp');
                     }
 
                     // convert legacy armour to armor

@@ -783,7 +783,7 @@
 		]
 	},
 	"deflectorShield": {
-		"src": "SOM",
+		"src": "som",
 		"data": [
 			{
 				"id": "none",
@@ -948,7 +948,7 @@
 				"minPcu": 150,
 				"maxSize": 10,
 				"bpCostMultiplier": 15,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Church of Iomedae, Knights of Golarion)"
 			},
 			{
@@ -958,7 +958,7 @@
 				"minPcu": 75,
 				"maxSize": 10,
 				"bpCostMultiplier": 4,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Church of Besmara)"
 			},
 			{
@@ -968,7 +968,7 @@
 				"minPcu": 150,
 				"maxSize": 5,
 				"bpCostMultiplier": 10,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Church of Ibra)"
 			},
 			{
@@ -978,7 +978,7 @@
 				"minPcu": 100,
 				"maxSize": 10,
 				"bpCostMultiplier": 5,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Elemental Plane)"
 			},
 			{
@@ -988,7 +988,7 @@
 				"minPcu": 175,
 				"maxSize": 4,
 				"bpCostMultiplier": 12,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Eldest, fey)"
 			},
 			{
@@ -998,7 +998,7 @@
 				"minPcu": 100,
 				"maxSize": 10,
 				"bpCostMultiplier": 10,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Church of Asmodeus, Hellknights)"
 			},
 			{
@@ -1008,7 +1008,7 @@
 				"minPcu": 150,
 				"maxSize": 10,
 				"bpCostMultiplier": 15,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Restricted (Tetrad, witchwyrds)"
 			},
 			{
@@ -1018,7 +1018,7 @@
 				"minPcu": 75,
 				"maxSize": 10,
 				"bpCostMultiplier": 3,
-				"src": "SOM",
+				"src": "som",
 				"notes": "Painful, restricted (Church of Zon-Kuthon, velstracs)"
 			}
 		]
@@ -1031,7 +1031,7 @@
 		"data": [
 			{
 				"id": "none",
-                "src": "core",
+                "src": "scr",
 				"name": "None",
 				"numBays": 1,
 				"sizes": [
@@ -1049,7 +1049,7 @@
 			},
 			{
 				"id": "arcane-laboratory",
-                "src": "core",
+                "src": "scr",
 				"name": "Arcane Laboratory",
 				"numBays": 1,
 				"sizes": [
@@ -1067,7 +1067,7 @@
 			},
 			{
 				"id": "cargo-hold",
-                "src": "core",
+                "src": "scr",
 				"name": "Cargo Hold",
 				"numBays": 1,
 				"sizes": [
@@ -1085,7 +1085,7 @@
 			},
 			{
 				"id": "escape-pods",
-                "src": "core",
+                "src": "scr",
 				"name": "Escape Pods",
 				"numBays": 1,
 				"sizes": [
@@ -1103,7 +1103,7 @@
 			},
 			{
 				"id": "guest-quarters-common",
-                "src": "core",
+                "src": "scr",
 				"name": "Guest Quarters (common)",
 				"numBays": 1,
 				"sizes": [
@@ -1121,7 +1121,7 @@
 			},
 			{
 				"id": "guest-quarters-good",
-                "src": "core",
+                "src": "scr",
 				"name": "Guest Quarters (good)",
 				"numBays": 1,
 				"sizes": [
@@ -1139,7 +1139,7 @@
 			},
 			{
 				"id": "guest-quarters-luxurious",
-                "src": "core",
+                "src": "scr",
 				"name": "Guest Quarters (luxurious)",
 				"numBays": 1,
 				"sizes": [
@@ -1157,7 +1157,7 @@
 			},
 			{
 				"id": "hangar-bay",
-                "src": "core",
+                "src": "scr",
 				"name": "Hangar Bay",
 				"numBays": 4,
 				"sizes": [
@@ -1170,7 +1170,7 @@
 			},
 			{
 				"id": "life-boats",
-                "src": "core",
+                "src": "scr",
 				"name": "Life Boats",
 				"numBays": 1,
 				"sizes": [
@@ -1188,7 +1188,7 @@
 			},
 			{
 				"id": "medical-bay",
-                "src": "core",
+                "src": "scr",
 				"name": "Medical Bay",
 				"numBays": 1,
 				"sizes": [
@@ -1206,7 +1206,7 @@
 			},
 			{
 				"id": "passenger-seating",
-                "src": "core",
+                "src": "scr",
 				"name": "Passenger Seating",
 				"numBays": 1,
 				"sizes": [
@@ -1224,7 +1224,7 @@
 			},
 			{
 				"id": "power-core-housing",
-                "src": "core",
+                "src": "scr",
 				"name": "Power Core Housing",
 				"numBays": 1,
 				"sizes": [
@@ -1236,7 +1236,7 @@
 			},
 			{
 				"id": "recreation-suite-gym",
-                "src": "core",
+                "src": "scr",
 				"name": "Recreation Suite (Gym)",
 				"numBays": 1,
 				"sizes": [
@@ -1254,7 +1254,7 @@
 			},
 			{
 				"id": "recreation-suite-trivid-den",
-                "src": "core",
+                "src": "scr",
 				"name": "Recreation Suite (Trivid Den)",
 				"numBays": 1,
 				"sizes": [
@@ -1272,7 +1272,7 @@
 			},
 			{
 				"id": "recreation-suite-hac",
-                "src": "core",
+                "src": "scr",
 				"name": "Recreation Suite (HAC)",
 				"numBays": 1,
 				"sizes": [
@@ -1290,7 +1290,7 @@
 			},
 			{
 				"id": "science-lab-general",
-                "src": "core",
+                "src": "scr",
 				"name": "Science Lab (General)",
 				"numBays": 1,
 				"sizes": [
@@ -1308,7 +1308,7 @@
 			},
 			{
 				"id": "science-lab-life",
-                "src": "core",
+                "src": "scr",
 				"name": "Science Lab (Life)",
 				"numBays": 1,
 				"sizes": [
@@ -1326,7 +1326,7 @@
 			},
 			{
 				"id": "science-lab-physical",
-                "src": "core",
+                "src": "scr",
 				"name": "Science Lab (Physical)",
 				"numBays": 1,
 				"sizes": [
@@ -1344,7 +1344,7 @@
 			},
 			{
 				"id": "sealed-environment-chamber",
-                "src": "core",
+                "src": "scr",
 				"name": "Sealed Environment Chamber",
 				"numBays": 1,
 				"sizes": [
@@ -1362,7 +1362,7 @@
 			},
 			{
 				"id": "shuttle-bay",
-                "src": "core",
+                "src": "scr",
 				"name": "Shuttle Bay",
 				"numBays": 2,
 				"sizes": [
@@ -1376,7 +1376,7 @@
 			},
 			{
 				"id": "smuggler-compartment-20",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 20)",
 				"numBays": 1,
 				"sizes": [
@@ -1394,7 +1394,7 @@
 			},
 			{
 				"id": "smuggler-compartment-25",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 25)",
 				"numBays": 1,
 				"sizes": [
@@ -1412,7 +1412,7 @@
 			},
 			{
 				"id": "smuggler-compartment-30",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 30)",
 				"numBays": 1,
 				"sizes": [
@@ -1430,7 +1430,7 @@
 			},
 			{
 				"id": "smuggler-compartment-35",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 35)",
 				"numBays": 1,
 				"sizes": [
@@ -1448,7 +1448,7 @@
 			},
 			{
 				"id": "smuggler-compartment-40",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 40)",
 				"numBays": 1,
 				"sizes": [
@@ -1466,7 +1466,7 @@
 			},
 			{
 				"id": "smuggler-compartment-45",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 45)",
 				"numBays": 1,
 				"sizes": [
@@ -1484,7 +1484,7 @@
 			},
 			{
 				"id": "smuggler-compartment-50",
-                "src": "core",
+                "src": "scr",
 				"name": "Smuggler Compartment (DC 50)",
 				"numBays": 1,
 				"sizes": [
@@ -1502,7 +1502,7 @@
 			},
 			{
 				"id": "synthesis-bay",
-                "src": "core",
+                "src": "scr",
 				"name": "Synthesis Bay",
 				"numBays": 1,
 				"sizes": [
@@ -1520,7 +1520,7 @@
 			},
 			{
 				"id": "tech-workshop",
-                "src": "core",
+                "src": "scr",
 				"name": "Tech Workshop",
 				"numBays": 1,
 				"sizes": [
@@ -1538,7 +1538,7 @@
 			},
 			{
 				"id": "brig",
-                "src": "pact",
+                "src": "pw",
 				"name": "Brig",
 				"numBays": 1,
 				"sizes": [
@@ -1556,7 +1556,7 @@
 			},
 			{
 				"id": "drift-shadow-projector",
-                "src": "pact",
+                "src": "pw",
 				"name": "Drift Shadow Projector",
 				"numBays": 1,
 				"sizes": [
@@ -1574,7 +1574,7 @@
 			},
 			{
 				"id": "hive-bay",
-                "src": "pact",
+                "src": "pw",
 				"name": "Hive Bay",
 				"numBays": 1,
 				"sizes": [
@@ -1592,7 +1592,7 @@
 			},
 			{
 				"id": "hydroponic-garden",
-                "src": "pact",
+                "src": "pw",
 				"name": "Hydroponic Garden",
 				"numBays": 1,
 				"sizes": [
@@ -1610,7 +1610,7 @@
 			},
 			{
 				"id": "launch-tubes",
-                "src": "pact",
+                "src": "pw",
 				"name": "Launch Tubes",
 				"numBays": 2,
 				"sizes": [
@@ -1679,6 +1679,7 @@
 			{
 				"id": "custom",
 				"name": "Custom",
+				"src": "scr",
 				"size": "Small",
 				"maneuverability": "good",
 				"hp": 40,
@@ -1705,6 +1706,7 @@
 			{
 				"id": "racer",
 				"name": "Racer",
+				"src": "scr",
 				"size": "Tiny",
 				"maneuverability": "perfect",
 				"hp": 20,
@@ -1727,6 +1729,7 @@
 			{
 				"id": "interceptor",
 				"name": "Interceptor",
+				"src": "scr",
 				"size": "Tiny",
 				"maneuverability": "perfect",
 				"hp": 30,
@@ -1747,6 +1750,7 @@
 			{
 				"id": "fighter",
 				"name": "Fighter",
+				"src": "scr",
 				"size": "Tiny",
 				"maneuverability": "good",
 				"hp": 35,
@@ -1771,6 +1775,7 @@
 			{
 				"id": "shuttle",
 				"name": "Shuttle",
+				"src": "scr",
 				"size": "Small",
 				"maneuverability": "perfect",
 				"hp": 35,
@@ -1790,6 +1795,7 @@
 			{
 				"id": "light-freighter",
 				"name": "Light Freighter",
+				"src": "scr",
 				"size": "Small",
 				"maneuverability": "good",
 				"hp": 40,
@@ -1816,6 +1822,7 @@
 			{
 				"id": "explorer",
 				"name": "Explorer",
+				"src": "scr",
 				"size": "Medium",
 				"maneuverability": "good",
 				"hp": 55,
@@ -1844,6 +1851,7 @@
 			{
 				"id": "transport",
 				"name": "Transport",
+				"src": "scr",
 				"size": "Medium",
 				"maneuverability": "average",
 				"hp": 70,
@@ -1871,6 +1879,7 @@
 			{
 				"id": "destroyer",
 				"name": "Destroyer",
+				"src": "scr",
 				"size": "Large",
 				"maneuverability": "average",
 				"hp": 150,
@@ -1903,6 +1912,7 @@
 			{
 				"id": "heavy-freighter",
 				"name": "Heavy Freighter",
+				"src": "scr",
 				"size": "Large",
 				"maneuverability": "average",
 				"hp": 120,
@@ -1930,6 +1940,7 @@
 			{
 				"id": "bulk-freighter",
 				"name": "Bulk Freighter",
+				"src": "scr",
 				"size": "Huge",
 				"maneuverability": "poor",
 				"hp": 160,
@@ -1956,6 +1967,7 @@
 			{
 				"id": "cruiser",
 				"name": "Cruiser",
+				"src": "scr",
 				"size": "Huge",
 				"maneuverability": "average",
 				"hp": 180,
@@ -1985,6 +1997,7 @@
 			{
 				"id": "carrier",
 				"name": "Carrier",
+				"src": "scr",
 				"size": "Gargantuan",
 				"maneuverability": "poor",
 				"hp": 240,
@@ -2019,6 +2032,7 @@
 			{
 				"id": "battleship",
 				"name": "Battleship",
+				"src": "scr",
 				"size": "Gargantuan",
 				"maneuverability": "average",
 				"hp": 280,
@@ -2057,6 +2071,7 @@
 			{
 				"id": "dreadnought",
 				"name": "Dreadnought",
+				"src": "scr",
 				"size": "Colossal",
 				"maneuverability": "clumsy",
 				"hp": 400,
@@ -2097,7 +2112,7 @@
 			{
 				"id": "base-ship",
 				"name": "Base Ship",
-				"src": "SOM",
+				"src": "som",
 				"size": "Supercolossal",
 				"maneuverability": "clumsy",
 				"hp": 450,
@@ -2136,7 +2151,7 @@
 			{
 				"id": "ultranought",
 				"name": "Ultranought",
-				"src": "SOM",
+				"src": "som",
 				"size": "Supercolossal",
 				"maneuverability": "clumsy",
 				"hp": 550,
@@ -4368,6 +4383,7 @@
 			{
 				"id": "none",
 				"name": "None",
+				"src": "scr",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "n/a",
@@ -4380,7 +4396,7 @@
 			{
 				"id": "chain-cannon",
 				"name": "Chain cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "6d4",
@@ -4393,7 +4409,7 @@
 			{
 				"id": "coilgun",
 				"name": "Coilgun",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "4d4",
@@ -4406,7 +4422,7 @@
 			{
 				"id": "flak-thrower",
 				"name": "Flak thrower",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "3d4",
@@ -4419,7 +4435,7 @@
 			{
 				"id": "gyrolaser",
 				"name": "Gyrolaser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "1d8",
@@ -4432,7 +4448,7 @@
 			{
 				"id": "laser-net",
 				"name": "Laser net",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d6",
@@ -4445,7 +4461,7 @@
 			{
 				"id": "light-emp-cannon",
 				"name": "Light EMP cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "Special",
@@ -4458,7 +4474,7 @@
 			{
 				"id": "light-laser-cannon",
 				"name": "Light laser cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d4",
@@ -4471,7 +4487,7 @@
 			{
 				"id": "light-particle-beam",
 				"name": "Light particle beam",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d6",
@@ -4484,7 +4500,7 @@
 			{
 				"id": "light-plasma-cannon",
 				"name": "Light plasma cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d12",
@@ -4496,9 +4512,9 @@
 			},
 			{
 				"id": "mining-laser",
-                "src": "pact",
+                "src": "pw",
 				"name": "Mining laser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "2d6",
@@ -4511,7 +4527,7 @@
 			{
 				"id": "high-explosive-missile-launcher",
 				"name": "High explosive missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "12",
 				"damage": "4d8",
@@ -4524,7 +4540,7 @@
 			{
 				"id": "light-plasma-torpedo-launcher",
 				"name": "Light plasma torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "14",
 				"damage": "3d8",
@@ -4537,7 +4553,7 @@
 			{
 				"id": "light-torpedo-launcher",
 				"name": "Light torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "16",
 				"damage": "2d8",
@@ -4550,7 +4566,7 @@
 			{
 				"id": "micromissile-battery",
 				"name": "Micromissile battery",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "10",
 				"damage": "2d6",
@@ -4563,7 +4579,7 @@
 			{
 				"id": "tactical-nuclear-missile-launcher",
 				"name": "Tactical nuclear missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "10",
 				"damage": "5d8",
@@ -4575,9 +4591,9 @@
 			},
 			{
 				"id": "light-spore-torpedo-launcher",
-                "src": "pact",
+                "src": "pw",
 				"name": "Light spore torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "14",
 				"damage": "3d6",
@@ -4590,7 +4606,7 @@
             {
 				"id": "graser",
 				"name": "Graser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "7d10",
@@ -4603,7 +4619,7 @@
 			{
 				"id": "gravity-gun",
 				"name": "Gravity gun",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d6",
@@ -4616,7 +4632,7 @@
 			{
 				"id": "heavy-emp-cannon",
 				"name": "Heavy EMP cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -4629,7 +4645,7 @@
 			{
 				"id": "heavy-laser-array",
 				"name": "Heavy laser array",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "6d4",
@@ -4642,7 +4658,7 @@
 			{
 				"id": "heavy-laser-cannon",
 				"name": "Heavy laser cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "4d8",
@@ -4655,7 +4671,7 @@
 			{
 				"id": "heavy-laser-net",
 				"name": "Heavy laser net",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "5d6",
@@ -4668,7 +4684,7 @@
 			{
 				"id": "maser",
 				"name": "Maser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d10",
@@ -4681,7 +4697,7 @@
 			{
 				"id": "particle-beam",
 				"name": "Particle beam",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d6",
@@ -4694,7 +4710,7 @@
 			{
 				"id": "persistent-particle-beam",
 				"name": "Persistent particle beam",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "10d6",
@@ -4707,7 +4723,7 @@
 			{
 				"id": "plasma-cannon",
 				"name": "Plasma cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "5d12",
@@ -4720,7 +4736,7 @@
 			{
 				"id": "railgun",
 				"name": "Railgun",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d4",
@@ -4733,7 +4749,7 @@
 			{
 				"id": "twin-laser",
 				"name": "Twin laser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "5d8",
@@ -4746,7 +4762,7 @@
 			{
 				"id": "x-laser-cannon",
 				"name": "X-laser cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d6",
@@ -4759,7 +4775,7 @@
 			{
 				"id": "heavy-antimatter-missile-launcher",
 				"name": "Heavy antimatter missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "8",
 				"damage": "10d10",
@@ -4772,7 +4788,7 @@
 			{
 				"id": "heavy-nuclear-missile-launcher",
 				"name": "Heavy nuclear missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "10",
 				"damage": "10d8",
@@ -4785,7 +4801,7 @@
 			{
 				"id": "heavy-plasma-torpedo-launcher",
 				"name": "Heavy plasma torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "12",
 				"damage": "5d10",
@@ -4798,7 +4814,7 @@
 			{
 				"id": "heavy-torpedo-launcher",
 				"name": "Heavy torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "14",
 				"damage": "5d8",
@@ -4810,9 +4826,9 @@
 			},
 			{
 				"id": "heavy-spore-torpedo-launcher",
-                "src": "pact",
+                "src": "pw",
 				"name": "Heavy spore torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "12",
 				"damage": "5d8",
@@ -4825,7 +4841,7 @@
 			{
 				"id": "gravity-cannon",
 				"name": "Gravity cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d6×10",
@@ -4838,7 +4854,7 @@
 			{
 				"id": "mass-driver",
 				"name": "Mass driver",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d6×10",
@@ -4851,7 +4867,7 @@
 			{
 				"id": "particle-beam-cannon",
 				"name": "Particle beam cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "3d4×10",
@@ -4864,7 +4880,7 @@
 			{
 				"id": "persistent-particle-beam-cannon",
 				"name": "Persistent particle beam cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d10×10",
@@ -4877,7 +4893,7 @@
 			{
 				"id": "super-emp-cannon",
 				"name": "Super EMP cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "Special",
@@ -4890,7 +4906,7 @@
 			{
 				"id": "super-plasma-cannon",
 				"name": "Super plasma cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d6×10",
@@ -4903,7 +4919,7 @@
 			{
 				"id": "super-x-laser-cannon",
 				"name": "Super X-laser cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "3d4×10",
@@ -4916,7 +4932,7 @@
 			{
 				"id": "supergraser",
 				"name": "Supergraser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -4929,7 +4945,7 @@
 			{
 				"id": "superlaser",
 				"name": "Superlaser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d4×10",
@@ -4942,7 +4958,7 @@
 			{
 				"id": "supermaser",
 				"name": "Supermaser",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -4955,7 +4971,7 @@
 			{
 				"id": "vortex-cannon",
 				"name": "Vortex cannon",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "2d12×10",
@@ -4968,7 +4984,7 @@
 			{
 				"id": "antimatter-mega-missile-launcher",
 				"name": "Antimatter mega-missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "6",
 				"damage": "4d10×10",
@@ -4981,7 +4997,7 @@
 			{
 				"id": "hellfire-torpedo-launcher",
 				"name": "Hellfire torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "8",
 				"damage": "2d10×10",
@@ -4994,7 +5010,7 @@
 			{
 				"id": "nuclear-mega-missile-launcher",
 				"name": "Nuclear mega-missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "8",
 				"damage": "4d8×10",
@@ -5007,7 +5023,7 @@
 			{
 				"id": "quantum-missile-launcher",
 				"name": "Quantum missile launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "12",
 				"damage": "2d8×10",
@@ -5020,7 +5036,7 @@
 			{
 				"id": "solar-torpedo-launcher",
 				"name": "Solar torpedo launcher",
-				"src": "SCR",
+				"src": "scr",
 				"range": "Long",
 				"speed": "10",
 				"damage": "2d6×10",
@@ -5033,7 +5049,7 @@
 			{
 				"id": "aeon-caster",
 				"name": "Aeon caster",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d4",
@@ -5046,7 +5062,7 @@
 			{
 				"id": "decorative-ramming-prow",
 				"name": "Decorative ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "2d4",
@@ -5059,7 +5075,7 @@
 			{
 				"id": "force-projector",
 				"name": "Force projector",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "1d10",
@@ -5072,7 +5088,7 @@
 			{
 				"id": "garbage-ejection-system",
 				"name": "Garbage ejection system",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "8",
 				"damage": "1d6",
@@ -5085,7 +5101,7 @@
 			{
 				"id": "light-buster-cannon",
 				"name": "Light buster cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "3d8",
@@ -5098,7 +5114,7 @@
 			{
 				"id": "light-force-ramming-prow",
 				"name": "Light force ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "0",
@@ -5111,7 +5127,7 @@
 			{
 				"id": "light-orbital-death-knell",
 				"name": "Light orbital death knell",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d10",
@@ -5124,7 +5140,7 @@
 			{
 				"id": "light-orbital-particle-cannon",
 				"name": "Light orbital particle cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d10",
@@ -5137,7 +5153,7 @@
 			{
 				"id": "light-teleportation-beam",
 				"name": "Light teleportation beam",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "1d20",
@@ -5150,7 +5166,7 @@
 			{
 				"id": "minor-ramming-prow",
 				"name": "Minor ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "2d4",
@@ -5163,7 +5179,7 @@
 			{
 				"id": "rail-launcher",
 				"name": "Rail launcher",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "2d8",
@@ -5176,7 +5192,7 @@
 			{
 				"id": "shadow-bolt-projector",
 				"name": "Shadow bolt projector",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "1d10",
@@ -5189,7 +5205,7 @@
 			{
 				"id": "digital-strike-conduit",
 				"name": "Digital strike conduit",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5202,7 +5218,7 @@
 			{
 				"id": "gravity-generator",
 				"name": "Gravity generator",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5215,7 +5231,7 @@
 			{
 				"id": "nav-scram-projector",
 				"name": "Nav-scram projector",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5228,7 +5244,7 @@
 			{
 				"id": "warp-puck-launcher",
 				"name": "Warp puck launcher",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5241,7 +5257,7 @@
 			{
 				"id": "light-explosion-injector",
 				"name": "Light explosion injector",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "3d10",
@@ -5254,7 +5270,7 @@
 			{
 				"id": "light-hacksaw-arm",
 				"name": "Light hacksaw arm",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "4d6",
@@ -5267,7 +5283,7 @@
 			{
 				"id": "light-ship-tether",
 				"name": "Light ship tether",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "2d6",
@@ -5280,7 +5296,7 @@
 			{
 				"id": "light-blade-hull",
 				"name": "Light-blade hull",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "3d8",
@@ -5293,7 +5309,7 @@
 			{
 				"id": "light-aeon-torpedo-launcher",
 				"name": "Light aeon torpedo launcher",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "12",
 				"damage": "3d6",
@@ -5306,7 +5322,7 @@
 			{
 				"id": "light-frag-mines",
 				"name": "Light frag mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "8d4",
@@ -5319,7 +5335,7 @@
 			{
 				"id": "light-plasma-mines",
 				"name": "Light plasma mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "2d12",
@@ -5332,7 +5348,7 @@
 			{
 				"id": "light-plasma-torpedo-pod",
 				"name": "Light plasma torpedo pod",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "14",
 				"damage": "3d8",
@@ -5345,7 +5361,7 @@
 			{
 				"id": "magic-torpedo-unit",
 				"name": "Magic torpedo unit",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "18",
 				"damage": "2d4+2",
@@ -5358,7 +5374,7 @@
 			{
 				"id": "mini-nuke-mines",
 				"name": "Mini-nuke mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "5d8",
@@ -5371,7 +5387,7 @@
 			{
 				"id": "force-blaster",
 				"name": "Force blaster",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "3d10",
@@ -5384,7 +5400,7 @@
 			{
 				"id": "gatling-cannon",
 				"name": "Gatling cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "15d4",
@@ -5397,7 +5413,7 @@
 			{
 				"id": "gyrocannon",
 				"name": "Gyrocannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "3d10",
@@ -5410,7 +5426,7 @@
 			{
 				"id": "heavy-aeon-caster",
 				"name": "Heavy aeon caster",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d6",
@@ -5423,7 +5439,7 @@
 			{
 				"id": "heavy-buster-cannon",
 				"name": "Heavy buster cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d8",
@@ -5436,7 +5452,7 @@
 			{
 				"id": "heavy-force-ramming-prow",
 				"name": "Heavy force ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "3d4",
@@ -5449,7 +5465,7 @@
 			{
 				"id": "heavy-orbital-death-knell",
 				"name": "Heavy orbital death knell",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "7d10",
@@ -5462,7 +5478,7 @@
 			{
 				"id": "heavy-orbital-particle-cannon",
 				"name": "Heavy orbital particle cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "5d10",
@@ -5475,7 +5491,7 @@
 			{
 				"id": "heavy-ramming-prow",
 				"name": "Heavy ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "5d4",
@@ -5488,7 +5504,7 @@
 			{
 				"id": "heavy-teleportation-beam",
 				"name": "Heavy teleportation beam",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d20",
@@ -5501,7 +5517,7 @@
 			{
 				"id": "imposing-ramming-prow",
 				"name": "Imposing ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "4d4",
@@ -5514,7 +5530,7 @@
 			{
 				"id": "rail-ballista",
 				"name": "Rail ballista",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d8",
@@ -5527,7 +5543,7 @@
 			{
 				"id": "shadow-beam-projector",
 				"name": "Shadow beam projector",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "4d10",
@@ -5540,7 +5556,7 @@
 			{
 				"id": "digital-raid-node",
 				"name": "Digital raid node",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5553,7 +5569,7 @@
 			{
 				"id": "fractal-nav-scram-projector",
 				"name": "Fractal nav-scram projector",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5566,7 +5582,7 @@
 			{
 				"id": "gravity-well-generator",
 				"name": "Gravity well generator",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5579,7 +5595,7 @@
 			{
 				"id": "warp-puck-bank",
 				"name": "Warp puck bank",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5592,7 +5608,7 @@
 			{
 				"id": "heavy-explosion-injector",
 				"name": "Heavy explosion injector",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "6d12",
@@ -5605,7 +5621,7 @@
 			{
 				"id": "heavy-hacksaw-arm",
 				"name": "Heavy hacksaw arm",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "10d6",
@@ -5618,7 +5634,7 @@
 			{
 				"id": "heavy-ship-tether",
 				"name": "Heavy ship tether",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "4d8",
@@ -5631,7 +5647,7 @@
 			{
 				"id": "heavy-blade-hull",
 				"name": "Heavy-blade hull",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "6d8",
@@ -5644,7 +5660,7 @@
 			{
 				"id": "counter-missile-bank",
 				"name": "Counter-missile bank",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "14",
 				"damage": "8d6",
@@ -5657,7 +5673,7 @@
 			{
 				"id": "heavy-aeon-torpedo-launcher",
 				"name": "Heavy aeon torpedo launcher",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "12",
 				"damage": "6d8",
@@ -5670,7 +5686,7 @@
 			{
 				"id": "heavy-frag-mines",
 				"name": "Heavy frag mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "8d8",
@@ -5683,7 +5699,7 @@
 			{
 				"id": "heavy-nuclear-mines",
 				"name": "Heavy nuclear mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "10d8",
@@ -5696,7 +5712,7 @@
 			{
 				"id": "heavy-nuclear-silo",
 				"name": "Heavy nuclear silo",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "5",
 				"damage": "10d10",
@@ -5709,7 +5725,7 @@
 			{
 				"id": "heavy-plasma-mines",
 				"name": "Heavy plasma mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "4d12",
@@ -5722,7 +5738,7 @@
 			{
 				"id": "heavy-plasma-torpedo-pod",
 				"name": "Heavy plasma torpedo pod",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "12",
 				"damage": "5d10",
@@ -5735,7 +5751,7 @@
 			{
 				"id": "heightened-magic-torpedo-unit",
 				"name": "Heightened magic torpedo unit",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "18",
 				"damage": "5d4+5",
@@ -5748,7 +5764,7 @@
 			{
 				"id": "vortex-mouth-mines",
 				"name": "Vortex mouth mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "7d12",
@@ -5761,7 +5777,7 @@
 			{
 				"id": "extreme-force-ramming-prow",
 				"name": "Extreme force ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "5d4",
@@ -5774,7 +5790,7 @@
 			{
 				"id": "gatling-cannon-array",
 				"name": "Gatling cannon array",
-				"src": "SOM",
+				"src": "som",
 				"range": "Short",
 				"speed": "n/a",
 				"damage": "4d4×10",
@@ -5787,7 +5803,7 @@
 			{
 				"id": "massive-ramming-prow",
 				"name": "Massive ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "2d4×10",
@@ -5800,7 +5816,7 @@
 			{
 				"id": "mega-teleportation-beam",
 				"name": "Mega teleportation beam",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "1d20×10",
@@ -5813,7 +5829,7 @@
 			{
 				"id": "monolith-ramming-prow",
 				"name": "Monolith ramming prow",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "12d4",
@@ -5826,7 +5842,7 @@
 			{
 				"id": "prismatic-beam",
 				"name": "Prismatic beam",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -5839,7 +5855,7 @@
 			{
 				"id": "shadow-bolt-array",
 				"name": "Shadow bolt array",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "1d10×10",
@@ -5852,7 +5868,7 @@
 			{
 				"id": "starspear-rail-launcher",
 				"name": "Starspear rail launcher",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -5865,7 +5881,7 @@
 			{
 				"id": "super-buster-cannon",
 				"name": "Super buster cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d8×10",
@@ -5878,7 +5894,7 @@
 			{
 				"id": "super-orbital-death-knell",
 				"name": "Super orbital death knell",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "3d6×10",
@@ -5891,7 +5907,7 @@
 			{
 				"id": "super-orbital-particle-cannon",
 				"name": "Super orbital particle cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "2d6×10",
@@ -5904,7 +5920,7 @@
 			{
 				"id": "black-hole-generator",
 				"name": "Black hole generator",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5917,7 +5933,7 @@
 			{
 				"id": "digital-assault-torrent",
 				"name": "Digital assault torrent",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5930,7 +5946,7 @@
 			{
 				"id": "super-nav-scram-projector",
 				"name": "Super nav-scram projector",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5943,7 +5959,7 @@
 			{
 				"id": "warp-puck-battery",
 				"name": "Warp puck battery",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "Special",
@@ -5956,7 +5972,7 @@
 			{
 				"id": "super-explosion-injector",
 				"name": "Super explosion injector",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "3d6×10",
@@ -5969,7 +5985,7 @@
 			{
 				"id": "super-hacksaw-arm",
 				"name": "Super hacksaw arm",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "4d6×10",
@@ -5982,7 +5998,7 @@
 			{
 				"id": "super-ship-tether",
 				"name": "Super ship tether",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "10d8",
@@ -5995,7 +6011,7 @@
 			{
 				"id": "super-blade-hull",
 				"name": "Super-blade hull",
-				"src": "SOM",
+				"src": "som",
 				"range": "1 hex",
 				"speed": "n/a",
 				"damage": "3d8×10",
@@ -6008,7 +6024,7 @@
 			{
 				"id": "heavy-frag-mines",
 				"name": "Heavy frag mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "4d8×10",
@@ -6021,7 +6037,7 @@
 			{
 				"id": "hellfire-mines",
 				"name": "Hellfire mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "2d10×10",
@@ -6034,7 +6050,7 @@
 			{
 				"id": "nuclear-mega-mines",
 				"name": "Nuclear mega mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "4d8×10",
@@ -6047,7 +6063,7 @@
 			{
 				"id": "quantum-mines",
 				"name": "Quantum mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "2d8×10",
@@ -6060,7 +6076,7 @@
 			{
 				"id": "quantum-missile-pod",
 				"name": "Quantum missile pod",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "12",
 				"damage": "2d8×10",
@@ -6073,7 +6089,7 @@
 			{
 				"id": "super-nuclear-silo",
 				"name": "Super nuclear silo",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "5",
 				"damage": "3d8×10",
@@ -6086,7 +6102,7 @@
 			{
 				"id": "vortex-maw-mines",
 				"name": "Vortex maw mines",
-				"src": "SOM",
+				"src": "som",
 				"range": "n/a",
 				"speed": "n/a",
 				"damage": "3d12×10",
@@ -6099,7 +6115,7 @@
 			{
 				"id": "gravity-annihilator",
 				"name": "Gravity annihilator",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d6×10",
@@ -6112,7 +6128,7 @@
 			{
 				"id": "hypermass-cannon",
 				"name": "Hypermass cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d6×10",
@@ -6125,7 +6141,7 @@
 			{
 				"id": "nova-ram",
 				"name": "Nova ram",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d10×10",
@@ -6138,7 +6154,7 @@
 			{
 				"id": "orbital-devastator",
 				"name": "Orbital devastator",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "8d6×10",
@@ -6151,7 +6167,7 @@
 			{
 				"id": "particle-acceleration-gun",
 				"name": "Particle acceleration gun",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "9d4×10",
@@ -6164,7 +6180,7 @@
 			{
 				"id": "prismatic-torrent",
 				"name": "Prismatic torrent",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "5d8×10",
@@ -6177,7 +6193,7 @@
 			{
 				"id": "summon-planetoid-module",
 				"name": "Summon planetoid module",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "4d6×10",
@@ -6190,7 +6206,7 @@
 			{
 				"id": "titan-bolter",
 				"name": "Titan bolter",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d8×10",
@@ -6203,7 +6219,7 @@
 			{
 				"id": "ultra-plasma-cannon",
 				"name": "Ultra plasma cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "9d6×10",
@@ -6216,7 +6232,7 @@
 			{
 				"id": "ultra-x-laser-cannon",
 				"name": "Ultra x-laser cannon",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d8×10",
@@ -6229,7 +6245,7 @@
 			{
 				"id": "ultragraser",
 				"name": "Ultragraser",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d8×10",
@@ -6242,7 +6258,7 @@
 			{
 				"id": "ultralaser",
 				"name": "Ultralaser",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d4×10",
@@ -6255,7 +6271,7 @@
 			{
 				"id": "ultramaser",
 				"name": "Ultramaser",
-				"src": "SOM",
+				"src": "som",
 				"range": "Long",
 				"speed": "n/a",
 				"damage": "6d8×10",
@@ -6268,7 +6284,7 @@
 			{
 				"id": "vortex-devourer",
 				"name": "Vortex devourer",
-				"src": "SOM",
+				"src": "som",
 				"range": "Medium",
 				"speed": "n/a",
 				"damage": "6d12×10",
@@ -6345,13 +6361,13 @@
 			{
 				"id": "array",
 				"name": "Array",
-				"src": "SCR",
+				"src": "scr",
 				"ctMounts": 2
 			},
 			{
 				"id": "automated",
 				"name": "Automated",
-				"src": "SOM",
+				"src": "som",
 				"isUpgrade": 1,
 				"bpMultiplier": 1.5
 			},
@@ -6373,7 +6389,7 @@
 			{
 				"id": "deployed",
 				"name": "Deployed",
-				"src": "SOM",
+				"src": "som",
 				"isUpgrade": 1,
 				"bpMultiplier": 2
 			},
@@ -6455,7 +6471,7 @@
 			{
 				"id": "line",
 				"name": "Line",
-				"src": "SOM",
+				"src": "som",
 				"isUpgrade": 1,
 				"bpMultiplier": 1.75
 			},
@@ -6482,7 +6498,7 @@
 			{
 				"id": "mystical",
 				"name": "Mystical",
-				"src": "SOM",
+				"src": "som",
 				"isUpgrade": 1,
 				"bpMultiplier": 1.25
 			},
@@ -6594,7 +6610,7 @@
 			{
 				"id": "smart",
 				"name": "Smart",
-				"src": "SOM",
+				"src": "som",
 				"isUpgrade": 1,
 				"bpMultiplier": 1.5
 			},
@@ -6704,6 +6720,7 @@
 			{
 				"id": "captain",
 				"name": "Captain",
+				"src": "scr",
 				"hasRoleQuestion": "Is there a captain?",
 				"skills": [
 					"bluff",
@@ -6718,6 +6735,7 @@
 			{
 				"id": "engineer",
 				"name": "Engineer",
+				"src": "scr",
 				"hasRoleQuestion": "Is there an engineer?",
 				"skills": [
 					"engineering"
@@ -6726,6 +6744,7 @@
 			{
 				"id": "gunner",
 				"name": "Gunner",
+				"src": "scr",
 				"hasRoleQuestion": "Is there a gunner?",
 				"skills": [
 					"gunnery"
@@ -6734,6 +6753,7 @@
 			{
 				"id": "pilot",
 				"name": "Pilot",
+				"src": "scr",
 				"hasRoleQuestion": "Is there a pilot?",
 				"skills": [
 					"computers",
@@ -6744,6 +6764,7 @@
 			{
 				"id": "scienceOfficer",
 				"name": "Science Officer",
+				"src": "scr",
 				"hasRoleQuestion": "Is there a science officer?",
 				"skills": [
 					"computers"
@@ -6752,6 +6773,7 @@
 			{
 				"id": "chiefMate",
 				"name": "Chief Mate",
+				"src": "pw",
 				"hasRoleQuestion": "Is there a chief mate?",
 				"skills": [
 					"acrobatics",
@@ -6761,6 +6783,7 @@
 			{
 				"id": "magicOfficer",
 				"name": "Magic Officer",
+				"src": "pw",
 				"hasRoleQuestion": "Is there a magic officer?",
 				"skills": [
 					"mysticism"
@@ -6772,7 +6795,7 @@
 		"data": [
 			{
 				"id": "deaths-head-necroglider",
-                "src": "core",
+                "src": "scr",
 				"name": "Death's Head Necroglider",
 				"tier": "1/2",
 				"params": {
@@ -6927,7 +6950,7 @@
 			},
 			{
 				"id": "blackwind-sepulcher",
-                "src": "core",
+                "src": "scr",
 				"name": "Blackwind Sepulcher",
 				"tier": 5,
 				"params": {
@@ -7112,7 +7135,7 @@
 			},
 			{
 				"id": "thaumtech-omenbringer",
-                "src": "core",
+                "src": "scr",
 				"name": "Thaumtech Omenbringer",
 				"tier": 14,
 				"params": {
@@ -7357,7 +7380,7 @@
 			},
 			{
 				"id": "idaran-voidrunner",
-                "src": "core",
+                "src": "scr",
 				"name": "Idaran Voidrunner",
 				"tier": "1/3",
 				"params": {
@@ -7512,7 +7535,7 @@
 			},
 			{
 				"id": "idaran-vanserai",
-                "src": "core",
+                "src": "scr",
 				"name": "Idaran Vanserai",
 				"tier": 4,
 				"params": {
@@ -7699,7 +7722,7 @@
 			},
 			{
 				"id": "idaran-millenia",
-                "src": "core",
+                "src": "scr",
 				"name": "Idaran Millenia",
 				"tier": 12,
 				"params": {
@@ -7922,7 +7945,7 @@
 			},
 			{
 				"id": "ringworks-wanderer",
-                "src": "core",
+                "src": "scr",
 				"name": "Ringworks Wanderer",
 				"tier": "1/4",
 				"params": {
@@ -8072,7 +8095,7 @@
 			},
 			{
 				"id": "kevolari-venture",
-                "src": "core",
+                "src": "scr",
 				"name": "Kevolari Venture",
 				"tier": 1,
 				"params": {
@@ -8249,7 +8272,7 @@
 			},
 			{
 				"id": "atech-immortal",
-                "src": "core",
+                "src": "scr",
 				"name": "Atech Immortal",
 				"tier": 10,
 				"params": {
@@ -8429,7 +8452,7 @@
 			},
 			{
 				"id": "starhive-drone-mk-iii",
-                "src": "core",
+                "src": "scr",
 				"name": "Starhive Drone Mk III",
 				"tier": 1,
 				"params": {
@@ -8600,7 +8623,7 @@
 			},
 			{
 				"id": "uie-hiveguard",
-                "src": "core",
+                "src": "scr",
 				"name": "UIE Hiveguard",
 				"tier": 6,
 				"params": {
@@ -8794,7 +8817,7 @@
 			},
 			{
 				"id": "hivonyx-titan-mauler",
-                "src": "core",
+                "src": "scr",
 				"name": "Hivonyx Titan Mauler",
 				"tier": 9,
 				"params": {
@@ -8968,7 +8991,7 @@
 			},
 			{
 				"id": "bmc-mauler",
-                "src": "core",
+                "src": "scr",
 				"name": "BMC Mauler",
 				"tier": 2,
 				"params": {
@@ -9131,7 +9154,7 @@
 			},
 			{
 				"id": "norikama-dropship",
-                "src": "core",
+                "src": "scr",
 				"name": "Norikama Dropship",
 				"tier": 8,
 				"params": {
@@ -9316,7 +9339,7 @@
 			},
 			{
 				"id": "vindicas-tyrant",
-                "src": "core",
+                "src": "scr",
 				"name": "Vindicas Tyrant",
 				"tier": 16,
 				"params": {
@@ -9605,7 +9628,7 @@
 			},
 			{
 				"id": "sunrise-maiden",
-                "src": "core",
+                "src": "ap1",
 				"name": "Sunrise Maiden",
 				"tier": 3,
 				"params": {
@@ -9789,7 +9812,7 @@
 			},
 			{
 				"id": "compent-aev",
-                "src": "pact",
+                "src": "pw",
 				"name": "CompEnt AEV",
 				"tier": "1/3",
 				"params": {
@@ -9953,7 +9976,7 @@
 			},
 			{
 				"id": "compent-group-defense-frigate",
-                "src": "pact",
+                "src": "pw",
 				"name": "CompEnt Group Defense Frigate",
 				"tier": "8",
 				"params": {
@@ -10146,7 +10169,7 @@
 			},
 			{
 				"id": "multifold-seedship",
-                "src": "pact",
+                "src": "pw",
 				"name": "Multifold Seedship",
 				"tier": "11",
 				"params": {
@@ -10329,7 +10352,7 @@
 			},
 			{
 				"id": "infernex-burning-nail",
-                "src": "pact",
+                "src": "pw",
 				"name": "Infernex Burning Nail",
 				"tier": "1",
 				"params": {
@@ -10494,7 +10517,7 @@
 			},
 			{
 				"id": "infernex-interdictus",
-                "src": "pact",
+                "src": "pw",
 				"name": "Infernex Interdictus",
 				"tier": "13",
 				"params": {
@@ -10682,7 +10705,7 @@
 			},
 			{
 				"id": "infernex-keep-diabolical",
-                "src": "pact",
+                "src": "pw",
 				"name": "Infernex Keep Diabolical",
 				"tier": "16",
 				"params": {
@@ -10956,7 +10979,7 @@
 			},
             {
 				"id": "inheritorworks-brightsword",
-                "src": "pact",
+                "src": "pw",
 				"name": "Inheritorworks Brightsword",
 				"tier": "2",
 				"params": {
@@ -11117,7 +11140,7 @@
             },
             {
 				"id": "inheritorworks-shieldcraft",
-                "src": "pact",
+                "src": "pw",
 				"name": "Inheritorworks Shieldcraft",
 				"tier": "8",
 				"params": {
@@ -11307,7 +11330,7 @@
             },
             {
 				"id": "inheritorworks-cathedralship",
-                "src": "pact",
+                "src": "pw",
 				"name": "Inheritorworks Cathedralship",
 				"tier": "16",
 				"params": {
@@ -11533,7 +11556,7 @@
             },
             {
 				"id": "terminator-star-drake",
-                "src": "pact",
+                "src": "pw",
 				"name": "Terminator Star Drake",
 				"tier": "1/4",
 				"params": {
@@ -11686,7 +11709,7 @@
             },
             {
 				"id": "redshift-pleasure-sail",
-                "src": "pact",
+                "src": "pw",
 				"name": "Redshift Pleasure Sail",
 				"tier": "3",
 				"params": {
@@ -11862,7 +11885,7 @@
             },
             {
 				"id": "opulos-drift-cruiser",
-                "src": "pact",
+                "src": "pw",
 				"name": "Opulos Drift Cruiser",
 				"tier": "11",
 				"params": {
@@ -12044,7 +12067,7 @@
             },
             {
 				"id": "uc-pod",
-                "src": "pact",
+                "src": "pw",
 				"name": "UC Pod",
 				"tier": "1/2",
 				"params": {
@@ -12196,7 +12219,7 @@
             },
             {
 				"id": "uc-arkship",
-                "src": "pact",
+                "src": "pw",
 				"name": "UC Arkship",
 				"tier": "10",
 				"params": {
@@ -12389,7 +12412,7 @@
             },
             {
 				"id": "uc-gardenship",
-                "src": "pact",
+                "src": "pw",
 				"name": "UC Gardenship",
 				"tier": "10",
 				"params": {

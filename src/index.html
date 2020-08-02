@@ -31,6 +31,12 @@
 
 <body>
 
+	<!--
+	| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	|	INLINE GRAPHICS
+	| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	-->
+
 	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 		<symbol id="icon-power" viewBox="0 0 20 20">
 			<title>PCU Cost</title>
@@ -78,7 +84,18 @@
 			<path d="M8.546 13.207h6.578c.511 0 1.011-.52.985-1.13-.027-.61-.434-1.13-.985-1.13H8.546c-.513 0-1.01.52-.984 1.13.026.61.433 1.13.984 1.13z"/><path d="M4.549 4.154a.835.835 0 00-.837.837v14.172c0 .464.372.837.837.837h14.57a.836.836 0 00.84-.837V4.99a.836.836 0 00-.84-.837zm1.72 2.435H17.4c.066 0 .118.052.118.117v10.742a.117.117 0 01-.118.118H6.27a.117.117 0 01-.118-.118V6.706c0-.065.053-.117.118-.117z"/><path d="M.863.023A.834.834 0 00.025.86v14.172c0 .465.374.838.838.838h2.848v-2.435H2.582a.116.116 0 01-.117-.118V2.574c0-.065.052-.117.117-.117h11.13c.066 0 .118.052.118.117v1.58h2.441V.86a.834.834 0 00-.837-.836H.864z"/><path d="M10.706 8.788v6.578c0 .512.52 1.011 1.13.985.608-.027 1.129-.434 1.129-.985V8.788c0-.513-.52-1.01-1.13-.984-.61.026-1.13.433-1.13.984z"/>
 		</symbol>
 	</svg>	
+
+
+
+
+
+
 	
+	<!--
+	| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	|	APP
+	| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	-->
 	<div id="app" class="wrapper">
 	
 		<div class="sidebar" id="sidebar">
@@ -89,8 +106,21 @@
 			
 			<h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
 
+
+
+
+
+
+
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	NAV
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
+
 			<nav class="contents">
 				<ul class="contents__0">
+					<li><a href="#sources">Sources</a></li>
 					<li><a href="#input">Input</a></li>
 					<li><a href="#concept">Concept</a></li>
 					<li><a href="#tier">Tier</a></li>
@@ -99,14 +129,16 @@
 					<li><a href="#thrusters">Thrusters</a></li>
 					<li><a href="#otherSystems">Other Systems</a></li>
 					<ul class="contents__1">
-						<li><a href="#ablativeArmor">Ablative Armor</a></li>
+						<li v-if="params.sources.som"><a href="#ablativeArmor">Ablative Armor</a></li>
 						<li><a href="#armor">Armor</a></li>
 						<li><a href="#computer">Computer</a></li>
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
+						<li v-if="params.sources.pw"><a href="#data-net">Data Net</a></li>
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
-						<li><a href="#driftEngine">Drift Engine</a></li>
+						<li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
 						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
-						<li><a href="#fortified-hull">Fortified Hull</a></li>
+						<li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
+						<li v-if="params.sources.pw"><a href="#hive-joining">Hive Joining</a></li>
 						<li><a href="#security">Security</a></li>
 						<li><a href="#sensors">Sensors</a></li>
 						<li><a href="#shields">Shields</a></li>
@@ -118,6 +150,18 @@
 				</ul>
 
 			</nav>
+
+
+
+
+
+
+
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	SUMMARY
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
 
 			<div class="cost">
 				<p class="cost__item">
@@ -148,9 +192,18 @@
 
 		</div><!-- #sidebar -->
 		
+
+
+
 		
 		
 
+		<!--
+		| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		|	MAIN
+		| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		-->
+		
 		<div class="main">
 
 			<a href="#sidebar" class="sidebar__control sidebar__open">
@@ -191,19 +244,31 @@
 				
 			</header>
 
+
+
+
+
+
+
 			<!--
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	RECENT UPDATES
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			<div class="box">
 				<p><strong>Coming Soon:</strong> New material from <em>Starship Operations Manual</em>, released <time datetime="2020-07-30">30/07/2020</time></p>
 			</div>
 
+
+
+
+
+
+
 			<!--
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	PATREON
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -244,9 +309,36 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				INPUT
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	SOURCES
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
+
+			<div class="box">
+				<header class="box__header">
+					<h2 id="sources">Sources</h2>
+				</header>
+				<div class="form-inline" style="margin: .5rem 0;">
+					<div class="form-group" v-for="src in sources">
+						<label style="display: inline-block; margin-right: 1rem;">
+							<input type="checkbox" v-model="params.sources[src.id]">
+							{{ src.name }}
+						</label>
+					</div>
+				</div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	INPUT
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -259,25 +351,31 @@
 						<label for="sampleShipSelect">Select a sample ship</label>
 
 						<!-- sort by -->
-						<div class="form-inline">
-							Sort by:
-							<div class="radio">
-							  <label>
-							    <input type="radio" name="selectSampleShipSortOrder" value="name" v-model="selectSampleShipSortOrder">
-							    Name
-							  </label>
-							</div>
-							<div class="radio">
-							  <label>
-							    <input type="radio" name="selectSampleShipSortOrder" value="tier" v-model="selectSampleShipSortOrder">
-							    Tier
-							  </label>
+						<div class="form-inline" style="margin: .5rem 0;">
+							<div class="form-group">
+								Sort by:
+								<div class="radio">
+								  <label>
+								    <input type="radio" name="selectSampleShipSortOrder" value="name" v-model="selectSampleShipSortOrder">
+								    Name
+								  </label>
+								</div>
+								<div class="radio">
+								  <label>
+								    <input type="radio" name="selectSampleShipSortOrder" value="tier" v-model="selectSampleShipSortOrder">
+								    Tier
+								  </label>
+								</div>
 							</div>
 						</div>
 						
 						<select class="form-control" id="sampleShipSelect" v-on:change="inputSampleShipParams">
 							<option value="none">None</option>
-							<option v-for="option in selectOptions.sampleShip" :value="option.id">{{ option.name }} (Tier {{ option.tier }} {{ getItemById('frame', option.params.frameId).name }})</option>
+							<option v-for="option in selectOptions.sampleShip"
+								:value="option.id"
+								v-if="option.src == 'scr' || params.sources[option.src] == true">
+								{{ option.name }} (Tier {{ option.tier }} {{ getItemById('frame', option.params.frameId).name }})
+							</option>
 						</select>
 					</div>
 				</div>
@@ -315,6 +413,7 @@
 				</div>
 				
 			</div>
+			
 
 
 			
@@ -324,9 +423,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				CONCEPT
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	CONCEPT
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -365,9 +464,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				TIER
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	TIER
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -397,9 +496,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				FRAME
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	FRAME
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -410,7 +509,11 @@
 					<div class="form-group">
 						<label for="frameSelect">Frame</label>
 						<select name="frame" id="frameSelect" class="form-control" v-model="params.frameId" @change="updateFrame">
-							<option v-for="option in selectOptions.frame" :value="option.id">{{ option.name }}</option>
+							<option v-for="option in selectOptions.frame"
+								:value="option.id"
+								v-if="option.src == 'scr' || params.sources[option.src] == true">
+								{{ option.name }}
+							</option>
 						</select>
 					</div>
 				</div>
@@ -437,9 +540,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				CUSTOM FRAME
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	CUSTOM FRAME
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box" v-if="this.params.frameId == 'custom'">
@@ -641,9 +744,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				POWER CORE
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	POWER CORE
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -677,9 +780,9 @@
 			
 			
 			<!--
-			
-				THRUSTERS
-				
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	THRUSTERS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -715,9 +818,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	OTHER SYSTEMS
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<h2 id="otherSystems">Step 5: Other Systems</h2>
@@ -727,12 +830,12 @@
 
 
 			<!--
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	ABLATIVE ARMOR
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
-			<div class="box">
+			<div class="box" v-if="params.sources.som == true">
 				<header class="box__header">
 					<h3 id="ablativeArmor">Ablative Armor</h3>
 				</header>
@@ -805,9 +908,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	ARMOR
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -839,9 +942,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				COMPUTER
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	COMPUTER
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -875,9 +978,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				CREW QUARTERS
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	CREW QUARTERS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -909,9 +1012,40 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				DEFENSIVE COUNTERMEASURES
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	DATA NET
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
+			
+			<div id="data-net" class="box" v-if="params.sources.pw == true">
+				<header class="box__header">
+					<h3 id="data-net">Data Net</h3>
+				</header>
+                <div class="box__select">
+                    <div class="checkbox">
+                        <label for="hasDataNet">
+                            <input type="checkbox" v-model="params.hasDataNet" id="hasDataNet">
+                            Data Net (see <em>Pact Worlds</em>, p152)
+                        </label>
+                    </div>
+                </div>
+                <div class="box__cost--list">
+                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetBpCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetPcuCost }}
+                </div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	DEFENSIVE COUNTERMEASURES
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -943,9 +1077,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				DRIFT ENGINE
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	DRIFT ENGINE
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -982,9 +1116,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				EXPANSION BAYS
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	EXPANSION BAYS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box" v-if="frame.expansionBays !== 0">
@@ -1059,12 +1193,12 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			|	FORTIFIED HULL
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
-			<div class="box">
+			<div class="box" v-if="params.sources.som == true">
 				<header class="box__header">
 					<h3 id="fortified-hull">Fortified Hull</h3>
 				</header>
@@ -1092,9 +1226,39 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				SECURITY
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	HIVE JOINING
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
+			
+			<div id="hive-joining" class="box" v-if="params.sources.pw == true">
+				<header class="box__header">
+					<h3 id="hive-joining">Hive Joining</h3>
+				</header>
+                <div class="box__select">
+                    <div class="checkbox">
+                        <label for="hasHiveJoining">
+                            <input type="checkbox" v-model="params.hasHiveJoining" id="hasHiveJoining">
+                            Hive Joining (see <em>Pact Worlds</em>, p152)
+                        </label>
+                    </div>
+                </div>
+                <div class="box__cost--list">
+                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ hiveJoiningBpCost }}
+                </div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	SECURITY
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -1231,9 +1395,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				SENSORS
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	SENSORS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -1264,9 +1428,9 @@
 			
 			
 			<!--
-			|------------------------------------------------------------
-				SHIELDS
-			|------------------------------------------------------------
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	SHIELDS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -1276,7 +1440,7 @@
 
 
 				<!-- select shield type -->
-				<div class="form">
+				<div class="form" v-if="params.sources.som">
 					Shield Type:
 					<div class="radio">
 					  <label>
@@ -1294,7 +1458,7 @@
 
 
 				<!-- Core Rulebook Shields -->
-				<div v-if="params.shieldType == 'shields'">
+				<div v-if="!params.sources.som || params.shieldType == 'shields'">
 					<div class="box__select">
 						<div class="form-group">
 							<label for="shieldsSelect">Shields</label>
@@ -1370,70 +1534,9 @@
 			
 			
 			<!--
-			
-				DATA NET
-				
-			-->
-			
-			<div class="box">
-				<header class="box__header">
-					<h3 id="data-net">Data Net</h3>
-				</header>
-                <div class="box__select">
-                    <div class="checkbox">
-                        <label for="hasDataNet">
-                            <input type="checkbox" v-model="params.hasDataNet" id="hasDataNet">
-                            Data Net (see <em>Pact Worlds</em>, p152)
-                        </label>
-                    </div>
-                </div>
-                <div class="box__cost--list">
-                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetBpCost }}
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetPcuCost }}
-                </div>
-			</div>
-
-
-			
-			
-			
-			
-			
-			
-			<!--
-			
-				HIVE JOINING
-				
-			-->
-			
-			<div class="box">
-				<header class="box__header">
-					<h3 id="hive-joining">Hive Joining</h3>
-				</header>
-                <div class="box__select">
-                    <div class="checkbox">
-                        <label for="hasHiveJoining">
-                            <input type="checkbox" v-model="params.hasHiveJoining" id="hasHiveJoining">
-                            Hive Joining (see <em>Pact Worlds</em>, p152)
-                        </label>
-                    </div>
-                </div>
-                <div class="box__cost--list">
-                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ hiveJoiningBpCost }}
-                </div>
-			</div>
-
-
-			
-			
-			
-			
-			
-			
-			<!--
-			
-				WEAPON MOUNTS
-				
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	WEAPON MOUNTS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<h3 id="weapons">Weapons</h3>
@@ -1486,7 +1589,9 @@
 									<optgroup v-for="wpnType in data.shipWeaponType.data" :label="wpnType">
 										<template v-for="option in selectOptions.shipWeapon.filter(wpn => wpn.type == wpnType)"
 											v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)">
-											<option :value="option.id">{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})</option>
+											<option :value="option.id" v-if="option.src == 'scr' || params.sources[option.src] == true">
+												{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})
+											</option>
 										</template>
 									</optgroup>
 								</select>
@@ -1582,11 +1687,10 @@
 			
 			
 			
-			
 			<!--
-			
-				CUSTOM COMPONENTS
-				
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	CUSTOM COMPONENTS
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -1679,9 +1783,9 @@
 			
 			
 			<!--
-			
-				CREW
-				
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	CREW
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -1711,7 +1815,8 @@
 				
 			
 			
-			<template v-for="role in selectOptions.role">
+			<template v-for="role in selectOptions.role"
+				v-if="role.src == 'scr' || params.sources[role.src] == true">
 			
 				<div class="box crew" v-if="params.hasCrew">
 				
@@ -1823,9 +1928,9 @@
 			
 			
 			<!--
-			
-				OUTPUT
-				
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	OUTPUT
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			
 			<div class="box">
@@ -1897,10 +2002,10 @@
 			
 			
 			<!--
-			
-				JSON
-				
-			-->
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	JSON
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->			
 			
 			<div class="box box--json">
 				<header class="box__header">
