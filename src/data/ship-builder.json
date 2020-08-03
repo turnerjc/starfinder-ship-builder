@@ -1619,6 +1619,307 @@
 				],
 				"pcuCost": 10,
 				"bpCost": 5
+			},
+			{
+				"id": "arcane-mortuary",
+                "src": "som",
+				"name": "Arcane Mortuary",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 1,
+				"bpCost": 2
+			},
+			{
+				"id": "booster-thruster-housing",
+                "src": "som",
+				"name": "Booster Thruster Housing",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 0,
+				"bpCost": 3
+			},
+			{
+				"id": "breaching-pod",
+                "src": "som",
+				"name": "Breaching Pod",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 5
+			},
+			{
+				"id": "breaching-pod-autonomous",
+                "src": "som",
+				"name": "Breaching Pod with Autonomous Combatants",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 7
+			},
+			{
+				"id": "breaching-pod-skilled",
+                "src": "som",
+				"name": "Breaching Pod with Skilled Autonomous Combatants",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 9
+			},
+			{
+				"id": "breaching-pod-specialized",
+                "src": "som",
+				"name": "Breaching Pod with Specialized Autonomous Combatants",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 11
+			},
+			{
+				"id": "combat-training-facility-basic",
+                "src": "som",
+				"name": "Combat Training Facility (Basic)",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 3,
+				"bpCost": 3
+			},
+			{
+				"id": "combat-training-facility-advanced",
+                "src": "som",
+				"name": "Combat Training Facility (Advanced)",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 8
+			},
+			{
+				"id": "combat-training-facility-elite",
+                "src": "som",
+				"name": "Combat Training Facility (Elite)",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 10
+			},
+			{
+				"id": "corpse-recycler",
+                "src": "som",
+				"name": "Corpse Recycler",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 2,
+				"bpCost": 2
+			},
+			{
+				"id": "cryo-chamber",
+                "src": "som",
+				"name": "Cryo Chamber",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 10,
+				"bpCost": 5
+			},
+			{
+				"id": "dedicated-computer-housing",
+                "src": "som",
+				"name": "Dedicated Computer Housing",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 0,
+				"bpCost": 2
+			},
+			{
+				"id": "drop-pod",
+                "src": "som",
+				"name": "Drop Pod",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 5
+			},
+			{
+				"id": "drop-pod-colossal",
+                "src": "som",
+				"name": "Drop Pod (Colossal)",
+				"numBays": 2,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 10,
+				"bpCost": 10
+			},
+			{
+				"id": "external-expansion-bay",
+                "src": "som",
+				"name": "External Expansion Bay",
+				"numBays": 0,
+				"sizes": [
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 0,
+				"bpCost": 3
+			},
+			{
+				"id": "ghost-drive",
+                "src": "som",
+				"name": "Ghost Drive",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large"
+				],
+				"pcuCost": 10,
+				"bpCost": 5
+			},
+			{
+				"id": "healing-pods",
+                "src": "som",
+				"name": "Healing Pods",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 2,
+				"bpCost": 3
 			}
 		]
 	},

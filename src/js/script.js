@@ -253,7 +253,8 @@ function Ship(json) {
 			data: json,
 			json: "",
 			params: {},
-			// paramsReset: {"version":"1.0.1","shipName":"Kevolari Venture","shipConcept":"Thoroughly industrial in its aesthetics, the Venture is a ship designed to keep its crew alive in unfriendly systems—everything else is secondary. Inside, however, the Venture is surprisingly comfortable, making it perfect for exploration, permanent residency, and long-haul shipping.","tierId":"2","frameId":"explorer","powerCoreIds":["pulse-gray"],"thrustersId":"m6","armorId":"mk-3","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-1","driftEngineId":"signal-basic","expansionBayIds":["science-lab-physical","cargo-hold","cargo-hold","cargo-hold"],"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"hasSelfDestructSystem":0,"hasDataNet":0,"hasHiveJoining":0,"sensorsId":"budget-medium-range","shieldsId":"basic-20","weaponMounts":{"forward":[{"weaponId":"light-laser-cannon","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"inubrix"}],"aft":[],"port":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[{"weaponId":"high-explosive-missile-launcher","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}]},"hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":"0","crewSkills":{"captain":{"count":1,"countOfficers":0,"hasRole":1,"skills":{"bluff":{"modifier":4,"ranks":1},"computers":{"modifier":4,"ranks":1},"diplomacy":{"modifier":4,"ranks":1},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":5},"intimidate":{"modifier":4,"ranks":1},"piloting":{"modifier":4,"ranks":1}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":4,"ranks":1}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":5}},"hasRole":1,"countOfficers":2,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":9,"ranks":1}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":9,"ranks":1}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"customFrameBaseId":"light-freighter","customComponents":[],"deflectorShieldId":"none","fortifiedHullId":"none","powerCoreSpecialMaterials":["none"],"reinforcedBulkheadId":"none","shieldType":"shields","shieldsByPosition":{"forward":5,"aft":5,"port":5,"starboard":5},"sources":{"pw":true,"som":true}},
+			paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-1-tetranode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"mk-1-mononode","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["dedicated-computer-housing","cargo-hold","cargo-hold"],"fortifiedHullId":"none","frameId":"light-freighter","hasBiometricLocks":0,"hasCrew":1,"hasDataNet":0,"hasHiveJoining":0,"hasSelfDestructSystem":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none"],"powerCoreSpecialMaterials":["none"],"reinforcedBulkheadId":"none","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[]}},
+			/*
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -275,7 +276,7 @@ function Ship(json) {
 					shockGridId: "none",
 					wipe: false
 				},
-				computerId:"basic-computer",
+				computerId: "basic-computer",
 				crewQuartersId:"common",
 				crewSkills: {
 					captain: {
@@ -390,6 +391,7 @@ function Ship(json) {
 				}, // crewSkills
 	            customFrameBaseId: "light-freighter",
 	            customComponents: [],
+				dedicatedComputerId: "basic-computer",
 				defensiveCountermeasuresId:"none",
 				defensiveCountermeasuresMaterialId:"none",
 				deflectorShieldId: "none",
@@ -423,8 +425,10 @@ function Ship(json) {
 					pw: true,
 					som: true,
 				},
-				thrustersId:"none",
-				thrustersMaterialId:"none",
+				thrustersId: "none",
+				thrustersMaterialId: "none",
+				thrustersBoosterId: "none",
+				thrustersBoosterMaterialId: "none",
 				tierId:"1",
 				version:"1.0.1",
 				weaponMounts: {
@@ -474,6 +478,7 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
+			*/
 			selectSampleShipSortOrder: "name",
 			sources: [
 				{
@@ -766,6 +771,18 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            ctExternalExpansionBays: function() {
+            	if (!this.params.sources.som) return 0;
+
+            	var ctBays = this.expansionBays.filter(function(bay) {
+            		return bay.id == "external-expansion-bay";
+            	});
+
+            	return ctBays.length;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
             customComponentBpTotal: function() {
             	if(!isset(this.params.customComponents)) return 0;
 
@@ -837,6 +854,12 @@ function Ship(json) {
             */
 			dataNetPcuCost: function() {
 				return (this.params.hasDataNet ? 5 : 0);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			dedicatedComputer: function() {
+				return this.getItemById("computer", this.params.dedicatedComputerId);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -986,6 +1009,18 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            hasBoosterThrusterHousing: function() {
+            	if (!this.params.sources.som) return false;
+
+            	var hasHousing = this.expansionBays.find(function(bay) {
+            		return bay.id == "booster-thruster-housing";
+            	}) !== undefined;
+
+            	return hasHousing;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			hasComputerCountermeasures: function() {
 				for(measure in this.params.computerCountermeasures) {
 					if ( measure == 'shockGridId') {
@@ -999,6 +1034,30 @@ function Ship(json) {
 					}
 				}
 				return false;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            hasDedicatedComputerHousing: function() {
+            	if (!this.params.sources.som) return false;
+
+            	var hasHousing = this.expansionBays.find(function(bay) {
+            		return bay.id == "dedicated-computer-housing";
+            	}) !== undefined;
+
+            	return hasHousing;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			hasHealingPod: function() {
+            	if (!this.params.sources.som) return false;
+
+            	var hasPod = this.expansionBays.find(function(bay) {
+            		return bay.id == "healing-pods";
+            	}) !== undefined;
+
+            	return hasPod;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1503,6 +1562,33 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+			thrustersBooster: function () {
+				var thrustersBooster = cloneObject(this.getItemById("thrusters", this.params.thrustersBoosterId));
+
+				if (this.params.sources.som) {
+					switch (this.params.thrustersBoosterMaterialId) {
+						case "horacalcum":
+							thrustersBooster.speed++;
+							if (thrustersBooster.pilotingModifier < 0) {
+								thrustersBooster.pilotingModifier++;
+							}
+							thrustersBooster.bpCost += 2;
+							break;
+						case "inubrix":
+							thrustersBooster.bpCost += 1;
+							break;
+						default:
+							break;
+					}
+				}
+
+				thrustersBooster.speed = Math.floor(thrustersBooster.speed * 0.25);
+
+				return thrustersBooster;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			tier: function() {
 				var tier = this.getItemById("tier", this.params.tierId);
 				return tier;
@@ -1513,6 +1599,7 @@ function Ship(json) {
 			totalPcuCost: function() {
 				return {
 					essential: this.thrusters.pcuCost +
+						this.thrustersBooster.pcuCost +
 						this.defensiveCountermeasures.pcuCost +
 						(this.params.shieldType == "shields" ? this.shields.pcuCost : 0) +
 						(this.params.shieldType == "deflector-shield" ? this.deflectorShield.pcuCost : 0) +
@@ -1551,6 +1638,7 @@ function Ship(json) {
 					parseInt(this.sensorsBpCost) +
 					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
 					parseInt(this.thrusters.bpCost) +
+					parseInt(this.thrustersBooster.bpCost) +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMaterialsBp) +

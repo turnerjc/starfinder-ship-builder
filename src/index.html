@@ -880,13 +880,66 @@
 						</div>
 					</div><!-- special materials -->
 				</div>
+
+				<!-- booster thrusters-->
+				<div class="box__select" v-if="params.sources.som && hasBoosterThrusterHousing">
+					<div class="form-group">
+						<label for="thrustersBoosterSelect">Thrusters Booster</label>
+						<select id="thrustersBoosterSelect"
+							class="form-control"
+							v-model="params.thrustersBoosterId">
+							<template v-for="option in selectOptions.thrusters"
+								v-if="(!params.isUseStrictRules) || (option.size.indexOf(frame.size) > -1)">
+								<option :value="option.id">{{ option.name }}</option>
+							</template>
+						</select>
+					</div>
+
+					<!-- special materials -->
+					<div class="form" v-if="params.sources.som">
+						<div class="form-group">
+							Special Material:
+							<!-- none -->
+							<div class="radio">
+							  <label>
+							    <input type="radio"
+							    	name="thrustersBoosterMaterialId"
+							    	value="none"
+							    	v-model="params.thrustersBoosterMaterialId">
+							    None
+							  </label>
+							</div>
+							<!-- horacalcum -->
+							<div class="radio">
+							  <label>
+							    <input type="radio"
+							    	name="thrustersBoosterMaterialId"
+							    	value="horacalcum"
+							    	v-model="params.thrustersBoosterMaterialId">
+							    Horacalcum (+1 max speed; -1 Piloting check penalty based on max speed)
+							  </label>
+							</div>
+							<!-- inubrix -->
+							<div class="radio">
+							  <label>
+							    <input type="radio"
+							    	name="thrustersBoosterMaterialId"
+							    	value="inubrix"
+							    	v-model="params.thrustersBoosterMaterialId">
+							    Inubrix (+1 to Piloting checks to avoid hazards)
+							  </label>
+							</div>
+						</div>
+					</div><!-- special materials -->
+				</div><!-- thrusters booster -->
+
 				<div class="box__info">
-					<strong>Speed (in hexes)</strong> {{ thrusters.speed }};
-					<strong>Piloting Modifier</strong> {{ getPrefixedModifier(thrusters.pilotingModifier) }}
+					<strong>Speed (in hexes)</strong> {{ thrustersBooster.speed }};
+					<strong>Piloting Modifier</strong> {{ getPrefixedModifier(thrustersBooster.pilotingModifier) }}
 				</div>
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ thrusters.pcuCost }}
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ thrusters.bpCost }}
+					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ thrusters.pcuCost + thrustersBooster.pcuCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ thrusters.bpCost + thrustersBooster.bpCost }}
 				</div>
 			</div>
 
@@ -1086,15 +1139,32 @@
 							<option v-for="option in selectOptions.computer" :value="option.id">{{ option.name }}</option>
 						</select>
 					</div>
+
+					<!-- dedicated computer -->
+					<div class="form-group" v-if="params.sources.som && hasDedicatedComputerHousing">
+						<label for="dedicatedComputerSelect">Dedicated Computer</label>
+						<select name="dedicatedComputer" id="dedicatedComputerSelect" class="form-control"  v-model="params.dedicatedComputerId">
+							<option v-for="option in selectOptions.computer"
+								:value="option.id"
+								v-if="option.id == 'basic-computer' || option.id.indexOf('mononode') !== -1">
+								{{ option.name }}
+							</option>
+						</select>
+					</div>
 				</div>
+
 				<div class="box__info">
 					<strong>Skill Bonus</strong> {{ getPrefixedModifier(computer.bonus) }};
-					<strong>Nodes</strong> {{ computer.nodes }};
+					<span v-if="params.sources.som && hasDedicatedComputerHousing">
+						<strong>Dedicated Computer Skill Bonus</strong> {{ getPrefixedModifier(dedicatedComputer.bonus) }};
+					</span>
+					<strong>Nodes</strong> {{ computer.nodes + dedicatedComputer.nodes }};
 					<strong>Tier</strong> {{ computerTier }}
 				</div>
+
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ computer.pcuCost }}
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ computer.bpCost }}
+					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ computer.pcuCost + dedicatedComputer.pcuCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ computer.bpCost + dedicatedComputer.bpCost }}
 				</div>
 			</div>
 
@@ -1325,7 +1395,9 @@
 							<!-- select -->
 							<div class="form-group">
 								<select v-model="params.expansionBayIds[i]" :id="'expansionBaySelect'+i" class="form-control">
-									<option v-for="option in selectOptions.expansionBay" v-if="(!params.isUseStrictRules) || (option.sizes.indexOf(sizeCategory.id) !== -1 )" :value="option.id">{{ option.name + ((option.numBays > 1) ? ' (' + option.numBays + ' Slots)' : '') }}</option>
+									<option v-for="option in selectOptions.expansionBay" :value="option.id">
+										{{ option.name + ((option.numBays != 1) ? ' (' + option.numBays + ' Slots)' : '') }}
+									</option>
 								</select>
 							</div>
 
@@ -1338,9 +1410,12 @@
 					</template>
 				</ul>
 
+				<p v-if="ctExternalExpansionBays > frame.expansionBays" class="text-danger">You cannot have more external expansion bays than expansion bay slots on the frame.</p>
+
+				<p v-if="hasHealingPod" class="text-warning">NOTE: Healing pods can only be installed on biomechanical ships.</p>
+
 				<div class="box__under-box align-right">
 					<button @click="params.expansionBayIds.push('none')"
-						:disabled="frame.expansionBays != 'Unlimited' && expansionBaysCountUsed >= frame.expansionBays"
 						class="btn btn-primary">Create New Expansion Bay</button>
 				</div>
 
@@ -2228,7 +2303,7 @@
 					<div id="outputText">
 						<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
 						<p>{{ frame.size }} {{ frame.name.toLowerCase() }}</p>
-						<p><strong>Speed</strong> {{ thrusters.speed }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'"> ({{ params.thrustersMaterialId }} thrusters)</span>; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
+						<p><strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'"> ({{ params.thrustersMaterialId }} thrusters)</span>; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
 						<p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
 						<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ damageThreshold }}; <strong>CT</strong> {{ criticalThreshold }}</p>
 						<p v-if="tempHp > 0"><strong>Temporary HP</strong> {{ tempHp }}
