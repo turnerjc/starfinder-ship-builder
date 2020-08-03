@@ -138,6 +138,8 @@ function stringToDice(str) {
 		mult: 1
 	};
 
+	if (str == "n/a") return formula;
+
     // mult
     var multSplit = str.split('×');
     if (multSplit.length == 2) formula.mult = parseInt(multSplit[1]);
@@ -249,9 +251,9 @@ function Ship(json) {
         */
 		data: {
 			data: json,
-			// paramsReset: {"version":"1.0.1","hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"shipName":"UIE Hiveguard","shipConcept":"Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.","tierId":"6","frameId":"destroyer","powerCoreIds":["arcus-maximum"],"thrustersId":"l8","armorId":"mk-4","computerId":"mk-1-trinode","crewQuartersId":"common","defensiveCountermeasuresId":"mk-4","driftEngineId":"signal-basic","expansionBayIds":["cargo-hold","escape-pods","escape-pods","escape-pods"],"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"hasSelfDestructSystem":0,"hasDataNet":0,"hasHiveJoining":0,"sensorsId":"basic-long-range","shieldsId":"light-60","weaponMounts":{"forward":[{"weaponId":"heavy-laser-net","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false},{"weaponId":"twin-laser","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"aft":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"port":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"starboard":[{"weaponId":"flak-thrower","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}],"turret":[{"weaponId":"light-torpedo-launcher","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false}]},"crewSkills":{"captain":{"count":1,"countOfficers":0,"hasRole":1,"skills":{"bluff":{"modifier":7,"ranks":6},"computers":{"modifier":7,"ranks":6},"diplomacy":{"modifier":7,"ranks":6},"engineering":{"modifier":7,"ranks":6},"gunnery":{"modifier":13},"intimidate":{"modifier":7,"ranks":6},"piloting":{"modifier":7,"ranks":6}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":12,"ranks":6}},"countOfficers":1,"countOfficerCrew":3},"gunner":{"skills":{"gunnery":{"modifier":13}},"hasRole":1,"countOfficers":2,"countOfficerCrew":2},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":7,"ranks":6}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"shieldsByPosition":{"forward":15,"aft":15,"port":15,"starboard":15}},
 			json: "",
 			params: {},
+			// paramsReset: {"version":"1.0.1","shipName":"Kevolari Venture","shipConcept":"Thoroughly industrial in its aesthetics, the Venture is a ship designed to keep its crew alive in unfriendly systems—everything else is secondary. Inside, however, the Venture is surprisingly comfortable, making it perfect for exploration, permanent residency, and long-haul shipping.","tierId":"2","frameId":"explorer","powerCoreIds":["pulse-gray"],"thrustersId":"m6","armorId":"mk-3","computerId":"basic-computer","crewQuartersId":"common","defensiveCountermeasuresId":"mk-1","driftEngineId":"signal-basic","expansionBayIds":["science-lab-physical","cargo-hold","cargo-hold","cargo-hold"],"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","hasBiometricLocks":0,"computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"hasSelfDestructSystem":0,"hasDataNet":0,"hasHiveJoining":0,"sensorsId":"budget-medium-range","shieldsId":"basic-20","weaponMounts":{"forward":[{"weaponId":"light-laser-cannon","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"inubrix"}],"aft":[],"port":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[{"weaponId":"high-explosive-missile-launcher","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}]},"hasCrew":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":"0","crewSkills":{"captain":{"count":1,"countOfficers":0,"hasRole":1,"skills":{"bluff":{"modifier":4,"ranks":1},"computers":{"modifier":4,"ranks":1},"diplomacy":{"modifier":4,"ranks":1},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":5},"intimidate":{"modifier":4,"ranks":1},"piloting":{"modifier":4,"ranks":1}}},"engineer":{"hasRole":1,"skills":{"engineering":{"modifier":4,"ranks":1}},"countOfficers":1,"countOfficerCrew":0},"gunner":{"skills":{"gunnery":{"modifier":5}},"hasRole":1,"countOfficers":2,"countOfficerCrew":0},"pilot":{"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":9,"ranks":1}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"scienceOfficer":{"skills":{"computers":{"modifier":9,"ranks":1}},"hasRole":1,"countOfficers":1,"countOfficerCrew":0},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"customFrameBaseId":"light-freighter","customComponents":[],"deflectorShieldId":"none","fortifiedHullId":"none","powerCoreSpecialMaterials":["none"],"reinforcedBulkheadId":"none","shieldType":"shields","shieldsByPosition":{"forward":5,"aft":5,"port":5,"starboard":5},"sources":{"pw":true,"som":true}},
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -263,6 +265,7 @@ function Ship(json) {
 				antiHackingSystemsId: "none",
 				antiPersonnelWeaponId:"none",
 				armorId:"none",
+				armorMaterialId: "none",
 				computerCountermeasures: {
 					alarm: false,
 					fakeShell: false,
@@ -388,6 +391,7 @@ function Ship(json) {
 	            customFrameBaseId: "light-freighter",
 	            customComponents: [],
 				defensiveCountermeasuresId:"none",
+				defensiveCountermeasuresMaterialId:"none",
 				deflectorShieldId: "none",
 				driftEngineId:"none",
 				expansionBayIds:["none","none","none"],
@@ -401,8 +405,10 @@ function Ship(json) {
 				isSetDefaultCrewSkillValues:1,
 				isUseStrictRules:1,
 				powerCoreIds:["none"],
+				powerCoreSpecialMaterials:["none"],
 				reinforcedBulkheadId: "none",
 				sensorsId:"none",
+				sensorsMaterialId: "none",
 				shieldType: "shields",
                 shieldsByPosition: {
                     forward: 0,
@@ -418,6 +424,7 @@ function Ship(json) {
 					som: true,
 				},
 				thrustersId:"none",
+				thrustersMaterialId:"none",
 				tierId:"1",
 				version:"1.0.1",
 				weaponMounts: {
@@ -428,7 +435,8 @@ function Ship(json) {
 							templateWeight: "light",
 							isFromTemplate: true,
 							canBeLinked: false,
-							isLinked: false
+							isLinked: false,
+							specialMaterial: "none"
 						},
 						{
 							weaponId: "none",
@@ -436,7 +444,8 @@ function Ship(json) {
 							templateWeight: "light",
 							isFromTemplate: true,
 							canBeLinked: false,
-							isLinked: false
+							isLinked: false,
+							specialMaterial: "none"
 						}
 					],
 					aft: [],
@@ -447,7 +456,8 @@ function Ship(json) {
 							templateWeight: "light",
 							isFromTemplate: true,
 							canBeLinked: false,
-							isLinked: false
+							isLinked: false,
+							specialMaterial: "none"
 						}
 					],
 					starboard: [
@@ -457,7 +467,8 @@ function Ship(json) {
 							templateWeight: "light",
 							isFromTemplate: true,
 							canBeLinked: false,
-							isLinked: false
+							isLinked: false,
+							specialMaterial: "none"
 						}
 					],
 					turret: []
@@ -531,7 +542,27 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			armorBpCost: function() {
-				return this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
+				var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
+
+				if (this.params.sources.som) {
+					var materialBpCost = 0;
+					switch (this.params.armorMaterialId) {
+						case "adamantine-alloy":
+							materialBpCost = this.armor.bpCostMultiplier; // (effectively, +1 to size cat multiplier)
+							break;
+						case "noqual": 
+							materialBpCost = 4;
+							break;
+						case "siccatite": 
+							materialBpCost = 2;
+							break;
+						default:
+							break;
+					}
+					armorBpCost += materialBpCost;
+				}
+
+				return armorBpCost;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -675,7 +706,7 @@ function Ship(json) {
 				) {
 					countHousings++;
 				}
-				this.adjustPowerCoreIds(countHousings);
+				this.adjustPowerCores(countHousings);
 				return countHousings;
 			},
             /*
@@ -787,6 +818,17 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            damageThreshold: function() {
+            	var dt = this.frame.dt;
+            	if (this.params.sources.som && this.params.armorMaterialId == "adamantine-alloy") {
+            		if (dt == "n/a") dt = 0;
+            		dt += this.armor.bonusToAc;
+            	}
+            	return dt;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			dataNetBpCost: function() {
 				return (this.params.hasDataNet ? 3 : 0);
 			},
@@ -801,6 +843,26 @@ function Ship(json) {
             */
 			defensiveCountermeasures: function() {
 				return this.getItemById("defensiveCountermeasures", this.params.defensiveCountermeasuresId);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			defensiveCountermeasuresBpCost: function() {
+				var dcBpCost = this.defensiveCountermeasures.bpCost;
+
+				if (this.params.sources.som) {
+					switch (this.params.defensiveCountermeasuresMaterialId) {
+						case "horacalcum":
+							dcBpCost += 4;
+							break;
+						case "siccatite":
+							dcBpCost += 3;
+							break;
+						default:
+							break;
+					}
+				}
+				return dcBpCost;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1088,6 +1150,22 @@ function Ship(json) {
 				for(i in this.params.powerCoreIds) {
 					var powerCore = cloneObject( this.getItemById("powerCore", this.params.powerCoreIds[i]) );
 					powerCore.sizeList = powerCore.sizes.join(", ");
+
+					// special materials
+					if (this.params.sources.som) {
+						var specialMat = this.params.powerCoreSpecialMaterials[i];
+
+						// description
+						powerCore.name = specialMat.toTitleCase() + " " + powerCore.name;
+
+						// bp cost
+						if (specialMat == "abysium") {
+							powerCore.bpCost += 2;
+						} else if (specialMat == "djezet") {
+							powerCore.bpCost +=1;
+						}
+					}
+
 					powerCores.push( powerCore );
 				}
 				return powerCores;
@@ -1245,6 +1323,25 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            sensorsBpCost: function() {
+            	var sensorsBpCost = this.sensors.bpCost;
+            	if (this.params.sources.som) {
+            		switch (this.params.sensorsMaterialId) {
+            			case "djezet":
+            				sensorsBpCost += 3;
+            				break;
+            			case "noqual":
+            				sensorsBpCost += 2;
+            				break;
+            			default: 
+            				break;
+            		}
+            	}
+            	return sensorsBpCost;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			shields: function() {
 				return this.getItemById("shields", this.params.shieldsId);
 			},
@@ -1336,8 +1433,13 @@ function Ship(json) {
 				}
 				// defences
 				if ( this.params.defensiveCountermeasuresId !== "none" ) {
-					desc.push( this.defensiveCountermeasures.name.toLowerCase() );
+					var dcDesc = this.defensiveCountermeasures.name.toLowerCase();
+					if (this.params.sources.som && this.params.defensiveCountermeasuresMaterialId != "none") {
+						dcDesc += " (" + this.getItemById("specialMaterial", this.params.defensiveCountermeasuresMaterialId).name.toLowerCase() + ")";
+					}
+					desc.push(dcDesc);
 				}
+
 				// computer
 				var computerDesc = this.computer.name.toLowerCase() +
 					(this.computer.id == "basic-computer" ? "" : " computer") +
@@ -1377,7 +1479,26 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			thrusters: function () {
-				return this.getItemById("thrusters", this.params.thrustersId);
+				var thrusters = cloneObject(this.getItemById("thrusters", this.params.thrustersId));
+
+				if (this.params.sources.som) {
+					switch (this.params.thrustersMaterialId) {
+						case "horacalcum":
+							thrusters.speed++;
+							if (thrusters.pilotingModifier < 0) {
+								thrusters.pilotingModifier++;
+							}
+							thrusters.bpCost += 2;
+							break;
+						case "inubrix":
+							thrusters.bpCost += 1;
+							break;
+						default:
+							break;
+					}
+				}
+
+				return thrusters;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1417,7 +1538,7 @@ function Ship(json) {
 					parseInt(this.customComponentBpTotal) +
 					parseInt(this.crewQuarters.bpCost) +
 					parseInt(this.dataNetBpCost) +
-					parseInt(this.defensiveCountermeasures.bpCost) +
+					parseInt(this.defensiveCountermeasuresBpCost) +
 					(this.params.shieldType == "deflector-shield" ? parseInt(this.deflectorShield.bpCost) : 0) +
 					parseInt(this.driftEngineBpCost) +
 					parseInt(this.expansionBaysTotalBpCost) +
@@ -1427,11 +1548,12 @@ function Ship(json) {
 					parseInt(this.powerCoresBpCost) +
 					parseInt(this.reinforcedBulkhead.bpCost) +
 					parseInt(this.selfDestructSystemBpCost) +
-					parseInt(this.sensors.bpCost) +
+					parseInt(this.sensorsBpCost) +
 					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
 					parseInt(this.thrusters.bpCost) +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
+					parseInt(this.weaponsTotalCosts.weaponMaterialsBp) +
 					parseInt(this.weaponsTotalCosts.weaponLinksBp)
 				;
 			},
@@ -1467,7 +1589,9 @@ function Ship(json) {
 						// get description
                         if (mount.weapon.id == "none") continue;
 
-                        var weaponName = mount.weapon.name.toLowerCase();
+                        var specialMaterial = this.getItemById("specialMaterial", mount.specialMaterial);
+                        var weaponName = ((specialMaterial.id == "none" ? "" : specialMaterial.name + " ") +
+                        	mount.weapon.name).toLowerCase();
                         
                         // weapon name
                         if ( mount.isLinked ) {
@@ -1476,16 +1600,12 @@ function Ship(json) {
                             mountDesc = weaponName;
                         }
 
-                        // weapon damage and special properties
-                        mountDesc += " (" + this.getWeaponDamage(mount);
-                        if (mount.weapon.specialProperties.length > 0) {
-                        	var wpnSpcPropDesc = ", ";
-                        	wpnSpcPropDesc += this.getNamesFromIds("weaponSpecialProperty", mount.weapon.specialProperties, "").toLowerCase();
-                        	wpnSpcPropDesc = wpnSpcPropDesc.replace("(", "[");
-                        	wpnSpcPropDesc = wpnSpcPropDesc.replace(")", "]");
-                        	mountDesc += wpnSpcPropDesc;
-                        }
-                        mountDesc += ")";
+                        // properties (damage, special properties, special properties)
+                        var properties = [];
+                        properties.push(this.getWeaponDamage(mount));
+                        if (mount.weapon.specialProperties.length > 0) properties = properties.concat(this.getNamesFromIds("weaponSpecialProperty", mount.weapon.specialProperties, "").toLowerCase());
+                        if (mount.materialDesc) properties.push(mount.materialDesc.toLowerCase());
+                        mountDesc += " (" + properties.join(", ") + ")";
 
                         positionDesc.push(mountDesc);
 					}
@@ -1504,6 +1624,7 @@ function Ship(json) {
 					weaponMounts[position] = [];
 					for(i in this.params.weaponMounts[position]) {
 						var params = cloneObject(this.params.weaponMounts[position][i]);
+						params.weapon = this.getItemById("shipWeapon", params.weaponId);
 						params.position = position;
 						params.sizeCategoryId = this.sizeCategory.id;
 						var mountObj = new WeaponMount(params);
@@ -1517,7 +1638,10 @@ function Ship(json) {
 								params.templateWeight),
 							isFromTemplate: params.isFromTemplate,
 							isLinked: params.isLinked,
-							linkCost: params.isLinked ? Math.floor(weaponObj.bpCost * 0.5) : 0
+							specialMaterial: params.specialMaterial,
+							linkCost: params.isLinked ? Math.floor(weaponObj.bpCost * 0.5) : 0,
+							materialCost: mountObj.getMaterialCost(),
+							materialDesc: mountObj.getMaterialDesc(),
 						};
 					}
 				}
@@ -1531,7 +1655,8 @@ function Ship(json) {
 					weaponLinksBp: 0,
 					weaponMountsBp: 0,
 					weaponsBp: 0,
-					weaponsPcu: 0
+					weaponsPcu: 0,
+					weaponMaterialsBp: 0,
 				};
 				for(position in this.weaponMounts) {
 					for(i in this.weaponMounts[position]) {
@@ -1540,6 +1665,7 @@ function Ship(json) {
 						totals.weaponsBp += mount.weapon.bpCost;
 						totals.weaponsPcu += mount.weapon.pcuCost;
 						totals.weaponLinksBp += mount.linkCost;
+						totals.weaponMaterialsBp += mount.materialCost;
 					}
 				}
 				return totals;
@@ -1566,16 +1692,25 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-			adjustPowerCoreIds: function(countHousings) {
-				if ( this.params.powerCoreIds.length < countHousings ) {
-					for(var i = this.params.powerCoreIds.length; i < countHousings; i++) {
-						this.params.powerCoreIds[i] = "none";
+			adjustPowerCores: function(countHousings) {
+				var that = this;
+
+				var params = [
+					"powerCoreIds",
+					"powerCoreSpecialMaterials"
+				];
+
+				params.forEach(function(param) {
+					if ( that.params[param].length < countHousings ) {
+						for(var i = that.params[param].length; i < countHousings; i++) {
+							that.params[param][i] = "none";
+						}
+					} else if ( that.params[param].length > countHousings ) {
+						var splicePos = countHousings;
+						var spliceLen = that.params[param].length - countHousings;
+						that.params[param].splice(splicePos, spliceLen);
 					}
-				} else if ( this.params.powerCoreIds.length > countHousings ) {
-					var splicePos = countHousings;
-					var spliceLen = this.params.powerCoreIds.length - countHousings;
-					this.params.powerCoreIds.splice(splicePos, spliceLen);
-				}
+				});
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1686,7 +1821,8 @@ function Ship(json) {
 					weight: "light",
 					isFromTemplate: false,
 					canBeLinked: false,
-					isLinked: false
+					isLinked: false,
+					specialMaterial: "none"
 				};
 				this.params.weaponMounts[position].push(newMount);
 			},
@@ -1741,10 +1877,29 @@ function Ship(json) {
                     	}
                     }
 
+                    // weapons (special material)
+                    if (key == "weaponMounts" && isset(this.params.weaponMounts)) {
+                    	for (position in this.params.weaponMounts) {
+                    		for (i in this.params.weaponMounts[position]) {
+                    			if (isset(this.params.weaponMounts[position][i].specialMaterial)) continue;
+                    			this.$set(this.params.weaponMounts[position][i], "specialMaterial", "none");
+                    			console.log("Missing property, specialMaterials, added to " + position + " weapon mount " + (parseInt(i)+1));
+                    		}
+                    	}
+                    }
+
                     if (isset(this.params[key])) continue;
 
-                    console.log("Missing param, " + key + ", added to ship");
+                    console.log("Missing property, " + key + ", added to ship");
                     this.$set(this.params, key, cloneObject(this.paramsReset[key]));
+
+                    // power core special materials
+                    if (key == "powerCoreSpecialMaterials") {
+                		this.params.powerCoreSpecialMaterials = [];
+                    	for (i in this.params.powerCoreIds) {
+                    		this.params.powerCoreSpecialMaterials.push("none");
+                    	}
+                    }
 
                     // shields by position
                     if (key == 'shieldsByPosition') {
@@ -2074,7 +2229,8 @@ function Ship(json) {
                             templateWeight: mountWeight,
                             isFromTemplate: true,
                             canBeLinked: false,
-                            isLinked: false
+                            isLinked: false,
+							specialMaterial: "none"
                         }
                         
                         this.params.weaponMounts[arc].push(objMount);
@@ -2184,7 +2340,124 @@ function WeaponMount(params) {
 		this.testThatTemplateWeightIsSmallerThanWeight();
 		this.testThatTurretIsNotCapital();
 	}
-	
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+	this.getCost = function() {
+		return this.getUpgradeCost() + this.getNewMountCost();
+	}
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+	this.getMaterialCost = function() {
+		var materialCost = 0;
+
+		switch (this.specialMaterial) {
+			// abysium and inubrix: 2, 6, 10, 10
+			case "abysium":
+			case "inubrix":
+				switch (this.weight) {
+					case "light":
+						materialCost = 2;
+						break;
+					case "heavy":
+						materialCost = 6;
+						break;
+					case "capital":
+					case "spinal":
+						materialCost = 10;
+						break;
+				}
+				break;
+
+			// adamantine alloy: damage die type (with multipliers)
+			case "adamantine-alloy":
+				var damageDice = stringToDice(this.weapon.damage);
+				var mult = this.isLinked ? 2 : 1;
+				materialCost = damageDice.ctFaces * mult / 2;
+				break;
+				break;
+			default:
+				break;
+		}
+
+		return materialCost;
+	}
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+    this.getMaterialDesc = function() {
+		var materialDesc = [];
+
+		switch (this.specialMaterial) {
+			case "abysium":
+				switch (this.weight) {
+					case "light":
+						materialDesc.push("irradiate (low)");
+						break;
+					case "heavy":
+						materialDesc.push("irradiate (medium)");
+						break;
+					case "capital":
+					case "spinal":
+						materialDesc.push("irradiate (high)");
+						break;
+				}
+				break;
+			case "adamantine-alloy":
+				var damageDice = stringToDice(this.weapon.damage);
+				if (damageDice.ctDice !== undefined && damageDice.ctDice > 0) {
+					materialDesc.push("+" + damageDice.ctDice + " damage to shieldless quadrants")
+				}
+				break;
+			case "inubrix":
+				materialDesc.push("20% chance to score second critical hit");
+				break;
+			default:
+				break;
+		}
+
+		return materialDesc.join(", ");
+    }
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+	this.getNewMountCost = function() {
+		var newMountCost = 0;
+		if (!this.isFromTemplate) {
+			if (this.position == "turret") {
+				newMountCost = 5;
+			} else {
+				newMountCost = 3;
+			}
+		}
+		return newMountCost;
+	}
+    /*
+    |--------------------------------------------------------------------------------------
+    */
+	this.getUpgradeCost = function() {
+		var upgradeCost = 0;
+		if ( this.weight !== this.templateWeight ) {
+			// if position is forward, aft, port or starboard arc
+			if ( WEAPON_ARCS.indexOf(this.position) !== -1 ) {
+				// if templateWeight is light and weight is heavy
+				if (this.templateWeight == "light" && this.weight == "heavy") {
+					upgradeCost = 4;
+				} else if ( this.templateWeight == "heavy" && this.weight == "capital" ) {
+				// if templateWeight is heavy and weight is capital
+					upgradeCost = 5;
+				} else {
+				// if templateWeight is light and weight is capital (i.e. 2 upgrades)
+					upgradeCost = 9;
+				}
+			} else {
+				// if position is turret
+				upgradeCost = 6;
+			}
+		}
+		return upgradeCost;
+	}
     /*
     |--------------------------------------------------------------------------------------
     */
@@ -2227,54 +2500,6 @@ function WeaponMount(params) {
 			throw "Turrets cannot have weight 'capital' in WeaponMount";
 		}
 	}
-	
-    /*
-    |--------------------------------------------------------------------------------------
-    */
-	this.getUpgradeCost = function() {
-		var upgradeCost = 0;
-		if ( this.weight !== this.templateWeight ) {
-			// if position is forward, aft, port or starboard arc
-			if ( WEAPON_ARCS.indexOf(this.position) !== -1 ) {
-				// if templateWeight is light and weight is heavy
-				if (this.templateWeight == "light" && this.weight == "heavy") {
-					upgradeCost = 4;
-				} else if ( this.templateWeight == "heavy" && this.weight == "capital" ) {
-				// if templateWeight is heavy and weight is capital
-					upgradeCost = 5;
-				} else {
-				// if templateWeight is light and weight is capital (i.e. 2 upgrades)
-					upgradeCost = 9;
-				}
-			} else {
-				// if position is turret
-				upgradeCost = 6;
-			}
-		}
-		return upgradeCost;
-	}
-	
-    /*
-    |--------------------------------------------------------------------------------------
-    */
-	this.getNewMountCost = function() {
-		var newMountCost = 0;
-		if (!this.isFromTemplate) {
-			if (this.position == "turret") {
-				newMountCost = 5;
-			} else {
-				newMountCost = 3;
-			}
-		}
-		return newMountCost;
-	}
-	
-    /*
-    |--------------------------------------------------------------------------------------
-    */
-	this.getCost = function() {
-		return this.getUpgradeCost() + this.getNewMountCost();
-	}
     /*
     |--------------------------------------------------------------------------------------
     */
@@ -2289,6 +2514,7 @@ function WeaponMount(params) {
 	this.id = params.weaponMountId;
 	this.position = params.position;
 	this.weaponId = params.weaponId;
+	this.weapon = params.weapon;
 	this.weight = params.weight;
 	this.isFromTemplate = params.isFromTemplate;
 	if ( this.isFromTemplate ) {
@@ -2298,6 +2524,7 @@ function WeaponMount(params) {
 	}
 	this.canBeLinked = params.canBeLinked;
 	this.isLinked = params.isLinked;
+	this.specialMaterial = params.specialMaterial;
 	this.sizeCategoryId = params.sizeCategoryId; // of ship
 	
 	this.doTests();
