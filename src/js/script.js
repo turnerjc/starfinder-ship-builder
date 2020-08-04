@@ -253,8 +253,7 @@ function Ship(json) {
 			data: json,
 			json: "",
 			params: {},
-			paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-1-tetranode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"mk-1-mononode","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["dedicated-computer-housing","cargo-hold","cargo-hold"],"fortifiedHullId":"none","frameId":"light-freighter","hasBiometricLocks":0,"hasCrew":1,"hasDataNet":0,"hasHiveJoining":0,"hasSelfDestructSystem":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none"],"powerCoreSpecialMaterials":["none"],"reinforcedBulkheadId":"none","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[]}},
-			/*
+			// paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-1-tetranode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"mk-1-mononode","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["dedicated-computer-housing","cargo-hold","cargo-hold"],"fortifiedHullId":"none","frameId":"light-freighter","hasBiometricLocks":0,"hasCrew":1,"hasDataNet":0,"hasHiveJoining":0,"hasSelfDestructSystem":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none"],"powerCoreSpecialMaterials":["none"],"reinforcedBulkheadId":"none","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[]}},
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -402,7 +401,10 @@ function Ship(json) {
 				hasBiometricLocks:0,
 				hasCrew:1,
 				hasDataNet:0,
+				hasEmergencyAccelerator:0,
 				hasHiveJoining:0,
+				hasHolographicMantle:0,
+				hasReconfigurationSystem:0,
 				hasSelfDestructSystem:0,
 				isSetDefaultCrewSkillValues:1,
 				isUseStrictRules:1,
@@ -478,7 +480,6 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
-			*/
 			selectSampleShipSortOrder: "name",
 			sources: [
 				{
@@ -1079,7 +1080,10 @@ function Ship(json) {
 					this.params.antiPersonnelWeaponId !== "none" ||
 					this.params.hasBiometricLocks ||
 					this.hasComputerCountermeasures ||
-					this.params.hasSelfDestructSystem);
+					this.params.hasSelfDestructSystem ||
+					this.params.hasEmergencyAccelerator ||
+					this.params.hasHolographicMantle ||
+					this.params.hasReconfigurationSystem);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1302,6 +1306,15 @@ function Ship(json) {
 				if (this.params.hasSelfDestructSystem) {
 				   desc.push( "self-destruct system" );
 				}
+				if (this.params.hasEmergencyAccelerator) {
+				   desc.push( "emergency accelerator" );
+				}
+				if (this.params.hasHolographicMantle) {
+				   desc.push( "holographic mantle" );
+				}
+				if (this.params.hasReconfigurationSystem) {
+				   desc.push( "reconfiguration system" );
+				}
 				return desc.join(", ");
 			},
             /*
@@ -1312,7 +1325,20 @@ function Ship(json) {
 					this.antiPersonnelWeaponBpCost +
 					this.biometricLocksBpCost +
 					this.computerCountermeasuresBpCost +
-					this.selfDestructSystemBpCost;
+					this.selfDestructSystemBpCost +
+					(this.params.hasEmergencyAccelerator ? 4 * this.sizeCategory.multiplier : 0) +
+					(this.params.hasHolographicMantle ? 12 : 0) +
+					(this.params.hasReconfigurationSystem ? 30 : 0)
+				;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			securityTotalPcuCost: function() {
+				return (this.params.hasEmergencyAccelerator ? 5 : 0) +
+					(this.params.hasHolographicMantle ? 10 : 0) +
+					(this.params.hasReconfigurationSystem ? 50 : 0)
+				;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1596,24 +1622,6 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-			totalPcuCost: function() {
-				return {
-					essential: this.thrusters.pcuCost +
-						this.thrustersBooster.pcuCost +
-						this.defensiveCountermeasures.pcuCost +
-						(this.params.shieldType == "shields" ? this.shields.pcuCost : 0) +
-						(this.params.shieldType == "deflector-shield" ? this.deflectorShield.pcuCost : 0) +
-						this.weaponsTotalCosts.weaponsPcu +
-						parseInt(this.customComponentPcuTotal.essential),
-					nonEssential: this.computer.pcuCost +
-						this.expansionBaysTotalPcuCost +
-                        this.dataNetPcuCost +
-                        parseInt(this.customComponentPcuTotal.nonEssential),
-				};
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
 			totalBpCost: function() {
 				return parseInt(this.ablativeArmor.bpCost) +
 					parseInt(this.antiHackingSystems.bpCost )+ 
@@ -1628,11 +1636,14 @@ function Ship(json) {
 					parseInt(this.defensiveCountermeasuresBpCost) +
 					(this.params.shieldType == "deflector-shield" ? parseInt(this.deflectorShield.bpCost) : 0) +
 					parseInt(this.driftEngineBpCost) +
+					(this.params.hasEmergencyAccelerator ? 4 * this.sizeCategory.multiplier : 0) +
 					parseInt(this.expansionBaysTotalBpCost) +
 					parseInt(this.fortifiedHull.bpCost) +
 					parseInt(this.frame.bpCost) +
 					parseInt(this.hiveJoiningBpCost) +
+					(this.params.hasHolographicMantle ? 12 : 0) +
 					parseInt(this.powerCoresBpCost) +
+					(this.params.hasReconfigurationSystem ? 30 : 0) +
 					parseInt(this.reinforcedBulkhead.bpCost) +
 					parseInt(this.selfDestructSystemBpCost) +
 					parseInt(this.sensorsBpCost) +
@@ -1644,6 +1655,27 @@ function Ship(json) {
 					parseInt(this.weaponsTotalCosts.weaponMaterialsBp) +
 					parseInt(this.weaponsTotalCosts.weaponLinksBp)
 				;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			totalPcuCost: function() {
+				return {
+					essential: this.thrusters.pcuCost +
+						this.thrustersBooster.pcuCost +
+						this.defensiveCountermeasures.pcuCost +
+						(this.params.shieldType == "shields" ? this.shields.pcuCost : 0) +
+						(this.params.shieldType == "deflector-shield" ? this.deflectorShield.pcuCost : 0) +
+						this.weaponsTotalCosts.weaponsPcu +
+						parseInt(this.customComponentPcuTotal.essential) +
+						(this.params.hasEmergencyAccelerator ? 5 : 0),
+					nonEssential: this.computer.pcuCost +
+						this.expansionBaysTotalPcuCost +
+                        this.dataNetPcuCost +
+                        parseInt(this.customComponentPcuTotal.nonEssential) +
+                        (this.params.hasHolographicMantle ? 10 : 0) +
+                        (this.params.hasReconfigurationSystem ? 50 : 0),
+				};
 			},
             /*
             |------------------------------------------------------------------------------
