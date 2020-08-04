@@ -1651,7 +1651,8 @@ function Ship(json) {
 			turn: function() {
 				return this.maneuverabilityRating.turn +
 					this.armor.turnDistanceModifier +
-					this.ablativeArmor.turnMod
+					this.ablativeArmor.turnMod +
+					Math.ceil(this.ctExternalExpansionBays / 3)
 				;
 			},
             /*
@@ -2007,6 +2008,32 @@ function Ship(json) {
             */
             getAvailableWeaponUpgrades: function(weapon) {
             	return [{id: "test", name: "Test"}];
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            getExpansionBayBpCost: function(bay) {
+            	// Quantum defender
+            	if (bay.id == 'quantum-defender') {
+            		var bpCost = 4 * this.sizeCategory.multiplier;
+            		return bpCost < 10 ? 10 : bpCost;
+            	}
+
+            	// everything else
+            	return bay.bpCost;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            getExpansionBayPcuCost: function(bay) {
+            	// Quantum defender
+            	if (bay.id == 'quantum-defender') {
+            		var pcuCost = 5 * this.sizeCategory.multiplier;
+            		return pcuCost < 20 ? 20 : bpCost;
+            	}
+
+            	// everything else
+            	return bay.pcuCost;
             },
             /*
             |------------------------------------------------------------------------------

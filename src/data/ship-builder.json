@@ -1920,6 +1920,61 @@
 				],
 				"pcuCost": 2,
 				"bpCost": 3
+			},
+			{
+				"id": "quantum-defender",
+                "src": "som",
+				"name": "Quantum Defender",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 0,
+				"bpCost": 0,
+				"notes": "Calculated PCU and BP cost"
+			},
+			{
+				"id": "surveying-sensors",
+                "src": "som",
+				"name": "Surveying Sensors",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 3,
+				"bpCost": 3
+			},
+			{
+				"id": "thrusters-primer",
+                "src": "som",
+				"name": "Thrusters Primer",
+				"numBays": 1,
+				"sizes": [
+					"Tiny",
+					"Small",
+					"Medium",
+					"Large",
+					"Huge",
+					"Gargantuan",
+					"Colossal",
+					"Supercolossal"
+				],
+				"pcuCost": 5,
+				"bpCost": 1
 			}
 		]
 	},
