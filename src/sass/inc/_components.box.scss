@@ -73,7 +73,6 @@ ul.box__select {
 }
 
 @media (min-width: $breakpoint-md) {
-	
 	.box__select--computerCountermeasures {
 		display: flex;
 		flex-wrap: wrap;
@@ -89,3 +88,27 @@ ul.box__select {
 	}
 
 }
+
+@media (min-width: $breakpoint-lg) {
+	.box__input__2 {
+		display: flex;
+
+		& > .form-group {
+			display: table-cell;
+			flex-basis: 50%;
+
+			& > * {
+			}
+
+			& > label {
+				display: inline-block;
+				width: 50%;
+			}
+
+			& > input[type=number] {
+				vertical-align: top;
+			}
+		}
+	}
+}
+

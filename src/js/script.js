@@ -253,7 +253,7 @@ function Ship(json) {
 			data: json,
 			json: "",
 			params: {},
-			// paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-1-tetranode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"mk-1-mononode","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["dedicated-computer-housing","cargo-hold","cargo-hold"],"fortifiedHullId":"none","frameId":"light-freighter","hasBiometricLocks":0,"hasCrew":1,"hasDataNet":0,"hasHiveJoining":0,"hasSelfDestructSystem":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none"],"powerCoreSpecialMaterials":["none"],"reinforcedBulkheadId":"none","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[]}},
+			// paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"basic-computer","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"basic-computer","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["none","none","none"],"fortifiedHullId":"none","frameId":"battleship","hasAlgalShielding":0,"hasAutoDestruct":0,"hasBiometricLocks":0,"hasColonyShipFramework":0,"hasConsciousnessUplink":0,"hasCrew":1,"hasDataNet":0,"hasEmergencyAccelerator":0,"hasHiveJoining":0,"hasHolographicMantle":0,"hasPowersap":0,"hasReconfigurationSystem":0,"hasRootSystem":0,"hasSelfDestructSystem":0,"hasSpaceStationFramework":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none","none","none"],"powerCoreSpecialMaterials":["none","none","none"],"reinforcedBulkheadId":"none","roboticAppendageId":"none","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"port":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}]}},
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -388,6 +388,8 @@ function Ship(json) {
 						}
 					}, // scienceOfficer
 				}, // crewSkills
+				ctTim: 0,
+				ctTimAll: 0,
 	            customFrameBaseId: "light-freighter",
 	            customComponents: [],
 				dedicatedComputerId: "basic-computer",
@@ -398,19 +400,27 @@ function Ship(json) {
 				expansionBayIds:["none","none","none"],
 				fortifiedHullId: "none",
 				frameId:"light-freighter",
+				hasAlgalShielding:0, // other systems (som)
+				hasAutoDestruct:0,
 				hasBiometricLocks:0,
+				hasColonyShipFramework:0, // other systems (som)
+				hasConsciousnessUplink:0, // other systems (som)
 				hasCrew:1,
 				hasDataNet:0,
 				hasEmergencyAccelerator:0,
-				hasHiveJoining:0,
+				hasHiveJoining:0,    // other systems (pw)
 				hasHolographicMantle:0,
+				hasPowersap:0,       // other systems (som)
 				hasReconfigurationSystem:0,
+				hasRootSystem:0,     // other systems (som)
 				hasSelfDestructSystem:0,
+				hasSpaceStationFramework:0, // other systems (som)
 				isSetDefaultCrewSkillValues:1,
 				isUseStrictRules:1,
 				powerCoreIds:["none"],
 				powerCoreSpecialMaterials:["none"],
 				reinforcedBulkheadId: "none",
+				roboticAppendageId: "none",
 				sensorsId:"none",
 				sensorsMaterialId: "none",
 				shieldType: "shields",
@@ -433,6 +443,7 @@ function Ship(json) {
 				thrustersBoosterMaterialId: "none",
 				tierId:"1",
 				version:"1.0.1",
+				viId: "none",
 				weaponMounts: {
 					forward: [
 						{
@@ -442,6 +453,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						},
 						{
@@ -451,6 +463,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						}
 					],
@@ -463,6 +476,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						}
 					],
@@ -474,6 +488,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						}
 					],
@@ -769,6 +784,20 @@ function Ship(json) {
 					this.fortifiedHull.bonusToCt
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            ctExpansionBaySlots: function() {
+				var ctExpansionBaySlots = this.frame.expansionBays
+				if (
+					this.params.sources.som &&
+					this.sizeCategory.multiplier >= 4 &&
+					(this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework)
+				) {
+					ctExpansionBaySlots *= 3;
+				}
+				return ctExpansionBaySlots;
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1123,8 +1152,33 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			isExpansionBaysCountOverBudget: function() {
-				return (this.expansionBaysCountUsed > this.frame.expansionBays);
+				return (this.expansionBaysCountUsed > this.ctExpansionBaySlots);
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            isOrbitalWeaponDiscountUsed: function() {
+            	if (!this.params.sources.som) return false;
+            	if (this.sizeCategory.multiplier < 4) return false;
+            	if (!(this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework)) return false;
+
+            	var that = this;
+
+				var isUsed = false;
+				for (position in this.weaponMounts) {
+					this.weaponMounts[position].forEach(function(mount, i) {
+						if (isUsed) return;
+
+						var isOrbital = that.isOrbitalWeapon(mount.weapon);
+						if (!isOrbital) return;
+
+						if (that.params.weaponMounts[position][i].hasOrbitalDiscount) isUsed = true;
+						return;
+					});
+				}
+				return isUsed;
+            },
+
             /*
             |------------------------------------------------------------------------------
             */
@@ -1137,6 +1191,10 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			maneuverabilityRating: function() {
+				if (this.params.hasSpaceStationFramework) {
+					return this.getItemById("maneuverabilityRating", "poor");
+				}
+
 				return this.getItemById("maneuverabilityRating", this.frame.maneuverability);
 			},
             /*
@@ -1262,6 +1320,13 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+			roboticAppendage: function() {
+	            var roboticAppendage = this.getItemById("roboticAppendage", this.params.roboticAppendageId);
+	            return roboticAppendage;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			roleDescription: function() {
 				roleDesc = {};
 				for(role in this.params.crewSkills) {
@@ -1362,6 +1427,7 @@ function Ship(json) {
 					"personalWeapon",
 					"powerCore",
 					"reinforcedBulkhead",
+					"roboticAppendage",
 					"role",
 					"sampleShip",
 					"shockGrid",
@@ -1371,7 +1437,8 @@ function Ship(json) {
                     "sizeCategory",
 					"skill",
 					"thrusters",
-					"tier"
+					"tier",
+					"vi"
 				];
 
 				for(i in fields) {
@@ -1381,8 +1448,10 @@ function Ship(json) {
 
 				// sampleShip
 				selectOptions.sampleShip.sort(function(a, b) {
+					// tier
 					if (that.selectSampleShipSortOrder == "tier") return stringToFloat(a.tier) > stringToFloat(b.tier);
 
+					// size, name
 					return a[that.selectSampleShipSortOrder] > b[that.selectSampleShipSortOrder];
 				});
 
@@ -1539,6 +1608,43 @@ function Ship(json) {
                 if (this.params.hasHiveJoining) {
                     desc.push('hive joining');
                 }
+                // algal shielding
+                if (this.params.hasAlgalShielding) {
+                    desc.push('algal shielding');
+                }
+                // autodestruct
+                if (this.params.hasAutoDestruct) {
+                    desc.push('autodestruct');
+                }
+                // colony ship framework
+                if (this.params.hasColonyShipFramework) {
+                    desc.push('colony ship framework');
+                }
+                // consciousness uplink
+                if (this.params.hasConsciousnessUplink) {
+                    desc.push('consciousness uplink drive');
+                }
+                // consciousness uplink
+                if (this.params.roboticAppendageId != "none") {
+                    desc.push((this.roboticAppendage.name + " robotic appendage").toLowerCase());
+                }
+                // root system
+                if (this.params.hasRootSystem) {
+                    desc.push("root system");
+                }
+                // space station framework
+                if (this.params.hasSpaceStationFramework) {
+                    desc.push("space station framework");
+                }
+                // training interface modules
+                var ctTim = parseInt(this.params.ctTim);
+                if (ctTim > 0) {
+                    desc.push((ctTim + " &times; training interface module").pluralise(ctTim));
+                }
+                // virtual intelligence
+                if (this.params.viId != "none") {
+                    desc.push("virtual intelligence (tier " + this.vi.name + ")");
+                }
                 return desc.join(", ");
 			},
             /*
@@ -1566,6 +1672,13 @@ function Ship(json) {
 			thrusters: function () {
 				var thrusters = cloneObject(this.getItemById("thrusters", this.params.thrustersId));
 
+				// space station framework
+				if (this.params.hasSpaceStationFramework) {
+					var speed = Math.floor(thrusters.speed * 0.25);
+					thrusters.speed = (speed < 1 ? 1 : speed);
+				}
+
+				// materials
 				if (this.params.sources.som) {
 					switch (this.params.thrustersMaterialId) {
 						case "horacalcum":
@@ -1622,14 +1735,29 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            timBpCost: function() {
+            	var ctTim = parseInt(this.params.ctTim);
+            	var ctTimAll = parseInt(this.params.ctTimAll);
+
+            	var cost = 2 * ctTim + 0.5 * (ctTim * ctTim + ctTim) + 3 * ctTimAll;
+
+            	return cost;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			totalBpCost: function() {
 				return parseInt(this.ablativeArmor.bpCost) +
+					(this.params.hasAlgalShielding ? 5 + 2 * this.sizeCategory.multiplier : 0) +
 					parseInt(this.antiHackingSystems.bpCost )+ 
 					parseInt(this.antiPersonnelWeaponBpCost) +
 					parseInt(this.armorBpCost) +
+					(this.params.hasAutoDestruct ? this.sizeCategory.multiplier : 0) +
 					parseInt(this.biometricLocksBpCost) +
+					(this.params.hasColonyShipFramework ? Math.floor(this.frame.bpCost * 0.25) : 0) +
 					parseInt(this.computer.bpCost) +
 					parseInt(this.computerCountermeasuresBpCost) +
+					(this.params.hasConsciousnessUplink ? 4 : 0) +
 					parseInt(this.customComponentBpTotal) +
 					parseInt(this.crewQuarters.bpCost) +
 					parseInt(this.dataNetBpCost) +
@@ -1643,13 +1771,19 @@ function Ship(json) {
 					parseInt(this.hiveJoiningBpCost) +
 					(this.params.hasHolographicMantle ? 12 : 0) +
 					parseInt(this.powerCoresBpCost) +
+					(this.params.hasPowersap ? 3 * this.sizeCategory.multiplier : 0) +
 					(this.params.hasReconfigurationSystem ? 30 : 0) +
 					parseInt(this.reinforcedBulkhead.bpCost) +
+					parseInt(this.roboticAppendage.bpCost) +
+					(this.params.hasRootSystem ? 2 * this.sizeCategory.multiplier : 0) +
 					parseInt(this.selfDestructSystemBpCost) +
 					parseInt(this.sensorsBpCost) +
 					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
+					(this.params.hasSpaceStationFramework ? Math.floor(this.frame.bpCost * 0.2) : 0) +
 					parseInt(this.thrusters.bpCost) +
 					parseInt(this.thrustersBooster.bpCost) +
+					this.timBpCost +
+					this.vi.bpCost +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMaterialsBp) +
@@ -1674,7 +1808,8 @@ function Ship(json) {
                         this.dataNetPcuCost +
                         parseInt(this.customComponentPcuTotal.nonEssential) +
                         (this.params.hasHolographicMantle ? 10 : 0) +
-                        (this.params.hasReconfigurationSystem ? 50 : 0),
+                        (this.params.hasReconfigurationSystem ? 50 : 0) +
+                        (this.params.hasRootSystem ? 5 : 0),
 				};
 			},
             /*
@@ -1686,6 +1821,13 @@ function Ship(json) {
 					this.ablativeArmor.turnMod +
 					Math.ceil(this.ctExternalExpansionBays / 3)
 				;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			vi: function() {
+	            var vi = this.getItemById("vi", this.params.viId);
+	            return vi;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1763,6 +1905,7 @@ function Ship(json) {
 							linkCost: params.isLinked ? Math.floor(weaponObj.bpCost * 0.5) : 0,
 							materialCost: mountObj.getMaterialCost(),
 							materialDesc: mountObj.getMaterialDesc(),
+							bpCost: (params.hasOrbitalDiscount ? Math.floor(params.weapon.bpCost / 3) : params.weapon.bpCost),
 						};
 					}
 				}
@@ -1783,7 +1926,7 @@ function Ship(json) {
 					for(i in this.weaponMounts[position]) {
 						var mount = this.weaponMounts[position][i];
 						totals.weaponMountsBp += mount.mountBpCost;
-						totals.weaponsBp += mount.weapon.bpCost;
+						totals.weaponsBp += mount.bpCost;
 						totals.weaponsPcu += mount.weapon.pcuCost;
 						totals.weaponLinksBp += mount.linkCost;
 						totals.weaponMaterialsBp += mount.materialCost;
@@ -1943,6 +2086,8 @@ function Ship(json) {
 					isFromTemplate: false,
 					canBeLinked: false,
 					isLinked: false,
+					canHaveOrbitalDiscount: false,
+					hasOrbitalDiscount: false,
 					specialMaterial: "none"
 				};
 				this.params.weaponMounts[position].push(newMount);
@@ -1986,6 +2131,8 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			fixMissingParamsValues: function() {
+				var that = this;
+
 				for(key in this.paramsReset){
 
                     // crew positions
@@ -1999,12 +2146,18 @@ function Ship(json) {
                     }
 
                     // weapons (special material)
+                    var missingWeaponMountParams = [
+                    	{ "id": "specialMaterial", "default": "none" },
+                    	{ "id": "hasOrbitalDiscount", "default": false },
+                    ];
                     if (key == "weaponMounts" && isset(this.params.weaponMounts)) {
                     	for (position in this.params.weaponMounts) {
                     		for (i in this.params.weaponMounts[position]) {
-                    			if (isset(this.params.weaponMounts[position][i].specialMaterial)) continue;
-                    			this.$set(this.params.weaponMounts[position][i], "specialMaterial", "none");
-                    			console.log("Missing property, specialMaterials, added to " + position + " weapon mount " + (parseInt(i)+1));
+                    			missingWeaponMountParams.forEach(function(param) {
+	                    			if (isset(that.params.weaponMounts[position][i][param.id])) return;
+	                    			that.$set(that.params.weaponMounts[position][i], param.id, param.default);
+	                    			console.log("Missing property, " + param.id + ", added to " + position + " weapon mount " + (parseInt(i)+1));
+                    			});
                     		}
                     	}
                     }
@@ -2199,6 +2352,18 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            isOrbitalWeapon: function(weapon) {
+				var isOrbital = false;
+				weapon.specialProperties.forEach(function(prop) {
+					if (isOrbital) return;
+					if (prop.substr(0, 7) == "orbital") isOrbital = true;
+					return;
+				})
+				return isOrbital;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isWeaponMountLinked: function(position, i) {
 				var result = false;
 				if (
@@ -2209,6 +2374,22 @@ function Ship(json) {
 				}
 				return result;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            maybeAdjustCtTim: function( paramName ) {
+            	if (parseInt(this.params.ctTim) >= parseInt(this.params.ctTimAll)) return;
+
+            	if (paramName == "ctTim") {
+            		this.params.ctTimAll = this.params.ctTim;
+            	}
+
+            	if (paramName == "ctTimAll") {
+            		this.params.ctTim = this.params.ctTimAll;
+            	}
+
+            	return;
+            },
             /*
             |------------------------------------------------------------------------------
             */

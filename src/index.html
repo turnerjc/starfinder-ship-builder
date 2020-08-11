@@ -137,7 +137,6 @@
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
 						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
 						<li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
-						<li v-if="params.sources.pw"><a href="#hive-joining">Hive Joining</a></li>
 						<li v-if="params.sources.som">
 							<a href="#reinforced-bulkhead">Reinforced Bulkhead</a>
 						</li>
@@ -145,6 +144,7 @@
 						<li><a href="#sensors">Sensors</a></li>
 						<li><a href="#shields">Shields</a></li>
 						<li><a href="#weapons">Weapons</a></li>
+						<li v-if="params.sources.pw || params.sources.som"><a href="#other">Other Systems</a></li>
 					</ul>
 					<li><a href="#custom-components">Custom Components</a></li>
 					<li><a href="#crew">Crew</a></li>
@@ -360,6 +360,12 @@
 								  <label>
 								    <input type="radio" name="selectSampleShipSortOrder" value="name" v-model="selectSampleShipSortOrder">
 								    Name
+								  </label>
+								</div>
+								<div class="radio">
+								  <label>
+								    <input type="radio" name="selectSampleShipSortOrder" value="size" v-model="selectSampleShipSortOrder">
+								    Size
 								  </label>
 								</div>
 								<div class="radio">
@@ -1360,13 +1366,14 @@
 				<header class="box__header">
 					<h3 id="expansionBays">Expansion Bays</h3>
 				</header>
-    			<p v-if="frame.expansionBayInfo">FOR INFORMATION: {{ frame.expansionBayInfo }}.</p>
+    			<p v-if="frame.expansionBayInfo" class="text-warning">NOTE: {{ frame.expansionBayInfo }}.</p>
+    			<p v-if="params.sources.som && sizeCategory.multiplier >= 4 && (params.hasColonyShipFramework || params.hasSpaceStationFramework)" class="text-warning">NOTE: On a colony ship or space station, two thirds of expansion bays must be for civilian use (cargo holds, escape pods, guest quarters, life boats, recreation suites, or others determined by the GM).</p>
 				<div class="cost__item">
 					<span class="cost__name">Slots used</span>
 					<span class="cost__values">
 						<span class="cost__current"
 							v-bind:class="{ 'cost__current--danger': isExpansionBaysCountOverBudget }">{{ expansionBaysCountUsed }}</span> /
-							<span class="cost__budget">{{ frame.expansionBays }}</span>
+							<span class="cost__budget">{{ ctExpansionBaySlots }}</span>
 					</span>
 				</div>
 				<ul class="box__select">
@@ -1456,36 +1463,6 @@
 				<div class="box__cost">
 					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ fortifiedHull.bpCost }}
 				</div>
-			</div>
-
-
-			
-			
-			
-			
-			
-			
-			<!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	HIVE JOINING
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
-			
-			<div id="hive-joining" class="box" v-if="params.sources.pw == true">
-				<header class="box__header">
-					<h3 id="hive-joining">Hive Joining</h3>
-				</header>
-                <div class="box__select">
-                    <div class="checkbox">
-                        <label for="hasHiveJoining">
-                            <input type="checkbox" v-model="params.hasHiveJoining" id="hasHiveJoining">
-                            Hive Joining (see <em>Pact Worlds</em>, p152)
-                        </label>
-                    </div>
-                </div>
-                <div class="box__cost--list">
-                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ hiveJoiningBpCost }}
-                </div>
 			</div>
 
 
@@ -2045,14 +2022,28 @@
 						</div>
 
 
+						<!-- has orbital weapon discount (for colony ships and space stations)  -->
+						<div class="box__select" v-if="params.sources.som && sizeCategory.multiplier >= 4 && (params.hasColonyShipFramework || params.hasSpaceStationFramework) && isOrbitalWeapon(weaponMount.weapon)">
+							<div class="checkbox">
+								<label :for="'hasOrbitalDiscount_' + position + '_' + i">
+									<input type="checkbox"
+										v-model="params.weaponMounts[position][i].hasOrbitalDiscount"
+										:disabled="!params.weaponMounts[position][i].hasOrbitalDiscount && isOrbitalWeaponDiscountUsed"
+										:id="'hasOrbitalDiscount_' + position + '_' + i">
+									Has orbital weapon discount for colony ship or space station?
+								</label>
+							</div>
+						</div>
+
+
 						<!-- Weapon cost -->
 						<div class="box__cost">
 							<svg class="icon"><use xlink:href="#icon-power" /></svg>
 							{{ weaponMount.weapon.pcuCost }}
 							<svg class="icon"><use xlink:href="#icon-build" /></svg>
-							{{ weaponMount.weapon.bpCost + weaponMount.materialCost + weaponMount.mountBpCost + weaponMount.linkCost }}
+							{{ weaponMount.bpCost + weaponMount.materialCost + weaponMount.mountBpCost + weaponMount.linkCost }}
 							<span v-if="weaponMount.materialCost > 0 || weaponMount.linkCost > 0 || weaponMount.mountBpCost > 0">
-								(weapon {{ weaponMount.weapon.bpCost }}
+								(weapon {{ weaponMount.bpCost }}
 								<span v-if="weaponMount.materialCost > 0">
 									+ material {{ weaponMount.materialCost }}
 								</span>
@@ -2092,6 +2083,210 @@
 					materials {{ weaponsTotalCosts.weaponMaterialsBp }} +
 					mounts {{ weaponsTotalCosts.weaponMountsBp }} +
 					links {{ weaponsTotalCosts.weaponLinksBp }})
+				</div>
+			</div>
+
+
+			
+			
+			
+			
+			
+			
+			<!--
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			|	OTHER
+			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			-->
+			
+			<div id="other" class="box" v-if="params.sources.pw || params.sources.som">
+				<header class="box__header">
+					<h3 id="other">Other Systems</h3>
+				</header>
+
+				<!-- algal shielding -->
+				<div v-if="params.sources.som">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasAlgalShielding">
+	                            <input type="checkbox" v-model="params.hasAlgalShielding" id="hasAlgalShielding">
+	                            Algal Shielding (see <i>Starship Operations Manual</i>, p 27)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasAlgalShielding ? 5 + 2 * sizeCategory.multiplier : 0 }}
+	                </div>
+				</div>
+
+				<!-- algal shielding -->
+				<div v-if="params.sources.som">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasAutoDestruct">
+	                            <input type="checkbox" v-model="params.hasAutoDestruct" id="hasAutoDestruct">
+	                            Autodestruct System (see <i>Starship Operations Manual</i>, p 27)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasAutoDestruct ? sizeCategory.multiplier : 0 }}
+	                </div>
+				</div>
+
+				<!-- colony ship framework -->
+				<div v-if="params.sources.som && this.sizeCategory.multiplier >= 4"> <!-- Large or higher -->
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasColonyShipFramework">
+	                            <input type="checkbox" v-model="params.hasColonyShipFramework" id="hasColonyShipFramework">
+	                            Colony Ship Framework (see <i>Starship Operations Manual</i>, p 27)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasColonyShipFramework ? Math.floor(frame.bpCost * 0.25) : 0 }}
+	                </div>
+				</div>
+
+				<!-- consciousness uplink drive -->
+				<div v-if="params.sources.som">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasConsciousnessUplink">
+	                            <input type="checkbox" v-model="params.hasConsciousnessUplink" id="hasConsciousnessUplink">
+	                            Consciousness Uplink Drive (see <i>Starship Operations Manual</i>, p 28)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasConsciousnessUplink ? 4 : 0 }}
+	                </div>
+				</div>
+
+				<!-- hive joining -->
+				<div v-if="params.sources.pw">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasHiveJoining">
+	                            <input type="checkbox" v-model="params.hasHiveJoining" id="hasHiveJoining">
+	                            Hive Joining (see <em>Pact Worlds</em>, p152)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ hiveJoiningBpCost }}
+	                </div>
+				</div>
+
+				<!-- powersap -->
+				<div v-if="params.sources.som">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasPowersap">
+	                            <input type="checkbox" v-model="params.hasPowersap" id="hasPowersap">
+	                            Powersap (see <i>Starship Operations Manual</i>, p 29)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasPowersap ? sizeCategory.multiplier * 3 : 0 }}
+	                </div>
+				</div>
+
+				<!-- robotic appendage -->
+				<div v-if="params.sources.som">
+					<div class="box__select">
+						<div class="form-group">
+							<label for="roboticAppendageSelect">Robotic Appendage</label>
+							<select name="roboticAppendage"
+								id="roboticAppendageSelect"
+								class="form-control"
+								v-model="params.roboticAppendageId">
+									<option v-for="option in selectOptions.roboticAppendage"
+										:value="option.id">{{ option.name }}</option>
+							</select>
+						</div>
+					</div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ roboticAppendage.bpCost }}
+	                </div>
+				</div>
+
+				<!-- root system -->
+				<div v-if="params.sources.som">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasRootSystem">
+	                            <input type="checkbox" v-model="params.hasRootSystem" id="hasRootSystem">
+	                            Root System (see <i>Starship Operations Manual</i>, p 29)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+						<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ params.hasRootSystem ? 5 : 0 }}
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasRootSystem ? sizeCategory.multiplier * 2 : 0 }}
+	                </div>
+				</div>
+
+				<!-- space station framework -->
+				<div v-if="params.sources.som && sizeCategory.multiplier >= 4">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasSpaceStationFramework">
+	                            <input type="checkbox" v-model="params.hasSpaceStationFramework" id="hasSpaceStationFramework">
+	                            Space Station Framework (see <i>Starship Operations Manual</i>, p 29)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasSpaceStationFramework ? Math.floor(frame.bpCost * 0.2) : 0 }}
+	                </div>
+				</div>
+
+				<!-- training interface modules -->
+				<div v-if="params.sources.som">
+					<p>Training Interface Modules</p>
+					<div class="box__input__2">
+						<!-- tim -->
+						<div class="form-group">
+							<label for="ctTim">Number of TIMs</label>
+							<input name="ctTim"
+								id="ctTim"
+								type="number"
+								min="0"
+								v-model="params.ctTim"
+								@change="maybeAdjustCtTim('ctTim')">
+						</div>
+						<!-- tim__all -->
+						<div class="form-group">
+							<label for="ctTimAll">of which have Associated Crew Member &ldquo;All&rdquo;</label>
+							<input name="ctTimAll"
+								id="ctTimAll"
+								type="number"
+								min="0"
+								v-model="params.ctTimAll"
+								@change="maybeAdjustCtTim('ctTimAll')">
+						</div>
+					</div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ timBpCost }}
+	                </div>
+				</div>
+
+				<!-- virtual intelligence -->
+				<div v-if="params.sources.som">
+					<div class="box__select">
+						<div class="form-group">
+							<label for="viSelect">Virtual Intelligence</label>
+							<select name="vi" id="viSelect" class="form-control"  v-model="params.viId">
+								<option v-for="option in selectOptions.vi" :value="option.id">{{ option.id == "none" ? "None" : "Tier " + option.name }}</option>
+							</select>
+						</div>
+					</div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ vi.bpCost }}
+	                </div>
 				</div>
 			</div>
 
@@ -2391,7 +2586,7 @@
 						<p>
 							<strong>Power Core(s)</strong> {{ powerCoreDescription }};
 							<strong>Drift Engine</strong> {{ driftEngine.name }};
-							<strong>Systems</strong> {{ systemsDescription }}<span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span><span v-if="expansionBaysDescription != 'None'">; <strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span><span v-if="params.fortifiedHullId != 'none'">; <strong>Fortified Hull</strong> {{ fortifiedHull.name }}</span>
+							<strong>Systems</strong> <span v-html="systemsDescription"></span><span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span><span v-if="expansionBaysDescription != 'None'">; <strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span><span v-if="params.fortifiedHullId != 'none'">; <strong>Fortified Hull</strong> {{ fortifiedHull.name }}</span>
 						</p>
 						<p><strong>Modifiers</strong> {{ modifiersDescription }}<span v-if="params.hasCrew">; <strong>Complement</strong> {{ complement }}</span></p>
 						<p><strong>Custom Components</strong> {{ customComponentsDescription }}</p>

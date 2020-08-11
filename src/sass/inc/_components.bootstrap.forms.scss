@@ -138,6 +138,7 @@ input[type="checkbox"].disabled,
 fieldset[disabled] input[type="radio"],
 fieldset[disabled] input[type="checkbox"] {
   cursor: not-allowed;
+  outline: 1px solid red; // JT 2020-08-05
 }
 .radio-inline.disabled,
 .checkbox-inline.disabled,

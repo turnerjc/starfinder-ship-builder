@@ -7118,6 +7118,109 @@
 			}
 		]
 	},
+	"roboticAppendage": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"src": "som",
+				"strScore": 0,
+				"strMod": 0,
+				"damage": "n/a",
+				"bpCost": 0
+			},
+			{
+				"id": "mk1",
+				"name": "Mk 1",
+				"src": "som",
+				"strScore": 10,
+				"strMod": 0,
+				"damage": "1d6",
+				"bpCost": 1
+			},
+			{
+				"id": "mk2",
+				"name": "Mk 2",
+				"src": "som",
+				"strScore": 13,
+				"strMod": 1,
+				"damage": "1d8",
+				"bpCost": 3
+			},
+			{
+				"id": "mk3",
+				"name": "Mk 3",
+				"src": "som",
+				"strScore": 16,
+				"strMod": 3,
+				"damage": "1d8",
+				"bpCost": 6
+			},
+			{
+				"id": "mk4",
+				"name": "Mk 4",
+				"src": "som",
+				"strScore": 19,
+				"strMod": 4,
+				"damage": "2d6",
+				"bpCost": 8
+			},
+			{
+				"id": "mk5",
+				"name": "Mk 5",
+				"src": "som",
+				"strScore": 22,
+				"strMod": 6,
+				"damage": "2d8",
+				"bpCost": 11
+			},
+			{
+				"id": "mk6",
+				"name": "Mk 6",
+				"src": "som",
+				"strScore": 25,
+				"strMod": 7,
+				"damage": "3d6",
+				"bpCost": 13
+			},
+			{
+				"id": "mk7",
+				"name": "Mk 7",
+				"src": "som",
+				"strScore": 28,
+				"strMod": 9,
+				"damage": "3d8",
+				"bpCost": 16
+			},
+			{
+				"id": "mk8",
+				"name": "Mk 8",
+				"src": "som",
+				"strScore": 31,
+				"strMod": 10,
+				"damage": "4d8",
+				"bpCost": 18
+			},
+			{
+				"id": "mk9",
+				"name": "Mk 9",
+				"src": "som",
+				"strScore": 34,
+				"strMod": 12,
+				"damage": "6d8",
+				"bpCost": 21
+			},
+			{
+				"id": "mk10",
+				"name": "Mk 10",
+				"src": "som",
+				"strScore": 37,
+				"strMod": 13,
+				"damage": "8d8",
+				"bpCost": 23
+			}
+		]
+	},
 	"role": {
 		"data": [
 			{
@@ -7200,6 +7303,7 @@
 				"id": "deaths-head-necroglider",
                 "src": "scr",
 				"name": "Death's Head Necroglider",
+				"size": 1,
 				"tier": "1/2",
 				"params": {
 					"version": "1.0.1",
@@ -7356,6 +7460,7 @@
                 "src": "scr",
 				"name": "Blackwind Sepulcher",
 				"tier": 5,
+				"size": 3,
 				"params": {
 					"version": "1.0.1",
 					"hasCrew": true,
@@ -7540,6 +7645,7 @@
 				"id": "thaumtech-omenbringer",
                 "src": "scr",
 				"name": "Thaumtech Omenbringer",
+				"size": 6,
 				"tier": 14,
 				"params": {
 					"version": "1.0.1",
@@ -7786,6 +7892,7 @@
                 "src": "scr",
 				"name": "Idaran Voidrunner",
 				"tier": "1/3",
+				"size": 1,
 				"params": {
 					"version": "1.0.1",
 					"hasCrew": true,
@@ -7941,6 +8048,7 @@
                 "src": "scr",
 				"name": "Idaran Vanserai",
 				"tier": 4,
+				"size": 4,
 				"params": {
 					"version": "1.0.1",
 					"shipName": "Idaran Vanserai",
@@ -8128,6 +8236,7 @@
                 "src": "scr",
 				"name": "Idaran Millenia",
 				"tier": 12,
+				"size": 6,
 				"params": {
 					"version": "1.0.1",
 					"hasCrew": true,
@@ -8350,6 +8459,7 @@
 				"id": "ringworks-wanderer",
                 "src": "scr",
 				"name": "Ringworks Wanderer",
+				"size": 2,
 				"tier": "1/4",
 				"params": {
 					"version": "1.0.1",
@@ -8500,6 +8610,7 @@
 				"id": "kevolari-venture",
                 "src": "scr",
 				"name": "Kevolari Venture",
+				"size": 3,
 				"tier": 1,
 				"params": {
 					"version": "1.0.1",
@@ -8677,6 +8788,7 @@
 				"id": "atech-immortal",
                 "src": "scr",
 				"name": "Atech Immortal",
+				"size": 5,
 				"tier": 10,
 				"params": {
 					"version": "1.0.1",
@@ -8857,6 +8969,7 @@
 				"id": "starhive-drone-mk-iii",
                 "src": "scr",
 				"name": "Starhive Drone Mk III",
+				"size": 2,
 				"tier": 1,
 				"params": {
 					"version": "1.0.1",
@@ -9028,6 +9141,7 @@
 				"id": "uie-hiveguard",
                 "src": "scr",
 				"name": "UIE Hiveguard",
+				"size": 4,
 				"tier": 6,
 				"params": {
 					"version": "1.0.1",
@@ -9222,6 +9336,7 @@
 				"id": "hivonyx-titan-mauler",
                 "src": "scr",
 				"name": "Hivonyx Titan Mauler",
+				"size": 4,
 				"tier": 9,
 				"params": {
 					"version": "1.0.1",
@@ -9396,6 +9511,7 @@
 				"id": "bmc-mauler",
                 "src": "scr",
 				"name": "BMC Mauler",
+				"size": 1,
 				"tier": 2,
 				"params": {
 					"version": "1.0.1",
@@ -9559,6 +9675,7 @@
 				"id": "norikama-dropship",
                 "src": "scr",
 				"name": "Norikama Dropship",
+				"size": 3,
 				"tier": 8,
 				"params": {
 					"version": "1.0.1",
@@ -9744,6 +9861,7 @@
 				"id": "vindicas-tyrant",
                 "src": "scr",
 				"name": "Vindicas Tyrant",
+				"size": 7,
 				"tier": 16,
 				"params": {
 					"version": "1.0.1",
@@ -10033,6 +10151,7 @@
 				"id": "sunrise-maiden",
                 "src": "ap1",
 				"name": "Sunrise Maiden",
+				"size": 3,
 				"tier": 3,
 				"params": {
 					"version": "1.0.1",
@@ -10217,6 +10336,7 @@
 				"id": "compent-aev",
                 "src": "pw",
 				"name": "CompEnt AEV",
+				"size": 1,
 				"tier": "1/3",
 				"params": {
 					"version": "1.0.1",
@@ -10381,6 +10501,7 @@
 				"id": "compent-group-defense-frigate",
                 "src": "pw",
 				"name": "CompEnt Group Defense Frigate",
+				"size": 4,
 				"tier": "8",
 				"params": {
 					"version": "1.0.1",
@@ -10574,6 +10695,7 @@
 				"id": "multifold-seedship",
                 "src": "pw",
 				"name": "Multifold Seedship",
+				"size": 5,
 				"tier": "11",
 				"params": {
 					"version": "1.0.1",
@@ -10757,6 +10879,7 @@
 				"id": "infernex-burning-nail",
                 "src": "pw",
 				"name": "Infernex Burning Nail",
+				"size": 1,
 				"tier": "1",
 				"params": {
 					"version": "1.0.1",
@@ -10922,6 +11045,7 @@
 				"id": "infernex-interdictus",
                 "src": "pw",
 				"name": "Infernex Interdictus",
+				"size": 5,
 				"tier": "13",
 				"params": {
 					"version": "1.0.1",
@@ -11110,6 +11234,7 @@
 				"id": "infernex-keep-diabolical",
                 "src": "pw",
 				"name": "Infernex Keep Diabolical",
+				"size": 6,
 				"tier": "16",
 				"params": {
 					"version": "1.0.1",
@@ -11384,6 +11509,7 @@
 				"id": "inheritorworks-brightsword",
                 "src": "pw",
 				"name": "Inheritorworks Brightsword",
+				"size": 1,
 				"tier": "2",
 				"params": {
                     "version": "1.0.1",
@@ -11545,6 +11671,7 @@
 				"id": "inheritorworks-shieldcraft",
                 "src": "pw",
 				"name": "Inheritorworks Shieldcraft",
+				"size": 3,
 				"tier": "8",
 				"params": {
                     "version": "1.0.1",
@@ -11735,6 +11862,7 @@
 				"id": "inheritorworks-cathedralship",
                 "src": "pw",
 				"name": "Inheritorworks Cathedralship",
+				"size": 6,
 				"tier": "16",
 				"params": {
                    "version":"1.0.1",
@@ -11961,6 +12089,7 @@
 				"id": "terminator-star-drake",
                 "src": "pw",
 				"name": "Terminator Star Drake",
+				"size": 1,
 				"tier": "1/4",
 				"params": {
                     "version": "1.0.1",
@@ -12114,6 +12243,7 @@
 				"id": "redshift-pleasure-sail",
                 "src": "pw",
 				"name": "Redshift Pleasure Sail",
+				"size": 3,
 				"tier": "3",
 				"params": {
                     "version": "1.0.1",
@@ -12290,6 +12420,7 @@
 				"id": "opulos-drift-cruiser",
                 "src": "pw",
 				"name": "Opulos Drift Cruiser",
+				"size": 5,
 				"tier": "11",
 				"params": {
                     "version": "1.0.1",
@@ -12472,6 +12603,7 @@
 				"id": "uc-pod",
                 "src": "pw",
 				"name": "UC Pod",
+				"size": 1,
 				"tier": "1/2",
 				"params": {
                     "version": "1.0.1",
@@ -12624,6 +12756,7 @@
 				"id": "uc-arkship",
                 "src": "pw",
 				"name": "UC Arkship",
+				"size": 4,
 				"tier": "10",
 				"params": {
                     "version": "1.0.1",
@@ -12817,6 +12950,7 @@
 				"id": "uc-gardenship",
                 "src": "pw",
 				"name": "UC Gardenship",
+				"size": 5,
 				"tier": "10",
 				"params": {
                     "version": "1.0.1",
@@ -13531,6 +13665,34 @@
 				"value": 20,
 				"bpBudget": 1000,
 				"hpIncrease": 5
+			}
+		]
+	},
+	"vi": {
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"value": 0,
+				"skillMod": 0,
+				"gunneryMod": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "1",
+				"name": "1",
+				"value": 1,
+				"skillMod": 7,
+				"gunneryMod": 4,
+				"bpCost": 5
+			},
+			{
+				"id": "2",
+				"name": "2",
+				"value": 2,
+				"skillMod": 8,
+				"gunneryMod": 5,
+				"bpCost": 7
 			}
 		]
 	},
