@@ -444,6 +444,8 @@ function Ship(json) {
 				tierId:"1",
 				version:"1.0.1",
 				viId: "none",
+				viHoloProjectorId:"none",
+				viSkillExpanderId:"none",
 				weaponMounts: {
 					forward: [
 						{
@@ -1438,7 +1440,9 @@ function Ship(json) {
 					"skill",
 					"thrusters",
 					"tier",
-					"vi"
+					"vi",
+					"viHoloProjector",
+					"viSkillExpander",
 				];
 
 				for(i in fields) {
@@ -1643,7 +1647,17 @@ function Ship(json) {
                 }
                 // virtual intelligence
                 if (this.params.viId != "none") {
-                    desc.push("virtual intelligence (tier " + this.vi.name + ")");
+                	var viDesc = "virtual intelligence (tier " + this.vi.name;
+                	if (this.params.viHoloProjectorId != "none") {
+                		viDesc += ", " + this.viHoloProjector.name.toLowerCase() + " holographic projector";
+                		viDesc += " [" + this.viHoloProjectorSize.toLowerCase() + "]"
+                	}
+                	if (this.params.viSkillExpanderId != "none") {
+                		viDesc += ", " + this.viSkillExpander.name.toLowerCase() + " skill expander";
+                	}
+                	viDesc += ")";
+
+                    desc.push(viDesc);
                 }
                 return desc.join(", ");
 			},
@@ -1784,6 +1798,8 @@ function Ship(json) {
 					parseInt(this.thrustersBooster.bpCost) +
 					this.timBpCost +
 					this.vi.bpCost +
+					(this.params.viId != "none" ? this.viHoloProjector.bpCost : 0) +
+					(this.params.viId != "none" ? this.viSkillExpander.bpCost : 0) +
 					parseInt(this.weaponsTotalCosts.weaponsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMountsBp) +
 					parseInt(this.weaponsTotalCosts.weaponMaterialsBp) +
@@ -1828,6 +1844,38 @@ function Ship(json) {
 			vi: function() {
 	            var vi = this.getItemById("vi", this.params.viId);
 	            return vi;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			viHoloProjector: function() {
+	            var viHoloProjector = this.getItemById("viHoloProjector", this.params.viHoloProjectorId);
+	            return viHoloProjector;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			viHoloProjectorSize: function() {
+				if (this.params.viHoloProjectorId == "none") return "n/a";
+
+				var size = this.viHoloProjector.sizeMultiplier;
+				if (this.sizeCategory.multiplier < this.viHoloProjector.sizeMultiplier) {
+					size = this.sizeCategory.multiplier;
+				}
+
+				var viHoloProjSizeCategory = this.getItemByKey("sizeCategory", "multiplier", size);
+
+				if (viHoloProjSizeCategory === undefined) return "n/a";
+				if (viHoloProjSizeCategory.name === undefined) return "n/a";
+
+	            return viHoloProjSizeCategory.name;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			viSkillExpander: function() {
+	            var viSkillExpander = this.getItemById("viSkillExpander", this.params.viSkillExpanderId);
+	            return viSkillExpander;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -2238,6 +2286,26 @@ function Ship(json) {
 				// test that item exists
 				if (typeof item === "undefined") {
 					console.log("There is no item " + prop + " that matches id " + id);
+					item = this.data[prop].data.find(function(item) {
+						return item.id === "none";
+					});
+				}
+				return item;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+			getItemByKey: function(prop, key, val) {
+				this.testThatPropExists(prop);
+
+				// find item
+				var item = this.data[prop].data.find(function(item) {
+					return item[key] === val;
+				});
+
+				// test that item exists
+				if (typeof item === "undefined") {
+					console.log("There is no item " + prop + " that matches " + key + ": " + val);
 					item = this.data[prop].data.find(function(item) {
 						return item.id === "none";
 					});
