@@ -516,7 +516,11 @@
 				<div class="box__select">
 					<div class="form-group">
 						<label for="frameSelect">Frame</label>
-						<select name="frame" id="frameSelect" class="form-control" v-model="params.frameId" @change="updateFrame">
+						<select name="frame"
+							id="frameSelect"
+							class="form-control"
+							v-model="params.frameId"
+							@change="updateFrame">
 							<option v-for="option in selectOptions.frame"
 								:value="option.id"
 								v-if="option.src == 'scr' || params.sources[option.src] == true">
@@ -761,15 +765,26 @@
 				<header class="box__header">
 					<h2 id="powerCore">Step 3: Power Core</h2>
 				</header>
+
+				<div v-if="frame.size == 'Supercolossal'">
+					<p class="text-warning">NOTE: Supercolossal ships can have either:</p>
+					<ul>
+						<li class="text-warning">One Supercolossal power core, and up to four Huge or Gargantuan cores, or</li>
+						<li class="text-warning">Up to five Colossal power cores</li>
+					</ul>
+				</div>
+
 				<div class="box__select">
 					<div class="form-group" v-for="i in countPowerCoreHousings">
 						<!-- power core -->
 						<div class="form-group">
 							<label :for="'powerCoreSelect_' + i">Power Core {{ i }}</label>
-							<select :id="'powerCoreSelect_' + i" class="form-control" v-model="params.powerCoreIds[i-1]">
-								<template v-for="option in selectOptions.powerCore"
-									v-if="(!params.isUseStrictRules) || (option.sizes.indexOf(frame.size) > -1)">
-									<option :value="option.id">{{ option.name }} (PCU {{ option.pcuBudget }})</option>
+							<select :id="'powerCoreSelect_' + i"
+								class="form-control"
+								v-model="params.powerCoreIds[i-1]"
+								@change="maybeResetPowerCoreIds(i-1)">
+								<template v-for="option in getPowerCoreOptions(i - 1)">
+									<option :value="option.id" v-html="getPowerCoreOptionName(option)"></option>
 								</template>
 							</select>
 						</div>
@@ -940,8 +955,8 @@
 				</div><!-- thrusters booster -->
 
 				<div class="box__info">
-					<strong>Speed (in hexes)</strong> {{ thrustersBooster.speed }};
-					<strong>Piloting Modifier</strong> {{ getPrefixedModifier(thrustersBooster.pilotingModifier) }}
+					<strong>Speed (in hexes)</strong> {{ thrusters.speed + thrustersBooster.speed }};
+					<strong>Piloting Modifier</strong> {{ getPrefixedModifier(thrusters.pilotingModifier + thrustersBooster.pilotingModifier) }}
 				</div>
 				<div class="box__cost">
 					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ thrusters.pcuCost + thrustersBooster.pcuCost }}
@@ -1141,8 +1156,46 @@
 				<div class="box__select">
 					<div class="form-group">
 						<label for="computerSelect">Computer</label>
-						<select name="computer" id="computerSelect" class="form-control"  v-model="params.computerId">
-							<option v-for="option in selectOptions.computer" :value="option.id">{{ option.name }}</option>
+						<select name="computer"
+							id="computerSelect"
+							class="form-control"
+							v-model="params.computerId"
+							@change="updateComputer()">
+							<option v-for="option in selectOptions.computer"
+								:value="option.id"
+								v-if="frame.size != 'Supercolossal' || option.bonus >= 4">
+									{{ option.name }}
+							</option>
+						</select>
+					</div>
+
+					<!-- secondary computer (Supercolossal ships only) -->
+					<div class="form-group" v-if="isSupercolossal">
+						<label for="secondaryComputerSelect">Secondary Computer</label>
+						<select name="secondaryComputer"
+							id="secondaryComputerSelect"
+							class="form-control"
+							v-model="params.secondaryComputerId">
+							<option v-for="option in selectOptions.computer"
+								:value="option.id"
+								v-if="option.bonus < computer.bonus">
+									{{ option.name }}
+							</option>
+						</select>
+					</div>
+
+					<!-- network node (Supercolossal ships only) -->
+					<div class="form-group" v-if="isSupercolossal">
+						<label for="networkNodeSelect">Network Node</label>
+						<select name="networkNode"
+							id="networkNodeSelect"
+							class="form-control"
+							v-model="params.networkNodeId">
+							<option v-for="option in selectOptions.networkNode"
+								:value="option.id"
+								v-if="option.id == 'none' || option.bonus == computer.bonus">
+									{{ option.name }}
+							</option>
 						</select>
 					</div>
 
@@ -1160,17 +1213,17 @@
 				</div>
 
 				<div class="box__info">
-					<strong>Skill Bonus</strong> {{ getPrefixedModifier(computer.bonus) }};
+					<strong>Skill Bonus</strong> {{ computerSkillBonusDesc }};
 					<span v-if="params.sources.som && hasDedicatedComputerHousing">
 						<strong>Dedicated Computer Skill Bonus</strong> {{ getPrefixedModifier(dedicatedComputer.bonus) }};
 					</span>
-					<strong>Nodes</strong> {{ computer.nodes + dedicatedComputer.nodes }};
+					<strong>Nodes</strong> {{ ctComputerNodes }};
 					<strong>Tier</strong> {{ computerTier }}
 				</div>
 
 				<div class="box__cost">
-					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ computer.pcuCost + dedicatedComputer.pcuCost }}
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ computer.bpCost + dedicatedComputer.bpCost }}
+					<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ computer.pcuCost + dedicatedComputer.pcuCost + (isSupercolossal ? secondaryComputer.pcuCost : 0) + networkNode.pcuCost }}
+					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ computer.bpCost + dedicatedComputer.bpCost + (isSupercolossal ? secondaryComputer.bpCost : 0) +  networkNode.bpCost }}
 				</div>
 			</div>
 
@@ -2247,22 +2300,24 @@
 				<!-- training interface modules -->
 				<div v-if="params.sources.som">
 					<p>Training Interface Modules</p>
-					<div class="box__input__2">
+					<div class="box--flex">
 						<!-- tim -->
-						<div class="form-group">
+						<div class="form-group col-lg-1-2">
 							<label for="ctTim">Number of TIMs</label>
 							<input name="ctTim"
 								id="ctTim"
+								class="form-control"
 								type="number"
 								min="0"
 								v-model="params.ctTim"
 								@change="maybeAdjustCtTim('ctTim')">
 						</div>
 						<!-- tim__all -->
-						<div class="form-group">
+						<div class="form-group col-lg-1-2">
 							<label for="ctTimAll">of which have Associated Crew Member &ldquo;All&rdquo;</label>
 							<input name="ctTimAll"
 								id="ctTimAll"
+								class="form-control"
 								type="number"
 								min="0"
 								v-model="params.ctTimAll"

@@ -253,7 +253,8 @@ function Ship(json) {
 			data: json,
 			json: "",
 			params: {},
-			// paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"basic-computer","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"basic-computer","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["none","none","none"],"fortifiedHullId":"none","frameId":"battleship","hasAlgalShielding":0,"hasAutoDestruct":0,"hasBiometricLocks":0,"hasColonyShipFramework":0,"hasConsciousnessUplink":0,"hasCrew":1,"hasDataNet":0,"hasEmergencyAccelerator":0,"hasHiveJoining":0,"hasHolographicMantle":0,"hasPowersap":0,"hasReconfigurationSystem":0,"hasRootSystem":0,"hasSelfDestructSystem":0,"hasSpaceStationFramework":true,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none","none","none"],"powerCoreSpecialMaterials":["none","none","none"],"reinforcedBulkheadId":"none","roboticAppendageId":"none","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","weaponMounts":{"forward":[{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"port":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}]}},
+			paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-4-mononode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"ctTim":0,"ctTimAll":0,"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"basic-computer","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["none","none","none"],"fortifiedHullId":"none","frameId":"base-ship","hasAlgalShielding":0,"hasAutoDestruct":0,"hasBiometricLocks":0,"hasColonyShipFramework":0,"hasConsciousnessUplink":0,"hasCrew":1,"hasDataNet":0,"hasEmergencyAccelerator":0,"hasHiveJoining":0,"hasHolographicMantle":0,"hasPowersap":0,"hasReconfigurationSystem":0,"hasRootSystem":0,"hasSelfDestructSystem":0,"hasSpaceStationFramework":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none","none","none","none"],"powerCoreSpecialMaterials":["none","none","none","none"],"networkNodeId":"none","reinforcedBulkheadId":"none","roboticAppendageId":"none","secondaryComputerId":"basic-computer","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","viId":"none","viHoloProjectorId":"none","viSkillExpanderId":"none","weaponMounts":{"forward":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}]}},
+			/*
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -419,8 +420,10 @@ function Ship(json) {
 				isUseStrictRules:1,
 				powerCoreIds:["none"],
 				powerCoreSpecialMaterials:["none"],
+				networkNodeId: "none",
 				reinforcedBulkheadId: "none",
 				roboticAppendageId: "none",
+				secondaryComputerId: "basic-computer",
 				sensorsId:"none",
 				sensorsMaterialId: "none",
 				shieldType: "shields",
@@ -497,6 +500,7 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
+			*/
 			selectSampleShipSortOrder: "name",
 			sources: [
 				{
@@ -714,6 +718,29 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            computerSkillBonusDesc: function() {
+				if (this.computer.nodes === undefined || this.computer.nodes == 0) return "+0";
+
+            	var that = this;
+            	var bonuses = [];
+
+            	// main computer
+            	for (var index = 0; index < this.computer.nodes; index++) {
+            		bonuses.push(that.getPrefixedModifier(that.computer.bonus));
+            	}
+
+            	// secondary computer (supercolossal ships)
+            	if (this.params.sources.som && this.frame.size == "Supercolossal") {
+	            	for (var index = 0; index < this.secondaryComputer.nodes; index++) {
+	            		bonuses.push(that.getPrefixedModifier(that.secondaryComputer.bonus));
+	            	}
+            	}
+
+            	return bonuses.join("/");
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			computerTier: function() {
 				var shipTier = this.tier.value;
 				return ( shipTier < 2 ? 1 : Math.floor( shipTier * 0.5 ) );
@@ -786,6 +813,17 @@ function Ship(json) {
 					this.fortifiedHull.bonusToCt
 				;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            ctComputerNodes: function() {
+				var ct = 0;
+				ct += this.computer.nodes;
+				if (this.params.sources.som && this.frame.size == "Supercolossal") {
+					ct += this.secondaryComputer.nodes;
+				}
+				return ct;            	
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1106,6 +1144,25 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            hasSupercolossalPowerCore: function() {
+            	if (this.frame.size != "Supercolossal") return false;
+
+            	var hasSupercolossalPowerCore = false;
+
+            	this.powerCores.forEach(function(powerCore) {
+            		if (hasSupercolossalPowerCore) return;
+            		if (powerCore.id == "none") return;
+
+            		if (powerCore.sizes.indexOf("Supercolossal") > -1) {
+            			hasSupercolossalPowerCore = true;
+            		}
+            	});
+
+            	return hasSupercolossalPowerCore;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			hasSecurity: function() {
 				return (this.params.antiHackingSystemsId !== "none" ||
 					this.params.antiPersonnelWeaponId !== "none" ||
@@ -1180,7 +1237,12 @@ function Ship(json) {
 				}
 				return isUsed;
             },
-
+            /*
+            |------------------------------------------------------------------------------
+            */
+            isSupercolossal: function() {
+            	return (this.params.sources.som && this.frame.size == "Supercolossal");
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1218,6 +1280,12 @@ function Ship(json) {
 				}
 				return desc.join(", ");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            networkNode: function() {
+            	return this.getItemById("networkNode", this.params.networkNodeId);
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -1265,6 +1333,18 @@ function Ship(json) {
 				}
 				return desc.join(", ");
 			},
+            /*
+            |------------------------------------------------------------------------------
+            powerCoreOptions: function() {
+            	var options = [];
+
+            	for (var index = 0; index < this.countPowerCoreHousings; index++) {
+            		options[index] = this.getPowerCoreOptions(index);
+            	}
+
+            	return options;
+            },
+            */
             /*
             |------------------------------------------------------------------------------
             */
@@ -1356,6 +1436,12 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+			secondaryComputer: function() {
+				return this.getItemById("computer", this.params.secondaryComputerId);
+			},
+            /*
+            |------------------------------------------------------------------------------
+            */
 			securityDescription: function() {
 				var desc = [];
 				if (this.params.antiHackingSystemsId !== "none") {
@@ -1426,6 +1512,7 @@ function Ship(json) {
 					"expansionBay",
 					"fortifiedHull",
 					"frame",
+					"networkNode",
 					"personalWeapon",
 					"powerCore",
 					"reinforcedBulkhead",
@@ -1784,12 +1871,14 @@ function Ship(json) {
 					parseInt(this.frame.bpCost) +
 					parseInt(this.hiveJoiningBpCost) +
 					(this.params.hasHolographicMantle ? 12 : 0) +
+					(this.isSupercolossal ? this.networkNode.bpCost : 0) +
 					parseInt(this.powerCoresBpCost) +
 					(this.params.hasPowersap ? 3 * this.sizeCategory.multiplier : 0) +
 					(this.params.hasReconfigurationSystem ? 30 : 0) +
 					parseInt(this.reinforcedBulkhead.bpCost) +
 					parseInt(this.roboticAppendage.bpCost) +
 					(this.params.hasRootSystem ? 2 * this.sizeCategory.multiplier : 0) +
+					(this.isSupercolossal ? this.secondaryComputer.bpCost : 0) +
 					parseInt(this.selfDestructSystemBpCost) +
 					parseInt(this.sensorsBpCost) +
 					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
@@ -1820,12 +1909,14 @@ function Ship(json) {
 						parseInt(this.customComponentPcuTotal.essential) +
 						(this.params.hasEmergencyAccelerator ? 5 : 0),
 					nonEssential: this.computer.pcuCost +
+						(this.isSupercolossal ? this.secondaryComputer.pcuCost : 0) +
 						this.expansionBaysTotalPcuCost +
                         this.dataNetPcuCost +
                         parseInt(this.customComponentPcuTotal.nonEssential) +
                         (this.params.hasHolographicMantle ? 10 : 0) +
                         (this.params.hasReconfigurationSystem ? 50 : 0) +
-                        (this.params.hasRootSystem ? 5 : 0),
+                        (this.params.hasRootSystem ? 5 : 0) +
+						(this.isSupercolossal ? this.networkNode.bpCost : 0),
 				};
 			},
             /*
@@ -2238,10 +2329,10 @@ function Ship(json) {
 			},
             /*
             |------------------------------------------------------------------------------
-            */
             getAvailableWeaponUpgrades: function(weapon) {
             	return [{id: "test", name: "Test"}];
             },
+            */
             /*
             |------------------------------------------------------------------------------
             */
@@ -2328,6 +2419,120 @@ function Ship(json) {
 
 				return names.join(", ");
             },
+            /*
+            |------------------------------------------------------------------------------
+            | getPowerCoreOptionName
+            |------------------------------------------------------------------------------
+            | e.g. None, Titan Light (PCU 700, Supercolossal), Nova Light (PCU 400, Large - Colossal)
+            |------------------------------------------------------------------------------
+            */
+            getPowerCoreOptionName: function(option) {
+            	if (option.id == "none") return "None";
+
+            	var name = option.name + " (PCU " + option.pcuBudget + ", ";
+
+            	if (option.sizes.length > 1) {
+            		name += option.sizes[0] + " &ndash; " + option.sizes[option.sizes.length - 1];
+            	} else {
+            		name += option.sizes[0];
+            	}
+
+            	name += ")";
+
+            	return name;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            | getPowerCoreOptions
+            |------------------------------------------------------------------------------
+            */
+            getPowerCoreOptions: function(index) {
+
+            	if (this.params.powerCoreIds[index] === undefined) {
+            		return [this.getItemById("powerCore", "none")];
+            	}
+
+            	var options = [];
+
+            	// Supercolossal frame
+            	if (this.frame.size == "Supercolossal") {
+					return this.getPowerCoreOptionsForSupercolossal(index);
+
+            	// non-Supercolossal frame
+            	} else {
+            		var that = this;
+	            	this.selectOptions.powerCore.forEach(function(option) {
+	            		if (option.sizes.indexOf(that.frame.size) > -1) options.push(option);
+	            	});
+
+	            	return options;
+            	}
+
+            	return;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			getPowerCoreOptionsForSupercolossal: function(index) {
+				var options = [];
+
+				// If ship doesn't have a supercolossal power core
+				if (!this.hasSupercolossalPowerCore) {
+
+        			// add only colossal and supercolossal options
+	            	this.selectOptions.powerCore.forEach(function(option) {
+	            		if (option.sizes.includes("Colossal") || option.sizes.includes("Supercolossal")) options.push(option);
+	            	});
+
+					return options;
+				}
+
+				// We know ship has a supercolossal power core
+
+    			// check if this index is the SC power core
+    			if (this.powerCores[index].sizes[0] == "Supercolossal") {
+
+    				// add only colossal and supercolossal options
+	            	this.selectOptions.powerCore.forEach(function(option) {
+	            		if (option.sizes.includes("Colossal") || option.sizes.includes("Supercolossal")) options.push(option);
+	            	});
+
+	            	return options;
+
+    			}
+
+	            // We know this is not the SC power core
+
+				// add only huge or gargantuan
+            	this.selectOptions.powerCore.forEach(function(option) {
+            		if (option.sizes.includes("Huge") || option.sizes.includes("Gargantuan")) options.push(option);
+            	});
+        		
+				return options;
+			},
+            /*
+            |------------------------------------------------------------------------------
+            | getPowerCoreSizeMultipliers
+            |------------------------------------------------------------------------------
+            | Turns a power core's list of size names ["Tiny", "Small", "Medium", ...]
+            | into a list of numbers [0, 1, 2, ...]
+            |------------------------------------------------------------------------------
+            getPowerCoreSizeMultipliers: function(powerCore) {
+            	if (powerCore.sizes === undefined) return [];
+
+            	var multipliers = [];
+
+            	var that = this;
+
+				powerCore.sizes.forEach(function(size) {
+					var sizeCategory = that.getItemById("sizeCategory", size);
+					if (sizeCategory.multiplier === undefined) return;
+					multipliers[] = sizeCategory.multiplier;
+				});
+
+            	return multipliers;
+            },
+            */
             /*
             |------------------------------------------------------------------------------
             */
@@ -2470,6 +2675,48 @@ function Ship(json) {
 			},
             /*
             |------------------------------------------------------------------------------
+            | maybeResetPowerCoreIds
+            |------------------------------------------------------------------------------
+            | This is called when a power core is changed
+            | There's some complicated logic around supercolossal ships
+            | This does some cross-checking to prevent illegal combinations of power cores
+            |------------------------------------------------------------------------------
+            */
+            maybeResetPowerCoreIds: function(currentIndex) {
+            	if (this.frame.size != "Supercolossal") return;
+
+            	var that = this;
+
+				// for each power core
+				this.params.powerCoreIds.forEach(function(id, index) {
+					if (index == currentIndex) return;
+
+					var powerCore = that.powerCores[index];
+
+					if (that.hasSupercolossalPowerCore) {
+
+						// if this is the supercolossal power core, then skip
+						if (powerCore.sizes.includes("Supercolossal")) return;
+
+						// otherwise
+						// check that power core id is for huge or gargantuan ship
+						// if not then reset
+						if (!(powerCore.sizes.includes("Huge") || powerCore.sizes.includes("Gargantuan"))) {
+							that.params.powerCoreIds[index] = "none";
+						}
+					} else {
+						// check that power core id is for colossal ship
+						// if not then reset
+						if (!powerCore.sizes.includes("Colossal")) {
+							that.params.powerCoreIds[index] = "none";
+						}
+					}
+				});
+
+				return;
+            },
+            /*
+            |------------------------------------------------------------------------------
             */
 			popExcessExpansionBays: function( targetCountBays ) {
 				var countBays = this.params.expansionBayIds.length;
@@ -2582,6 +2829,119 @@ function Ship(json) {
             },
             /*
             |------------------------------------------------------------------------------
+            | setPowerCores
+            |------------------------------------------------------------------------------
+            | When a new frame is selected, need to check that existing power cores match new
+            | options in select
+            |------------------------------------------------------------------------------
+            */
+            setPowerCores: function() {
+            	if (this.frame.size == "Supercolossal") {
+					this.setPowerCoresForSupercolossal();
+					return;
+				}
+
+            	for (var index = 0; index < this.countPowerCoreHousings; index++) {
+            		// 1. powerCoreId doesn't exist
+            		if (this.params.powerCoreIds[index] === undefined) {
+            			this.params.powerCoreIds[index] = "none";
+            			continue;
+            		}
+
+            		// 2. powerCoreId exists but is invalid
+            		var powerCore = this.getItemById("powerCore", this.params.powerCoreIds[index]);
+            		if (!powerCore.sizes.includes(this.sizeCategory.name)) {
+            			this.params.powerCoreIds[index] = "none";
+            			continue;
+            		}
+            	}
+
+            	return;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            | setComputer
+            |------------------------------------------------------------------------------
+            | When a new frame is selected, need to check that existing computer matches legal options
+            |------------------------------------------------------------------------------
+            */
+            setComputer: function() {
+            	if (this.frame.size != "Supercolossal") return;
+            	if (this.computer.bonus < 4) this.params.computerId = "mk-4-mononode";
+            },
+            /*
+            |------------------------------------------------------------------------------
+            | setComputer
+            |------------------------------------------------------------------------------
+            | When a new frame is selected, need to check that existing network node matches legal options
+            |------------------------------------------------------------------------------
+            */
+            setNetworkNode: function() {
+            	if (this.params.networkNodeId == "none") return;
+
+            	if (this.frame.size != "Supercolossal") {
+            		this.params.networkNodeId == "none";
+            		return;
+            	}
+
+            	if (this.networkNode.bonus != this.computer.bonus) {
+            		this.params.networkNodeId = "mk" + this.computer.bonus;
+            	}
+
+            	return;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            setPowerCoresForSupercolossal: function() {
+            	for (var index = 0; index < this.countPowerCoreHousings; index++) {
+
+            		// 1. powerCoreId doesn't exist
+            		if (this.params.powerCoreIds[index] === undefined) {
+            			this.params.powerCoreIds[index] = "none";
+            			continue;
+            		}
+
+            		var powerCore = this.getItemById("powerCore", this.params.powerCoreIds[index]);
+
+					// If ship doesn't have a supercolossal power core
+					if (!this.hasSupercolossalPowerCore) {
+
+	        			// add only colossal and supercolossal options
+	        			if (!(powerCore.sizes.includes("Colossal") || powerCore.sizes.includes("Supercolossal"))) {
+	        				this.params.powerCoreIds[index] = "none";
+	        			}
+
+        				continue;
+					}
+
+					// We know ship has a supercolossal power core
+
+	    			// check if this index is the SC power core
+	    			if (powerCore.sizes[0] == "Supercolossal") {
+
+	    				// add only colossal and supercolossal options
+	        			if (!(powerCore.sizes.includes("Colossal") || powerCore.sizes.includes("Supercolossal"))) {
+	        				this.params.powerCoreIds[index] = "none";
+	        			}
+
+	        			continue;
+	    			}
+
+		            // We know this is not the SC power core
+
+					// add only huge or gargantuan
+        			if (!(powerCore.sizes.includes("Huge") || powerCore.sizes.includes("Gargantuan"))) {
+        				this.params.powerCoreIds[index] = "none";
+        			}
+
+        			continue;
+            	}
+
+            	return;            	
+            },
+            /*
+            |------------------------------------------------------------------------------
             */
 			setWeaponLinking: function(position) {
 				var mounts = this.params.weaponMounts[position];
@@ -2676,10 +3036,27 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            updateComputer: function() {
+            	if (!this.params.sources.som) return;
+            	if (this.params.networkNodeId == "none") return;
+            	if (this.frame.size != "Supercolossal") return;
+
+            	if (this.computer.bonus != this.networkNode.bonus) {
+            		this.params.networkNodeId = "mk" + this.computer.bonus;
+            	}
+
+            	return;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			updateFrame: function() {
 				// this.syncExpansionBays( this.frame.expansionBays );
 				this.setCrewQuarters( this.frame.size );
 				this.setWeaponMounts( this.frame.mounts );
+				this.setPowerCores();
+				this.setComputer();
+				this.setNetworkNode();
 			},
             /*
             |------------------------------------------------------------------------------

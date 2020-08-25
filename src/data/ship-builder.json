@@ -2578,6 +2578,80 @@
 			}
 		]
 	},
+	"networkNode": {
+		"props": [
+			"bonus",
+			"nodes",
+			"pcuCost",
+			"bpCost"
+		],
+		"data": [
+			{
+				"id": "none",
+				"name": "None",
+				"bonus": 0,
+				"nodes": 0,
+				"pcuCost": 0,
+				"bpCost": 0
+			},
+			{
+				"id": "mk4",
+				"name": "Mk 4 network node",
+				"bonus": 4,
+				"nodeMax": 2,
+				"pcuCost": 8,
+				"bpCost": 4
+			},
+			{
+				"id": "mk5",
+				"name": "Mk 5 network node",
+				"bonus": 5,
+				"nodeMax": 2,
+				"pcuCost": 10,
+				"bpCost": 5
+			},
+			{
+				"id": "mk6",
+				"name": "Mk 6 network node",
+				"bonus": 6,
+				"nodeMax": 3,
+				"pcuCost": 11,
+				"bpCost": 6
+			},
+			{
+				"id": "mk7",
+				"name": "Mk 7 network node",
+				"bonus": 7,
+				"nodeMax": 3,
+				"pcuCost": 13,
+				"bpCost": 7
+			},
+			{
+				"id": "mk8",
+				"name": "Mk 8 network node",
+				"bonus": 8,
+				"nodeMax": 4,
+				"pcuCost": 15,
+				"bpCost": 8
+			},
+			{
+				"id": "mk9",
+				"name": "Mk 9 network node",
+				"bonus": 9,
+				"nodeMax": 4,
+				"pcuCost": 17,
+				"bpCost": 9
+			},
+			{
+				"id": "mk10",
+				"name": "Mk 10 network node",
+				"bonus": 10,
+				"nodeMax": 5,
+				"pcuCost": 19,
+				"bpCost": 10
+			}
+		]
+	},
 	"personalWeapon": {
 		"data": [
 			{
@@ -4149,7 +4223,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"pcuBudget": 0,
 				"bpCost": 0
@@ -4384,6 +4459,15 @@
 					"Colossal"
 				],
 				"pcuBudget": 500,
+				"bpCost": 50
+			},
+			{
+				"id": "titan-light",
+				"name": "Titan Light",
+				"sizes": [
+					"Supercolossal"
+				],
+				"pcuBudget": 700,
 				"bpCost": 50
 			}
 		]
@@ -13186,7 +13270,8 @@
 					"Large",
 					"Huge",
 					"Gargantuan",
-					"Colossal"
+					"Colossal",
+					"Supercolossal"
 				],
 				"speed": 0,
 				"pilotingModifier": 0,
@@ -13500,6 +13585,39 @@
 				"pilotingModifier": 0,
 				"pcuCost": 400,
 				"bpCost": 16
+			},
+			{
+				"id": "sc4",
+				"name": "Sc4 Thrusters",
+				"size": [
+					"Supercolossal"
+				],
+				"speed": 4,
+				"pilotingModifier": 1,
+				"pcuCost": 300,
+				"bpCost": 16
+			},
+			{
+				"id": "sc6",
+				"name": "Sc6 Thrusters",
+				"size": [
+					"Supercolossal"
+				],
+				"speed": 6,
+				"pilotingModifier": 0,
+				"pcuCost": 400,
+				"bpCost": 20
+			},
+			{
+				"id": "sc8",
+				"name": "Sc8 Thrusters",
+				"size": [
+					"Supercolossal"
+				],
+				"speed": 8,
+				"pilotingModifier": -1,
+				"pcuCost": 500,
+				"bpCost": 24
 			}
 		]
 	},
