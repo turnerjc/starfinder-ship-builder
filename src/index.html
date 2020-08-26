@@ -135,6 +135,7 @@
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
 						<li v-if="params.sources.pw"><a href="#data-net">Data Net</a></li>
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
+						<li><a href="#driftEngine">Drift Engine</a></li>
 						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
 						<li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
 						<li v-if="params.sources.som">
@@ -258,7 +259,7 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 			<div class="box">
-				<p><strong>Coming Soon:</strong> New material from <em>Starship Operations Manual</em>, released <time datetime="2020-07-30">30/07/2020</time></p>
+				<p><strong>Recent Updates:</strong> Beta testing for new material from <em>Starship Operations Manual</em>. Please get in touch with any feedback. To hide material from SOM, go to Sources and uncheck the SOM option (<time datetime="2020-08-25">25/08/2020</time>).</p>
 			</div>
 
 
@@ -1420,6 +1421,7 @@
 					<h3 id="expansionBays">Expansion Bays</h3>
 				</header>
     			<p v-if="frame.expansionBayInfo" class="text-warning">NOTE: {{ frame.expansionBayInfo }}.</p>
+    			<p v-if="sizeCategory.id == 'Supercolossal'" class="text-warning">NOTE: As a Supercolossal ship, this vessel has {{ Math.floor(frame.bpCost / 10) }} cargo bays in addition to those below.</p>
     			<p v-if="params.sources.som && sizeCategory.multiplier >= 4 && (params.hasColonyShipFramework || params.hasSpaceStationFramework)" class="text-warning">NOTE: On a colony ship or space station, two thirds of expansion bays must be for civilian use (cargo holds, escape pods, guest quarters, life boats, recreation suites, or others determined by the GM).</p>
 				<div class="cost__item">
 					<span class="cost__name">Slots used</span>
@@ -1460,6 +1462,11 @@
 									</option>
 								</select>
 							</div>
+
+							<p v-if="frame.size == 'Supercolossal' && expansionBay.id == 'hangar-bay'"
+								class="text-warning">
+									NOTE: Expanding an existing hangar bay to accommodate eight more Medium ships increases the hangar bay’s cost by only 1 BP. Use Custom Components to expand your hangar bay.
+							</p>
 
 							<div class="box__cost--list">
 								<svg class="icon"><use xlink:href="#icon-power" /></svg> {{ getExpansionBayPcuCost(expansionBay) }}

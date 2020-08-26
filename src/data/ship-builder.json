@@ -187,6 +187,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"antiHackingSystems": {
 		"data": [
 			{
@@ -221,6 +229,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"armor": {
 		"props": [
 			"bonusToAc"
@@ -356,6 +372,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"computer": {
 		"props": [
 			"bonus",
@@ -598,6 +622,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"computerCountermeasures": {
 		"data": [
 			{
@@ -630,6 +662,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"crewQuarters": {
 		"props": [
 			"bpCost"
@@ -661,6 +701,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"defensiveCountermeasures": {
 		"props": [
 			"defCMBonusToTl",
@@ -782,6 +830,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"deflectorShield": {
 		"src": "som",
 		"data": [
@@ -886,6 +942,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"driftEngine": {
 		"props": [
 			"engineRating",
@@ -956,7 +1020,7 @@
 				"name": "Chaos Sail",
 				"engineRating": 1,
 				"minPcu": 75,
-				"maxSize": 10,
+				"maxSize": 7,
 				"bpCostMultiplier": 4,
 				"src": "som",
 				"notes": "Restricted (Church of Besmara)"
@@ -976,7 +1040,7 @@
 				"name": "Elemental Engine",
 				"engineRating": 1,
 				"minPcu": 100,
-				"maxSize": 10,
+				"maxSize": 7,
 				"bpCostMultiplier": 5,
 				"src": "som",
 				"notes": "Restricted (Elemental Plane)"
@@ -996,7 +1060,7 @@
 				"name": "Hell Drive",
 				"engineRating": 1,
 				"minPcu": 100,
-				"maxSize": 10,
+				"maxSize": 7,
 				"bpCostMultiplier": 10,
 				"src": "som",
 				"notes": "Restricted (Church of Asmodeus, Hellknights)"
@@ -1016,13 +1080,21 @@
 				"name": "Shadow Engine",
 				"engineRating": 1,
 				"minPcu": 75,
-				"maxSize": 10,
+				"maxSize": 7,
 				"bpCostMultiplier": 3,
 				"src": "som",
 				"notes": "Painful, restricted (Church of Zon-Kuthon, velstracs)"
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"expansionBay": {
 		"props": [
 			"pcuCost",
@@ -1975,9 +2047,39 @@
 				],
 				"pcuCost": 5,
 				"bpCost": 1
+			},
+			{
+				"id": "drift-booster",
+                "src": "som",
+				"name": "Drift Booster",
+				"numBays": 1,
+				"sizes": [
+					"Supercolossal"
+				],
+				"pcuCost": 40,
+				"bpCost": 20
+			},
+			{
+				"id": "recycling-system",
+                "src": "som",
+				"name": "Recycling System",
+				"numBays": 1,
+				"sizes": [
+					"Supercolossal"
+				],
+				"pcuCost": 2,
+				"bpCost": 1
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"fortifiedHull": {
 		"data": [
 			{
@@ -2018,6 +2120,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"frame": {
 		"props": [
 			"size",
@@ -2549,6 +2659,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"maneuverabilityRating": {
 		"data": [
 			{
@@ -2578,6 +2696,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"networkNode": {
 		"props": [
 			"bonus",
@@ -2652,6 +2778,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"personalWeapon": {
 		"data": [
 			{
@@ -4207,6 +4341,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"powerCore": {
 		"props": [
 			"pcuBudget",
@@ -4472,6 +4614,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"sizeCategory": {
 		"data": [
 			{
@@ -4549,6 +4699,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"sensors": {
 		"data": [
 			{
@@ -4630,6 +4788,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"shields": {
 		"data": [
 			{
@@ -4818,6 +4984,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"shipWeapon": {
 		"data": [
 			{
@@ -6736,6 +6910,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"shipWeaponType": {
 		"data": [
 			"Direct-Fire",
@@ -6744,6 +6926,14 @@
 			"Tracking"
 		]
 	},
+
+
+
+
+
+
+
+	
 	"shockGrid": {
 		"data": [
 			{
@@ -6796,6 +6986,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"weaponSpecialProperty": {
 		"data": [
 			{
@@ -7101,6 +7299,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"skill": {
 		"data": [
 			{
@@ -7155,6 +7361,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"reinforcedBulkhead": {
 		"src": "som",
 		"data": [
@@ -7202,6 +7416,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"roboticAppendage": {
 		"data": [
 			{
@@ -7305,6 +7527,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"role": {
 		"data": [
 			{
@@ -7381,6 +7611,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"sampleShip": {
 		"data": [
 			{
@@ -13215,6 +13453,14 @@
             }
         ]
 	},
+
+
+
+
+
+
+
+	
 	"specialMaterial": {
 		"src": "som",
 		"data": [
@@ -13252,6 +13498,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"thrusters": {
 		"props": [
 			"speed",
@@ -13621,6 +13875,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"tier": {
 		"data": [
 			{
@@ -13786,6 +14048,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"vi": {
 		"data": [
 			{
@@ -13958,6 +14228,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"viHoloProjector": {
 		"data": [
 			{
@@ -14011,6 +14289,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"viSkillExpander": {
 		"data": [
 			{
@@ -14070,6 +14356,14 @@
 			}
 		]
 	},
+
+
+
+
+
+
+
+	
 	"weaponPosition": {
 		"data": [
 			{

@@ -1003,8 +1003,8 @@ function Ship(json) {
             */
 			expansionBaysDescription: function() {
 				// test if no expansion bays
-				if (this.expansionBays.length == 0) return "None";
-				if (this.expansionBays.filter(function(bay) {
+				if (this.sizeCategory.id != "Supercolossal" && this.expansionBays.length == 0) return "None";
+				if (this.sizeCategory.id != "Supercolossal" && this.expansionBays.filter(function(bay) {
 					return bay.id != "none";
 				}).length == 0) return "None";
 
@@ -1016,19 +1016,35 @@ function Ship(json) {
 					expansionBaysByType[expansionBayId]++;
 				}
 
+				// handle cargo bays on Supercolossal ships
+				if (this.sizeCategory.id == "Supercolossal") {
+					var additionalCargoHolds = Math.floor(this.frame.bpCost / 10);
+					if (expansionBaysByType["cargo-hold"] === undefined) {
+						maybeCreateProperty(expansionBaysByType, "cargo-hold", "Integer");
+					}
+					expansionBaysByType["cargo-hold"] += additionalCargoHolds;
+				}
+
 				// get description
-				var expansionBaysDescription = "";
+				var expansionBaysDescription = [];
 				var sep = ", ";
 				for(id in expansionBaysByType) {
-					if (id !== "none") {
-						var expansionBayName = this.getItemById("expansionBay", id).name.toLowerCase();
-						var expansionBayQuantity = expansionBaysByType[id] == 1 ? "" : " (" + expansionBaysByType[id] + ")";
-						var expansionBayDesc = expansionBayName + expansionBayQuantity + sep;
-						expansionBaysDescription += expansionBayDesc;
-					}
+					if (id == "none") continue;
+
+					// name
+					var expansionBayName = this.getItemById("expansionBay", id).name.toLowerCase();
+
+					// qty
+					var expansionBayQty = expansionBaysByType[id];
+					// var expansionBayQuantity = expansionBaysByType[id] == 1 ? "" : " (" + expansionBaysByType[id] + ")";
+
+					// final desc
+					var expansionBayDesc = expansionBayName + (expansionBayQty > 1 ? " (" + expansionBayQty + ")" : "");
+
+					expansionBaysDescription.push(expansionBayDesc);
 				}
-				expansionBaysDescription = expansionBaysDescription.substr(0, expansionBaysDescription.length - sep.length);
-				return expansionBaysDescription;
+
+				return expansionBaysDescription.join(sep);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1335,18 +1351,6 @@ function Ship(json) {
 			},
             /*
             |------------------------------------------------------------------------------
-            powerCoreOptions: function() {
-            	var options = [];
-
-            	for (var index = 0; index < this.countPowerCoreHousings; index++) {
-            		options[index] = this.getPowerCoreOptions(index);
-            	}
-
-            	return options;
-            },
-            */
-            /*
-            |------------------------------------------------------------------------------
             */
 			powerCores: function() {
 				powerCores = [];
@@ -1358,8 +1362,17 @@ function Ship(json) {
 					if (this.params.sources.som) {
 						var specialMat = this.params.powerCoreSpecialMaterials[i];
 
+						var name = "";
+
+						// material
+						if (specialMat != "none") {
+							name += specialMat.toTitleCase() + " ";
+						}
+
 						// description
-						powerCore.name = specialMat.toTitleCase() + " " + powerCore.name;
+						name += powerCore.name;
+
+						powerCore.name = name;
 
 						// bp cost
 						if (specialMat == "abysium") {
@@ -1536,6 +1549,13 @@ function Ship(json) {
 					var field = fields[i];
 					selectOptions[field] = this.getSelectOptionsFor(field);
 				}
+
+				// expansionBay
+				var expansionBayNone = selectOptions.expansionBay.shift();
+				selectOptions.expansionBay.sort(function(a, b) {
+					return (a.name > b.name);
+				});
+				selectOptions.expansionBay.unshift(expansionBayNone);
 
 				// sampleShip
 				selectOptions.sampleShip.sort(function(a, b) {
