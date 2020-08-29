@@ -253,8 +253,7 @@ function Ship(json) {
 			data: json,
 			json: "",
 			params: {},
-			paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"none","armorMaterialId":"none","computerCountermeasures":{"alarm":false,"fakeShell":false,"feedback":false,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-4-mononode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"ctTim":0,"ctTimAll":0,"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"basic-computer","defensiveCountermeasuresId":"none","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"none","expansionBayIds":["none","none","none"],"fortifiedHullId":"none","frameId":"base-ship","hasAlgalShielding":0,"hasAutoDestruct":0,"hasBiometricLocks":0,"hasColonyShipFramework":0,"hasConsciousnessUplink":0,"hasCrew":1,"hasDataNet":0,"hasEmergencyAccelerator":0,"hasHiveJoining":0,"hasHolographicMantle":0,"hasPowersap":0,"hasReconfigurationSystem":0,"hasRootSystem":0,"hasSelfDestructSystem":0,"hasSpaceStationFramework":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":1,"powerCoreIds":["none","none","none","none"],"powerCoreSpecialMaterials":["none","none","none","none"],"networkNodeId":"none","reinforcedBulkheadId":"none","roboticAppendageId":"none","secondaryComputerId":"basic-computer","sensorsId":"none","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"shieldsId":"none","shipConcept":"","shipName":"","sources":{"pw":true,"som":true},"thrustersId":"none","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"1","version":"1.0.1","viId":"none","viHoloProjectorId":"none","viSkillExpanderId":"none","weaponMounts":{"forward":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"starboard":[{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"heavy","templateWeight":"heavy","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"turret":[{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"capital","templateWeight":"capital","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}]}},
-			/*
+			// paramsReset: {"ablativeArmorId":"none","ablativeArmorByPosition":{"forward":0,"aft":0,"port":0,"starboard":0},"antiHackingSystemsId":"none","antiPersonnelWeaponId":"none","armorId":"mk-5","armorMaterialId":"none","computerCountermeasures":{"alarm":true,"fakeShell":false,"feedback":true,"firewall":false,"lockout":false,"shockGridId":"none","wipe":false},"computerId":"mk-2-mononode","crewQuartersId":"common","crewSkills":{"captain":{"countOfficers":0,"hasRole":true,"skills":{"bluff":{"modifier":0,"ranks":0},"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"engineer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"engineering":{"modifier":0,"ranks":0}}},"gunner":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0}}},"pilot":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0},"diplomacy":{"modifier":0,"ranks":0},"engineering":{"modifier":0,"ranks":0},"gunnery":{"modifier":0},"intimidate":{"modifier":0,"ranks":0},"piloting":{"modifier":0,"ranks":0}}},"scienceOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":true,"skills":{"computers":{"modifier":0,"ranks":0}}},"chiefMate":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"acrobatics":{"modifier":0,"ranks":0},"athletics":{"modifier":0,"ranks":0}}},"magicOfficer":{"countOfficers":1,"countOfficerCrew":0,"hasRole":false,"skills":{"mysticism":{"modifier":0,"ranks":0}}}},"ctTim":0,"ctTimAll":0,"customFrameBaseId":"light-freighter","customComponents":[],"dedicatedComputerId":"basic-computer","defensiveCountermeasuresId":"mk-5","defensiveCountermeasuresMaterialId":"none","deflectorShieldId":"none","driftEngineId":"signal-booster","expansionBayIds":["none","none","none"],"fortifiedHullId":"none","frameId":"interceptor","hasAlgalShielding":0,"hasAutoDestruct":0,"hasBiometricLocks":true,"hasColonyShipFramework":0,"hasConsciousnessUplink":0,"hasCrew":1,"hasDataNet":0,"hasEmergencyAccelerator":0,"hasHiveJoining":0,"hasHolographicMantle":0,"hasPowersap":0,"hasReconfigurationSystem":0,"hasRootSystem":0,"hasSelfDestructSystem":0,"hasSpaceStationFramework":0,"isSetDefaultCrewSkillValues":0,"isUseStrictRules":false,"powerCoreIds":["pulse-gray"],"powerCoreSpecialMaterials":["none"],"networkNodeId":"none","reinforcedBulkheadId":"none","roboticAppendageId":"none","secondaryComputerId":"basic-computer","sensorsId":"advanced-short-range","sensorsMaterialId":"none","shieldType":"shields","shieldsByPosition":{"forward":15,"aft":15,"port":15,"starboard":15},"shieldsId":"light-60","shipConcept":"The Unshakable’s design is specialized for smaller bounty-hunting operations, surgical strikes in dangerous territory, and solo scouting missions to identify new threats. With substantial armor for such a small ship, the Unshakable is able to close distance rapidly and assault even light freighters—a signature tactic.","shipName":"Infernex Unshakable","sources":{"pw":true,"som":true},"thrustersId":"t12","thrustersMaterialId":"none","thrustersBoosterId":"none","thrustersBoosterMaterialId":"none","tierId":"2","version":"1.0.1","viId":"none","viHoloProjectorId":"none","viSkillExpanderId":"none","weaponMounts":{"forward":[{"weaponId":"light-particle-beam","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"},{"weaponId":"none","weight":"light","templateWeight":"light","isFromTemplate":true,"canBeLinked":false,"isLinked":false,"specialMaterial":"none"}],"aft":[],"port":[],"starboard":[],"turret":[]}},
 			paramsReset: {
 				ablativeArmorId: "none",
                 ablativeArmorByPosition: {
@@ -306,6 +305,10 @@ function Ship(json) {
 								modifier: 0,
 								ranks: 0
 							},
+							perception: {
+								modifier: 0,
+								ranks: 0
+							},
 							piloting: {
 								modifier: 0,
 								ranks: 0
@@ -317,6 +320,10 @@ function Ship(json) {
 						countOfficerCrew: 0,
 						hasRole: true,
 						skills: {
+							computers: {
+								modifier: 0,
+								ranks: 0
+							},
 							engineering: {
 								modifier: 0,
 								ranks: 0
@@ -328,6 +335,14 @@ function Ship(json) {
 						countOfficerCrew: 0,
 						hasRole: true,
 						skills: {
+							computers: {
+								modifier: 0,
+								ranks: 0
+							},
+							engineering: {
+								modifier: 0,
+								ranks: 0
+							},
 							gunnery: {
 								modifier: 0
 							}
@@ -342,8 +357,20 @@ function Ship(json) {
 								modifier: 0,
 								ranks: 0
 							},
+							diplomacy: {
+								modifier: 0,
+								ranks: 0
+							},
+							engineering: {
+								modifier: 0,
+								ranks: 0
+							},
 							gunnery: {
 								modifier: 0
+							},
+							intimidate: {
+								modifier: 0,
+								ranks: 0
 							},
 							piloting: {
 								modifier: 0,
@@ -359,7 +386,15 @@ function Ship(json) {
 							computers: {
 								modifier: 0,
 								ranks: 0
-							}
+							},
+							"life-science": {
+								modifier: 0,
+								ranks: 0
+							},
+							"physical-science": {
+								modifier: 0,
+								ranks: 0
+							},
 						}
 					}, // scienceOfficer
 					chiefMate: {
@@ -376,7 +411,7 @@ function Ship(json) {
 								ranks: 0
 							},
 						}
-					}, // scienceOfficer
+					}, // chiefMate
 					magicOfficer: {
 						countOfficers: 1,
 						countOfficerCrew: 0,
@@ -387,7 +422,7 @@ function Ship(json) {
 								ranks: 0
 							}
 						}
-					}, // scienceOfficer
+					}, // magicOfficer
 				}, // crewSkills
 				ctTim: 0,
 				ctTimAll: 0,
@@ -458,6 +493,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							canHaveOrbitalDiscount: false,
 							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						},
@@ -468,6 +504,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							canHaveOrbitalDiscount: false,
 							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						}
@@ -481,6 +518,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							canHaveOrbitalDiscount: false,
 							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						}
@@ -493,6 +531,7 @@ function Ship(json) {
 							isFromTemplate: true,
 							canBeLinked: false,
 							isLinked: false,
+							canHaveOrbitalDiscount: false,
 							hasOrbitalDiscount: false,
 							specialMaterial: "none"
 						}
@@ -500,7 +539,6 @@ function Ship(json) {
 					turret: []
 				},
 			}, // paramsReset
-			*/
 			selectSampleShipSortOrder: "name",
 			sources: [
 				{
@@ -513,6 +551,15 @@ function Ship(json) {
 				},
 			],
 		},
+        /*
+        |----------------------------------------------------------------------------------
+		mounted: function() {
+			var sampleShipObj = this.getItemById("sampleShip", "infernex-justiciar");
+			var sampleShipParams = cloneObject(sampleShipObj.params);
+			this.params = sampleShipParams;
+			this.fixMissingParamsValues();
+		},
+        */
         /*
         |----------------------------------------------------------------------------------
         */
@@ -769,41 +816,29 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			crewDescriptions: function() {
-				var desc = {};
-				for(role in this.params.crewSkills) {
-					desc[role] = "";
-					for(skill in this.params.crewSkills[role].skills) {
-						var skillObj = this.params.crewSkills[role].skills[skill];
-						if (
-							skillObj.modifier != 0 ||
-							(typeof skillObj.ranks !== "undefined" && skillObj.ranks != 0)
-						) {
-							// skill names
-							desc[role] += this.getItemById("skill", skill).name + " ";
-							// skill modifier
-							var modifier = parseInt(skillObj.modifier);
-							if ( isset(skillObj.ranks) ) {
-								modifier += parseInt(skillObj.ranks);
-							}
-							if ( skill == "computers") {
-								modifier += parseInt(this.skillModifierComputers);
-							}
-							if ( skill == "piloting") {
-								modifier += parseInt(this.skillModifierPiloting);
-							}
-							desc[role] += this.getPrefixedModifier(modifier);
-							// skill ranks
-							if ( isset(skillObj.ranks) ) {
-								desc[role] += " (" + skillObj.ranks + " " + "rank".pluralise(skillObj.ranks) + ")";
-							}
-							// comma
-							desc[role] += ", ";
-						}
-					}
-					// remove final comma
-					desc[role] = desc[role].substr(0, desc[role].length - 2);
-				}
-				return desc;
+				var that = this;
+
+				var descs = {};
+
+				// crew
+				Object.keys(this.params.crewSkills).forEach(function(roleId) {
+					var crewSkill = that.params.crewSkills[roleId];
+					if (crewSkill.hasRole == false) return;
+
+					var roleDesc = [];
+
+					Object.keys(crewSkill.skills).forEach(function(skillId) {
+						var skill = that.params.crewSkills[roleId].skills[skillId];
+						if (skillId == "gunnery" && skill.modifier == 0) return;
+						if (skillId != "gunnery" && (skill.ranks === undefined || skill.ranks == 0)) return;
+
+						roleDesc.push(that.getSkillDesc(skillId, skill));
+					});
+
+					if (roleDesc.length > 0) descs[roleId] = roleDesc.join(", ");
+				});
+
+				return descs;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1204,6 +1239,23 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            isAblativeArmorBalanced: function() {
+            	var positions = this.params.ablativeArmorByPosition;
+            	var isBalanced = true;
+
+            	if (
+            		positions.forward != positions.aft ||
+            		positions.forward != positions.port ||
+            		positions.forward != positions.starboard
+        		) {
+            		isBalanced = false;
+            	}
+            	
+            	return isBalanced;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			isBpCostOverBudget: function() {
 				return (this.totalBpCost > this.tier.bpBudget);
 			},
@@ -1216,12 +1268,6 @@ function Ship(json) {
 					isComplementValid = false;
 				}
 				return isComplementValid;
-			},
-            /*
-            |------------------------------------------------------------------------------
-            */
-			isPcuCostOverBudget: function() {
-				return (this.totalPcuCost.essential > this.pcuBudget);
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1253,6 +1299,12 @@ function Ship(json) {
 				}
 				return isUsed;
             },
+            /*
+            |------------------------------------------------------------------------------
+            */
+			isPcuCostOverBudget: function() {
+				return (this.totalPcuCost.essential > this.pcuBudget);
+			},
             /*
             |------------------------------------------------------------------------------
             */
@@ -1312,18 +1364,9 @@ function Ship(json) {
 					pilotingRanks = parseInt(crewSkills.pilot.skills.piloting.ranks);
 				} else if ( crewSkills.captain.hasRole ) {
 					pilotingRanks = parseInt(crewSkills.captain.skills.piloting.ranks);
+				} else if ( this.viId != "none" ) {
+					pilotingRanks = this.vi.value;
 				}
-
-				// penalty for unevenly distributed ablative armor
-				if (pilotingRanks > -2 && !this.isAblativeArmorBalanced) {
-					pilotingRanks--;
-				}
-
-				// penalty for ablative armor > hp
-				if (this.ablativeArmor.tempHp > this.hp) {
-					pilotingRanks--;
-				}
-
 				return pilotingRanks;
 			},
             /*
@@ -1654,9 +1697,19 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			skillModifierPiloting: function() {
-				return this.maneuverabilityRating.pilotingModifier +
-					this.thrusters.pilotingModifier
-				;
+				var modifier = 0;
+
+				modifier += this.maneuverabilityRating.pilotingModifier;
+				modifier += this.thrusters.pilotingModifier;
+
+				if (modifier > -2 && !this.isAblativeArmorBalanced) {
+					modifier -= 1;
+				}
+
+				if (this.ablativeArmor.tempHp > this.hp) {
+					modifier -= 1;
+				}
+				return modifier;
 			},
             /*
             |------------------------------------------------------------------------------
@@ -1754,18 +1807,19 @@ function Ship(json) {
                 }
                 // virtual intelligence
                 if (this.params.viId != "none") {
-                	var viDesc = "virtual intelligence (tier " + this.vi.name;
-                	if (this.params.viHoloProjectorId != "none") {
-                		viDesc += ", " + this.viHoloProjector.name.toLowerCase() + " holographic projector";
-                		viDesc += " [" + this.viHoloProjectorSize.toLowerCase() + "]"
-                	}
-                	if (this.params.viSkillExpanderId != "none") {
-                		viDesc += ", " + this.viSkillExpander.name.toLowerCase() + " skill expander";
-                	}
-                	viDesc += ")";
-
-                    desc.push(viDesc);
+                    desc.push("virtual intelligence (tier " + this.vi.name + ")");
                 }
+                // vi skill expander
+            	if (this.params.viSkillExpanderId != "none") {
+            		desc.push(this.viSkillExpander.name.toLowerCase() + " skill expander");
+            	}
+            	// vi holo projector
+            	if (this.params.viHoloProjectorId != "none") {
+            		var viHoloDesc = this.viHoloProjector.name.toLowerCase() + " holographic projector" +
+            			" [" + this.viHoloProjectorSize.toLowerCase() + "]";
+            		desc.push(viHoloDesc);
+            	}
+
                 return desc.join(", ");
 			},
             /*
@@ -1956,6 +2010,28 @@ function Ship(json) {
 	            var vi = this.getItemById("vi", this.params.viId);
 	            return vi;
 			},
+            /*
+            |------------------------------------------------------------------------------
+            */
+            viCrewDescription: function() {
+            	if (this.params.viId == 'none') return "";
+
+				var vi = this.getItemById("vi", this.params.viId);
+				if (!vi) return "";
+
+            	var that = this;
+				var desc = [];
+
+				var viSkillIds = ["bluff", "computers", "engineering", "gunnery", "piloting", "sense-motive"];
+
+				viSkillIds.forEach(function(skillId) {
+					var ranks = (skillId == "gunnery") ? 0 : vi.value;
+					var modifier = (skillId == "gunnery") ? vi.gunneryMod : (vi.skillMod - vi.value);
+					desc.push(that.getSkillDesc(skillId, { ranks: ranks, modifier: modifier }));
+				});
+
+				return desc.join(", ");
+            },
             /*
             |------------------------------------------------------------------------------
             */
@@ -2289,20 +2365,36 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
+            fixMissingCrewSkills: function() {
+            	for (roleId in this.paramsReset.crewSkills) {
+
+            		// if role is missing, add it
+                    if (!isset(this.params.crewSkills[roleId])) {
+	                    console.log("Missing crew role, " + roleId + ", added to ship");
+	                    this.$set(this.params.crewSkills, roleId, cloneObject(this.paramsReset.crewSkills[roleId]));
+	                    continue;
+                    }
+
+	            	for (skillId in this.paramsReset.crewSkills[roleId].skills) {
+                    	// if skill is missing, add it
+	                    if (!isset(this.params.crewSkills[roleId].skills[skillId])) {
+		                    console.log("Missing skill, " + skillId + ", in crew role, " + roleId + ", added to ship");
+		                    this.$set(this.params.crewSkills[roleId].skills, skillId, cloneObject(this.paramsReset.crewSkills[roleId].skills[skillId]));
+	                    }
+	            	}
+            	}
+            	return;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
 			fixMissingParamsValues: function() {
 				var that = this;
 
 				for(key in this.paramsReset){
 
                     // crew positions
-                    if (key == 'crewSkills') {
-                    	for (role in this.paramsReset.crewSkills) {
-		                    if (isset(this.params.crewSkills[role])) continue;
-
-		                    console.log("Missing crew role, " + role + ", added to ship");
-		                    this.$set(this.params.crewSkills, role, cloneObject(this.paramsReset.crewSkills[role]));
-                    	}
-                    }
+                    if (key == 'crewSkills') this.fixMissingCrewSkills();
 
                     // weapons (special material)
                     var missingWeaponMountParams = [
@@ -2389,6 +2481,7 @@ function Ship(json) {
             |------------------------------------------------------------------------------
             */
 			getItemById: function(prop, id) {
+				// console.log(prop, id);
 				this.testThatPropExists(prop);
 				// find item
 				var item = this.data[prop].data.find(function(item) {
@@ -2574,6 +2667,45 @@ function Ship(json) {
 			},
             /*
             |------------------------------------------------------------------------------
+            | getSkillDesc
+            |------------------------------------------------------------------------------
+            | Expects a valid skillId
+            | Expects an object in the form { ranks: 1, modifier: 4 }
+            | Returns string in the form "Piloting + 5 (1 rank)" or "gunnery +4"
+            |------------------------------------------------------------------------------
+            */
+            getSkillDesc: function(skillId, skill) {
+				if (skillId == "gunnery" && skill.modifier == 0) return "";
+				if (skillId != "gunnery" && (skill.ranks === undefined || skill.ranks == 0)) return "";
+
+				var skillInfo = this.getItemById("skill", skillId);
+				if (!skillInfo) return "";
+
+				// name
+				var desc = skillInfo.name + " ";
+
+				// modifier
+				var modifier = parseInt(skill.modifier);
+				if (skillId != "gunnery") {
+					modifier += parseInt(skill.ranks);
+				}
+				if (skillId == "computers") {
+					modifier += parseInt(this.skillModifierComputers);
+				}
+				if (skillId == "piloting") {
+					modifier += parseInt(this.skillModifierPiloting);
+				}
+				desc += this.getPrefixedModifier(modifier);
+
+				// skill ranks
+				if (skillId != "gunnery") {
+					desc += " (" + skill.ranks + " " + "rank".pluralise(skill.ranks) + ")";
+				}
+
+				return desc;
+            },
+            /*
+            |------------------------------------------------------------------------------
             */
 			getSumOfPropertyValuesInCollection: function(collection, property) {
 				var total = 0;
@@ -2598,6 +2730,7 @@ function Ship(json) {
                 result += mult * dice.ctDice;
                 result += "d" + dice.ctFaces;
                 if (dice.mod > 0) result += "+" + mult * dice.mod;
+                if (dice.mult > 1) result += "×" + dice.mult;
 
                 return result;
             },
@@ -2628,19 +2761,35 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-            isAblativeArmorBalanced: function() {
-            	var positions = this.params.ablativeArmorByPosition;
-            	var isBalanced = true;
-
-            	if (
-            		positions.forward != positions.aft ||
-            		positions.forward != positions.port ||
-            		positions.forward != positions.starboard
-        		) {
-            		isBalanced = false;
-            	}
-            	
-            	return isBalanced;
+            isCrewQuartersOptionAvailable: function(option) {
+				if (!this.params.isUseStrictRules) return true;
+				if (this.sizeCategory.multiplier == 1) {
+					if (option.id == "none") {
+						return true;
+					} else {
+						return false;
+					}
+				} else {
+					if (option.id == "none") {
+						return false;
+					} else {
+						return true;
+					}
+				}
+				return false;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            | isCrewRoleAvailable
+            |------------------------------------------------------------------------------
+            | Expects a crew role. Checks to see if role is available. Returns boolean.
+            |------------------------------------------------------------------------------
+            */
+            isCrewRoleAvailable: function(role) {
+            	if (role.src == 'scr') return true;
+            	if (role.id == "vi" && this.params.viId != 'none') return true;
+            	if (this.params.sources[role.src]) return true;
+            	return false;
             },
             /*
             |------------------------------------------------------------------------------
@@ -3006,6 +3155,8 @@ function Ship(json) {
                             isFromTemplate: true,
                             canBeLinked: false,
                             isLinked: false,
+                            canHaveOrbitalDiscount: false,
+                            hasOrbitalDiscount: false,
 							specialMaterial: "none"
                         }
                         

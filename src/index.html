@@ -275,7 +275,7 @@
 			-->
 			
 			<div class="box">
-				<p>Huge thanks to Patreon supporters:</p>
+				<p>Supercolossal thanks to Patreon supporters:</p>
 				<ul class="supporters">
 					<li>Albert Scott Bodenhamer</li>
 					<li>Anish Hermon</li>
@@ -1039,7 +1039,7 @@
 
 					<p v-if="ablativeArmorByPositionTotal != ablativeArmor.tempHp" class="text-danger">Make sure your ablative armor adds up to {{ ablativeArmor.tempHp }}.</p>
 
-					<p v-if="!isAblativeArmorBalanced()" class="text-warning">NOTE: The ship has a -1 penalty to Piloting because temporary HP from ablative armor is not balanced.</p>
+					<p v-if="!isAblativeArmorBalanced" class="text-warning">NOTE: The ship has a -1 penalty to Piloting because temporary HP from ablative armor is not balanced.</p>
 
 					<p v-if="ablativeArmor.tempHp > hp" class="text-warning">NOTE: The ship has a -1 penalty to Piloting because temporary HP exceeds the ship&apos;s HP.</p>
 				</div>
@@ -1248,8 +1248,7 @@
 				<div class="box__select">
 					<div class="form-group">
 						<label for="crewQuartersSelect">Crew Quarters</label>
-						<select id="crewQuartersSelect" class="form-control" v-model="params.crewQuartersId"
-							:disabled="frame.size == 'Tiny'">
+						<select id="crewQuartersSelect" class="form-control" v-model="params.crewQuartersId">
 							<option
 								v-for="option in selectOptions.crewQuarters"
 								v-if="(!params.isUseStrictRules) || ( (sizeCategory.multiplier == 1 && option.isTinyOnly) || (sizeCategory.multiplier > 1 && !option.isTinyOnly) )"
@@ -1441,7 +1440,7 @@
 								<div>
 									<!-- duplicate -->
 									<button class="btn btn-primary btn-sm"
-										:disabled="frame.expansionBays != 'Unlimited' && expansionBaysCountUsed >= frame.expansionBays"
+										:disabled="params.isUseStrictRules && frame.expansionBays != 'Unlimited' && expansionBaysCountUsed >= ctExpansionBaySlots"
 										@click="params.expansionBayIds.splice(i+1, 0, params.expansionBayIds[i]);">
 										<svg class="icon"><use xlink:href="#icon-duplicate" /></svg>
 									</button>
@@ -1598,7 +1597,7 @@
 				
 				
 				<!-- Anti-Personnel Weapon -->
-				<div class="box__list-item" v-if="sizeCategory.multiplier <= 3">
+				<div class="box__list-item" v-if="(!params.isUseStrictRules) || sizeCategory.multiplier <= 3">
 					<div class="box__select">
 						<div class="form-group">
 							<label for="antiPersonnelWeaponSelect">Anti-Personnel Weapon</label>
@@ -1889,7 +1888,7 @@
 						    </div>
 						</div>
 						
-						<p v-if="shieldsByPositionTotal != shields.totalSp" class="shields-by-position-invalid">Make sure your shields add up to {{ shields.totalSp }}!</p>
+						<p v-if="shieldsByPositionTotal != shields.totalSp" class="text-warning">Make sure your shields add up to {{ shields.totalSp }}!</p>
 					</div>
 					<div class="box__info">
 						<strong>Total SP</strong> {{ shields.totalSp }};
@@ -2526,7 +2525,7 @@
 			
 			
 			<template v-for="role in selectOptions.role"
-				v-if="role.src == 'scr' || params.sources[role.src] == true">
+				v-if="isCrewRoleAvailable(role)">
 			
 				<div class="box crew" v-if="params.hasCrew">
 				
@@ -2544,7 +2543,7 @@
 					
 						<!-- Officers -->
 						<div class="crew__officers"
-							v-if="typeof params.crewSkills[role.id].countOfficers !== 'undefined'">
+							v-if="params.crewSkills[role.id].countOfficers !== undefined">
 							
 
                             <div class="box--flex">
@@ -2575,7 +2574,6 @@
 						
 						<!-- Skill -->
 						<div v-for="skillId in role.skills" class="crew__skill">
-						
 						
 							<!-- Skill name -->
 							<h4 class="crew__skill__label">{{ getItemById('skill', skillId).name }}</h4>
@@ -2650,16 +2648,15 @@
 				<div class="box__info box__info--output">
 					<div id="outputText">
 						<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
-						<p>{{ frame.size }} {{ frame.name.toLowerCase() }}</p>
+						<p>{{ frame.size }} {{ frame.name.toLowerCase() + (params.hasColonyShipFramework ? " (colony ship)" : "") }}</p>
 						<p><strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'"> ({{ params.thrustersMaterialId }} thrusters)</span>; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
 						<p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
 						<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ damageThreshold }}; <strong>CT</strong> {{ criticalThreshold }}</p>
-						<p v-if="tempHp > 0"><strong>Temporary HP</strong> {{ tempHp }}
+						<p v-if="ablativeArmor.id != 'none'"><strong>Ablative Armor</strong> {{ ablativeArmor.name }}
 							(forward {{ params.ablativeArmorByPosition.forward }},
 							port {{ params.ablativeArmorByPosition.port }},
 							starboard {{ params.ablativeArmorByPosition.starboard }},
-							aft {{ params.ablativeArmorByPosition.aft }});
-							<strong>Ablative Armor</strong> {{ ablativeArmor.name }}
+							aft {{ params.ablativeArmorByPosition.aft }})
 						</p>
 						<!-- shields -->
 						<p v-if="params.shieldType == 'shields'">
@@ -2699,7 +2696,13 @@
 
 						<div v-if="params.hasCrew">
 						<h3>Crew</h3>
-							<p v-for="(roleObj, role) in params.crewSkills" v-if="roleObj.hasRole"><strong>{{ roleDescription[role] }}</strong> {{ crewDescriptions[role] }}</p>
+							<p v-for="(roleObj, roleId) in params.crewSkills"
+								v-if="roleObj.hasRole || (roleId == 'vi' && params.viId != 'none')">
+								<strong>{{ roleDescription[roleId] }}</strong> {{ crewDescriptions[roleId] }}
+							</p>
+							<p v-if="params.viId != 'none'">
+								<strong>VI</strong> {{ viCrewDescription }}
+							</p>
 						</div>
 
 
@@ -2753,7 +2756,7 @@
 					<li>
 						Starfinder RPG Ship Builder by <a href="http://www.jamesturneronline.net">James Turner</a> &bull;
 						<a href="https://twitter.com/james_c_turner">@james_c_turner</a>  &bull;
-						Sep 2017 (last updated August 2020)
+						Sep 2017 (last updated September 2020)
 					</li>
 					<li><a href="http://paizo.com/starfinder/">Starfinder RPG</a> &copy; Paizo Inc, 2017</li>
 					<li>Open Game Licence</li>
