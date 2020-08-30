@@ -133,7 +133,6 @@
 						<li><a href="#armor">Armor</a></li>
 						<li><a href="#computer">Computer</a></li>
 						<li><a href="#crewQuarters">Crew Quarters</a></li>
-						<li v-if="params.sources.pw"><a href="#data-net">Data Net</a></li>
 						<li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
 						<li><a href="#driftEngine">Drift Engine</a></li>
 						<li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
@@ -383,7 +382,7 @@
 							<option v-for="option in selectOptions.sampleShip"
 								:value="option.id"
 								v-if="option.src == 'scr' || params.sources[option.src] == true">
-								{{ option.name }} (Tier {{ option.tier }} {{ getItemById('frame', option.params.frameId).name }})
+								{{ getSampleShipOptionName(option) }}
 							</option>
 						</select>
 					</div>
@@ -1259,37 +1258,6 @@
 				<div class="box__cost">
 					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ crewQuarters.bpCost }}
 				</div>
-			</div>
-
-
-			
-			
-			
-			
-			
-			
-			<!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	DATA NET
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
-			
-			<div id="data-net" class="box" v-if="params.sources.pw == true">
-				<header class="box__header">
-					<h3 id="data-net">Data Net</h3>
-				</header>
-                <div class="box__select">
-                    <div class="checkbox">
-                        <label for="hasDataNet">
-                            <input type="checkbox" v-model="params.hasDataNet" id="hasDataNet">
-                            Data Net (see <em>Pact Worlds</em>, p152)
-                        </label>
-                    </div>
-                </div>
-                <div class="box__cost--list">
-                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetBpCost }}
-					<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetPcuCost }}
-                </div>
 			</div>
 
 
@@ -2220,6 +2188,22 @@
 	                </div>
 	                <div class="box__cost--list">
 	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ params.hasConsciousnessUplink ? 4 : 0 }}
+	                </div>
+				</div>
+
+				<!-- data net -->
+				<div v-if="params.sources.pw">
+	                <div class="box__select">
+	                    <div class="checkbox">
+	                        <label for="hasDataNet">
+	                            <input type="checkbox" v-model="params.hasDataNet" id="hasDataNet">
+	                            Data Net (see <i>Pact Worlds</i>, p152)
+	                        </label>
+	                    </div>
+	                </div>
+	                <div class="box__cost--list">
+	                    <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetBpCost }}
+						<svg class="icon"><use xlink:href="#icon-build" /></svg> {{ dataNetPcuCost }}
 	                </div>
 				</div>
 
