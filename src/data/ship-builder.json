@@ -4659,6 +4659,24 @@
 				],
 				"pcuBudget": 700,
 				"bpCost": 50
+			},
+			{
+				"id": "titan-heavy",
+				"name": "Titan Heavy",
+				"sizes": [
+					"Supercolossal"
+				],
+				"pcuBudget": 950,
+				"bpCost": 60
+			},
+			{
+				"id": "titan-ultra",
+				"name": "Titan Ultra",
+				"sizes": [
+					"Supercolossal"
+				],
+				"pcuBudget": 1200,
+				"bpCost": 70
 			}
 		]
 	},
@@ -13727,7 +13745,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -13963,7 +13980,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -14118,7 +14134,7 @@
 									"modifier": "3"
 								},
 								"piloting": {
-									"modifier": "8",
+									"modifier": "9",
 									"ranks": "1"
 								}
 							}
@@ -14200,7 +14216,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -14214,7 +14229,7 @@
 						"starboard": "3"
 					},
 					"shieldsId": "basic-10",
-					"shipConcept": "The Kevolari Collective’s K-51 Sky Fisher is an attack and support spacecraft designed specifically for the Pact Worlds defensive fleet. NOTE: AC and Piloting aren't calculating correctly.",
+					"shipConcept": "The Kevolari Collective’s K-51 Sky Fisher is an attack and support spacecraft designed specifically for the Pact Worlds defensive fleet. NOTE: Discrepancy in AC and Piloting between tool and SOM.",
 					"shipName": "KC K-51 Sky Fisher",
 					"sources": {
 						"pw": true,
@@ -14436,7 +14451,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -14690,7 +14704,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -14937,7 +14950,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -15201,7 +15213,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -15467,7 +15478,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -15723,7 +15733,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -15737,7 +15746,7 @@
 						"starboard": 25
 					},
 					"shieldsId": "medium-100",
-					"shipConcept": "Designed as a versatile and sustainable long-range fighter. The ship’s distinctive teardrop shape, downswept wings, and golden cockpit canopy combine familiar hallmarks of kasathan shipbuilding with the innovative features represented in Idari Crucible Works’ newer models. NOTE: AC and TL differ from SOM.",
+					"shipConcept": "Designed as a versatile and sustainable long-range fighter. The ship’s distinctive teardrop shape, downswept wings, and golden cockpit canopy combine familiar hallmarks of kasathan shipbuilding with the innovative features represented in Idari Crucible Works’ newer models. NOTE: Discrepancy in AC and TL between tool and SOM.",
 					"shipName": "Idaran Keris",
 					"sources": {
 						"pw": true,
@@ -15997,7 +16006,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -16106,7 +16114,7 @@
 						"wipe": false
 					},
 					"computerId": "mk-1-trinode",
-					"crewQuartersId": "common",
+					"crewQuartersId": "good",
 					"crewSkills": {
 						"captain": {
 							"countOfficers": 0,
@@ -16278,7 +16286,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -16557,7 +16564,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -16711,6 +16717,10 @@
 							"countOfficerCrew": 0,
 							"hasRole": true,
 							"skills": {
+								"computers": {
+									"modifier": 6,
+									"ranks": 5
+								},
 								"engineering": {
 									"modifier": "6",
 									"ranks": "5"
@@ -16842,7 +16852,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -17100,7 +17109,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -17362,7 +17370,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -17638,7 +17645,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -17948,7 +17954,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -18259,7 +18264,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -18565,7 +18569,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -18579,7 +18582,7 @@
 						"starboard": 30
 					},
 					"shieldsId": "medium-120",
-					"shipConcept": "The ATech Resolute is a simple, sturdy ship with a bold personality and a beloved subculture. AbadarCorp first commissioned the Resolute over a century ago to meet its growing need for a deep space freighter that didn’t need an escort. An especially troubling surge in piracy had made the conglomerate’s colonial ambitions far too costly not to take more direct action. The answer came in the form of this blocky, golden hulk that, no matter how hard it was battered, wouldn’t give up the fight.",
+					"shipConcept": "The ATech Resolute is a simple, sturdy ship with a bold personality and a beloved subculture. AbadarCorp first commissioned the Resolute over a century ago to meet its growing need for a deep space freighter that didn’t need an escort. An especially troubling surge in piracy had made the conglomerate’s colonial ambitions far too costly not to take more direct action. The answer came in the form of this blocky, golden hulk that, no matter how hard it was battered, wouldn’t give up the fight. NOTE: Discrepancy in CT between tool and SOM. I think they forgot to add the fortified hull bonus.",
 					"shipName": "Atech Resolute",
 					"sources": {
 						"pw": true,
@@ -18888,7 +18891,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -19220,7 +19222,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -19548,7 +19549,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -19863,7 +19863,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -20225,7 +20224,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -20550,7 +20548,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -20852,7 +20849,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -20866,7 +20862,7 @@
 						"starboard": 60
 					},
 					"shieldsId": "heavy-240",
-					"shipConcept": "Justiciar destroyers function as forward bases and training facilities for Hellknights, especially in territories in the lawless or unsettled Vast that have never—as far as the zealots are concerned—felt the touch of true order. Smaller craft often refuel at these ships to carry out missions throughout a system, returning to recuperate and drop off captured convicts for trial and sentencing. NOTE: Starship Operations Manual doesn't take into account HP increase due to higher tier.",
+					"shipConcept": "Justiciar destroyers function as forward bases and training facilities for Hellknights, especially in territories in the lawless or unsettled Vast that have never—as far as the zealots are concerned—felt the touch of true order. Smaller craft often refuel at these ships to carry out missions throughout a system, returning to recuperate and drop off captured convicts for trial and sentencing. NOTE: Discrepancy in HP and CT between tool and SOM. It could be that SOM overlooked HP increase due to higher tier.",
 					"shipName": "Infernex Justiciar",
 					"sources": {
 						"pw": true,
@@ -21177,7 +21173,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -21506,7 +21501,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -21834,7 +21828,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -21993,7 +21986,7 @@
 									"ranks": 0
 								},
 								"piloting": {
-									"modifier": "10",
+									"modifier": "9",
 									"ranks": "13"
 								}
 							}
@@ -22056,7 +22049,7 @@
 									"ranks": 0
 								},
 								"piloting": {
-									"modifier": "10",
+									"modifier": "9",
 									"ranks": "13"
 								}
 							}
@@ -22149,7 +22142,6 @@
 					"powerCoreSpecialMaterials": [
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -22497,7 +22489,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -22857,7 +22848,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -23229,7 +23219,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -23628,7 +23617,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -24026,7 +24014,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -24425,7 +24412,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -24864,7 +24850,6 @@
 						"none",
 						"none"
 					],
-					"networkNodeId": "none",
 					"reinforcedBulkheadId": "none",
 					"roboticAppendageId": "none",
 					"secondaryComputerId": "basic-computer",
@@ -25071,6 +25056,3720 @@
 								"weaponId": "light-particle-beam",
 								"weight": "light",
 								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "ringworks-peacebringer",
+                "src": "som",
+				"name": "Ringworks Peacebringer",
+				"size": 7,
+				"tier": "17",
+				"params": {
+					"ablativeArmorId": "none",
+					"ablativeArmorByPosition": {
+						"forward": 0,
+						"aft": 0,
+						"port": 0,
+						"starboard": 0
+					},
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-5",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-3-trinode",
+					"crewQuartersId": "common",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": "12",
+									"ranks": "17"
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "17",
+									"ranks": "17"
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": "12",
+									"ranks": "17"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "11",
+									"ranks": "17"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": "6",
+							"countOfficerCrew": "15",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": "12",
+									"ranks": "17"
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": "8",
+							"countOfficerCrew": "10",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "25"
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": "15",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "11",
+									"ranks": "17"
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": "6",
+							"countOfficerCrew": "10",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": "8",
+									"ranks": "17"
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-8",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"arcane-laboratory",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"guest-quarters-luxurious",
+						"hangar-bay",
+						"medical-bay",
+						"recreation-suite-gym",
+						"recreation-suite-hac",
+						"science-lab-general",
+						"shuttle-bay",
+						"synthesis-bay",
+						"tech-workshop"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "dreadnought",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 0,
+					"hasBiometricLocks": 0,
+					"hasColonyShipFramework": 0,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": 0,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": 0,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": false,
+					"powerCoreIds": [
+						"gateway-ultra",
+						"gateway-light",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "advanced-long-range",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": 150,
+						"aft": 150,
+						"port": 150,
+						"starboard": 150
+					},
+					"shieldsId": "superior-600",
+					"shipConcept": "Ringworks Industries designed and built Peacebringer dreadnoughts exclusively for use in the Stewards’ Overwatch fleet. These colossal ships specialize in devastating invading capital fleets and reinforcing planetary defense forces, and they are intended to serve as the backbone of any major fleet dedicated to worldwide protection. NOTE: Discrepancy in Piloting modifier between tool and SOM.",
+					"shipName": "Ringworks Peacebringer",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "c6",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "17",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "supermaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "persistent-particle-beam-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [],
+						"port": [
+							{
+								"weaponId": "super-plasma-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "super-plasma-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "tactical-nuclear-missile-launcher",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "laser-net",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "inheritorworks-redeemer",
+                "src": "som",
+				"name": "Inheritorworks Redeemer",
+				"size": 7,
+				"tier": "18",
+				"params": {
+					"ablativeArmorId": "none",
+					"ablativeArmorByPosition": {
+						"forward": 0,
+						"aft": 0,
+						"port": 0,
+						"starboard": 0
+					},
+					"antiHackingSystemsId": "mk1",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-6",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-3-trinode",
+					"crewQuartersId": "common",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": "13",
+									"ranks": "18"
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "13",
+									"ranks": "18"
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "26"
+								},
+								"intimidate": {
+									"modifier": "18",
+									"ranks": "18"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "13",
+									"ranks": "18"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": "3",
+							"countOfficerCrew": "30",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": "13",
+									"ranks": "18"
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": "5",
+							"countOfficerCrew": "20",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "26"
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": "10",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "13",
+									"ranks": "18"
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": "2",
+							"countOfficerCrew": "15",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": "11",
+									"ranks": "18"
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-10",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods",
+						"power-core-housing",
+						"recreation-suite-gym",
+						"shuttle-bay"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "dreadnought",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 0,
+					"hasBiometricLocks": 0,
+					"hasColonyShipFramework": 0,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": 0,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": 0,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"powerCoreIds": [
+						"gateway-ultra",
+						"gateway-ultra",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "basic-long-range",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": "150",
+						"aft": "90",
+						"port": "150",
+						"starboard": "150"
+					},
+					"shieldsId": "superior-540",
+					"shipConcept": "If the Cathedralship (Pact Worlds, p159) is the heart of the Iomedaean navy, the Redeemer is unquestionably its fist. Slow but indefatigable, these titanic vessels patrol the galaxy with authority.",
+					"shipName": "Inheritorworks Redeemer",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "c4",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "18",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "supermaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "nuclear-mega-missile-launcher",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "persistent-particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [],
+						"port": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-nuclear-missile-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-nuclear-missile-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "laser-net",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "magic-torpedo-unit",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "magic-torpedo-unit",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "pyre-spike-station",
+                "src": "som",
+				"name": "Pyre Spike Station",
+				"size": 7,
+				"tier": "18",
+				"params": {
+					"ablativeArmorId": "none",
+					"ablativeArmorByPosition": {
+						"forward": 0,
+						"aft": 0,
+						"port": 0,
+						"starboard": 0
+					},
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-6",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-3-trinode",
+					"crewQuartersId": "good",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": "18",
+									"ranks": "18"
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "13",
+									"ranks": "18"
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "26"
+								},
+								"intimidate": {
+									"modifier": "13",
+									"ranks": "18"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "14",
+									"ranks": "18"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": "3",
+							"countOfficerCrew": "25",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": "13",
+									"ranks": "18"
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": "4",
+							"countOfficerCrew": "15",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "26"
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": "20",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "14",
+									"ranks": "18"
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": "3",
+							"countOfficerCrew": "15",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": "9",
+									"ranks": "18"
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [
+						{
+							"name": "C2 thrusters",
+							"notes": "ship has Speed 2; have assumed same BP/PCU cost as C4 thrusters",
+							"isEssential": true,
+							"pcuCost": "200",
+							"bpCost": "8"
+						}
+					],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-10",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "none",
+					"expansionBayIds": [
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods",
+						"escape-pods",
+						"hangar-bay",
+						"hydroponic-garden",
+						"hydroponic-garden",
+						"life-boats",
+						"life-boats",
+						"life-boats",
+						"medical-bay",
+						"power-core-housing",
+						"recreation-suite-gym",
+						"recreation-suite-hac",
+						"recreation-suite-trivid-den",
+						"shuttle-bay",
+						"synthesis-bay"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "dreadnought",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 0,
+					"hasBiometricLocks": 0,
+					"hasColonyShipFramework": false,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": 0,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": true,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"powerCoreIds": [
+						"gateway-ultra",
+						"gateway-ultra",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "advanced-long-range",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": 150,
+						"aft": 150,
+						"port": 150,
+						"starboard": 150
+					},
+					"shieldsId": "superior-600",
+					"shipConcept": "The Golden League’s powerful Akaio family emerged from the Gap in control of Pyre Spike Station, in orbit just beyond Aucturn. Even though they lacked any records for how they built or acquired the station, the Akaios quickly turned it into a lucrative trading hub, an unpoliced refuge for ne’er-do-wells, and the unofficial headquarters for the League.",
+					"shipName": "Pyre Spike Station",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "none",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "18",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "super-plasma-cannon",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"isFromTemplate": false,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"isFromTemplate": false,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"port": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "twin-laser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "laser-net",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "light-particle-beam",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "light-particle-beam",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "light",
+								"templateWeight": "light",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "citadel-zirval",
+                "src": "som",
+				"name": "Citadel Zirval",
+				"size": 8,
+				"tier": "19",
+				"params": {
+					"ablativeArmorId": "none",
+					"ablativeArmorByPosition": {
+						"forward": 0,
+						"aft": 0,
+						"port": 0,
+						"starboard": 0
+					},
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-6",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-5-mononode",
+					"crewQuartersId": "good",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": "13",
+									"ranks": "19"
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "13",
+									"ranks": "19"
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": "18",
+									"ranks": "19"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "15",
+									"ranks": "19"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": "4",
+							"countOfficerCrew": "2250",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": "13",
+									"ranks": "19"
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": "6",
+							"countOfficerCrew": "120",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "28"
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": "425",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "15",
+									"ranks": "19"
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": "3",
+							"countOfficerCrew": "500",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": "9",
+									"ranks": "19"
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctNetworkNodes": 3,
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-10",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"brig",
+						"brig",
+						"brig",
+						"brig",
+						"drift-shadow-projector",
+						"science-lab-general",
+						"guest-quarters-luxurious",
+						"hangar-bay",
+						"hangar-bay",
+						"hangar-bay",
+						"life-boats",
+						"life-boats",
+						"life-boats",
+						"medical-bay",
+						"recreation-suite-gym",
+						"sealed-environment-chamber",
+						"sealed-environment-chamber"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "base-ship",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 0,
+					"hasBiometricLocks": 0,
+					"hasColonyShipFramework": 0,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": 0,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": 0,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"powerCoreIds": [
+						"titan-ultra",
+						"none",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "advanced-long-range",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": 150,
+						"aft": 150,
+						"port": 150,
+						"starboard": 150
+					},
+					"shieldsId": "superior-600",
+					"shipConcept": "Citadel Zirval was designed in the haunting aesthetic of an ancient Hellknight fortress, with thousands of rooms, hallways, training facilities, interrogation chambers, and more. At any time, it sustains 5,000 or more armigers in training, plus unknown thousands of Hellknights ready to deploy across the galaxy. NOTE: Discrepency in AC between tool and ship.",
+					"shipName": "Citadel Zirval",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "sc6",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "19",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "antimatter-mega-missile-launcher",
+								"weight": "capital",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "maser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "maser",
+								"weight": "heavy",
+								"isFromTemplate": false,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"port": [
+							{
+								"weaponId": "maser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "maser",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "supermaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "shadow-bolt-array",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-net",
+								"weight": "heavy",
+								"isFromTemplate": false,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "sovereign-dominator",
+                "src": "som",
+				"name": "Sovereign Dominator",
+				"size": 8,
+				"tier": "19",
+				"params": {
+					"ablativeArmorId": "none",
+					"ablativeArmorByPosition": {
+						"forward": 0,
+						"aft": 0,
+						"port": 0,
+						"starboard": 0
+					},
+					"antiHackingSystemsId": "mk4",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-3",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-6-mononode",
+					"crewQuartersId": "luxurious",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": "13",
+									"ranks": "19"
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "13",
+									"ranks": "19"
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "28"
+								},
+								"intimidate": {
+									"modifier": "18",
+									"ranks": "19"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "14",
+									"ranks": "19"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": "4",
+							"countOfficerCrew": "90",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": "13",
+									"ranks": "19"
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": "6",
+							"countOfficerCrew": "65",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "28"
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": "80",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "14",
+									"ranks": "19"
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": "3",
+							"countOfficerCrew": "100",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": "11",
+									"ranks": "19"
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctNetworkNodes": 2,
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-6",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"arcane-laboratory",
+						"science-lab-general",
+						"guest-quarters-luxurious",
+						"hangar-bay",
+						"hangar-bay",
+						"hangar-bay",
+						"hangar-bay",
+						"hangar-bay",
+						"medical-bay",
+						"recreation-suite-gym",
+						"recreation-suite-hac",
+						"recreation-suite-trivid-den",
+						"sealed-environment-chamber",
+						"synthesis-bay"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "ultranought",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 1,
+					"hasBiometricLocks": true,
+					"hasColonyShipFramework": 0,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": 1,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": 0,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"powerCoreIds": [
+						"titan-heavy",
+						"none",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "basic-medium-range",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": 135,
+						"aft": 135,
+						"port": 135,
+						"starboard": 135
+					},
+					"shieldsId": "superior-540",
+					"shipConcept": "The masterpiece of the Imperial Foundry, the Sovereign Dominator is equipped to lead system-wide assaults. NOTE: Discrepancy in Piloting modifier between tool and SOM.",
+					"shipName": "Sovereign Dominator",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "sc6",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "19",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-aeon-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-aeon-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "ultragraser",
+								"weight": "spinal",
+								"templateWeight": "spinal",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [],
+						"port": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "gravity-gun",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "gravity-gun",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-torpedo-launcher",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "supermaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-aeon-caster",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": true,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-aeon-caster",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "driftmaven",
+                "src": "som",
+				"name": "Driftmaven",
+				"size": 8,
+				"tier": "20",
+				"params": {
+					"ablativeArmorId": "none",
+					"ablativeArmorByPosition": {
+						"forward": 0,
+						"aft": 0,
+						"port": 0,
+						"starboard": 0
+					},
+					"antiHackingSystemsId": "mk4",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-6",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-8-mononode",
+					"crewQuartersId": "common",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": 0,
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": "19",
+									"ranks": "20"
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "14",
+									"ranks": "20"
+								},
+								"engineering": {
+									"modifier": "19",
+									"ranks": "20"
+								},
+								"gunnery": {
+									"modifier": "29"
+								},
+								"intimidate": {
+									"modifier": "14",
+									"ranks": "20"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "15",
+									"ranks": "20"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-10",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"arcane-laboratory",
+						"hangar-bay",
+						"tech-workshop",
+						"drift-booster",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "ultranought",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 0,
+					"hasBiometricLocks": 0,
+					"hasColonyShipFramework": 0,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": true,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": 0,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": false,
+					"powerCoreIds": [
+						"titan-ultra",
+						"none",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"ctNetworkNodes": "4",
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "advanced-long-range",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": 135,
+						"aft": 135,
+						"port": 135,
+						"starboard": 135
+					},
+					"shieldsId": "superior-540",
+					"shipConcept": "An enigmatic starship dedicated to the tripartite AI deity Triune, the Driftmaven moves through space following only its patron’s directives. The modular vessel reconfigures itself regularly and can transform into a protective shell or whirling bloom of laser fire at a moment’s notice.",
+					"shipName": "Driftmaven",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "sc4",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "20",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "digital-assault-torrent",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "ultralaser",
+								"weight": "capital",
+								"templateWeight": "spinal",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [],
+						"port": [
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "superlaser",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "quantum-missile-launcher",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						]
+					}
+				}
+			},
+            {
+				"id": "shalar",
+                "src": "som",
+				"name": "Shalar",
+				"size": 8,
+				"tier": "20",
+				"params": {
+					"ablativeArmorId": "medium-200",
+					"ablativeArmorByPosition": {
+						"forward": 50,
+						"aft": 50,
+						"port": 50,
+						"starboard": 50
+					},
+					"antiHackingSystemsId": "none",
+					"antiPersonnelWeaponId": "none",
+					"armorId": "mk-11",
+					"armorMaterialId": "none",
+					"computerCountermeasures": {
+						"alarm": false,
+						"fakeShell": false,
+						"feedback": false,
+						"firewall": false,
+						"lockout": false,
+						"shockGridId": "none",
+						"wipe": false
+					},
+					"computerId": "mk-6-mononode",
+					"crewQuartersId": "good",
+					"crewSkills": {
+						"captain": {
+							"countOfficers": "50",
+							"hasRole": true,
+							"skills": {
+								"bluff": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": "14",
+									"ranks": "20"
+								},
+								"engineering": {
+									"modifier": "19",
+									"ranks": "20"
+								},
+								"gunnery": {
+									"modifier": "29"
+								},
+								"intimidate": {
+									"modifier": "14",
+									"ranks": "20"
+								},
+								"perception": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "16",
+									"ranks": "20"
+								}
+							}
+						},
+						"engineer": {
+							"countOfficers": "5",
+							"countOfficerCrew": "375",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": "19",
+									"ranks": "20"
+								}
+							}
+						},
+						"gunner": {
+							"countOfficers": "5",
+							"countOfficerCrew": "260",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": "29"
+								}
+							}
+						},
+						"pilot": {
+							"countOfficers": 1,
+							"countOfficerCrew": "100",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"diplomacy": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"engineering": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"gunnery": {
+									"modifier": 0
+								},
+								"intimidate": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"piloting": {
+									"modifier": "16",
+									"ranks": "20"
+								}
+							}
+						},
+						"scienceOfficer": {
+							"countOfficers": "4",
+							"countOfficerCrew": "170",
+							"hasRole": true,
+							"skills": {
+								"computers": {
+									"modifier": "14",
+									"ranks": "20"
+								},
+								"life-science": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"physical-science": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"chiefMate": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"acrobatics": {
+									"modifier": 0,
+									"ranks": 0
+								},
+								"athletics": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						},
+						"magicOfficer": {
+							"countOfficers": 1,
+							"countOfficerCrew": 0,
+							"hasRole": false,
+							"skills": {
+								"mysticism": {
+									"modifier": 0,
+									"ranks": 0
+								}
+							}
+						}
+					},
+					"ctNetworkNodes": 3,
+					"ctTim": 0,
+					"ctTimAll": 0,
+					"customFrameBaseId": "light-freighter",
+					"customComponents": [],
+					"dedicatedComputerId": "basic-computer",
+					"defensiveCountermeasuresId": "mk-12",
+					"defensiveCountermeasuresMaterialId": "none",
+					"deflectorShieldId": "none",
+					"driftEngineId": "signal-basic",
+					"expansionBayIds": [
+						"guest-quarters-luxurious",
+						"hangar-bay",
+						"hangar-bay",
+						"hangar-bay",
+						"hangar-bay",
+						"recreation-suite-hac",
+						"recycling-system",
+						"science-lab-life",
+						"science-lab-physical",
+						"tech-workshop",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold",
+						"cargo-hold"
+					],
+					"fortifiedHullId": "none",
+					"frameId": "base-ship",
+					"hasAlgalShielding": 0,
+					"hasAutoDestruct": 0,
+					"hasBiometricLocks": 0,
+					"hasColonyShipFramework": 0,
+					"hasConsciousnessUplink": 0,
+					"hasCrew": 1,
+					"hasDataNet": 0,
+					"hasEmergencyAccelerator": 0,
+					"hasHiveJoining": 0,
+					"hasHolographicMantle": 0,
+					"hasPowersap": 0,
+					"hasReconfigurationSystem": 0,
+					"hasRootSystem": 0,
+					"hasSelfDestructSystem": 0,
+					"hasSpaceStationFramework": 0,
+					"isSetDefaultCrewSkillValues": 0,
+					"isUseStrictRules": 1,
+					"powerCoreIds": [
+						"titan-heavy",
+						"none",
+						"none",
+						"none"
+					],
+					"powerCoreSpecialMaterials": [
+						"none",
+						"none",
+						"none",
+						"none"
+					],
+					"reinforcedBulkheadId": "none",
+					"roboticAppendageId": "none",
+					"secondaryComputerId": "basic-computer",
+					"sensorsId": "none",
+					"sensorsMaterialId": "none",
+					"shieldType": "shields",
+					"shieldsByPosition": {
+						"forward": "90",
+						"aft": "130",
+						"port": "130",
+						"starboard": "130"
+					},
+					"shieldsId": "heavy-480",
+					"shipConcept": "When the first Star Citadel, Heorrhad, had its innards hewn from stone, its dwarven engineers repurposed the waste rock to construct Shalar, a vast and sturdy fortress reinforced with modern, high-tech materials. Rumors suggest that somewhere near Shalar’s center rests a keystone that, should it ever be destroyed or removed, would trigger a cascade of failures that would spell the end of the entire citadel. NOTE: Discrepancy in TL, turn and Piloting modifier between tool and SOM.",
+					"shipName": "Shalar",
+					"sources": {
+						"pw": true,
+						"som": true
+					},
+					"thrustersId": "sc6",
+					"thrustersMaterialId": "none",
+					"thrustersBoosterId": "none",
+					"thrustersBoosterMaterialId": "none",
+					"tierId": "20",
+					"version": "1.0.1",
+					"viId": "none",
+					"viHoloProjectorId": "none",
+					"viSkillExpanderId": "none",
+					"weaponMounts": {
+						"forward": [
+							{
+								"weaponId": "gravity-cannon",
+								"weight": "capital",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "particle-beam",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"aft": [
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"isFromTemplate": false,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"isFromTemplate": false,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"port": [
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"starboard": [
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "heavy-laser-cannon",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "none",
+								"weight": "heavy",
+								"templateWeight": "heavy",
+								"isFromTemplate": true,
+								"canBeLinked": false,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							}
+						],
+						"turret": [
+							{
+								"weaponId": "mass-driver",
+								"weight": "capital",
+								"templateWeight": "capital",
+								"isFromTemplate": true,
+								"canBeLinked": true,
+								"isLinked": false,
+								"canHaveOrbitalDiscount": false,
+								"hasOrbitalDiscount": false,
+								"specialMaterial": "none"
+							},
+							{
+								"weaponId": "mass-driver",
+								"weight": "capital",
+								"templateWeight": "capital",
 								"isFromTemplate": true,
 								"canBeLinked": false,
 								"isLinked": false,

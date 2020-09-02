@@ -455,7 +455,8 @@ function Ship(json) {
 				isUseStrictRules:1,
 				powerCoreIds:["none"],
 				powerCoreSpecialMaterials:["none"],
-				networkNodeId: "none",
+				ctNetworkNodes: 0,
+				// networkNodeId: "none",
 				reinforcedBulkheadId: "none",
 				roboticAppendageId: "none",
 				secondaryComputerId: "basic-computer",
@@ -555,7 +556,7 @@ function Ship(json) {
         |----------------------------------------------------------------------------------
         */
 		mounted: function() {
-			// var sampleShipObj = this.getItemById("sampleShip", "idaran-saga");
+			// var sampleShipObj = this.getItemById("sampleShip", "driftmaven");
 			// var sampleShipParams = cloneObject(sampleShipObj.params);
 			// this.params = sampleShipParams;
 			// this.fixMissingParamsValues();
@@ -718,9 +719,12 @@ function Ship(json) {
 				var desc = "";
 				if (this.computer.id !== "basic-computer") {
 					var nodes = this.computer.nodes;
+					if (this.params.sources.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+						nodes += this.networkNodes.ct;
+					}
 					var bonus = "+" + this.computer.bonus;
 					var nodesWord = integerToWord(nodes);
-					desc = bonus + " any " + nodesWord + " check" + (nodes > 1 ? "s" : "") + " per round";
+					desc = bonus + " to any " + nodesWord + " check" + (nodes > 1 ? "s" : "") + " per round";
 				}
 				return desc;
 			},
@@ -856,6 +860,8 @@ function Ship(json) {
 				ct += this.computer.nodes;
 				if (this.params.sources.som && this.frame.size == "Supercolossal") {
 					ct += this.secondaryComputer.nodes;
+
+					ct += this.networkNodes.ct;
 				}
 				return ct;            	
             },
@@ -1351,8 +1357,26 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-            networkNode: function() {
-            	return this.getItemById("networkNode", this.params.networkNodeId);
+            // networkNode: function() {
+            // 	return this.getItemById("networkNode", this.params.networkNodeId);
+            // },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            networkNodes: function() {
+            	var ctNodes = 0;
+
+            	if (this.params.sources.som && this.isSupercolossal) {
+            		ctNodes = parseInt(this.params.ctNetworkNodes);
+            	}
+
+            	var pcuCosts = [0,0,0,0,8,10,11,13,15,17,19];
+
+            	return {
+            		bpCost: ctNodes * this.computer.bonus,
+            		ct: ctNodes,
+            		pcuCost: ctNodes * pcuCosts[(this.computer.bonus == 0 ? 0 : (this.computer.bonus - 1))]
+            	};
             },
             /*
             |------------------------------------------------------------------------------
@@ -1568,7 +1592,7 @@ function Ship(json) {
 					"expansionBay",
 					"fortifiedHull",
 					"frame",
-					"networkNode",
+					// "networkNode",
 					"personalWeapon",
 					"powerCore",
 					"reinforcedBulkhead",
@@ -1768,6 +1792,12 @@ function Ship(json) {
 					(this.computer.id == "basic-computer" ? "" : " computer") +
 					" (tier " + this.computerTier + ")";
 				desc.push( computerDesc );
+
+				// network nodes
+				if (this.params.sources.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+					var networkNodeDesc = ("mk " + (this.computer.bonus) + " network node").pluralise(this.networkNodes.ct);
+					desc.push(networkNodeDesc + " (" + this.networkNodes.ct + ")");
+				}
                 
                 // algal shielding
                 if (this.params.hasAlgalShielding) {
@@ -1954,7 +1984,9 @@ function Ship(json) {
 					parseInt(this.frame.bpCost) +
 					parseInt(this.hiveJoiningBpCost) +
 					(this.params.hasHolographicMantle ? 12 : 0) +
-					(this.isSupercolossal ? this.networkNode.bpCost : 0) +
+					// (this.isSupercolossal ? this.networkNode.bpCost : 0) +
+					// (this.isSupercolossal ? parseInt(this.ctNetworkNode) * this.computer.bonus : 0) +
+					(this.isSupercolossal ? this.networkNodes.bpCost : 0) +
 					parseInt(this.powerCoresBpCost) +
 					(this.params.hasPowersap ? 3 * this.sizeCategory.multiplier : 0) +
 					(this.params.hasReconfigurationSystem ? 30 : 0) +
@@ -1999,7 +2031,7 @@ function Ship(json) {
                         (this.params.hasHolographicMantle ? 10 : 0) +
                         (this.params.hasReconfigurationSystem ? 50 : 0) +
                         (this.params.hasRootSystem ? 5 : 0) +
-						(this.isSupercolossal ? this.networkNode.bpCost : 0),
+						(this.isSupercolossal ? this.networkNodes.bpCost : 0),
 				};
 			},
             /*
@@ -2078,6 +2110,7 @@ function Ship(json) {
             */
 			weaponDescriptions: function() {
 				var desc = {};
+
 				for(position in this.weaponMounts) {
 					var positionDesc = [];
 					for(i in this.weaponMounts[position]) {
@@ -2575,6 +2608,9 @@ function Ship(json) {
             	}
 
             	var options = [];
+
+            	// Don't worry about rules
+            	if (!this.params.isUseStrictRules) return this.selectOptions.powerCore;
 
             	// Supercolossal frame
             	if (this.frame.size == "Supercolossal") {
@@ -3241,17 +3277,17 @@ function Ship(json) {
             /*
             |------------------------------------------------------------------------------
             */
-            updateComputer: function() {
-            	if (!this.params.sources.som) return;
-            	if (this.params.networkNodeId == "none") return;
-            	if (this.frame.size != "Supercolossal") return;
+            // updateComputer: function() {
+            // 	if (!this.params.sources.som) return;
+            // 	if (this.params.networkNodeId == "none") return;
+            // 	if (this.frame.size != "Supercolossal") return;
 
-            	if (this.computer.bonus != this.networkNode.bonus) {
-            		this.params.networkNodeId = "mk" + this.computer.bonus;
-            	}
+            // 	if (this.computer.bonus != this.networkNode.bonus) {
+            // 		this.params.networkNodeId = "mk" + this.computer.bonus;
+            // 	}
 
-            	return;
-            },
+            // 	return;
+            // },
             /*
             |------------------------------------------------------------------------------
             */
