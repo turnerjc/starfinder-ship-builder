@@ -1399,7 +1399,9 @@ function Ship(json) {
 			pcuBudget: function() {
 				var pcuBudget = 0;
 				for(i in this.powerCores) {
-					pcuBudget += this.powerCores[i].pcuBudget;
+					var powerCoreBudget = this.powerCores[i].pcuBudget;
+					if (this.params.powerCoreSpecialMaterials[i] == "abysium") powerCoreBudget *= 1.25;
+					pcuBudget += Math.floor(powerCoreBudget);
 				}
 				return pcuBudget;
 			},
