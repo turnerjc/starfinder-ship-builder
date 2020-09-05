@@ -5081,7 +5081,7 @@
 				"speed": "n/a",
 				"damage": "6d4",
 				"pcuCost": 15,
-				"bpCost": 15,
+				"bpCost": 10,
 				"specialProperties": ["ripper"],
 				"weight": "light",
 				"type": "Direct-Fire"
@@ -5094,7 +5094,7 @@
 				"speed": "n/a",
 				"damage": "4d4",
 				"pcuCost": 10,
-				"bpCost": 6,
+				"bpCost": 10,
 				"specialProperties": [],
 				"weight": "light",
 				"type": "Direct-Fire"
@@ -5212,7 +5212,7 @@
 				"speed": "12",
 				"damage": "4d8",
 				"pcuCost": 10,
-				"bpCost": 4,
+				"bpCost": 14,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
@@ -5225,7 +5225,7 @@
 				"speed": "14",
 				"damage": "3d8",
 				"pcuCost": 5,
-				"bpCost": 5,
+				"bpCost": 11,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
@@ -5238,7 +5238,7 @@
 				"speed": "16",
 				"damage": "2d8",
 				"pcuCost": 5,
-				"bpCost": 4,
+				"bpCost": 7,
 				"specialProperties": [],
 				"weight": "light",
 				"type": "Tracking"
@@ -5251,7 +5251,7 @@
 				"speed": "10",
 				"damage": "2d6",
 				"pcuCost": 10,
-				"bpCost": 3,
+				"bpCost": 5,
 				"specialProperties": ["array", "limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
@@ -5264,7 +5264,7 @@
 				"speed": "10",
 				"damage": "5d8",
 				"pcuCost": 10,
-				"bpCost": 5,
+				"bpCost": 18,
 				"specialProperties": ["irradiate-low", "limited-fire-5"],
 				"weight": "light",
 				"type": "Tracking"
@@ -5317,7 +5317,7 @@
 				"speed": "n/a",
 				"damage": "Special",
 				"pcuCost": 30,
-				"bpCost": 24,
+				"bpCost": 12,
 				"specialProperties": ["emp"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
@@ -5343,7 +5343,7 @@
 				"speed": "n/a",
 				"damage": "4d8",
 				"pcuCost": 10,
-				"bpCost": 8,
+				"bpCost": 15,
 				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
@@ -5356,7 +5356,7 @@
 				"speed": "n/a",
 				"damage": "5d6",
 				"pcuCost": 15,
-				"bpCost": 12,
+				"bpCost": 15,
 				"specialProperties": ["point-12"],
 				"weight": "heavy",
 				"type": "Direct-Fire"
@@ -5382,7 +5382,7 @@
 				"speed": "n/a",
 				"damage": "8d6",
 				"pcuCost": 25,
-				"bpCost": 15,
+				"bpCost": 20,
 				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
@@ -5434,7 +5434,7 @@
 				"speed": "n/a",
 				"damage": "5d8",
 				"pcuCost": 15,
-				"bpCost": 12,
+				"bpCost": 18,
 				"specialProperties": [],
 				"weight": "heavy",
 				"type": "Direct-Fire"
@@ -5460,7 +5460,7 @@
 				"speed": "8",
 				"damage": "10d10",
 				"pcuCost": 15,
-				"bpCost": 12,
+				"bpCost": 35,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
@@ -5473,7 +5473,7 @@
 				"speed": "10",
 				"damage": "10d8",
 				"pcuCost": 15,
-				"bpCost": 10,
+				"bpCost": 35,
 				"specialProperties": ["irradiate-medium", "limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
@@ -5486,7 +5486,7 @@
 				"speed": "12",
 				"damage": "5d10",
 				"pcuCost": 10,
-				"bpCost": 10,
+				"bpCost": 18,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
@@ -5499,7 +5499,7 @@
 				"speed": "14",
 				"damage": "5d8",
 				"pcuCost": 10,
-				"bpCost": 8,
+				"bpCost": 16,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "heavy",
 				"type": "Tracking"
@@ -5539,7 +5539,7 @@
 				"speed": "n/a",
 				"damage": "2d6×10",
 				"pcuCost": 25,
-				"bpCost": 25,
+				"bpCost": 30,
 				"specialProperties": [],
 				"weight": "capital",
 				"type": "Direct-Fire"
@@ -5578,7 +5578,7 @@
 				"speed": "n/a",
 				"damage": "Special",
 				"pcuCost": 45,
-				"bpCost": 45,
+				"bpCost": 18,
 				"specialProperties": ["emp"],
 				"weight": "capital",
 				"type": "Direct-Fire"
@@ -5604,7 +5604,7 @@
 				"speed": "n/a",
 				"damage": "3d4×10",
 				"pcuCost": 50,
-				"bpCost": 60,
+				"bpCost": 45,
 				"specialProperties": ["line"],
 				"weight": "capital",
 				"type": "Direct-Fire"
@@ -5617,7 +5617,7 @@
 				"speed": "n/a",
 				"damage": "2d8×10",
 				"pcuCost": 50,
-				"bpCost": 60,
+				"bpCost": 35,
 				"specialProperties": ["irradiate-high"],
 				"weight": "capital",
 				"type": "Direct-Fire"
@@ -5669,7 +5669,7 @@
 				"speed": "6",
 				"damage": "4d10×10",
 				"pcuCost": 15,
-				"bpCost": 25,
+				"bpCost": 70,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
@@ -5682,7 +5682,7 @@
 				"speed": "8",
 				"damage": "2d10×10",
 				"pcuCost": 10,
-				"bpCost": 25,
+				"bpCost": 40,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
@@ -5695,7 +5695,7 @@
 				"speed": "8",
 				"damage": "4d8×10",
 				"pcuCost": 15,
-				"bpCost": 20,
+				"bpCost": 60,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
@@ -5708,7 +5708,7 @@
 				"speed": "12",
 				"damage": "2d8×10",
 				"pcuCost": 15,
-				"bpCost": 20,
+				"bpCost": 35,
 				"specialProperties": ["limited-fire-5", "quantum"],
 				"weight": "capital",
 				"type": "Tracking"
@@ -5721,7 +5721,7 @@
 				"speed": "10",
 				"damage": "2d6×10",
 				"pcuCost": 10,
-				"bpCost": 20,
+				"bpCost": 25,
 				"specialProperties": ["limited-fire-5"],
 				"weight": "capital",
 				"type": "Tracking"
