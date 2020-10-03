@@ -2142,9 +2142,10 @@ function Ship(json) {
                             mountDesc = weaponName;
                         }
 
-                        // properties (damage, special properties, special properties)
+                        // properties (damage, range, special properties, special properties)
                         var properties = [];
                         properties.push(this.getWeaponDamage(mount));
+                        properties.push(this.getWeaponRangeNumerical(mount.weapon));
                         if (mount.weapon.specialProperties.length > 0) properties = properties.concat(this.getNamesFromIds("weaponSpecialProperty", mount.weapon.specialProperties, "").toLowerCase());
                         if (mount.materialDesc) properties.push(mount.materialDesc.toLowerCase());
                         mountDesc += " (" + properties.join(", ") + ")";
@@ -2805,6 +2806,28 @@ function Ship(json) {
                 if (dice.mult > 1) result += "×" + dice.mult;
 
                 return result;
+            },
+            /*
+            |------------------------------------------------------------------------------
+            */
+            getWeaponRangeNumerical: function(weapon) {
+            	if (weapon.range === undefined) return "";
+
+            	switch (weapon.range) {
+            		case "Short":
+            			return "5 hexes";
+            			break;
+            		case "Medium":
+            			return "10 hexes";
+            			break;
+        			case "Long":
+        				return "20 hexes";
+        				break;
+        			default:
+        				return "n/a";
+            	}
+
+            	return "";
             },
             /*
             |------------------------------------------------------------------------------

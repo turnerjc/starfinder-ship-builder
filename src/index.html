@@ -1961,7 +1961,7 @@
 										<template v-for="option in selectOptions.shipWeapon.filter(wpn => wpn.type == wpnType)"
 											v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)">
 											<option :value="option.id" v-if="option.src == 'scr' || params.sources[option.src] == true">
-												{{ option.name }} ({{ option.damage }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})
+												{{ option.name }} ({{ option.damage }}, {{ getWeaponRangeNumerical(option) }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})
 											</option>
 										</template>
 									</optgroup>
@@ -2809,6 +2809,6 @@
 	<script src="https://unpkg.com/vue"></script>
 
 	<script src="vendor/clipboard/dist/clipboard.min.js"></script>
-	<script src="js/script.js?v=20200903"></script>
+	<script src="js/script.js?v=20200907"></script>
 </body>
 </html>
