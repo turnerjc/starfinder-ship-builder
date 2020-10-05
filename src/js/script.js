@@ -2001,7 +2001,7 @@ function Ship(json) {
 					(this.params.shieldType == "shields" ? parseInt(this.shields.bpCost) : 0) +
 					(this.params.hasSpaceStationFramework ? Math.floor(this.frame.bpCost * 0.2) : 0) +
 					parseInt(this.thrusters.bpCost) +
-					parseInt(this.thrustersBooster.bpCost) +
+					(this.hasBoosterThrusterHousing ? parseInt(this.thrustersBooster.bpCost) : 0) +
 					this.timBpCost +
 					this.vi.bpCost +
 					(this.params.viId != "none" ? this.viHoloProjector.bpCost : 0) +
@@ -2018,7 +2018,7 @@ function Ship(json) {
 			totalPcuCost: function() {
 				return {
 					essential: this.thrusters.pcuCost +
-						this.thrustersBooster.pcuCost +
+						(this.hasBoosterThrusterHousing ? this.thrustersBooster.pcuCost : 0) +
 						this.defensiveCountermeasures.pcuCost +
 						(this.params.shieldType == "shields" ? this.shields.pcuCost : 0) +
 						(this.params.shieldType == "deflector-shield" ? this.deflectorShield.pcuCost : 0) +
