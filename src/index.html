@@ -2919,11 +2919,7 @@
           <div class="box__info box__info--output">
             <div id="outputText">
               <h3>{{ shipName }} (Tier {{ tier.name }})</h3>
-              <p>
-                {{ frame.size }} {{ frame.name.toLowerCase() + (params.hasColonyShipFramework ? "
-                (colony ship)" : "") + (params.hasSpaceStationFramework ? " (space station)" : "")
-                }}
-              </p>
+              <p>{{ frame.size }} {{ frameName }}</p>
               <p>
                 <strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed }}<span
                   v-if="params.sources.som && params.thrustersMaterialId != 'none'"
@@ -3032,9 +3028,7 @@
               box below into a text file. When you're ready to resume, copy and paste it back in to
               the JSON box in the &lsquo;Input&rsquo; section at the top of the page.
             </p>
-            <textarea id="outputJson" cols="30" rows="10" class="form-control">
-{{ jsonParams }}</textarea
-            >
+            <textarea id="outputJson" cols="30" rows="10" class="form-control">{{ jsonParams }}</textarea>
           </div>
         </div>
 

@@ -1031,6 +1031,14 @@ export default {
       }
     },
 
+    frameName() {
+      return (
+        frame.name.toLowerCase() +
+        (params.hasColonyShipFramework ? '(colony ship)' : '') +
+        (params.hasSpaceStationFramework ? ' (space station)' : '')
+      )
+    },
+
     hasBoosterThrusterHousing: function () {
       if (!this.params.sources.som) return false
 
