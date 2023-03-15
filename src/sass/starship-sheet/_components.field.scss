@@ -7,17 +7,16 @@
 .field + .field,
 .row + .row,
 .field + .row,
-.row + .field
-{
-	margin-top: $spacer;
+.row + .field {
+  margin-top: $spacer;
 }
 
 .field-label {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .field-data {
-	border: 2px solid #000;
-	border-radius: 4px;
-	padding: $spacer * .25;
+  border: 2px solid #000;
+  border-radius: 4px;
+  padding: $spacer * 0.25;
 }

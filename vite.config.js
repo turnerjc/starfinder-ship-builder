@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   root: 'src',
-  base: "/starfinder-ship-builder/",
+  base: '/starfinder-ship-builder/',
   plugins: [vue()]
-});
+})

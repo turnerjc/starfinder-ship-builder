@@ -11,48 +11,48 @@ $shields-height: 300px;
 }
 
 .shields-img {
-	max-width: $shields-height;
-	position: absolute;
-	top: -50px;
-	left: 499px;
-	z-index: 0;
+  max-width: $shields-height;
+  position: absolute;
+  top: -50px;
+  left: 499px;
+  z-index: 0;
 }
 
 .shields-stats {
-	display: grid;
-	grid-template-areas: "forward forward"
-		"port starboard"
-		"aft aft";
-	// grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: repeat(3, #{$shields-height / 3});
+  display: grid;
+  grid-template-areas:
+    'forward forward'
+    'port starboard'
+    'aft aft';
+  // grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, #{$shields-height / 3});
 }
 
 .shields-stat {
-	font-size: 1.25em;
-	text-align: center;
-	z-index: 10;
+  font-size: 1.25em;
+  text-align: center;
+  z-index: 10;
 }
 
 .shields-stat--forward {
-	grid-area: forward;
-	padding-top: #{$shields-height * 0.1375};
+  grid-area: forward;
+  padding-top: #{$shields-height * 0.1375};
 }
 
 .shields-stat--starboard {
-	grid-area: starboard;
+  grid-area: starboard;
 }
 
 .shields-stat--starboard,
-.shields-stat--port
-{
-	padding-top: 68%;
+.shields-stat--port {
+  padding-top: 68%;
 }
 
 .shields-stat--aft {
-	grid-area: aft;
-	padding-top: 21%;
+  grid-area: aft;
+  padding-top: 21%;
 }
 
 .shields-stat--port {
-	grid-area: port;
+  grid-area: port;
 }

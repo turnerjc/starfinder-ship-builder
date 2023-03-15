@@ -5,33 +5,30 @@
 */
 
 ul.supporters {
-	list-style-type: none;
-	padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
-
 @media screen and (max-width: $breakpoint-sm) {
-	ul.supporters {
-		li {
-			display: inline;
-		}
+  ul.supporters {
+    li {
+      display: inline;
+    }
 
-		li:not(:last-of-type)::after {
-			content: ", ";
-		}
-	}
+    li:not(:last-of-type)::after {
+      content: ', ';
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint-sm + 1) {
-	ul.supporters {
-		columns: 2;
-	}
+  ul.supporters {
+    columns: 2;
+  }
 }
 
 @media screen and (min-width: $breakpoint-lg) {
-	ul.supporters {
-		columns: 4;
-	}
+  ul.supporters {
+    columns: 4;
+  }
 }
-
-

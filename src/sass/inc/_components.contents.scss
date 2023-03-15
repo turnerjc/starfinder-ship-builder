@@ -1,32 +1,31 @@
 .contents,
 .cost {
-	-ms-flex-preferred-size: 100%;
-	flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .contents li {
-	margin-bottom: .125em;
+  margin-bottom: 0.125em;
 }
 
 .contents li a {
-	// color: #000;
-	text-decoration: none;
+  // color: #000;
+  text-decoration: none;
 }
 
 .contents__0,
 .contents__1 {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .contents__0 {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 .contents__1 {
-	padding-left: 1em;
+  padding-left: 1em;
 }
 
 .contents__1 > li {
-	font-size: 0.95em;
+  font-size: 0.95em;
 }
-
