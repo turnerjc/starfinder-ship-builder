@@ -1,7 +1,9 @@
 {
   "name": "starfinder-ship-builder",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -10,8 +12,13 @@
   },
   "homepage": "https://<username>.github.io/starfinder-ship-builder/",
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.59.2",
     "vite": "^4.1.4"
   }
 }
