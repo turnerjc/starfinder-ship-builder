@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.11",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-loader": "^17.0.1"
   }
 }
