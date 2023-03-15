@@ -1,4 +1,3 @@
-import { createApp } from 'vue'
 import shipData from '../data/ship-builder.json'
 
 var WEAPON_SORT = {
@@ -237,7 +236,7 @@ if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') 
 | SHIP
 |------------------------------------------------------------------------------------------
 */
-const app = createApp({
+export default {
   data() {
     return {
       data: shipData,
@@ -548,25 +547,18 @@ const app = createApp({
       |----------------------------------------------------------------------------------
       */
   computed: {
-    /*
-          |------------------------------------------------------------------------------
-          */
     ablativeArmor: function () {
       return this.getItemById('ablativeArmor', this.params.ablativeArmorId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     ablativeArmorByPositionTotal: function () {
       var total = 0
-      for (position in this.params.ablativeArmorByPosition) {
+      for (var position in this.params.ablativeArmorByPosition) {
         total += parseInt(this.params.ablativeArmorByPosition[position])
       }
       return total
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     antiHackingSystems: function () {
       var antiHackingSystems = this.getItemById(
         'antiHackingSystems',
@@ -581,27 +573,19 @@ const app = createApp({
       }
       return antiHackingSystems
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     antiPersonnelWeapon: function () {
       return this.getItemById('personalWeapon', this.params.antiPersonnelWeaponId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     antiPersonnelWeaponBpCost: function () {
       return (this.antiPersonnelWeapon.type == 'heavy' ? 5 : 0) + this.antiPersonnelWeapon.level
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     armor: function () {
       return this.getItemById('armor', this.params.armorId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     armorBpCost: function () {
       var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier
 
@@ -625,9 +609,7 @@ const app = createApp({
 
       return armorBpCost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     armorClass: function () {
       return (
         10 +
@@ -637,9 +619,7 @@ const app = createApp({
         this.deflectorShield.bonusToAc
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     armorSpecial: function () {
       var output = []
       var outputStr = 'n/a'
@@ -657,19 +637,15 @@ const app = createApp({
       }
       return outputStr
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     biometricLocksBpCost: function () {
       return 5 * this.params.hasBiometricLocks
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     complement: function () {
       var complement = 0
 
-      for (roleIndex in this.params.crewSkills) {
+      for (var roleIndex in this.params.crewSkills) {
         var role = this.params.crewSkills[roleIndex]
 
         if (!role.hasRole) continue
@@ -687,15 +663,11 @@ const app = createApp({
 
       return complement
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     computer: function () {
       return this.getItemById('computer', this.params.computerId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     computerDescription: function () {
       var desc = ''
       if (this.computer.id !== 'basic-computer') {
@@ -709,12 +681,10 @@ const app = createApp({
       }
       return desc
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     computerCountermeasuresBpCost: function () {
       var total = 0
-      for (measure in this.params.computerCountermeasures) {
+      for (var measure in this.params.computerCountermeasures) {
         if (measure == 'shockGridId') {
           total += this.shockGridBpCost
         } else {
@@ -725,12 +695,10 @@ const app = createApp({
       }
       return total
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     computerCountermeasuresDescription: function () {
       var desc = []
-      for (measure in this.params.computerCountermeasures) {
+      for (var measure in this.params.computerCountermeasures) {
         if (measure == 'shockGridId') {
           if (this.params.computerCountermeasures[measure] !== 'none') {
             var shockGridDesc =
@@ -752,9 +720,7 @@ const app = createApp({
       }
       return desc.join(', ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     computerSkillBonusDesc: function () {
       if (this.computer.nodes === undefined || this.computer.nodes == 0) return '+0'
 
@@ -775,16 +741,12 @@ const app = createApp({
 
       return bonuses.join('/')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     computerTier: function () {
       var shipTier = this.tier.value
       return shipTier < 2 ? 1 : Math.floor(shipTier * 0.5)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     countPowerCoreHousings: function () {
       var countHousings = this.sizeCategory.countPowerCoreHousings
       if (
@@ -796,15 +758,11 @@ const app = createApp({
       this.adjustPowerCores(countHousings)
       return countHousings
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     crewQuarters: function () {
       return this.getItemById('crewQuarters', this.params.crewQuartersId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     crewDescriptions: function () {
       var that = this
 
@@ -830,15 +788,11 @@ const app = createApp({
 
       return descs
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     criticalThreshold: function () {
       return Math.round(this.hp / 5) + this.fortifiedHull.bonusToCt
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     ctComputerNodes: function () {
       var ct = 0
       ct += this.computer.nodes
@@ -849,9 +803,7 @@ const app = createApp({
       }
       return ct
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     ctExpansionBaySlots: function () {
       var ctExpansionBaySlots = this.frame.expansionBays
       if (
@@ -863,9 +815,7 @@ const app = createApp({
       }
       return ctExpansionBaySlots
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     ctExternalExpansionBays: function () {
       if (!this.params.sources.som) return 0
 
@@ -875,9 +825,7 @@ const app = createApp({
 
       return ctBays.length
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     customComponentBpTotal: function () {
       if (!isset(this.params.customComponents)) return 0
 
@@ -888,9 +836,7 @@ const app = createApp({
 
       return total
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     customComponentPcuTotal: function () {
       if (!isset(this.params.customComponents)) return 0
 
@@ -905,9 +851,7 @@ const app = createApp({
 
       return total
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     customComponentsDescription: function () {
       if (this.params.customComponents.length == 0) return 'None'
 
@@ -919,17 +863,13 @@ const app = createApp({
 
       return components.join('; ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     customFrameSize: function () {
       if (!isset(this.params.customFrame)) return {}
 
       return this.getItemById('sizeCategory', this.params.customFrame.size)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     damageThreshold: function () {
       var dt = this.frame.dt
       if (this.params.sources.som && this.params.armorMaterialId == 'adamantine-alloy') {
@@ -938,33 +878,23 @@ const app = createApp({
       }
       return dt
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     dataNetBpCost: function () {
       return this.params.hasDataNet ? 3 : 0
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     dataNetPcuCost: function () {
       return this.params.hasDataNet ? 5 : 0
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     dedicatedComputer: function () {
       return this.getItemById('computer', this.params.dedicatedComputerId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     defensiveCountermeasures: function () {
       return this.getItemById('defensiveCountermeasures', this.params.defensiveCountermeasuresId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     defensiveCountermeasuresBpCost: function () {
       var dcBpCost = this.defensiveCountermeasures.bpCost
 
@@ -982,27 +912,19 @@ const app = createApp({
       }
       return dcBpCost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     deflectorShield: function () {
       return this.getItemById('deflectorShield', this.params.deflectorShieldId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     driftEngine: function () {
       return this.getItemById('driftEngine', this.params.driftEngineId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     driftEngineBpCost: function () {
       return this.driftEngine.bpCostMultiplier * this.sizeCategory.multiplier
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     expansionBays: function () {
       var that = this
       var expansionBays = []
@@ -1011,21 +933,17 @@ const app = createApp({
       })
       return expansionBays
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     expansionBaysCountUsed: function () {
       var countUsed = 0
-      for (i in this.expansionBays) {
+      for (var i in this.expansionBays) {
         if (this.expansionBays[i].id !== 'none') {
           countUsed += this.expansionBays[i].numBays
         }
       }
       return countUsed
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     expansionBaysDescription: function () {
       // test if no expansion bays
       if (this.sizeCategory.id != 'Supercolossal' && this.expansionBays.length == 0) return 'None'
@@ -1039,7 +957,7 @@ const app = createApp({
 
       // collect expansion bays by type
       var expansionBaysByType = {}
-      for (index in this.expansionBays) {
+      for (var index in this.expansionBays) {
         var expansionBayId = this.expansionBays[index].id
         maybeCreateProperty(expansionBaysByType, expansionBayId, 'Integer')
         expansionBaysByType[expansionBayId]++
@@ -1057,7 +975,7 @@ const app = createApp({
       // get description
       var expansionBaysDescription = []
       var sep = ', '
-      for (id in expansionBaysByType) {
+      for (var id in expansionBaysByType) {
         if (id == 'none') continue
 
         // name
@@ -1076,21 +994,15 @@ const app = createApp({
 
       return expansionBaysDescription.join(sep)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     expansionBaysTotalBpCost: function () {
       return this.getSumOfPropertyValuesInCollection(this.expansionBays, 'bpCost')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     expansionBaysTotalPcuCost: function () {
       return this.getSumOfPropertyValuesInCollection(this.expansionBays, 'pcuCost')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     fortifiedHull: function () {
       var fortifiedHull = {}
 
@@ -1105,9 +1017,7 @@ const app = createApp({
 
       return fortifiedHull
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     frame: function () {
       if (this.params.frameId == 'custom') {
         // custom frame
@@ -1120,9 +1030,7 @@ const app = createApp({
         return frame
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasBoosterThrusterHousing: function () {
       if (!this.params.sources.som) return false
 
@@ -1133,11 +1041,9 @@ const app = createApp({
 
       return hasHousing
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasComputerCountermeasures: function () {
-      for (measure in this.params.computerCountermeasures) {
+      for (var measure in this.params.computerCountermeasures) {
         if (measure == 'shockGridId') {
           if (this.params.computerCountermeasures[measure] !== 'none') {
             return true
@@ -1150,9 +1056,7 @@ const app = createApp({
       }
       return false
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasDedicatedComputerHousing: function () {
       if (!this.params.sources.som) return false
 
@@ -1163,9 +1067,7 @@ const app = createApp({
 
       return hasHousing
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasHealingPod: function () {
       if (!this.params.sources.som) return false
 
@@ -1176,21 +1078,17 @@ const app = createApp({
 
       return hasPod
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasPowerCoreHousingExpansionBay: function () {
       var result = false
-      for (i in this.params.expansionBayIds) {
+      for (var i in this.params.expansionBayIds) {
         if (this.params.expansionBayIds[i] == 'power-core-housing') {
           result = true
         }
       }
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasSupercolossalPowerCore: function () {
       if (this.frame.size != 'Supercolossal') return false
 
@@ -1207,9 +1105,7 @@ const app = createApp({
 
       return hasSupercolossalPowerCore
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hasSecurity: function () {
       return (
         this.params.antiHackingSystemsId !== 'none' ||
@@ -1222,21 +1118,15 @@ const app = createApp({
         this.params.hasReconfigurationSystem
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hiveJoiningBpCost: function () {
       return this.params.hasHiveJoining ? 1 : 0
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     hp: function () {
       return parseInt(this.frame.hp) + parseInt(this.tier.hpIncrease) * this.frame.hpIncrement
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isAblativeArmorBalanced: function () {
       var positions = this.params.ablativeArmorByPosition
       var isBalanced = true
@@ -1251,15 +1141,11 @@ const app = createApp({
 
       return isBalanced
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isBpCostOverBudget: function () {
       return this.totalBpCost > this.tier.bpBudget
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isComplementValid: function () {
       var isComplementValid = true
       if (this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {
@@ -1267,15 +1153,11 @@ const app = createApp({
       }
       return isComplementValid
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isExpansionBaysCountOverBudget: function () {
       return this.expansionBaysCountUsed > this.ctExpansionBaySlots
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isOrbitalWeaponDiscountUsed: function () {
       if (!this.params.sources.som) return false
       if (this.sizeCategory.multiplier < 4) return false
@@ -1285,7 +1167,7 @@ const app = createApp({
       var that = this
 
       var isUsed = false
-      for (position in this.weaponMounts) {
+      for (var position in this.weaponMounts) {
         this.weaponMounts[position].forEach(function (mount, i) {
           if (isUsed) return
 
@@ -1298,29 +1180,21 @@ const app = createApp({
       }
       return isUsed
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isPcuCostOverBudget: function () {
       return this.totalPcuCost.essential > this.pcuBudget
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isSupercolossal: function () {
       return this.params.sources.som && this.frame.size == 'Supercolossal'
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     jsonParams: function () {
       var jsonParams = cloneObject(this.params)
       jsonParams['isSetDefaultCrewSkillValues'] = 0 // Because otherwise crew skills get overwritten!
       return JSON.stringify(jsonParams)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     maneuverabilityRating: function () {
       if (this.params.hasSpaceStationFramework) {
         return this.getItemById('maneuverabilityRating', 'poor')
@@ -1328,9 +1202,7 @@ const app = createApp({
 
       return this.getItemById('maneuverabilityRating', this.frame.maneuverability)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     modifiersDescription: function () {
       var desc = []
       // computer nodes
@@ -1347,15 +1219,11 @@ const app = createApp({
       }
       return desc.join(', ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     // networkNode: function() {
     // 	return this.getItemById("networkNode", this.params.networkNodeId);
     // },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     networkNodes: function () {
       var ctNodes = 0
 
@@ -1371,9 +1239,7 @@ const app = createApp({
         pcuCost: ctNodes * pcuCosts[this.computer.bonus == 0 ? 0 : this.computer.bonus - 1]
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     pilotingRanks: function () {
       var pilotingRanks = 0
       var crewSkills = this.params.crewSkills
@@ -1386,24 +1252,20 @@ const app = createApp({
       }
       return pilotingRanks
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     pcuBudget: function () {
       var pcuBudget = 0
-      for (i in this.powerCores) {
+      for (var i in this.powerCores) {
         var powerCoreBudget = this.powerCores[i].pcuBudget
         if (this.params.powerCoreSpecialMaterials[i] == 'abysium') powerCoreBudget *= 1.25
         pcuBudget += Math.floor(powerCoreBudget)
       }
       return pcuBudget
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     powerCoreDescription: function () {
       var desc = []
-      for (i in this.powerCores) {
+      for (var i in this.powerCores) {
         var powerCore = this.powerCores[i]
         if (powerCore.id !== 'none') {
           desc.push(powerCore.name + ' (' + powerCore.pcuBudget + ' PCU)')
@@ -1411,12 +1273,10 @@ const app = createApp({
       }
       return desc.join(', ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     powerCores: function () {
-      powerCores = []
-      for (i in this.params.powerCoreIds) {
+      var powerCoreList = []
+      for (var i in this.params.powerCoreIds) {
         var powerCore = cloneObject(this.getItemById('powerCore', this.params.powerCoreIds[i]))
         powerCore.sizeList = powerCore.sizes.join(', ')
 
@@ -1444,23 +1304,19 @@ const app = createApp({
           }
         }
 
-        powerCores.push(powerCore)
+        powerCoreList.push(powerCore)
       }
-      return powerCores
+      return powerCoreList
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     powerCoresBpCost: function () {
       var bpCost = 0
-      for (i in this.powerCores) {
+      for (var i in this.powerCores) {
         bpCost += this.powerCores[i].bpCost
       }
       return bpCost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     reinforcedBulkhead: function () {
       var reinforcedBulkhead = {}
 
@@ -1474,19 +1330,15 @@ const app = createApp({
 
       return reinforcedBulkhead
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     roboticAppendage: function () {
       var roboticAppendage = this.getItemById('roboticAppendage', this.params.roboticAppendageId)
       return roboticAppendage
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     roleDescription: function () {
       roleDesc = {}
-      for (role in this.params.crewSkills) {
+      for (var role in this.params.crewSkills) {
         roleDesc[role] = this.getItemById('role', role).name
         var roleObj = this.params.crewSkills[role]
         if (isset(roleObj.countOfficers) && roleObj.countOfficers > 0) {
@@ -1515,15 +1367,11 @@ const app = createApp({
       }
       return roleDesc
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     secondaryComputer: function () {
       return this.getItemById('computer', this.params.secondaryComputerId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     securityDescription: function () {
       var desc = []
       if (this.params.antiHackingSystemsId !== 'none') {
@@ -1552,9 +1400,7 @@ const app = createApp({
       }
       return desc.join(', ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     securityTotalBpCost: function () {
       return (
         this.antiHackingSystems.bpCost +
@@ -1567,9 +1413,7 @@ const app = createApp({
         (this.params.hasReconfigurationSystem ? 30 : 0)
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     securityTotalPcuCost: function () {
       return (
         (this.params.hasEmergencyAccelerator ? 5 : 0) +
@@ -1577,9 +1421,7 @@ const app = createApp({
         (this.params.hasReconfigurationSystem ? 50 : 0)
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     selectOptions: function () {
       var that = this
       var selectOptions = {}
@@ -1616,7 +1458,7 @@ const app = createApp({
         'viSkillExpander'
       ]
 
-      for (i in fields) {
+      for (var i in fields) {
         var field = fields[i]
         selectOptions[field] = this.getSelectOptionsFor(field)
       }
@@ -1645,21 +1487,15 @@ const app = createApp({
 
       return selectOptions
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     selfDestructSystemBpCost: function () {
       return this.params.hasSelfDestructSystem * 5 * this.sizeCategory.multiplier
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     sensors: function () {
       return this.getItemById('sensors', this.params.sensorsId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     sensorsBpCost: function () {
       var sensorsBpCost = this.sensors.bpCost
       if (this.params.sources.som) {
@@ -1676,55 +1512,39 @@ const app = createApp({
       }
       return sensorsBpCost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     shields: function () {
       return this.getItemById('shields', this.params.shieldsId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     shieldsByPositionTotal: function () {
       var total = 0
-      for (position in this.params.shieldsByPosition) {
+      for (var position in this.params.shieldsByPosition) {
         total += parseInt(this.params.shieldsByPosition[position])
       }
       return total
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     shipName: function () {
       return this.params.shipName == '' ? 'New Ship' : this.params.shipName
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     shockGrid: function () {
       return this.getItemById('shockGrid', this.params.computerCountermeasures.shockGridId)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     shockGridBpCost: function () {
       return this.shockGrid.bpCostMultiplier * this.computerTier
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     sizeCategory: function () {
       return this.getItemById('sizeCategory', this.frame.size)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     skillModifierComputers: function () {
       return this.sensors.modifier
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     skillModifierPiloting: function () {
       var modifier = 0
 
@@ -1741,14 +1561,12 @@ const app = createApp({
 
       return modifier
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     skillTotals: function () {
       var skillTotals = {}
-      for (role in this.params.crewSkills) {
+      for (var role in this.params.crewSkills) {
         skillTotals[role] = {}
-        for (skill in this.params.crewSkills[role].skills) {
+        for (var skill in this.params.crewSkills[role].skills) {
           var skillObj = this.params.crewSkills[role].skills[skill]
           skillTotals[role][skill] = parseInt(skillObj.modifier)
           if (isset(skillObj.ranks)) {
@@ -1764,9 +1582,7 @@ const app = createApp({
       }
       return skillTotals
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     systemsDescription: function () {
       var desc = []
       // sensors
@@ -1884,9 +1700,7 @@ const app = createApp({
 
       return desc.join(', ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     targetLock: function () {
       return (
         10 +
@@ -1898,15 +1712,11 @@ const app = createApp({
         this.deflectorShield.bonusToTl
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     tempHp: function () {
       return this.ablativeArmor.tempHp
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     thrusters: function () {
       var thrusters = cloneObject(this.getItemById('thrusters', this.params.thrustersId))
 
@@ -1936,9 +1746,7 @@ const app = createApp({
 
       return thrusters
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     thrustersBooster: function () {
       var thrustersBooster = cloneObject(
         this.getItemById('thrusters', this.params.thrustersBoosterId)
@@ -1965,16 +1773,12 @@ const app = createApp({
 
       return thrustersBooster
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     tier: function () {
       var tier = this.getItemById('tier', this.params.tierId)
       return tier
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     timBpCost: function () {
       var ctTim = parseInt(this.params.ctTim)
       var ctTimAll = parseInt(this.params.ctTimAll)
@@ -1983,9 +1787,7 @@ const app = createApp({
 
       return cost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     totalBpCost: function () {
       return (
         parseInt(this.ablativeArmor.bpCost) +
@@ -2037,9 +1839,7 @@ const app = createApp({
         parseInt(this.weaponsTotalCosts.weaponLinksBp)
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     totalPcuCost: function () {
       return {
         essential:
@@ -2063,9 +1863,7 @@ const app = createApp({
           (this.isSupercolossal ? this.networkNodes.bpCost : 0)
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     turn: function () {
       return (
         this.maneuverabilityRating.turn +
@@ -2074,16 +1872,12 @@ const app = createApp({
         Math.ceil(this.ctExternalExpansionBays / 3)
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     vi: function () {
       var vi = this.getItemById('vi', this.params.viId)
       return vi
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     viCrewDescription: function () {
       if (this.params.viId == 'none') return ''
 
@@ -2103,16 +1897,12 @@ const app = createApp({
 
       return desc.join(', ')
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     viHoloProjector: function () {
       var viHoloProjector = this.getItemById('viHoloProjector', this.params.viHoloProjectorId)
       return viHoloProjector
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     viHoloProjectorSize: function () {
       if (this.params.viHoloProjectorId == 'none') return 'n/a'
 
@@ -2128,22 +1918,18 @@ const app = createApp({
 
       return viHoloProjSizeCategory.name
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     viSkillExpander: function () {
       var viSkillExpander = this.getItemById('viSkillExpander', this.params.viSkillExpanderId)
       return viSkillExpander
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     weaponDescriptions: function () {
       var desc = {}
 
-      for (position in this.weaponMounts) {
+      for (var position in this.weaponMounts) {
         var positionDesc = []
-        for (i in this.weaponMounts[position]) {
+        for (var i in this.weaponMounts[position]) {
           var mount = this.weaponMounts[position][i]
           var prevI = parseInt(i) - 1
           var mountDesc = ''
@@ -2194,14 +1980,12 @@ const app = createApp({
       }
       return desc
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     weaponMounts: function () {
       var weaponMounts = {}
-      for (position in this.params.weaponMounts) {
+      for (var position in this.params.weaponMounts) {
         weaponMounts[position] = []
-        for (i in this.params.weaponMounts[position]) {
+        for (var i in this.params.weaponMounts[position]) {
           var params = cloneObject(this.params.weaponMounts[position][i])
           params.weapon = this.getItemById('shipWeapon', params.weaponId)
           params.position = position
@@ -2232,9 +2016,7 @@ const app = createApp({
       }
       return weaponMounts
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     weaponsTotalCosts: function () {
       var totals = {
         weaponLinksBp: 0,
@@ -2243,8 +2025,8 @@ const app = createApp({
         weaponsPcu: 0,
         weaponMaterialsBp: 0
       }
-      for (position in this.weaponMounts) {
-        for (i in this.weaponMounts[position]) {
+      for (var position in this.weaponMounts) {
+        for (var i in this.weaponMounts[position]) {
           var mount = this.weaponMounts[position][i]
           totals.weaponMountsBp += mount.mountBpCost
           totals.weaponsBp += mount.bpCost
@@ -2255,9 +2037,6 @@ const app = createApp({
       }
       return totals
     }
-    /*
-          |------------------------------------------------------------------------------
-          */
   },
   /*
       |----------------------------------------------------------------------------------
@@ -2271,9 +2050,7 @@ const app = createApp({
       this.params.customFrame.mounts[position].push('light')
       this.setWeaponMounts(this.frame.mounts)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     adjustPowerCores: function (countHousings) {
       var that = this
 
@@ -2291,9 +2068,7 @@ const app = createApp({
         }
       })
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     canWeaponMountBeCreated: function (position) {
       var result = true
       var countMountsInPosition = this.params.weaponMounts[position].length
@@ -2302,9 +2077,7 @@ const app = createApp({
       }
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     canWeaponMountBeDowngraded: function (weight, isFromTemplate, templateWeight) {
       var result = true
       if (weight == 'light') {
@@ -2322,9 +2095,7 @@ const app = createApp({
       }
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     canWeaponMountBeUpgraded: function (position, weight) {
       var result = true
       var weights = { light: 0, heavy: 1, capital: 2 }
@@ -2346,35 +2117,27 @@ const app = createApp({
       }
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     clearAll: function () {
       this.params = cloneObject(this.paramsReset)
       this.json = ''
       document.getElementById('sampleShipSelect').value = 'none'
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     clearWeaponMounts: function () {
-      for (position in this.params.weaponMounts) {
+      for (var position in this.params.weaponMounts) {
         // var mountList = this.params.weaponMounts[position];
         this.params.weaponMounts[position].splice(0, this.params.weaponMounts[position].length) // start, deleteCount
       }
       // console.log(this.params.weaponMounts);
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     convertJsonInput: function () {
       var params = JSON.parse(this.json)
       this.params = params
       this.fixMissingParamsValues()
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     createCustomComponent: function () {
       // initialise on older builds
       if (!isset(this.params.customComponents)) {
@@ -2391,9 +2154,7 @@ const app = createApp({
 
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     createWeaponMount: function (position) {
       var newMount = {
         weaponId: 'none',
@@ -2407,16 +2168,12 @@ const app = createApp({
       }
       this.params.weaponMounts[position].push(newMount)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     destroyWeaponMount: function (position, i) {
       this.params.weaponMounts[position].splice(i, 1) // start, deleteCount
       this.setWeaponLinking(position)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     doesNextMountHaveSameWeaponId: function (position, i) {
       var result = false
       var nextI = parseInt(i) + 1
@@ -2429,9 +2186,7 @@ const app = createApp({
       }
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     downgradeWeaponMount: function (position, i) {
       var weaponMount = this.params.weaponMounts[position][i]
       if (weaponMount.weight == 'capital') {
@@ -2442,11 +2197,9 @@ const app = createApp({
       weaponMount.weaponId = 'none'
       this.setWeaponLinking(position)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     fixMissingCrewSkills: function () {
-      for (roleId in this.paramsReset.crewSkills) {
+      for (var roleId in this.paramsReset.crewSkills) {
         // if role is missing, add it
         if (!isset(this.params.crewSkills[roleId])) {
           console.log('Missing crew role, ' + roleId + ', added to ship')
@@ -2458,7 +2211,7 @@ const app = createApp({
           continue
         }
 
-        for (skillId in this.paramsReset.crewSkills[roleId].skills) {
+        for (var skillId in this.paramsReset.crewSkills[roleId].skills) {
           // if skill is missing, add it
           if (!isset(this.params.crewSkills[roleId].skills[skillId])) {
             console.log(
@@ -2474,13 +2227,11 @@ const app = createApp({
       }
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     fixMissingParamsValues: function () {
       var that = this
 
-      for (key in this.paramsReset) {
+      for (var key in this.paramsReset) {
         // crew positions
         if (key == 'crewSkills') this.fixMissingCrewSkills()
 
@@ -2490,8 +2241,8 @@ const app = createApp({
           { id: 'hasOrbitalDiscount', default: false }
         ]
         if (key == 'weaponMounts' && isset(this.params.weaponMounts)) {
-          for (position in this.params.weaponMounts) {
-            for (i in this.params.weaponMounts[position]) {
+          for (var position in this.params.weaponMounts) {
+            for (var i in this.params.weaponMounts[position]) {
               missingWeaponMountParams.forEach(function (param) {
                 if (isset(that.params.weaponMounts[position][i][param.id])) return
                 that.$set(that.params.weaponMounts[position][i], param.id, param.default)
@@ -2516,7 +2267,7 @@ const app = createApp({
         // power core special materials
         if (key == 'powerCoreSpecialMaterials') {
           this.params.powerCoreSpecialMaterials = []
-          for (i in this.params.powerCoreIds) {
+          for (var i in this.params.powerCoreIds) {
             this.params.powerCoreSpecialMaterials.push('none')
           }
         }
@@ -2540,9 +2291,7 @@ const app = createApp({
             return [{id: "test", name: "Test"}];
           },
           */
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getExpansionBayBpCost: function (bay) {
       // Quantum defender
       if (bay.id == 'quantum-defender') {
@@ -2553,9 +2302,7 @@ const app = createApp({
       // everything else
       return bay.bpCost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getExpansionBayPcuCost: function (bay) {
       // Quantum defender
       if (bay.id == 'quantum-defender') {
@@ -2566,15 +2313,11 @@ const app = createApp({
       // everything else
       return bay.pcuCost
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getFrameMountWeaponWeight: function (position, index) {
       return this.frame.mounts[position][index]
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getItemById: function (prop, id) {
       // console.log(prop, id);
       this.testThatPropExists(prop)
@@ -2591,9 +2334,7 @@ const app = createApp({
       }
       return item
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getItemByKey: function (prop, key, val) {
       this.testThatPropExists(prop)
 
@@ -2611,9 +2352,7 @@ const app = createApp({
       }
       return item
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getNamesFromIds: function (prop, ids, emptyString) {
       if (!ids || ids.length == 0) return emptyString ? emptyString : ''
 
@@ -2680,9 +2419,7 @@ const app = createApp({
 
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getPowerCoreOptionsForSupercolossal: function (index) {
       var options = []
 
@@ -2743,16 +2480,12 @@ const app = createApp({
             return multipliers;
           },
           */
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getPrefixedModifier: function (val) {
       var prefix = val >= 0 ? '+' : ''
       return prefix + val
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getSampleShipOptionName: function (option) {
       // name
       var shipName = option.name
@@ -2772,13 +2505,11 @@ const app = createApp({
 
       return option.name + ' (' + 'Tier ' + option.tier + ' ' + size.name + ' ' + frame.name + ')'
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getSelectOptionsFor: function (prop) {
       this.testThatPropExists(prop)
       this.testThatPropIsArray(prop)
-      for (item in this.data[prop].data) {
+      for (var item in this.data[prop].data) {
         this.testThatItemHasId(prop, item)
         this.testThatItemHasName(prop, item)
       }
@@ -2823,19 +2554,15 @@ const app = createApp({
 
       return desc
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getSumOfPropertyValuesInCollection: function (collection, property) {
       var total = 0
-      for (i in collection) {
+      for (var i in collection) {
         total += collection[i][property]
       }
       return total
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getWeaponDamage: function (mount) {
       if (mount.weapon.damage == 'Special') return 'Special'
 
@@ -2853,9 +2580,7 @@ const app = createApp({
 
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     getWeaponRangeNumerical: function (weapon) {
       if (weapon.range === undefined) return ''
 
@@ -2875,9 +2600,7 @@ const app = createApp({
 
       return ''
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     initParams: function () {
       if (window.JTOStarshipSheetModel === undefined) {
         this.params = cloneObject(this.paramsReset)
@@ -2885,9 +2608,7 @@ const app = createApp({
         this.params = cloneObject(window.JTOStarshipSheetModel)
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     inputSampleShipParams: function () {
       var sampleShipSelect = document.getElementById('sampleShipSelect')
       var sampleShipId = sampleShipSelect.value
@@ -2898,9 +2619,7 @@ const app = createApp({
         this.fixMissingParamsValues()
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isCrewQuartersOptionAvailable: function (option) {
       if (!this.params.isUseStrictRules) return true
       if (this.sizeCategory.multiplier == 1) {
@@ -2931,9 +2650,7 @@ const app = createApp({
       if (this.params.sources[role.src]) return true
       return false
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isOrbitalWeapon: function (weapon) {
       var isOrbital = false
       weapon.specialProperties.forEach(function (prop) {
@@ -2943,9 +2660,7 @@ const app = createApp({
       })
       return isOrbital
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     isWeaponMountLinked: function (position, i) {
       var result = false
       if (
@@ -2956,9 +2671,7 @@ const app = createApp({
       }
       return result
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     maybeAdjustCtTim: function (paramName) {
       if (parseInt(this.params.ctTim) >= parseInt(this.params.ctTimAll)) return
 
@@ -2972,9 +2685,7 @@ const app = createApp({
 
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     maybeCreateExpansionBays: function (targetCountBays) {
       for (var i = 0; i < targetCountBays; i++) {
         if (!isset(this.params.expansionBayIds[i])) {
@@ -3023,9 +2734,7 @@ const app = createApp({
 
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     popExcessExpansionBays: function (targetCountBays) {
       var countBays = this.params.expansionBayIds.length
       if (countBays > targetCountBays) {
@@ -3034,32 +2743,24 @@ const app = createApp({
         }
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     removeCustomComponent: function (index) {
       this.params.customComponents.splice(index, 1)
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     removeCustomFrameMount: function (position, index) {
       this.params.customFrame.mounts[position].splice(index, 1)
       if (!this.params.customFrame.mounts[position].length)
         this.$delete(this.params.customFrame.mounts, position)
       this.setWeaponMounts(this.frame.mounts)
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     resetCustomFrame: function () {
       this.setCustomFrame()
       this.updateFrame()
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setCrewQuarters: function (frameSize) {
       if (frameSize == 'Tiny') {
         if (this.params.crewQuartersId !== 'none') {
@@ -3071,9 +2772,7 @@ const app = createApp({
         }
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setCustomFrame: function () {
       this.$set(
         this.params,
@@ -3081,17 +2780,15 @@ const app = createApp({
         cloneObject(this.getItemById('frame', this.params.customFrameBaseId))
       )
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setDefaultCrewSkillValues: function () {
       if (this.params.isSetDefaultCrewSkillValues) {
         var tier = this.getItemById('tier', this.params.tierId).value
         if (tier < 1) {
           tier = 1
         }
-        for (role in this.params.crewSkills) {
-          for (skill in this.params.crewSkills[role].skills) {
+        for (var role in this.params.crewSkills) {
+          for (var skill in this.params.crewSkills[role].skills) {
             var skillObj = this.params.crewSkills[role].skills[skill]
             if (skillObj.ranks > 0) {
               skillObj.ranks = tier
@@ -3100,9 +2797,7 @@ const app = createApp({
         }
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setDefaultPositionDependentValues: function (param, key) {
       // test that computed param exists
       if (!isset(this[param])) {
@@ -3124,7 +2819,7 @@ const app = createApp({
 
       var total = this[param][key]
       var positions = []
-      for (position in this.params[param + 'ByPosition']) {
+      for (var position in this.params[param + 'ByPosition']) {
         positions.push(position)
         this.params[param + 'ByPosition'][position] = 0
       }
@@ -3202,9 +2897,7 @@ const app = createApp({
 
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setPowerCoresForSupercolossal: function () {
       for (var index = 0; index < this.countPowerCoreHousings; index++) {
         // 1. powerCoreId doesn't exist
@@ -3253,12 +2946,10 @@ const app = createApp({
 
       return
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setWeaponLinking: function (position) {
       var mounts = this.params.weaponMounts[position]
-      for (i in mounts) {
+      for (var i in mounts) {
         if (
           mounts[i].weaponId !== 'none' &&
           !this.isWeaponMountLinked(position, i - 1) &&
@@ -3272,22 +2963,20 @@ const app = createApp({
         }
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     setWeaponMounts: function (mounts) {
       this.clearWeaponMounts()
 
       var arcs = ['forward', 'aft', 'port', 'starboard', 'turret', 'spinal']
 
-      for (arcIndex in arcs) {
+      for (var arcIndex in arcs) {
         var arc = arcs[arcIndex]
 
         if (!isset(mounts[arc])) continue
 
         var arcMounts = mounts[arc]
 
-        for (mountIndex in arcMounts) {
+        for (var mountIndex in arcMounts) {
           var mountWeight = arcMounts[mountIndex]
 
           var objMount = {
@@ -3313,41 +3002,31 @@ const app = createApp({
       this.maybeCreateExpansionBays(  targetCountBays );
     },
           */
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     testThatItemHasId: function (prop, item) {
       if (!isset(this.data[prop].data[item].id)) {
         throw 'Property ' + prop + '[' + item + '] does not have an id'
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     testThatItemHasName: function (prop, item) {
       if (!isset(this.data[prop].data[item].name)) {
         throw 'Property ' + prop + '[' + item + '] does not have a name'
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     testThatPropExists: function (prop) {
       if (!isset(this.data[prop])) {
         throw 'Property ' + prop + ' does not exist'
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     testThatPropIsArray: function (prop) {
       if (typeof this.data[prop].data !== 'object') {
         throw 'Property ' + prop + ' is not an array'
       }
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     // updateComputer: function() {
     // 	if (!this.params.sources.som) return;
     // 	if (this.params.networkNodeId == "none") return;
@@ -3359,9 +3038,7 @@ const app = createApp({
 
     // 	return;
     // },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     updateFrame: function () {
       // this.syncExpansionBays( this.frame.expansionBays );
       this.setCrewQuarters(this.frame.size)
@@ -3370,9 +3047,7 @@ const app = createApp({
       this.setComputer()
       this.setNetworkNode()
     },
-    /*
-          |------------------------------------------------------------------------------
-          */
+
     upgradeWeaponMount: function (position, i) {
       var weaponMount = this.params.weaponMounts[position][i]
       if (weaponMount.weight == 'light') {
@@ -3394,7 +3069,7 @@ const app = createApp({
   /*
       |----------------------------------------------------------------------------------
       */
-}).mount('#app') // createApp
+}
 
 /*
 |------------------------------------------------------------------------------------------
