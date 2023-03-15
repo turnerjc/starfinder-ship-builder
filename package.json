@@ -1,6 +1,17 @@
 {
   "name": "starfinder-ship-builder",
   "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://<username>.github.io/starfinder-ship-builder/",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.4"
   }
 }
