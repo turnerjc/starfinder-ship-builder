@@ -542,10 +542,10 @@ export default {
     }
   },
   /*
-      |----------------------------------------------------------------------------------
-      |  COMPUTED VALUES
-      |----------------------------------------------------------------------------------
-      */
+  |----------------------------------------------------------------------------------
+  |  COMPUTED VALUES
+  |----------------------------------------------------------------------------------
+  */
   computed: {
     ablativeArmor: function () {
       return this.getItemById('ablativeArmor', this.params.ablativeArmorId)
@@ -2047,10 +2047,10 @@ export default {
     }
   },
   /*
-      |----------------------------------------------------------------------------------
-      |  METHODS
-      |----------------------------------------------------------------------------------
-      */
+  |----------------------------------------------------------------------------------
+  |  METHODS
+  |----------------------------------------------------------------------------------
+  */
   methods: {
     addCustomFrameMount: function (position) {
       if (!isset(this.params.customFrame.mounts[position]))
@@ -2294,11 +2294,10 @@ export default {
       }
     },
     /*
-          |------------------------------------------------------------------------------
-          getAvailableWeaponUpgrades: function(weapon) {
-            return [{id: "test", name: "Test"}];
-          },
-          */
+     getAvailableWeaponUpgrades: function(weapon) {
+       return [{id: "test", name: "Test"}];
+     },
+     */
 
     getExpansionBayBpCost: function (bay) {
       // Quantum defender
@@ -2375,12 +2374,12 @@ export default {
       return names.join(', ')
     },
     /*
-          |------------------------------------------------------------------------------
-          | getPowerCoreOptionName
-          |------------------------------------------------------------------------------
-          | e.g. None, Titan Light (PCU 700, Supercolossal), Nova Light (PCU 400, Large - Colossal)
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | getPowerCoreOptionName
+    |------------------------------------------------------------------------------
+    | e.g. None, Titan Light (PCU 700, Supercolossal), Nova Light (PCU 400, Large - Colossal)
+    |------------------------------------------------------------------------------
+    */
     getPowerCoreOptionName: function (option) {
       if (option.id == 'none') return 'None'
 
@@ -2397,10 +2396,10 @@ export default {
       return name
     },
     /*
-          |------------------------------------------------------------------------------
-          | getPowerCoreOptions
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | getPowerCoreOptions
+    |------------------------------------------------------------------------------
+    */
     getPowerCoreOptions: function (index) {
       if (this.params.powerCoreIds[index] === undefined) {
         return [this.getItemById('powerCore', 'none')]
@@ -2466,18 +2465,18 @@ export default {
       return options
     },
     /*
-          |------------------------------------------------------------------------------
-          | getPowerCoreSizeMultipliers
-          |------------------------------------------------------------------------------
-          | Turns a power core's list of size names ["Tiny", "Small", "Medium", ...]
-          | into a list of numbers [0, 1, 2, ...]
-          |------------------------------------------------------------------------------
-          getPowerCoreSizeMultipliers: function(powerCore) {
-            if (powerCore.sizes === undefined) return [];
+    |------------------------------------------------------------------------------
+    | getPowerCoreSizeMultipliers
+    |------------------------------------------------------------------------------
+    | Turns a power core's list of size names ["Tiny", "Small", "Medium", ...]
+    | into a list of numbers [0, 1, 2, ...]
+    |------------------------------------------------------------------------------
+    getPowerCoreSizeMultipliers: function(powerCore) {
+      if (powerCore.sizes === undefined) return [];
 
-            var multipliers = [];
+      var multipliers = [];
 
-            var that = this;
+      var that = this;
 
       powerCore.sizes.forEach(function(size) {
         var sizeCategory = that.getItemById("sizeCategory", size);
@@ -2485,9 +2484,9 @@ export default {
         multipliers[] = sizeCategory.multiplier;
       });
 
-            return multipliers;
-          },
-          */
+      return multipliers;
+    },
+    */
 
     getPrefixedModifier: function (val) {
       var prefix = val >= 0 ? '+' : ''
@@ -2524,14 +2523,14 @@ export default {
       return this.data[prop].data
     },
     /*
-          |------------------------------------------------------------------------------
-          | getSkillDesc
-          |------------------------------------------------------------------------------
-          | Expects a valid skillId
-          | Expects an object in the form { ranks: 1, modifier: 4 }
-          | Returns string in the form "Piloting + 5 (1 rank)" or "gunnery +4"
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | getSkillDesc
+    |------------------------------------------------------------------------------
+    | Expects a valid skillId
+    | Expects an object in the form { ranks: 1, modifier: 4 }
+    | Returns string in the form "Piloting + 5 (1 rank)" or "gunnery +4"
+    |------------------------------------------------------------------------------
+    */
     getSkillDesc: function (skillId, skill) {
       if (skillId == 'gunnery' && skill.modifier == 0) return ''
       if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return ''
@@ -2646,12 +2645,12 @@ export default {
       return false
     },
     /*
-          |------------------------------------------------------------------------------
-          | isCrewRoleAvailable
-          |------------------------------------------------------------------------------
-          | Expects a crew role. Checks to see if role is available. Returns boolean.
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | isCrewRoleAvailable
+    |------------------------------------------------------------------------------
+    | Expects a crew role. Checks to see if role is available. Returns boolean.
+    |------------------------------------------------------------------------------
+    */
     isCrewRoleAvailable: function (role) {
       if (role.src == 'scr') return true
       if (role.id == 'vi' && this.params.viId != 'none') return true
@@ -2702,14 +2701,14 @@ export default {
       }
     },
     /*
-          |------------------------------------------------------------------------------
-          | maybeResetPowerCoreIds
-          |------------------------------------------------------------------------------
-          | This is called when a power core is changed
-          | There's some complicated logic around supercolossal ships
-          | This does some cross-checking to prevent illegal combinations of power cores
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | maybeResetPowerCoreIds
+    |------------------------------------------------------------------------------
+    | This is called when a power core is changed
+    | There's some complicated logic around supercolossal ships
+    | This does some cross-checking to prevent illegal combinations of power cores
+    |------------------------------------------------------------------------------
+    */
     maybeResetPowerCoreIds: function (currentIndex) {
       if (this.frame.size != 'Supercolossal') return
 
@@ -2843,13 +2842,13 @@ export default {
       }
     },
     /*
-          |------------------------------------------------------------------------------
-          | setPowerCores
-          |------------------------------------------------------------------------------
-          | When a new frame is selected, need to check that existing power cores match new
-          | options in select
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | setPowerCores
+    |------------------------------------------------------------------------------
+    | When a new frame is selected, need to check that existing power cores match new
+    | options in select
+    |------------------------------------------------------------------------------
+    */
     setPowerCores: function () {
       if (this.frame.size == 'Supercolossal') {
         this.setPowerCoresForSupercolossal()
@@ -2874,23 +2873,23 @@ export default {
       return
     },
     /*
-          |------------------------------------------------------------------------------
-          | setComputer
-          |------------------------------------------------------------------------------
-          | When a new frame is selected, need to check that existing computer matches legal options
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | setComputer
+    |------------------------------------------------------------------------------
+    | When a new frame is selected, need to check that existing computer matches legal options
+    |------------------------------------------------------------------------------
+    */
     setComputer: function () {
       if (this.frame.size != 'Supercolossal') return
       if (this.computer.bonus < 4) this.params.computerId = 'mk-4-mononode'
     },
     /*
-          |------------------------------------------------------------------------------
-          | setComputer
-          |------------------------------------------------------------------------------
-          | When a new frame is selected, need to check that existing network node matches legal options
-          |------------------------------------------------------------------------------
-          */
+    |------------------------------------------------------------------------------
+    | setNetworkNode
+    |------------------------------------------------------------------------------
+    | When a new frame is selected, need to check that existing network node matches legal options
+    |------------------------------------------------------------------------------
+    */
     setNetworkNode: function () {
       if (this.params.networkNodeId == 'none') return
 
@@ -3004,12 +3003,11 @@ export default {
       }
     },
     /*
-          |------------------------------------------------------------------------------
     syncExpansionBays: function( targetCountBays ) {
       this.popExcessExpansionBays( targetCountBays );
       this.maybeCreateExpansionBays(  targetCountBays );
     },
-          */
+    */
 
     testThatItemHasId: function (prop, item) {
       if (!isset(this.data[prop].data[item].id)) {
@@ -3069,14 +3067,13 @@ export default {
     }
   },
   /*
-      |----------------------------------------------------------------------------------
-      */
+  |----------------------------------------------------------------------------------
+  |  BEFORE MOUNT
+  |----------------------------------------------------------------------------------
+  */
   beforeMount: function () {
     this.initParams()
   }
-  /*
-      |----------------------------------------------------------------------------------
-      */
 }
 
 /*
@@ -3084,7 +3081,8 @@ export default {
 | WEAPON MOUNT
 |------------------------------------------------------------------------------------------
 |
-| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, isLinked, sizeCategoryId
+| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, 
+| isLinked, sizeCategoryId
 | maybe expects templateWeight
 |
 |------------------------------------------------------------------------------------------
@@ -3144,8 +3142,8 @@ function WeaponMount(params) {
     return materialCost
   }
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.getMaterialDesc = function () {
     var materialDesc = []
 
@@ -3180,8 +3178,8 @@ function WeaponMount(params) {
     return materialDesc.join(', ')
   }
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.getNewMountCost = function () {
     var newMountCost = 0
     if (!this.isFromTemplate) {
@@ -3194,8 +3192,8 @@ function WeaponMount(params) {
     return newMountCost
   }
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.getUpgradeCost = function () {
     var upgradeCost = 0
     if (this.weight !== this.templateWeight) {
@@ -3219,8 +3217,8 @@ function WeaponMount(params) {
     return upgradeCost
   }
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.testThatPositionIsValid = function () {
     if (['forward', 'aft', 'port', 'starboard', 'turret', 'spinal'].indexOf(this.position) == -1) {
       throw 'Invalid position in WeaponMount class: ' + this.position
@@ -3228,8 +3226,8 @@ function WeaponMount(params) {
   }
 
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.testThatWeightIsValid = function (weight) {
     if (['light', 'heavy', 'capital', 'spinal'].indexOf(weight) == -1) {
       throw 'Invalid weight in WeaponMount class: ' + weight
@@ -3237,8 +3235,8 @@ function WeaponMount(params) {
   }
 
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.testThatTemplateWeightIsSmallerThanWeight = function () {
     var weightVal = {
       light: 0,
@@ -3251,8 +3249,8 @@ function WeaponMount(params) {
   }
 
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
   this.testThatTurretIsNotCapital = function () {
     if (this.sizeCategoryId == 'Supercolossal') return
 
@@ -3264,14 +3262,14 @@ function WeaponMount(params) {
     }
   }
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
 
   /*
-    |--------------------------------------------------------------------------------------
-    | CONSTRUCTOR
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  | CONSTRUCTOR
+  |--------------------------------------------------------------------------------------
+  */
   this.id = params.weaponMountId
   this.position = params.position
   this.weaponId = params.weaponId
@@ -3291,6 +3289,6 @@ function WeaponMount(params) {
   this.doTests()
 
   /*
-    |--------------------------------------------------------------------------------------
-    */
+  |--------------------------------------------------------------------------------------
+  */
 }
