@@ -223,7 +223,7 @@ var clipboardJson = {}
 // if (typeof window.Clipboard == 'function') {
 if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') {
   clipboardJson = new Clipboard('#copyJsonBtn', {
-    text: function (trigger) {
+    text(trigger) {
       var el = document.getElementById('outputJson')
       addTimedClass(el, 'js-anim-border', 500)
       return el.innerHTML
@@ -547,11 +547,11 @@ export default {
   |----------------------------------------------------------------------------------
   */
   computed: {
-    ablativeArmor: function () {
+    ablativeArmor() {
       return this.getItemById('ablativeArmor', this.params.ablativeArmorId)
     },
 
-    ablativeArmorByPositionTotal: function () {
+    ablativeArmorByPositionTotal() {
       var total = 0
       for (var position in this.params.ablativeArmorByPosition) {
         total += parseInt(this.params.ablativeArmorByPosition[position])
@@ -559,7 +559,7 @@ export default {
       return total
     },
 
-    antiHackingSystems: function () {
+    antiHackingSystems() {
       var antiHackingSystems = this.getItemById(
         'antiHackingSystems',
         this.params.antiHackingSystemsId
@@ -574,19 +574,19 @@ export default {
       return antiHackingSystems
     },
 
-    antiPersonnelWeapon: function () {
+    antiPersonnelWeapon() {
       return this.getItemById('personalWeapon', this.params.antiPersonnelWeaponId)
     },
 
-    antiPersonnelWeaponBpCost: function () {
+    antiPersonnelWeaponBpCost() {
       return (this.antiPersonnelWeapon.type == 'heavy' ? 5 : 0) + this.antiPersonnelWeapon.level
     },
 
-    armor: function () {
+    armor() {
       return this.getItemById('armor', this.params.armorId)
     },
 
-    armorBpCost: function () {
+    armorBpCost() {
       var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier
 
       if (this.params.sources.som) {
@@ -610,7 +610,7 @@ export default {
       return armorBpCost
     },
 
-    armorClass: function () {
+    armorClass() {
       return (
         10 +
         this.armor.bonusToAc +
@@ -620,7 +620,7 @@ export default {
       )
     },
 
-    armorSpecial: function () {
+    armorSpecial() {
       var output = []
       var outputStr = 'n/a'
       // targetLockModifier
@@ -638,11 +638,11 @@ export default {
       return outputStr
     },
 
-    biometricLocksBpCost: function () {
+    biometricLocksBpCost() {
       return 5 * this.params.hasBiometricLocks
     },
 
-    complement: function () {
+    complement() {
       var complement = 0
 
       for (var roleIndex in this.params.crewSkills) {
@@ -664,11 +664,11 @@ export default {
       return complement
     },
 
-    computer: function () {
+    computer() {
       return this.getItemById('computer', this.params.computerId)
     },
 
-    computerDescription: function () {
+    computerDescription() {
       var desc = ''
       if (this.computer.id !== 'basic-computer') {
         var nodes = this.computer.nodes
@@ -682,7 +682,7 @@ export default {
       return desc
     },
 
-    computerCountermeasuresBpCost: function () {
+    computerCountermeasuresBpCost() {
       var total = 0
       for (var measure in this.params.computerCountermeasures) {
         if (measure == 'shockGridId') {
@@ -696,7 +696,7 @@ export default {
       return total
     },
 
-    computerCountermeasuresDescription: function () {
+    computerCountermeasuresDescription() {
       var desc = []
       for (var measure in this.params.computerCountermeasures) {
         if (measure == 'shockGridId') {
@@ -721,7 +721,7 @@ export default {
       return desc.join(', ')
     },
 
-    computerSkillBonusDesc: function () {
+    computerSkillBonusDesc() {
       if (this.computer.nodes === undefined || this.computer.nodes == 0) return '+0'
 
       var that = this
@@ -742,12 +742,12 @@ export default {
       return bonuses.join('/')
     },
 
-    computerTier: function () {
+    computerTier() {
       var shipTier = this.tier.value
       return shipTier < 2 ? 1 : Math.floor(shipTier * 0.5)
     },
 
-    countPowerCoreHousings: function () {
+    countPowerCoreHousings() {
       var countHousings = this.sizeCategory.countPowerCoreHousings
       if (
         (this.sizeCategory.id == 'Medium' || this.sizeCategory.id == 'Large') &&
@@ -759,11 +759,11 @@ export default {
       return countHousings
     },
 
-    crewQuarters: function () {
+    crewQuarters() {
       return this.getItemById('crewQuarters', this.params.crewQuartersId)
     },
 
-    crewDescriptions: function () {
+    crewDescriptions() {
       var that = this
 
       var descs = {}
@@ -789,11 +789,11 @@ export default {
       return descs
     },
 
-    criticalThreshold: function () {
+    criticalThreshold() {
       return Math.round(this.hp / 5) + this.fortifiedHull.bonusToCt
     },
 
-    ctComputerNodes: function () {
+    ctComputerNodes() {
       var ct = 0
       ct += this.computer.nodes
       if (this.params.sources.som && this.frame.size == 'Supercolossal') {
@@ -804,7 +804,7 @@ export default {
       return ct
     },
 
-    ctExpansionBaySlots: function () {
+    ctExpansionBaySlots() {
       var ctExpansionBaySlots = this.frame.expansionBays
       if (
         this.params.sources.som &&
@@ -816,7 +816,7 @@ export default {
       return ctExpansionBaySlots
     },
 
-    ctExternalExpansionBays: function () {
+    ctExternalExpansionBays() {
       if (!this.params.sources.som) return 0
 
       var ctBays = this.expansionBays.filter(function (bay) {
@@ -826,7 +826,7 @@ export default {
       return ctBays.length
     },
 
-    customComponentBpTotal: function () {
+    customComponentBpTotal() {
       if (!isset(this.params.customComponents)) return 0
 
       var total = 0
@@ -837,7 +837,7 @@ export default {
       return total
     },
 
-    customComponentPcuTotal: function () {
+    customComponentPcuTotal() {
       if (!isset(this.params.customComponents)) return 0
 
       var total = { essential: 0, nonEssential: 0 }
@@ -852,7 +852,7 @@ export default {
       return total
     },
 
-    customComponentsDescription: function () {
+    customComponentsDescription() {
       if (this.params.customComponents.length == 0) return 'None'
 
       var components = []
@@ -864,13 +864,13 @@ export default {
       return components.join('; ')
     },
 
-    customFrameSize: function () {
+    customFrameSize() {
       if (!isset(this.params.customFrame)) return {}
 
       return this.getItemById('sizeCategory', this.params.customFrame.size)
     },
 
-    damageThreshold: function () {
+    damageThreshold() {
       var dt = this.frame.dt
       if (this.params.sources.som && this.params.armorMaterialId == 'adamantine-alloy') {
         if (dt == 'n/a') dt = 0
@@ -879,23 +879,23 @@ export default {
       return dt
     },
 
-    dataNetBpCost: function () {
+    dataNetBpCost() {
       return this.params.hasDataNet ? 3 : 0
     },
 
-    dataNetPcuCost: function () {
+    dataNetPcuCost() {
       return this.params.hasDataNet ? 5 : 0
     },
 
-    dedicatedComputer: function () {
+    dedicatedComputer() {
       return this.getItemById('computer', this.params.dedicatedComputerId)
     },
 
-    defensiveCountermeasures: function () {
+    defensiveCountermeasures() {
       return this.getItemById('defensiveCountermeasures', this.params.defensiveCountermeasuresId)
     },
 
-    defensiveCountermeasuresBpCost: function () {
+    defensiveCountermeasuresBpCost() {
       var dcBpCost = this.defensiveCountermeasures.bpCost
 
       if (this.params.sources.som) {
@@ -913,19 +913,19 @@ export default {
       return dcBpCost
     },
 
-    deflectorShield: function () {
+    deflectorShield() {
       return this.getItemById('deflectorShield', this.params.deflectorShieldId)
     },
 
-    driftEngine: function () {
+    driftEngine() {
       return this.getItemById('driftEngine', this.params.driftEngineId)
     },
 
-    driftEngineBpCost: function () {
+    driftEngineBpCost() {
       return this.driftEngine.bpCostMultiplier * this.sizeCategory.multiplier
     },
 
-    expansionBays: function () {
+    expansionBays() {
       var that = this
       var expansionBays = []
       this.params.expansionBayIds.forEach(function (id) {
@@ -934,7 +934,7 @@ export default {
       return expansionBays
     },
 
-    expansionBaysCountUsed: function () {
+    expansionBaysCountUsed() {
       var countUsed = 0
       for (var i in this.expansionBays) {
         if (this.expansionBays[i].id !== 'none') {
@@ -944,7 +944,7 @@ export default {
       return countUsed
     },
 
-    expansionBaysDescription: function () {
+    expansionBaysDescription() {
       // test if no expansion bays
       if (this.sizeCategory.id != 'Supercolossal' && this.expansionBays.length == 0) return 'None'
       if (
@@ -995,15 +995,15 @@ export default {
       return expansionBaysDescription.join(sep)
     },
 
-    expansionBaysTotalBpCost: function () {
+    expansionBaysTotalBpCost() {
       return this.getSumOfPropertyValuesInCollection(this.expansionBays, 'bpCost')
     },
 
-    expansionBaysTotalPcuCost: function () {
+    expansionBaysTotalPcuCost() {
       return this.getSumOfPropertyValuesInCollection(this.expansionBays, 'pcuCost')
     },
 
-    fortifiedHull: function () {
+    fortifiedHull() {
       var fortifiedHull = {}
 
       var data = this.getItemById('fortifiedHull', this.params.fortifiedHullId)
@@ -1018,7 +1018,7 @@ export default {
       return fortifiedHull
     },
 
-    frame: function () {
+    frame() {
       if (this.params.frameId == 'custom') {
         // custom frame
         if (!this.params.customFrame) this.setCustomFrame()
@@ -1039,7 +1039,7 @@ export default {
       )
     },
 
-    hasBoosterThrusterHousing: function () {
+    hasBoosterThrusterHousing() {
       if (!this.params.sources.som) return false
 
       var hasHousing =
@@ -1050,7 +1050,7 @@ export default {
       return hasHousing
     },
 
-    hasComputerCountermeasures: function () {
+    hasComputerCountermeasures() {
       for (var measure in this.params.computerCountermeasures) {
         if (measure == 'shockGridId') {
           if (this.params.computerCountermeasures[measure] !== 'none') {
@@ -1065,7 +1065,7 @@ export default {
       return false
     },
 
-    hasDedicatedComputerHousing: function () {
+    hasDedicatedComputerHousing() {
       if (!this.params.sources.som) return false
 
       var hasHousing =
@@ -1076,7 +1076,7 @@ export default {
       return hasHousing
     },
 
-    hasHealingPod: function () {
+    hasHealingPod() {
       if (!this.params.sources.som) return false
 
       var hasPod =
@@ -1087,7 +1087,7 @@ export default {
       return hasPod
     },
 
-    hasPowerCoreHousingExpansionBay: function () {
+    hasPowerCoreHousingExpansionBay() {
       var result = false
       for (var i in this.params.expansionBayIds) {
         if (this.params.expansionBayIds[i] == 'power-core-housing') {
@@ -1097,7 +1097,7 @@ export default {
       return result
     },
 
-    hasSupercolossalPowerCore: function () {
+    hasSupercolossalPowerCore() {
       if (this.frame.size != 'Supercolossal') return false
 
       var hasSupercolossalPowerCore = false
@@ -1114,7 +1114,7 @@ export default {
       return hasSupercolossalPowerCore
     },
 
-    hasSecurity: function () {
+    hasSecurity() {
       return (
         this.params.antiHackingSystemsId !== 'none' ||
         this.params.antiPersonnelWeaponId !== 'none' ||
@@ -1127,15 +1127,15 @@ export default {
       )
     },
 
-    hiveJoiningBpCost: function () {
+    hiveJoiningBpCost() {
       return this.params.hasHiveJoining ? 1 : 0
     },
 
-    hp: function () {
+    hp() {
       return parseInt(this.frame.hp) + parseInt(this.tier.hpIncrease) * this.frame.hpIncrement
     },
 
-    isAblativeArmorBalanced: function () {
+    isAblativeArmorBalanced() {
       var positions = this.params.ablativeArmorByPosition
       var isBalanced = true
 
@@ -1150,11 +1150,11 @@ export default {
       return isBalanced
     },
 
-    isBpCostOverBudget: function () {
+    isBpCostOverBudget() {
       return this.totalBpCost > this.tier.bpBudget
     },
 
-    isComplementValid: function () {
+    isComplementValid() {
       var isComplementValid = true
       if (this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {
         isComplementValid = false
@@ -1162,11 +1162,11 @@ export default {
       return isComplementValid
     },
 
-    isExpansionBaysCountOverBudget: function () {
+    isExpansionBaysCountOverBudget() {
       return this.expansionBaysCountUsed > this.ctExpansionBaySlots
     },
 
-    isOrbitalWeaponDiscountUsed: function () {
+    isOrbitalWeaponDiscountUsed() {
       if (!this.params.sources.som) return false
       if (this.sizeCategory.multiplier < 4) return false
       if (!(this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework))
@@ -1189,21 +1189,21 @@ export default {
       return isUsed
     },
 
-    isPcuCostOverBudget: function () {
+    isPcuCostOverBudget() {
       return this.totalPcuCost.essential > this.pcuBudget
     },
 
-    isSupercolossal: function () {
+    isSupercolossal() {
       return this.params.sources.som && this.frame.size == 'Supercolossal'
     },
 
-    jsonParams: function () {
+    jsonParams() {
       var jsonParams = cloneObject(this.params)
       jsonParams['isSetDefaultCrewSkillValues'] = 0 // Because otherwise crew skills get overwritten!
       return JSON.stringify(jsonParams)
     },
 
-    maneuverabilityRating: function () {
+    maneuverabilityRating() {
       if (this.params.hasSpaceStationFramework) {
         return this.getItemById('maneuverabilityRating', 'poor')
       }
@@ -1211,7 +1211,7 @@ export default {
       return this.getItemById('maneuverabilityRating', this.frame.maneuverability)
     },
 
-    modifiersDescription: function () {
+    modifiersDescription() {
       var desc = []
       // computer nodes
       if (this.computer.id !== 'basic-computer') {
@@ -1228,11 +1228,11 @@ export default {
       return desc.join(', ')
     },
 
-    // networkNode: function() {
+    // networkNode() {
     // 	return this.getItemById("networkNode", this.params.networkNodeId);
     // },
 
-    networkNodes: function () {
+    networkNodes() {
       var ctNodes = 0
 
       if (this.params.sources.som && this.isSupercolossal) {
@@ -1248,7 +1248,7 @@ export default {
       }
     },
 
-    pilotingRanks: function () {
+    pilotingRanks() {
       var pilotingRanks = 0
       var crewSkills = this.params.crewSkills
       if (crewSkills.pilot.hasRole) {
@@ -1261,7 +1261,7 @@ export default {
       return pilotingRanks
     },
 
-    pcuBudget: function () {
+    pcuBudget() {
       var pcuBudget = 0
       for (var i in this.powerCores) {
         var powerCoreBudget = this.powerCores[i].pcuBudget
@@ -1271,7 +1271,7 @@ export default {
       return pcuBudget
     },
 
-    powerCoreDescription: function () {
+    powerCoreDescription() {
       var desc = []
       for (var i in this.powerCores) {
         var powerCore = this.powerCores[i]
@@ -1282,7 +1282,7 @@ export default {
       return desc.join(', ')
     },
 
-    powerCores: function () {
+    powerCores() {
       var powerCoreList = []
       for (var i in this.params.powerCoreIds) {
         var powerCore = cloneObject(this.getItemById('powerCore', this.params.powerCoreIds[i]))
@@ -1317,7 +1317,7 @@ export default {
       return powerCoreList
     },
 
-    powerCoresBpCost: function () {
+    powerCoresBpCost() {
       var bpCost = 0
       for (var i in this.powerCores) {
         bpCost += this.powerCores[i].bpCost
@@ -1325,7 +1325,7 @@ export default {
       return bpCost
     },
 
-    reinforcedBulkhead: function () {
+    reinforcedBulkhead() {
       var reinforcedBulkhead = {}
 
       var data = this.getItemById('reinforcedBulkhead', this.params.reinforcedBulkheadId)
@@ -1339,12 +1339,12 @@ export default {
       return reinforcedBulkhead
     },
 
-    roboticAppendage: function () {
+    roboticAppendage() {
       var roboticAppendage = this.getItemById('roboticAppendage', this.params.roboticAppendageId)
       return roboticAppendage
     },
 
-    roleDescription: function () {
+    roleDescription() {
       roleDesc = {}
       for (var role in this.params.crewSkills) {
         roleDesc[role] = this.getItemById('role', role).name
@@ -1376,11 +1376,11 @@ export default {
       return roleDesc
     },
 
-    secondaryComputer: function () {
+    secondaryComputer() {
       return this.getItemById('computer', this.params.secondaryComputerId)
     },
 
-    securityDescription: function () {
+    securityDescription() {
       var desc = []
       if (this.params.antiHackingSystemsId !== 'none') {
         desc.push(this.antiHackingSystems.getOutputName())
@@ -1409,7 +1409,7 @@ export default {
       return desc.join(', ')
     },
 
-    securityTotalBpCost: function () {
+    securityTotalBpCost() {
       return (
         this.antiHackingSystems.bpCost +
         this.antiPersonnelWeaponBpCost +
@@ -1422,7 +1422,7 @@ export default {
       )
     },
 
-    securityTotalPcuCost: function () {
+    securityTotalPcuCost() {
       return (
         (this.params.hasEmergencyAccelerator ? 5 : 0) +
         (this.params.hasHolographicMantle ? 10 : 0) +
@@ -1430,7 +1430,7 @@ export default {
       )
     },
 
-    selectOptions: function () {
+    selectOptions() {
       var that = this
       var selectOptions = {}
       var fields = [
@@ -1496,15 +1496,15 @@ export default {
       return selectOptions
     },
 
-    selfDestructSystemBpCost: function () {
+    selfDestructSystemBpCost() {
       return this.params.hasSelfDestructSystem * 5 * this.sizeCategory.multiplier
     },
 
-    sensors: function () {
+    sensors() {
       return this.getItemById('sensors', this.params.sensorsId)
     },
 
-    sensorsBpCost: function () {
+    sensorsBpCost() {
       var sensorsBpCost = this.sensors.bpCost
       if (this.params.sources.som) {
         switch (this.params.sensorsMaterialId) {
@@ -1521,11 +1521,11 @@ export default {
       return sensorsBpCost
     },
 
-    shields: function () {
+    shields() {
       return this.getItemById('shields', this.params.shieldsId)
     },
 
-    shieldsByPositionTotal: function () {
+    shieldsByPositionTotal() {
       var total = 0
       for (var position in this.params.shieldsByPosition) {
         total += parseInt(this.params.shieldsByPosition[position])
@@ -1533,27 +1533,27 @@ export default {
       return total
     },
 
-    shipName: function () {
+    shipName() {
       return this.params.shipName == '' ? 'New Ship' : this.params.shipName
     },
 
-    shockGrid: function () {
+    shockGrid() {
       return this.getItemById('shockGrid', this.params.computerCountermeasures.shockGridId)
     },
 
-    shockGridBpCost: function () {
+    shockGridBpCost() {
       return this.shockGrid.bpCostMultiplier * this.computerTier
     },
 
-    sizeCategory: function () {
+    sizeCategory() {
       return this.getItemById('sizeCategory', this.frame.size)
     },
 
-    skillModifierComputers: function () {
+    skillModifierComputers() {
       return this.sensors.modifier
     },
 
-    skillModifierPiloting: function () {
+    skillModifierPiloting() {
       var modifier = 0
 
       modifier += this.maneuverabilityRating.pilotingModifier
@@ -1570,7 +1570,7 @@ export default {
       return modifier
     },
 
-    skillTotals: function () {
+    skillTotals() {
       var skillTotals = {}
       for (var role in this.params.crewSkills) {
         skillTotals[role] = {}
@@ -1591,7 +1591,7 @@ export default {
       return skillTotals
     },
 
-    systemsDescription: function () {
+    systemsDescription() {
       var desc = []
       // sensors
       desc.push(
@@ -1709,7 +1709,7 @@ export default {
       return desc.join(', ')
     },
 
-    targetLock: function () {
+    targetLock() {
       return (
         10 +
         this.defensiveCountermeasures.defCMBonusToTl +
@@ -1721,11 +1721,11 @@ export default {
       )
     },
 
-    tempHp: function () {
+    tempHp() {
       return this.ablativeArmor.tempHp
     },
 
-    thrusters: function () {
+    thrusters() {
       var thrusters = cloneObject(this.getItemById('thrusters', this.params.thrustersId))
 
       // space station framework
@@ -1755,7 +1755,7 @@ export default {
       return thrusters
     },
 
-    thrustersBooster: function () {
+    thrustersBooster() {
       var thrustersBooster = cloneObject(
         this.getItemById('thrusters', this.params.thrustersBoosterId)
       )
@@ -1782,12 +1782,12 @@ export default {
       return thrustersBooster
     },
 
-    tier: function () {
+    tier() {
       var tier = this.getItemById('tier', this.params.tierId)
       return tier
     },
 
-    timBpCost: function () {
+    timBpCost() {
       var ctTim = parseInt(this.params.ctTim)
       var ctTimAll = parseInt(this.params.ctTimAll)
 
@@ -1796,7 +1796,7 @@ export default {
       return cost
     },
 
-    totalBpCost: function () {
+    totalBpCost() {
       return (
         parseInt(this.ablativeArmor.bpCost) +
         (this.params.hasAlgalShielding ? 5 + 2 * this.sizeCategory.multiplier : 0) +
@@ -1848,7 +1848,7 @@ export default {
       )
     },
 
-    totalPcuCost: function () {
+    totalPcuCost() {
       return {
         essential:
           this.thrusters.pcuCost +
@@ -1872,7 +1872,7 @@ export default {
       }
     },
 
-    turn: function () {
+    turn() {
       return (
         this.maneuverabilityRating.turn +
         this.armor.turnDistanceModifier +
@@ -1881,12 +1881,12 @@ export default {
       )
     },
 
-    vi: function () {
+    vi() {
       var vi = this.getItemById('vi', this.params.viId)
       return vi
     },
 
-    viCrewDescription: function () {
+    viCrewDescription() {
       if (this.params.viId == 'none') return ''
 
       var vi = this.getItemById('vi', this.params.viId)
@@ -1906,12 +1906,12 @@ export default {
       return desc.join(', ')
     },
 
-    viHoloProjector: function () {
+    viHoloProjector() {
       var viHoloProjector = this.getItemById('viHoloProjector', this.params.viHoloProjectorId)
       return viHoloProjector
     },
 
-    viHoloProjectorSize: function () {
+    viHoloProjectorSize() {
       if (this.params.viHoloProjectorId == 'none') return 'n/a'
 
       var size = this.viHoloProjector.sizeMultiplier
@@ -1927,12 +1927,12 @@ export default {
       return viHoloProjSizeCategory.name
     },
 
-    viSkillExpander: function () {
+    viSkillExpander() {
       var viSkillExpander = this.getItemById('viSkillExpander', this.params.viSkillExpanderId)
       return viSkillExpander
     },
 
-    weaponDescriptions: function () {
+    weaponDescriptions() {
       var desc = {}
 
       for (var position in this.weaponMounts) {
@@ -1989,7 +1989,7 @@ export default {
       return desc
     },
 
-    weaponMounts: function () {
+    weaponMounts() {
       var weaponMounts = {}
       for (var position in this.params.weaponMounts) {
         weaponMounts[position] = []
@@ -2025,7 +2025,7 @@ export default {
       return weaponMounts
     },
 
-    weaponsTotalCosts: function () {
+    weaponsTotalCosts() {
       var totals = {
         weaponLinksBp: 0,
         weaponMountsBp: 0,
@@ -2052,14 +2052,14 @@ export default {
   |----------------------------------------------------------------------------------
   */
   methods: {
-    addCustomFrameMount: function (position) {
+    addCustomFrameMount(position) {
       if (!isset(this.params.customFrame.mounts[position]))
         this.$set(this.params.customFrame.mounts, position, [])
       this.params.customFrame.mounts[position].push('light')
       this.setWeaponMounts(this.frame.mounts)
     },
 
-    adjustPowerCores: function (countHousings) {
+    adjustPowerCores(countHousings) {
       var that = this
 
       var params = ['powerCoreIds', 'powerCoreSpecialMaterials']
@@ -2077,7 +2077,7 @@ export default {
       })
     },
 
-    canWeaponMountBeCreated: function (position) {
+    canWeaponMountBeCreated(position) {
       var result = true
       var countMountsInPosition = this.params.weaponMounts[position].length
       if (countMountsInPosition >= this.sizeCategory.maxMounts) {
@@ -2086,7 +2086,7 @@ export default {
       return result
     },
 
-    canWeaponMountBeDowngraded: function (weight, isFromTemplate, templateWeight) {
+    canWeaponMountBeDowngraded(weight, isFromTemplate, templateWeight) {
       var result = true
       if (weight == 'light') {
         result = false
@@ -2104,7 +2104,7 @@ export default {
       return result
     },
 
-    canWeaponMountBeUpgraded: function (position, weight) {
+    canWeaponMountBeUpgraded(position, weight) {
       var result = true
       var weights = { light: 0, heavy: 1, capital: 2 }
       // check weight
@@ -2126,13 +2126,13 @@ export default {
       return result
     },
 
-    clearAll: function () {
+    clearAll() {
       this.params = cloneObject(this.paramsReset)
       this.json = ''
       document.getElementById('sampleShipSelect').value = 'none'
     },
 
-    clearWeaponMounts: function () {
+    clearWeaponMounts() {
       for (var position in this.params.weaponMounts) {
         // var mountList = this.params.weaponMounts[position];
         this.params.weaponMounts[position].splice(0, this.params.weaponMounts[position].length) // start, deleteCount
@@ -2140,13 +2140,13 @@ export default {
       // console.log(this.params.weaponMounts);
     },
 
-    convertJsonInput: function () {
+    convertJsonInput() {
       var params = JSON.parse(this.json)
       this.params = params
       this.fixMissingParamsValues()
     },
 
-    createCustomComponent: function () {
+    createCustomComponent() {
       // initialise on older builds
       if (!isset(this.params.customComponents)) {
         this.$set(this.params, 'customComponents', [])
@@ -2163,7 +2163,7 @@ export default {
       return
     },
 
-    createWeaponMount: function (position) {
+    createWeaponMount(position) {
       var newMount = {
         weaponId: 'none',
         weight: 'light',
@@ -2177,12 +2177,12 @@ export default {
       this.params.weaponMounts[position].push(newMount)
     },
 
-    destroyWeaponMount: function (position, i) {
+    destroyWeaponMount(position, i) {
       this.params.weaponMounts[position].splice(i, 1) // start, deleteCount
       this.setWeaponLinking(position)
     },
 
-    doesNextMountHaveSameWeaponId: function (position, i) {
+    doesNextMountHaveSameWeaponId(position, i) {
       var result = false
       var nextI = parseInt(i) + 1
       var mounts = this.params.weaponMounts[position]
@@ -2195,7 +2195,7 @@ export default {
       return result
     },
 
-    downgradeWeaponMount: function (position, i) {
+    downgradeWeaponMount(position, i) {
       var weaponMount = this.params.weaponMounts[position][i]
       if (weaponMount.weight == 'capital') {
         weaponMount.weight = 'heavy'
@@ -2206,7 +2206,7 @@ export default {
       this.setWeaponLinking(position)
     },
 
-    fixMissingCrewSkills: function () {
+    fixMissingCrewSkills() {
       for (var roleId in this.paramsReset.crewSkills) {
         // if role is missing, add it
         if (!isset(this.params.crewSkills[roleId])) {
@@ -2236,7 +2236,7 @@ export default {
       return
     },
 
-    fixMissingParamsValues: function () {
+    fixMissingParamsValues() {
       var that = this
 
       for (var key in this.paramsReset) {
@@ -2294,12 +2294,12 @@ export default {
       }
     },
     /*
-     getAvailableWeaponUpgrades: function(weapon) {
+     getAvailableWeaponUpgrades(weapon) {
        return [{id: "test", name: "Test"}];
      },
      */
 
-    getExpansionBayBpCost: function (bay) {
+    getExpansionBayBpCost(bay) {
       // Quantum defender
       if (bay.id == 'quantum-defender') {
         var bpCost = 4 * this.sizeCategory.multiplier
@@ -2310,7 +2310,7 @@ export default {
       return bay.bpCost
     },
 
-    getExpansionBayPcuCost: function (bay) {
+    getExpansionBayPcuCost(bay) {
       // Quantum defender
       if (bay.id == 'quantum-defender') {
         var pcuCost = 5 * this.sizeCategory.multiplier
@@ -2321,11 +2321,11 @@ export default {
       return bay.pcuCost
     },
 
-    getFrameMountWeaponWeight: function (position, index) {
+    getFrameMountWeaponWeight(position, index) {
       return this.frame.mounts[position][index]
     },
 
-    getItemById: function (prop, id) {
+    getItemById(prop, id) {
       // console.log(prop, id);
       this.testThatPropExists(prop)
       // find item
@@ -2342,7 +2342,7 @@ export default {
       return item
     },
 
-    getItemByKey: function (prop, key, val) {
+    getItemByKey(prop, key, val) {
       this.testThatPropExists(prop)
 
       // find item
@@ -2360,7 +2360,7 @@ export default {
       return item
     },
 
-    getNamesFromIds: function (prop, ids, emptyString) {
+    getNamesFromIds(prop, ids, emptyString) {
       if (!ids || ids.length == 0) return emptyString ? emptyString : ''
 
       var that = this
@@ -2380,7 +2380,7 @@ export default {
     | e.g. None, Titan Light (PCU 700, Supercolossal), Nova Light (PCU 400, Large - Colossal)
     |------------------------------------------------------------------------------
     */
-    getPowerCoreOptionName: function (option) {
+    getPowerCoreOptionName(option) {
       if (option.id == 'none') return 'None'
 
       var name = option.name + ' (PCU ' + option.pcuBudget + ', '
@@ -2400,7 +2400,7 @@ export default {
     | getPowerCoreOptions
     |------------------------------------------------------------------------------
     */
-    getPowerCoreOptions: function (index) {
+    getPowerCoreOptions(index) {
       if (this.params.powerCoreIds[index] === undefined) {
         return [this.getItemById('powerCore', 'none')]
       }
@@ -2427,7 +2427,7 @@ export default {
       return
     },
 
-    getPowerCoreOptionsForSupercolossal: function (index) {
+    getPowerCoreOptionsForSupercolossal(index) {
       var options = []
 
       // If ship doesn't have a supercolossal power core
@@ -2471,7 +2471,7 @@ export default {
     | Turns a power core's list of size names ["Tiny", "Small", "Medium", ...]
     | into a list of numbers [0, 1, 2, ...]
     |------------------------------------------------------------------------------
-    getPowerCoreSizeMultipliers: function(powerCore) {
+    getPowerCoreSizeMultipliers(powerCore) {
       if (powerCore.sizes === undefined) return [];
 
       var multipliers = [];
@@ -2488,12 +2488,12 @@ export default {
     },
     */
 
-    getPrefixedModifier: function (val) {
+    getPrefixedModifier(val) {
       var prefix = val >= 0 ? '+' : ''
       return prefix + val
     },
 
-    getSampleShipOptionName: function (option) {
+    getSampleShipOptionName(option) {
       // name
       var shipName = option.name
       // tier
@@ -2513,7 +2513,7 @@ export default {
       return option.name + ' (' + 'Tier ' + option.tier + ' ' + size.name + ' ' + frame.name + ')'
     },
 
-    getSelectOptionsFor: function (prop) {
+    getSelectOptionsFor(prop) {
       this.testThatPropExists(prop)
       this.testThatPropIsArray(prop)
       for (var item in this.data[prop].data) {
@@ -2531,7 +2531,7 @@ export default {
     | Returns string in the form "Piloting + 5 (1 rank)" or "gunnery +4"
     |------------------------------------------------------------------------------
     */
-    getSkillDesc: function (skillId, skill) {
+    getSkillDesc(skillId, skill) {
       if (skillId == 'gunnery' && skill.modifier == 0) return ''
       if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return ''
 
@@ -2562,7 +2562,7 @@ export default {
       return desc
     },
 
-    getSumOfPropertyValuesInCollection: function (collection, property) {
+    getSumOfPropertyValuesInCollection(collection, property) {
       var total = 0
       for (var i in collection) {
         total += collection[i][property]
@@ -2570,7 +2570,7 @@ export default {
       return total
     },
 
-    getWeaponDamage: function (mount) {
+    getWeaponDamage(mount) {
       if (mount.weapon.damage == 'Special') return 'Special'
 
       var dice = stringToDice(mount.weapon.damage)
@@ -2588,7 +2588,7 @@ export default {
       return result
     },
 
-    getWeaponRangeNumerical: function (weapon) {
+    getWeaponRangeNumerical(weapon) {
       if (weapon.range === undefined) return ''
 
       switch (weapon.range) {
@@ -2608,7 +2608,7 @@ export default {
       return ''
     },
 
-    initParams: function () {
+    initParams() {
       if (window.JTOStarshipSheetModel === undefined) {
         this.params = cloneObject(this.paramsReset)
       } else {
@@ -2616,7 +2616,7 @@ export default {
       }
     },
 
-    inputSampleShipParams: function () {
+    inputSampleShipParams() {
       var sampleShipSelect = document.getElementById('sampleShipSelect')
       var sampleShipId = sampleShipSelect.value
       if (sampleShipId !== 'none') {
@@ -2627,7 +2627,7 @@ export default {
       }
     },
 
-    isCrewQuartersOptionAvailable: function (option) {
+    isCrewQuartersOptionAvailable(option) {
       if (!this.params.isUseStrictRules) return true
       if (this.sizeCategory.multiplier == 1) {
         if (option.id == 'none') {
@@ -2651,14 +2651,14 @@ export default {
     | Expects a crew role. Checks to see if role is available. Returns boolean.
     |------------------------------------------------------------------------------
     */
-    isCrewRoleAvailable: function (role) {
+    isCrewRoleAvailable(role) {
       if (role.src == 'scr') return true
       if (role.id == 'vi' && this.params.viId != 'none') return true
       if (this.params.sources[role.src]) return true
       return false
     },
 
-    isOrbitalWeapon: function (weapon) {
+    isOrbitalWeapon(weapon) {
       var isOrbital = false
       weapon.specialProperties.forEach(function (prop) {
         if (isOrbital) return
@@ -2668,7 +2668,7 @@ export default {
       return isOrbital
     },
 
-    isWeaponMountLinked: function (position, i) {
+    isWeaponMountLinked(position, i) {
       var result = false
       if (
         isset(this.params.weaponMounts[position][i]) &&
@@ -2679,7 +2679,7 @@ export default {
       return result
     },
 
-    maybeAdjustCtTim: function (paramName) {
+    maybeAdjustCtTim(paramName) {
       if (parseInt(this.params.ctTim) >= parseInt(this.params.ctTimAll)) return
 
       if (paramName == 'ctTim') {
@@ -2693,7 +2693,7 @@ export default {
       return
     },
 
-    maybeCreateExpansionBays: function (targetCountBays) {
+    maybeCreateExpansionBays(targetCountBays) {
       for (var i = 0; i < targetCountBays; i++) {
         if (!isset(this.params.expansionBayIds[i])) {
           this.params.expansionBayIds[i] = 'none'
@@ -2709,7 +2709,7 @@ export default {
     | This does some cross-checking to prevent illegal combinations of power cores
     |------------------------------------------------------------------------------
     */
-    maybeResetPowerCoreIds: function (currentIndex) {
+    maybeResetPowerCoreIds(currentIndex) {
       if (this.frame.size != 'Supercolossal') return
 
       var that = this
@@ -2742,7 +2742,7 @@ export default {
       return
     },
 
-    popExcessExpansionBays: function (targetCountBays) {
+    popExcessExpansionBays(targetCountBays) {
       var countBays = this.params.expansionBayIds.length
       if (countBays > targetCountBays) {
         for (var i = 0; i < countBays - targetCountBays; i++) {
@@ -2751,24 +2751,24 @@ export default {
       }
     },
 
-    removeCustomComponent: function (index) {
+    removeCustomComponent(index) {
       this.params.customComponents.splice(index, 1)
       return
     },
 
-    removeCustomFrameMount: function (position, index) {
+    removeCustomFrameMount(position, index) {
       this.params.customFrame.mounts[position].splice(index, 1)
       if (!this.params.customFrame.mounts[position].length)
         this.$delete(this.params.customFrame.mounts, position)
       this.setWeaponMounts(this.frame.mounts)
     },
 
-    resetCustomFrame: function () {
+    resetCustomFrame() {
       this.setCustomFrame()
       this.updateFrame()
     },
 
-    setCrewQuarters: function (frameSize) {
+    setCrewQuarters(frameSize) {
       if (frameSize == 'Tiny') {
         if (this.params.crewQuartersId !== 'none') {
           this.params.crewQuartersId = 'none'
@@ -2780,7 +2780,7 @@ export default {
       }
     },
 
-    setCustomFrame: function () {
+    setCustomFrame() {
       this.$set(
         this.params,
         'customFrame',
@@ -2788,7 +2788,7 @@ export default {
       )
     },
 
-    setDefaultCrewSkillValues: function () {
+    setDefaultCrewSkillValues() {
       if (this.params.isSetDefaultCrewSkillValues) {
         var tier = this.getItemById('tier', this.params.tierId).value
         if (tier < 1) {
@@ -2805,7 +2805,7 @@ export default {
       }
     },
 
-    setDefaultPositionDependentValues: function (param, key) {
+    setDefaultPositionDependentValues(param, key) {
       // test that computed param exists
       if (!isset(this[param])) {
         console.log('Missing computed param: ' + param)
@@ -2849,7 +2849,7 @@ export default {
     | options in select
     |------------------------------------------------------------------------------
     */
-    setPowerCores: function () {
+    setPowerCores() {
       if (this.frame.size == 'Supercolossal') {
         this.setPowerCoresForSupercolossal()
         return
@@ -2879,7 +2879,7 @@ export default {
     | When a new frame is selected, need to check that existing computer matches legal options
     |------------------------------------------------------------------------------
     */
-    setComputer: function () {
+    setComputer() {
       if (this.frame.size != 'Supercolossal') return
       if (this.computer.bonus < 4) this.params.computerId = 'mk-4-mononode'
     },
@@ -2890,7 +2890,7 @@ export default {
     | When a new frame is selected, need to check that existing network node matches legal options
     |------------------------------------------------------------------------------
     */
-    setNetworkNode: function () {
+    setNetworkNode() {
       if (this.params.networkNodeId == 'none') return
 
       if (this.frame.size != 'Supercolossal') {
@@ -2905,7 +2905,7 @@ export default {
       return
     },
 
-    setPowerCoresForSupercolossal: function () {
+    setPowerCoresForSupercolossal() {
       for (var index = 0; index < this.countPowerCoreHousings; index++) {
         // 1. powerCoreId doesn't exist
         if (this.params.powerCoreIds[index] === undefined) {
@@ -2954,7 +2954,7 @@ export default {
       return
     },
 
-    setWeaponLinking: function (position) {
+    setWeaponLinking(position) {
       var mounts = this.params.weaponMounts[position]
       for (var i in mounts) {
         if (
@@ -2971,7 +2971,7 @@ export default {
       }
     },
 
-    setWeaponMounts: function (mounts) {
+    setWeaponMounts(mounts) {
       this.clearWeaponMounts()
 
       var arcs = ['forward', 'aft', 'port', 'starboard', 'turret', 'spinal']
@@ -3003,37 +3003,37 @@ export default {
       }
     },
     /*
-    syncExpansionBays: function( targetCountBays ) {
+    syncExpansionBays( targetCountBays ) {
       this.popExcessExpansionBays( targetCountBays );
       this.maybeCreateExpansionBays(  targetCountBays );
     },
     */
 
-    testThatItemHasId: function (prop, item) {
+    testThatItemHasId(prop, item) {
       if (!isset(this.data[prop].data[item].id)) {
         throw 'Property ' + prop + '[' + item + '] does not have an id'
       }
     },
 
-    testThatItemHasName: function (prop, item) {
+    testThatItemHasName(prop, item) {
       if (!isset(this.data[prop].data[item].name)) {
         throw 'Property ' + prop + '[' + item + '] does not have a name'
       }
     },
 
-    testThatPropExists: function (prop) {
+    testThatPropExists(prop) {
       if (!isset(this.data[prop])) {
         throw 'Property ' + prop + ' does not exist'
       }
     },
 
-    testThatPropIsArray: function (prop) {
+    testThatPropIsArray(prop) {
       if (typeof this.data[prop].data !== 'object') {
         throw 'Property ' + prop + ' is not an array'
       }
     },
 
-    // updateComputer: function() {
+    // updateComputer() {
     // 	if (!this.params.sources.som) return;
     // 	if (this.params.networkNodeId == "none") return;
     // 	if (this.frame.size != "Supercolossal") return;
@@ -3045,7 +3045,7 @@ export default {
     // 	return;
     // },
 
-    updateFrame: function () {
+    updateFrame() {
       // this.syncExpansionBays( this.frame.expansionBays );
       this.setCrewQuarters(this.frame.size)
       this.setWeaponMounts(this.frame.mounts)
@@ -3054,7 +3054,7 @@ export default {
       this.setNetworkNode()
     },
 
-    upgradeWeaponMount: function (position, i) {
+    upgradeWeaponMount(position, i) {
       var weaponMount = this.params.weaponMounts[position][i]
       if (weaponMount.weight == 'light') {
         weaponMount.weight = 'heavy'
@@ -3071,7 +3071,7 @@ export default {
   |  BEFORE MOUNT
   |----------------------------------------------------------------------------------
   */
-  beforeMount: function () {
+  beforeMount() {
     this.initParams()
   }
 }
