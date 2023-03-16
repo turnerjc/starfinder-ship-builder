@@ -4748,7 +4748,6 @@
         "id": "mining-laser",
         "src": "pw",
         "name": "Mining laser",
-        "src": "scr",
         "range": "Short",
         "speed": "n/a",
         "damage": "2d6",
@@ -4827,7 +4826,6 @@
         "id": "light-spore-torpedo-launcher",
         "src": "pw",
         "name": "Light spore torpedo launcher",
-        "src": "scr",
         "range": "Medium",
         "speed": "14",
         "damage": "3d6",
@@ -5062,7 +5060,6 @@
         "id": "heavy-spore-torpedo-launcher",
         "src": "pw",
         "name": "Heavy spore torpedo launcher",
-        "src": "scr",
         "range": "Medium",
         "speed": "12",
         "damage": "5d8",
@@ -11105,11 +11102,6 @@
             "aft": "100"
           },
           "weaponMounts": {
-            "forward": ["capital", "heavy", "heavy"],
-            "port": ["heavy", "heavy", "light"],
-            "starboard": ["heavy", "heavy", "light"],
-            "aft": ["light"],
-            "turret": ["heavy", "heavy"],
             "forward": [
               {
                 "weaponId": "particle-beam",
