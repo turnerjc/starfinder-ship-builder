@@ -2144,14 +2144,8 @@
                   >
                     <option value="none">None</option>
                     <optgroup v-for="wpnType in data.shipWeaponType.data" :label="wpnType">
-                      <template
-                        v-for="option in selectOptions.shipWeapon.filter(wpn => wpn.type == wpnType)"
-                        v-if="(!params.isUseStrictRules) || (option.weight == weaponMount.weight)"
-                      >
-                        <option
-                          :value="option.id"
-                          v-if="option.src == 'scr' || params.sources[option.src] == true"
-                        >
+                      <template v-for="option in selectOptionsShipWeapon">
+                        <option :value="option.id">
                           {{ option.name }} ({{ option.damage }}, {{ getWeaponRangeNumerical(option)
                           }}, PCU {{ option.pcuCost}}, BP {{ option.bpCost }})
                         </option>
@@ -2750,7 +2744,7 @@
           </div>
         </div>
 
-        <template v-for="role in selectOptions.role" v-if="isCrewRoleAvailable(role)">
+        <template v-for="role in selectOptionsCrewRole">
           <div class="box crew" v-if="params.hasCrew">
             <h3 class="crew__header">{{ role.name }}</h3>
 

@@ -1,4 +1,4 @@
-import shipData from '../data/ship-builder.json'
+import shipData from '../data/ship-builder.json';
 
 var WEAPON_SORT = {
   forwardArc: 0,
@@ -6,10 +6,10 @@ var WEAPON_SORT = {
   starboardArc: 2,
   aftArc: 3,
   turret: 4,
-  spinal: 5
-}
+  spinal: 5,
+};
 
-var WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard']
+var WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard'];
 /*
 |------------------------------------------------------------------------------------------
 | HELPERS
@@ -17,22 +17,22 @@ var WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard']
 */
 function maybeCreateProperty(obj, prop, type) {
   if (typeof obj !== 'object') {
-    throw 'Not an object'
+    throw 'Not an object';
   }
   if (typeof obj[prop] === 'undefined') {
     switch (type) {
       case 'Array':
-        obj[prop] = []
-        break
+        obj[prop] = [];
+        break;
       case 'String':
-        obj[prop] = ''
-        break
+        obj[prop] = '';
+        break;
       case 'Integer':
-        obj[prop] = 0
-        break
+        obj[prop] = 0;
+        break;
       case 'Object':
       default:
-        obj[prop] = {}
+        obj[prop] = {};
     }
   }
 }
@@ -41,56 +41,56 @@ function maybeCreateProperty(obj, prop, type) {
 */
 function isset(obj) {
   if (typeof obj === 'undefined') {
-    return false
+    return false;
   }
-  return true
+  return true;
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 function cloneObject(obj) {
-  return JSON.parse(JSON.stringify(obj))
+  return JSON.parse(JSON.stringify(obj));
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 function integerToWord(int) {
-  var word = ''
+  var word = '';
   switch (int) {
     case 1:
-      word = 'one'
-      break
+      word = 'one';
+      break;
     case 2:
-      word = 'two'
-      break
+      word = 'two';
+      break;
     case 3:
-      word = 'three'
-      break
+      word = 'three';
+      break;
     case 4:
-      word = 'four'
-      break
+      word = 'four';
+      break;
     case 5:
-      word = 'five'
-      break
+      word = 'five';
+      break;
     case 6:
-      word = 'six'
-      break
+      word = 'six';
+      break;
     case 7:
-      word = 'seven'
-      break
+      word = 'seven';
+      break;
     case 8:
-      word = 'eight'
-      break
+      word = 'eight';
+      break;
     case 9:
-      word = 'nine'
-      break
+      word = 'nine';
+      break;
     case 10:
-      word = 'ten'
-      break
+      word = 'ten';
+      break;
     default:
-      word = 'error'
+      word = 'error';
   }
-  return word
+  return word;
 }
 /*
 |------------------------------------------------------------------------------------------
@@ -102,20 +102,20 @@ function integerToWord(int) {
 */
 function stringToFloat(str) {
   // test if str is a number
-  if (parseInt(str) === str) return str
+  if (parseInt(str) === str) return str;
 
   // test if string is in the form "1" or "1/3"
-  var numbers = str.split('/')
-  if (numbers.length != 1 && numbers.length != 2) return 1
-  if (parseInt(numbers[0]) === NaN || parseInt(numbers[1]) === NaN) return 1
+  var numbers = str.split('/');
+  if (numbers.length != 1 && numbers.length != 2) return 1;
+  if (parseInt(numbers[0]) === NaN || parseInt(numbers[1]) === NaN) return 1;
 
   // test if integer
-  if (numbers.length == 1) return parseFloat(numbers[0])
+  if (numbers.length == 1) return parseFloat(numbers[0]);
 
   // test if denominator is 0
-  if (numbers[2] == 1) return 1 // div 0
+  if (numbers[2] == 1) return 1; // div 0
 
-  return parseInt(numbers[0]) / parseInt(numbers[1])
+  return parseInt(numbers[0]) / parseInt(numbers[1]);
 }
 /*
 |------------------------------------------------------------------------------------------
@@ -127,90 +127,90 @@ function stringToFloat(str) {
 */
 function stringToDice(str) {
   // validate input
-  if (str == 'Special') return 'Special'
+  if (str == 'Special') return 'Special';
 
   var formula = {
     ctDice: 0,
     ctFaces: 0,
     mod: 0,
-    mult: 1
-  }
+    mult: 1,
+  };
 
-  if (str == 'n/a') return formula
+  if (str == 'n/a') return formula;
 
   // mult
-  var multSplit = str.split('×')
-  if (multSplit.length == 2) formula.mult = parseInt(multSplit[1])
+  var multSplit = str.split('×');
+  if (multSplit.length == 2) formula.mult = parseInt(multSplit[1]);
 
   // modifier
-  var modSplit = str.split('+')
-  if (modSplit.length == 2) formula.mod = parseInt(modSplit[1])
+  var modSplit = str.split('+');
+  if (modSplit.length == 2) formula.mod = parseInt(modSplit[1]);
 
   // dice
-  var dieSplit = str.split('d')
-  if (dieSplit.length != 2) return 'error'
+  var dieSplit = str.split('d');
+  if (dieSplit.length != 2) return 'error';
 
-  formula.ctDice = parseInt(dieSplit[0])
-  formula.ctFaces = parseInt(dieSplit[1])
+  formula.ctDice = parseInt(dieSplit[0]);
+  formula.ctFaces = parseInt(dieSplit[1]);
 
-  return formula
+  return formula;
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 function loadJSON(file, callback) {
-  var xobj = new XMLHttpRequest()
-  xobj.overrideMimeType('application/json')
-  xobj.open('GET', file, true) // Replace "my_data" with the path to your file
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType('application/json');
+  xobj.open('GET', file, true); // Replace "my_data" with the path to your file
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == '200') {
       // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-      callback(xobj.responseText)
+      callback(xobj.responseText);
     }
-  }
-  xobj.send(null)
+  };
+  xobj.send(null);
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 function addTimedClass(obj, className, duration) {
-  addClass(obj, className)
+  addClass(obj, className);
   setTimeout(function () {
-    removeClass(obj, className)
-  }, duration)
+    removeClass(obj, className);
+  }, duration);
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 function addClass(obj, className) {
-  obj.className += ' ' + className
+  obj.className += ' ' + className;
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 function removeClass(obj, className) {
-  obj.className = obj.className.replace(className, '')
+  obj.className = obj.className.replace(className, '');
 }
 /*
 |------------------------------------------------------------------------------------------
 */
 String.prototype.pluralise = function (count) {
-  return this + (count == 1 ? '' : 's')
-}
+  return this + (count == 1 ? '' : 's');
+};
 /*
 |------------------------------------------------------------------------------------------
 */
 String.prototype.toTitleCase = function () {
   return this.replace(/\w\S*/g, function (txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
-  })
-}
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+};
 /*
 |------------------------------------------------------------------------------------------
 */
 function isEven(num) {
-  var isEven = num % 2 == 0
-  return isEven
+  var isEven = num % 2 == 0;
+  return isEven;
 }
 
 /*
@@ -218,17 +218,17 @@ function isEven(num) {
 | CLIPBOARD.JS
 |------------------------------------------------------------------------------------------
 */
-var clipboardJson = {}
+var clipboardJson = {};
 
 // if (typeof window.Clipboard == 'function') {
 if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') {
   clipboardJson = new Clipboard('#copyJsonBtn', {
     text(trigger) {
-      var el = document.getElementById('outputJson')
-      addTimedClass(el, 'js-anim-border', 500)
-      return el.innerHTML
-    }
-  })
+      var el = document.getElementById('outputJson');
+      addTimedClass(el, 'js-anim-border', 500);
+      return el.innerHTML;
+    },
+  });
 }
 
 /*
@@ -575,16 +575,12 @@ export default {
     },
 
     antiPersonnelWeapon() {
-      return this.getItemById(
-        'personalWeapon',
-        this.params.antiPersonnelWeaponId
-      );
+      return this.getItemById('personalWeapon', this.params.antiPersonnelWeaponId);
     },
 
     antiPersonnelWeaponBpCost() {
       return (
-        (this.antiPersonnelWeapon.weaponType == 'heavy' ? 5 : 0) +
-        this.antiPersonnelWeapon.level
+        (this.antiPersonnelWeapon.weaponType == 'heavy' ? 5 : 0) + this.antiPersonnelWeapon.level
       );
     },
 
@@ -593,8 +589,7 @@ export default {
     },
 
     armorBpCost() {
-      var armorBpCost =
-        this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
+      var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
 
       if (this.params.sources.som) {
         var materialBpCost = 0;
@@ -631,17 +626,11 @@ export default {
       var output = [];
       var outputStr = 'n/a';
       // targetLockModifier
-      if (
-        isset(this.armor.targetLockModifier) &&
-        this.armor.targetLockModifier < 0
-      ) {
+      if (isset(this.armor.targetLockModifier) && this.armor.targetLockModifier < 0) {
         output.push(this.armor.targetLockModifier + ' TL');
       }
       // turnDistanceModifier
-      if (
-        isset(this.armor.turnDistanceModifier) &&
-        this.armor.turnDistanceModifier > 0
-      ) {
+      if (isset(this.armor.turnDistanceModifier) && this.armor.turnDistanceModifier > 0) {
         output.push('+' + this.armor.turnDistanceModifier + ' turn distance');
       }
       // output
@@ -667,12 +656,8 @@ export default {
           complement++;
         }
 
-        var countOfficers = role.countOfficers
-          ? parseInt(role.countOfficers)
-          : 0;
-        var countOfficerCrew = role.countOfficerCrew
-          ? parseInt(role.countOfficerCrew)
-          : 0;
+        var countOfficers = role.countOfficers ? parseInt(role.countOfficers) : 0;
+        var countOfficerCrew = role.countOfficerCrew ? parseInt(role.countOfficerCrew) : 0;
 
         complement += countOfficers;
         complement += countOfficers * countOfficerCrew;
@@ -689,22 +674,12 @@ export default {
       var desc = '';
       if (this.computer.id !== 'basic-computer') {
         var nodes = this.computer.nodes;
-        if (
-          this.params.sources.som &&
-          this.isSupercolossal &&
-          this.networkNodes.ct > 0
-        ) {
+        if (this.params.sources.som && this.isSupercolossal && this.networkNodes.ct > 0) {
           nodes += this.networkNodes.ct;
         }
         var bonus = '+' + this.computer.bonus;
         var nodesWord = integerToWord(nodes);
-        desc =
-          bonus +
-          ' to any ' +
-          nodesWord +
-          ' check' +
-          (nodes > 1 ? 's' : '') +
-          ' per round';
+        desc = bonus + ' to any ' + nodesWord + ' check' + (nodes > 1 ? 's' : '') + ' per round';
       }
       return desc;
     },
@@ -740,10 +715,7 @@ export default {
           }
         } else {
           if (this.params.computerCountermeasures[measure] == true) {
-            var cmName = this.getItemById(
-              'computerCountermeasures',
-              measure
-            ).name.toLowerCase();
+            var cmName = this.getItemById('computerCountermeasures', measure).name.toLowerCase();
             desc.push(cmName);
           }
         }
@@ -752,8 +724,7 @@ export default {
     },
 
     computerSkillBonusDesc() {
-      if (this.computer.nodes === undefined || this.computer.nodes == 0)
-        return '+0';
+      if (this.computer.nodes === undefined || this.computer.nodes == 0) return '+0';
 
       var that = this;
       var bonuses = [];
@@ -809,11 +780,7 @@ export default {
         Object.keys(crewSkill.skills).forEach(function (skillId) {
           var skill = that.params.crewSkills[roleId].skills[skillId];
           if (skillId == 'gunnery' && skill.modifier == 0) return;
-          if (
-            skillId != 'gunnery' &&
-            (skill.ranks === undefined || skill.ranks == 0)
-          )
-            return;
+          if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return;
 
           roleDesc.push(that.getSkillDesc(skillId, skill));
         });
@@ -844,8 +811,7 @@ export default {
       if (
         this.params.sources.som &&
         this.sizeCategory.multiplier >= 4 &&
-        (this.params.hasColonyShipFramework ||
-          this.params.hasSpaceStationFramework)
+        (this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework)
       ) {
         ctExpansionBaySlots *= 3;
       }
@@ -894,9 +860,7 @@ export default {
       var components = [];
 
       this.params.customComponents.forEach(function (component) {
-        components.push(
-          component.name + (component.notes ? ' (' + component.notes + ')' : '')
-        );
+        components.push(component.name + (component.notes ? ' (' + component.notes + ')' : ''));
       });
 
       return components.join('; ');
@@ -910,10 +874,7 @@ export default {
 
     damageThreshold() {
       var dt = this.frame.dt;
-      if (
-        this.params.sources.som &&
-        this.params.armorMaterialId == 'adamantine-alloy'
-      ) {
+      if (this.params.sources.som && this.params.armorMaterialId == 'adamantine-alloy') {
         if (dt == 'n/a') dt = 0;
         dt += this.armor.bonusToAc;
       }
@@ -933,10 +894,7 @@ export default {
     },
 
     defensiveCountermeasures() {
-      return this.getItemById(
-        'defensiveCountermeasures',
-        this.params.defensiveCountermeasuresId
-      );
+      return this.getItemById('defensiveCountermeasures', this.params.defensiveCountermeasuresId);
     },
 
     defensiveCountermeasuresBpCost() {
@@ -990,11 +948,7 @@ export default {
 
     expansionBaysDescription() {
       // test if no expansion bays
-      if (
-        this.sizeCategory.id != 'Supercolossal' &&
-        this.expansionBays.length == 0
-      )
-        return 'None';
+      if (this.sizeCategory.id != 'Supercolossal' && this.expansionBays.length == 0) return 'None';
       if (
         this.sizeCategory.id != 'Supercolossal' &&
         this.expansionBays.filter(function (bay) {
@@ -1027,10 +981,7 @@ export default {
         if (id == 'none') continue;
 
         // name
-        var expansionBayName = this.getItemById(
-          'expansionBay',
-          id
-        ).name.toLowerCase();
+        var expansionBayName = this.getItemById('expansionBay', id).name.toLowerCase();
 
         // qty
         var expansionBayQty = expansionBaysByType[id];
@@ -1038,8 +989,7 @@ export default {
 
         // final desc
         var expansionBayDesc =
-          expansionBayName +
-          (expansionBayQty > 1 ? ' (' + expansionBayQty + ')' : '');
+          expansionBayName + (expansionBayQty > 1 ? ' (' + expansionBayQty + ')' : '');
 
         expansionBaysDescription.push(expansionBayDesc);
       }
@@ -1048,17 +998,11 @@ export default {
     },
 
     expansionBaysTotalBpCost() {
-      return this.getSumOfPropertyValuesInCollection(
-        this.expansionBays,
-        'bpCost'
-      );
+      return this.getSumOfPropertyValuesInCollection(this.expansionBays, 'bpCost');
     },
 
     expansionBaysTotalPcuCost() {
-      return this.getSumOfPropertyValuesInCollection(
-        this.expansionBays,
-        'pcuCost'
-      );
+      return this.getSumOfPropertyValuesInCollection(this.expansionBays, 'pcuCost');
     },
 
     fortifiedHull() {
@@ -1070,10 +1014,8 @@ export default {
         fortifiedHull[key] = data[key];
       });
 
-      fortifiedHull.bonusToCt =
-        fortifiedHull.bonusToCtMultiplier * this.sizeCategory.multiplier;
-      fortifiedHull.bpCost =
-        fortifiedHull.bpCostMultiplier * this.sizeCategory.multiplier;
+      fortifiedHull.bonusToCt = fortifiedHull.bonusToCtMultiplier * this.sizeCategory.multiplier;
+      fortifiedHull.bpCost = fortifiedHull.bpCostMultiplier * this.sizeCategory.multiplier;
 
       return fortifiedHull;
     },
@@ -1093,9 +1035,9 @@ export default {
 
     frameName() {
       return (
-        frame.name.toLowerCase() +
-        (params.hasColonyShipFramework ? '(colony ship)' : '') +
-        (params.hasSpaceStationFramework ? ' (space station)' : '')
+        this.frame.name.toLowerCase() +
+        (this.params.hasColonyShipFramework ? '(colony ship)' : '') +
+        (this.params.hasSpaceStationFramework ? ' (space station)' : '')
       );
     },
 
@@ -1192,10 +1134,7 @@ export default {
     },
 
     hp() {
-      return (
-        parseInt(this.frame.hp) +
-        parseInt(this.tier.hpIncrease) * this.frame.hpIncrement
-      );
+      return parseInt(this.frame.hp) + parseInt(this.tier.hpIncrease) * this.frame.hpIncrement;
     },
 
     isAblativeArmorBalanced() {
@@ -1219,10 +1158,7 @@ export default {
 
     isComplementValid() {
       var isComplementValid = true;
-      if (
-        this.complement < this.frame.minCrew ||
-        this.complement > this.frame.maxCrew
-      ) {
+      if (this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {
         isComplementValid = false;
       }
       return isComplementValid;
@@ -1235,12 +1171,7 @@ export default {
     isOrbitalWeaponDiscountUsed() {
       if (!this.params.sources.som) return false;
       if (this.sizeCategory.multiplier < 4) return false;
-      if (
-        !(
-          this.params.hasColonyShipFramework ||
-          this.params.hasSpaceStationFramework
-        )
-      )
+      if (!(this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework))
         return false;
 
       var that = this;
@@ -1253,8 +1184,7 @@ export default {
           var isOrbital = that.isOrbitalWeapon(mount.weapon);
           if (!isOrbital) return;
 
-          if (that.params.weaponMounts[position][i].hasOrbitalDiscount)
-            isUsed = true;
+          if (that.params.weaponMounts[position][i].hasOrbitalDiscount) isUsed = true;
           return;
         });
       }
@@ -1280,10 +1210,7 @@ export default {
         return this.getItemById('maneuverabilityRating', 'poor');
       }
 
-      return this.getItemById(
-        'maneuverabilityRating',
-        this.frame.maneuverability
-      );
+      return this.getItemById('maneuverabilityRating', this.frame.maneuverability);
     },
 
     modifiersDescription() {
@@ -1294,15 +1221,11 @@ export default {
       }
       // Computers skill
       if (this.skillModifierComputers !== 0) {
-        desc.push(
-          this.getPrefixedModifier(this.skillModifierComputers) + ' Computers'
-        );
+        desc.push(this.getPrefixedModifier(this.skillModifierComputers) + ' Computers');
       }
       // Piloting skill
       if (this.skillModifierPiloting !== 0) {
-        desc.push(
-          this.getPrefixedModifier(this.skillModifierPiloting) + ' Piloting'
-        );
+        desc.push(this.getPrefixedModifier(this.skillModifierPiloting) + ' Piloting');
       }
       return desc.join(', ');
     },
@@ -1323,9 +1246,7 @@ export default {
       return {
         bpCost: ctNodes * this.computer.bonus,
         ct: ctNodes,
-        pcuCost:
-          ctNodes *
-          pcuCosts[this.computer.bonus == 0 ? 0 : this.computer.bonus - 1],
+        pcuCost: ctNodes * pcuCosts[this.computer.bonus == 0 ? 0 : this.computer.bonus - 1],
       };
     },
 
@@ -1346,8 +1267,7 @@ export default {
       var pcuBudget = 0;
       for (var i in this.powerCores) {
         var powerCoreBudget = this.powerCores[i].pcuBudget;
-        if (this.params.powerCoreSpecialMaterials[i] == 'abysium')
-          powerCoreBudget *= 1.25;
+        if (this.params.powerCoreSpecialMaterials[i] == 'abysium') powerCoreBudget *= 1.25;
         pcuBudget += Math.floor(powerCoreBudget);
       }
       return pcuBudget;
@@ -1367,9 +1287,7 @@ export default {
     powerCores() {
       var powerCoreList = [];
       for (var i in this.params.powerCoreIds) {
-        var powerCore = cloneObject(
-          this.getItemById('powerCore', this.params.powerCoreIds[i])
-        );
+        var powerCore = cloneObject(this.getItemById('powerCore', this.params.powerCoreIds[i]));
         powerCore.sizeList = powerCore.sizes.join(', ');
 
         // special materials
@@ -1412,10 +1330,7 @@ export default {
     reinforcedBulkhead() {
       var reinforcedBulkhead = {};
 
-      var data = this.getItemById(
-        'reinforcedBulkhead',
-        this.params.reinforcedBulkheadId
-      );
+      var data = this.getItemById('reinforcedBulkhead', this.params.reinforcedBulkheadId);
 
       Object.keys(data).forEach(function (key) {
         reinforcedBulkhead[key] = data[key];
@@ -1428,10 +1343,7 @@ export default {
     },
 
     roboticAppendage() {
-      var roboticAppendage = this.getItemById(
-        'roboticAppendage',
-        this.params.roboticAppendageId
-      );
+      var roboticAppendage = this.getItemById('roboticAppendage', this.params.roboticAppendageId);
       return roboticAppendage;
     },
 
@@ -1444,15 +1356,9 @@ export default {
           if (isset(roleObj.countOfficerCrew) && roleObj.countOfficerCrew > 0) {
             // at least one officer with large team
             var officers = [];
+            officers.push(roleObj.countOfficers + ' ' + 'officer'.pluralise(roleObj.countOfficers));
             officers.push(
-              roleObj.countOfficers +
-                ' ' +
-                'officer'.pluralise(roleObj.countOfficers)
-            );
-            officers.push(
-              roleObj.countOfficerCrew +
-                ' crew' +
-                (roleObj.countOfficers > 1 ? ' each' : '')
+              roleObj.countOfficerCrew + ' crew' + (roleObj.countOfficers > 1 ? ' each' : '')
             );
             roleDesc[role] += ' (' + officers.join(', ') + ')';
           } else if (roleObj.countOfficers > 1) {
@@ -1483,21 +1389,13 @@ export default {
         desc.push(this.antiHackingSystems.getOutputName());
       }
       if (this.params.antiPersonnelWeaponId !== 'none') {
-        desc.push(
-          'anti-personnel weapon (' +
-            this.antiPersonnelWeapon.name.toLowerCase() +
-            ')'
-        );
+        desc.push('anti-personnel weapon (' + this.antiPersonnelWeapon.name.toLowerCase() + ')');
       }
       if (this.params.hasBiometricLocks) {
         desc.push('biometric locks');
       }
       if (this.hasComputerCountermeasures) {
-        desc.push(
-          'computer countermeasures (' +
-            this.computerCountermeasuresDescription +
-            ')'
-        );
+        desc.push('computer countermeasures (' + this.computerCountermeasuresDescription + ')');
       }
       if (this.params.hasSelfDestructSystem) {
         desc.push('self-destruct system');
@@ -1521,9 +1419,7 @@ export default {
         this.biometricLocksBpCost +
         this.computerCountermeasuresBpCost +
         this.selfDestructSystemBpCost +
-        (this.params.hasEmergencyAccelerator
-          ? 4 * this.sizeCategory.multiplier
-          : 0) +
+        (this.params.hasEmergencyAccelerator ? 4 * this.sizeCategory.multiplier : 0) +
         (this.params.hasHolographicMantle ? 12 : 0) +
         (this.params.hasReconfigurationSystem ? 30 : 0)
       );
@@ -1573,9 +1469,12 @@ export default {
         'viSkillExpander',
       ];
 
+      // sourcebook selected
       for (var i in fields) {
         var field = fields[i];
-        options[field] = this.getSelectOptionsFor(field).filter(option => (option.src == 'scr' || this.params.sources[option.src]));
+        options[field] = this.getSelectOptionsFor(field).filter(
+          (option) => option.src == 'scr' || this.params.sources[option.src]
+        );
       }
 
       // expansionBay
@@ -1592,9 +1491,7 @@ export default {
           return stringToFloat(a.tier) > stringToFloat(b.tier);
 
         // size, name
-        return (
-          a[that.selectSampleShipSortOrder] > b[that.selectSampleShipSortOrder]
-        );
+        return a[that.selectSampleShipSortOrder] > b[that.selectSampleShipSortOrder];
       });
 
       // ship weapon
@@ -1611,16 +1508,12 @@ export default {
 
     selectOptionsThruster() {
       return this.selectOptions.thrusters.filter(
-        (option) =>
-          !this.params.isUseStrictRules ||
-          option.size.indexOf(this.frame.size) > -1
+        (option) => !this.params.isUseStrictRules || option.size.indexOf(this.frame.size) > -1
       );
     },
 
     selectOptionsAblativeArmor() {
-      return this.selectOptions.ablativeArmor.filter(
-        (option) => option.tempHp <= this.hp * 2
-      );
+      return this.selectOptions.ablativeArmor.filter((option) => option.tempHp <= this.hp * 2);
     },
 
     selectOptionsComputer() {
@@ -1638,18 +1531,15 @@ export default {
 
     selectOptionsComputerDedicated() {
       return this.selectOptions.computer.filter(
-        (option) =>
-          option.id == 'basic-computer' || option.id.indexOf('mononode') !== -1
+        (option) => option.id == 'basic-computer' || option.id.indexOf('mononode') !== -1
       );
     },
 
     selectOptionsComputerSecondary() {
-      return this.selectOptions.computer.filter(
-        (option) => option.bonus >= this.computer.bonus
-      );
+      return this.selectOptions.computer.filter((option) => option.bonus >= this.computer.bonus);
     },
 
-    selectOptionsCrewQuarter() {
+    selectOptionsCrewQuarters() {
       return this.selectOptions.crewQuarters.filter(
         (option) =>
           !this.params.isUseStrictRules ||
@@ -1658,34 +1548,27 @@ export default {
       );
     },
 
+    selectOptionsCrewRole() {
+      return this.selectOptions.role.filter(
+        (option) => option.id == 'vi' && this.params.viId != 'none'
+      );
+    },
+
     selectOptionsDriftEngine() {
       return this.selectOptions.driftEngine.filter(
         (option) =>
           !this.params.isUseStrictRules ||
-          (this.pcuBudget >= option.minPcu &&
-            this.sizeCategory.multiplier <= option.maxSize)
+          (this.pcuBudget >= option.minPcu && this.sizeCategory.multiplier <= option.maxSize)
       );
     },
 
     selectOptionsPersonalWeapon() {
       // TODO: Remove weapon level for D&D 5e or add levels to the personal weapons
-      return this.selectOptions.personalWeapon.filter(
-        (option) => option.level <= this.tier.id
-      );
+      return this.selectOptions.personalWeapon.filter((option) => option.level <= this.tier.id);
     },
 
-    selectOptionsShipWeapon(weaponType, weaponMount) {
-      console.log(weaponType, weaponMount)
-      return this.selectOptions.shipWeapon.filter(
-        (option) => (option.weaponType == weaponType) &&
-          (!params.isUseStrictRules || option.weight == weaponMount.weight)
-      );
-
-
- }, selfDestructSystemBpCost() {
-      return (
-        this.params.hasSelfDestructSystem * 5 * this.sizeCategory.multiplier
-      );
+    selfDestructSystemBpCost() {
+      return this.params.hasSelfDestructSystem * 5 * this.sizeCategory.multiplier;
     },
 
     sensors() {
@@ -1726,10 +1609,7 @@ export default {
     },
 
     shockGrid() {
-      return this.getItemById(
-        'shockGrid',
-        this.params.computerCountermeasures.shockGridId
-      );
+      return this.getItemById('shockGrid', this.params.computerCountermeasures.shockGridId);
     },
 
     shockGridBpCost() {
@@ -1786,35 +1666,25 @@ export default {
       var desc = [];
       // sensors
       desc.push(
-        this.sensors.id == 'none'
-          ? 'no sensors'
-          : this.sensors.name.toLowerCase() + ' sensors'
+        this.sensors.id == 'none' ? 'no sensors' : this.sensors.name.toLowerCase() + ' sensors'
       );
       // crew quarters
       if (this.params.crewQuartersId !== 'none') {
-        desc.push(
-          'crew quarters (' + this.crewQuarters.name.toLowerCase() + ')'
-        );
+        desc.push('crew quarters (' + this.crewQuarters.name.toLowerCase() + ')');
       }
       // armor
       if (this.params.armorId !== 'none') {
         var armorDesc = this.armor.name;
         if (this.params.armorMaterialId != 'none') {
           armorDesc +=
-            ' (' +
-            this.getItemById('specialMaterial', this.params.armorMaterialId)
-              .name +
-            ')';
+            ' (' + this.getItemById('specialMaterial', this.params.armorMaterialId).name + ')';
         }
         desc.push(armorDesc.toLowerCase());
       }
       // defences
       if (this.params.defensiveCountermeasuresId !== 'none') {
         var dcDesc = this.defensiveCountermeasures.name.toLowerCase();
-        if (
-          this.params.sources.som &&
-          this.params.defensiveCountermeasuresMaterialId != 'none'
-        ) {
+        if (this.params.sources.som && this.params.defensiveCountermeasuresMaterialId != 'none') {
           dcDesc +=
             ' (' +
             this.getItemById(
@@ -1836,16 +1706,10 @@ export default {
       desc.push(computerDesc);
 
       // network nodes
-      if (
-        this.params.sources.som &&
-        this.isSupercolossal &&
-        this.networkNodes.ct > 0
-      ) {
-        var networkNodeDesc = (
-          'mk ' +
-          this.computer.bonus +
-          ' network node'
-        ).pluralise(this.networkNodes.ct);
+      if (this.params.sources.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+        var networkNodeDesc = ('mk ' + this.computer.bonus + ' network node').pluralise(
+          this.networkNodes.ct
+        );
         desc.push(networkNodeDesc + ' (' + this.networkNodes.ct + ')');
       }
 
@@ -1879,9 +1743,7 @@ export default {
       }
       // robotic appendage
       if (this.params.roboticAppendageId != 'none') {
-        desc.push(
-          (this.roboticAppendage.name + ' robotic appendage').toLowerCase()
-        );
+        desc.push((this.roboticAppendage.name + ' robotic appendage').toLowerCase());
       }
       // root system
       if (this.params.hasRootSystem) {
@@ -1894,9 +1756,7 @@ export default {
       // training interface modules
       var ctTim = parseInt(this.params.ctTim);
       if (ctTim > 0) {
-        desc.push(
-          (ctTim + ' &times; training interface module').pluralise(ctTim)
-        );
+        desc.push((ctTim + ' &times; training interface module').pluralise(ctTim));
       }
       // virtual intelligence
       if (this.params.viId != 'none') {
@@ -1937,9 +1797,7 @@ export default {
     },
 
     thrusters() {
-      var thrusters = cloneObject(
-        this.getItemById('thrusters', this.params.thrustersId)
-      );
+      var thrusters = cloneObject(this.getItemById('thrusters', this.params.thrustersId));
 
       // space station framework
       if (this.params.hasSpaceStationFramework) {
@@ -2012,17 +1870,13 @@ export default {
     totalBpCost() {
       return (
         parseInt(this.ablativeArmor.bpCost) +
-        (this.params.hasAlgalShielding
-          ? 5 + 2 * this.sizeCategory.multiplier
-          : 0) +
+        (this.params.hasAlgalShielding ? 5 + 2 * this.sizeCategory.multiplier : 0) +
         parseInt(this.antiHackingSystems.bpCost) +
         parseInt(this.antiPersonnelWeaponBpCost) +
         parseInt(this.armorBpCost) +
         (this.params.hasAutoDestruct ? this.sizeCategory.multiplier : 0) +
         parseInt(this.biometricLocksBpCost) +
-        (this.params.hasColonyShipFramework
-          ? Math.floor(this.frame.bpCost * 0.25)
-          : 0) +
+        (this.params.hasColonyShipFramework ? Math.floor(this.frame.bpCost * 0.25) : 0) +
         parseInt(this.computer.bpCost) +
         parseInt(this.computerCountermeasuresBpCost) +
         (this.params.hasConsciousnessUplink ? 4 : 0) +
@@ -2030,13 +1884,9 @@ export default {
         parseInt(this.crewQuarters.bpCost) +
         parseInt(this.dataNetBpCost) +
         parseInt(this.defensiveCountermeasuresBpCost) +
-        (this.params.shieldType == 'deflector-shield'
-          ? parseInt(this.deflectorShield.bpCost)
-          : 0) +
+        (this.params.shieldType == 'deflector-shield' ? parseInt(this.deflectorShield.bpCost) : 0) +
         parseInt(this.driftEngineBpCost) +
-        (this.params.hasEmergencyAccelerator
-          ? 4 * this.sizeCategory.multiplier
-          : 0) +
+        (this.params.hasEmergencyAccelerator ? 4 * this.sizeCategory.multiplier : 0) +
         parseInt(this.expansionBaysTotalBpCost) +
         parseInt(this.fortifiedHull.bpCost) +
         parseInt(this.frame.bpCost) +
@@ -2054,16 +1904,10 @@ export default {
         (this.isSupercolossal ? this.secondaryComputer.bpCost : 0) +
         parseInt(this.selfDestructSystemBpCost) +
         parseInt(this.sensorsBpCost) +
-        (this.params.shieldType == 'shields'
-          ? parseInt(this.shields.bpCost)
-          : 0) +
-        (this.params.hasSpaceStationFramework
-          ? Math.floor(this.frame.bpCost * 0.2)
-          : 0) +
+        (this.params.shieldType == 'shields' ? parseInt(this.shields.bpCost) : 0) +
+        (this.params.hasSpaceStationFramework ? Math.floor(this.frame.bpCost * 0.2) : 0) +
         parseInt(this.thrusters.bpCost) +
-        (this.hasBoosterThrusterHousing
-          ? parseInt(this.thrustersBooster.bpCost)
-          : 0) +
+        (this.hasBoosterThrusterHousing ? parseInt(this.thrustersBooster.bpCost) : 0) +
         this.timBpCost +
         this.vi.bpCost +
         (this.params.viId != 'none' ? this.viHoloProjector.bpCost : 0) +
@@ -2082,9 +1926,7 @@ export default {
           (this.hasBoosterThrusterHousing ? this.thrustersBooster.pcuCost : 0) +
           this.defensiveCountermeasures.pcuCost +
           (this.params.shieldType == 'shields' ? this.shields.pcuCost : 0) +
-          (this.params.shieldType == 'deflector-shield'
-            ? this.deflectorShield.pcuCost
-            : 0) +
+          (this.params.shieldType == 'deflector-shield' ? this.deflectorShield.pcuCost : 0) +
           this.weaponsTotalCosts.weaponsPcu +
           parseInt(this.customComponentPcuTotal.essential) +
           (this.params.hasEmergencyAccelerator ? 5 : 0),
@@ -2124,32 +1966,19 @@ export default {
       var that = this;
       var desc = [];
 
-      var viSkillIds = [
-        'bluff',
-        'computers',
-        'engineering',
-        'gunnery',
-        'piloting',
-        'sense-motive',
-      ];
+      var viSkillIds = ['bluff', 'computers', 'engineering', 'gunnery', 'piloting', 'sense-motive'];
 
       viSkillIds.forEach(function (skillId) {
         var ranks = skillId == 'gunnery' ? 0 : vi.value;
-        var modifier =
-          skillId == 'gunnery' ? vi.gunneryMod : vi.skillMod - vi.value;
-        desc.push(
-          that.getSkillDesc(skillId, { ranks: ranks, modifier: modifier })
-        );
+        var modifier = skillId == 'gunnery' ? vi.gunneryMod : vi.skillMod - vi.value;
+        desc.push(that.getSkillDesc(skillId, { ranks: ranks, modifier: modifier }));
       });
 
       return desc.join(', ');
     },
 
     viHoloProjector() {
-      var viHoloProjector = this.getItemById(
-        'viHoloProjector',
-        this.params.viHoloProjectorId
-      );
+      var viHoloProjector = this.getItemById('viHoloProjector', this.params.viHoloProjectorId);
       return viHoloProjector;
     },
 
@@ -2161,11 +1990,7 @@ export default {
         size = this.sizeCategory.multiplier;
       }
 
-      var viHoloProjSizeCategory = this.getItemByKey(
-        'sizeCategory',
-        'multiplier',
-        size
-      );
+      var viHoloProjSizeCategory = this.getItemByKey('sizeCategory', 'multiplier', size);
 
       if (viHoloProjSizeCategory === undefined) return 'n/a';
       if (viHoloProjSizeCategory.name === undefined) return 'n/a';
@@ -2174,10 +1999,7 @@ export default {
     },
 
     viSkillExpander() {
-      var viSkillExpander = this.getItemById(
-        'viSkillExpander',
-        this.params.viSkillExpanderId
-      );
+      var viSkillExpander = this.getItemById('viSkillExpander', this.params.viSkillExpanderId);
       return viSkillExpander;
     },
 
@@ -2202,13 +2024,9 @@ export default {
           // get description
           if (mount.weapon.id == 'none') continue;
 
-          var specialMaterial = this.getItemById(
-            'specialMaterial',
-            mount.specialMaterial
-          );
+          var specialMaterial = this.getItemById('specialMaterial', mount.specialMaterial);
           var weaponName = (
-            (specialMaterial.id == 'none' ? '' : specialMaterial.name + ' ') +
-            mount.weapon.name
+            (specialMaterial.id == 'none' ? '' : specialMaterial.name + ' ') + mount.weapon.name
           ).toLowerCase();
 
           // weapon name
@@ -2230,8 +2048,7 @@ export default {
                 ''
               ).toLowerCase()
             );
-          if (mount.materialDesc)
-            properties.push(mount.materialDesc.toLowerCase());
+          if (mount.materialDesc) properties.push(mount.materialDesc.toLowerCase());
           mountDesc += ' (' + properties.join(', ') + ')';
 
           positionDesc.push(mountDesc);
@@ -2258,10 +2075,7 @@ export default {
             weight: params.weight,
             mountBpCost: mountObj.getCost(),
             weapon: this.getItemById('shipWeapon', params.weaponId),
-            canBeUpgraded: this.canWeaponMountBeUpgraded(
-              position,
-              params.weight
-            ),
+            canBeUpgraded: this.canWeaponMountBeUpgraded(position, params.weight),
             canBeDowngraded: this.canWeaponMountBeDowngraded(
               params.weight,
               params.isFromTemplate,
@@ -2392,10 +2206,7 @@ export default {
     clearWeaponMounts() {
       for (var position in this.params.weaponMounts) {
         // var mountList = this.params.weaponMounts[position];
-        this.params.weaponMounts[position].splice(
-          0,
-          this.params.weaponMounts[position].length
-        ); // start, deleteCount
+        this.params.weaponMounts[position].splice(0, this.params.weaponMounts[position].length); // start, deleteCount
       }
       // console.log(this.params.weaponMounts);
     },
@@ -2483,11 +2294,7 @@ export default {
           // if skill is missing, add it
           if (!isset(this.params.crewSkills[roleId].skills[skillId])) {
             console.log(
-              'Missing skill, ' +
-                skillId +
-                ', in crew role, ' +
-                roleId +
-                ', added to ship'
+              'Missing skill, ' + skillId + ', in crew role, ' + roleId + ', added to ship'
             );
             this.$set(
               this.params.crewSkills[roleId].skills,
@@ -2516,13 +2323,8 @@ export default {
           for (var position in this.params.weaponMounts) {
             for (var i in this.params.weaponMounts[position]) {
               missingWeaponMountParams.forEach(function (param) {
-                if (isset(that.params.weaponMounts[position][i][param.id]))
-                  return;
-                that.$set(
-                  that.params.weaponMounts[position][i],
-                  param.id,
-                  param.default
-                );
+                if (isset(that.params.weaponMounts[position][i][param.id])) return;
+                that.$set(that.params.weaponMounts[position][i], param.id, param.default);
                 console.log(
                   'Missing property, ' +
                     param.id +
@@ -2621,9 +2423,7 @@ export default {
 
       // test that item exists
       if (typeof item === 'undefined') {
-        console.log(
-          'There is no item ' + prop + ' that matches ' + key + ': ' + val
-        );
+        console.log('There is no item ' + prop + ' that matches ' + key + ': ' + val);
         item = this.data[prop].data.find(function (item) {
           return item.id === 'none';
         });
@@ -2657,8 +2457,7 @@ export default {
       var name = option.name + ' (PCU ' + option.pcuBudget + ', ';
 
       if (option.sizes.length > 1) {
-        name +=
-          option.sizes[0] + ' &ndash; ' + option.sizes[option.sizes.length - 1];
+        name += option.sizes[0] + ' &ndash; ' + option.sizes[option.sizes.length - 1];
       } else {
         name += option.sizes[0];
       }
@@ -2706,10 +2505,7 @@ export default {
       if (!this.hasSupercolossalPowerCore) {
         // add only colossal and supercolossal options
         this.selectOptions.powerCore.forEach(function (option) {
-          if (
-            option.sizes.includes('Colossal') ||
-            option.sizes.includes('Supercolossal')
-          )
+          if (option.sizes.includes('Colossal') || option.sizes.includes('Supercolossal'))
             options.push(option);
         });
 
@@ -2722,10 +2518,7 @@ export default {
       if (this.powerCores[index].sizes[0] == 'Supercolossal') {
         // add only colossal and supercolossal options
         this.selectOptions.powerCore.forEach(function (option) {
-          if (
-            option.sizes.includes('Colossal') ||
-            option.sizes.includes('Supercolossal')
-          )
+          if (option.sizes.includes('Colossal') || option.sizes.includes('Supercolossal'))
             options.push(option);
         });
 
@@ -2736,10 +2529,7 @@ export default {
 
       // add only huge or gargantuan
       this.selectOptions.powerCore.forEach(function (option) {
-        if (
-          option.sizes.includes('Huge') ||
-          option.sizes.includes('Gargantuan')
-        )
+        if (option.sizes.includes('Huge') || option.sizes.includes('Gargantuan'))
           options.push(option);
       });
 
@@ -2791,17 +2581,7 @@ export default {
       // size
       var size = this.getItemById('sizeCategory', frame.size);
 
-      return (
-        option.name +
-        ' (' +
-        'Tier ' +
-        option.tier +
-        ' ' +
-        size.name +
-        ' ' +
-        frame.name +
-        ')'
-      );
+      return option.name + ' (' + 'Tier ' + option.tier + ' ' + size.name + ' ' + frame.name + ')';
     },
 
     getSelectOptionsFor(prop) {
@@ -2824,11 +2604,7 @@ export default {
     */
     getSkillDesc(skillId, skill) {
       if (skillId == 'gunnery' && skill.modifier == 0) return '';
-      if (
-        skillId != 'gunnery' &&
-        (skill.ranks === undefined || skill.ranks == 0)
-      )
-        return '';
+      if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return '';
 
       var skillInfo = this.getItemById('skill', skillId);
       if (!skillInfo) return '';
@@ -2939,18 +2715,19 @@ export default {
       }
       return false;
     },
+
     /*
     |------------------------------------------------------------------------------
-    | isCrewRoleAvailable
-    |------------------------------------------------------------------------------
-    | Expects a crew role. Checks to see if role is available. Returns boolean.
+    | selectOptions... methods 
     |------------------------------------------------------------------------------
     */
-    isCrewRoleAvailable(role) {
-      if (role.src == 'scr') return true;
-      if (role.id == 'vi' && this.params.viId != 'none') return true;
-      if (this.params.sources[role.src]) return true;
-      return false;
+    selectOptionsShipWeapon(weaponType, weaponMount) {
+      console.log(weaponType, weaponMount);
+      return this.selectOptions.shipWeapon.filter(
+        (option) =>
+          option.weaponType == weaponType &&
+          (!params.isUseStrictRules || option.weight == weaponMount.weight)
+      );
     },
 
     isOrbitalWeapon(weapon) {
@@ -3022,12 +2799,7 @@ export default {
           // otherwise
           // check that power core id is for huge or gargantuan ship
           // if not then reset
-          if (
-            !(
-              powerCore.sizes.includes('Huge') ||
-              powerCore.sizes.includes('Gargantuan')
-            )
-          ) {
+          if (!(powerCore.sizes.includes('Huge') || powerCore.sizes.includes('Gargantuan'))) {
             that.params.powerCoreIds[index] = 'none';
           }
         } else {
@@ -3163,10 +2935,7 @@ export default {
         }
 
         // 2. powerCoreId exists but is invalid
-        var powerCore = this.getItemById(
-          'powerCore',
-          this.params.powerCoreIds[index]
-        );
+        var powerCore = this.getItemById('powerCore', this.params.powerCoreIds[index]);
         if (!powerCore.sizes.includes(this.sizeCategory.name)) {
           this.params.powerCoreIds[index] = 'none';
           continue;
@@ -3216,19 +2985,13 @@ export default {
           continue;
         }
 
-        var powerCore = this.getItemById(
-          'powerCore',
-          this.params.powerCoreIds[index]
-        );
+        var powerCore = this.getItemById('powerCore', this.params.powerCoreIds[index]);
 
         // If ship doesn't have a supercolossal power core
         if (!this.hasSupercolossalPowerCore) {
           // add only colossal and supercolossal options
           if (
-            !(
-              powerCore.sizes.includes('Colossal') ||
-              powerCore.sizes.includes('Supercolossal')
-            )
+            !(powerCore.sizes.includes('Colossal') || powerCore.sizes.includes('Supercolossal'))
           ) {
             this.params.powerCoreIds[index] = 'none';
           }
@@ -3242,10 +3005,7 @@ export default {
         if (powerCore.sizes[0] == 'Supercolossal') {
           // add only colossal and supercolossal options
           if (
-            !(
-              powerCore.sizes.includes('Colossal') ||
-              powerCore.sizes.includes('Supercolossal')
-            )
+            !(powerCore.sizes.includes('Colossal') || powerCore.sizes.includes('Supercolossal'))
           ) {
             this.params.powerCoreIds[index] = 'none';
           }
@@ -3256,12 +3016,7 @@ export default {
         // We know this is not the SC power core
 
         // add only huge or gargantuan
-        if (
-          !(
-            powerCore.sizes.includes('Huge') ||
-            powerCore.sizes.includes('Gargantuan')
-          )
-        ) {
+        if (!(powerCore.sizes.includes('Huge') || powerCore.sizes.includes('Gargantuan'))) {
           this.params.powerCoreIds[index] = 'none';
         }
 
@@ -3409,23 +3164,23 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
   this.doTests = function () {
-    this.testThatPositionIsValid()
-    this.testThatWeightIsValid(this.weight)
-    this.testThatWeightIsValid(this.templateWeight)
-    this.testThatTemplateWeightIsSmallerThanWeight()
-    this.testThatTurretIsNotCapital()
-  }
+    this.testThatPositionIsValid();
+    this.testThatWeightIsValid(this.weight);
+    this.testThatWeightIsValid(this.templateWeight);
+    this.testThatTemplateWeightIsSmallerThanWeight();
+    this.testThatTurretIsNotCapital();
+  };
   /*
     |--------------------------------------------------------------------------------------
     */
   this.getCost = function () {
-    return this.getUpgradeCost() + this.getNewMountCost()
-  }
+    return this.getUpgradeCost() + this.getNewMountCost();
+  };
   /*
     |--------------------------------------------------------------------------------------
     */
   this.getMaterialCost = function () {
-    var materialCost = 0
+    var materialCost = 0;
 
     switch (this.specialMaterial) {
       // abysium and inubrix: 2, 6, 10, 10
@@ -3433,123 +3188,123 @@ function WeaponMount(params) {
       case 'inubrix':
         switch (this.weight) {
           case 'light':
-            materialCost = 2
-            break
+            materialCost = 2;
+            break;
           case 'heavy':
-            materialCost = 6
-            break
+            materialCost = 6;
+            break;
           case 'capital':
           case 'spinal':
-            materialCost = 10
-            break
+            materialCost = 10;
+            break;
         }
-        break
+        break;
 
       // adamantine alloy: damage die type (with multipliers)
       case 'adamantine-alloy':
-        var damageDice = stringToDice(this.weapon.damage)
-        var mult = this.isLinked ? 2 : 1
-        materialCost = (damageDice.ctFaces * mult) / 2
-        break
-        break
+        var damageDice = stringToDice(this.weapon.damage);
+        var mult = this.isLinked ? 2 : 1;
+        materialCost = (damageDice.ctFaces * mult) / 2;
+        break;
+        break;
       default:
-        break
+        break;
     }
 
-    return materialCost
-  }
+    return materialCost;
+  };
   /*
   |--------------------------------------------------------------------------------------
   */
   this.getMaterialDesc = function () {
-    var materialDesc = []
+    var materialDesc = [];
 
     switch (this.specialMaterial) {
       case 'abysium':
         switch (this.weight) {
           case 'light':
-            materialDesc.push('irradiate (low)')
-            break
+            materialDesc.push('irradiate (low)');
+            break;
           case 'heavy':
-            materialDesc.push('irradiate (medium)')
-            break
+            materialDesc.push('irradiate (medium)');
+            break;
           case 'capital':
           case 'spinal':
-            materialDesc.push('irradiate (high)')
-            break
+            materialDesc.push('irradiate (high)');
+            break;
         }
-        break
+        break;
       case 'adamantine-alloy':
-        var damageDice = stringToDice(this.weapon.damage)
+        var damageDice = stringToDice(this.weapon.damage);
         if (damageDice.ctDice !== undefined && damageDice.ctDice > 0) {
-          materialDesc.push('+' + damageDice.ctDice + ' damage to shieldless quadrants')
+          materialDesc.push('+' + damageDice.ctDice + ' damage to shieldless quadrants');
         }
-        break
+        break;
       case 'inubrix':
-        materialDesc.push('20% chance to score second critical hit')
-        break
+        materialDesc.push('20% chance to score second critical hit');
+        break;
       default:
-        break
+        break;
     }
 
-    return materialDesc.join(', ')
-  }
+    return materialDesc.join(', ');
+  };
   /*
   |--------------------------------------------------------------------------------------
   */
   this.getNewMountCost = function () {
-    var newMountCost = 0
+    var newMountCost = 0;
     if (!this.isFromTemplate) {
       if (this.position == 'turret') {
-        newMountCost = 5
+        newMountCost = 5;
       } else {
-        newMountCost = 3
+        newMountCost = 3;
       }
     }
-    return newMountCost
-  }
+    return newMountCost;
+  };
   /*
   |--------------------------------------------------------------------------------------
   */
   this.getUpgradeCost = function () {
-    var upgradeCost = 0
+    var upgradeCost = 0;
     if (this.weight !== this.templateWeight) {
       // if position is forward, aft, port or starboard arc
       if (WEAPON_ARCS.indexOf(this.position) !== -1) {
         // if templateWeight is light and weight is heavy
         if (this.templateWeight == 'light' && this.weight == 'heavy') {
-          upgradeCost = 4
+          upgradeCost = 4;
         } else if (this.templateWeight == 'heavy' && this.weight == 'capital') {
           // if templateWeight is heavy and weight is capital
-          upgradeCost = 5
+          upgradeCost = 5;
         } else {
           // if templateWeight is light and weight is capital (i.e. 2 upgrades)
-          upgradeCost = 9
+          upgradeCost = 9;
         }
       } else {
         // if position is turret
-        upgradeCost = 6
+        upgradeCost = 6;
       }
     }
-    return upgradeCost
-  }
+    return upgradeCost;
+  };
   /*
   |--------------------------------------------------------------------------------------
   */
   this.testThatPositionIsValid = function () {
     if (['forward', 'aft', 'port', 'starboard', 'turret', 'spinal'].indexOf(this.position) == -1) {
-      throw 'Invalid position in WeaponMount class: ' + this.position
+      throw 'Invalid position in WeaponMount class: ' + this.position;
     }
-  }
+  };
 
   /*
   |--------------------------------------------------------------------------------------
   */
   this.testThatWeightIsValid = function (weight) {
     if (['light', 'heavy', 'capital', 'spinal'].indexOf(weight) == -1) {
-      throw 'Invalid weight in WeaponMount class: ' + weight
+      throw 'Invalid weight in WeaponMount class: ' + weight;
     }
-  }
+  };
 
   /*
   |--------------------------------------------------------------------------------------
@@ -3558,26 +3313,26 @@ function WeaponMount(params) {
     var weightVal = {
       light: 0,
       heavy: 1,
-      capital: 2
-    }
+      capital: 2,
+    };
     if (weightVal[this.weight] < weightVal[this.templateWeight]) {
-      throw 'Original weight must be equal to or lower than current weight'
+      throw 'Original weight must be equal to or lower than current weight';
     }
-  }
+  };
 
   /*
   |--------------------------------------------------------------------------------------
   */
   this.testThatTurretIsNotCapital = function () {
-    if (this.sizeCategoryId == 'Supercolossal') return
+    if (this.sizeCategoryId == 'Supercolossal') return;
 
     if (
       this.position == 'turret' &&
       (this.weight == 'capital' || this.templateWeight == 'capital')
     ) {
-      throw "Turrets cannot have weight 'capital' in WeaponMount"
+      throw "Turrets cannot have weight 'capital' in WeaponMount";
     }
-  }
+  };
   /*
   |--------------------------------------------------------------------------------------
   */
@@ -3587,23 +3342,23 @@ function WeaponMount(params) {
   | CONSTRUCTOR
   |--------------------------------------------------------------------------------------
   */
-  this.id = params.weaponMountId
-  this.position = params.position
-  this.weaponId = params.weaponId
-  this.weapon = params.weapon
-  this.weight = params.weight
-  this.isFromTemplate = params.isFromTemplate
+  this.id = params.weaponMountId;
+  this.position = params.position;
+  this.weaponId = params.weaponId;
+  this.weapon = params.weapon;
+  this.weight = params.weight;
+  this.isFromTemplate = params.isFromTemplate;
   if (this.isFromTemplate) {
-    this.templateWeight = params.templateWeight
+    this.templateWeight = params.templateWeight;
   } else {
-    this.templateWeight = 'light'
+    this.templateWeight = 'light';
   }
-  this.canBeLinked = params.canBeLinked
-  this.isLinked = params.isLinked
-  this.specialMaterial = params.specialMaterial
-  this.sizeCategoryId = params.sizeCategoryId // of ship
+  this.canBeLinked = params.canBeLinked;
+  this.isLinked = params.isLinked;
+  this.specialMaterial = params.specialMaterial;
+  this.sizeCategoryId = params.sizeCategoryId; // of ship
 
-  this.doTests()
+  this.doTests();
 
   /*
   |--------------------------------------------------------------------------------------
