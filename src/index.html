@@ -443,11 +443,7 @@
                 v-on:change="inputSampleShipParams"
               >
                 <option value="none">None</option>
-                <option
-                  v-for="option in selectOptions.sampleShip"
-                  :value="option.id"
-                  v-if="option.src == 'scr' || params.sources[option.src] == true"
-                >
+                <option v-for="option in selectOptions.sampleShip" :value="option.id">
                   {{ getSampleShipOptionName(option) }}
                 </option>
               </select>
@@ -589,11 +585,7 @@
                 v-model="params.frameId"
                 @change="updateFrame"
               >
-                <option
-                  v-for="option in selectOptions.frame"
-                  :value="option.id"
-                  v-if="option.src == 'scr' || params.sources[option.src] == true"
-                >
+                <option v-for="option in selectOptions.frame" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -635,11 +627,7 @@
                       class="form-control"
                       v-model="params.customFrameBaseId"
                     >
-                      <option
-                        v-for="option in selectOptions.frame"
-                        v-if="option.id != 'custom'"
-                        :value="option.id"
-                      >
+                      <option v-for="option in selectOptionsBaseFrame" :value="option.id">
                         {{ option.name }}
                       </option>
                     </select>
@@ -980,10 +968,7 @@
             <div class="form-group">
               <label for="thrustersSelect">Thrusters</label>
               <select id="thrustersSelect" class="form-control" v-model="params.thrustersId">
-                <template
-                  v-for="option in selectOptions.thrusters"
-                  v-if="(!params.isUseStrictRules) || (option.size.indexOf(frame.size) > -1)"
-                >
+                <template v-for="option in selectOptionsThruster">
                   <option :value="option.id">{{ option.name }}</option>
                 </template>
               </select>
@@ -1043,10 +1028,7 @@
                 class="form-control"
                 v-model="params.thrustersBoosterId"
               >
-                <template
-                  v-for="option in selectOptions.thrusters"
-                  v-if="(!params.isUseStrictRules) || (option.size.indexOf(frame.size) > -1)"
-                >
+                <template v-for="option in selectOptionsThruster">
                   <option :value="option.id">{{ option.name }}</option>
                 </template>
               </select>
@@ -1137,11 +1119,7 @@
                 @change="setDefaultPositionDependentValues('ablativeArmor', 'tempHp')"
                 v-model="params.ablativeArmorId"
               >
-                <option
-                  v-for="option in selectOptions.ablativeArmor"
-                  v-if="option.tempHp <= hp * 2"
-                  :value="option.id"
-                >
+                <option v-for="option in selectOptionsAblativeArmor" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -1315,11 +1293,7 @@
                 class="form-control"
                 v-model="params.computerId"
               >
-                <option
-                  v-for="option in selectOptions.computer"
-                  :value="option.id"
-                  v-if="frame.size != 'Supercolossal' || option.bonus >= 4"
-                >
+                <option v-for="option in selectOptionsComputer" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -1334,11 +1308,7 @@
                 class="form-control"
                 v-model="params.secondaryComputerId"
               >
-                <option
-                  v-for="option in selectOptions.computer"
-                  :value="option.id"
-                  v-if="option.bonus < computer.bonus"
-                >
+                <option v-for="option in selectOptionsSecondaryComputer" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -1364,11 +1334,7 @@
                 class="form-control"
                 v-model="params.dedicatedComputerId"
               >
-                <option
-                  v-for="option in selectOptions.computer"
-                  :value="option.id"
-                  v-if="option.id == 'basic-computer' || option.id.indexOf('mononode') !== -1"
-                >
+                <option v-for="option in selectOptionsDedicatedComputer" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -1407,11 +1373,7 @@
             <div class="form-group">
               <label for="crewQuartersSelect">Crew Quarters</label>
               <select id="crewQuartersSelect" class="form-control" v-model="params.crewQuartersId">
-                <option
-                  v-for="option in selectOptions.crewQuarters"
-                  v-if="(!params.isUseStrictRules) || ( (sizeCategory.multiplier == 1 && option.isTinyOnly) || (sizeCategory.multiplier > 1 && !option.isTinyOnly) )"
-                  :value="option.id"
-                >
+                <option v-for="option in selectOptionsCrewQuarters" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -1516,10 +1478,7 @@
             <div class="form-group">
               <label for="driftEngineSelect">Drift Engine</label>
               <select v-model="params.driftEngineId" id="driftEngineSelect" class="form-control">
-                <template
-                  v-for="option in selectOptions.driftEngine"
-                  v-if="(!params.isUseStrictRules) || ( (pcuBudget >= option.minPcu) && (sizeCategory.multiplier <= option.maxSize) )"
-                >
+                <template v-for="option in selectOptionsDriftEngine">
                   <option :value="option.id">{{ option.name }}</option>
                 </template>
               </select>
@@ -1759,10 +1718,7 @@
                   id="antiPersonnelWeaponSelect"
                   class="form-control"
                 >
-                  <template
-                    v-for="option in selectOptions.personalWeapon"
-                    v-if="(option.level <= tier.id)"
-                  >
+                  <template v-for="option in selectOptionsPersonalWeapon">
                     <option :value="option.id">{{ option.name }} ({{ option.damage}})</option>
                   </template>
                 </select>
@@ -1800,11 +1756,7 @@
             <div class="box__select">
               <!-- true/false countermeasures -->
               <div class="box__select box__select--computerCountermeasures">
-                <div
-                  class="checkbox"
-                  v-for="option in selectOptions.computerCountermeasures"
-                  v-if="option.id !== 'shock-grid'"
-                >
+                <div class="checkbox" v-for="option in selectOptionsComputerCountermeasures">
                   <label :for="'computerCountermeasures_' + option.id">
                     <input
                       type="checkbox"
