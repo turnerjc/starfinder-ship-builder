@@ -1,3 +1,4 @@
+<script>
 import shipData from '../data/ship-builder.json';
 
 var WEAPON_SORT = {
@@ -3364,3 +3365,4 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
 }
+</script>
