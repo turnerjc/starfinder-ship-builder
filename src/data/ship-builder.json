@@ -2491,7 +2491,7 @@
         "critical": "n/a",
         "capacity": "n/a",
         "usage": 0,
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "zero-rifle-frostbite-class",
@@ -2505,7 +2505,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "zero-rifle-hailstorm-class",
@@ -2519,7 +2519,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "zero-rifle-blizzard-class",
@@ -2533,7 +2533,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "zero-rifle-avalanche-class",
@@ -2547,7 +2547,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "flame-rifle",
@@ -2561,7 +2561,7 @@
         "usage": 5,
         "bulk": 1,
         "special": "Line, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "laser-rifle-azimuth",
@@ -2575,7 +2575,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "laser-rifle-corona",
@@ -2589,7 +2589,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "laser-rifle-aphelion",
@@ -2603,7 +2603,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "autobeam-rifle-tactical",
@@ -2617,7 +2617,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "laser-rifle-perihelion",
@@ -2631,7 +2631,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "autobeam-rifle-advanced",
@@ -2645,7 +2645,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "laser-rifle-parallax",
@@ -2659,7 +2659,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "autobeam-rifle-elite",
@@ -2673,7 +2673,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "laser-rifle-zenith",
@@ -2687,7 +2687,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "n/a",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "plasma-rifle-red-star",
@@ -2701,7 +2701,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "plasma-rifle-yellow-star",
@@ -2715,7 +2715,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "plasma-caster-white-star",
@@ -2729,7 +2729,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Boost 1d10",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "plasma-rifle-white-star",
@@ -2743,7 +2743,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "plasma-caster-blue-star",
@@ -2757,7 +2757,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Boost 2d10",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "plasma-rifle-blue-star",
@@ -2771,7 +2771,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "hunting-rifle",
@@ -2785,7 +2785,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "scattergun-utility",
@@ -2799,7 +2799,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog, blast",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "acid-dart-rifle-tactical",
@@ -2813,7 +2813,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "autotarget-rifle",
@@ -2827,7 +2827,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "crossbolter-tactical",
@@ -2841,7 +2841,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "acid-dart-rifle-dual",
@@ -2855,7 +2855,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "seeker-rifle-tactical",
@@ -2869,7 +2869,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "crossbolter-dual",
@@ -2883,7 +2883,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "scattergun-snub",
@@ -2897,7 +2897,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog, blast",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "magnetar-rifle-tactical",
@@ -2911,7 +2911,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "combat-rifle",
@@ -2925,7 +2925,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "acid-dart-rifle-complex",
@@ -2939,7 +2939,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "scattergun-impact",
@@ -2953,7 +2953,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, blast",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "gyrojet-rifle-tactical",
@@ -2967,7 +2967,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "magnetar-rifle-advanced",
@@ -2981,7 +2981,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "seeker-rifle-advanced",
@@ -2995,7 +2995,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "gyrojet-rifle-advanced",
@@ -3009,7 +3009,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "scattergun-vortex",
@@ -3023,7 +3023,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, blast",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "magnetar-rifle-elite",
@@ -3037,7 +3037,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "gyrojet-rifle-elite",
@@ -3051,7 +3051,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "seeker-rifle-elite",
@@ -3065,7 +3065,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "scattergun-grapeshot",
@@ -3079,7 +3079,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, blast",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "magnetar-rifle-paragon",
@@ -3093,7 +3093,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "gyrojet-rifle-paragon",
@@ -3107,7 +3107,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "seeker-rifle-paragon",
@@ -3121,7 +3121,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "pulsecaster-rifle",
@@ -3135,7 +3135,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "Nonlethal",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "arc-emitter-tactical",
@@ -3149,7 +3149,7 @@
         "usage": 4,
         "bulk": 1,
         "special": "Blast, stun, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "arc-rifle-static",
@@ -3163,7 +3163,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Stun",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "arc-emitter-advanced",
@@ -3177,7 +3177,7 @@
         "usage": 10,
         "bulk": 1,
         "special": "Blast, stun, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "arc-rifle-aurora",
@@ -3191,7 +3191,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Stun",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "arc-rifle-storm",
@@ -3205,7 +3205,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Stun",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "arc-rifle-tempest",
@@ -3219,7 +3219,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Stun",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "sonic-rifle-thunderstrike",
@@ -3233,7 +3233,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "n/a",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "streetsweeper-thunderstrike",
@@ -3247,7 +3247,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Boost 1d6",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "sonic-rifle-lfd",
@@ -3261,7 +3261,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "n/a",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "streetsweeper-lfd",
@@ -3275,7 +3275,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Boost 1d8",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "sonic-rifle-hfd",
@@ -3289,7 +3289,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "n/a",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "streetsweeper-hfd",
@@ -3303,7 +3303,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Boost 1d10",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "sonic-rifle-banshee",
@@ -3317,7 +3317,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "n/a",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "needler-rifle",
@@ -3331,7 +3331,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Analog, injection",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "zero-cannon-tactical",
@@ -3345,7 +3345,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "zero-cannon-advanced",
@@ -3359,7 +3359,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "zero-cannon-elite",
@@ -3373,7 +3373,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Line, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "flamethrower-ifrit-class",
@@ -3387,7 +3387,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Analog, blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "flamethrower-salamander-class",
@@ -3401,7 +3401,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Analog, blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "flamethrower-hellhound-class",
@@ -3415,7 +3415,7 @@
         "usage": 8,
         "bulk": 2,
         "special": "Analog, blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "flamethrower-firedrake-class",
@@ -3429,7 +3429,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Analog, blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "flamethrower-phoenix-class",
@@ -3443,7 +3443,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Analog, blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "artillery-laser-azimuth",
@@ -3457,7 +3457,7 @@
         "usage": 2,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "artillery-laser-corona",
@@ -3471,7 +3471,7 @@
         "usage": 4,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "artillery-laser-aphelion",
@@ -3485,7 +3485,7 @@
         "usage": 4,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "autobeam-artillery-tactical",
@@ -3499,7 +3499,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "artillery-laser-perihelion",
@@ -3513,7 +3513,7 @@
         "usage": 5,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "autobeam-artillery-advanced",
@@ -3527,7 +3527,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "artillery-laser-parallax",
@@ -3541,7 +3541,7 @@
         "usage": 5,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "autobeam-artillery-elite",
@@ -3555,7 +3555,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "artillery-laser-zenith",
@@ -3569,7 +3569,7 @@
         "usage": 5,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "plasma-cannon-red-star",
@@ -3583,7 +3583,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Explode (5 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "plasma-cannon-yellow-star",
@@ -3597,7 +3597,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Explode (5 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "plasma-cannon-white-star",
@@ -3611,7 +3611,7 @@
         "usage": 5,
         "bulk": 2,
         "special": "Explode (5 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "plasma-cannon-blue-star",
@@ -3625,7 +3625,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Explode (10 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "reaction-cannon-light",
@@ -3639,7 +3639,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "machine-gun-squad",
@@ -3653,7 +3653,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "x-gen-gun-tactical",
@@ -3667,7 +3667,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "reaction-cannon-tactical",
@@ -3681,7 +3681,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "machine-gun-light",
@@ -3695,7 +3695,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "x-gen-gun-advanced",
@@ -3709,7 +3709,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "reaction-cannon-heavy",
@@ -3723,7 +3723,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "stellar-cannon-light",
@@ -3737,7 +3737,7 @@
         "usage": 6,
         "bulk": 2,
         "special": "Blast",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "crossbolter-advanced",
@@ -3751,7 +3751,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "machine-gun-medium",
@@ -3765,7 +3765,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "x-gen-gun-elite",
@@ -3779,7 +3779,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "crossbolter-elite",
@@ -3793,7 +3793,7 @@
         "usage": 6,
         "bulk": 2,
         "special": "Unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "reaction-cannon-advanced",
@@ -3807,7 +3807,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "stellar-cannon-heavy",
@@ -3821,7 +3821,7 @@
         "usage": 8,
         "bulk": 2,
         "special": "Blast",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "machine-gun-heavy",
@@ -3835,7 +3835,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Analog, automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "reaction-cannon-elite",
@@ -3849,7 +3849,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "crossbolter-paragon",
@@ -3863,7 +3863,7 @@
         "usage": 8,
         "bulk": 2,
         "special": "Unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "reaction-cannon-paragon",
@@ -3877,7 +3877,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Penetrating",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "x-gen-gun-paragon",
@@ -3891,7 +3891,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Automatic",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "shock-caster-static",
@@ -3905,7 +3905,7 @@
         "usage": 2,
         "bulk": 2,
         "special": "Explode (10 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "shock-caster-aurora",
@@ -3919,7 +3919,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Explode (15 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "shock-caster-storm",
@@ -3933,7 +3933,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Explode (20 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "shock-caster-tempest",
@@ -3947,7 +3947,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Explode (20 ft.), unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "screamer-thunderstrike",
@@ -3961,7 +3961,7 @@
         "usage": 4,
         "bulk": 2,
         "special": "Blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "screamer-lfd",
@@ -3975,7 +3975,7 @@
         "usage": 8,
         "bulk": 2,
         "special": "Blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "screamer-hfd",
@@ -3989,7 +3989,7 @@
         "usage": 10,
         "bulk": 2,
         "special": "Blast, unwieldy",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "nil-grenade-launcher-merc",
@@ -4003,7 +4003,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "Analog",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "nil-grenade-launcher-squad",
@@ -4017,7 +4017,7 @@
         "usage": 1,
         "bulk": 3,
         "special": "Analog",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "imds-missile-launcher",
@@ -4031,7 +4031,7 @@
         "usage": 1,
         "bulk": 2,
         "special": "n/a",
-        "type": "heavy"
+        "weaponType": "heavy"
       },
       {
         "id": "advanced-rail-gun",
@@ -4046,7 +4046,7 @@
         "usage": 1,
         "bulk": 1,
         "special": "Automatic",
-        "type": "longarm"
+        "weaponType": "longarm"
       },
       {
         "id": "blaze-rifle-ifrit-class",
@@ -4061,7 +4061,7 @@
         "usage": 2,
         "bulk": 1,
         "special": "Analog, unwieldy",
-        "type": "longarm"
+        "weaponType": "longarm"
       }
     ]
   },
@@ -4625,7 +4625,7 @@
         "bpCost": 0,
         "specialProperties": [],
         "weight": "n/a",
-        "type": "n/a"
+        "weaponType": "n/a"
       },
       {
         "id": "chain-cannon",
@@ -4638,7 +4638,7 @@
         "bpCost": 10,
         "specialProperties": ["ripper"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "coilgun",
@@ -4651,7 +4651,7 @@
         "bpCost": 10,
         "specialProperties": [],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "flak-thrower",
@@ -4664,7 +4664,7 @@
         "bpCost": 5,
         "specialProperties": ["point-8"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "gyrolaser",
@@ -4677,7 +4677,7 @@
         "bpCost": 3,
         "specialProperties": ["broad-arc"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "laser-net",
@@ -4690,7 +4690,7 @@
         "bpCost": 9,
         "specialProperties": ["point-10"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-emp-cannon",
@@ -4703,7 +4703,7 @@
         "bpCost": 8,
         "specialProperties": ["emp"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-laser-cannon",
@@ -4716,7 +4716,7 @@
         "bpCost": 2,
         "specialProperties": [],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-particle-beam",
@@ -4729,7 +4729,7 @@
         "bpCost": 10,
         "specialProperties": [],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-plasma-cannon",
@@ -4742,7 +4742,7 @@
         "bpCost": 12,
         "specialProperties": [],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "mining-laser",
@@ -4755,7 +4755,7 @@
         "bpCost": 5,
         "specialProperties": ["burrowing"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "high-explosive-missile-launcher",
@@ -4768,7 +4768,7 @@
         "bpCost": 14,
         "specialProperties": ["limited-fire-5"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "light-plasma-torpedo-launcher",
@@ -4781,7 +4781,7 @@
         "bpCost": 11,
         "specialProperties": ["limited-fire-5"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "light-torpedo-launcher",
@@ -4794,7 +4794,7 @@
         "bpCost": 7,
         "specialProperties": [],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "micromissile-battery",
@@ -4807,7 +4807,7 @@
         "bpCost": 5,
         "specialProperties": ["array", "limited-fire-5"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "tactical-nuclear-missile-launcher",
@@ -4820,7 +4820,7 @@
         "bpCost": 18,
         "specialProperties": ["irradiate-low", "limited-fire-5"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "light-spore-torpedo-launcher",
@@ -4833,7 +4833,7 @@
         "bpCost": 5,
         "specialProperties": ["limited-fire-5", "spore"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "graser",
@@ -4846,7 +4846,7 @@
         "bpCost": 35,
         "specialProperties": ["irradiate-medium"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "gravity-gun",
@@ -4859,7 +4859,7 @@
         "bpCost": 30,
         "specialProperties": ["tractor-beam"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-emp-cannon",
@@ -4872,7 +4872,7 @@
         "bpCost": 12,
         "specialProperties": ["emp"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-laser-array",
@@ -4885,7 +4885,7 @@
         "bpCost": 10,
         "specialProperties": ["array"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-laser-cannon",
@@ -4898,7 +4898,7 @@
         "bpCost": 15,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-laser-net",
@@ -4911,7 +4911,7 @@
         "bpCost": 15,
         "specialProperties": ["point-12"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "maser",
@@ -4924,7 +4924,7 @@
         "bpCost": 22,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "particle-beam",
@@ -4937,7 +4937,7 @@
         "bpCost": 20,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "persistent-particle-beam",
@@ -4950,7 +4950,7 @@
         "bpCost": 25,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "plasma-cannon",
@@ -4963,7 +4963,7 @@
         "bpCost": 20,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "railgun",
@@ -4976,7 +4976,7 @@
         "bpCost": 15,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "twin-laser",
@@ -4989,7 +4989,7 @@
         "bpCost": 18,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "x-laser-cannon",
@@ -5002,7 +5002,7 @@
         "bpCost": 35,
         "specialProperties": ["line"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-antimatter-missile-launcher",
@@ -5015,7 +5015,7 @@
         "bpCost": 35,
         "specialProperties": ["limited-fire-5"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-nuclear-missile-launcher",
@@ -5028,7 +5028,7 @@
         "bpCost": 35,
         "specialProperties": ["irradiate-medium", "limited-fire-5"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-plasma-torpedo-launcher",
@@ -5041,7 +5041,7 @@
         "bpCost": 18,
         "specialProperties": ["limited-fire-5"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-torpedo-launcher",
@@ -5054,7 +5054,7 @@
         "bpCost": 16,
         "specialProperties": ["limited-fire-5"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-spore-torpedo-launcher",
@@ -5067,7 +5067,7 @@
         "bpCost": 10,
         "specialProperties": ["limited-fire-5", "spore"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "gravity-cannon",
@@ -5080,7 +5080,7 @@
         "bpCost": 50,
         "specialProperties": ["tractor-beam"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "mass-driver",
@@ -5093,7 +5093,7 @@
         "bpCost": 30,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "particle-beam-cannon",
@@ -5106,7 +5106,7 @@
         "bpCost": 30,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "persistent-particle-beam-cannon",
@@ -5119,7 +5119,7 @@
         "bpCost": 40,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "super-emp-cannon",
@@ -5132,7 +5132,7 @@
         "bpCost": 18,
         "specialProperties": ["emp"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "super-plasma-cannon",
@@ -5145,7 +5145,7 @@
         "bpCost": 35,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "super-x-laser-cannon",
@@ -5158,7 +5158,7 @@
         "bpCost": 45,
         "specialProperties": ["line"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "supergraser",
@@ -5171,7 +5171,7 @@
         "bpCost": 35,
         "specialProperties": ["irradiate-high"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "superlaser",
@@ -5184,7 +5184,7 @@
         "bpCost": 20,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "supermaser",
@@ -5197,7 +5197,7 @@
         "bpCost": 35,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "vortex-cannon",
@@ -5210,7 +5210,7 @@
         "bpCost": 75,
         "specialProperties": ["vortex"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "antimatter-mega-missile-launcher",
@@ -5223,7 +5223,7 @@
         "bpCost": 70,
         "specialProperties": ["limited-fire-5"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "hellfire-torpedo-launcher",
@@ -5236,7 +5236,7 @@
         "bpCost": 40,
         "specialProperties": ["limited-fire-5"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "nuclear-mega-missile-launcher",
@@ -5249,7 +5249,7 @@
         "bpCost": 60,
         "specialProperties": ["limited-fire-5"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "quantum-missile-launcher",
@@ -5262,7 +5262,7 @@
         "bpCost": 35,
         "specialProperties": ["limited-fire-5", "quantum"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "solar-torpedo-launcher",
@@ -5275,7 +5275,7 @@
         "bpCost": 25,
         "specialProperties": ["limited-fire-5"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "aeon-caster",
@@ -5288,7 +5288,7 @@
         "bpCost": 7,
         "specialProperties": ["mystical", "restricted-imperial-fleet"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "decorative-ramming-prow",
@@ -5301,7 +5301,7 @@
         "bpCost": 5,
         "specialProperties": ["intimidating", "ramming"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "force-projector",
@@ -5314,7 +5314,7 @@
         "bpCost": 7,
         "specialProperties": ["force-field-15"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "garbage-ejection-system",
@@ -5327,7 +5327,7 @@
         "bpCost": 1,
         "specialProperties": ["limited-fire-1", "point-8"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-buster-cannon",
@@ -5340,7 +5340,7 @@
         "bpCost": 9,
         "specialProperties": ["buster"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-force-ramming-prow",
@@ -5353,7 +5353,7 @@
         "bpCost": 3,
         "specialProperties": ["force-field-20", "ramming"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-orbital-death-knell",
@@ -5366,7 +5366,7 @@
         "bpCost": 18,
         "specialProperties": ["orbital-3"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-orbital-particle-cannon",
@@ -5379,7 +5379,7 @@
         "bpCost": 21,
         "specialProperties": ["line", "orbital-2"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "light-teleportation-beam",
@@ -5392,7 +5392,7 @@
         "bpCost": 14,
         "specialProperties": ["teleportation-1"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "minor-ramming-prow",
@@ -5405,7 +5405,7 @@
         "bpCost": 4,
         "specialProperties": ["ramming"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "rail-launcher",
@@ -5418,7 +5418,7 @@
         "bpCost": 10,
         "specialProperties": ["rail-1d8"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "shadow-bolt-projector",
@@ -5431,7 +5431,7 @@
         "bpCost": 7,
         "specialProperties": ["intimidating", "mystical"],
         "weight": "light",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "digital-strike-conduit",
@@ -5444,7 +5444,7 @@
         "bpCost": 10,
         "specialProperties": ["hacking"],
         "weight": "light",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "gravity-generator",
@@ -5457,7 +5457,7 @@
         "bpCost": 9,
         "specialProperties": ["gravity-well"],
         "weight": "light",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "nav-scram-projector",
@@ -5470,7 +5470,7 @@
         "bpCost": 10,
         "specialProperties": ["nav-scram"],
         "weight": "light",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "warp-puck-launcher",
@@ -5483,7 +5483,7 @@
         "bpCost": 10,
         "specialProperties": ["limited-fire-3", "mine-1", "transposition-1"],
         "weight": "light",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "light-explosion-injector",
@@ -5496,7 +5496,7 @@
         "bpCost": 13,
         "specialProperties": ["burrowing", "limited-fire-5"],
         "weight": "light",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "light-hacksaw-arm",
@@ -5509,7 +5509,7 @@
         "bpCost": 8,
         "specialProperties": ["ripper"],
         "weight": "light",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "light-ship-tether",
@@ -5522,7 +5522,7 @@
         "bpCost": 6,
         "specialProperties": ["anchoring"],
         "weight": "light",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "light-blade-hull",
@@ -5535,7 +5535,7 @@
         "bpCost": 10,
         "specialProperties": [],
         "weight": "light",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "light-aeon-torpedo-launcher",
@@ -5548,7 +5548,7 @@
         "bpCost": 8,
         "specialProperties": ["limited-fire-5", "mystical", "restricted-imperial-fleet"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "light-frag-mines",
@@ -5561,7 +5561,7 @@
         "bpCost": 12,
         "specialProperties": ["limited-fire-5", "mine-3", "ripper"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "light-plasma-mines",
@@ -5574,7 +5574,7 @@
         "bpCost": 12,
         "specialProperties": ["limited-fire-5", "mine-4"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "light-plasma-torpedo-pod",
@@ -5587,7 +5587,7 @@
         "bpCost": 11,
         "specialProperties": ["limited-fire-3", "pod"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "magic-torpedo-unit",
@@ -5600,7 +5600,7 @@
         "bpCost": 10,
         "specialProperties": ["broad-arc", "mystical", "quantum"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "mini-nuke-mines",
@@ -5613,7 +5613,7 @@
         "bpCost": 8,
         "specialProperties": ["irradiate-low", "limited-fire-3", "mine-1"],
         "weight": "light",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "force-blaster",
@@ -5626,7 +5626,7 @@
         "bpCost": 18,
         "specialProperties": ["force-field-40"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "gatling-cannon",
@@ -5639,7 +5639,7 @@
         "bpCost": 20,
         "specialProperties": ["ripper"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "gyrocannon",
@@ -5652,7 +5652,7 @@
         "bpCost": 14,
         "specialProperties": ["broad-arc"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-aeon-caster",
@@ -5665,7 +5665,7 @@
         "bpCost": 18,
         "specialProperties": ["mystical", "restricted-imperial-fleet"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-buster-cannon",
@@ -5678,7 +5678,7 @@
         "bpCost": 16,
         "specialProperties": ["buster"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-force-ramming-prow",
@@ -5691,7 +5691,7 @@
         "bpCost": 10,
         "specialProperties": ["force-field-40", "ramming"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-orbital-death-knell",
@@ -5704,7 +5704,7 @@
         "bpCost": 36,
         "specialProperties": ["orbital-7"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-orbital-particle-cannon",
@@ -5717,7 +5717,7 @@
         "bpCost": 42,
         "specialProperties": ["line", "orbital-5"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-ramming-prow",
@@ -5730,7 +5730,7 @@
         "bpCost": 8,
         "specialProperties": ["ramming"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "heavy-teleportation-beam",
@@ -5743,7 +5743,7 @@
         "bpCost": 35,
         "specialProperties": ["teleportation-2"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "imposing-ramming-prow",
@@ -5756,7 +5756,7 @@
         "bpCost": 10,
         "specialProperties": ["intimidating", "ramming"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "rail-ballista",
@@ -5769,7 +5769,7 @@
         "bpCost": 22,
         "specialProperties": ["rail-3d8"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "shadow-beam-projector",
@@ -5782,7 +5782,7 @@
         "bpCost": 30,
         "specialProperties": ["intimidating", "line", "mystical"],
         "weight": "heavy",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "digital-raid-node",
@@ -5795,7 +5795,7 @@
         "bpCost": 15,
         "specialProperties": ["hacking"],
         "weight": "heavy",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "fractal-nav-scram-projector",
@@ -5808,7 +5808,7 @@
         "bpCost": 16,
         "specialProperties": ["nav-scram"],
         "weight": "heavy",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "gravity-well-generator",
@@ -5821,7 +5821,7 @@
         "bpCost": 20,
         "specialProperties": ["gravity-well"],
         "weight": "heavy",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "warp-puck-bank",
@@ -5834,7 +5834,7 @@
         "bpCost": 20,
         "specialProperties": ["limited-fire-3", "mine-2", "transposition-2"],
         "weight": "heavy",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "heavy-explosion-injector",
@@ -5847,7 +5847,7 @@
         "bpCost": 26,
         "specialProperties": ["burrowing", "limited-fire-5"],
         "weight": "heavy",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "heavy-hacksaw-arm",
@@ -5860,7 +5860,7 @@
         "bpCost": 15,
         "specialProperties": ["ripper"],
         "weight": "heavy",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "heavy-ship-tether",
@@ -5873,7 +5873,7 @@
         "bpCost": 14,
         "specialProperties": ["anchoring"],
         "weight": "heavy",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "heavy-blade-hull",
@@ -5886,7 +5886,7 @@
         "bpCost": 17,
         "specialProperties": [],
         "weight": "heavy",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "counter-missile-bank",
@@ -5899,7 +5899,7 @@
         "bpCost": 11,
         "specialProperties": ["limited-fire-6", "point-12"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-aeon-torpedo-launcher",
@@ -5912,7 +5912,7 @@
         "bpCost": 20,
         "specialProperties": ["limited-fire-5", "mystical", "restricted-imperial-fleet"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-frag-mines",
@@ -5925,7 +5925,7 @@
         "bpCost": 15,
         "specialProperties": ["limited-fire-5", "mine-3", "ripper"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-nuclear-mines",
@@ -5938,7 +5938,7 @@
         "bpCost": 14,
         "specialProperties": ["irradiate-medium", "limited-fire-3", "mine-1"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-nuclear-silo",
@@ -5951,7 +5951,7 @@
         "bpCost": 35,
         "specialProperties": ["irradiate-medium", "limited-fire-3", "orbital-10"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-plasma-mines",
@@ -5964,7 +5964,7 @@
         "bpCost": 18,
         "specialProperties": ["limited-fire-5", "mine-4"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heavy-plasma-torpedo-pod",
@@ -5977,7 +5977,7 @@
         "bpCost": 18,
         "specialProperties": ["limited-fire-3", "pod"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "heightened-magic-torpedo-unit",
@@ -5990,7 +5990,7 @@
         "bpCost": 20,
         "specialProperties": ["broad-arc", "mystical", "quantum"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "vortex-mouth-mines",
@@ -6003,7 +6003,7 @@
         "bpCost": 30,
         "specialProperties": ["limited-fire-3", "mine-3", "vortex"],
         "weight": "heavy",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "extreme-force-ramming-prow",
@@ -6016,7 +6016,7 @@
         "bpCost": 10,
         "specialProperties": ["force-field-100", "ramming"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "gatling-cannon-array",
@@ -6029,7 +6029,7 @@
         "bpCost": 25,
         "specialProperties": ["array", "ripper"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "massive-ramming-prow",
@@ -6042,7 +6042,7 @@
         "bpCost": 20,
         "specialProperties": ["ramming"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "mega-teleportation-beam",
@@ -6055,7 +6055,7 @@
         "bpCost": 65,
         "specialProperties": ["teleportation-3"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "monolith-ramming-prow",
@@ -6068,7 +6068,7 @@
         "bpCost": 15,
         "specialProperties": ["intimidating", "ramming"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "prismatic-beam",
@@ -6081,7 +6081,7 @@
         "bpCost": 55,
         "specialProperties": ["line", "mystical"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "shadow-bolt-array",
@@ -6094,7 +6094,7 @@
         "bpCost": 25,
         "specialProperties": ["array", "intimidating", "mystical"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "starspear-rail-launcher",
@@ -6107,7 +6107,7 @@
         "bpCost": 35,
         "specialProperties": ["rail-1d8-10"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "super-buster-cannon",
@@ -6120,7 +6120,7 @@
         "bpCost": 35,
         "specialProperties": ["buster"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "super-orbital-death-knell",
@@ -6133,7 +6133,7 @@
         "bpCost": 57,
         "specialProperties": ["orbital-10"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "super-orbital-particle-cannon",
@@ -6146,7 +6146,7 @@
         "bpCost": 60,
         "specialProperties": ["line", "orbital-10"],
         "weight": "capital",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "black-hole-generator",
@@ -6159,7 +6159,7 @@
         "bpCost": 25,
         "specialProperties": ["gravity-well"],
         "weight": "capital",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "digital-assault-torrent",
@@ -6172,7 +6172,7 @@
         "bpCost": 25,
         "specialProperties": ["hacking"],
         "weight": "capital",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "super-nav-scram-projector",
@@ -6185,7 +6185,7 @@
         "bpCost": 25,
         "specialProperties": ["nav-scram"],
         "weight": "capital",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "warp-puck-battery",
@@ -6198,7 +6198,7 @@
         "bpCost": 30,
         "specialProperties": ["limited-fire-3", "mine-2", "transposition-3"],
         "weight": "capital",
-        "type": "ECM"
+        "weaponType": "ECM"
       },
       {
         "id": "super-explosion-injector",
@@ -6211,7 +6211,7 @@
         "bpCost": 50,
         "specialProperties": ["burrowing", "limited-fire-3"],
         "weight": "capital",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "super-hacksaw-arm",
@@ -6224,7 +6224,7 @@
         "bpCost": 25,
         "specialProperties": ["ripper"],
         "weight": "capital",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "super-ship-tether",
@@ -6237,7 +6237,7 @@
         "bpCost": 18,
         "specialProperties": ["anchoring"],
         "weight": "capital",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "super-blade-hull",
@@ -6250,7 +6250,7 @@
         "bpCost": 40,
         "specialProperties": [],
         "weight": "capital",
-        "type": "Melee"
+        "weaponType": "Melee"
       },
       {
         "id": "heavy-frag-mines",
@@ -6263,7 +6263,7 @@
         "bpCost": 45,
         "specialProperties": ["limited-fire-5", "mine-3", "ripper"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "hellfire-mines",
@@ -6276,7 +6276,7 @@
         "bpCost": 40,
         "specialProperties": ["limited-fire-5", "mine-4"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "nuclear-mega-mines",
@@ -6289,7 +6289,7 @@
         "bpCost": 30,
         "specialProperties": ["irradiate-high", "limited-fire-3", "mine-1"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "quantum-mines",
@@ -6302,7 +6302,7 @@
         "bpCost": 40,
         "specialProperties": ["limited-fire-3", "mine-5", "quantum"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "quantum-missile-pod",
@@ -6315,7 +6315,7 @@
         "bpCost": 35,
         "specialProperties": ["limited-fire-3", "pod", "quantum"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "super-nuclear-silo",
@@ -6328,7 +6328,7 @@
         "bpCost": 40,
         "specialProperties": ["irradiate-high", "limited-fire-2", "orbital-14"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "vortex-maw-mines",
@@ -6341,7 +6341,7 @@
         "bpCost": 60,
         "specialProperties": ["limited-fire-3", "mine-3", "vortex"],
         "weight": "capital",
-        "type": "Tracking"
+        "weaponType": "Tracking"
       },
       {
         "id": "gravity-annihilator",
@@ -6354,7 +6354,7 @@
         "bpCost": 60,
         "specialProperties": ["tractor-beam"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "hypermass-cannon",
@@ -6367,7 +6367,7 @@
         "bpCost": 40,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "nova-ram",
@@ -6380,7 +6380,7 @@
         "bpCost": 55,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "orbital-devastator",
@@ -6393,7 +6393,7 @@
         "bpCost": 54,
         "specialProperties": ["orbital-18"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "particle-acceleration-gun",
@@ -6406,7 +6406,7 @@
         "bpCost": 40,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "prismatic-torrent",
@@ -6419,7 +6419,7 @@
         "bpCost": 45,
         "specialProperties": ["line", "mystical"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "summon-planetoid-module",
@@ -6432,7 +6432,7 @@
         "bpCost": 40,
         "specialProperties": ["limited-fire-3", "mystical", "point-15"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "titan-bolter",
@@ -6445,7 +6445,7 @@
         "bpCost": 50,
         "specialProperties": ["rail-2d8-10"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "ultra-plasma-cannon",
@@ -6458,7 +6458,7 @@
         "bpCost": 45,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "ultra-x-laser-cannon",
@@ -6471,7 +6471,7 @@
         "bpCost": 45,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "ultragraser",
@@ -6484,7 +6484,7 @@
         "bpCost": 55,
         "specialProperties": ["irradiate-high", "line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "ultralaser",
@@ -6497,7 +6497,7 @@
         "bpCost": 25,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "ultramaser",
@@ -6510,7 +6510,7 @@
         "bpCost": 45,
         "specialProperties": ["line"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       },
       {
         "id": "vortex-devourer",
@@ -6523,7 +6523,7 @@
         "bpCost": 65,
         "specialProperties": ["vortex"],
         "weight": "spinal",
-        "type": "Direct-Fire"
+        "weaponType": "Direct-Fire"
       }
     ]
   },
@@ -13067,7 +13067,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 3,
             "aft": "1",
@@ -13294,7 +13294,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 3,
             "aft": 3,
@@ -13522,7 +13522,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 3,
             "aft": "1",
@@ -13749,7 +13749,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "cut-rate",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 5,
             "aft": 5,
@@ -13996,7 +13996,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 8,
             "aft": 8,
@@ -14236,7 +14236,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 10,
             "aft": 10,
@@ -14493,7 +14493,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 10,
             "aft": 10,
@@ -14750,7 +14750,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 15,
             "aft": 15,
@@ -14997,7 +14997,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 25,
             "aft": 25,
@@ -15262,7 +15262,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 13,
             "aft": 13,
@@ -15538,7 +15538,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "25",
             "aft": "25",
@@ -15812,7 +15812,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 15,
             "aft": 15,
@@ -16092,7 +16092,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 15,
             "aft": 15,
@@ -16342,7 +16342,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "15",
             "aft": "15",
@@ -16599,7 +16599,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "80",
             "aft": "40",
@@ -16865,7 +16865,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 20,
             "aft": 20,
@@ -17170,7 +17170,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "40",
             "aft": "40",
@@ -17476,7 +17476,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "30",
             "aft": "30",
@@ -17777,7 +17777,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 30,
             "aft": 30,
@@ -18091,7 +18091,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 50,
             "aft": 50,
@@ -18418,7 +18418,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 30,
             "aft": 30,
@@ -18741,7 +18741,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "none",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 25,
             "aft": 25,
@@ -19051,7 +19051,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "20",
             "aft": "20",
@@ -19397,7 +19397,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "40",
             "aft": "40",
@@ -19715,7 +19715,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 70,
             "aft": 70,
@@ -20012,7 +20012,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 60,
             "aft": 60,
@@ -20332,7 +20332,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 120,
             "aft": 120,
@@ -20654,7 +20654,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "90",
             "aft": "50",
@@ -20975,7 +20975,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 105,
             "aft": 105,
@@ -21285,7 +21285,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 80,
             "aft": 80,
@@ -21615,7 +21615,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 120,
             "aft": 120,
@@ -21962,7 +21962,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 35,
             "aft": 35,
@@ -22325,7 +22325,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "budget-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "80",
             "aft": "60",
@@ -22715,7 +22715,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 80,
             "aft": 80,
@@ -23104,7 +23104,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 120,
             "aft": 120,
@@ -23494,7 +23494,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 90,
             "aft": 90,
@@ -23922,7 +23922,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-short-range",
           "sensorsMaterialId": "none",
-          "shieldType": "deflector-shield",
+          "shieldweaponType": "deflector-shield",
           "shieldsByPosition": {
             "forward": 0,
             "aft": 0,
@@ -24362,7 +24362,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 150,
             "aft": 150,
@@ -24799,7 +24799,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "150",
             "aft": "90",
@@ -25294,7 +25294,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 150,
             "aft": 150,
@@ -25758,7 +25758,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 150,
             "aft": 150,
@@ -26197,7 +26197,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "basic-medium-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 135,
             "aft": 135,
@@ -26914,7 +26914,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "advanced-long-range",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": 135,
             "aft": 135,
@@ -27567,7 +27567,7 @@
           "secondaryComputerId": "basic-computer",
           "sensorsId": "none",
           "sensorsMaterialId": "none",
-          "shieldType": "shields",
+          "shieldweaponType": "shields",
           "shieldsByPosition": {
             "forward": "90",
             "aft": "130",
