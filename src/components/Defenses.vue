@@ -85,5 +85,5 @@
 </template>
 
 <script>
-  import Ship from './Ship.vue'
+  import ShipApp from './ShipApp.vue'
 </script>
