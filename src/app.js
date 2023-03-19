@@ -1,5 +1,5 @@
-<script>
-import shipData from '../data/ship-builder.json';
+import shipData from './data/ship-builder.json';
+import Graphics from './components/Graphics.vue';
 
 var WEAPON_SORT = {
   forwardArc: 0,
@@ -3139,6 +3139,9 @@ export default {
       this.setWeaponLinking(position);
     },
   },
+  components: {
+    Graphics,
+  },
   /*
   |----------------------------------------------------------------------------------
   |  BEFORE MOUNT
@@ -3365,4 +3368,3 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
 }
-</script>

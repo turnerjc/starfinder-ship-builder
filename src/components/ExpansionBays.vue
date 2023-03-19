@@ -5,20 +5,12 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 
-  <div
-    class="box"
-    v-if="frame.expansionBays !== 0">
+  <div class="box" v-if="frame.expansionBays !== 0">
     <header class="box__header">
       <h3 id="expansionBays">Expansion Bays</h3>
     </header>
-    <p
-      v-if="frame.expansionBayInfo"
-      class="text-warning">
-      NOTE: {{ frame.expansionBayInfo }}.
-    </p>
-    <p
-      v-if="sizeCategory.id == 'Supercolossal'"
-      class="text-warning">
+    <p v-if="frame.expansionBayInfo" class="text-warning">NOTE: {{ frame.expansionBayInfo }}.</p>
+    <p v-if="sizeCategory.id == 'Supercolossal'" class="text-warning">
       NOTE: As a Supercolossal ship, this vessel has {{ Math.floor(frame.bpCost / 10) }} cargo bays
       in addition to those below.
     </p>
@@ -68,9 +60,7 @@
               </button>
 
               <!-- delete -->
-              <button
-                class="btn btn-danger btn-sm"
-                @click="params.expansionBayIds.splice(i, 1)">
+              <button class="btn btn-danger btn-sm" @click="params.expansionBayIds.splice(i, 1)">
                 <svg class="icon">
                   <use xlink:href="#icon-trash" />
                 </svg>
@@ -84,9 +74,7 @@
               v-model="params.expansionBayIds[i]"
               :id="'expansionBaySelect' + i"
               class="form-control">
-              <option
-                v-for="option in selectOptions.expansionBay"
-                :value="option.id">
+              <option v-for="option in selectOptions.expansionBay" :value="option.id">
                 {{ option.name + (option.numBays != 1 ? ' (' + option.numBays + ' Slots)' : '') }}
               </option>
             </select>
@@ -113,22 +101,16 @@
       </template>
     </ul>
 
-    <p
-      v-if="ctExternalExpansionBays > frame.expansionBays"
-      class="text-danger">
+    <p v-if="ctExternalExpansionBays > frame.expansionBays" class="text-danger">
       You cannot have more external expansion bays than expansion bay slots on the frame.
     </p>
 
-    <p
-      v-if="hasHealingPod"
-      class="text-warning">
+    <p v-if="hasHealingPod" class="text-warning">
       NOTE: Healing pods can only be installed on biomechanical ships.
     </p>
 
     <div class="box__under-box align-right">
-      <button
-        @click="params.expansionBayIds.push('none')"
-        class="btn btn-primary">
+      <button @click="params.expansionBayIds.push('none')" class="btn btn-primary">
         Create New Expansion Bay
       </button>
     </div>
@@ -146,6 +128,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

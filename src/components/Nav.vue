@@ -37,6 +37,8 @@
   </nav>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
+<script setup>
+  import { defineProps } from 'vue'
+
+  const props = defineProps(['params', 'frame'])
 </script>

@@ -5,7 +5,6 @@
 	| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	-->
   <div id="app" class="wrapper">
-    <Ship></Ship>
     <Graphics></Graphics>
 
     <!--
@@ -20,6 +19,7 @@
           <use xlink:href="#icon-close" />
         </svg>
       </a>
+      <Nav></Nav>
 
       <h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
     </div>

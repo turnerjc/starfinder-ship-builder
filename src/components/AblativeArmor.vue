@@ -5,9 +5,7 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 
-  <div
-    class="box"
-    v-if="params.sources.som == true">
+  <div class="box" v-if="params.sources.som == true">
     <header class="box__header">
       <h3 id="ablativeArmor">Ablative Armor</h3>
     </header>
@@ -19,9 +17,7 @@
           class="form-control"
           @change="setDefaultPositionDependentValues('ablativeArmor', 'tempHp')"
           v-model="params.ablativeArmorId">
-          <option
-            v-for="option in selectOptionsAblativeArmor"
-            :value="option.id">
+          <option v-for="option in selectOptionsAblativeArmor" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -38,10 +34,7 @@
         </div>
         <div class="form-group col-sm-1-2 col-lg-1-4">
           <label for="">Port</label>
-          <input
-            type="number"
-            class="form-control"
-            v-model="params.ablativeArmorByPosition.port" />
+          <input type="number" class="form-control" v-model="params.ablativeArmorByPosition.port" />
         </div>
         <div class="form-group col-sm-1-2 col-lg-1-4">
           <label for="">Starboard</label>
@@ -52,29 +45,20 @@
         </div>
         <div class="form-group col-sm-1-2 col-lg-1-4">
           <label for="">Aft</label>
-          <input
-            type="number"
-            class="form-control"
-            v-model="params.ablativeArmorByPosition.aft" />
+          <input type="number" class="form-control" v-model="params.ablativeArmorByPosition.aft" />
         </div>
       </div>
 
-      <p
-        v-if="ablativeArmorByPositionTotal != ablativeArmor.tempHp"
-        class="text-danger">
+      <p v-if="ablativeArmorByPositionTotal != ablativeArmor.tempHp" class="text-danger">
         Make sure your ablative armor adds up to {{ ablativeArmor.tempHp }}.
       </p>
 
-      <p
-        v-if="!isAblativeArmorBalanced"
-        class="text-warning">
+      <p v-if="!isAblativeArmorBalanced" class="text-warning">
         NOTE: The ship has a -1 penalty to Piloting because temporary HP from ablative armor is not
         balanced.
       </p>
 
-      <p
-        v-if="ablativeArmor.tempHp > hp"
-        class="text-warning">
+      <p v-if="ablativeArmor.tempHp > hp" class="text-warning">
         NOTE: The ship has a -1 penalty to Piloting because temporary HP exceeds the ship&apos;s HP.
       </p>
     </div>
@@ -93,6 +77,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>
