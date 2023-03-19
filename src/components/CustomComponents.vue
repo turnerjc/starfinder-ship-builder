@@ -100,5 +100,5 @@
 </template>
 
 <script>
-  import ShipApp from './ShipApp.vue'
+  import Ship from './Ship.vue'
 </script>
