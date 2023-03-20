@@ -1,3 +1,11 @@
+<script setup>
+  import { defineProps } from 'vue';
+
+  const props = defineProps(['params', 'frame']);
+  console.log(props.params);
+  console.log(props.frame);
+</script>
+
 <template>
   <!-- Sidebar Navigation -->
   <nav class="contents">
@@ -36,9 +44,3 @@
     </ul>
   </nav>
 </template>
-
-<script setup>
-  import { defineProps } from 'vue'
-
-  const props = defineProps(['params', 'frame'])
-</script>

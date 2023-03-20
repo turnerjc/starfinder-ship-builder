@@ -19,9 +19,8 @@
           <use xlink:href="#icon-close" />
         </svg>
       </a>
-      <Nav></Nav>
-
       <h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
+      <Nav :params="params" :frame="frame"></Nav>
     </div>
     <!-- sidebar -->
 
