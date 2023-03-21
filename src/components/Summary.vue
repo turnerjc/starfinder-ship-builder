@@ -4,7 +4,7 @@
   const props = defineProps([
     'isBpCostOverBudget',
     'totalBpCost',
-    'tier',
+    'bpBudget',
     'totalPcuCost',
     'pcuBudget',
   ]);
@@ -25,7 +25,7 @@
           >{{ totalBpCost }}</span
         >
         /
-        <span class="cost__budget">{{ tier.bpBudget }}</span>
+        <span class="cost__budget">{{ bpBudget }}</span>
       </span>
     </p>
     <p class="cost__item">

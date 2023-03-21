@@ -25,7 +25,7 @@
       <Summary
         :isBpCostOverBudget="isBpCostOverBudget"
         :totalBpCost="totalBpCost"
-        :tier="tier"
+        :bpBudget="tier.bpBudget"
         :totalPcuCost="totalPcuCost"
         :total="pcuBudget"></Summary>
     </div>
