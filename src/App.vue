@@ -21,6 +21,12 @@
       </a>
       <h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
       <Nav :params="params" :frame="frame"></Nav>
+      <Summary
+        :isBpCostOverBudget="isBpCostOverBudget"
+        :totalBpCost="totalBpCost"
+        :tier="tier"
+        :totalPcuCost="totalPcuCost"
+        :total="pcuBudget"></Summary>
     </div>
     <!-- sidebar -->
 

@@ -1,3 +1,16 @@
+<script setup>
+  import { defineProps } from 'vue';
+
+  const props = defineProps([
+    'isBpCostOverBudget',
+    'totalBpCost',
+    'tier',
+    'totalPcuCost',
+    'pcuBudget',
+  ]);
+  console.log(props);
+</script>
+
 <template>
   <!-- SUMMARY -->
 
@@ -37,7 +50,3 @@
     </p>
   </div>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

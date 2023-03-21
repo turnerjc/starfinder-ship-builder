@@ -2,8 +2,7 @@
   import { defineProps } from 'vue';
 
   const props = defineProps(['params', 'frame']);
-  console.log(props.params);
-  console.log(props.frame);
+  console.log(props);
 </script>
 
 <template>
