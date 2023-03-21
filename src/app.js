@@ -2,6 +2,35 @@ import shipData from './data/ship-builder.json';
 import Graphics from './components/Graphics.vue';
 import Nav from './components/Nav.vue';
 import Summary from './components/Summary.vue';
+import RecentUpdates from './components/RecentUpdates.vue';
+import Patreon from './components/Patreon.vue';
+import Sources from './components/Sources.vue';
+import Input from './components/Input.vue';
+import Concept from './components/Concept.vue';
+import Tier from './components/Tier.vue';
+import ShipFrame from './components/ShipFrame.vue';
+import CustomFrame from './components/CustomFrame.vue';
+import PowerCore from './components/PowerCore.vue';
+import Thrusters from './components/Thrusters.vue';
+import AblativeArmor from './components/AblativeArmor.vue';
+import Armor from './components/Armor.vue';
+import Computer from './components/Computer.vue';
+import CrewQuarters from './components/CrewQuarters.vue';
+import Defenses from './components/Defenses.vue';
+import DriftEngines from './components/DriftEngines.vue';
+import ExpansionBays from './components/ExpansionBays.vue';
+import FortifiedHull from './components/FortifiedHull.vue';
+import ReinforcedBulkhead from './components/ReinforcedBulkhead.vue';
+import Security from './components/Security.vue';
+import Sensors from './components/Sensors.vue';
+import Shields from './components/Shields.vue';
+import WeaponMounts from './components/WeaponMounts.vue';
+import OtherSystems from './components/OtherSystems.vue';
+import CustomComponents from './components/CustomComponents.vue';
+import Crew from './components/Crew.vue';
+import Output from './components/Output.vue';
+import JSONOutput from './components/JSONOutput.vue';
+import Footer from './components/Footer.vue';
 
 var WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard'];
 /*
@@ -3317,6 +3346,35 @@ export default {
     Graphics,
     Nav,
     Summary,
+    RecentUpdates,
+    Patreon,
+    Sources,
+    Input,
+    Concept,
+    Tier,
+    ShipFrame,
+    CustomFrame,
+    PowerCore,
+    Thrusters,
+    AblativeArmor,
+    Armor,
+    Computer,
+    CrewQuarters,
+    Defenses,
+    DriftEngines,
+    ExpansionBays,
+    FortifiedHull,
+    ReinforcedBulkhead,
+    Security,
+    Sensors,
+    Shields,
+    WeaponMounts,
+    OtherSystems,
+    CustomComponents,
+    Crew,
+    Output,
+    JSONOutput,
+    Footer,
   },
   /*
   |----------------------------------------------------------------------------------

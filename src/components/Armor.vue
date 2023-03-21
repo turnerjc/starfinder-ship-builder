@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -12,22 +14,15 @@
     <div class="box__select">
       <div class="form-group">
         <label for="armorSelect">Armor</label>
-        <select
-          id="armorSelect"
-          class="form-control"
-          v-model="params.armorId">
-          <option
-            v-for="option in selectOptions.armor"
-            :value="option.id">
+        <select id="armorSelect" class="form-control" v-model="params.armorId">
+          <option v-for="option in selectOptions.armor" :value="option.id">
             {{ option.name }}
           </option>
         </select>
       </div>
 
       <!-- special materials -->
-      <div
-        class="form"
-        v-if="params.sources.som">
+      <div class="form" v-if="params.sources.som">
         <div class="form-group">
           Special Material:
           <!-- none -->
@@ -92,7 +87,3 @@
     </div>
   </div>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

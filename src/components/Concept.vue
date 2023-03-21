@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -12,11 +14,7 @@
     <div class="box__select">
       <div class="form-group">
         <label for="shipName">Ship Name or Class</label>
-        <input
-          type="text"
-          id="shipName"
-          v-model="params.shipName"
-          class="form-control input-lg" />
+        <input type="text" id="shipName" v-model="params.shipName" class="form-control input-lg" />
       </div>
       <div class="form-group">
         <label for="shipConcept">Concept</label>
@@ -29,10 +27,7 @@
       </div>
       <div class="checkbox">
         <label>
-          <input
-            type="checkbox"
-            id="isUseStrictRules"
-            v-model="params.isUseStrictRules" />
+          <input type="checkbox" id="isUseStrictRules" v-model="params.isUseStrictRules" />
           Use strict ship building rules from <em>Starfinder Core Rules</em>?
         </label>
       </div>
@@ -48,7 +43,3 @@
     </div>
   </div>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

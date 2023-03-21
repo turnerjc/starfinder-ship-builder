@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -17,36 +19,28 @@
           id="computerSelect"
           class="form-control"
           v-model="params.computerId">
-          <option
-            v-for="option in selectOptionsComputer"
-            :value="option.id">
+          <option v-for="option in selectOptionsComputer" :value="option.id">
             {{ option.name }}
           </option>
         </select>
       </div>
 
       <!-- secondary computer (Supercolossal ships only) -->
-      <div
-        class="form-group"
-        v-if="isSupercolossal">
+      <div class="form-group" v-if="isSupercolossal">
         <label for="secondaryComputerSelect">Secondary Computer</label>
         <select
           name="secondaryComputer"
           id="secondaryComputerSelect"
           class="form-control"
           v-model="params.secondaryComputerId">
-          <option
-            v-for="option in selectOptionsSecondaryComputer"
-            :value="option.id">
+          <option v-for="option in selectOptionsSecondaryComputer" :value="option.id">
             {{ option.name }}
           </option>
         </select>
       </div>
 
       <!-- network node (Supercolossal ships only) -->
-      <div
-        class="form-group"
-        v-if="isSupercolossal">
+      <div class="form-group" v-if="isSupercolossal">
         <label for="ctNetworkNodes">Network Nodes</label>
         <input
           type="number"
@@ -56,18 +50,14 @@
       </div>
 
       <!-- dedicated computer -->
-      <div
-        class="form-group"
-        v-if="params.sources.som && hasDedicatedComputerHousing">
+      <div class="form-group" v-if="params.sources.som && hasDedicatedComputerHousing">
         <label for="dedicatedComputerSelect">Dedicated Computer</label>
         <select
           name="dedicatedComputer"
           id="dedicatedComputerSelect"
           class="form-control"
           v-model="params.dedicatedComputerId">
-          <option
-            v-for="option in selectOptionsDedicatedComputer"
-            :value="option.id">
+          <option v-for="option in selectOptionsDedicatedComputer" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -105,7 +95,3 @@
     </div>
   </div>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

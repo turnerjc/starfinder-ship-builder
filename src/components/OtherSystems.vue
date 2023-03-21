@@ -5,10 +5,7 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 
-  <div
-    id="other"
-    class="box"
-    v-if="params.sources.pw || params.sources.som">
+  <div id="other" class="box" v-if="params.sources.pw || params.sources.som">
     <header class="box__header">
       <h3 id="other">Other Systems</h3>
     </header>
@@ -18,10 +15,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasAlgalShielding">
-            <input
-              type="checkbox"
-              v-model="params.hasAlgalShielding"
-              id="hasAlgalShielding" />
+            <input type="checkbox" v-model="params.hasAlgalShielding" id="hasAlgalShielding" />
             Algal Shielding (see <i>Starship Operations Manual</i>, p 27)
           </label>
         </div>
@@ -37,10 +31,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasAutoDestruct">
-            <input
-              type="checkbox"
-              v-model="params.hasAutoDestruct"
-              id="hasAutoDestruct" />
+            <input type="checkbox" v-model="params.hasAutoDestruct" id="hasAutoDestruct" />
             Autodestruct System (see <i>Starship Operations Manual</i>, p 27)
           </label>
         </div>
@@ -95,10 +86,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasDataNet">
-            <input
-              type="checkbox"
-              v-model="params.hasDataNet"
-              id="hasDataNet" />
+            <input type="checkbox" v-model="params.hasDataNet" id="hasDataNet" />
             Data Net (see <i>Pact Worlds</i>, p152)
           </label>
         </div>
@@ -114,10 +102,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasHiveJoining">
-            <input
-              type="checkbox"
-              v-model="params.hasHiveJoining"
-              id="hasHiveJoining" />
+            <input type="checkbox" v-model="params.hasHiveJoining" id="hasHiveJoining" />
             Hive Joining (see <em>Pact Worlds</em>, p152)
           </label>
         </div>
@@ -132,10 +117,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasPowersap">
-            <input
-              type="checkbox"
-              v-model="params.hasPowersap"
-              id="hasPowersap" />
+            <input type="checkbox" v-model="params.hasPowersap" id="hasPowersap" />
             Powersap (see <i>Starship Operations Manual</i>, p 29)
           </label>
         </div>
@@ -156,9 +138,7 @@
             id="roboticAppendageSelect"
             class="form-control"
             v-model="params.roboticAppendageId">
-            <option
-              v-for="option in selectOptions.roboticAppendage"
-              :value="option.id">
+            <option v-for="option in selectOptions.roboticAppendage" :value="option.id">
               {{ option.name }}
             </option>
           </select>
@@ -174,10 +154,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasRootSystem">
-            <input
-              type="checkbox"
-              v-model="params.hasRootSystem"
-              id="hasRootSystem" />
+            <input type="checkbox" v-model="params.hasRootSystem" id="hasRootSystem" />
             Root System (see <i>Starship Operations Manual</i>, p 29)
           </label>
         </div>
@@ -247,14 +224,8 @@
       <div class="box__select">
         <div class="form-group">
           <label for="viSelect">Virtual Intelligence</label>
-          <select
-            name="vi"
-            id="viSelect"
-            class="form-control"
-            v-model="params.viId">
-            <option
-              v-for="option in selectOptions.vi"
-              :value="option.id">
+          <select name="vi" id="viSelect" class="form-control" v-model="params.viId">
+            <option v-for="option in selectOptions.vi" :value="option.id">
               {{ option.id == 'none' ? 'None' : 'Tier ' + option.name }}
             </option>
           </select>
@@ -275,9 +246,7 @@
             id="viHoloProjectorSelect"
             class="form-control"
             v-model="params.viHoloProjectorId">
-            <option
-              v-for="option in selectOptions.viHoloProjector"
-              :value="option.id">
+            <option v-for="option in selectOptions.viHoloProjector" :value="option.id">
               {{ option.name }}
             </option>
           </select>
@@ -299,9 +268,7 @@
             id="viSkillExpanderSelect"
             class="form-control"
             v-model="params.viSkillExpanderId">
-            <option
-              v-for="option in selectOptions.viSkillExpander"
-              :value="option.id">
+            <option v-for="option in selectOptions.viSkillExpander" :value="option.id">
               {{ option.name }}
             </option>
           </select>
@@ -314,6 +281,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

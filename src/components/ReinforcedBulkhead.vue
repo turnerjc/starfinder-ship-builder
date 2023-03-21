@@ -5,9 +5,7 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 
-  <div
-    class="box"
-    v-if="params.sources.som == true">
+  <div class="box" v-if="params.sources.som == true">
     <header class="box__header">
       <h3 id="reinforced-bulkhead">Reinforced Bulkhead</h3>
     </header>
@@ -18,9 +16,7 @@
           id="reinforcedBulkheadSelect"
           class="form-control"
           v-model="params.reinforcedBulkheadId">
-          <option
-            v-for="option in selectOptions.reinforcedBulkhead"
-            :value="option.id">
+          <option v-for="option in selectOptions.reinforcedBulkhead" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -38,6 +34,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

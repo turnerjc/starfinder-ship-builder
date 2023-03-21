@@ -12,22 +12,15 @@
     <div class="box__select">
       <div class="form-group">
         <label for="sensorsSelect">Sensors</label>
-        <select
-          v-model="params.sensorsId"
-          id="sensorsSelect"
-          class="form-control">
-          <option
-            v-for="option in selectOptions.sensors"
-            :value="option.id">
+        <select v-model="params.sensorsId" id="sensorsSelect" class="form-control">
+          <option v-for="option in selectOptions.sensors" :value="option.id">
             {{ option.name }}
           </option>
         </select>
       </div>
 
       <!-- special materials -->
-      <div
-        class="form"
-        v-if="params.sources.som">
+      <div class="form" v-if="params.sources.som">
         <div class="form-group">
           Special Material:
           <!-- none -->
@@ -80,6 +73,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

@@ -11,17 +11,11 @@
     </header>
 
     <!-- select shield type -->
-    <div
-      class="form"
-      v-if="params.sources.som">
+    <div class="form" v-if="params.sources.som">
       Shield Type:
       <div class="radio">
         <label>
-          <input
-            type="radio"
-            name="shieldType"
-            value="shields"
-            v-model="params.shieldType" />
+          <input type="radio" name="shieldType" value="shields" v-model="params.shieldType" />
           Shields (Core Rulebook)
         </label>
       </div>
@@ -47,9 +41,7 @@
             id="shieldsSelect"
             class="form-control"
             @change="setDefaultPositionDependentValues('shields', 'totalSp')">
-            <option
-              v-for="option in selectOptions.shields"
-              :value="option.id">
+            <option v-for="option in selectOptions.shields" :value="option.id">
               {{ option.name }}
             </option>
           </select>
@@ -59,17 +51,11 @@
         <div class="box--flex">
           <div class="form-group col-sm-1-2 col-lg-1-4">
             <label for="">Forward</label>
-            <input
-              type="number"
-              class="form-control"
-              v-model="params.shieldsByPosition.forward" />
+            <input type="number" class="form-control" v-model="params.shieldsByPosition.forward" />
           </div>
           <div class="form-group col-sm-1-2 col-lg-1-4">
             <label for="">Port</label>
-            <input
-              type="number"
-              class="form-control"
-              v-model="params.shieldsByPosition.port" />
+            <input type="number" class="form-control" v-model="params.shieldsByPosition.port" />
           </div>
           <div class="form-group col-sm-1-2 col-lg-1-4">
             <label for="">Starboard</label>
@@ -80,16 +66,11 @@
           </div>
           <div class="form-group col-sm-1-2 col-lg-1-4">
             <label for="">Aft</label>
-            <input
-              type="number"
-              class="form-control"
-              v-model="params.shieldsByPosition.aft" />
+            <input type="number" class="form-control" v-model="params.shieldsByPosition.aft" />
           </div>
         </div>
 
-        <p
-          v-if="shieldsByPositionTotal != shields.totalSp"
-          class="text-warning">
+        <p v-if="shieldsByPositionTotal != shields.totalSp" class="text-warning">
           Make sure your shields add up to {{ shields.totalSp }}!
         </p>
       </div>
@@ -117,9 +98,7 @@
             v-model="params.deflectorShieldId"
             id="deflectorShieldSelect"
             class="form-control">
-            <option
-              v-for="option in selectOptions.deflectorShield"
-              :value="option.id">
+            <option v-for="option in selectOptions.deflectorShield" :value="option.id">
               {{ option.name }}
             </option>
           </select>
@@ -144,6 +123,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

@@ -17,9 +17,7 @@
           id="tierSelect"
           v-model="params.tierId"
           v-on:change="setDefaultCrewSkillValues">
-          <option
-            v-for="option in selectOptions.tier"
-            :value="option.id">
+          <option v-for="option in selectOptions.tier" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -32,6 +30,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

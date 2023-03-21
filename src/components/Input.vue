@@ -15,9 +15,7 @@
         <label for="sampleShipSelect">Select a sample ship</label>
 
         <!-- sort by -->
-        <div
-          class="form-inline"
-          style="margin: 0.5rem 0">
+        <div class="form-inline" style="margin: 0.5rem 0">
           <div class="form-group">
             Sort by:
             <div class="radio">
@@ -53,14 +51,9 @@
           </div>
         </div>
 
-        <select
-          class="form-control"
-          id="sampleShipSelect"
-          v-on:change="inputSampleShipParams">
+        <select class="form-control" id="sampleShipSelect" v-on:change="inputSampleShipParams">
           <option value="none">None</option>
-          <option
-            v-for="option in selectOptions.sampleShip"
-            :value="option.id">
+          <option v-for="option in selectOptions.sampleShip" :value="option.id">
             {{ getSampleShipOptionName(option) }}
           </option>
         </select>
@@ -96,16 +89,10 @@
       </div>
       <div class="form-group">
         <p>Or start building your ship from scratch</p>
-        <button
-          class="btn btn-lg btn-primary"
-          v-on:click="clearAll">
-          Clear All
-        </button>
+        <button class="btn btn-lg btn-primary" v-on:click="clearAll">Clear All</button>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

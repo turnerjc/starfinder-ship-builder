@@ -5,9 +5,7 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 
-  <div
-    class="box"
-    v-if="this.params.frameId == 'custom'">
+  <div class="box" v-if="this.params.frameId == 'custom'">
     <header class="box__header">
       <h2 id="frame">Custom Frame</h2>
     </header>
@@ -24,9 +22,7 @@
                 id="customFrameBase"
                 class="form-control"
                 v-model="params.customFrameBaseId">
-                <option
-                  v-for="option in selectOptionsBaseFrame"
-                  :value="option.id">
+                <option v-for="option in selectOptionsBaseFrame" :value="option.id">
                   {{ option.name }}
                 </option>
               </select>
@@ -35,9 +31,7 @@
 
           <div class="col-sm-1-3">
             <div class="form-group">
-              <button
-                class="btn btn-primary"
-                @click="resetCustomFrame">
+              <button class="btn btn-primary" @click="resetCustomFrame">
                 Apply to Custom Frame
               </button>
             </div>
@@ -66,9 +60,7 @@
             id="customFrameSize"
             class="form-control"
             v-model="params.customFrame.size">
-            <option
-              v-for="option in selectOptions.sizeCategory"
-              :value="option.id">
+            <option v-for="option in selectOptions.sizeCategory" :value="option.id">
               {{ option.id }}
             </option>
           </select>
@@ -157,9 +149,7 @@
             class="col-sm-1-3 col-lg-1-5">
             <div class="custom-weapon-mount-position">
               <span>{{ position.toTitleCase() }}</span>
-              <button
-                @click="addCustomFrameMount(position)"
-                class="btn btn-primary btn-sm">
+              <button @click="addCustomFrameMount(position)" class="btn btn-primary btn-sm">
                 <svg class="icon">
                   <use xlink:href="#icon-plus" />
                 </svg>
@@ -260,6 +250,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

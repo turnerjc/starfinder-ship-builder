@@ -59,9 +59,7 @@
               class="form-control"
               @change="setWeaponLinking(position, i)">
               <option value="none">None</option>
-              <optgroup
-                v-for="wpnType in data.shipWeaponType.data"
-                :label="wpnType">
+              <optgroup v-for="wpnType in data.shipWeaponType.data" :label="wpnType">
                 <template v-for="option in selectOptionsShipWeapon">
                   <option :value="option.id">
                     {{ option.name }} ({{ option.damage }}, {{ getWeaponRangeNumerical(option) }},
@@ -86,9 +84,7 @@
         </div>
 
         <!-- Special Materials -->
-        <div
-          class="form"
-          v-if="params.sources.som">
+        <div class="form" v-if="params.sources.som">
           <div class="form-group">
             Special Material:
             <!-- none -->
@@ -258,6 +254,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

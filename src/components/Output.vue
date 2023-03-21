@@ -1,3 +1,5 @@
+<script script></script>
+
 <template>
   <!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -97,7 +99,3 @@
     </div>
   </div>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

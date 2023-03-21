@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -15,9 +17,7 @@
       <div class="box__header--btns">
         <h4>{{ customComponent.name ? customComponent.name : 'New Custom Component' }}</h4>
         <div>
-          <button
-            class="btn btn-danger btn-sm"
-            @click="removeCustomComponent(index)">
+          <button class="btn btn-danger btn-sm" @click="removeCustomComponent(index)">
             <svg class="icon"><use xlink:href="#icon-trash" /></svg>
           </button>
         </div>
@@ -91,14 +91,8 @@
   </div>
 
   <div class="box__under-box align-right">
-    <button
-      @click="createCustomComponent()"
-      class="btn btn-primary">
+    <button @click="createCustomComponent()" class="btn btn-primary">
       Create New Custom Component
     </button>
   </div>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

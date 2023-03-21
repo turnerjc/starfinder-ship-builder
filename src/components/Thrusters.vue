@@ -12,10 +12,7 @@
     <div class="box__select">
       <div class="form-group">
         <label for="thrustersSelect">Thrusters</label>
-        <select
-          id="thrustersSelect"
-          class="form-control"
-          v-model="params.thrustersId">
+        <select id="thrustersSelect" class="form-control" v-model="params.thrustersId">
           <template v-for="option in selectOptionsThruster">
             <option :value="option.id">{{ option.name }}</option>
           </template>
@@ -23,9 +20,7 @@
       </div>
 
       <!-- special materials -->
-      <div
-        class="form"
-        v-if="params.sources.som">
+      <div class="form" v-if="params.sources.som">
         <div class="form-group">
           Special Material:
           <!-- none -->
@@ -67,9 +62,7 @@
     </div>
 
     <!-- booster thrusters-->
-    <div
-      class="box__select"
-      v-if="params.sources.som && hasBoosterThrusterHousing">
+    <div class="box__select" v-if="params.sources.som && hasBoosterThrusterHousing">
       <div class="form-group">
         <label for="thrustersBoosterSelect">Thrusters Booster</label>
         <select
@@ -83,9 +76,7 @@
       </div>
 
       <!-- special materials -->
-      <div
-        class="form"
-        v-if="params.sources.som">
+      <div class="form" v-if="params.sources.som">
         <div class="form-group">
           Special Material:
           <!-- none -->
@@ -145,6 +136,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

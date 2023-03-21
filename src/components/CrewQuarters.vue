@@ -12,13 +12,8 @@
     <div class="box__select">
       <div class="form-group">
         <label for="crewQuartersSelect">Crew Quarters</label>
-        <select
-          id="crewQuartersSelect"
-          class="form-control"
-          v-model="params.crewQuartersId">
-          <option
-            v-for="option in selectOptionsCrewQuarters"
-            :value="option.id">
+        <select id="crewQuartersSelect" class="form-control" v-model="params.crewQuartersId">
+          <option v-for="option in selectOptionsCrewQuarters" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -33,6 +28,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

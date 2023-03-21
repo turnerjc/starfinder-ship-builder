@@ -16,18 +16,14 @@
           v-model="params.defensiveCountermeasuresId"
           id="defensiveCountermeasuresSelect"
           class="form-control">
-          <option
-            v-for="option in selectOptions.defensiveCountermeasures"
-            :value="option.id">
+          <option v-for="option in selectOptions.defensiveCountermeasures" :value="option.id">
             {{ option.name }}
           </option>
         </select>
       </div>
 
       <!-- special materials -->
-      <div
-        class="form"
-        v-if="params.sources.som">
+      <div class="form" v-if="params.sources.som">
         <div class="form-group">
           Special Material:
           <!-- none -->
@@ -84,6 +80,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

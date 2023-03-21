@@ -18,9 +18,7 @@
           class="form-control"
           v-model="params.frameId"
           @change="updateFrame">
-          <option
-            v-for="option in selectOptions.frame"
-            :value="option.id">
+          <option v-for="option in selectOptions.frame" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -42,6 +40,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

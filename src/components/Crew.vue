@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <!--
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -11,16 +13,11 @@
     </header>
     <div class="checkbox">
       <label>
-        <input
-          type="checkbox"
-          id="hasCrew"
-          v-model="params.hasCrew" />
+        <input type="checkbox" id="hasCrew" v-model="params.hasCrew" />
         Include crew stats?
       </label>
     </div>
-    <div
-      class="box__select"
-      v-if="params.hasCrew">
+    <div class="box__select" v-if="params.hasCrew">
       <div class="cost__item">
         <span class="cost__name">Complement</span>
         <span class="cost__values">
@@ -38,27 +35,19 @@
   </div>
 
   <template v-for="role in selectOptionsCrewRole">
-    <div
-      class="box crew"
-      v-if="params.hasCrew">
+    <div class="box crew" v-if="params.hasCrew">
       <h3 class="crew__header">{{ role.name }}</h3>
 
       <div class="checkbox">
         <label>
-          <input
-            type="checkbox"
-            v-model="params.crewSkills[role.id].hasRole" />
+          <input type="checkbox" v-model="params.crewSkills[role.id].hasRole" />
           {{ role.hasRoleQuestion }}
         </label>
       </div>
 
-      <div
-        v-if="params.crewSkills[role.id].hasRole"
-        class="crew__role">
+      <div v-if="params.crewSkills[role.id].hasRole" class="crew__role">
         <!-- Officers -->
-        <div
-          class="crew__officers"
-          v-if="params.crewSkills[role.id].countOfficers !== undefined">
+        <div class="crew__officers" v-if="params.crewSkills[role.id].countOfficers !== undefined">
           <div class="box--flex">
             <!-- number of officers -->
             <div
@@ -88,9 +77,7 @@
         <!-- .crew__officers -->
 
         <!-- Skill -->
-        <div
-          v-for="skillId in role.skills"
-          class="crew__skill">
+        <div v-for="skillId in role.skills" class="crew__skill">
           <!-- Skill name -->
           <h4 class="crew__skill__label">{{ getItemById('skill', skillId).name }}</h4>
 
@@ -145,7 +132,3 @@
     <!-- .box -->
   </template>
 </template>
-
-<script>
-  import Ship from './Ship.vue'
-</script>

@@ -86,8 +86,8 @@
         </div>
       </header>
 
-      <!--
       <RecentUpdates />
+      <!--
       <Patreon />
       <Sources />
       <Input />

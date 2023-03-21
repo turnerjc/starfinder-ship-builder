@@ -34,9 +34,7 @@
     </div>
 
     <!-- Anti-Personnel Weapon -->
-    <div
-      class="box__list-item"
-      v-if="!params.isUseStrictRules || sizeCategory.multiplier <= 3">
+    <div class="box__list-item" v-if="!params.isUseStrictRules || sizeCategory.multiplier <= 3">
       <div class="box__select">
         <div class="form-group">
           <label for="antiPersonnelWeaponSelect">Anti-Personnel Weapon</label>
@@ -63,10 +61,7 @@
       <div class="box__select">
         <div class="checkbox">
           <label for="hasBiometricLocks">
-            <input
-              type="checkbox"
-              v-model="params.hasBiometricLocks"
-              id="hasBiometricLocks" />
+            <input type="checkbox" v-model="params.hasBiometricLocks" id="hasBiometricLocks" />
             Biometric Locks
           </label>
         </div>
@@ -86,9 +81,7 @@
       <div class="box__select">
         <!-- true/false countermeasures -->
         <div class="box__select box__select--computerCountermeasures">
-          <div
-            class="checkbox"
-            v-for="option in selectOptionsComputerCountermeasures">
+          <div class="checkbox" v-for="option in selectOptionsComputerCountermeasures">
             <label :for="'computerCountermeasures_' + option.id">
               <input
                 type="checkbox"
@@ -106,9 +99,7 @@
             v-model="params.computerCountermeasures.shockGridId"
             id="shockGridSelect"
             class="form-control">
-            <option
-              v-for="option in selectOptions.shockGrid"
-              :value="option.id">
+            <option v-for="option in selectOptions.shockGrid" :value="option.id">
               {{
                 option.id == 'none'
                   ? 'None'
@@ -238,6 +229,4 @@
   <!-- box -->
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

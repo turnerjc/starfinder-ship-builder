@@ -21,9 +21,7 @@
     </div>
 
     <div class="box__select">
-      <div
-        class="form-group"
-        v-for="i in countPowerCoreHousings">
+      <div class="form-group" v-for="i in countPowerCoreHousings">
         <!-- power core -->
         <div class="form-group">
           <label :for="'powerCoreSelect_' + i">Power Core {{ i }}</label>
@@ -33,17 +31,13 @@
             v-model="params.powerCoreIds[i - 1]"
             @change="maybeResetPowerCoreIds(i - 1)">
             <template v-for="option in getPowerCoreOptions(i - 1)">
-              <option
-                :value="option.id"
-                v-html="getPowerCoreOptionName(option)"></option>
+              <option :value="option.id" v-html="getPowerCoreOptionName(option)"></option>
             </template>
           </select>
         </div>
 
         <!-- special materials -->
-        <div
-          class="form"
-          v-if="params.sources.som">
+        <div class="form" v-if="params.sources.som">
           <div class="form-group">
             Special Material:
             <!-- none -->
@@ -95,6 +89,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>

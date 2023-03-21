@@ -40,13 +40,9 @@
       <li>Yami</li>
     </ul>
 
-    <div
-      class="app-message"
-      style="text-align: left">
+    <div class="app-message" style="text-align: left">
       Want to support this site?
-      <a
-        href="https://www.patreon.com/user?u=15502682"
-        target="_blank">
+      <a href="https://www.patreon.com/user?u=15502682" target="_blank">
         <img
           height="auto"
           width="150"
@@ -58,6 +54,4 @@
   </div>
 </template>
 
-<script>
-  import Ship from './Ship.vue'
-</script>
+<script></script>
