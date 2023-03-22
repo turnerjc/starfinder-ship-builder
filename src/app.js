@@ -32,227 +32,16 @@ import Output from './components/Output.vue';
 import JSONOutput from './components/JSONOutput.vue';
 import Footer from './components/Footer.vue';
 
-var WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard'];
-/*
-|------------------------------------------------------------------------------------------
-| HELPERS
-|------------------------------------------------------------------------------------------
-*/
-function maybeCreateProperty(obj, prop, type) {
-  if (typeof obj !== 'object') {
-    throw 'Not an object';
-  }
-  if (typeof obj[prop] === 'undefined') {
-    switch (type) {
-      case 'Array':
-        obj[prop] = [];
-        break;
-      case 'String':
-        obj[prop] = '';
-        break;
-      case 'Integer':
-        obj[prop] = 0;
-        break;
-      case 'Object':
-      default:
-        obj[prop] = {};
-    }
-  }
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function isset(obj) {
-  if (typeof obj === 'undefined') {
-    return false;
-  }
-  return true;
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function cloneObject(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function integerToWord(int) {
-  var word = '';
-  switch (int) {
-    case 1:
-      word = 'one';
-      break;
-    case 2:
-      word = 'two';
-      break;
-    case 3:
-      word = 'three';
-      break;
-    case 4:
-      word = 'four';
-      break;
-    case 5:
-      word = 'five';
-      break;
-    case 6:
-      word = 'six';
-      break;
-    case 7:
-      word = 'seven';
-      break;
-    case 8:
-      word = 'eight';
-      break;
-    case 9:
-      word = 'nine';
-      break;
-    case 10:
-      word = 'ten';
-      break;
-    default:
-      word = 'error';
-  }
-  return word;
-}
-/*
-|------------------------------------------------------------------------------------------
-| stringToFloat
-|------------------------------------------------------------------------------------------
-| expected values: 1, "1", "1/3"
-| returns float
-|------------------------------------------------------------------------------------------
-*/
-function stringToFloat(str) {
-  // test if str is a number
-  if (parseInt(str) === str) return str;
+import {
+  maybeCreateProperty,
+  isset,
+  cloneObject,
+  integerToWord,
+  stringToFloat,
+  stringToDice,
+} from './modules/helpers.js';
 
-  // test if string is in the form "1" or "1/3"
-  var numbers = str.split('/');
-  if (numbers.length != 1 && numbers.length != 2) return 1;
-  if (parseInt(numbers[0]) === NaN || parseInt(numbers[1]) === NaN) return 1;
-
-  // test if integer
-  if (numbers.length == 1) return parseFloat(numbers[0]);
-
-  // test if denominator is 0
-  if (numbers[2] == 1) return 1; // div 0
-
-  return parseInt(numbers[0]) / parseInt(numbers[1]);
-}
-/*
-|------------------------------------------------------------------------------------------
-| stringToDice
-|------------------------------------------------------------------------------------------
-| expected values: "Special", "1d4", "3d4+6", "5d10×10"
-| returns object
-|------------------------------------------------------------------------------------------
-*/
-function stringToDice(str) {
-  // validate input
-  if (str == 'Special') return 'Special';
-
-  var formula = {
-    ctDice: 0,
-    ctFaces: 0,
-    mod: 0,
-    mult: 1,
-  };
-
-  if (str == 'n/a') return formula;
-
-  // mult
-  var multSplit = str.split('×');
-  if (multSplit.length == 2) formula.mult = parseInt(multSplit[1]);
-
-  // modifier
-  var modSplit = str.split('+');
-  if (modSplit.length == 2) formula.mod = parseInt(modSplit[1]);
-
-  // dice
-  var dieSplit = str.split('d');
-  if (dieSplit.length != 2) return 'error';
-
-  formula.ctDice = parseInt(dieSplit[0]);
-  formula.ctFaces = parseInt(dieSplit[1]);
-
-  return formula;
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function loadJSON(file, callback) {
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType('application/json');
-  xobj.open('GET', file, true); // Replace "my_data" with the path to your file
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == '200') {
-      // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-      callback(xobj.responseText);
-    }
-  };
-  xobj.send(null);
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function addTimedClass(obj, className, duration) {
-  addClass(obj, className);
-  setTimeout(function () {
-    removeClass(obj, className);
-  }, duration);
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function addClass(obj, className) {
-  obj.className += ' ' + className;
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-function removeClass(obj, className) {
-  obj.className = obj.className.replace(className, '');
-}
-/*
-|------------------------------------------------------------------------------------------
-*/
-String.prototype.pluralise = function (count) {
-  return this + (count == 1 ? '' : 's');
-};
-/*
-|------------------------------------------------------------------------------------------
-*/
-String.prototype.toTitleCase = function () {
-  return this.replace(/\w\S*/g, function (txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-};
-/*
-|------------------------------------------------------------------------------------------
-*/
-function isEven(num) {
-  var isEven = num % 2 == 0;
-  return isEven;
-}
-
-/*
-|------------------------------------------------------------------------------------------
-| CLIPBOARD.JS
-|------------------------------------------------------------------------------------------
-*/
-var clipboardJson = {};
-
-// if (typeof window.Clipboard == 'function') {
-if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') {
-  clipboardJson = new Clipboard('#copyJsonBtn', {
-    text(trigger) {
-      var el = document.getElementById('outputJson');
-      addTimedClass(el, 'js-anim-border', 500);
-      return el.innerHTML;
-    },
-  });
-}
+import { WeaponMount } from './modules/weaponMount.js';
 
 /*
 |------------------------------------------------------------------------------------------
@@ -260,6 +49,40 @@ if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') 
 |------------------------------------------------------------------------------------------
 */
 export default {
+  components: {
+    Graphics,
+    Nav,
+    Summary,
+    RecentUpdates,
+    Patreon,
+    Sources,
+    Input,
+    Concept,
+    Tier,
+    ShipFrame,
+    CustomFrame,
+    PowerCore,
+    Thrusters,
+    AblativeArmor,
+    Armor,
+    Computer,
+    CrewQuarters,
+    Defenses,
+    DriftEngines,
+    ExpansionBays,
+    FortifiedHull,
+    ReinforcedBulkhead,
+    Security,
+    Sensors,
+    Shields,
+    WeaponMounts,
+    OtherSystems,
+    CustomComponents,
+    Crew,
+    Output,
+    JSONOutput,
+    Footer,
+  },
   data() {
     return {
       data: shipData,
@@ -3342,40 +3165,6 @@ export default {
       this.setWeaponLinking(position);
     },
   },
-  components: {
-    Graphics,
-    Nav,
-    Summary,
-    RecentUpdates,
-    Patreon,
-    Sources,
-    Input,
-    Concept,
-    Tier,
-    ShipFrame,
-    CustomFrame,
-    PowerCore,
-    Thrusters,
-    AblativeArmor,
-    Armor,
-    Computer,
-    CrewQuarters,
-    Defenses,
-    DriftEngines,
-    ExpansionBays,
-    FortifiedHull,
-    ReinforcedBulkhead,
-    Security,
-    Sensors,
-    Shields,
-    WeaponMounts,
-    OtherSystems,
-    CustomComponents,
-    Crew,
-    Output,
-    JSONOutput,
-    Footer,
-  },
   /*
   |----------------------------------------------------------------------------------
   |  BEFORE MOUNT
@@ -3388,217 +3177,15 @@ export default {
 
 /*
 |------------------------------------------------------------------------------------------
-| WEAPON MOUNT
-|------------------------------------------------------------------------------------------
-|
-| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, 
-| isLinked, sizeCategoryId
-| maybe expects templateWeight
-|
+| STRING PROTOTYPES (couldn't figure out how to export and import these)
 |------------------------------------------------------------------------------------------
 */
-function WeaponMount(params) {
-  /*
-    |--------------------------------------------------------------------------------------
-    */
-  this.doTests = function () {
-    this.testThatPositionIsValid();
-    this.testThatWeightIsValid(this.weight);
-    this.testThatWeightIsValid(this.templateWeight);
-    this.testThatTemplateWeightIsSmallerThanWeight();
-    this.testThatTurretIsNotCapital();
-  };
-  /*
-    |--------------------------------------------------------------------------------------
-    */
-  this.getCost = function () {
-    return this.getUpgradeCost() + this.getNewMountCost();
-  };
-  /*
-    |--------------------------------------------------------------------------------------
-    */
-  this.getMaterialCost = function () {
-    var materialCost = 0;
+String.prototype.pluralise = function (count) {
+  return this + (count == 1 ? '' : 's');
+};
 
-    switch (this.specialMaterial) {
-      // abysium and inubrix: 2, 6, 10, 10
-      case 'abysium':
-      case 'inubrix':
-        switch (this.weight) {
-          case 'light':
-            materialCost = 2;
-            break;
-          case 'heavy':
-            materialCost = 6;
-            break;
-          case 'capital':
-          case 'spinal':
-            materialCost = 10;
-            break;
-        }
-        break;
-
-      // adamantine alloy: damage die type (with multipliers)
-      case 'adamantine-alloy':
-        var damageDice = stringToDice(this.weapon.damage);
-        var mult = this.isLinked ? 2 : 1;
-        materialCost = (damageDice.ctFaces * mult) / 2;
-        break;
-        break;
-      default:
-        break;
-    }
-
-    return materialCost;
-  };
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.getMaterialDesc = function () {
-    var materialDesc = [];
-
-    switch (this.specialMaterial) {
-      case 'abysium':
-        switch (this.weight) {
-          case 'light':
-            materialDesc.push('irradiate (low)');
-            break;
-          case 'heavy':
-            materialDesc.push('irradiate (medium)');
-            break;
-          case 'capital':
-          case 'spinal':
-            materialDesc.push('irradiate (high)');
-            break;
-        }
-        break;
-      case 'adamantine-alloy':
-        var damageDice = stringToDice(this.weapon.damage);
-        if (damageDice.ctDice !== undefined && damageDice.ctDice > 0) {
-          materialDesc.push('+' + damageDice.ctDice + ' damage to shieldless quadrants');
-        }
-        break;
-      case 'inubrix':
-        materialDesc.push('20% chance to score second critical hit');
-        break;
-      default:
-        break;
-    }
-
-    return materialDesc.join(', ');
-  };
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.getNewMountCost = function () {
-    var newMountCost = 0;
-    if (!this.isFromTemplate) {
-      if (this.position == 'turret') {
-        newMountCost = 5;
-      } else {
-        newMountCost = 3;
-      }
-    }
-    return newMountCost;
-  };
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.getUpgradeCost = function () {
-    var upgradeCost = 0;
-    if (this.weight !== this.templateWeight) {
-      // if position is forward, aft, port or starboard arc
-      if (WEAPON_ARCS.indexOf(this.position) !== -1) {
-        // if templateWeight is light and weight is heavy
-        if (this.templateWeight == 'light' && this.weight == 'heavy') {
-          upgradeCost = 4;
-        } else if (this.templateWeight == 'heavy' && this.weight == 'capital') {
-          // if templateWeight is heavy and weight is capital
-          upgradeCost = 5;
-        } else {
-          // if templateWeight is light and weight is capital (i.e. 2 upgrades)
-          upgradeCost = 9;
-        }
-      } else {
-        // if position is turret
-        upgradeCost = 6;
-      }
-    }
-    return upgradeCost;
-  };
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.testThatPositionIsValid = function () {
-    if (['forward', 'aft', 'port', 'starboard', 'turret', 'spinal'].indexOf(this.position) == -1) {
-      throw 'Invalid position in WeaponMount class: ' + this.position;
-    }
-  };
-
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.testThatWeightIsValid = function (weight) {
-    if (['light', 'heavy', 'capital', 'spinal'].indexOf(weight) == -1) {
-      throw 'Invalid weight in WeaponMount class: ' + weight;
-    }
-  };
-
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.testThatTemplateWeightIsSmallerThanWeight = function () {
-    var weightVal = {
-      light: 0,
-      heavy: 1,
-      capital: 2,
-    };
-    if (weightVal[this.weight] < weightVal[this.templateWeight]) {
-      throw 'Original weight must be equal to or lower than current weight';
-    }
-  };
-
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-  this.testThatTurretIsNotCapital = function () {
-    if (this.sizeCategoryId == 'Supercolossal') return;
-
-    if (
-      this.position == 'turret' &&
-      (this.weight == 'capital' || this.templateWeight == 'capital')
-    ) {
-      throw "Turrets cannot have weight 'capital' in WeaponMount";
-    }
-  };
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-
-  /*
-  |--------------------------------------------------------------------------------------
-  | CONSTRUCTOR
-  |--------------------------------------------------------------------------------------
-  */
-  this.id = params.weaponMountId;
-  this.position = params.position;
-  this.weaponId = params.weaponId;
-  this.weapon = params.weapon;
-  this.weight = params.weight;
-  this.isFromTemplate = params.isFromTemplate;
-  if (this.isFromTemplate) {
-    this.templateWeight = params.templateWeight;
-  } else {
-    this.templateWeight = 'light';
-  }
-  this.canBeLinked = params.canBeLinked;
-  this.isLinked = params.isLinked;
-  this.specialMaterial = params.specialMaterial;
-  this.sizeCategoryId = params.sizeCategoryId; // of ship
-
-  this.doTests();
-
-  /*
-  |--------------------------------------------------------------------------------------
-  */
-}
+String.prototype.toTitleCase = function () {
+  return this.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+};
