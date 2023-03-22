@@ -1052,11 +1052,6 @@ export default {
     },
 
     // computed continued...
-    isBpCostOverBudget() {
-      return this.totalBpCost > this.tier.bpBudget;
-    },
-
-    // computed continued...
     isComplementValid() {
       var isComplementValid = true;
       if (this.complement < this.frame.minCrew || this.complement > this.frame.maxCrew) {

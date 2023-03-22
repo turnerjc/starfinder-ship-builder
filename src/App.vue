@@ -23,7 +23,6 @@
       <h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
       <Nav :params="params" :frame="frame"></Nav>
       <Summary
-        :isBpCostOverBudget="isBpCostOverBudget"
         :totalBpCost="totalBpCost"
         :bpBudget="tier.bpBudget"
         :totalPcuCost="totalPcuCost"

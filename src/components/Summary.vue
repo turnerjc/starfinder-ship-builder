@@ -1,14 +1,16 @@
 <script setup>
-  import { defineProps } from 'vue';
+  import { defineProps, computed } from 'vue';
 
-  const props = defineProps([
-    'isBpCostOverBudget',
-    'totalBpCost',
-    'bpBudget',
-    'totalPcuCost',
-    'pcuBudget',
-  ]);
+  const props = defineProps(['totalBpCost', 'bpBudget', 'totalPcuCost', 'pcuBudget']);
   console.log(props);
+
+  const isBpCostOverBudget = computed(() => {
+    return props.totalBpCost > props.bpBudget;
+  });
+
+  const isPcuCostOverBudget = computed(() => {
+    return props.totalPcuCost.essential > props.pcuBudget;
+  });
 </script>
 
 <template>
