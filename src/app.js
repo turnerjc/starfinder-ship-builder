@@ -1,4 +1,7 @@
+// JSON file
 import shipData from './data/ship-builder.json';
+
+// Components
 import Graphics from './components/Graphics.vue';
 import Nav from './components/Nav.vue';
 import Summary from './components/Summary.vue';
@@ -32,6 +35,7 @@ import Output from './components/Output.vue';
 import JSONOutput from './components/JSONOutput.vue';
 import Footer from './components/Footer.vue';
 
+// Helper functions
 import {
   maybeCreateProperty,
   isset,
@@ -41,6 +45,7 @@ import {
   stringToDice,
 } from './modules/helpers.js';
 
+// Weapon Mount
 import { WeaponMount } from './modules/weaponMount.js';
 
 /*
