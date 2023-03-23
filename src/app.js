@@ -2090,7 +2090,7 @@ export default {
   methods: {
     addCustomFrameMount(position) {
       if (!isset(this.params.customFrame.mounts[position]))
-        this.$set(this.params.customFrame.mounts, position, []);
+        this.params.customFrame.mounts[position] = [];
       this.params.customFrame.mounts[position].push('light');
       this.setWeaponMounts(this.frame.mounts);
     },
@@ -2193,7 +2193,7 @@ export default {
     createCustomComponent() {
       // initialise on older builds
       if (!isset(this.params.customComponents)) {
-        this.$set(this.params, 'customComponents', []);
+        this.params['customComponents'] = [];
       }
 
       this.params.customComponents.push({
@@ -2260,11 +2260,7 @@ export default {
         // if role is missing, add it
         if (!isset(this.params.crewSkills[roleId])) {
           console.log('Missing crew role, ' + roleId + ', added to ship');
-          this.$set(
-            this.params.crewSkills,
-            roleId,
-            cloneObject(this.paramsReset.crewSkills[roleId])
-          );
+          this.params.crewSkills[roleId] = cloneObject(this.paramsReset.crewSkills[roleId]);
           continue;
         }
 
@@ -2274,10 +2270,8 @@ export default {
             console.log(
               'Missing skill, ' + skillId + ', in crew role, ' + roleId + ', added to ship'
             );
-            this.$set(
-              this.params.crewSkills[roleId].skills,
-              skillId,
-              cloneObject(this.paramsReset.crewSkills[roleId].skills[skillId])
+            this.params.crewSkills[roleId].skills[skillId] = cloneObject(
+              this.paramsReset.crewSkills[roleId].skills[skillId]
             );
           }
         }
@@ -2303,7 +2297,7 @@ export default {
             for (var i in this.params.weaponMounts[position]) {
               missingWeaponMountParams.forEach(function (param) {
                 if (isset(that.params.weaponMounts[position][i][param.id])) return;
-                that.$set(that.params.weaponMounts[position][i], param.id, param.default);
+                that.params.weaponMounts[position][i][param.id] = param.default;
                 console.log(
                   'Missing property, ' +
                     param.id +
@@ -2320,7 +2314,7 @@ export default {
         if (isset(this.params[key])) continue;
 
         console.log('Missing property, ' + key + ', added to ship');
-        this.$set(this.params, key, cloneObject(this.paramsReset[key]));
+        this.params[key] = cloneObject(this.paramsReset[key]);
 
         // power core special materials
         if (key == 'powerCoreSpecialMaterials') {
@@ -2867,10 +2861,8 @@ export default {
 
     // methods continued...
     setCustomFrame() {
-      this.$set(
-        this.params,
-        'customFrame',
-        cloneObject(this.getItemById('frame', this.params.customFrameBaseId))
+      this.params['customFrame'] = cloneObject(
+        this.getItemById('frame', this.params.customFrameBaseId)
       );
     },
 
