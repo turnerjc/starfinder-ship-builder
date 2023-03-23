@@ -1,6 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-const app = createApp(App);
+// Vuetify
+import 'vuetify/styles';
+import { createVuetify } from 'vuetify';
 
-app.mount('#app');
+const vuetify = createVuetify({});
+
+createApp(App).use(vuetify).mount('#app');
