@@ -49,7 +49,7 @@
       <!--
       <Patreon />
       -->
-      <Sources :sourceBooks="sourceBooks" :params.sourceBooksInUse="sourceBooksInUse"></Sources>
+      <Sources :sourceBooks="sourceBooks" :params="params"></Sources>
       <!--
       <Input />
       <Concept />
