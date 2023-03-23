@@ -1391,7 +1391,10 @@ export default {
       for (var i in fields) {
         var field = fields[i];
         options[field] = this.getSelectOptionsFor(field).filter(
-          (option) => option.source == 'scr' || this.params.sourceBooksInUse[option.source]
+          (option) =>
+            option.source === undefined ||
+            option.source === 'scr' ||
+            this.params.sourceBooksInUse[option.source]
         );
       }
 
@@ -1417,6 +1420,7 @@ export default {
         return a.name > b.name;
       });
 
+      console.log('options', options);
       return options;
     },
 

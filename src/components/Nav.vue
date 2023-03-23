@@ -1,6 +1,6 @@
 <script setup>
   const props = defineProps(['params', 'frame']);
-  console.log(props);
+  console.log('Nav.vue', props);
 </script>
 
 <template>
