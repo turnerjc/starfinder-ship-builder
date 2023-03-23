@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	PATREON
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  PATREON
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <div class="box">
     <p>Supercolossal thanks to Patreon supporters:</p>

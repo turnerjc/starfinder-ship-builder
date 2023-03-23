@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	CUSTOM FRAME
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  CUSTOM FRAME
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <div class="box" v-if="this.params.frameId == 'custom'">
     <header class="box__header">

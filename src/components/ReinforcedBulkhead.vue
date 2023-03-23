@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	REINFORCED BULKHEAD
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  REINFORCED BULKHEAD
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <div class="box" v-if="params.sourceBooksInUse.som == true">
     <header class="box__header">

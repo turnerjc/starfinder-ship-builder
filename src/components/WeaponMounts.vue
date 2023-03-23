@@ -1,9 +1,9 @@
 <template>
   <!--
-      			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      			|	WEAPON MOUNTS
-      			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      			-->
+            | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            |  WEAPON MOUNTS
+            | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            -->
 
   <h3 id="weapons">Weapons</h3>
 
@@ -136,15 +136,15 @@
 
         <!-- Upgrades -->
         <!-- <div class="box__select">
-      							<div><strong>Upgrades Available</strong></div>
-      							<div class="checkbox" v-for="(upgrade, j) in getAvailableWeaponUpgrades(weaponMount.weapon)">
-      								<label :for="'upgrade_' + position + '_' + j">
-      									<input type="checkbox"
-      										:id="'upgrade_' + position + '_' + j">
-      									{{ upgrade.name }}
-      								</label>
-      							</div>
-      						</div> -->
+                    <div><strong>Upgrades Available</strong></div>
+                    <div class="checkbox" v-for="(upgrade, j) in getAvailableWeaponUpgrades(weaponMount.weapon)">
+                      <label :for="'upgrade_' + position + '_' + j">
+                        <input type="checkbox"
+                          :id="'upgrade_' + position + '_' + j">
+                        {{ upgrade.name }}
+                      </label>
+                    </div>
+                  </div> -->
 
         <!-- Is Linked -->
         <div class="box__select">

@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	RECENT UPDATES
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  RECENT UPDATES
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
   <div class="box">
     <p>
       <strong>Recent Updates:</strong> Conversion to Vue3 - Denny Wright (<time

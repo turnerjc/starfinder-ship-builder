@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	OTHER SYSTEMS
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  OTHER SYSTEMS
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <div id="other" class="box" v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
     <header class="box__header">

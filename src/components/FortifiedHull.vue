@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	FORTIFIED HULL
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  FORTIFIED HULL
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <div class="box" v-if="params.sourceBooksInUse.som == true">
     <header class="box__header">

@@ -1,9 +1,9 @@
 <template>
   <!--
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			|	INPUT
-			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			-->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  INPUT
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <div class="box">
     <header class="box__header">
@@ -61,20 +61,20 @@
     </div>
 
     <!--
-				<div class="box__select">
-					<div class="form-group">
-						<form class=""
-							action="./starshipSheet.php" 
-							method="post"
-							target="_blank">
-								<input type="hidden" :value="jsonParams" name="json">
-								<button type="submit" class="btn btn-lg btn-primary">
-									Open Character Sheet
-								</button>
-						</form>
-					</div>
-				</div>
-				-->
+        <div class="box__select">
+          <div class="form-group">
+            <form class=""
+              action="./starshipSheet.php" 
+              method="post"
+              target="_blank">
+                <input type="hidden" :value="jsonParams" name="json">
+                <button type="submit" class="btn btn-lg btn-primary">
+                  Open Character Sheet
+                </button>
+            </form>
+          </div>
+        </div>
+        -->
 
     <div class="box__select">
       <div class="form-group">
