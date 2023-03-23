@@ -1,6 +1,4 @@
 <script setup>
-  import { defineProps } from 'vue';
-
   const props = defineProps(['sourceBooks', 'params']);
   console.log(props);
 </script>
