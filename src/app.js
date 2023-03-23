@@ -306,7 +306,7 @@ export default {
         shieldsId: 'none',
         shipConcept: '',
         shipName: '',
-        sources: {
+        sourceBooksInUse: {
           pw: true,
           som: true,
         },
@@ -375,7 +375,7 @@ export default {
         },
       }, // paramsReset
       selectSampleShipSortOrder: 'name',
-      sources: [
+      sourceBooks: [
         {
           id: 'pw',
           name: 'Pact Worlds',
@@ -443,7 +443,7 @@ export default {
     armorBpCost() {
       var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
 
-      if (this.params.sources.som) {
+      if (this.params.sourceBooksInUse.som) {
         var materialBpCost = 0;
         switch (this.params.armorMaterialId) {
           case 'adamantine-alloy':
@@ -531,7 +531,7 @@ export default {
       var desc = '';
       if (this.computer.id !== 'basic-computer') {
         var nodes = this.computer.nodes;
-        if (this.params.sources.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+        if (this.params.sourceBooksInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
           nodes += this.networkNodes.ct;
         }
         var bonus = '+' + this.computer.bonus;
@@ -595,7 +595,7 @@ export default {
       }
 
       // secondary computer (supercolossal ships)
-      if (this.params.sources.som && this.frame.size == 'Supercolossal') {
+      if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
         for (var index = 0; index < this.secondaryComputer.nodes; index++) {
           bonuses.push(that.getPrefixedModifier(that.secondaryComputer.bonus));
         }
@@ -664,7 +664,7 @@ export default {
     ctComputerNodes() {
       var ct = 0;
       ct += this.computer.nodes;
-      if (this.params.sources.som && this.frame.size == 'Supercolossal') {
+      if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
         ct += this.secondaryComputer.nodes;
 
         ct += this.networkNodes.ct;
@@ -676,7 +676,7 @@ export default {
     ctExpansionBaySlots() {
       var ctExpansionBaySlots = this.frame.expansionBays;
       if (
-        this.params.sources.som &&
+        this.params.sourceBooksInUse.som &&
         this.sizeCategory.multiplier >= 4 &&
         (this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework)
       ) {
@@ -687,7 +687,7 @@ export default {
 
     // computed continued...
     ctExternalExpansionBays() {
-      if (!this.params.sources.som) return 0;
+      if (!this.params.sourceBooksInUse.som) return 0;
 
       var ctBays = this.expansionBays.filter(function (bay) {
         return bay.id == 'external-expansion-bay';
@@ -747,7 +747,7 @@ export default {
     // computed continued...
     damageThreshold() {
       var dt = this.frame.dt;
-      if (this.params.sources.som && this.params.armorMaterialId == 'adamantine-alloy') {
+      if (this.params.sourceBooksInUse.som && this.params.armorMaterialId == 'adamantine-alloy') {
         if (dt == 'n/a') dt = 0;
         dt += this.armor.bonusToAc;
       }
@@ -778,7 +778,7 @@ export default {
     defensiveCountermeasuresBpCost() {
       var dcBpCost = this.defensiveCountermeasures.bpCost;
 
-      if (this.params.sources.som) {
+      if (this.params.sourceBooksInUse.som) {
         switch (this.params.defensiveCountermeasuresMaterialId) {
           case 'horacalcum':
             dcBpCost += 4;
@@ -932,7 +932,7 @@ export default {
 
     // computed continued...
     hasBoosterThrusterHousing() {
-      if (!this.params.sources.som) return false;
+      if (!this.params.sourceBooksInUse.som) return false;
 
       var hasHousing =
         this.expansionBays.find(function (bay) {
@@ -960,7 +960,7 @@ export default {
 
     // computed continued...
     hasDedicatedComputerHousing() {
-      if (!this.params.sources.som) return false;
+      if (!this.params.sourceBooksInUse.som) return false;
 
       var hasHousing =
         this.expansionBays.find(function (bay) {
@@ -972,7 +972,7 @@ export default {
 
     // computed continued...
     hasHealingPod() {
-      if (!this.params.sources.som) return false;
+      if (!this.params.sourceBooksInUse.som) return false;
 
       var hasPod =
         this.expansionBays.find(function (bay) {
@@ -1067,7 +1067,7 @@ export default {
 
     // computed continued...
     isOrbitalWeaponDiscountUsed() {
-      if (!this.params.sources.som) return false;
+      if (!this.params.sourceBooksInUse.som) return false;
       if (this.sizeCategory.multiplier < 4) return false;
       if (!(this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework))
         return false;
@@ -1090,13 +1090,8 @@ export default {
     },
 
     // computed continued...
-    isPcuCostOverBudget() {
-      return this.totalPcuCost.essential > this.pcuBudget;
-    },
-
-    // computed continued...
     isSupercolossal() {
-      return this.params.sources.som && this.frame.size == 'Supercolossal';
+      return this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal';
     },
 
     // computed continued...
@@ -1142,7 +1137,7 @@ export default {
     networkNodes() {
       var ctNodes = 0;
 
-      if (this.params.sources.som && this.isSupercolossal) {
+      if (this.params.sourceBooksInUse.som && this.isSupercolossal) {
         ctNodes = parseInt(this.params.ctNetworkNodes);
       }
 
@@ -1200,7 +1195,7 @@ export default {
         powerCore.sizeList = powerCore.sizes.join(', ');
 
         // special materials
-        if (this.params.sources.som) {
+        if (this.params.sourceBooksInUse.som) {
           var specialMat = this.params.powerCoreSpecialMaterials[i];
 
           var name = '';
@@ -1391,7 +1386,7 @@ export default {
       for (var i in fields) {
         var field = fields[i];
         options[field] = this.getSelectOptionsFor(field).filter(
-          (option) => option.src == 'scr' || this.params.sources[option.src]
+          (option) => option.source == 'scr' || this.params.sourceBooksInUse[option.source]
         );
       }
 
@@ -1509,7 +1504,7 @@ export default {
     // computed continued...
     sensorsBpCost() {
       var sensorsBpCost = this.sensors.bpCost;
-      if (this.params.sources.som) {
+      if (this.params.sourceBooksInUse.som) {
         switch (this.params.sensorsMaterialId) {
           case 'djezet':
             sensorsBpCost += 3;
@@ -1626,7 +1621,10 @@ export default {
       // defences
       if (this.params.defensiveCountermeasuresId !== 'none') {
         var dcDesc = this.defensiveCountermeasures.name.toLowerCase();
-        if (this.params.sources.som && this.params.defensiveCountermeasuresMaterialId != 'none') {
+        if (
+          this.params.sourceBooksInUse.som &&
+          this.params.defensiveCountermeasuresMaterialId != 'none'
+        ) {
           dcDesc +=
             ' (' +
             this.getItemById(
@@ -1648,7 +1646,7 @@ export default {
       desc.push(computerDesc);
 
       // network nodes
-      if (this.params.sources.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+      if (this.params.sourceBooksInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
         var networkNodeDesc = ('mk ' + this.computer.bonus + ' network node').pluralise(
           this.networkNodes.ct
         );
@@ -1751,7 +1749,7 @@ export default {
       }
 
       // materials
-      if (this.params.sources.som) {
+      if (this.params.sourceBooksInUse.som) {
         switch (this.params.thrustersMaterialId) {
           case 'horacalcum':
             thrusters.speed++;
@@ -1777,7 +1775,7 @@ export default {
         this.getItemById('thrusters', this.params.thrustersBoosterId)
       );
 
-      if (this.params.sources.som) {
+      if (this.params.sourceBooksInUse.som) {
         switch (this.params.thrustersBoosterMaterialId) {
           case 'horacalcum':
             thrustersBooster.speed++;
@@ -3126,7 +3124,7 @@ export default {
 
     // methods continued...
     // updateComputer() {
-    // 	if (!this.params.sources.som) return;
+    // 	if (!this.params.sourceBooksInUse.som) return;
     // 	if (this.params.networkNodeId == "none") return;
     // 	if (this.frame.size != "Supercolossal") return;
 

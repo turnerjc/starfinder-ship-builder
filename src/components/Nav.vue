@@ -18,22 +18,22 @@
       <li><a href="#thrusters">Thrusters</a></li>
       <li><a href="#otherSystems">Other Systems</a></li>
       <ul class="contents__1">
-        <li v-if="params.sources.som"><a href="#ablativeArmor">Ablative Armor</a></li>
+        <li v-if="params.sourceBooksInUse.som"><a href="#ablativeArmor">Ablative Armor</a></li>
         <li><a href="#armor">Armor</a></li>
         <li><a href="#computer">Computer</a></li>
         <li><a href="#crewQuarters">Crew Quarters</a></li>
         <li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
         <li><a href="#driftEngine">Drift Engine</a></li>
         <li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
-        <li v-if="params.sources.som"><a href="#fortified-hull">Fortified Hull</a></li>
-        <li v-if="params.sources.som">
+        <li v-if="params.sourceBooksInUse.som"><a href="#fortified-hull">Fortified Hull</a></li>
+        <li v-if="params.sourceBooksInUse.som">
           <a href="#reinforced-bulkhead">Reinforced Bulkhead</a>
         </li>
         <li><a href="#security">Security</a></li>
         <li><a href="#sensors">Sensors</a></li>
         <li><a href="#shields">Shields</a></li>
         <li><a href="#weapons">Weapons</a></li>
-        <li v-if="params.sources.pw || params.sources.som">
+        <li v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
           <a href="#other">Other Systems</a>
         </li>
       </ul>

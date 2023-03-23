@@ -61,7 +61,7 @@ A few things to note:
 
   {
   "id": "inheritorworks-shieldcraft",
-  "src": "pact",
+  "source": "pact",
   "name": "Inheritorworks Shieldcraft",
   "tier": "8",
   "params": {

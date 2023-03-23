@@ -5,7 +5,7 @@
 			| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			-->
 
-  <div class="box" v-if="params.sources.som == true">
+  <div class="box" v-if="params.sourceBooksInUse.som == true">
     <header class="box__header">
       <h3 id="fortified-hull">Fortified Hull</h3>
     </header>

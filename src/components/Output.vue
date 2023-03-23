@@ -17,7 +17,7 @@
         <p>{{ frame.size }} {{ frameName }}</p>
         <p>
           <strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed
-          }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'">
+          }}<span v-if="params.sourceBooksInUse.som && params.thrustersMaterialId != 'none'">
             ({{ params.thrustersMaterialId }} thrusters)</span
           >; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span
             v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0"
@@ -49,7 +49,7 @@
           {{ deflectorShield.defenseValue }}/&ndash;
         </p>
         <!-- reinforced bulkheads -->
-        <p v-if="params.sources.som && params.reinforcedBulkheadId != 'none'">
+        <p v-if="params.sourceBooksInUse.som && params.reinforcedBulkheadId != 'none'">
           <strong>Reinforced Bulkheads</strong> {{ reinforcedBulkhead.name }};
           <strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
         </p>

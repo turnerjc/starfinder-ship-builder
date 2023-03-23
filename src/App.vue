@@ -48,7 +48,9 @@
       <RecentUpdates />
       <!--
       <Patreon />
-      <Sources />
+      -->
+      <Sources :sourceBooks="sourceBooks" :params.sourceBooksInUse="sourceBooksInUse"></Sources>
+      <!--
       <Input />
       <Concept />
       <Tier />
