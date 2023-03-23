@@ -722,15 +722,243 @@
       <h2 id="otherSystems">Step 5: Other Systems</h2>
 
       <!--
-      <AblativeArmor />
       <Armor />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  ARMOR
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h3 id="armor">Armor</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="armorSelect">Armor</label>
+            <select id="armorSelect" class="form-control" v-model="params.armorId">
+              <option v-for="option in selectOptions.armor" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+
+          <!-- special materials -->
+          <div class="form" v-if="params.sourceBooksInUse.som">
+            <div class="form-group">
+              Special Material:
+              <!-- none -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="armorMaterialId"
+                    value="none"
+                    v-model="params.armorMaterialId" />
+                  None
+                </label>
+              </div>
+              <!-- adamantine-alloy -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="armorMaterialId"
+                    value="adamantine-alloy"
+                    v-model="params.armorMaterialId" />
+                  Adamantine Alloy (bonus to DT)
+                </label>
+              </div>
+              <!-- noqual -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="armorMaterialId"
+                    value="noqual"
+                    v-model="params.armorMaterialId" />
+                  Noqual (bonus to magic officer&apos;s Mysticism DC and to AC and TL against
+                  mystical weapons)
+                </label>
+              </div>
+              <!-- siccatite -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="armorMaterialId"
+                    value="siccatite"
+                    v-model="params.armorMaterialId" />
+                  Siccatite (resist friction from atmosphere)
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- special materials -->
+        </div>
+
+        <div class="box__info">
+          <strong>Bonus to AC</strong> {{ getPrefixedModifier(armor.bonusToAc) }};
+          <strong>Special</strong> {{ armorSpecial }}
+        </div>
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ armorBpCost }}
+        </div>
+      </div>
+      <!--
+      <AblativeArmor />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  ABLATIVE ARMOR
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+      <div class="box" v-if="params.sourceBooksInUse.som == true">
+        <header class="box__header">
+          <h3 id="ablativeArmor">Ablative Armor</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="ablativeArmorSelect">Ablative Armor</label>
+            <select
+              id="ablativeArmorSelect"
+              class="form-control"
+              @change="setDefaultPositionDependentValues('ablativeArmor', 'tempHp')"
+              v-model="params.ablativeArmorId">
+              <option v-for="option in selectOptionsAblativeArmor" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+
+          <h4>Temporary HP by position:</h4>
+          <div class="box--flex">
+            <div class="form-group col-sm-1-2 col-lg-1-4">
+              <label for="">Forward</label>
+              <input
+                type="number"
+                class="form-control"
+                v-model="params.ablativeArmorByPosition.forward" />
+            </div>
+            <div class="form-group col-sm-1-2 col-lg-1-4">
+              <label for="">Port</label>
+              <input
+                type="number"
+                class="form-control"
+                v-model="params.ablativeArmorByPosition.port" />
+            </div>
+            <div class="form-group col-sm-1-2 col-lg-1-4">
+              <label for="">Starboard</label>
+              <input
+                type="number"
+                class="form-control"
+                v-model="params.ablativeArmorByPosition.starboard" />
+            </div>
+            <div class="form-group col-sm-1-2 col-lg-1-4">
+              <label for="">Aft</label>
+              <input
+                type="number"
+                class="form-control"
+                v-model="params.ablativeArmorByPosition.aft" />
+            </div>
+          </div>
+
+          <p v-if="ablativeArmorByPositionTotal != ablativeArmor.tempHp" class="text-danger">
+            Make sure your ablative armor adds up to {{ ablativeArmor.tempHp }}.
+          </p>
+
+          <p v-if="!isAblativeArmorBalanced" class="text-warning">
+            NOTE: The ship has a -1 penalty to Piloting because temporary HP from ablative armor is
+            not balanced.
+          </p>
+
+          <p v-if="ablativeArmor.tempHp > hp" class="text-warning">
+            NOTE: The ship has a -1 penalty to Piloting because temporary HP exceeds the ship&apos;s
+            HP.
+          </p>
+        </div>
+
+        <div class="box__info">
+          <strong>Temporary HP</strong> {{ ablativeArmor.tempHp }}; <strong>TL Modifier</strong>
+          {{ ablativeArmor.tlMod }}; <strong>Turn Distance</strong> {{ ablativeArmor.turnMod }}
+        </div>
+
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ ablativeArmor.bpCost }}
+        </div>
+      </div>
+      <!--
+      <FortifiedHull />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  FORTIFIED HULL
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box" v-if="params.sourceBooksInUse.som == true">
+        <header class="box__header">
+          <h3 id="fortified-hull">Fortified Hull</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="fortifiedHullSelect">Fortified Hull</label>
+            <select v-model="params.fortifiedHullId" id="fortifiedHullSelect" class="form-control">
+              <option v-for="option in selectOptions.fortifiedHull" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="box__info"><strong>Bonus To CT</strong> {{ fortifiedHull.bonusToCt }}</div>
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ fortifiedHull.bpCost }}
+        </div>
+      </div>
+      <!--
+      <ReinforcedBulkhead />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  REINFORCED BULKHEAD
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box" v-if="params.sourceBooksInUse.som == true">
+        <header class="box__header">
+          <h3 id="reinforced-bulkhead">Reinforced Bulkhead</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="reinforcedBulkheadSelect">Reinforced Bulkhead</label>
+            <select
+              id="reinforcedBulkheadSelect"
+              class="form-control"
+              v-model="params.reinforcedBulkheadId">
+              <option v-for="option in selectOptions.reinforcedBulkhead" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="box__info">
+          <strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
+        </div>
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ reinforcedBulkhead.bpCost }}
+        </div>
+      </div>
+      <!--
       <Computer />
       <CrewQuarters />
       <Defenses />
       <DriftEngines />
       <ExpansionBays />
-      <FortifiedHull />
-      <ReinforcedBulkhead />
       <Security />
       <Sensors />
       <Shields />
