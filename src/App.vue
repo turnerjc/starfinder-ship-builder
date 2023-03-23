@@ -955,8 +955,207 @@
       </div>
       <!--
       <Computer />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  COMPUTER
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h3 id="computer">Computer</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="computerSelect">Computer</label>
+            <select
+              name="computer"
+              id="computerSelect"
+              class="form-control"
+              v-model="params.computerId">
+              <option v-for="option in selectOptionsComputer" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+
+          <!-- secondary computer (Supercolossal ships only) -->
+          <div class="form-group" v-if="isSupercolossal">
+            <label for="secondaryComputerSelect">Secondary Computer</label>
+            <select
+              name="secondaryComputer"
+              id="secondaryComputerSelect"
+              class="form-control"
+              v-model="params.secondaryComputerId">
+              <option v-for="option in selectOptionsSecondaryComputer" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+
+          <!-- network node (Supercolossal ships only) -->
+          <div class="form-group" v-if="isSupercolossal">
+            <label for="ctNetworkNodes">Network Nodes</label>
+            <input
+              type="number"
+              id="ctNetworkNodes"
+              v-model="params.ctNetworkNodes"
+              class="form-control" />
+          </div>
+
+          <!-- dedicated computer -->
+          <div class="form-group" v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
+            <label for="dedicatedComputerSelect">Dedicated Computer</label>
+            <select
+              name="dedicatedComputer"
+              id="dedicatedComputerSelect"
+              class="form-control"
+              v-model="params.dedicatedComputerId">
+              <option v-for="option in selectOptionsDedicatedComputer" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box__info">
+          <strong>Skill Bonus</strong> {{ computerSkillBonusDesc }};
+          <span v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
+            <strong>Dedicated Computer Skill Bonus</strong>
+            {{ getPrefixedModifier(dedicatedComputer.bonus) }};
+          </span>
+          <strong>Nodes</strong> {{ ctComputerNodes }}; <strong>Tier</strong> {{ computerTier }}
+        </div>
+
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-power" />
+          </svg>
+          {{
+            computer.pcuCost +
+            dedicatedComputer.pcuCost +
+            (isSupercolossal ? secondaryComputer.pcuCost : 0) +
+            networkNodes.pcuCost
+          }}
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{
+            computer.bpCost +
+            dedicatedComputer.bpCost +
+            (isSupercolossal ? secondaryComputer.bpCost : 0) +
+            networkNodes.bpCost
+          }}
+        </div>
+      </div>
+      <!--
       <CrewQuarters />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  CREW QUARTERS
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h3 id="crewQuarters">Crew Quarters</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="crewQuartersSelect">Crew Quarters</label>
+            <select id="crewQuartersSelect" class="form-control" v-model="params.crewQuartersId">
+              <option v-for="option in selectOptionsCrewQuarters" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ crewQuarters.bpCost }}
+        </div>
+      </div>
+      <!--
       <Defenses />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  DEFENSIVE COUNTERMEASURES
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h3 id="defensiveCountermeasures">Defensive Countermeasures</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="defensiveCountermeasuresSelect">Defensive Countermeasures</label>
+            <select
+              v-model="params.defensiveCountermeasuresId"
+              id="defensiveCountermeasuresSelect"
+              class="form-control">
+              <option v-for="option in selectOptions.defensiveCountermeasures" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+
+          <!-- special materials -->
+          <div class="form" v-if="params.sourceBooksInUse.som">
+            <div class="form-group">
+              Special Material:
+              <!-- none -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="defensiveCountermeasuresMaterialId"
+                    value="none"
+                    v-model="params.defensiveCountermeasuresMaterialId" />
+                  None
+                </label>
+              </div>
+              <!-- horacalcum -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="defensiveCountermeasuresMaterialId"
+                    value="horacalcum"
+                    v-model="params.defensiveCountermeasuresMaterialId" />
+                  Horacalcum (decrease enemy weapon speed by 25%)
+                </label>
+              </div>
+              <!-- siccatite -->
+              <div class="radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="defensiveCountermeasuresMaterialId"
+                    value="siccatite"
+                    v-model="params.defensiveCountermeasuresMaterialId" />
+                  Siccatite (increase science officer Computers DC against enemy sensors)
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- special materials -->
+        </div>
+        <div class="box__info">
+          <strong>Bonus To TL</strong>
+          {{ getPrefixedModifier(defensiveCountermeasures.defCMBonusToTl) }}
+        </div>
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-power" />
+          </svg>
+          {{ defensiveCountermeasures.pcuCost }}
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ defensiveCountermeasuresBpCost }}
+        </div>
+      </div>
+      <!--
       <DriftEngines />
       <ExpansionBays />
       <Security />
