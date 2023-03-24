@@ -4,20 +4,20 @@
 |---------------------------------------------------------------------------
 */
 .shields-by-position {
-    @media screen and (min-width: $breakpoint-sm) {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -1em;
-    }
-    
-    .form-group {
-        @media screen and (min-width: $breakpoint-sm) {
-            padding-left: 1em;
-            flex-basis: 50%;
-        }
+  @media screen and (min-width: $breakpoint-sm) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1em;
+  }
 
-        @media screen and (min-width: $breakpoint-lg) {
-            flex-basis: 25%;
-        }
+  .form-group {
+    @media screen and (min-width: $breakpoint-sm) {
+      padding-left: 1em;
+      flex-basis: 50%;
     }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex-basis: 25%;
+    }
+  }
 }

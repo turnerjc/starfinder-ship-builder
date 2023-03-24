@@ -5,12 +5,12 @@
 */
 
 .app {
-	@media screen {
-		padding: $spacer;
-		width: $page-width;
-	}
+  @media screen {
+    padding: $spacer;
+    width: $page-width;
+  }
 
-	@media screen and (min-width: $page-width) {
-		margin: 0 auto;
-	}
+  @media screen and (min-width: $page-width) {
+    margin: 0 auto;
+  }
 }

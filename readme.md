@@ -52,20 +52,19 @@ Expected file structure of /app
     /vendor
     .htaccess
     index.html
-    
+
 ### Data
 
 A few things to note:
 
-* If building sample ships using the ship builder, output from the ship builder should go in the `params` property in the JSON file. E.g.:
+- If building sample ships using the ship builder, output from the ship builder should go in the `params` property in the JSON file. E.g.:
 
-    {
-        "id": "inheritorworks-shieldcraft",
-        "src": "pact",
-        "name": "Inheritorworks Shieldcraft",
-        "tier": "8",
-        "params": {
-            // ship builder output goes here
-        }
-    }
-
+  {
+  "id": "inheritorworks-shieldcraft",
+  "source": "pact",
+  "name": "Inheritorworks Shieldcraft",
+  "tier": "8",
+  "params": {
+  // ship builder output goes here
+  }
+  }

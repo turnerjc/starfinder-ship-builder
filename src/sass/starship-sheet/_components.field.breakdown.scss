@@ -5,52 +5,49 @@
 */
 
 .field-breakdown {
-	background-color: hsl(0, 50, 90);
-	align-items: flex-end;
-	display: flex;
+  background-color: hsl(0, 50, 90);
+  align-items: flex-end;
+  display: flex;
 }
 
 .field-breakdown-group {
-	background-color: hsl(0, 50, 80);
+  background-color: hsl(0, 50, 80);
 }
 
 .field-breakdown-group--total {
-	
 }
 
 .field-breakdown-group--secondary {
-	&:before {
-		content: "+";
-	}	
+  &:before {
+    content: '+';
+  }
 }
 
 .field-label--breakdown--primary {
-	background-color: hsl(0, 50, 70);
+  background-color: hsl(0, 50, 70);
 }
 
 .field-label--breakdown--total {
-	background-color: hsl(0, 50, 60);
+  background-color: hsl(0, 50, 60);
 }
 
 .field-label--breakdown--total,
-.field-label--breakdown--secondary
-{
-	font-size: .75em;
+.field-label--breakdown--secondary {
+  font-size: 0.75em;
 }
 
-
 .field-label--breakdown--base {
-	background-color: hsl(0, 50, 40);
+  background-color: hsl(0, 50, 40);
 }
 
 .field-label--breakdown--secondary {
-	background-color: hsl(0, 50, 30);
+  background-color: hsl(0, 50, 30);
 }
 
 .field-data--breakdown--total {
-	background-color: hsl(0, 50, 50);
+  background-color: hsl(0, 50, 50);
 }
 
 .field-data--breakdown--secondary {
-	background-color: hsl(0, 50, 20);
+  background-color: hsl(0, 50, 20);
 }

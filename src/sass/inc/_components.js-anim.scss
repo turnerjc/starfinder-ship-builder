@@ -1,12 +1,24 @@
 @-webkit-keyframes anim-border {
-	0%   { box-shadow: none; }
-	10%  { box-shadow: 0 0 10px $background-color-highlight; }
-	100% { box-shadow: none; }
+  0% {
+    box-shadow: none;
+  }
+  10% {
+    box-shadow: 0 0 10px $background-color-highlight;
+  }
+  100% {
+    box-shadow: none;
+  }
 }
 @keyframes anim-border {
-	0%   { box-shadow: none; }
-	10%  { box-shadow: 0 0 10px $background-color-highlight; }
-	100% { box-shadow: none; }
+  0% {
+    box-shadow: none;
+  }
+  10% {
+    box-shadow: 0 0 10px $background-color-highlight;
+  }
+  100% {
+    box-shadow: none;
+  }
 }
 
 /*
@@ -23,7 +35,6 @@
 */
 
 .js-anim-border {
-	-webkit-animation: anim-border .5s;
-	animation: anim-border .5s;
+  -webkit-animation: anim-border 0.5s;
+  animation: anim-border 0.5s;
 }
-

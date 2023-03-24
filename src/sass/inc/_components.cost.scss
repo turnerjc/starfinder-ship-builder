@@ -1,30 +1,29 @@
 .cost {
-	-ms-flex-preferred-size: 100%;
-	flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .cost__item {
-	-webkit-box-align: baseline;
-	-ms-flex-align: baseline;
-	align-items: baseline;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .cost__name {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .cost__current {
-	font-size: 1.25em;
-	font-weight: 700;
+  font-size: 1.25em;
+  font-weight: 700;
 }
 
 .cost__current--danger {
-	color: red;
+  color: red;
 }
-

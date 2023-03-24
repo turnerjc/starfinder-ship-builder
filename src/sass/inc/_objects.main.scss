@@ -1,38 +1,35 @@
 .main {
-	background-color: $background-color-main;
-	padding: .5rem;
-	/*width: 100%;*/
+  background-color: $background-color-main;
+  padding: 0.5rem;
+  /*width: 100%;*/
 }
 
 .main * {
-	color: $background-color-highlight;
+  color: $background-color-highlight;
 }
 
 .main option {
-	color: #000;
+  color: #000;
 }
 
 @media (max-width: $breakpoint-md - 1) {
-
-	#sidebar:target + .main {
-		transform: translateY(100vh);
-		/* Putting transition here means that hash links go straight to target,
+  #sidebar:target + .main {
+    transform: translateY(100vh);
+    /* Putting transition here means that hash links go straight to target,
 		   rather than waiting a tick for animation to finish and ending up
 		   halfway down the page */
-		transition: transform 0.3s ease;
-	}
-
+    transition: transform 0.3s ease;
+  }
 }
 
 @media (min-width: $breakpoint-md) {
-	.main {
-		margin-left: 35%;
-	}
+  .main {
+    margin-left: 35%;
+  }
 }
 
 @media (min-width: $breakpoint-lg) {
-	.main {
-		margin-left: 25%;
-	}
+  .main {
+    margin-left: 25%;
+  }
 }
-

@@ -1,26 +1,26 @@
 footer {
-	margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 footer > ul {
-	list-style-type: none;
-	padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 footer > ul > ul {
-	list-style-type: none;
-	padding-left: 1em;
+  list-style-type: none;
+  padding-left: 1em;
 }
 
 footer li + li,
 footer li + ul {
-	margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 footer .icon {
-	fill: $background-color-highlight;
+  fill: $background-color-highlight;
 }
 
 footer .icon + .icon {
-	margin-left: 0;
+  margin-left: 0;
 }

@@ -1,12 +1,32 @@
 {
   "name": "starfinder-ship-builder",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://<username>.github.io/starfinder-ship-builder/",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-uglify": "^3.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-minjson": "^0.4.0"
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vuetify": "^2.0.0-beta.2",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.59.2",
+    "vite": "^4.1.4"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.11",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vue": "^3.2.47",
+    "vue-loader": "^17.0.1",
+    "vuetify": "^3.1.11"
   }
 }

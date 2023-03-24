@@ -1,14 +1,15 @@
-h1, h2, h3 {
-	text-transform: uppercase;
-	font-weight: 400;
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 button {
-	font-family: inherit;
+  font-family: inherit;
 }
 
-input[type="checkbox"],
-input[type="number"]
-{
-	color: #000;
+input[type='checkbox'],
+input[type='number'] {
+  color: #000;
 }
