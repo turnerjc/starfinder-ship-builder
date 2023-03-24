@@ -25,15 +25,17 @@ function removeClass(obj, className) {
   obj.className = obj.className.replace(className, '');
 }
 
-var clipboardJson = {};
+function pasteToClipboard() {
+  var clipboardJson = {};
 
-// if (typeof window.Clipboard == 'function') {
-if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') {
-  clipboardJson = new Clipboard('#copyJsonBtn', {
-    text(trigger) {
-      var el = document.getElementById('outputJson');
-      addTimedClass(el, 'js-anim-border', 500);
-      return el.innerHTML;
-    },
-  });
+  // if (typeof window.Clipboard == 'function') {
+  if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') {
+    clipboardJson = new Clipboard('#copyJsonBtn', {
+      text(trigger) {
+        var el = document.getElementById('outputJson');
+        addTimedClass(el, 'js-anim-border', 500);
+        return el.innerHTML;
+      },
+    });
+  }
 }
