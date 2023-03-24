@@ -2,7 +2,7 @@
   import { computed } from 'vue';
 
   const props = defineProps(['totalBpCost', 'bpBudget', 'totalPcuCost', 'pcuBudget']);
-  console.log('Summary.vue', props);
+  // console.log('Summary.vue', props);
 
   const isBpCostOverBudget = computed(() => {
     return props.totalBpCost > props.bpBudget;

@@ -1426,7 +1426,7 @@ export default {
           return +(a[sortKey] > b[sortKey]) || -(a[sortKey] < b[sortKey]);
         });
       }
-      console.log('shipList', shipList);
+      // console.log('shipList', shipList);
       return shipList;
     },
 
@@ -2568,7 +2568,7 @@ export default {
       } else {
         listItem = `Tier ${option.tier} - ${size.name} ${frame.name} - ${option.name}`;
       }
-      console.log(listItem);
+      // console.log(listItem);
       return listItem;
     },
 

@@ -1,6 +1,6 @@
 <script setup>
   const props = defineProps(['sourceBooks', 'params']);
-  console.log('Sources.vue', props);
+  // console.log('Sources.vue', props);
 </script>
 <template>
   <!--
