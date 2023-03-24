@@ -1157,6 +1157,37 @@
       </div>
       <!--
       <DriftEngines />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  DRIFT ENGINE
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h3 id="driftEngine">Drift Engine</h3>
+        </header>
+        <div class="box__select">
+          <div class="form-group">
+            <label for="driftEngineSelect">Drift Engine</label>
+            <select id="driftEngineSelect" class="form-control" v-model="params.driftEngineId">
+              <option v-for="option in selectOptionsDriftEngine" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="box__info" v-if="driftEngine.notes !== undefined">
+          <em>Note: </em>{{ driftEngine.notes }}
+        </div>
+        <div class="box__info"><strong>Engine Rating</strong> {{ driftEngine.engineRating }}</div>
+        <div class="box__cost">
+          <svg class="icon">
+            <use xlink:href="#icon-build" />
+          </svg>
+          {{ driftEngineBpCost }}
+        </div>
+      </div>
+      <!--
       <ExpansionBays />
       <Security />
       <Sensors />
