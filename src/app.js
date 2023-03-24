@@ -1405,23 +1405,29 @@ export default {
       });
       options.expansionBay.unshift(expansionBayNone);
 
-      // sampleShip
-      options.sampleShip.sort(function (a, b) {
-        // tier
-        if (that.selectSampleShipSortOrder == 'tier')
-          return stringToFloat(a.tier) > stringToFloat(b.tier);
-
-        // size, name
-        return a[that.selectSampleShipSortOrder] > b[that.selectSampleShipSortOrder];
-      });
-
       // ship weapon
       options.shipWeapon.sort(function (a, b) {
         return a.name > b.name;
       });
 
-      console.log('options', options);
       return options;
+    },
+
+    selectOptionsSampleShip() {
+      // sampleShip
+      var sortKey = this.selectSampleShipSortOrder;
+      var shipList = [];
+      if (sortKey == 'tier') {
+        shipList = this.selectOptions.sampleShip.sort(function (a, b) {
+          return stringToFloat(a.tier) - stringToFloat(b.tier);
+        });
+      } else {
+        shipList = this.selectOptions.sampleShip.sort(function (a, b) {
+          return +(a[sortKey] > b[sortKey]) || -(a[sortKey] < b[sortKey]);
+        });
+      }
+      console.log('shipList', shipList);
+      return shipList;
     },
 
     // computed continued...
@@ -2259,7 +2265,7 @@ export default {
       for (var roleId in this.paramsReset.crewSkills) {
         // if role is missing, add it
         if (!isset(this.params.crewSkills[roleId])) {
-          console.log('Missing crew role, ' + roleId + ', added to ship');
+          // console.log('Missing crew role, ' + roleId + ', added to ship');
           this.params.crewSkills[roleId] = cloneObject(this.paramsReset.crewSkills[roleId]);
           continue;
         }
@@ -2267,9 +2273,9 @@ export default {
         for (var skillId in this.paramsReset.crewSkills[roleId].skills) {
           // if skill is missing, add it
           if (!isset(this.params.crewSkills[roleId].skills[skillId])) {
-            console.log(
-              'Missing skill, ' + skillId + ', in crew role, ' + roleId + ', added to ship'
-            );
+            // console.log(
+            //   'Missing skill, ' + skillId + ', in crew role, ' + roleId + ', added to ship'
+            // );
             this.params.crewSkills[roleId].skills[skillId] = cloneObject(
               this.paramsReset.crewSkills[roleId].skills[skillId]
             );
@@ -2298,14 +2304,14 @@ export default {
               missingWeaponMountParams.forEach(function (param) {
                 if (isset(that.params.weaponMounts[position][i][param.id])) return;
                 that.params.weaponMounts[position][i][param.id] = param.default;
-                console.log(
-                  'Missing property, ' +
-                    param.id +
-                    ', added to ' +
-                    position +
-                    ' weapon mount ' +
-                    (parseInt(i) + 1)
-                );
+                // console.log(
+                //   'Missing property, ' +
+                //     param.id +
+                //     ', added to ' +
+                //     position +
+                //     ' weapon mount ' +
+                //     (parseInt(i) + 1)
+                // );
               });
             }
           }
@@ -2313,7 +2319,7 @@ export default {
 
         if (isset(this.params[key])) continue;
 
-        console.log('Missing property, ' + key + ', added to ship');
+        // console.log('Missing property, ' + key + ', added to ship');
         this.params[key] = cloneObject(this.paramsReset[key]);
 
         // power core special materials
@@ -2337,11 +2343,6 @@ export default {
         }
       }
     },
-
-    // methods continued...
-    // getAvailableWeaponUpgrades(weapon) {
-    //   return [{id: "test", name: "Test"}];
-    // },
 
     // methods continued...
     getExpansionBayBpCost(bay) {
@@ -2551,23 +2552,24 @@ export default {
 
     // methods continued...
     getSampleShipOptionName(option) {
-      // name
-      var shipName = option.name;
-      // tier
-      var tier = option.tier;
-
-      // frame
       var frame = {};
       if (option.params.frameId == 'custom') {
         frame = option.params.customFrame;
       } else {
         frame = this.getItemById('frame', option.params.frameId);
       }
-
-      // size
       var size = this.getItemById('sizeCategory', frame.size);
 
-      return option.name + ' (' + 'Tier ' + option.tier + ' ' + size.name + ' ' + frame.name + ')';
+      var listItem;
+      if (this.selectSampleShipSortOrder == 'name') {
+        listItem = `${option.name} - Tier ${option.tier} - ${size.name} ${frame.name}`;
+      } else if (this.selectSampleShipSortOrder == 'size') {
+        listItem = `${size.name} ${frame.name} - Tier ${option.tier} - ${option.name}`;
+      } else {
+        listItem = `Tier ${option.tier} - ${size.name} ${frame.name} - ${option.name}`;
+      }
+      console.log(listItem);
+      return listItem;
     },
 
     // methods continued...
@@ -2718,11 +2720,16 @@ export default {
     */
     // methods continued...
     selectOptionsShipWeapon(weaponType, weaponMount) {
-      console.log(weaponType, weaponMount);
+      // console.log(
+      //   'selectOptionsShipWeapon',
+      //   weaponType,
+      //   weaponMount,
+      //   this.selectOptions.shipWeapon
+      // );
       return this.selectOptions.shipWeapon.filter(
         (option) =>
           option.weaponType == weaponType &&
-          (!params.isUseStrictRules || option.weight == weaponMount.weight)
+          (!this.params.isUseStrictRules || option.weight == weaponMount.weight)
       );
     },
 
@@ -3157,6 +3164,11 @@ export default {
       weaponMount.weaponId = 'none';
       weaponMount.isLinked = false;
       this.setWeaponLinking(position);
+    },
+    logger() {
+      for (let i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+      }
     },
   },
   /*

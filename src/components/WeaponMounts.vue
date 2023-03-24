@@ -1,9 +1,9 @@
 <template>
   <!--
-            | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            |  WEAPON MOUNTS
-            | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            -->
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  WEAPON MOUNTS
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
 
   <h3 id="weapons">Weapons</h3>
 
@@ -59,8 +59,8 @@
               class="form-control"
               @change="setWeaponLinking(position, i)">
               <option value="none">None</option>
-              <optgroup v-for="wpnType in data.shipWeaponType.data" :label="wpnType">
-                <template v-for="option in selectOptionsShipWeapon">
+              <optgroup v-for="weaponType in data.shipWeaponType.data" :label="weaponType">
+                <template v-for="option in selectOptionsShipWeapon(weaponType, weaponMount)">
                   <option :value="option.id">
                     {{ option.name }} ({{ option.damage }}, {{ getWeaponRangeNumerical(option) }},
                     PCU {{ option.pcuCost }}, BP {{ option.bpCost }})
@@ -133,18 +133,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Upgrades -->
-        <!-- <div class="box__select">
-                    <div><strong>Upgrades Available</strong></div>
-                    <div class="checkbox" v-for="(upgrade, j) in getAvailableWeaponUpgrades(weaponMount.weapon)">
-                      <label :for="'upgrade_' + position + '_' + j">
-                        <input type="checkbox"
-                          :id="'upgrade_' + position + '_' + j">
-                        {{ upgrade.name }}
-                      </label>
-                    </div>
-                  </div> -->
 
         <!-- Is Linked -->
         <div class="box__select">
