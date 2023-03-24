@@ -1486,6 +1486,9 @@ export default {
 
     // computed continued...
     selectOptionsCrewSkills() {
+      // TODO: The option.id == 'vi' doesn't look right. It seems like it's
+      // ignoring crew members which are marked as VIs. But it doesn't appear
+      // that is set in the VI section.
       var crewSkills = Object.entries(this.params.crewSkills).filter(
         (option) => option.id == 'vi' && this.params.viId != 'none'
       );
