@@ -986,7 +986,7 @@
               id="secondaryComputerSelect"
               class="form-control"
               v-model="params.secondaryComputerId">
-              <option v-for="option in selectOptionsSecondaryComputer" :value="option.id">
+              <option v-for="option in selectOptionsComputerSecondary" :value="option.id">
                 {{ option.name }}
               </option>
             </select>
@@ -2380,7 +2380,235 @@
       </div>
       <!--
       <Crew />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  CREW
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h2 id="crew">Step 6: Crew</h2>
+        </header>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="hasCrew" v-model="params.hasCrew" />
+            Include crew stats?
+          </label>
+        </div>
+        <div class="box__select" v-if="params.hasCrew">
+          <div class="cost__item">
+            <span class="cost__name">Complement</span>
+            <span class="cost__values">
+              <span
+                class="cost__current"
+                v-bind:class="{ 'cost__current--danger': !isComplementValid }"
+                >{{ complement }}</span
+              >
+              <span class="cost__budget"
+                >({{ this.frame.minCrew }}&ndash;{{ this.frame.maxCrew }})</span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <template v-for="role in selectOptions.role">
+        <div class="box crew" v-if="params.hasCrew">
+          <h3 class="crew__header">{{ role.name }}</h3>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" v-model="params.crewSkills[role.id].hasRole" />
+              {{ role.hasRoleQuestion }}
+            </label>
+          </div>
+
+          <div v-if="params.crewSkills[role.id].hasRole" class="crew__role">
+            <!-- Officers -->
+            <div
+              class="crew__officers"
+              v-if="params.crewSkills[role.id].countOfficers !== undefined">
+              <div class="box--flex">
+                <!-- number of officers -->
+                <div
+                  class="crew__officers__count form-group col-sm-1-2"
+                  v-if="typeof params.crewSkills[role.id].countOfficers !== 'undefined'">
+                  <label :for="role.id + '_countOfficers'">Number of officers</label>
+                  <input
+                    type="number"
+                    :id="role.id + '_countOfficers'"
+                    v-model="params.crewSkills[role.id].countOfficers"
+                    class="form-control" />
+                </div>
+
+                <!-- officer team size -->
+                <div
+                  class="crew__officers__team-size form-group col-sm-1-2"
+                  v-if="typeof params.crewSkills[role.id].countOfficerCrew !== 'undefined'">
+                  <label :for="role.id + '_countOfficerCrew'">Size of crew in each team</label>
+                  <input
+                    type="number"
+                    :id="role.id + '_countOfficerCrew'"
+                    v-model="params.crewSkills[role.id].countOfficerCrew"
+                    class="form-control" />
+                </div>
+              </div>
+            </div>
+            <!-- .crew__officers -->
+
+            <!-- Skill -->
+            <div v-for="skillId in role.skills" class="crew__skill">
+              <!-- Skill name -->
+              <h4 class="crew__skill__label">{{ getItemById('skill', skillId).name }}</h4>
+
+              <!-- TODO: default skill buttons -->
+
+              <div class="box--flex">
+                <!-- Skill ranks -->
+                <div
+                  class="crew__skill__ranks form-group col-sm-1-2"
+                  v-if="getItemById('skill', skillId).hasRanks">
+                  <label for="role.id + '_' + skillId + '_ranks'">Ranks</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    :id="role.id + '_' + skillId + '_ranks'"
+                    v-model="params.crewSkills[role.id].skills[skillId].ranks" />
+                </div>
+
+                <!-- Skill mod -->
+                <div class="crew__skill__mod form-group col-sm-1-2">
+                  <label for="role.id + '_' + skillId + '_mod'">Mod</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    :id="role.id + '_' + skillId + '_mod'"
+                    v-model="params.crewSkills[role.id].skills[skillId].modifier" />
+                </div>
+              </div>
+
+              <!-- Skill ship mod -->
+              <div class="crew__skill__ship">
+                <strong>Ship mod</strong>
+                <span v-if="skillId == 'computers'">{{
+                  getPrefixedModifier(skillModifierComputers)
+                }}</span>
+                <span v-else-if="skillId == 'piloting'">{{
+                  getPrefixedModifier(skillModifierPiloting)
+                }}</span>
+                <span v-else>&ndash;</span>
+              </div>
+
+              <!-- Skill total mod -->
+              <div class="crew__skill__total">
+                <strong>Total</strong>
+                {{ getPrefixedModifier(skillTotals[role.id][skillId]) }}
+              </div>
+            </div>
+            <!-- .crew__role__skills -->
+          </div>
+          <!-- .crew__role -->
+        </div>
+        <!-- .box -->
+      </template>
+      <!--
       <Output />
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      |  OUTPUT
+      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      -->
+
+      <div class="box">
+        <header class="box__header">
+          <h2 id="output">Output</h2>
+        </header>
+        <div class="box__info box__info--output">
+          <div id="outputText">
+            <h3>{{ shipName }} (Tier {{ tier.name }})</h3>
+            <p>{{ frame.size }} {{ frameName }}</p>
+            <p>
+              <strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed
+              }}<span v-if="params.sourceBooksInUse.som && params.thrustersMaterialId != 'none'">
+                ({{ params.thrustersMaterialId }} thrusters)</span
+              >; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span
+                v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0"
+                >; <strong>Drift</strong> {{ driftEngine.engineRating }}</span
+              >
+            </p>
+            <p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
+            <p>
+              <strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ damageThreshold }};
+              <strong>CT</strong> {{ criticalThreshold }}
+            </p>
+            <p v-if="ablativeArmor.id != 'none'">
+              <strong>Ablative Armor</strong> {{ ablativeArmor.name }} (forward
+              {{ params.ablativeArmorByPosition.forward }}, port
+              {{ params.ablativeArmorByPosition.port }}, starboard
+              {{ params.ablativeArmorByPosition.starboard }}, aft
+              {{ params.ablativeArmorByPosition.aft }})
+            </p>
+            <!-- shields -->
+            <p v-if="params.shieldType == 'shields'">
+              <strong>Shields</strong> {{ shields.name }} (forward
+              {{ params.shieldsByPosition.forward }}, port {{ params.shieldsByPosition.port }},
+              starboard {{ params.shieldsByPosition.starboard }}, aft
+              {{ params.shieldsByPosition.aft }})
+            </p>
+            <!-- deflector shields -->
+            <p v-else>
+              <strong>Deflector Shield</strong> {{ deflectorShield.name }}; <strong>DV</strong>
+              {{ deflectorShield.defenseValue }}/&ndash;
+            </p>
+            <!-- reinforced bulkheads -->
+            <p v-if="params.sourceBooksInUse.som && params.reinforcedBulkheadId != 'none'">
+              <strong>Reinforced Bulkheads</strong> {{ reinforcedBulkhead.name }};
+              <strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
+            </p>
+            <!-- weapons -->
+            <p v-for="(weaponDescription, position) in weaponDescriptions">
+              <strong>Attack ({{ position.toTitleCase() }})</strong>
+              {{ weaponDescription }}
+            </p>
+            <p>
+              <strong>Power Core(s)</strong> {{ powerCoreDescription }};
+              <strong>Drift Engine</strong> {{ driftEngine.name }}; <strong>Systems</strong>
+              <span v-html="systemsDescription"></span
+              ><span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span
+              ><span v-if="expansionBaysDescription != 'None'"
+                >; <strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span
+              ><span v-if="params.fortifiedHullId != 'none'"
+                >; <strong>Fortified Hull</strong> {{ fortifiedHull.name }}</span
+              >
+            </p>
+            <p>
+              <strong>Modifiers</strong> {{ modifiersDescription
+              }}<span v-if="params.hasCrew">; <strong>Complement</strong> {{ complement }}</span>
+            </p>
+            <p v-if="params.customComponents.length > 0">
+              <strong>Custom Components</strong> {{ customComponentsDescription }}
+            </p>
+            <p>
+              <strong>Build Points</strong> cost {{ totalBpCost }}, max {{ tier.bpBudget }}
+              <strong>Power Core Units</strong> non-essential
+              {{ totalPcuCost.essential + totalPcuCost.nonEssential }}, essential
+              {{ totalPcuCost.essential }}, max {{ pcuBudget }}
+            </p>
+
+            <div v-if="params.hasCrew">
+              <h3>Crew</h3>
+              <p v-for="roleId in selectOptionsCrewSkills">
+                <strong>{{ roleDescription[roleId] }}</strong> {{ crewDescriptions[roleId] }}
+              </p>
+              <p v-if="params.viId != 'none'"><strong>VI</strong> {{ viCrewDescription }}</p>
+            </div>
+
+            <h3>Concept</h3>
+            <p v-html="params.shipConcept"></p>
+          </div>
+          <!-- #outputText -->
+        </div>
+      </div>
+      <!--
       <JSON />
       <Footer />
       -->

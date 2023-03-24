@@ -1261,7 +1261,7 @@ export default {
 
     // computed continued...
     roleDescription() {
-      roleDesc = {};
+      var roleDesc = {};
       for (var role in this.params.crewSkills) {
         roleDesc[role] = this.getItemById('role', role).name;
         var roleObj = this.params.crewSkills[role];
@@ -1485,10 +1485,12 @@ export default {
     },
 
     // computed continued...
-    selectOptionsCrewRole() {
-      return this.selectOptions.role.filter(
+    selectOptionsCrewSkills() {
+      var crewSkills = Object.entries(this.params.crewSkills).filter(
         (option) => option.id == 'vi' && this.params.viId != 'none'
       );
+      console.log('crewSkills', crewSkills);
+      return crewSkills;
     },
 
     // computed continued...
