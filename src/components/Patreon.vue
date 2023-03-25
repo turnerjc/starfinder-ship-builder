@@ -47,7 +47,7 @@
           height="auto"
           width="150"
           style="margin-bottom: -12px"
-          src="img/become_a_patron_button.png"
+          src="../img/become_a_patron_button.png"
           alt="Become a patron" />
       </a>
     </div>
