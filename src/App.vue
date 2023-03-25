@@ -38,12 +38,36 @@
 
     <div class="main">
       <header class="app-header">
-        <h1>Starfinder RPG Ship Builder</h1>
+        <h1>Starforger RPG Ship Builder</h1>
 
         <div class="app-header__logo">
-          <img src="img/starfinder-logo-xs.png" width="150" height="auto" alt="Starfinder Logo" />
+          <img src="./img/starfinder-logo-xs.png" width="150" height="auto" alt="Starfinder Logo" />
         </div>
       </header>
+
+      <div>
+        <p>
+          Thanks to James Turner
+          <a href="https://twitter.com/james_c_turner">(@james_c_turner)</a> for creating the
+          original
+          <a href="http://jamesturneronline.net/starfinder-ship-builder/"
+            >Starfinder RPG Ship Builder</a
+          >
+        </p>
+        <p>
+          This version has been modified to be compatible with
+          <a href="https://dnd.wizards.com/">D&D 5th Edition</a> for use in our Starforger campaign.
+          Starforger is "D&D in Space" similar to Starfinder but with fewer "aliens" and more
+          classic D&D creatures. The changes are mostly focused on scaling AC/TL difficulties and
+          bonuses from computer and crews. Hyperspace travel varies from Drift travel, although the
+          same Rating is used in Hyperdrive Engines. Starforger also uses rules from
+          <a
+            href="https://store.magehandpress.com/products/dark-matter-alpha?variant=15513911263314"
+            >Dark Matter</a
+          >
+          by Mage Hand Press, so additional options are available for Expansion Bays.
+        </p>
+      </div>
 
       <RecentUpdates />
       <!--
