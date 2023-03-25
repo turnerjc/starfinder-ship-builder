@@ -2665,7 +2665,7 @@
       <footer>
         <ul>
           <li>
-            Starfinder RPG Ship Builder by
+            Original Starfinder RPG Ship Builder by
             <a href="http://www.jamesturneronline.net">James Turner</a> &bull;
             <a href="https://twitter.com/james_c_turner">@james_c_turner</a> &bull; Sep 2017 (last
             updated September 2020)
@@ -2675,8 +2675,8 @@
           <li>Made with <a href="https://vuejs.org/">Vue.js</a></li>
           <li>
             Visit
-            <a href="https://github.com/turnerjc/starfinder-ship-builder">repo on Github</a> to fork
-            or raise issues
+            <a href="https://github.com/dennywright/sfshipbuilder">repo on Github</a> to fork or
+            raise issues
           </li>
           <li>
             Artwork by <a href="https://www.shue-digital.com/">Sebastien Hue</a> (used without

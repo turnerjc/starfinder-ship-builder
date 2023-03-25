@@ -1492,7 +1492,7 @@ export default {
       var crewSkills = Object.entries(this.params.crewSkills).filter(
         (option) => option.id == 'vi' && this.params.viId != 'none'
       );
-      console.log('crewSkills', crewSkills);
+      // console.log('crewSkills', crewSkills);
       return crewSkills;
     },
 

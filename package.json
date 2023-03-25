@@ -1,5 +1,5 @@
 {
-  "name": "starfinder-ship-builder",
+  "name": "sfshipbuilder",
   "version": "1.0.0",
   "scripts": {
     "format": "prettier --write .",
@@ -8,9 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d src/dist"
   },
-  "homepage": "https://<username>.github.io/starfinder-ship-builder/",
+  "homepage": "https://<username>.github.io/sfshipbuilder/",
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
