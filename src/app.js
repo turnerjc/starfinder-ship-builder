@@ -1480,6 +1480,15 @@ export default {
     },
 
     // computed continued...
+    selectOptionsCrew() {
+      var crew = Object.keys(this.params.crewSkills).filter(
+        (roleId) => this.params.crewSkills[roleId].hasRole
+      );
+      // console.log('crew', crew);
+      return crew;
+    },
+
+    // computed continued...
     selectOptionsCrewQuarters() {
       return this.selectOptions.crewQuarters.filter(
         (option) =>
@@ -1487,18 +1496,6 @@ export default {
           (this.sizeCategory.multiplier == 1 && option.isTinyOnly) ||
           (this.sizeCategory.multiplier > 1 && !option.isTinyOnly)
       );
-    },
-
-    // computed continued...
-    selectOptionsCrewSkills() {
-      // TODO: The option.id == 'vi' doesn't look right. It seems like it's
-      // ignoring crew members which are marked as VIs. But it doesn't appear
-      // that is set in the VI section.
-      var crewSkills = Object.entries(this.params.crewSkills).filter(
-        (option) => option.id == 'vi' && this.params.viId != 'none'
-      );
-      // console.log('crewSkills', crewSkills);
-      return crewSkills;
     },
 
     // computed continued...
@@ -1931,6 +1928,7 @@ export default {
     // computed continued...
     vi() {
       var vi = this.getItemById('vi', this.params.viId);
+      // console.log('vi', vi);
       return vi;
     },
 

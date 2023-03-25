@@ -2616,7 +2616,7 @@
 
             <div v-if="params.hasCrew">
               <h3>Crew</h3>
-              <p v-for="roleId in selectOptionsCrewSkills">
+              <p v-for="roleId in selectOptionsCrew">
                 <strong>{{ roleDescription[roleId] }}</strong> {{ crewDescriptions[roleId] }}
               </p>
               <p v-if="params.viId != 'none'"><strong>VI</strong> {{ viCrewDescription }}</p>
