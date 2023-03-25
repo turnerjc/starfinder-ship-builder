@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "dcMod": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "mk1",
+      "name": "Anti-Hacking Systems Mk 1",
+      "dcMod": 1,
+      "bpCost": 3
+    },
+    {
+      "id": "mk2",
+      "name": "Anti-Hacking Systems Mk 2",
+      "dcMod": 2,
+      "bpCost": 6
+    },
+    {
+      "id": "mk3",
+      "name": "Anti-Hacking Systems Mk 3",
+      "dcMod": 3,
+      "bpCost": 9
+    },
+    {
+      "id": "mk4",
+      "name": "Anti-Hacking Systems Mk 4",
+      "dcMod": 4,
+      "bpCost": 12
+    }
+  ]
+}

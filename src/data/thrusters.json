@@ -1,0 +1,369 @@
+{
+  "props": [
+    "speed",
+    "pilotingModifier",
+    "pcuCost",
+    "bpCost"
+  ],
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "size": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "speed": 0,
+      "pilotingModifier": 0,
+      "pcuCost": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "t6",
+      "name": "T6 Thrusters",
+      "size": [
+        "Tiny"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 20,
+      "bpCost": 3
+    },
+    {
+      "id": "t8",
+      "name": "T8 Thrusters",
+      "size": [
+        "Tiny"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 25,
+      "bpCost": 4
+    },
+    {
+      "id": "t10",
+      "name": "T10 Thrusters",
+      "size": [
+        "Tiny"
+      ],
+      "speed": 10,
+      "pilotingModifier": 0,
+      "pcuCost": 30,
+      "bpCost": 5
+    },
+    {
+      "id": "t12",
+      "name": "T12 Thrusters",
+      "size": [
+        "Tiny"
+      ],
+      "speed": 12,
+      "pilotingModifier": -1,
+      "pcuCost": 35,
+      "bpCost": 6
+    },
+    {
+      "id": "t14",
+      "name": "T14 Thrusters",
+      "size": [
+        "Tiny"
+      ],
+      "speed": 14,
+      "pilotingModifier": -2,
+      "pcuCost": 40,
+      "bpCost": 7
+    },
+    {
+      "id": "s6",
+      "name": "S6 Thrusters",
+      "size": [
+        "Small"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 30,
+      "bpCost": 3
+    },
+    {
+      "id": "s8",
+      "name": "S8 Thrusters",
+      "size": [
+        "Small"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 40,
+      "bpCost": 4
+    },
+    {
+      "id": "s10",
+      "name": "S10 Thrusters",
+      "size": [
+        "Small"
+      ],
+      "speed": 10,
+      "pilotingModifier": 0,
+      "pcuCost": 50,
+      "bpCost": 5
+    },
+    {
+      "id": "s12",
+      "name": "S12 Thrusters",
+      "size": [
+        "Small"
+      ],
+      "speed": 12,
+      "pilotingModifier": -1,
+      "pcuCost": 60,
+      "bpCost": 6
+    },
+    {
+      "id": "m4",
+      "name": "M4 Thrusters",
+      "size": [
+        "Medium"
+      ],
+      "speed": 4,
+      "pilotingModifier": 2,
+      "pcuCost": 40,
+      "bpCost": 2
+    },
+    {
+      "id": "m6",
+      "name": "M6 Thrusters",
+      "size": [
+        "Medium"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 50,
+      "bpCost": 3
+    },
+    {
+      "id": "m8",
+      "name": "M8 Thrusters",
+      "size": [
+        "Medium"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 60,
+      "bpCost": 4
+    },
+    {
+      "id": "m10",
+      "name": "M10 Thrusters",
+      "size": [
+        "Medium"
+      ],
+      "speed": 10,
+      "pilotingModifier": 0,
+      "pcuCost": 70,
+      "bpCost": 5
+    },
+    {
+      "id": "m12",
+      "name": "M12 Thrusters",
+      "size": [
+        "Medium"
+      ],
+      "speed": 12,
+      "pilotingModifier": -1,
+      "pcuCost": 80,
+      "bpCost": 6
+    },
+    {
+      "id": "l4",
+      "name": "L4 Thrusters",
+      "size": [
+        "Large"
+      ],
+      "speed": 4,
+      "pilotingModifier": 2,
+      "pcuCost": 60,
+      "bpCost": 4
+    },
+    {
+      "id": "l6",
+      "name": "L6 Thrusters",
+      "size": [
+        "Large"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 80,
+      "bpCost": 6
+    },
+    {
+      "id": "l8",
+      "name": "L8 Thrusters",
+      "size": [
+        "Large"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 100,
+      "bpCost": 8
+    },
+    {
+      "id": "l10",
+      "name": "L10 Thrusters",
+      "size": [
+        "Large"
+      ],
+      "speed": 10,
+      "pilotingModifier": 0,
+      "pcuCost": 120,
+      "bpCost": 10
+    },
+    {
+      "id": "h4",
+      "name": "H4 Thrusters",
+      "size": [
+        "Huge"
+      ],
+      "speed": 4,
+      "pilotingModifier": 2,
+      "pcuCost": 80,
+      "bpCost": 4
+    },
+    {
+      "id": "h6",
+      "name": "H6 Thrusters",
+      "size": [
+        "Huge"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 120,
+      "bpCost": 6
+    },
+    {
+      "id": "h8",
+      "name": "H8 Thrusters",
+      "size": [
+        "Huge"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 140,
+      "bpCost": 8
+    },
+    {
+      "id": "h10",
+      "name": "H10 Thrusters",
+      "size": [
+        "Huge"
+      ],
+      "speed": 10,
+      "pilotingModifier": 0,
+      "pcuCost": 160,
+      "bpCost": 10
+    },
+    {
+      "id": "g4",
+      "name": "G4 Thrusters",
+      "size": [
+        "Gargantuan"
+      ],
+      "speed": 4,
+      "pilotingModifier": 2,
+      "pcuCost": 120,
+      "bpCost": 8
+    },
+    {
+      "id": "g6",
+      "name": "G6 Thrusters",
+      "size": [
+        "Gargantuan"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 180,
+      "bpCost": 12
+    },
+    {
+      "id": "g8",
+      "name": "G8 Thrusters",
+      "size": [
+        "Gargantuan"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 240,
+      "bpCost": 16
+    },
+    {
+      "id": "c4",
+      "name": "C4 Thrusters",
+      "size": [
+        "Colossal"
+      ],
+      "speed": 4,
+      "pilotingModifier": 2,
+      "pcuCost": 200,
+      "bpCost": 8
+    },
+    {
+      "id": "c6",
+      "name": "C6 Thrusters",
+      "size": [
+        "Colossal"
+      ],
+      "speed": 6,
+      "pilotingModifier": 1,
+      "pcuCost": 300,
+      "bpCost": 12
+    },
+    {
+      "id": "c8",
+      "name": "C8 Thrusters",
+      "size": [
+        "Colossal"
+      ],
+      "speed": 8,
+      "pilotingModifier": 0,
+      "pcuCost": 400,
+      "bpCost": 16
+    },
+    {
+      "id": "sc4",
+      "name": "Sc4 Thrusters",
+      "size": [
+        "Supercolossal"
+      ],
+      "speed": 4,
+      "pilotingModifier": 1,
+      "pcuCost": 300,
+      "bpCost": 16
+    },
+    {
+      "id": "sc6",
+      "name": "Sc6 Thrusters",
+      "size": [
+        "Supercolossal"
+      ],
+      "speed": 6,
+      "pilotingModifier": 0,
+      "pcuCost": 400,
+      "bpCost": 20
+    },
+    {
+      "id": "sc8",
+      "name": "Sc8 Thrusters",
+      "size": [
+        "Supercolossal"
+      ],
+      "speed": 8,
+      "pilotingModifier": -1,
+      "pcuCost": 500,
+      "bpCost": 24
+    }
+  ]
+}

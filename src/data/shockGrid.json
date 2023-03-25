@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "rank": 0,
+      "dc": 0,
+      "damage": "None",
+      "bpCostMultiplier": 0
+    },
+    {
+      "id": "rank-1",
+      "name": "Shock Grid, Rank 1",
+      "rank": 1,
+      "dc": 20,
+      "damage": "8d6",
+      "bpCostMultiplier": 1
+    },
+    {
+      "id": "rank-2",
+      "name": "Shock Grid, Rank 2",
+      "rank": 2,
+      "dc": 22,
+      "damage": "10d6",
+      "bpCostMultiplier": 2
+    },
+    {
+      "id": "rank-3",
+      "name": "Shock Grid, Rank 3",
+      "rank": 3,
+      "dc": 24,
+      "damage": "12d6",
+      "bpCostMultiplier": 3
+    },
+    {
+      "id": "rank-4",
+      "name": "Shock Grid, Rank 4",
+      "rank": 4,
+      "dc": 27,
+      "damage": "14d6",
+      "bpCostMultiplier": 4
+    },
+    {
+      "id": "rank-5",
+      "name": "Shock Grid, Rank 5",
+      "rank": 5,
+      "dc": 30,
+      "damage": "16d6",
+      "bpCostMultiplier": 5
+    }
+  ]
+}

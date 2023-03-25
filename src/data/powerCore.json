@@ -1,0 +1,283 @@
+{
+  "props": [
+    "pcuBudget",
+    "bpCost"
+  ],
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuBudget": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "micron-light",
+      "name": "Micron Light",
+      "sizes": [
+        "Tiny"
+      ],
+      "pcuBudget": 50,
+      "bpCost": 4
+    },
+    {
+      "id": "micron-heavy",
+      "name": "Micron Heavy",
+      "sizes": [
+        "Tiny"
+      ],
+      "pcuBudget": 70,
+      "bpCost": 6
+    },
+    {
+      "id": "micron-ultra",
+      "name": "Micron Ultra",
+      "sizes": [
+        "Tiny"
+      ],
+      "pcuBudget": 80,
+      "bpCost": 8
+    },
+    {
+      "id": "arcus-light",
+      "name": "Arcus Light",
+      "sizes": [
+        "Tiny",
+        "Small"
+      ],
+      "pcuBudget": 75,
+      "bpCost": 7
+    },
+    {
+      "id": "pulse-brown",
+      "name": "Pulse Brown",
+      "sizes": [
+        "Tiny",
+        "Small"
+      ],
+      "pcuBudget": 90,
+      "bpCost": 9
+    },
+    {
+      "id": "pulse-black",
+      "name": "Pulse Black",
+      "sizes": [
+        "Tiny",
+        "Small"
+      ],
+      "pcuBudget": 120,
+      "bpCost": 12
+    },
+    {
+      "id": "pulse-white",
+      "name": "Pulse White",
+      "sizes": [
+        "Tiny",
+        "Small"
+      ],
+      "pcuBudget": 140,
+      "bpCost": 14
+    },
+    {
+      "id": "pulse-gray",
+      "name": "Pulse Gray",
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium"
+      ],
+      "pcuBudget": 100,
+      "bpCost": 10
+    },
+    {
+      "id": "arcus-heavy",
+      "name": "Arcus Heavy",
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium"
+      ],
+      "pcuBudget": 130,
+      "bpCost": 13
+    },
+    {
+      "id": "pulse-green",
+      "name": "Pulse Green",
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium"
+      ],
+      "pcuBudget": 150,
+      "bpCost": 15
+    },
+    {
+      "id": "pulse-red",
+      "name": "Pulse Red",
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium"
+      ],
+      "pcuBudget": 175,
+      "bpCost": 17
+    },
+    {
+      "id": "pulse-blue",
+      "name": "Pulse Blue",
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium"
+      ],
+      "pcuBudget": 200,
+      "bpCost": 20
+    },
+    {
+      "id": "arcus-ultra",
+      "name": "Arcus Ultra",
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "pcuBudget": 150,
+      "bpCost": 15
+    },
+    {
+      "id": "arcus-maximum",
+      "name": "Arcus Maximum",
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "pcuBudget": 200,
+      "bpCost": 20
+    },
+    {
+      "id": "pulse-orange",
+      "name": "Pulse Orange",
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "pcuBudget": 250,
+      "bpCost": 25
+    },
+    {
+      "id": "pulse-prismatic",
+      "name": "Pulse Prismatic",
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "pcuBudget": 300,
+      "bpCost": 30
+    },
+    {
+      "id": "nova-light",
+      "name": "Nova Light",
+      "sizes": [
+        "Medium",
+        "Large",
+        "Huge"
+      ],
+      "pcuBudget": 150,
+      "bpCost": 15
+    },
+    {
+      "id": "nova-heavy",
+      "name": "Nova Heavy",
+      "sizes": [
+        "Medium",
+        "Large",
+        "Huge"
+      ],
+      "pcuBudget": 200,
+      "bpCost": 20
+    },
+    {
+      "id": "nova-ultra",
+      "name": "Nova Ultra",
+      "sizes": [
+        "Medium",
+        "Large",
+        "Huge"
+      ],
+      "pcuBudget": 300,
+      "bpCost": 30
+    },
+    {
+      "id": "gateway-light",
+      "name": "Gateway Light",
+      "sizes": [
+        "Large",
+        "Huge",
+        "Gargantuan"
+      ],
+      "pcuBudget": 300,
+      "bpCost": 30
+    },
+    {
+      "id": "gateway-heavy",
+      "name": "Gateway Heavy",
+      "sizes": [
+        "Large",
+        "Huge",
+        "Gargantuan"
+      ],
+      "pcuBudget": 400,
+      "bpCost": 40
+    },
+    {
+      "id": "gateway-ultra",
+      "name": "Gateway Ultra",
+      "sizes": [
+        "Huge",
+        "Gargantuan",
+        "Colossal"
+      ],
+      "pcuBudget": 500,
+      "bpCost": 50
+    },
+    {
+      "id": "titan-light",
+      "name": "Titan Light",
+      "sizes": [
+        "Supercolossal"
+      ],
+      "pcuBudget": 700,
+      "bpCost": 50
+    },
+    {
+      "id": "titan-heavy",
+      "name": "Titan Heavy",
+      "sizes": [
+        "Supercolossal"
+      ],
+      "pcuBudget": 950,
+      "bpCost": 60
+    },
+    {
+      "id": "titan-ultra",
+      "name": "Titan Ultra",
+      "sizes": [
+        "Supercolossal"
+      ],
+      "pcuBudget": 1200,
+      "bpCost": 70
+    }
+  ]
+}

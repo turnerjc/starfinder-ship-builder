@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": "forward",
+      "name": "Forward Arc"
+    },
+    {
+      "id": "port",
+      "name": "Port Arc"
+    },
+    {
+      "id": "starboard",
+      "name": "Starboard Arc"
+    },
+    {
+      "id": "aft",
+      "name": "Aft Arc"
+    },
+    {
+      "id": "turret",
+      "name": "Turret"
+    },
+    {
+      "id": "spinal",
+      "name": "Spinal Mount"
+    }
+  ]
+}

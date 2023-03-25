@@ -1,0 +1,242 @@
+{
+  "props": [
+    "bonus",
+    "nodes",
+    "pcuCost",
+    "bpCost"
+  ],
+  "data": [
+    {
+      "id": "basic-computer",
+      "name": "Basic computer",
+      "bonus": 0,
+      "nodes": 0,
+      "pcuCost": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "mk-1-mononode",
+      "name": "Mk 1 mononode",
+      "bonus": 1,
+      "nodes": 1,
+      "pcuCost": 10,
+      "bpCost": 1
+    },
+    {
+      "id": "mk-1-duonode",
+      "name": "Mk 1 duonode",
+      "bonus": 1,
+      "nodes": 2,
+      "pcuCost": 10,
+      "bpCost": 2
+    },
+    {
+      "id": "mk-1-trinode",
+      "name": "Mk 1 trinode",
+      "bonus": 1,
+      "nodes": 3,
+      "pcuCost": 10,
+      "bpCost": 3
+    },
+    {
+      "id": "mk-1-tetranode",
+      "name": "Mk 1 tetranode",
+      "bonus": 1,
+      "nodes": 4,
+      "pcuCost": 10,
+      "bpCost": 4
+    },
+    {
+      "id": "mk-2-mononode",
+      "name": "Mk 2 mononode",
+      "bonus": 2,
+      "nodes": 1,
+      "pcuCost": 15,
+      "bpCost": 4
+    },
+    {
+      "id": "mk-2-duonode",
+      "name": "Mk 2 duonode",
+      "bonus": 2,
+      "nodes": 2,
+      "pcuCost": 15,
+      "bpCost": 8
+    },
+    {
+      "id": "mk-2-trinode",
+      "name": "Mk 2 trinode",
+      "bonus": 2,
+      "nodes": 3,
+      "pcuCost": 15,
+      "bpCost": 12
+    },
+    {
+      "id": "mk-2-tetranode",
+      "name": "Mk 2 tetranode",
+      "bonus": 2,
+      "nodes": 4,
+      "pcuCost": 15,
+      "bpCost": 16
+    },
+    {
+      "id": "mk-3-mononode",
+      "name": "Mk 3 mononode",
+      "bonus": 3,
+      "nodes": 1,
+      "pcuCost": 20,
+      "bpCost": 9
+    },
+    {
+      "id": "mk-3-duonode",
+      "name": "Mk 3 duonode",
+      "bonus": 3,
+      "nodes": 2,
+      "pcuCost": 20,
+      "bpCost": 18
+    },
+    {
+      "id": "mk-3-trinode",
+      "name": "Mk 3 trinode",
+      "bonus": 3,
+      "nodes": 3,
+      "pcuCost": 20,
+      "bpCost": 27
+    },
+    {
+      "id": "mk-3-tetranode",
+      "name": "Mk 3 tetranode",
+      "bonus": 3,
+      "nodes": 4,
+      "pcuCost": 20,
+      "bpCost": 36
+    },
+    {
+      "id": "mk-4-mononode",
+      "name": "Mk 4 mononode",
+      "bonus": 4,
+      "nodes": 1,
+      "pcuCost": 25,
+      "bpCost": 16
+    },
+    {
+      "id": "mk-4-duonode",
+      "name": "Mk 4 duonode",
+      "bonus": 4,
+      "nodes": 2,
+      "pcuCost": 25,
+      "bpCost": 32
+    },
+    {
+      "id": "mk-4-trinode",
+      "name": "Mk 4 trinode",
+      "bonus": 4,
+      "nodes": 3,
+      "pcuCost": 25,
+      "bpCost": 48
+    },
+    {
+      "id": "mk-5-mononode",
+      "name": "Mk 5 mononode",
+      "bonus": 5,
+      "nodes": 1,
+      "pcuCost": 30,
+      "bpCost": 25
+    },
+    {
+      "id": "mk-5-duonode",
+      "name": "Mk 5 duonode",
+      "bonus": 5,
+      "nodes": 2,
+      "pcuCost": 30,
+      "bpCost": 50
+    },
+    {
+      "id": "mk-5-trinode",
+      "name": "Mk 5 trinode",
+      "bonus": 5,
+      "nodes": 3,
+      "pcuCost": 30,
+      "bpCost": 75
+    },
+    {
+      "id": "mk-6-mononode",
+      "name": "Mk 6 mononode",
+      "bonus": 6,
+      "nodes": 1,
+      "pcuCost": 35,
+      "bpCost": 36
+    },
+    {
+      "id": "mk-6-duonode",
+      "name": "Mk 6 duonode",
+      "bonus": 6,
+      "nodes": 2,
+      "pcuCost": 35,
+      "bpCost": 72
+    },
+    {
+      "id": "mk-7-mononode",
+      "name": "Mk 7 mononode",
+      "bonus": 7,
+      "nodes": 1,
+      "pcuCost": 40,
+      "bpCost": 49
+    },
+    {
+      "id": "mk-7-duonode",
+      "name": "Mk 7 duonode",
+      "bonus": 7,
+      "nodes": 2,
+      "pcuCost": 40,
+      "bpCost": 98
+    },
+    {
+      "id": "mk-8-mononode",
+      "name": "Mk 8 mononode",
+      "bonus": 8,
+      "nodes": 1,
+      "pcuCost": 45,
+      "bpCost": 64
+    },
+    {
+      "id": "mk-8-duonode",
+      "name": "Mk 8 duonode",
+      "bonus": 8,
+      "nodes": 2,
+      "pcuCost": 45,
+      "bpCost": 128
+    },
+    {
+      "id": "mk-9-mononode",
+      "name": "Mk 9 mononode",
+      "bonus": 9,
+      "nodes": 1,
+      "pcuCost": 50,
+      "bpCost": 81
+    },
+    {
+      "id": "mk-9-duonode",
+      "name": "Mk 9 duonode",
+      "bonus": 9,
+      "nodes": 2,
+      "pcuCost": 50,
+      "bpCost": 162
+    },
+    {
+      "id": "mk-10-mononode",
+      "name": "Mk 10 mononode",
+      "bonus": 10,
+      "nodes": 1,
+      "pcuCost": 55,
+      "bpCost": 100
+    },
+    {
+      "id": "mk-10-duonode",
+      "name": "Mk 10 duonode",
+      "bonus": 10,
+      "nodes": 2,
+      "pcuCost": 55,
+      "bpCost": 200
+    }
+  ]
+}

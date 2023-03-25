@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "bpCost": 0
+    },
+    {
+      "id": "mk1",
+      "name": "Mk 1",
+      "bpCost": 5
+    },
+    {
+      "id": "mk2",
+      "name": "Mk 2",
+      "bpCost": 8
+    },
+    {
+      "id": "mk3",
+      "name": "Mk 3",
+      "bpCost": 12
+    },
+    {
+      "id": "mk4",
+      "name": "Mk 4",
+      "bpCost": 18
+    },
+    {
+      "id": "mk5",
+      "name": "Mk 5",
+      "bpCost": 27
+    },
+    {
+      "id": "mk6",
+      "name": "Mk 6",
+      "bpCost": 41
+    },
+    {
+      "id": "mk7",
+      "name": "Mk 7",
+      "bpCost": 62
+    },
+    {
+      "id": "mk8",
+      "name": "Mk 8",
+      "bpCost": 93
+    },
+    {
+      "id": "mk9",
+      "name": "Mk 9",
+      "bpCost": 140
+    },
+    {
+      "id": "mk10",
+      "name": "Mk 10",
+      "bpCost": 210
+    }
+  ]
+}

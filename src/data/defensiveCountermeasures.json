@@ -1,0 +1,121 @@
+{
+  "props": [
+    "defCMBonusToTl",
+    "pcuCost",
+    "bpCost"
+  ],
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "defCMBonusToTl": 0,
+      "pcuCost": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "mk-1",
+      "name": "Mk 1 defences",
+      "defCMBonusToTl": 1,
+      "pcuCost": 1,
+      "bpCost": 2
+    },
+    {
+      "id": "mk-2",
+      "name": "Mk 2 defences",
+      "defCMBonusToTl": 2,
+      "pcuCost": 1,
+      "bpCost": 3
+    },
+    {
+      "id": "mk-3",
+      "name": "Mk 3 defences",
+      "defCMBonusToTl": 3,
+      "pcuCost": 2,
+      "bpCost": 4
+    },
+    {
+      "id": "mk-4",
+      "name": "Mk 4 defences",
+      "defCMBonusToTl": 4,
+      "pcuCost": 3,
+      "bpCost": 6
+    },
+    {
+      "id": "mk-5",
+      "name": "Mk 5 defences",
+      "defCMBonusToTl": 5,
+      "pcuCost": 4,
+      "bpCost": 8
+    },
+    {
+      "id": "mk-6",
+      "name": "Mk 6 defences",
+      "defCMBonusToTl": 6,
+      "pcuCost": 5,
+      "bpCost": 11
+    },
+    {
+      "id": "mk-7",
+      "name": "Mk 7 defences",
+      "defCMBonusToTl": 7,
+      "pcuCost": 7,
+      "bpCost": 14
+    },
+    {
+      "id": "mk-8",
+      "name": "Mk 8 defences",
+      "defCMBonusToTl": 8,
+      "pcuCost": 9,
+      "bpCost": 18
+    },
+    {
+      "id": "mk-9",
+      "name": "Mk 9 defences",
+      "defCMBonusToTl": 9,
+      "pcuCost": 11,
+      "bpCost": 22
+    },
+    {
+      "id": "mk-10",
+      "name": "Mk 10 defences",
+      "defCMBonusToTl": 10,
+      "pcuCost": 13,
+      "bpCost": 27
+    },
+    {
+      "id": "mk-11",
+      "name": "Mk 11 defences",
+      "defCMBonusToTl": 11,
+      "pcuCost": 16,
+      "bpCost": 33
+    },
+    {
+      "id": "mk-12",
+      "name": "Mk 12 defences",
+      "defCMBonusToTl": 12,
+      "pcuCost": 20,
+      "bpCost": 40
+    },
+    {
+      "id": "mk-13",
+      "name": "Mk 13 defences",
+      "defCMBonusToTl": 13,
+      "pcuCost": 25,
+      "bpCost": 50
+    },
+    {
+      "id": "mk-14",
+      "name": "Mk 14 defences",
+      "defCMBonusToTl": 14,
+      "pcuCost": 32,
+      "bpCost": 65
+    },
+    {
+      "id": "mk-15",
+      "name": "Mk 15 defences",
+      "defCMBonusToTl": 15,
+      "pcuCost": 45,
+      "bpCost": 90
+    }
+  ]
+}

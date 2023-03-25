@@ -1,0 +1,104 @@
+{
+  "source": "som",
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "defenseValue": 0,
+      "bonusToAc": 0,
+      "bonusToTl": 0,
+      "pcuCost": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "basic-1",
+      "name": "Basic deflector shield 1",
+      "defenseValue": 1,
+      "bonusToAc": 1,
+      "bonusToTl": 1,
+      "pcuCost": 5,
+      "bpCost": 4
+    },
+    {
+      "id": "basic-3",
+      "name": "Basic deflector shield 3",
+      "defenseValue": 3,
+      "bonusToAc": 1,
+      "bonusToTl": 1,
+      "pcuCost": 5,
+      "bpCost": 6
+    },
+    {
+      "id": "light-5",
+      "name": "Light deflector shield 5",
+      "defenseValue": 5,
+      "bonusToAc": 1,
+      "bonusToTl": 2,
+      "pcuCost": 10,
+      "bpCost": 12
+    },
+    {
+      "id": "light-8",
+      "name": "Light deflector shield 8",
+      "defenseValue": 8,
+      "bonusToAc": 1,
+      "bonusToTl": 2,
+      "pcuCost": 15,
+      "bpCost": 15
+    },
+    {
+      "id": "medium-10",
+      "name": "Medium deflector shield 10",
+      "defenseValue": 10,
+      "bonusToAc": 2,
+      "bonusToTl": 2,
+      "pcuCost": 30,
+      "bpCost": 22
+    },
+    {
+      "id": "medium-12",
+      "name": "Medium deflector shield 12",
+      "defenseValue": 12,
+      "bonusToAc": 2,
+      "bonusToTl": 2,
+      "pcuCost": 45,
+      "bpCost": 26
+    },
+    {
+      "id": "heavy-13",
+      "name": "Heavy deflector shield 13",
+      "defenseValue": 13,
+      "bonusToAc": 2,
+      "bonusToTl": 3,
+      "pcuCost": 60,
+      "bpCost": 33
+    },
+    {
+      "id": "heavy-15",
+      "name": "Heavy deflector shield 15",
+      "defenseValue": 15,
+      "bonusToAc": 2,
+      "bonusToTl": 3,
+      "pcuCost": 80,
+      "bpCost": 36
+    },
+    {
+      "id": "superior-18",
+      "name": "Superior deflector shield 18",
+      "defenseValue": 18,
+      "bonusToAc": 3,
+      "bonusToTl": 3,
+      "pcuCost": 100,
+      "bpCost": 45
+    },
+    {
+      "id": "superior-20",
+      "name": "Superior deflector shield 20",
+      "defenseValue": 20,
+      "bonusToAc": 3,
+      "bonusToTl": 3,
+      "pcuCost": 120,
+      "bpCost": 50
+    }
+  ]
+}

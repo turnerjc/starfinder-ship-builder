@@ -1,0 +1,137 @@
+{
+  "props": [
+    "engineRating",
+    "driftEngineMinPcu",
+    "driftEngineBpCostMultiplier"
+  ],
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "engineRating": 0,
+      "minPcu": 0,
+      "maxSize": 10,
+      "bpCostMultiplier": 0
+    },
+    {
+      "id": "signal-basic",
+      "name": "Signal Basic",
+      "engineRating": 1,
+      "minPcu": 75,
+      "maxSize": 10,
+      "bpCostMultiplier": 2
+    },
+    {
+      "id": "signal-booster",
+      "name": "Signal Booster",
+      "engineRating": 2,
+      "minPcu": 100,
+      "maxSize": 5,
+      "bpCostMultiplier": 5
+    },
+    {
+      "id": "signal-major",
+      "name": "Signal Major",
+      "engineRating": 3,
+      "minPcu": 150,
+      "maxSize": 4,
+      "bpCostMultiplier": 10
+    },
+    {
+      "id": "signal-superior",
+      "name": "Signal Superior",
+      "engineRating": 4,
+      "minPcu": 175,
+      "maxSize": 4,
+      "bpCostMultiplier": 15
+    },
+    {
+      "id": "signal-ultra",
+      "name": "Signal Ultra",
+      "engineRating": 5,
+      "minPcu": 200,
+      "maxSize": 3,
+      "bpCostMultiplier": 20
+    },
+    {
+      "id": "archon-drive",
+      "name": "Archon Drive",
+      "engineRating": 1,
+      "minPcu": 150,
+      "maxSize": 10,
+      "bpCostMultiplier": 15,
+      "source": "som",
+      "notes": "Restricted (Church of Iomedae, Knights of Golarion)"
+    },
+    {
+      "id": "chaos-sail",
+      "name": "Chaos Sail",
+      "engineRating": 1,
+      "minPcu": 75,
+      "maxSize": 7,
+      "bpCostMultiplier": 4,
+      "source": "som",
+      "notes": "Restricted (Church of Besmara)"
+    },
+    {
+      "id": "constellation-orrery",
+      "name": "Constellation Orrery",
+      "engineRating": 2,
+      "minPcu": 150,
+      "maxSize": 5,
+      "bpCostMultiplier": 10,
+      "source": "som",
+      "notes": "Restricted (Church of Ibra)"
+    },
+    {
+      "id": "elemental-engine",
+      "name": "Elemental Engine",
+      "engineRating": 1,
+      "minPcu": 100,
+      "maxSize": 7,
+      "bpCostMultiplier": 5,
+      "source": "som",
+      "notes": "Restricted (Elemental Plane)"
+    },
+    {
+      "id": "first-drive",
+      "name": "First Drive",
+      "engineRating": 3,
+      "minPcu": 175,
+      "maxSize": 4,
+      "bpCostMultiplier": 12,
+      "source": "som",
+      "notes": "Restricted (Eldest, fey)"
+    },
+    {
+      "id": "hell-drive",
+      "name": "Hell Drive",
+      "engineRating": 1,
+      "minPcu": 100,
+      "maxSize": 7,
+      "bpCostMultiplier": 10,
+      "source": "som",
+      "notes": "Restricted (Church of Asmodeus, Hellknights)"
+    },
+    {
+      "id": "planar-aperture-drive",
+      "name": "Planar Aperture Drive",
+      "engineRating": 2,
+      "minPcu": 150,
+      "maxSize": 10,
+      "bpCostMultiplier": 15,
+      "source": "som",
+      "notes": "Restricted (Tetrad, witchwyrds)"
+    },
+    {
+      "id": "shadow-engine",
+      "name": "Shadow Engine",
+      "engineRating": 1,
+      "minPcu": 75,
+      "maxSize": 7,
+      "bpCostMultiplier": 3,
+      "source": "som",
+      "notes": "Painful, restricted (Church of Zon-Kuthon, velstracs)"
+    }
+  ]
+}

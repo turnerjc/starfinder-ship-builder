@@ -1,0 +1,165 @@
+{
+  "data": [
+    {
+      "id": "1_4",
+      "name": "1/4",
+      "value": 0.25,
+      "bpBudget": 25,
+      "hpIncrease": 0
+    },
+    {
+      "id": "1_3",
+      "name": "1/3",
+      "value": 0.33333333333,
+      "bpBudget": 30,
+      "hpIncrease": 0
+    },
+    {
+      "id": "1_2",
+      "name": "1/2",
+      "value": 0.5,
+      "bpBudget": 40,
+      "hpIncrease": 0
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "value": 1,
+      "bpBudget": 55,
+      "hpIncrease": 0
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "value": 2,
+      "bpBudget": 75,
+      "hpIncrease": 0
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "value": 3,
+      "bpBudget": 95,
+      "hpIncrease": 0
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "value": 4,
+      "bpBudget": 115,
+      "hpIncrease": 1
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "value": 5,
+      "bpBudget": 135,
+      "hpIncrease": 1
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "value": 6,
+      "bpBudget": 155,
+      "hpIncrease": 1
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "value": 7,
+      "bpBudget": 180,
+      "hpIncrease": 1
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "value": 8,
+      "bpBudget": 205,
+      "hpIncrease": 2
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "value": 9,
+      "bpBudget": 230,
+      "hpIncrease": 2
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "value": 10,
+      "bpBudget": 270,
+      "hpIncrease": 2
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "value": 11,
+      "bpBudget": 310,
+      "hpIncrease": 2
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "value": 12,
+      "bpBudget": 350,
+      "hpIncrease": 3
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "value": 13,
+      "bpBudget": 400,
+      "hpIncrease": 3
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "value": 14,
+      "bpBudget": 450,
+      "hpIncrease": 3
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "value": 15,
+      "bpBudget": 500,
+      "hpIncrease": 3
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "value": 16,
+      "bpBudget": 600,
+      "hpIncrease": 4
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "value": 17,
+      "bpBudget": 700,
+      "hpIncrease": 4
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "value": 18,
+      "bpBudget": 800,
+      "hpIncrease": 4
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "value": 19,
+      "bpBudget": 900,
+      "hpIncrease": 4
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "value": 20,
+      "bpBudget": 1000,
+      "hpIncrease": 5
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "bonusToCtMultiplier": 0,
+      "bpCostMultiplier": 0
+    },
+    {
+      "id": "steel-composite",
+      "name": "Steel composite",
+      "bonusToCtMultiplier": 1,
+      "bpCostMultiplier": 2
+    },
+    {
+      "id": "adamantine-alloy",
+      "name": "Adamantine alloy",
+      "bonusToCtMultiplier": 2,
+      "bpCostMultiplier": 4
+    },
+    {
+      "id": "nanocarbon-plate",
+      "name": "Nanocarbon plate",
+      "bonusToCtMultiplier": 3,
+      "bpCostMultiplier": 6
+    },
+    {
+      "id": "polycarbon-plate",
+      "name": "Polycarbon plate",
+      "bonusToCtMultiplier": 4,
+      "bpCostMultiplier": 9
+    },
+    {
+      "id": "pure-adamantine",
+      "name": "Pure adamantine",
+      "bonusToCtMultiplier": 5,
+      "bpCostMultiplier": 12
+    }
+  ]
+}

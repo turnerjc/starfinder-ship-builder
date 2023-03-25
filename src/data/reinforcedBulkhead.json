@@ -1,0 +1,47 @@
+{
+  "source": "som",
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "source": "som",
+      "fortification": "0%",
+      "bpCostMultiplier": 0
+    },
+    {
+      "id": "mk1",
+      "name": "Mk1 bulkheads",
+      "source": "som",
+      "fortification": "10%",
+      "bpCostMultiplier": 2
+    },
+    {
+      "id": "mk2",
+      "name": "Mk2 bulkheads",
+      "source": "som",
+      "fortification": "20%",
+      "bpCostMultiplier": 3
+    },
+    {
+      "id": "mk3",
+      "name": "Mk3 bulkheads",
+      "source": "som",
+      "fortification": "30%",
+      "bpCostMultiplier": 5
+    },
+    {
+      "id": "mk4",
+      "name": "Mk4 bulkheads",
+      "source": "som",
+      "fortification": "40%",
+      "bpCostMultiplier": 7
+    },
+    {
+      "id": "mk5",
+      "name": "Mk5 bulkheads",
+      "source": "som",
+      "fortification": "50%",
+      "bpCostMultiplier": 10
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "source": "som",
+  "data": [
+    {
+      "id": "none",
+      "name": "None"
+    },
+    {
+      "id": "abysium",
+      "name": "Abysium"
+    },
+    {
+      "id": "adamantine-alloy",
+      "name": "Adamantine Alloy"
+    },
+    {
+      "id": "djezet",
+      "name": "Djezet"
+    },
+    {
+      "id": "horacalcum",
+      "name": "Horacalcum"
+    },
+    {
+      "id": "inubrix",
+      "name": "Inubrix"
+    },
+    {
+      "id": "noqual",
+      "name": "Noqual"
+    },
+    {
+      "id": "siccatite",
+      "name": "Siccatite"
+    }
+  ]
+}

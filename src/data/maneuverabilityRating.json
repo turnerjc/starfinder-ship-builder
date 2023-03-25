@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "id": "perfect",
+      "pilotingModifier": 2,
+      "turn": 0
+    },
+    {
+      "id": "good",
+      "pilotingModifier": 1,
+      "turn": 1
+    },
+    {
+      "id": "average",
+      "pilotingModifier": 0,
+      "turn": 2
+    },
+    {
+      "id": "poor",
+      "pilotingModifier": -1,
+      "turn": 3
+    },
+    {
+      "id": "clumsy",
+      "pilotingModifier": -2,
+      "turn": 4
+    }
+  ]
+}

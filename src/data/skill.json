@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": "acrobatics",
+      "name": "Acrobatics",
+      "hasRanks": true
+    },
+    {
+      "id": "athletics",
+      "name": "Athletics",
+      "hasRanks": true
+    },
+    {
+      "id": "bluff",
+      "name": "Bluff",
+      "hasRanks": true
+    },
+    {
+      "id": "computers",
+      "name": "Computers",
+      "hasRanks": true
+    },
+    {
+      "id": "diplomacy",
+      "name": "Diplomacy",
+      "hasRanks": true
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "hasRanks": true
+    },
+    {
+      "id": "gunnery",
+      "name": "gunnery",
+      "hasRanks": false
+    },
+    {
+      "id": "intimidate",
+      "name": "Intimidate",
+      "hasRanks": true
+    },
+    {
+      "id": "life-science",
+      "name": "Life Science",
+      "hasRanks": true
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "hasRanks": true
+    },
+    {
+      "id": "mysticism",
+      "name": "Mysticism",
+      "hasRanks": true
+    },
+    {
+      "id": "perception",
+      "name": "Perception",
+      "hasRanks": true
+    },
+    {
+      "id": "physical-science",
+      "name": "Physical Science",
+      "hasRanks": true
+    },
+    {
+      "id": "piloting",
+      "name": "Piloting",
+      "hasRanks": true
+    },
+    {
+      "id": "sense-motive",
+      "name": "Sense Motive",
+      "hasRanks": true
+    }
+  ]
+}

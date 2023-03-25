@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": "alarm",
+      "name": "Alarm"
+    },
+    {
+      "id": "fake-shell",
+      "name": "Fake Shell"
+    },
+    {
+      "id": "feedback",
+      "name": "Feedback"
+    },
+    {
+      "id": "firewall",
+      "name": "Firewall"
+    },
+    {
+      "id": "lockout",
+      "name": "Lockout"
+    },
+    {
+      "id": "shock-grid",
+      "name": "Shock Grid"
+    },
+    {
+      "id": "wipe",
+      "name": "Wipe"
+    }
+  ]
+}

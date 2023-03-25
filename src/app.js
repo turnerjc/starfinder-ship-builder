@@ -1,6 +1,3 @@
-// JSON file
-import shipData from './data/ship-builder.json';
-
 // Components
 import Graphics from './components/Graphics.vue';
 import Nav from './components/Nav.vue';
@@ -47,6 +44,9 @@ import {
 
 // Weapon Mount
 import { WeaponMount } from './modules/weaponMount.js';
+
+// Ship Data
+import shipData from './modules/shipData.js';
 
 /*
 |------------------------------------------------------------------------------------------

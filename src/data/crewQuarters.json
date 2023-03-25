@@ -1,0 +1,31 @@
+{
+  "props": [
+    "bpCost"
+  ],
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "isTinyOnly": 1,
+      "bpCost": 0
+    },
+    {
+      "id": "common",
+      "name": "Common",
+      "isTinyOnly": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "good",
+      "name": "Good",
+      "isTinyOnly": 0,
+      "bpCost": 2
+    },
+    {
+      "id": "luxurious",
+      "name": "Luxurious",
+      "isTinyOnly": 0,
+      "bpCost": 5
+    }
+  ]
+}

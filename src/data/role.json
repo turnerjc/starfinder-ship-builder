@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": "captain",
+      "name": "Captain",
+      "source": "scr",
+      "hasRoleQuestion": "Is there a captain?",
+      "skills": [
+        "bluff",
+        "computers",
+        "diplomacy",
+        "engineering",
+        "gunnery",
+        "intimidate",
+        "perception",
+        "piloting"
+      ]
+    },
+    {
+      "id": "engineer",
+      "name": "Engineer",
+      "source": "scr",
+      "hasRoleQuestion": "Is there an engineer?",
+      "skills": [
+        "computers",
+        "engineering"
+      ]
+    },
+    {
+      "id": "gunner",
+      "name": "Gunner",
+      "source": "scr",
+      "hasRoleQuestion": "Is there a gunner?",
+      "skills": [
+        "computers",
+        "engineering",
+        "gunnery"
+      ]
+    },
+    {
+      "id": "pilot",
+      "name": "Pilot",
+      "source": "scr",
+      "hasRoleQuestion": "Is there a pilot?",
+      "skills": [
+        "computers",
+        "diplomacy",
+        "engineering",
+        "gunnery",
+        "intimidate",
+        "piloting"
+      ]
+    },
+    {
+      "id": "scienceOfficer",
+      "name": "Science Officer",
+      "source": "scr",
+      "hasRoleQuestion": "Is there a science officer?",
+      "skills": [
+        "computers",
+        "life-science",
+        "physical-science"
+      ]
+    },
+    {
+      "id": "chiefMate",
+      "name": "Chief Mate",
+      "source": "pw",
+      "hasRoleQuestion": "Is there a chief mate?",
+      "skills": [
+        "acrobatics",
+        "athletics"
+      ]
+    },
+    {
+      "id": "magicOfficer",
+      "name": "Magic Officer",
+      "source": "pw",
+      "hasRoleQuestion": "Is there a magic officer?",
+      "skills": [
+        "mysticism"
+      ]
+    }
+  ]
+}

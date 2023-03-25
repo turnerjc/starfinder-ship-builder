@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "range": "n/a",
+      "modifier": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "cut-rate",
+      "name": "Cut-rate",
+      "range": "Short",
+      "modifier": -2,
+      "bpCost": 1
+    },
+    {
+      "id": "budget-short-range",
+      "name": "Budget short-range",
+      "range": "Short",
+      "modifier": 0,
+      "bpCost": 2
+    },
+    {
+      "id": "basic-short-range",
+      "name": "Basic short-range",
+      "range": "Short",
+      "modifier": 2,
+      "bpCost": 3
+    },
+    {
+      "id": "advanced-short-range",
+      "name": "Advanced short-range",
+      "range": "Short",
+      "modifier": 4,
+      "bpCost": 4
+    },
+    {
+      "id": "budget-medium-range",
+      "name": "Budget medium-range",
+      "range": "Medium",
+      "modifier": 0,
+      "bpCost": 3
+    },
+    {
+      "id": "basic-medium-range",
+      "name": "Basic medium-range",
+      "range": "Medium",
+      "modifier": 2,
+      "bpCost": 5
+    },
+    {
+      "id": "advanced-medium-range",
+      "name": "Advanced medium-range",
+      "range": "Medium",
+      "modifier": 4,
+      "bpCost": 8
+    },
+    {
+      "id": "budget-long-range",
+      "name": "Budget long-range",
+      "range": "Long",
+      "modifier": 0,
+      "bpCost": 6
+    },
+    {
+      "id": "basic-long-range",
+      "name": "Basic long-range",
+      "range": "Long",
+      "modifier": 2,
+      "bpCost": 10
+    },
+    {
+      "id": "advanced-long-range",
+      "name": "Advanced long-range",
+      "range": "Long",
+      "modifier": 4,
+      "bpCost": 14
+    }
+  ]
+}

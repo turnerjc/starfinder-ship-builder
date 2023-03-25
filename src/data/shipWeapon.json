@@ -1,0 +1,2241 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "source": "scr",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "n/a",
+      "pcuCost": 0,
+      "bpCost": 0,
+      "specialProperties": [],
+      "weight": "n/a",
+      "weaponType": "n/a"
+    },
+    {
+      "id": "chain-cannon",
+      "name": "Chain cannon",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "6d4",
+      "pcuCost": 15,
+      "bpCost": 10,
+      "specialProperties": [
+        "ripper"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "coilgun",
+      "name": "Coilgun",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "4d4",
+      "pcuCost": 10,
+      "bpCost": 10,
+      "specialProperties": [],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "flak-thrower",
+      "name": "Flak thrower",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "3d4",
+      "pcuCost": 10,
+      "bpCost": 5,
+      "specialProperties": [
+        "point-8"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "gyrolaser",
+      "name": "Gyrolaser",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "1d8",
+      "pcuCost": 10,
+      "bpCost": 3,
+      "specialProperties": [
+        "broad-arc"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "laser-net",
+      "name": "Laser net",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "2d6",
+      "pcuCost": 10,
+      "bpCost": 9,
+      "specialProperties": [
+        "point-10"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-emp-cannon",
+      "name": "Light EMP cannon",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 10,
+      "bpCost": 8,
+      "specialProperties": [
+        "emp"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-laser-cannon",
+      "name": "Light laser cannon",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "2d4",
+      "pcuCost": 5,
+      "bpCost": 2,
+      "specialProperties": [],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-particle-beam",
+      "name": "Light particle beam",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d6",
+      "pcuCost": 10,
+      "bpCost": 10,
+      "specialProperties": [],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-plasma-cannon",
+      "name": "Light plasma cannon",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "2d12",
+      "pcuCost": 10,
+      "bpCost": 12,
+      "specialProperties": [],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "mining-laser",
+      "source": "pw",
+      "name": "Mining laser",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "2d6",
+      "pcuCost": 10,
+      "bpCost": 5,
+      "specialProperties": [
+        "burrowing"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "high-explosive-missile-launcher",
+      "name": "High explosive missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "12",
+      "damage": "4d8",
+      "pcuCost": 10,
+      "bpCost": 14,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "light-plasma-torpedo-launcher",
+      "name": "Light plasma torpedo launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "14",
+      "damage": "3d8",
+      "pcuCost": 5,
+      "bpCost": 11,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "light-torpedo-launcher",
+      "name": "Light torpedo launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "16",
+      "damage": "2d8",
+      "pcuCost": 5,
+      "bpCost": 7,
+      "specialProperties": [],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "micromissile-battery",
+      "name": "Micromissile battery",
+      "source": "scr",
+      "range": "Long",
+      "speed": "10",
+      "damage": "2d6",
+      "pcuCost": 10,
+      "bpCost": 5,
+      "specialProperties": [
+        "array",
+        "limited-fire-5"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "tactical-nuclear-missile-launcher",
+      "name": "Tactical nuclear missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "10",
+      "damage": "5d8",
+      "pcuCost": 10,
+      "bpCost": 18,
+      "specialProperties": [
+        "irradiate-low",
+        "limited-fire-5"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "light-spore-torpedo-launcher",
+      "source": "pw",
+      "name": "Light spore torpedo launcher",
+      "range": "Medium",
+      "speed": "14",
+      "damage": "3d6",
+      "pcuCost": 5,
+      "bpCost": 5,
+      "specialProperties": [
+        "limited-fire-5",
+        "spore"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "graser",
+      "name": "Graser",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "7d10",
+      "pcuCost": 40,
+      "bpCost": 35,
+      "specialProperties": [
+        "irradiate-medium"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "gravity-gun",
+      "name": "Gravity gun",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d6",
+      "pcuCost": 40,
+      "bpCost": 30,
+      "specialProperties": [
+        "tractor-beam"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-emp-cannon",
+      "name": "Heavy EMP cannon",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 30,
+      "bpCost": 12,
+      "specialProperties": [
+        "emp"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-laser-array",
+      "name": "Heavy laser array",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "6d4",
+      "pcuCost": 15,
+      "bpCost": 10,
+      "specialProperties": [
+        "array"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-laser-cannon",
+      "name": "Heavy laser cannon",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "4d8",
+      "pcuCost": 10,
+      "bpCost": 15,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-laser-net",
+      "name": "Heavy laser net",
+      "source": "scr",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "5d6",
+      "pcuCost": 15,
+      "bpCost": 15,
+      "specialProperties": [
+        "point-12"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "maser",
+      "name": "Maser",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "6d10",
+      "pcuCost": 35,
+      "bpCost": 22,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "particle-beam",
+      "name": "Particle beam",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "8d6",
+      "pcuCost": 25,
+      "bpCost": 20,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "persistent-particle-beam",
+      "name": "Persistent particle beam",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "10d6",
+      "pcuCost": 40,
+      "bpCost": 25,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "plasma-cannon",
+      "name": "Plasma cannon",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "5d12",
+      "pcuCost": 30,
+      "bpCost": 20,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "railgun",
+      "name": "Railgun",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "8d4",
+      "pcuCost": 20,
+      "bpCost": 15,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "twin-laser",
+      "name": "Twin laser",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "5d8",
+      "pcuCost": 15,
+      "bpCost": 18,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "x-laser-cannon",
+      "name": "X-laser cannon",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "8d6",
+      "pcuCost": 40,
+      "bpCost": 35,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-antimatter-missile-launcher",
+      "name": "Heavy antimatter missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "8",
+      "damage": "10d10",
+      "pcuCost": 15,
+      "bpCost": 35,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-nuclear-missile-launcher",
+      "name": "Heavy nuclear missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "10",
+      "damage": "10d8",
+      "pcuCost": 15,
+      "bpCost": 35,
+      "specialProperties": [
+        "irradiate-medium",
+        "limited-fire-5"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-plasma-torpedo-launcher",
+      "name": "Heavy plasma torpedo launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "12",
+      "damage": "5d10",
+      "pcuCost": 10,
+      "bpCost": 18,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-torpedo-launcher",
+      "name": "Heavy torpedo launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "14",
+      "damage": "5d8",
+      "pcuCost": 10,
+      "bpCost": 16,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-spore-torpedo-launcher",
+      "source": "pw",
+      "name": "Heavy spore torpedo launcher",
+      "range": "Medium",
+      "speed": "12",
+      "damage": "5d8",
+      "pcuCost": 10,
+      "bpCost": 10,
+      "specialProperties": [
+        "limited-fire-5",
+        "spore"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "gravity-cannon",
+      "name": "Gravity cannon",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d6\u00d710",
+      "pcuCost": 40,
+      "bpCost": 50,
+      "specialProperties": [
+        "tractor-beam"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "mass-driver",
+      "name": "Mass driver",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d6\u00d710",
+      "pcuCost": 25,
+      "bpCost": 30,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "particle-beam-cannon",
+      "name": "Particle beam cannon",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "3d4\u00d710",
+      "pcuCost": 30,
+      "bpCost": 30,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "persistent-particle-beam-cannon",
+      "name": "Persistent particle beam cannon",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d10\u00d710",
+      "pcuCost": 50,
+      "bpCost": 40,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "super-emp-cannon",
+      "name": "Super EMP cannon",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 45,
+      "bpCost": 18,
+      "specialProperties": [
+        "emp"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "super-plasma-cannon",
+      "name": "Super plasma cannon",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d6\u00d710",
+      "pcuCost": 45,
+      "bpCost": 35,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "super-x-laser-cannon",
+      "name": "Super X-laser cannon",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "3d4\u00d710",
+      "pcuCost": 50,
+      "bpCost": 45,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "supergraser",
+      "name": "Supergraser",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "2d8\u00d710",
+      "pcuCost": 50,
+      "bpCost": 35,
+      "specialProperties": [
+        "irradiate-high"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "superlaser",
+      "name": "Superlaser",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d4\u00d710",
+      "pcuCost": 20,
+      "bpCost": 20,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "supermaser",
+      "name": "Supermaser",
+      "source": "scr",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d8\u00d710",
+      "pcuCost": 40,
+      "bpCost": 35,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "vortex-cannon",
+      "name": "Vortex cannon",
+      "source": "scr",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "2d12\u00d710",
+      "pcuCost": 55,
+      "bpCost": 75,
+      "specialProperties": [
+        "vortex"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "antimatter-mega-missile-launcher",
+      "name": "Antimatter mega-missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "6",
+      "damage": "4d10\u00d710",
+      "pcuCost": 15,
+      "bpCost": 70,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "hellfire-torpedo-launcher",
+      "name": "Hellfire torpedo launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "8",
+      "damage": "2d10\u00d710",
+      "pcuCost": 10,
+      "bpCost": 40,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "nuclear-mega-missile-launcher",
+      "name": "Nuclear mega-missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "8",
+      "damage": "4d8\u00d710",
+      "pcuCost": 15,
+      "bpCost": 60,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "quantum-missile-launcher",
+      "name": "Quantum missile launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "12",
+      "damage": "2d8\u00d710",
+      "pcuCost": 15,
+      "bpCost": 35,
+      "specialProperties": [
+        "limited-fire-5",
+        "quantum"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "solar-torpedo-launcher",
+      "name": "Solar torpedo launcher",
+      "source": "scr",
+      "range": "Long",
+      "speed": "10",
+      "damage": "2d6\u00d710",
+      "pcuCost": 10,
+      "bpCost": 25,
+      "specialProperties": [
+        "limited-fire-5"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "aeon-caster",
+      "name": "Aeon caster",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d4",
+      "pcuCost": 10,
+      "bpCost": 7,
+      "specialProperties": [
+        "mystical",
+        "restricted-imperial-fleet"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "decorative-ramming-prow",
+      "name": "Decorative ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "2d4",
+      "pcuCost": 0,
+      "bpCost": 5,
+      "specialProperties": [
+        "intimidating",
+        "ramming"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "force-projector",
+      "name": "Force projector",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "1d10",
+      "pcuCost": 10,
+      "bpCost": 7,
+      "specialProperties": [
+        "force-field-15"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "garbage-ejection-system",
+      "name": "Garbage ejection system",
+      "source": "som",
+      "range": "Short",
+      "speed": "8",
+      "damage": "1d6",
+      "pcuCost": 1,
+      "bpCost": 1,
+      "specialProperties": [
+        "limited-fire-1",
+        "point-8"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-buster-cannon",
+      "name": "Light buster cannon",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "3d8",
+      "pcuCost": 10,
+      "bpCost": 9,
+      "specialProperties": [
+        "buster"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-force-ramming-prow",
+      "name": "Light force ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "0",
+      "pcuCost": 5,
+      "bpCost": 3,
+      "specialProperties": [
+        "force-field-20",
+        "ramming"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-orbital-death-knell",
+      "name": "Light orbital death knell",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d10",
+      "pcuCost": 20,
+      "bpCost": 18,
+      "specialProperties": [
+        "orbital-3"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-orbital-particle-cannon",
+      "name": "Light orbital particle cannon",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d10",
+      "pcuCost": 20,
+      "bpCost": 21,
+      "specialProperties": [
+        "line",
+        "orbital-2"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "light-teleportation-beam",
+      "name": "Light teleportation beam",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "1d20",
+      "pcuCost": 15,
+      "bpCost": 14,
+      "specialProperties": [
+        "teleportation-1"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "minor-ramming-prow",
+      "name": "Minor ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "2d4",
+      "pcuCost": 1,
+      "bpCost": 4,
+      "specialProperties": [
+        "ramming"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "rail-launcher",
+      "name": "Rail launcher",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "2d8",
+      "pcuCost": 15,
+      "bpCost": 10,
+      "specialProperties": [
+        "rail-1d8"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "shadow-bolt-projector",
+      "name": "Shadow bolt projector",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "1d10",
+      "pcuCost": 15,
+      "bpCost": 7,
+      "specialProperties": [
+        "intimidating",
+        "mystical"
+      ],
+      "weight": "light",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "digital-strike-conduit",
+      "name": "Digital strike conduit",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 10,
+      "bpCost": 10,
+      "specialProperties": [
+        "hacking"
+      ],
+      "weight": "light",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "gravity-generator",
+      "name": "Gravity generator",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 10,
+      "bpCost": 9,
+      "specialProperties": [
+        "gravity-well"
+      ],
+      "weight": "light",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "nav-scram-projector",
+      "name": "Nav-scram projector",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 5,
+      "bpCost": 10,
+      "specialProperties": [
+        "nav-scram"
+      ],
+      "weight": "light",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "warp-puck-launcher",
+      "name": "Warp puck launcher",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 5,
+      "bpCost": 10,
+      "specialProperties": [
+        "limited-fire-3",
+        "mine-1",
+        "transposition-1"
+      ],
+      "weight": "light",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "light-explosion-injector",
+      "name": "Light explosion injector",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "3d10",
+      "pcuCost": 5,
+      "bpCost": 13,
+      "specialProperties": [
+        "burrowing",
+        "limited-fire-5"
+      ],
+      "weight": "light",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "light-hacksaw-arm",
+      "name": "Light hacksaw arm",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "4d6",
+      "pcuCost": 10,
+      "bpCost": 8,
+      "specialProperties": [
+        "ripper"
+      ],
+      "weight": "light",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "light-ship-tether",
+      "name": "Light ship tether",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "2d6",
+      "pcuCost": 5,
+      "bpCost": 6,
+      "specialProperties": [
+        "anchoring"
+      ],
+      "weight": "light",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "light-blade-hull",
+      "name": "Light-blade hull",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "3d8",
+      "pcuCost": 5,
+      "bpCost": 10,
+      "specialProperties": [],
+      "weight": "light",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "light-aeon-torpedo-launcher",
+      "name": "Light aeon torpedo launcher",
+      "source": "som",
+      "range": "Long",
+      "speed": "12",
+      "damage": "3d6",
+      "pcuCost": 10,
+      "bpCost": 8,
+      "specialProperties": [
+        "limited-fire-5",
+        "mystical",
+        "restricted-imperial-fleet"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "light-frag-mines",
+      "name": "Light frag mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "8d4",
+      "pcuCost": 5,
+      "bpCost": 12,
+      "specialProperties": [
+        "limited-fire-5",
+        "mine-3",
+        "ripper"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "light-plasma-mines",
+      "name": "Light plasma mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "2d12",
+      "pcuCost": 5,
+      "bpCost": 12,
+      "specialProperties": [
+        "limited-fire-5",
+        "mine-4"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "light-plasma-torpedo-pod",
+      "name": "Light plasma torpedo pod",
+      "source": "som",
+      "range": "Long",
+      "speed": "14",
+      "damage": "3d8",
+      "pcuCost": 0,
+      "bpCost": 11,
+      "specialProperties": [
+        "limited-fire-3",
+        "pod"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "magic-torpedo-unit",
+      "name": "Magic torpedo unit",
+      "source": "som",
+      "range": "Long",
+      "speed": "18",
+      "damage": "2d4+2",
+      "pcuCost": 10,
+      "bpCost": 10,
+      "specialProperties": [
+        "broad-arc",
+        "mystical",
+        "quantum"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "mini-nuke-mines",
+      "name": "Mini-nuke mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "5d8",
+      "pcuCost": 5,
+      "bpCost": 8,
+      "specialProperties": [
+        "irradiate-low",
+        "limited-fire-3",
+        "mine-1"
+      ],
+      "weight": "light",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "force-blaster",
+      "name": "Force blaster",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "3d10",
+      "pcuCost": 25,
+      "bpCost": 18,
+      "specialProperties": [
+        "force-field-40"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "gatling-cannon",
+      "name": "Gatling cannon",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "15d4",
+      "pcuCost": 20,
+      "bpCost": 20,
+      "specialProperties": [
+        "ripper"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "gyrocannon",
+      "name": "Gyrocannon",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "3d10",
+      "pcuCost": 20,
+      "bpCost": 14,
+      "specialProperties": [
+        "broad-arc"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-aeon-caster",
+      "name": "Heavy aeon caster",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d6",
+      "pcuCost": 20,
+      "bpCost": 18,
+      "specialProperties": [
+        "mystical",
+        "restricted-imperial-fleet"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-buster-cannon",
+      "name": "Heavy buster cannon",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d8",
+      "pcuCost": 15,
+      "bpCost": 16,
+      "specialProperties": [
+        "buster"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-force-ramming-prow",
+      "name": "Heavy force ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "3d4",
+      "pcuCost": 10,
+      "bpCost": 10,
+      "specialProperties": [
+        "force-field-40",
+        "ramming"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-orbital-death-knell",
+      "name": "Heavy orbital death knell",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "7d10",
+      "pcuCost": 40,
+      "bpCost": 36,
+      "specialProperties": [
+        "orbital-7"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-orbital-particle-cannon",
+      "name": "Heavy orbital particle cannon",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "5d10",
+      "pcuCost": 40,
+      "bpCost": 42,
+      "specialProperties": [
+        "line",
+        "orbital-5"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-ramming-prow",
+      "name": "Heavy ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "5d4",
+      "pcuCost": 1,
+      "bpCost": 8,
+      "specialProperties": [
+        "ramming"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "heavy-teleportation-beam",
+      "name": "Heavy teleportation beam",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d20",
+      "pcuCost": 40,
+      "bpCost": 35,
+      "specialProperties": [
+        "teleportation-2"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "imposing-ramming-prow",
+      "name": "Imposing ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "4d4",
+      "pcuCost": 1,
+      "bpCost": 10,
+      "specialProperties": [
+        "intimidating",
+        "ramming"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "rail-ballista",
+      "name": "Rail ballista",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d8",
+      "pcuCost": 35,
+      "bpCost": 22,
+      "specialProperties": [
+        "rail-3d8"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "shadow-beam-projector",
+      "name": "Shadow beam projector",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "4d10",
+      "pcuCost": 40,
+      "bpCost": 30,
+      "specialProperties": [
+        "intimidating",
+        "line",
+        "mystical"
+      ],
+      "weight": "heavy",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "digital-raid-node",
+      "name": "Digital raid node",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 15,
+      "bpCost": 15,
+      "specialProperties": [
+        "hacking"
+      ],
+      "weight": "heavy",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "fractal-nav-scram-projector",
+      "name": "Fractal nav-scram projector",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 10,
+      "bpCost": 16,
+      "specialProperties": [
+        "nav-scram"
+      ],
+      "weight": "heavy",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "gravity-well-generator",
+      "name": "Gravity well generator",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 15,
+      "bpCost": 20,
+      "specialProperties": [
+        "gravity-well"
+      ],
+      "weight": "heavy",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "warp-puck-bank",
+      "name": "Warp puck bank",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 5,
+      "bpCost": 20,
+      "specialProperties": [
+        "limited-fire-3",
+        "mine-2",
+        "transposition-2"
+      ],
+      "weight": "heavy",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "heavy-explosion-injector",
+      "name": "Heavy explosion injector",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "6d12",
+      "pcuCost": 10,
+      "bpCost": 26,
+      "specialProperties": [
+        "burrowing",
+        "limited-fire-5"
+      ],
+      "weight": "heavy",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "heavy-hacksaw-arm",
+      "name": "Heavy hacksaw arm",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "10d6",
+      "pcuCost": 20,
+      "bpCost": 15,
+      "specialProperties": [
+        "ripper"
+      ],
+      "weight": "heavy",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "heavy-ship-tether",
+      "name": "Heavy ship tether",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "4d8",
+      "pcuCost": 10,
+      "bpCost": 14,
+      "specialProperties": [
+        "anchoring"
+      ],
+      "weight": "heavy",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "heavy-blade-hull",
+      "name": "Heavy-blade hull",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "6d8",
+      "pcuCost": 10,
+      "bpCost": 17,
+      "specialProperties": [],
+      "weight": "heavy",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "counter-missile-bank",
+      "name": "Counter-missile bank",
+      "source": "som",
+      "range": "Short",
+      "speed": "14",
+      "damage": "8d6",
+      "pcuCost": 10,
+      "bpCost": 11,
+      "specialProperties": [
+        "limited-fire-6",
+        "point-12"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-aeon-torpedo-launcher",
+      "name": "Heavy aeon torpedo launcher",
+      "source": "som",
+      "range": "Long",
+      "speed": "12",
+      "damage": "6d8",
+      "pcuCost": 15,
+      "bpCost": 20,
+      "specialProperties": [
+        "limited-fire-5",
+        "mystical",
+        "restricted-imperial-fleet"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-frag-mines",
+      "name": "Heavy frag mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "8d8",
+      "pcuCost": 5,
+      "bpCost": 15,
+      "specialProperties": [
+        "limited-fire-5",
+        "mine-3",
+        "ripper"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-nuclear-mines",
+      "name": "Heavy nuclear mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "10d8",
+      "pcuCost": 10,
+      "bpCost": 14,
+      "specialProperties": [
+        "irradiate-medium",
+        "limited-fire-3",
+        "mine-1"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-nuclear-silo",
+      "name": "Heavy nuclear silo",
+      "source": "som",
+      "range": "Long",
+      "speed": "5",
+      "damage": "10d10",
+      "pcuCost": 15,
+      "bpCost": 35,
+      "specialProperties": [
+        "irradiate-medium",
+        "limited-fire-3",
+        "orbital-10"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-plasma-mines",
+      "name": "Heavy plasma mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "4d12",
+      "pcuCost": 10,
+      "bpCost": 18,
+      "specialProperties": [
+        "limited-fire-5",
+        "mine-4"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heavy-plasma-torpedo-pod",
+      "name": "Heavy plasma torpedo pod",
+      "source": "som",
+      "range": "Long",
+      "speed": "12",
+      "damage": "5d10",
+      "pcuCost": 0,
+      "bpCost": 18,
+      "specialProperties": [
+        "limited-fire-3",
+        "pod"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "heightened-magic-torpedo-unit",
+      "name": "Heightened magic torpedo unit",
+      "source": "som",
+      "range": "Long",
+      "speed": "18",
+      "damage": "5d4+5",
+      "pcuCost": 20,
+      "bpCost": 20,
+      "specialProperties": [
+        "broad-arc",
+        "mystical",
+        "quantum"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "vortex-mouth-mines",
+      "name": "Vortex mouth mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "7d12",
+      "pcuCost": 20,
+      "bpCost": 30,
+      "specialProperties": [
+        "limited-fire-3",
+        "mine-3",
+        "vortex"
+      ],
+      "weight": "heavy",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "extreme-force-ramming-prow",
+      "name": "Extreme force ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "5d4",
+      "pcuCost": 30,
+      "bpCost": 10,
+      "specialProperties": [
+        "force-field-100",
+        "ramming"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "gatling-cannon-array",
+      "name": "Gatling cannon array",
+      "source": "som",
+      "range": "Short",
+      "speed": "n/a",
+      "damage": "4d4\u00d710",
+      "pcuCost": 30,
+      "bpCost": 25,
+      "specialProperties": [
+        "array",
+        "ripper"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "massive-ramming-prow",
+      "name": "Massive ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "2d4\u00d710",
+      "pcuCost": 5,
+      "bpCost": 20,
+      "specialProperties": [
+        "ramming"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "mega-teleportation-beam",
+      "name": "Mega teleportation beam",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "1d20\u00d710",
+      "pcuCost": 55,
+      "bpCost": 65,
+      "specialProperties": [
+        "teleportation-3"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "monolith-ramming-prow",
+      "name": "Monolith ramming prow",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "12d4",
+      "pcuCost": 1,
+      "bpCost": 15,
+      "specialProperties": [
+        "intimidating",
+        "ramming"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "prismatic-beam",
+      "name": "Prismatic beam",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d8\u00d710",
+      "pcuCost": 60,
+      "bpCost": 55,
+      "specialProperties": [
+        "line",
+        "mystical"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "shadow-bolt-array",
+      "name": "Shadow bolt array",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "1d10\u00d710",
+      "pcuCost": 45,
+      "bpCost": 25,
+      "specialProperties": [
+        "array",
+        "intimidating",
+        "mystical"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "starspear-rail-launcher",
+      "name": "Starspear rail launcher",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "2d8\u00d710",
+      "pcuCost": 50,
+      "bpCost": 35,
+      "specialProperties": [
+        "rail-1d8-10"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "super-buster-cannon",
+      "name": "Super buster cannon",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d8\u00d710",
+      "pcuCost": 35,
+      "bpCost": 35,
+      "specialProperties": [
+        "buster"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "super-orbital-death-knell",
+      "name": "Super orbital death knell",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "3d6\u00d710",
+      "pcuCost": 50,
+      "bpCost": 57,
+      "specialProperties": [
+        "orbital-10"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "super-orbital-particle-cannon",
+      "name": "Super orbital particle cannon",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "2d6\u00d710",
+      "pcuCost": 50,
+      "bpCost": 60,
+      "specialProperties": [
+        "line",
+        "orbital-10"
+      ],
+      "weight": "capital",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "black-hole-generator",
+      "name": "Black hole generator",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 20,
+      "bpCost": 25,
+      "specialProperties": [
+        "gravity-well"
+      ],
+      "weight": "capital",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "digital-assault-torrent",
+      "name": "Digital assault torrent",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 15,
+      "bpCost": 25,
+      "specialProperties": [
+        "hacking"
+      ],
+      "weight": "capital",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "super-nav-scram-projector",
+      "name": "Super nav-scram projector",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 20,
+      "bpCost": 25,
+      "specialProperties": [
+        "nav-scram"
+      ],
+      "weight": "capital",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "warp-puck-battery",
+      "name": "Warp puck battery",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "Special",
+      "pcuCost": 5,
+      "bpCost": 30,
+      "specialProperties": [
+        "limited-fire-3",
+        "mine-2",
+        "transposition-3"
+      ],
+      "weight": "capital",
+      "weaponType": "ECM"
+    },
+    {
+      "id": "super-explosion-injector",
+      "name": "Super explosion injector",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "3d6\u00d710",
+      "pcuCost": 30,
+      "bpCost": 50,
+      "specialProperties": [
+        "burrowing",
+        "limited-fire-3"
+      ],
+      "weight": "capital",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "super-hacksaw-arm",
+      "name": "Super hacksaw arm",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "4d6\u00d710",
+      "pcuCost": 40,
+      "bpCost": 25,
+      "specialProperties": [
+        "ripper"
+      ],
+      "weight": "capital",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "super-ship-tether",
+      "name": "Super ship tether",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "10d8",
+      "pcuCost": 15,
+      "bpCost": 18,
+      "specialProperties": [
+        "anchoring"
+      ],
+      "weight": "capital",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "super-blade-hull",
+      "name": "Super-blade hull",
+      "source": "som",
+      "range": "1 hex",
+      "speed": "n/a",
+      "damage": "3d8\u00d710",
+      "pcuCost": 30,
+      "bpCost": 40,
+      "specialProperties": [],
+      "weight": "capital",
+      "weaponType": "Melee"
+    },
+    {
+      "id": "heavy-frag-mines",
+      "name": "Heavy frag mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "4d8\u00d710",
+      "pcuCost": 10,
+      "bpCost": 45,
+      "specialProperties": [
+        "limited-fire-5",
+        "mine-3",
+        "ripper"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "hellfire-mines",
+      "name": "Hellfire mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "2d10\u00d710",
+      "pcuCost": 10,
+      "bpCost": 40,
+      "specialProperties": [
+        "limited-fire-5",
+        "mine-4"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "nuclear-mega-mines",
+      "name": "Nuclear mega mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "4d8\u00d710",
+      "pcuCost": 15,
+      "bpCost": 30,
+      "specialProperties": [
+        "irradiate-high",
+        "limited-fire-3",
+        "mine-1"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "quantum-mines",
+      "name": "Quantum mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "2d8\u00d710",
+      "pcuCost": 25,
+      "bpCost": 40,
+      "specialProperties": [
+        "limited-fire-3",
+        "mine-5",
+        "quantum"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "quantum-missile-pod",
+      "name": "Quantum missile pod",
+      "source": "som",
+      "range": "Long",
+      "speed": "12",
+      "damage": "2d8\u00d710",
+      "pcuCost": 0,
+      "bpCost": 35,
+      "specialProperties": [
+        "limited-fire-3",
+        "pod",
+        "quantum"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "super-nuclear-silo",
+      "name": "Super nuclear silo",
+      "source": "som",
+      "range": "Long",
+      "speed": "5",
+      "damage": "3d8\u00d710",
+      "pcuCost": 15,
+      "bpCost": 40,
+      "specialProperties": [
+        "irradiate-high",
+        "limited-fire-2",
+        "orbital-14"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "vortex-maw-mines",
+      "name": "Vortex maw mines",
+      "source": "som",
+      "range": "n/a",
+      "speed": "n/a",
+      "damage": "3d12\u00d710",
+      "pcuCost": 35,
+      "bpCost": 60,
+      "specialProperties": [
+        "limited-fire-3",
+        "mine-3",
+        "vortex"
+      ],
+      "weight": "capital",
+      "weaponType": "Tracking"
+    },
+    {
+      "id": "gravity-annihilator",
+      "name": "Gravity annihilator",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "8d6\u00d710",
+      "pcuCost": 50,
+      "bpCost": 60,
+      "specialProperties": [
+        "tractor-beam"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "hypermass-cannon",
+      "name": "Hypermass cannon",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "6d6\u00d710",
+      "pcuCost": 40,
+      "bpCost": 40,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "nova-ram",
+      "name": "Nova ram",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "6d10\u00d710",
+      "pcuCost": 75,
+      "bpCost": 55,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "orbital-devastator",
+      "name": "Orbital devastator",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "8d6\u00d710",
+      "pcuCost": 60,
+      "bpCost": 54,
+      "specialProperties": [
+        "orbital-18"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "particle-acceleration-gun",
+      "name": "Particle acceleration gun",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "9d4\u00d710",
+      "pcuCost": 50,
+      "bpCost": 40,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "prismatic-torrent",
+      "name": "Prismatic torrent",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "5d8\u00d710",
+      "pcuCost": 60,
+      "bpCost": 45,
+      "specialProperties": [
+        "line",
+        "mystical"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "summon-planetoid-module",
+      "name": "Summon planetoid module",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "4d6\u00d710",
+      "pcuCost": 20,
+      "bpCost": 40,
+      "specialProperties": [
+        "limited-fire-3",
+        "mystical",
+        "point-15"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "titan-bolter",
+      "name": "Titan bolter",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d8\u00d710",
+      "pcuCost": 50,
+      "bpCost": 50,
+      "specialProperties": [
+        "rail-2d8-10"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "ultra-plasma-cannon",
+      "name": "Ultra plasma cannon",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "9d6\u00d710",
+      "pcuCost": 80,
+      "bpCost": 45,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "ultra-x-laser-cannon",
+      "name": "Ultra x-laser cannon",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "6d8\u00d710",
+      "pcuCost": 90,
+      "bpCost": 45,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "ultragraser",
+      "name": "Ultragraser",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d8\u00d710",
+      "pcuCost": 75,
+      "bpCost": 55,
+      "specialProperties": [
+        "irradiate-high",
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "ultralaser",
+      "name": "Ultralaser",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "6d4\u00d710",
+      "pcuCost": 30,
+      "bpCost": 25,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "ultramaser",
+      "name": "Ultramaser",
+      "source": "som",
+      "range": "Long",
+      "speed": "n/a",
+      "damage": "6d8\u00d710",
+      "pcuCost": 60,
+      "bpCost": 45,
+      "specialProperties": [
+        "line"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    },
+    {
+      "id": "vortex-devourer",
+      "name": "Vortex devourer",
+      "source": "som",
+      "range": "Medium",
+      "speed": "n/a",
+      "damage": "6d12\u00d710",
+      "pcuCost": 80,
+      "bpCost": 65,
+      "specialProperties": [
+        "vortex"
+      ],
+      "weight": "spinal",
+      "weaponType": "Direct-Fire"
+    }
+  ]
+}

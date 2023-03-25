@@ -1,0 +1,531 @@
+{
+  "props": [
+    "size",
+    "maneuverability",
+    "hp",
+    "hpIncrement",
+    "dt",
+    "ct",
+    "expansionBays",
+    "minCrew",
+    "maxCrew",
+    "bpCost"
+  ],
+  "data": [
+    {
+      "id": "custom",
+      "name": "Custom",
+      "source": "scr",
+      "size": "Small",
+      "maneuverability": "good",
+      "hp": 40,
+      "hpIncrement": 10,
+      "dt": "n/a",
+      "ct": 8,
+      "mounts": {
+        "forward": [
+          "light",
+          "light"
+        ],
+        "port": [
+          "light"
+        ],
+        "starboard": [
+          "light"
+        ]
+      },
+      "expansionBays": 3,
+      "minCrew": 1,
+      "maxCrew": 6,
+      "bpCost": 10
+    },
+    {
+      "id": "racer",
+      "name": "Racer",
+      "source": "scr",
+      "size": "Tiny",
+      "maneuverability": "perfect",
+      "hp": 20,
+      "hpIncrement": 5,
+      "dt": "n/a",
+      "ct": 4,
+      "mounts": {
+        "forward": [
+          "light"
+        ],
+        "aft": [
+          "light"
+        ]
+      },
+      "expansionBays": 0,
+      "minCrew": 1,
+      "maxCrew": 1,
+      "bpCost": 4
+    },
+    {
+      "id": "interceptor",
+      "name": "Interceptor",
+      "source": "scr",
+      "size": "Tiny",
+      "maneuverability": "perfect",
+      "hp": 30,
+      "hpIncrement": 5,
+      "dt": "n/a",
+      "ct": 6,
+      "mounts": {
+        "forward": [
+          "light",
+          "light"
+        ]
+      },
+      "expansionBays": 0,
+      "minCrew": 1,
+      "maxCrew": 1,
+      "bpCost": 6
+    },
+    {
+      "id": "fighter",
+      "name": "Fighter",
+      "source": "scr",
+      "size": "Tiny",
+      "maneuverability": "good",
+      "hp": 35,
+      "hpIncrement": 5,
+      "dt": "n/a",
+      "ct": 7,
+      "mounts": {
+        "forward": [
+          "light",
+          "light"
+        ],
+        "aft": [
+          "light"
+        ]
+      },
+      "weaponInfo": "On a fighter, one of the forward arc light weapon mounts must be a tracking weapon",
+      "expansionBays": 0,
+      "minCrew": 1,
+      "maxCrew": 2,
+      "bpCost": 8
+    },
+    {
+      "id": "shuttle",
+      "name": "Shuttle",
+      "source": "scr",
+      "size": "Small",
+      "maneuverability": "perfect",
+      "hp": 35,
+      "hpIncrement": 5,
+      "dt": "n/a",
+      "ct": 7,
+      "mounts": {
+        "forward": [
+          "light"
+        ]
+      },
+      "expansionBays": 3,
+      "minCrew": 1,
+      "maxCrew": 4,
+      "bpCost": 6
+    },
+    {
+      "id": "light-freighter",
+      "name": "Light Freighter",
+      "source": "scr",
+      "size": "Small",
+      "maneuverability": "good",
+      "hp": 40,
+      "hpIncrement": 10,
+      "dt": "n/a",
+      "ct": 8,
+      "mounts": {
+        "forward": [
+          "light",
+          "light"
+        ],
+        "port": [
+          "light"
+        ],
+        "starboard": [
+          "light"
+        ]
+      },
+      "expansionBays": 3,
+      "minCrew": 1,
+      "maxCrew": 6,
+      "bpCost": 10
+    },
+    {
+      "id": "explorer",
+      "name": "Explorer",
+      "source": "scr",
+      "size": "Medium",
+      "maneuverability": "good",
+      "hp": 55,
+      "hpIncrement": 10,
+      "dt": "n/a",
+      "ct": 11,
+      "mounts": {
+        "forward": [
+          "light"
+        ],
+        "port": [
+          "light"
+        ],
+        "starboard": [
+          "light"
+        ],
+        "turret": [
+          "light"
+        ]
+      },
+      "expansionBays": 4,
+      "minCrew": 1,
+      "maxCrew": 6,
+      "bpCost": 12
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "source": "scr",
+      "size": "Medium",
+      "maneuverability": "average",
+      "hp": 70,
+      "hpIncrement": 15,
+      "dt": "n/a",
+      "ct": 14,
+      "mounts": {
+        "forward": [
+          "heavy",
+          "light"
+        ],
+        "aft": [
+          "light"
+        ],
+        "turret": [
+          "light",
+          "light"
+        ]
+      },
+      "expansionBays": 5,
+      "minCrew": 1,
+      "maxCrew": 6,
+      "bpCost": 15
+    },
+    {
+      "id": "destroyer",
+      "name": "Destroyer",
+      "source": "scr",
+      "size": "Large",
+      "maneuverability": "average",
+      "hp": 150,
+      "hpIncrement": 20,
+      "dt": "n/a",
+      "ct": 30,
+      "mounts": {
+        "forward": [
+          "heavy",
+          "heavy"
+        ],
+        "port": [
+          "light"
+        ],
+        "starboard": [
+          "light"
+        ],
+        "aft": [
+          "light"
+        ],
+        "turret": [
+          "light"
+        ]
+      },
+      "expansionBays": 4,
+      "minCrew": 6,
+      "maxCrew": 20,
+      "bpCost": 30
+    },
+    {
+      "id": "heavy-freighter",
+      "name": "Heavy Freighter",
+      "source": "scr",
+      "size": "Large",
+      "maneuverability": "average",
+      "hp": 120,
+      "hpIncrement": 20,
+      "dt": "n/a",
+      "ct": 24,
+      "mounts": {
+        "forward": [
+          "heavy",
+          "light",
+          "light"
+        ],
+        "port": [
+          "heavy"
+        ],
+        "starboard": [
+          "heavy"
+        ]
+      },
+      "expansionBays": 8,
+      "minCrew": 6,
+      "maxCrew": 20,
+      "bpCost": 40
+    },
+    {
+      "id": "bulk-freighter",
+      "name": "Bulk Freighter",
+      "source": "scr",
+      "size": "Huge",
+      "maneuverability": "poor",
+      "hp": 160,
+      "hpIncrement": 20,
+      "dt": 5,
+      "ct": 32,
+      "mounts": {
+        "forward": [
+          "heavy"
+        ],
+        "aft": [
+          "heavy"
+        ],
+        "turret": [
+          "light",
+          "light"
+        ]
+      },
+      "expansionBays": 10,
+      "minCrew": 20,
+      "maxCrew": 50,
+      "bpCost": 55
+    },
+    {
+      "id": "cruiser",
+      "name": "Cruiser",
+      "source": "scr",
+      "size": "Huge",
+      "maneuverability": "average",
+      "hp": 180,
+      "hpIncrement": 25,
+      "dt": 5,
+      "ct": 36,
+      "mounts": {
+        "forward": [
+          "capital"
+        ],
+        "port": [
+          "light"
+        ],
+        "starboard": [
+          "light"
+        ],
+        "turret": [
+          "heavy",
+          "heavy"
+        ]
+      },
+      "expansionBays": 6,
+      "minCrew": 20,
+      "maxCrew": 100,
+      "bpCost": 60
+    },
+    {
+      "id": "carrier",
+      "name": "Carrier",
+      "source": "scr",
+      "size": "Gargantuan",
+      "maneuverability": "poor",
+      "hp": 240,
+      "hpIncrement": 30,
+      "dt": 10,
+      "ct": 48,
+      "mounts": {
+        "forward": [
+          "capital"
+        ],
+        "port": [
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "starboard": [
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "turret": [
+          "light",
+          "light"
+        ]
+      },
+      "expansionBays": 10,
+      "expansionBayInfo": "On a carrier, one of the expansion bays must be a hangar bay",
+      "minCrew": 75,
+      "maxCrew": 200,
+      "bpCost": 120
+    },
+    {
+      "id": "battleship",
+      "name": "Battleship",
+      "source": "scr",
+      "size": "Gargantuan",
+      "maneuverability": "average",
+      "hp": 280,
+      "hpIncrement": 40,
+      "dt": 10,
+      "ct": 56,
+      "mounts": {
+        "forward": [
+          "capital",
+          "heavy",
+          "heavy"
+        ],
+        "port": [
+          "heavy",
+          "heavy",
+          "light"
+        ],
+        "starboard": [
+          "heavy",
+          "heavy",
+          "light"
+        ],
+        "aft": [
+          "light"
+        ],
+        "turret": [
+          "heavy",
+          "heavy"
+        ]
+      },
+      "expansionBays": 8,
+      "minCrew": 100,
+      "maxCrew": 300,
+      "bpCost": 150
+    },
+    {
+      "id": "dreadnought",
+      "name": "Dreadnought",
+      "source": "scr",
+      "size": "Colossal",
+      "maneuverability": "clumsy",
+      "hp": 400,
+      "hpIncrement": 50,
+      "dt": 15,
+      "ct": 80,
+      "mounts": {
+        "forward": [
+          "capital",
+          "capital",
+          "heavy",
+          "heavy"
+        ],
+        "port": [
+          "capital",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "starboard": [
+          "capital",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "turret": [
+          "light",
+          "light",
+          "light",
+          "light"
+        ]
+      },
+      "expansionBays": 20,
+      "minCrew": 125,
+      "maxCrew": 500,
+      "bpCost": 200
+    },
+    {
+      "id": "base-ship",
+      "name": "Base Ship",
+      "source": "som",
+      "size": "Supercolossal",
+      "maneuverability": "clumsy",
+      "hp": 450,
+      "hpIncrement": 75,
+      "dt": 15,
+      "ct": 90,
+      "mounts": {
+        "forward": [
+          "heavy",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "port": [
+          "heavy",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "starboard": [
+          "heavy",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "turret": [
+          "capital",
+          "capital"
+        ]
+      },
+      "expansionBays": "Unlimited",
+      "minCrew": 150,
+      "maxCrew": 100000,
+      "bpCost": 250
+    },
+    {
+      "id": "ultranought",
+      "name": "Ultranought",
+      "source": "som",
+      "size": "Supercolossal",
+      "maneuverability": "clumsy",
+      "hp": 550,
+      "hpIncrement": 100,
+      "dt": 20,
+      "ct": 110,
+      "mounts": {
+        "forward": [
+          "capital",
+          "capital",
+          "heavy",
+          "heavy",
+          "spinal"
+        ],
+        "port": [
+          "capital",
+          "capital",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "starboard": [
+          "capital",
+          "capital",
+          "heavy",
+          "heavy",
+          "heavy"
+        ],
+        "turret": [
+          "capital",
+          "heavy",
+          "heavy"
+        ]
+      },
+      "expansionBays": "Unlimited",
+      "minCrew": 250,
+      "maxCrew": 5000,
+      "bpCost": 350
+    }
+  ]
+}

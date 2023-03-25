@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": "Tiny",
+      "name": "Tiny",
+      "multiplier": 1,
+      "acAndTlModifier": 2,
+      "maxMounts": 2,
+      "maxMountWeight": "light",
+      "countPowerCoreHousings": 1
+    },
+    {
+      "id": "Small",
+      "name": "Small",
+      "multiplier": 2,
+      "acAndTlModifier": 1,
+      "maxMounts": 2,
+      "maxMountWeight": "light",
+      "countPowerCoreHousings": 1
+    },
+    {
+      "id": "Medium",
+      "name": "Medium",
+      "multiplier": 3,
+      "acAndTlModifier": 0,
+      "maxMounts": 3,
+      "maxMountWeight": "heavy",
+      "countPowerCoreHousings": 1
+    },
+    {
+      "id": "Large",
+      "name": "Large",
+      "multiplier": 4,
+      "acAndTlModifier": -1,
+      "maxMounts": 3,
+      "maxMountWeight": "heavy",
+      "countPowerCoreHousings": 1
+    },
+    {
+      "id": "Huge",
+      "name": "Huge",
+      "multiplier": 5,
+      "acAndTlModifier": -2,
+      "maxMounts": 4,
+      "maxMountWeight": "capital",
+      "countPowerCoreHousings": 2
+    },
+    {
+      "id": "Gargantuan",
+      "name": "Gargantuan",
+      "multiplier": 6,
+      "acAndTlModifier": -4,
+      "maxMounts": 4,
+      "maxMountWeight": "capital",
+      "countPowerCoreHousings": 3
+    },
+    {
+      "id": "Colossal",
+      "name": "Colossal",
+      "multiplier": 7,
+      "acAndTlModifier": -8,
+      "maxMounts": 4,
+      "maxMountWeight": "capital",
+      "countPowerCoreHousings": 4
+    },
+    {
+      "id": "Supercolossal",
+      "name": "Supercolossal",
+      "multiplier": 8,
+      "acAndTlModifier": -8,
+      "maxMounts": 4,
+      "maxMountWeight": "spinal-mount",
+      "countPowerCoreHousings": 4,
+      "countSupercolossalCoreHousings": 1
+    }
+  ]
+}

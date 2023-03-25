@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "totalSp": 0,
+      "regen": "n/a",
+      "pcuCost": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "basic-10",
+      "name": "Basic 10",
+      "totalSp": 10,
+      "regen": "1/min.",
+      "pcuCost": 5,
+      "bpCost": 2
+    },
+    {
+      "id": "basic-20",
+      "name": "Basic 20",
+      "totalSp": 20,
+      "regen": "1/min.",
+      "pcuCost": 10,
+      "bpCost": 3
+    },
+    {
+      "id": "basic-30",
+      "name": "Basic 30",
+      "totalSp": 30,
+      "regen": "1/min.",
+      "pcuCost": 15,
+      "bpCost": 4
+    },
+    {
+      "id": "basic-40",
+      "name": "Basic 40",
+      "totalSp": 40,
+      "regen": "1/min.",
+      "pcuCost": 15,
+      "bpCost": 5
+    },
+    {
+      "id": "light-50",
+      "name": "Light 50",
+      "totalSp": 50,
+      "regen": "2/min.",
+      "pcuCost": 20,
+      "bpCost": 6
+    },
+    {
+      "id": "light-60",
+      "name": "Light 60",
+      "totalSp": 60,
+      "regen": "2/min.",
+      "pcuCost": 20,
+      "bpCost": 8
+    },
+    {
+      "id": "light-70",
+      "name": "Light 70",
+      "totalSp": 70,
+      "regen": "2/min.",
+      "pcuCost": 25,
+      "bpCost": 10
+    },
+    {
+      "id": "light-80",
+      "name": "Light 80",
+      "totalSp": 80,
+      "regen": "2/min.",
+      "pcuCost": 30,
+      "bpCost": 12
+    },
+    {
+      "id": "medium-90",
+      "name": "Medium 90",
+      "totalSp": 90,
+      "regen": "4/min.",
+      "pcuCost": 30,
+      "bpCost": 13
+    },
+    {
+      "id": "medium-100",
+      "name": "Medium 100",
+      "totalSp": 100,
+      "regen": "4/min.",
+      "pcuCost": 30,
+      "bpCost": 15
+    },
+    {
+      "id": "medium-120",
+      "name": "Medium 120",
+      "totalSp": 120,
+      "regen": "4/min.",
+      "pcuCost": 35,
+      "bpCost": 17
+    },
+    {
+      "id": "medium-140",
+      "name": "Medium 140",
+      "totalSp": 140,
+      "regen": "8/min.",
+      "pcuCost": 40,
+      "bpCost": 18
+    },
+    {
+      "id": "medium-160",
+      "name": "Medium 160",
+      "totalSp": 160,
+      "regen": "8/min.",
+      "pcuCost": 45,
+      "bpCost": 20
+    },
+    {
+      "id": "medium-200",
+      "name": "Medium 200",
+      "totalSp": 200,
+      "regen": "8/min.",
+      "pcuCost": 50,
+      "bpCost": 22
+    },
+    {
+      "id": "heavy-240",
+      "name": "Heavy 240",
+      "totalSp": 240,
+      "regen": "16/min.",
+      "pcuCost": 55,
+      "bpCost": 23
+    },
+    {
+      "id": "heavy-280",
+      "name": "Heavy 280",
+      "totalSp": 280,
+      "regen": "16/min.",
+      "pcuCost": 60,
+      "bpCost": 25
+    },
+    {
+      "id": "heavy-320",
+      "name": "Heavy 320",
+      "totalSp": 320,
+      "regen": "16/min.",
+      "pcuCost": 70,
+      "bpCost": 27
+    },
+    {
+      "id": "heavy-360",
+      "name": "Heavy 360",
+      "totalSp": 360,
+      "regen": "32/min.",
+      "pcuCost": 80,
+      "bpCost": 28
+    },
+    {
+      "id": "heavy-420",
+      "name": "Heavy 420",
+      "totalSp": 420,
+      "regen": "32/min.",
+      "pcuCost": 90,
+      "bpCost": 30
+    },
+    {
+      "id": "heavy-480",
+      "name": "Heavy 480",
+      "totalSp": 480,
+      "regen": "32/min.",
+      "pcuCost": 110,
+      "bpCost": 32
+    },
+    {
+      "id": "superior-540",
+      "name": "Superior 540",
+      "totalSp": 540,
+      "regen": "64/min.",
+      "pcuCost": 130,
+      "bpCost": 35
+    },
+    {
+      "id": "superior-600",
+      "name": "Superior 600",
+      "totalSp": 600,
+      "regen": "64/min.",
+      "pcuCost": 160,
+      "bpCost": 40
+    }
+  ]
+}

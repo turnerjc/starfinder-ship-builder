@@ -1,0 +1,320 @@
+{
+  "data": [
+    {
+      "id": "array",
+      "name": "Array",
+      "source": "scr",
+      "ctMounts": 2
+    },
+    {
+      "id": "anchoring",
+      "name": "Anchoring",
+      "source": "som"
+    },
+    {
+      "id": "automated",
+      "name": "Automated",
+      "source": "som",
+      "isUpgrade": 1,
+      "bpMultiplier": 1.5
+    },
+    {
+      "id": "broad-arc",
+      "name": "Broad arc",
+      "source": "SCR"
+    },
+    {
+      "id": "burrowing",
+      "name": "Burrowing",
+      "source": "SCR"
+    },
+    {
+      "id": "buster",
+      "name": "Buster",
+      "source": "SOM"
+    },
+    {
+      "id": "deployed",
+      "name": "Deployed",
+      "source": "som",
+      "isUpgrade": 1,
+      "bpMultiplier": 2
+    },
+    {
+      "id": "emp",
+      "name": "EMP",
+      "source": "SCR"
+    },
+    {
+      "id": "force-field-15",
+      "name": "Force field 15",
+      "source": "SCR"
+    },
+    {
+      "id": "force-field-20",
+      "name": "Force field 20",
+      "source": "SCR"
+    },
+    {
+      "id": "force-field-40",
+      "name": "Force field 40",
+      "source": "SCR"
+    },
+    {
+      "id": "force-field-100",
+      "name": "Force field 100",
+      "source": "SCR"
+    },
+    {
+      "id": "gravity-well",
+      "name": "Gravity well",
+      "source": "SOM"
+    },
+    {
+      "id": "hacking",
+      "name": "hacking",
+      "source": "SOM"
+    },
+    {
+      "id": "intimidating",
+      "name": "Intimidating",
+      "source": "SOM"
+    },
+    {
+      "id": "irradiate-low",
+      "name": "Irradiate low",
+      "source": "SCR"
+    },
+    {
+      "id": "irradiate-medium",
+      "name": "Irradiate medium",
+      "source": "SCR"
+    },
+    {
+      "id": "irradiate-high",
+      "name": "Irradiate high",
+      "source": "SCR"
+    },
+    {
+      "id": "limited-fire-1",
+      "name": "Limited fire 1",
+      "source": "SCR"
+    },
+    {
+      "id": "limited-fire-2",
+      "name": "Limited fire 2",
+      "source": "SCR"
+    },
+    {
+      "id": "limited-fire-3",
+      "name": "Limited fire 3",
+      "source": "SCR"
+    },
+    {
+      "id": "limited-fire-5",
+      "name": "Limited fire 5",
+      "source": "SCR"
+    },
+    {
+      "id": "limited-fire-6",
+      "name": "Limited fire 6",
+      "source": "SCR"
+    },
+    {
+      "id": "line",
+      "name": "Line",
+      "source": "som",
+      "isUpgrade": 1,
+      "bpMultiplier": 1.75
+    },
+    {
+      "id": "mine-1",
+      "name": "Mine 1",
+      "source": "SOM"
+    },
+    {
+      "id": "mine-2",
+      "name": "Mine 2",
+      "source": "SOM"
+    },
+    {
+      "id": "mine-3",
+      "name": "Mine 3",
+      "source": "SOM"
+    },
+    {
+      "id": "mine-4",
+      "name": "Mine 4",
+      "source": "SOM"
+    },
+    {
+      "id": "mine-5",
+      "name": "Mine 5",
+      "source": "SOM"
+    },
+    {
+      "id": "mystical",
+      "name": "Mystical",
+      "source": "som",
+      "isUpgrade": 1,
+      "bpMultiplier": 1.25
+    },
+    {
+      "id": "nav-scram",
+      "name": "Nav-scram",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-2",
+      "name": "Orbital 2",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-3",
+      "name": "Orbital 3",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-5",
+      "name": "Orbital 5",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-7",
+      "name": "Orbital 7",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-10",
+      "name": "Orbital 10",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-14",
+      "name": "Orbital 14",
+      "source": "SOM"
+    },
+    {
+      "id": "orbital-18",
+      "name": "Orbital 18",
+      "source": "SOM"
+    },
+    {
+      "id": "pod",
+      "name": "Pod",
+      "source": "SCR"
+    },
+    {
+      "id": "point-8",
+      "name": "Point +8",
+      "source": "SCR"
+    },
+    {
+      "id": "point-10",
+      "name": "Point +10",
+      "source": "SCR"
+    },
+    {
+      "id": "point-12",
+      "name": "Point +12",
+      "source": "SCR"
+    },
+    {
+      "id": "point-15",
+      "name": "Point +15",
+      "source": "SCR"
+    },
+    {
+      "id": "quantum",
+      "name": "Quantum",
+      "source": "SCR"
+    },
+    {
+      "id": "rail-1d8",
+      "name": "Rail 1d8",
+      "source": "SOM"
+    },
+    {
+      "id": "rail-3d8",
+      "name": "Rail 3d8",
+      "source": "SOM"
+    },
+    {
+      "id": "rail-1d8-10",
+      "name": "Rail 1d8 x 10",
+      "source": "SOM"
+    },
+    {
+      "id": "rail-2d8-10",
+      "name": "Rail 2d8 x 10",
+      "source": "SOM"
+    },
+    {
+      "id": "ramming",
+      "name": "Ramming",
+      "source": "SOM"
+    },
+    {
+      "id": "restricted-imperial-fleet",
+      "name": "Restricted Imperial Fleet",
+      "source": "SOM"
+    },
+    {
+      "id": "ripper",
+      "name": "Ripper",
+      "source": "SCR"
+    },
+    {
+      "id": "smart",
+      "name": "Smart",
+      "source": "som",
+      "isUpgrade": 1,
+      "bpMultiplier": 1.5
+    },
+    {
+      "id": "spore",
+      "name": "Spore",
+      "source": "SCR"
+    },
+    {
+      "id": "teleportation-1",
+      "name": "Teleportation 1",
+      "source": "SOM"
+    },
+    {
+      "id": "teleportation-2",
+      "name": "Teleportation 2",
+      "source": "SOM"
+    },
+    {
+      "id": "teleportation-3",
+      "name": "Teleportation 3",
+      "source": "SOM"
+    },
+    {
+      "id": "tractor-beam",
+      "name": "Tractor Beam",
+      "source": "SCR"
+    },
+    {
+      "id": "transposition-1",
+      "name": "transposition 1",
+      "source": "SOM"
+    },
+    {
+      "id": "transposition-2",
+      "name": "transposition 2",
+      "source": "SOM"
+    },
+    {
+      "id": "transposition-3",
+      "name": "transposition 3",
+      "source": "SOM"
+    },
+    {
+      "id": "vortex",
+      "name": "Vortex",
+      "source": "SCR"
+    }
+  ]
+}

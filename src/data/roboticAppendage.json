@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "source": "som",
+      "strScore": 0,
+      "strMod": 0,
+      "damage": "n/a",
+      "bpCost": 0
+    },
+    {
+      "id": "mk1",
+      "name": "Mk 1",
+      "source": "som",
+      "strScore": 10,
+      "strMod": 0,
+      "damage": "1d6",
+      "bpCost": 1
+    },
+    {
+      "id": "mk2",
+      "name": "Mk 2",
+      "source": "som",
+      "strScore": 13,
+      "strMod": 1,
+      "damage": "1d8",
+      "bpCost": 3
+    },
+    {
+      "id": "mk3",
+      "name": "Mk 3",
+      "source": "som",
+      "strScore": 16,
+      "strMod": 3,
+      "damage": "1d8",
+      "bpCost": 6
+    },
+    {
+      "id": "mk4",
+      "name": "Mk 4",
+      "source": "som",
+      "strScore": 19,
+      "strMod": 4,
+      "damage": "2d6",
+      "bpCost": 8
+    },
+    {
+      "id": "mk5",
+      "name": "Mk 5",
+      "source": "som",
+      "strScore": 22,
+      "strMod": 6,
+      "damage": "2d8",
+      "bpCost": 11
+    },
+    {
+      "id": "mk6",
+      "name": "Mk 6",
+      "source": "som",
+      "strScore": 25,
+      "strMod": 7,
+      "damage": "3d6",
+      "bpCost": 13
+    },
+    {
+      "id": "mk7",
+      "name": "Mk 7",
+      "source": "som",
+      "strScore": 28,
+      "strMod": 9,
+      "damage": "3d8",
+      "bpCost": 16
+    },
+    {
+      "id": "mk8",
+      "name": "Mk 8",
+      "source": "som",
+      "strScore": 31,
+      "strMod": 10,
+      "damage": "4d8",
+      "bpCost": 18
+    },
+    {
+      "id": "mk9",
+      "name": "Mk 9",
+      "source": "som",
+      "strScore": 34,
+      "strMod": 12,
+      "damage": "6d8",
+      "bpCost": 21
+    },
+    {
+      "id": "mk10",
+      "name": "Mk 10",
+      "source": "som",
+      "strScore": 37,
+      "strMod": 13,
+      "damage": "8d8",
+      "bpCost": 23
+    }
+  ]
+}

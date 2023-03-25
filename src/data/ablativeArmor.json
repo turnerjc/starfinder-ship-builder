@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "id": "none",
+      "name": "None",
+      "tempHp": 0,
+      "tlMod": 0,
+      "turnMod": 0,
+      "bpCost": 0
+    },
+    {
+      "id": "basic-8",
+      "name": "Basic ablative armor 8HP",
+      "tempHp": 8,
+      "tlMod": 0,
+      "turnMod": 0,
+      "bpCost": 2
+    },
+    {
+      "id": "basic-16",
+      "name": "Basic ablative armor 16HP",
+      "tempHp": 16,
+      "tlMod": 0,
+      "turnMod": 0,
+      "bpCost": 3
+    },
+    {
+      "id": "basic-24",
+      "name": "Basic ablative armor 24HP",
+      "tempHp": 24,
+      "tlMod": 0,
+      "turnMod": 0,
+      "bpCost": 4
+    },
+    {
+      "id": "basic-32",
+      "name": "Basic ablative armor 32HP",
+      "tempHp": 32,
+      "tlMod": 0,
+      "turnMod": 0,
+      "bpCost": 5
+    },
+    {
+      "id": "basic-40",
+      "name": "Basic ablative armor 40HP",
+      "tempHp": 40,
+      "tlMod": 0,
+      "turnMod": 0,
+      "bpCost": 6
+    },
+    {
+      "id": "light-52",
+      "name": "Light ablative armor 52HP",
+      "tempHp": 52,
+      "tlMod": -1,
+      "turnMod": 0,
+      "bpCost": 8
+    },
+    {
+      "id": "light-64",
+      "name": "Light ablative armor 64HP",
+      "tempHp": 64,
+      "tlMod": -1,
+      "turnMod": 0,
+      "bpCost": 10
+    },
+    {
+      "id": "light-76",
+      "name": "Light ablative armor 76HP",
+      "tempHp": 76,
+      "tlMod": -1,
+      "turnMod": 0,
+      "bpCost": 12
+    },
+    {
+      "id": "light-88",
+      "name": "Light ablative armor 88HP",
+      "tempHp": 88,
+      "tlMod": -1,
+      "turnMod": 0,
+      "bpCost": 13
+    },
+    {
+      "id": "light-100",
+      "name": "Light ablative armor 100HP",
+      "tempHp": 100,
+      "tlMod": -1,
+      "turnMod": 0,
+      "bpCost": 14
+    },
+    {
+      "id": "medium-120",
+      "name": "Medium ablative armor 120HP",
+      "tempHp": 120,
+      "tlMod": -2,
+      "turnMod": 1,
+      "bpCost": 16
+    },
+    {
+      "id": "medium-140",
+      "name": "Medium ablative armor 140HP",
+      "tempHp": 140,
+      "tlMod": -2,
+      "turnMod": 1,
+      "bpCost": 17
+    },
+    {
+      "id": "medium-160",
+      "name": "Medium ablative armor 160HP",
+      "tempHp": 160,
+      "tlMod": -2,
+      "turnMod": 1,
+      "bpCost": 19
+    },
+    {
+      "id": "medium-180",
+      "name": "Medium ablative armor 180HP",
+      "tempHp": 180,
+      "tlMod": -2,
+      "turnMod": 1,
+      "bpCost": 21
+    },
+    {
+      "id": "medium-200",
+      "name": "Medium ablative armor 200HP",
+      "tempHp": 200,
+      "tlMod": -2,
+      "turnMod": 1,
+      "bpCost": 22
+    },
+    {
+      "id": "heavy-240",
+      "name": "Heavy ablative armor 240HP",
+      "tempHp": 240,
+      "tlMod": -2,
+      "turnMod": 2,
+      "bpCost": 24
+    },
+    {
+      "id": "heavy-280",
+      "name": "Heavy ablative armor 280HP",
+      "tempHp": 280,
+      "tlMod": -2,
+      "turnMod": 2,
+      "bpCost": 27
+    },
+    {
+      "id": "heavy-320",
+      "name": "Heavy ablative armor 320HP",
+      "tempHp": 320,
+      "tlMod": -2,
+      "turnMod": 2,
+      "bpCost": 29
+    },
+    {
+      "id": "heavy-360",
+      "name": "Heavy ablative armor 360HP",
+      "tempHp": 360,
+      "tlMod": -2,
+      "turnMod": 2,
+      "bpCost": 31
+    },
+    {
+      "id": "heavy-400",
+      "name": "Heavy ablative armor 400HP",
+      "tempHp": 400,
+      "tlMod": -2,
+      "turnMod": 2,
+      "bpCost": 34
+    },
+    {
+      "id": "superior-460",
+      "name": "Superior ablative armor 460HP",
+      "tempHp": 460,
+      "tlMod": -3,
+      "turnMod": 2,
+      "bpCost": 38
+    },
+    {
+      "id": "superior-520",
+      "name": "Superior ablative armor 520HP",
+      "tempHp": 520,
+      "tlMod": -4,
+      "turnMod": 2,
+      "bpCost": 45
+    }
+  ]
+}
