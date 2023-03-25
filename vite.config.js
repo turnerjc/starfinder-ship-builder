@@ -3,13 +3,18 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 // import vuetify from 'vite-plugin-vuetify';
+import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
   root: 'src',
   base: '/sfshipbuilder/',
+  build: {
+    chunkSizeWarningLimit: 1000,
+  },
   plugins: [
     vue(),
-    //  vuetify()
+    //  vuetify(),
+    ghPages(),
   ],
   resolve: {
     alias: {
