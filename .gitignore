@@ -88,3 +88,6 @@ package-lock.json
 
 # Electron-Forge
 out/
+
+# dist directory
+src/dist
