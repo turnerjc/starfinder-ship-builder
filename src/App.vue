@@ -26,7 +26,7 @@
         :totalBpCost="totalBpCost"
         :bpBudget="tier.bpBudget"
         :totalPcuCost="totalPcuCost"
-        :total="pcuBudget"></Summary>
+        :pcuBudget="pcuBudget"></Summary>
     </div>
     <!-- sidebar -->
 
