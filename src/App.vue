@@ -2509,7 +2509,7 @@
 
               <!-- Skill ship mod -->
               <div class="crew__skill__ship">
-                <strong>Ship mod</strong>
+                <strong>Ship mod </strong>
                 <span v-if="skillId == 'computers'">{{
                   getPrefixedModifier(skillModifierComputers)
                 }}</span>
