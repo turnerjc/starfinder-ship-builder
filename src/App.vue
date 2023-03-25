@@ -58,10 +58,7 @@
           This version has been modified to be compatible with
           <a href="https://dnd.wizards.com/">D&D 5th Edition</a> for use in our Starforger campaign.
           Starforger also uses rules from
-          <a
-            href="https://store.magehandpress.com/products/dark-matter-alpha?variant=15513911263314"
-            >Dark Matter</a
-          >
+          <a href="https://magehandpress.com/product/dark-matter-pdf">Dark Matter</a>
           by Mage Hand Press. The Dark Matter checkbox in the Sources section enables Starforger/5e
           Compatible AC/TL and bonus calculations, and additional options are available for
           Expansion Bays
@@ -2664,10 +2661,18 @@
       <footer>
         <ul>
           <li>
+            Starforger RPG Ship Builder by
+            <a href="mailto:dennyw17@gmail.com">Denny Wright</a> &bull; March 2023
+          </li>
+          <li>
             Original Starfinder RPG Ship Builder by
             <a href="http://www.jamesturneronline.net">James Turner</a> &bull;
             <a href="https://twitter.com/james_c_turner">@james_c_turner</a> &bull; Sep 2017 (last
             updated September 2020)
+          </li>
+          <li>
+            <a href="https://magehandpress.com/product/dark-matter-pdf">Dark Matter</a> &copy; Mage
+            Hand Press LLC
           </li>
           <li><a href="http://paizo.com/starfinder/">Starfinder RPG</a> &copy; Paizo Inc, 2017</li>
           <li>Open Game Licence</li>
@@ -2677,10 +2682,10 @@
             <a href="https://github.com/dennywright/sfshipbuilder">repo on Github</a> to fork or
             raise issues
           </li>
-          <li>
-            Artwork by <a href="https://www.shue-digital.com/">Sebastien Hue</a> (used without
+          <!-- <li>
+            Artwork by <a href="https://douglasshuler.com/">Douglas Shuler</a> (used with
             permission)
-          </li>
+          </li> -->
           <li>Icons by the <a href="https://thenounproject.com/">Noun Project</a>:</li>
           <ul>
             <li>
