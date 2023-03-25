@@ -57,15 +57,14 @@
         <p>
           This version has been modified to be compatible with
           <a href="https://dnd.wizards.com/">D&D 5th Edition</a> for use in our Starforger campaign.
-          Starforger is "D&D in Space" similar to Starfinder but with fewer "aliens" and more
-          classic D&D creatures. The changes are mostly focused on scaling AC/TL difficulties and
-          bonuses from computer and crews. Hyperspace travel varies from Drift travel, although the
-          same Rating is used in Hyperdrive Engines. Starforger also uses rules from
+          Starforger also uses rules from
           <a
             href="https://store.magehandpress.com/products/dark-matter-alpha?variant=15513911263314"
             >Dark Matter</a
           >
-          by Mage Hand Press, so additional options are available for Expansion Bays.
+          by Mage Hand Press. The Dark Matter checkbox in the Sources section enables Starforger/5e
+          Compatible AC/TL and bonus calculations, and additional options are available for
+          Expansion Bays
         </p>
       </div>
 
