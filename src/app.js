@@ -1498,11 +1498,13 @@ export default {
 
     // computed continued...
     selectOptionsDriftEngine() {
-      return this.selectOptions.driftEngine.filter(
+      var driftEngines = this.selectOptions.driftEngine.filter(
         (option) =>
           !this.params.isUseStrictRules ||
           (this.pcuBudget >= option.minPcu && this.sizeCategory.multiplier <= option.maxSize)
       );
+      // console.log('driftEngines', driftEngines);
+      return driftEngines;
     },
 
     // computed continued...
