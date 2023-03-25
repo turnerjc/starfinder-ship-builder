@@ -6,7 +6,6 @@ import vue from '@vitejs/plugin-vue';
 import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
-  root: 'src',
   base: '/sfshipbuilder/',
   build: {
     chunkSizeWarningLimit: 1000,

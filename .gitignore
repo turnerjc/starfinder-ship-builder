@@ -89,6 +89,5 @@ package-lock.json
 # Electron-Forge
 out/
 
-# gh-pages dist directory (.nojekyll is committed to repo) 
-src/dist/assets
-src/dist/index.html
+# gh-pages dist directory
+dist/
