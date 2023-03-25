@@ -314,6 +314,7 @@ export default {
         sourceBooksInUse: {
           pw: true,
           som: true,
+          dm: true,
         },
         thrustersId: 'none',
         thrustersMaterialId: 'none',
@@ -388,6 +389,10 @@ export default {
         {
           id: 'som',
           name: 'Starship Operations Manual',
+        },
+        {
+          id: 'dm',
+          name: 'Dark Matter (Starforger/5e Compatible)',
         },
       ],
     };
