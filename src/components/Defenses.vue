@@ -65,13 +65,13 @@
     </div>
     <div class="box__info">
       <strong>Bonus To TL</strong>
-      {{ getPrefixedModifier(defensiveCountermeasures.defCMBonusToTl) }}
+      {{ getPrefixedModifier(defensiveCountermeasuresBonus) }}
     </div>
     <div class="box__cost">
       <svg class="icon">
         <use xlink:href="#icon-power" />
       </svg>
-      {{ defensiveCountermeasures.pcuCost }}
+      {{ defensiveCountermeasuresPcuCost }}
       <svg class="icon">
         <use xlink:href="#icon-build" />
       </svg>

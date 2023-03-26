@@ -1,121 +1,181 @@
 {
-  "props": [
-    "defCMBonusToTl",
-    "pcuCost",
-    "bpCost"
-  ],
+  "props": ["bonusToTL", "pcuCost", "bpCost"],
   "data": [
     {
       "id": "none",
       "name": "None",
-      "defCMBonusToTl": 0,
+      "bonusToTL": 0,
       "pcuCost": 0,
-      "bpCost": 0
+      "bpCost": 0,
+      "dnd": {
+        "bonusToTL": 0,
+        "pcuCost": 0
+      }
     },
     {
       "id": "mk-1",
       "name": "Mk 1 defences",
-      "defCMBonusToTl": 1,
+      "bonusToTL": 1,
       "pcuCost": 1,
-      "bpCost": 2
+      "bpCost": 2,
+      "dnd": {
+        "bonusToTL": 1,
+        "pcuCost": 1
+      }
     },
     {
       "id": "mk-2",
       "name": "Mk 2 defences",
-      "defCMBonusToTl": 2,
+      "bonusToTL": 2,
       "pcuCost": 1,
-      "bpCost": 3
+      "bpCost": 3,
+      "dnd": {
+        "bonusToTL": 1,
+        "pcuCost": 0
+      }
     },
     {
       "id": "mk-3",
       "name": "Mk 3 defences",
-      "defCMBonusToTl": 3,
+      "bonusToTL": 3,
       "pcuCost": 2,
-      "bpCost": 4
+      "bpCost": 4,
+      "dnd": {
+        "bonusToTL": 2,
+        "pcuCost": 2
+      }
     },
     {
       "id": "mk-4",
       "name": "Mk 4 defences",
-      "defCMBonusToTl": 4,
+      "bonusToTL": 4,
       "pcuCost": 3,
-      "bpCost": 6
+      "bpCost": 6,
+      "dnd": {
+        "bonusToTL": 2,
+        "pcuCost": 1
+      }
     },
     {
       "id": "mk-5",
       "name": "Mk 5 defences",
-      "defCMBonusToTl": 5,
+      "bonusToTL": 5,
       "pcuCost": 4,
-      "bpCost": 8
+      "bpCost": 8,
+      "dnd": {
+        "bonusToTL": 3,
+        "pcuCost": 4
+      }
     },
     {
       "id": "mk-6",
       "name": "Mk 6 defences",
-      "defCMBonusToTl": 6,
+      "bonusToTL": 6,
       "pcuCost": 5,
-      "bpCost": 11
+      "bpCost": 11,
+      "dnd": {
+        "bonusToTL": 3,
+        "pcuCost": 3
+      }
     },
     {
       "id": "mk-7",
       "name": "Mk 7 defences",
-      "defCMBonusToTl": 7,
+      "bonusToTL": 7,
       "pcuCost": 7,
-      "bpCost": 14
+      "bpCost": 14,
+      "dnd": {
+        "bonusToTL": 4,
+        "pcuCost": 7
+      }
     },
     {
       "id": "mk-8",
       "name": "Mk 8 defences",
-      "defCMBonusToTl": 8,
+      "bonusToTL": 8,
       "pcuCost": 9,
-      "bpCost": 18
+      "bpCost": 18,
+      "dnd": {
+        "bonusToTL": 4,
+        "pcuCost": 5
+      }
     },
     {
       "id": "mk-9",
       "name": "Mk 9 defences",
-      "defCMBonusToTl": 9,
+      "bonusToTL": 9,
       "pcuCost": 11,
-      "bpCost": 22
+      "bpCost": 22,
+      "dnd": {
+        "bonusToTL": 5,
+        "pcuCost": 11
+      }
     },
     {
       "id": "mk-10",
       "name": "Mk 10 defences",
-      "defCMBonusToTl": 10,
+      "bonusToTL": 10,
       "pcuCost": 13,
-      "bpCost": 27
+      "bpCost": 27,
+      "dnd": {
+        "bonusToTL": 5,
+        "pcuCost": 9
+      }
     },
     {
       "id": "mk-11",
       "name": "Mk 11 defences",
-      "defCMBonusToTl": 11,
+      "bonusToTL": 11,
       "pcuCost": 16,
-      "bpCost": 33
+      "bpCost": 33,
+      "dnd": {
+        "bonusToTL": 6,
+        "pcuCost": 16
+      }
     },
     {
       "id": "mk-12",
       "name": "Mk 12 defences",
-      "defCMBonusToTl": 12,
+      "bonusToTL": 12,
       "pcuCost": 20,
-      "bpCost": 40
+      "bpCost": 40,
+      "dnd": {
+        "bonusToTL": 6,
+        "pcuCost": 13
+      }
     },
     {
       "id": "mk-13",
       "name": "Mk 13 defences",
-      "defCMBonusToTl": 13,
+      "bonusToTL": 13,
       "pcuCost": 25,
-      "bpCost": 50
+      "bpCost": 50,
+      "dnd": {
+        "bonusToTL": 7,
+        "pcuCost": 25
+      }
     },
     {
       "id": "mk-14",
       "name": "Mk 14 defences",
-      "defCMBonusToTl": 14,
+      "bonusToTL": 14,
       "pcuCost": 32,
-      "bpCost": 65
+      "bpCost": 65,
+      "dnd": {
+        "bonusToTL": 7,
+        "pcuCost": 20
+      }
     },
     {
       "id": "mk-15",
       "name": "Mk 15 defences",
-      "defCMBonusToTl": 15,
+      "bonusToTL": 15,
       "pcuCost": 45,
-      "bpCost": 90
+      "bpCost": 90,
+      "dnd": {
+        "bonusToTL": 8,
+        "pcuCost": 45
+      }
     }
   ]
 }

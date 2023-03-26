@@ -1,13 +1,13 @@
 <template>
   <!--
-      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      |  OTHER SYSTEMS
-      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      -->
+  | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  |  SYSTEMS AND UPGRADES
+  | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  -->
 
   <div id="other" class="box" v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
     <header class="box__header">
-      <h3 id="other">Other Systems</h3>
+      <h3 id="other">Systems and Upgrades</h3>
     </header>
 
     <!-- algal shielding -->

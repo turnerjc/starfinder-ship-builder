@@ -78,7 +78,7 @@ the component, where needed.
 
 - Nav
 - Summary
-- RecentUpdates
+- Intro (including Recent Updates)
 - Patreon (commented out)
 - Sources
 
@@ -105,7 +105,7 @@ as components.
 - Sensors
 - Shields
 - WeaponMounts
-- OtherSystems
+- SystemsAndUpgrades
 - CustomComponents
 - Crew
 - Output

@@ -2,7 +2,7 @@
 import Graphics from './components/Graphics.vue';
 import Nav from './components/Nav.vue';
 import Summary from './components/Summary.vue';
-import RecentUpdates from './components/RecentUpdates.vue';
+import Intro from './components/Intro.vue';
 import Patreon from './components/Patreon.vue';
 import Sources from './components/Sources.vue';
 // import Input from './components/Input.vue';
@@ -25,7 +25,7 @@ import Sources from './components/Sources.vue';
 // import Sensors from './components/Sensors.vue';
 // import Shields from './components/Shields.vue';
 // import WeaponMounts from './components/WeaponMounts.vue';
-// import OtherSystems from './components/OtherSystems.vue';
+// import SystemsAndUpgrades from './components/SystemsAndUpgrades.vue';
 // import CustomComponents from './components/CustomComponents.vue';
 // import Crew from './components/Crew.vue';
 // import Output from './components/Output.vue';
@@ -58,7 +58,7 @@ export default {
     Graphics,
     Nav,
     Summary,
-    RecentUpdates,
+    Intro,
     Patreon,
     Sources,
     // Input,
@@ -81,7 +81,7 @@ export default {
     // Sensors,
     // Shields,
     // WeaponMounts,
-    // OtherSystems,
+    // SystemsAndUpgrades,
     // CustomComponents,
     // Crew,
     // Output,
@@ -392,7 +392,7 @@ export default {
         },
         {
           id: 'dnd',
-          name: 'Dark Matter (Starforger/5e Compatible)',
+          name: '5e Compatible (Starforger/Dark Matter)',
         },
       ],
     };
@@ -807,6 +807,15 @@ export default {
     },
 
     // computed continued...
+    defensiveCountermeasuresBonus() {
+      var bonus = this.params.sourceBooksInUse.dnd
+        ? this.defensiveCountermeasures.dnd.bonusToTL
+        : this.defensiveCountermeasures.bonusToTL;
+      // console.log(bonus);
+      return bonus;
+    },
+
+    // computed continued...
     defensiveCountermeasuresBpCost() {
       var dcBpCost = this.defensiveCountermeasures.bpCost;
 
@@ -823,6 +832,13 @@ export default {
         }
       }
       return dcBpCost;
+    },
+
+    // computed continued...
+    defensiveCountermeasuresPcuCost() {
+      return this.params.sourceBooksInUse.dnd
+        ? this.defensiveCountermeasures.dnd.pcuCost
+        : this.defensiveCountermeasures.pcuCost;
     },
 
     // computed continued...
@@ -1770,7 +1786,7 @@ export default {
     targetLock() {
       return (
         10 +
-        this.defensiveCountermeasures.defCMBonusToTl +
+        this.defensiveCountermeasuresBonus +
         this.sizeCategory.acAndTlModifier +
         this.armorTLMod +
         this.pilotingRanks +
@@ -1918,7 +1934,7 @@ export default {
         essential:
           this.thrusters.pcuCost +
           (this.hasBoosterThrusterHousing ? this.thrustersBooster.pcuCost : 0) +
-          this.defensiveCountermeasures.pcuCost +
+          this.defensiveCountermeasuresPcuCost +
           (this.params.shieldType == 'shields' ? this.shields.pcuCost : 0) +
           (this.params.shieldType == 'deflector-shield' ? this.deflectorShield.pcuCost : 0) +
           this.weaponsTotalCosts.weaponsPcu +

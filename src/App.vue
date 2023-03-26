@@ -54,18 +54,8 @@
             >Starfinder RPG Ship Builder</a
           >
         </p>
-        <p>
-          This version has been modified to be compatible with
-          <a href="https://dnd.wizards.com/">D&D 5th Edition</a> for use in our Starforger campaign.
-          Starforger also uses rules from
-          <a href="https://magehandpress.com/product/dark-matter-pdf">Dark Matter</a>
-          by Mage Hand Press. The Dark Matter checkbox in the Sources section enables Starforger/5e
-          Compatible AC/TL and bonus calculations, and additional options are available for
-          Expansion Bays
-        </p>
       </div>
-
-      <RecentUpdates />
+      <Intro />
       <!--
       <Patreon />
       -->
@@ -1162,13 +1152,13 @@
         </div>
         <div class="box__info">
           <strong>Bonus To TL</strong>
-          {{ getPrefixedModifier(defensiveCountermeasures.defCMBonusToTl) }}
+          {{ getPrefixedModifier(defensiveCountermeasuresBonus) }}
         </div>
         <div class="box__cost">
           <svg class="icon">
             <use xlink:href="#icon-power" />
           </svg>
-          {{ defensiveCountermeasures.pcuCost }}
+          {{ defensiveCountermeasuresPcuCost }}
           <svg class="icon">
             <use xlink:href="#icon-build" />
           </svg>
@@ -2021,15 +2011,15 @@
         </div>
       </div>
       <!--
-      <OtherSystems />
+      <SystemsAndUpgrades />
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      |  OTHER SYSTEMS
+      |  SYSTEMS AND UPGRADES
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
 
       <div id="other" class="box" v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
         <header class="box__header">
-          <h3 id="other">Other Systems</h3>
+          <h3 id="other">Systems and Upgrades</h3>
         </header>
 
         <!-- algal shielding -->

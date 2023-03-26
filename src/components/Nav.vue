@@ -34,7 +34,7 @@
         <li><a href="#shields">Shields</a></li>
         <li><a href="#weapons">Weapons</a></li>
         <li v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
-          <a href="#other">Other Systems</a>
+          <a href="#other">Additional Systems and Upgrades</a>
         </li>
       </ul>
       <li><a href="#custom-components">Custom Components</a></li>
