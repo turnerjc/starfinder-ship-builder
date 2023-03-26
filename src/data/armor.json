@@ -1,7 +1,5 @@
 {
-  "props": [
-    "bonusToAc"
-  ],
+  "props": ["bonusToAc"],
   "data": [
     {
       "id": "none",
@@ -9,7 +7,12 @@
       "bonusToAc": 0,
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 0
+      "bpCostMultiplier": 0,
+      "dm": {
+        "bonusToAc": 0,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 0
+      }
     },
     {
       "id": "mk-1",
@@ -17,7 +20,12 @@
       "bonusToAc": 1,
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 1
+      "bpCostMultiplier": 1,
+      "dm": {
+        "bonusToAc": 1,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 1
+      }
     },
     {
       "id": "mk-2",
@@ -25,7 +33,12 @@
       "bonusToAc": 2,
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 2
+      "bpCostMultiplier": 2,
+      "dm": {
+        "bonusToAc": 1,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 0
+      }
     },
     {
       "id": "mk-3",
@@ -33,7 +46,11 @@
       "bonusToAc": 3,
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 3
+      "bpCostMultiplier": 3,
+      "dm": {
+        "bonusToAc": 2,
+        "turnDistanceModifier": 1
+      }
     },
     {
       "id": "mk-4",
@@ -41,7 +58,12 @@
       "bonusToAc": 4,
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 5
+      "bpCostMultiplier": 5,
+      "dm": {
+        "bonusToAc": 2,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 0
+      }
     },
     {
       "id": "mk-5",
@@ -49,7 +71,12 @@
       "bonusToAc": 5,
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 7
+      "bpCostMultiplier": 7,
+      "dm": {
+        "bonusToAc": 3,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 1
+      }
     },
     {
       "id": "mk-6",
@@ -57,7 +84,12 @@
       "bonusToAc": 6,
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 9
+      "bpCostMultiplier": 9,
+      "dm": {
+        "bonusToAc": 3,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 0
+      }
     },
     {
       "id": "mk-7",
@@ -65,7 +97,12 @@
       "bonusToAc": 7,
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 12
+      "bpCostMultiplier": 12,
+      "dm": {
+        "bonusToAc": 4,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 1
+      }
     },
     {
       "id": "mk-8",
@@ -73,7 +110,12 @@
       "bonusToAc": 8,
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
-      "bpCostMultiplier": 15
+      "bpCostMultiplier": 15,
+      "dm": {
+        "bonusToAc": 4,
+        "targetLockModifier": 0,
+        "turnDistanceModifier": 0
+      }
     },
     {
       "id": "mk-9",
@@ -81,7 +123,12 @@
       "bonusToAc": 9,
       "targetLockModifier": -2,
       "turnDistanceModifier": 1,
-      "bpCostMultiplier": 18
+      "bpCostMultiplier": 18,
+      "dm": {
+        "bonusToAc": 5,
+        "targetLockModifier": -1,
+        "turnDistanceModifier": 2
+      }
     },
     {
       "id": "mk-10",
@@ -89,7 +136,12 @@
       "bonusToAc": 10,
       "targetLockModifier": -2,
       "turnDistanceModifier": 1,
-      "bpCostMultiplier": 21
+      "bpCostMultiplier": 21,
+      "dm": {
+        "bonusToAc": 5,
+        "targetLockModifier": -1,
+        "turnDistanceModifier": 1
+      }
     },
     {
       "id": "mk-11",
@@ -97,7 +149,12 @@
       "bonusToAc": 11,
       "targetLockModifier": -2,
       "turnDistanceModifier": 1,
-      "bpCostMultiplier": 25
+      "bpCostMultiplier": 25,
+      "dm": {
+        "bonusToAc": 6,
+        "targetLockModifier": -1,
+        "turnDistanceModifier": 2
+      }
     },
     {
       "id": "mk-12",
@@ -105,7 +162,12 @@
       "bonusToAc": 12,
       "targetLockModifier": -3,
       "turnDistanceModifier": 2,
-      "bpCostMultiplier": 30
+      "bpCostMultiplier": 30,
+      "dm": {
+        "bonusToAc": 6,
+        "targetLockModifier": -1,
+        "turnDistanceModifier": 1
+      }
     },
     {
       "id": "mk-13",
@@ -113,7 +175,12 @@
       "bonusToAc": 13,
       "targetLockModifier": -3,
       "turnDistanceModifier": 2,
-      "bpCostMultiplier": 35
+      "bpCostMultiplier": 35,
+      "dm": {
+        "bonusToAc": 7,
+        "targetLockModifier": -2,
+        "turnDistanceModifier": 3
+      }
     },
     {
       "id": "mk-14",
@@ -121,7 +188,12 @@
       "bonusToAc": 14,
       "targetLockModifier": -3,
       "turnDistanceModifier": 2,
-      "bpCostMultiplier": 40
+      "bpCostMultiplier": 40,
+      "dm": {
+        "bonusToAc": 7,
+        "targetLockModifier": -2,
+        "turnDistanceModifier": 2
+      }
     },
     {
       "id": "mk-15",
@@ -129,7 +201,12 @@
       "bonusToAc": 15,
       "targetLockModifier": -4,
       "turnDistanceModifier": 3,
-      "bpCostMultiplier": 45
+      "bpCostMultiplier": 45,
+      "dm": {
+        "bonusToAc": 8,
+        "targetLockModifier": -2,
+        "turnDistanceModifier": 3
+      }
     }
   ]
 }

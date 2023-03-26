@@ -76,8 +76,8 @@
     </div>
 
     <div class="box__info">
-      <strong>Bonus to AC</strong> {{ getPrefixedModifier(armor.bonusToAc) }};
-      <strong>Special</strong> {{ armorSpecial }}
+      <strong>Bonus to AC</strong> {{ getPrefixedModifier(armorBonus) }}; <strong>Special</strong>
+      {{ armorSpecial }}
     </div>
     <div class="box__cost">
       <svg class="icon">

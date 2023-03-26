@@ -450,14 +450,22 @@ export default {
     },
 
     // computed continued...
+    armorBonus() {
+      return this.params.sourceBooksInUse.dm ? this.armor.dm.bonusToAc : this.armor.bonusToAc;
+    },
+
+    // computed continued...
     armorBpCost() {
-      var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
+      var cost = this.params.sourceBooksInUse.dm
+        ? this.armor.dm.bcCostMultiplier
+        : this.armor.bcCostMultiplier;
+      var armorBpCost = cost * this.sizeCategory.multiplier;
 
       if (this.params.sourceBooksInUse.som) {
         var materialBpCost = 0;
         switch (this.params.armorMaterialId) {
           case 'adamantine-alloy':
-            materialBpCost = this.armor.bpCostMultiplier; // (effectively, +1 to size cat multiplier)
+            materialBpCost = cost; // (effectively, +1 to size cat multiplier)
             break;
           case 'noqual':
             materialBpCost = 4;
@@ -478,7 +486,7 @@ export default {
     armorClass() {
       return (
         10 +
-        this.armor.bonusToAc +
+        this.armorBonus +
         this.sizeCategory.acAndTlModifier +
         this.pilotingRanks +
         this.deflectorShield.bonusToAc
@@ -490,18 +498,32 @@ export default {
       var output = [];
       var outputStr = 'n/a';
       // targetLockModifier
-      if (isset(this.armor.targetLockModifier) && this.armor.targetLockModifier < 0) {
-        output.push(this.armor.targetLockModifier + ' TL');
+      if (isset(this.armorTLMod) && this.armorTLMod < 0) {
+        output.push(this.armorTLMod + ' TL');
       }
       // turnDistanceModifier
-      if (isset(this.armor.turnDistanceModifier) && this.armor.turnDistanceModifier > 0) {
-        output.push('+' + this.armor.turnDistanceModifier + ' turn distance');
+      if (isset(this.armorTurnDistanceMod) && this.armorTurnDistanceMod > 0) {
+        output.push('+' + this.armorTurnDistanceMod + ' turn distance');
       }
       // output
       if (output.length > 0) {
         outputStr = output.join('; ');
       }
       return outputStr;
+    },
+
+    // computed continued...
+    armorTLMod() {
+      return this.params.sourceBooksInUse.dm
+        ? this.armor.dm.targetLockModifier
+        : this.armor.targetLockModifier;
+    },
+
+    // computed continued...
+    armorTurnDistanceMod() {
+      return this.params.sourceBooksInUse.dm
+        ? this.armor.dm.turnDistanceModifier
+        : this.armor.turnDistanceModifier;
     },
 
     // computed continued...
@@ -759,7 +781,7 @@ export default {
       var dt = this.frame.dt;
       if (this.params.sourceBooksInUse.som && this.params.armorMaterialId == 'adamantine-alloy') {
         if (dt == 'n/a') dt = 0;
-        dt += this.armor.bonusToAc;
+        dt += this.armorBonus;
       }
       return dt;
     },
@@ -1750,7 +1772,7 @@ export default {
         10 +
         this.defensiveCountermeasures.defCMBonusToTl +
         this.sizeCategory.acAndTlModifier +
-        this.armor.targetLockModifier +
+        this.armorTLMod +
         this.pilotingRanks +
         this.ablativeArmor.tlMod +
         this.deflectorShield.bonusToTl
@@ -1919,7 +1941,7 @@ export default {
     turn() {
       return (
         this.maneuverabilityRating.turn +
-        this.armor.turnDistanceModifier +
+        this.armorTurnDistanceMod +
         this.ablativeArmor.turnMod +
         Math.ceil(this.ctExternalExpansionBays / 3)
       );
