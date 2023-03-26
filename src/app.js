@@ -314,7 +314,7 @@ export default {
         sourceBooksInUse: {
           pw: true,
           som: true,
-          dm: true,
+          dnd: true,
         },
         thrustersId: 'none',
         thrustersMaterialId: 'none',
@@ -391,7 +391,7 @@ export default {
           name: 'Starship Operations Manual',
         },
         {
-          id: 'dm',
+          id: 'dnd',
           name: 'Dark Matter (Starforger/5e Compatible)',
         },
       ],
@@ -451,13 +451,13 @@ export default {
 
     // computed continued...
     armorBonus() {
-      return this.params.sourceBooksInUse.dm ? this.armor.dm.bonusToAc : this.armor.bonusToAc;
+      return this.params.sourceBooksInUse.dnd ? this.armor.dnd.bonusToAc : this.armor.bonusToAc;
     },
 
     // computed continued...
     armorBpCost() {
-      var cost = this.params.sourceBooksInUse.dm
-        ? this.armor.dm.bcCostMultiplier
+      var cost = this.params.sourceBooksInUse.dnd
+        ? this.armor.dnd.bcCostMultiplier
         : this.armor.bcCostMultiplier;
       var armorBpCost = cost * this.sizeCategory.multiplier;
 
@@ -514,15 +514,15 @@ export default {
 
     // computed continued...
     armorTLMod() {
-      return this.params.sourceBooksInUse.dm
-        ? this.armor.dm.targetLockModifier
+      return this.params.sourceBooksInUse.dnd
+        ? this.armor.dnd.targetLockModifier
         : this.armor.targetLockModifier;
     },
 
     // computed continued...
     armorTurnDistanceMod() {
-      return this.params.sourceBooksInUse.dm
-        ? this.armor.dm.turnDistanceModifier
+      return this.params.sourceBooksInUse.dnd
+        ? this.armor.dnd.turnDistanceModifier
         : this.armor.turnDistanceModifier;
     },
 

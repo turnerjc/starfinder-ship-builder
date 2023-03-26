@@ -8,7 +8,7 @@
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 0,
-      "dm": {
+      "dnd": {
         "bonusToAc": 0,
         "targetLockModifier": 0,
         "turnDistanceModifier": 0
@@ -21,7 +21,7 @@
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 1,
-      "dm": {
+      "dnd": {
         "bonusToAc": 1,
         "targetLockModifier": 0,
         "turnDistanceModifier": 1
@@ -34,7 +34,7 @@
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 2,
-      "dm": {
+      "dnd": {
         "bonusToAc": 1,
         "targetLockModifier": 0,
         "turnDistanceModifier": 0
@@ -47,7 +47,7 @@
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 3,
-      "dm": {
+      "dnd": {
         "bonusToAc": 2,
         "turnDistanceModifier": 1
       }
@@ -59,7 +59,7 @@
       "targetLockModifier": 0,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 5,
-      "dm": {
+      "dnd": {
         "bonusToAc": 2,
         "targetLockModifier": 0,
         "turnDistanceModifier": 0
@@ -72,7 +72,7 @@
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 7,
-      "dm": {
+      "dnd": {
         "bonusToAc": 3,
         "targetLockModifier": 0,
         "turnDistanceModifier": 1
@@ -85,7 +85,7 @@
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 9,
-      "dm": {
+      "dnd": {
         "bonusToAc": 3,
         "targetLockModifier": 0,
         "turnDistanceModifier": 0
@@ -98,7 +98,7 @@
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 12,
-      "dm": {
+      "dnd": {
         "bonusToAc": 4,
         "targetLockModifier": 0,
         "turnDistanceModifier": 1
@@ -111,7 +111,7 @@
       "targetLockModifier": -1,
       "turnDistanceModifier": 0,
       "bpCostMultiplier": 15,
-      "dm": {
+      "dnd": {
         "bonusToAc": 4,
         "targetLockModifier": 0,
         "turnDistanceModifier": 0
@@ -124,7 +124,7 @@
       "targetLockModifier": -2,
       "turnDistanceModifier": 1,
       "bpCostMultiplier": 18,
-      "dm": {
+      "dnd": {
         "bonusToAc": 5,
         "targetLockModifier": -1,
         "turnDistanceModifier": 2
@@ -137,7 +137,7 @@
       "targetLockModifier": -2,
       "turnDistanceModifier": 1,
       "bpCostMultiplier": 21,
-      "dm": {
+      "dnd": {
         "bonusToAc": 5,
         "targetLockModifier": -1,
         "turnDistanceModifier": 1
@@ -150,7 +150,7 @@
       "targetLockModifier": -2,
       "turnDistanceModifier": 1,
       "bpCostMultiplier": 25,
-      "dm": {
+      "dnd": {
         "bonusToAc": 6,
         "targetLockModifier": -1,
         "turnDistanceModifier": 2
@@ -163,7 +163,7 @@
       "targetLockModifier": -3,
       "turnDistanceModifier": 2,
       "bpCostMultiplier": 30,
-      "dm": {
+      "dnd": {
         "bonusToAc": 6,
         "targetLockModifier": -1,
         "turnDistanceModifier": 1
@@ -176,7 +176,7 @@
       "targetLockModifier": -3,
       "turnDistanceModifier": 2,
       "bpCostMultiplier": 35,
-      "dm": {
+      "dnd": {
         "bonusToAc": 7,
         "targetLockModifier": -2,
         "turnDistanceModifier": 3
@@ -189,7 +189,7 @@
       "targetLockModifier": -3,
       "turnDistanceModifier": 2,
       "bpCostMultiplier": 40,
-      "dm": {
+      "dnd": {
         "bonusToAc": 7,
         "targetLockModifier": -2,
         "turnDistanceModifier": 2
@@ -202,7 +202,7 @@
       "targetLockModifier": -4,
       "turnDistanceModifier": 3,
       "bpCostMultiplier": 45,
-      "dm": {
+      "dnd": {
         "bonusToAc": 8,
         "targetLockModifier": -2,
         "turnDistanceModifier": 3
