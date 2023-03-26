@@ -30,6 +30,10 @@
         <time datetime="2023-03-26">2023-03-26</time> - Denny Wright - Modify Target Lock for 5e (10
         to 18); PCU Cost (even Mk DCM have smaller PCU cost than odd Mk DCM)
       </li>
+      <li>
+        <time datetime="2023-03-26">2023-03-26</time> - Denny Wright - Moved Ship Readout to the
+        top; separated Sample Ships; new Load/Save section
+      </li>
     </ul>
     <strong>TODO:</strong>
     <ul>

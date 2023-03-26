@@ -7,8 +7,11 @@
   <!-- Sidebar Navigation -->
   <nav class="contents">
     <ul class="contents__0">
+      <li><a href="#title">Intro</a></li>
       <li><a href="#sources">Sources</a></li>
-      <li><a href="#input">Input</a></li>
+      <li><a href="#readout">Ship Readout</a></li>
+      <li><a href="#sampleships">Sample Ships</a></li>
+      <li><a href="#loadsave">Load/Save</a></li>
       <li><a href="#concept">Concept</a></li>
       <li><a href="#tier">Tier</a></li>
       <li><a href="#frame">Frame</a></li>
@@ -33,13 +36,15 @@
         <li><a href="#sensors">Sensors</a></li>
         <li><a href="#shields">Shields</a></li>
         <li><a href="#weapons">Weapons</a></li>
-        <li v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
-          <a href="#other">Additional Systems and Upgrades</a>
+        <li
+          v-if="
+            params.sourceBooksInUse.pw || params.sourceBooksInUse.som || params.sourceBooksInUse.dnd
+          ">
+          <a href="#other">Systems and Upgrades</a>
         </li>
       </ul>
       <li><a href="#custom-components">Custom Components</a></li>
       <li><a href="#crew">Crew</a></li>
-      <li><a href="#output">Output</a></li>
     </ul>
   </nav>
 </template>
