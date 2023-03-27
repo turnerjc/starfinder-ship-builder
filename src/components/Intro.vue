@@ -41,6 +41,7 @@
       <li>Implement Ship Sheet layout</li>
       <li>Add Virtues and Flaws</li>
       <li>Update logo for Starforger</li>
+      <li>Add Systems and Upgrades from Dark Matter</li>
     </ul>
   </div>
 </template>
