@@ -1,18 +1,17 @@
 {
-  "props": [
-    "bonus",
-    "nodes",
-    "pcuCost",
-    "bpCost"
-  ],
+  "props": ["bonus", "nodeMax", "pcuCost", "bpCost"],
   "data": [
     {
       "id": "none",
       "name": "None",
       "bonus": 0,
-      "nodes": 0,
+      "nodeMax": 0,
       "pcuCost": 0,
-      "bpCost": 0
+      "bpCost": 0,
+      "dnd": {
+        "bonus": 0,
+        "name": "None"
+      }
     },
     {
       "id": "mk4",
@@ -20,7 +19,11 @@
       "bonus": 4,
       "nodeMax": 2,
       "pcuCost": 8,
-      "bpCost": 4
+      "bpCost": 4,
+      "dnd": {
+        "bonus": 1,
+        "name": "Mk 4110 network node"
+      }
     },
     {
       "id": "mk5",
@@ -28,7 +31,11 @@
       "bonus": 5,
       "nodeMax": 2,
       "pcuCost": 10,
-      "bpCost": 5
+      "bpCost": 5,
+      "dnd": {
+        "bonus": 2,
+        "name": "Mk 5210 network node"
+      }
     },
     {
       "id": "mk6",
@@ -36,7 +43,11 @@
       "bonus": 6,
       "nodeMax": 3,
       "pcuCost": 11,
-      "bpCost": 6
+      "bpCost": 6,
+      "dnd": {
+        "bonus": 2,
+        "name": "Mk 6210 network node"
+      }
     },
     {
       "id": "mk7",
@@ -44,7 +55,11 @@
       "bonus": 7,
       "nodeMax": 3,
       "pcuCost": 13,
-      "bpCost": 7
+      "bpCost": 7,
+      "dnd": {
+        "bonus": 2,
+        "name": "Mk 7210 network node"
+      }
     },
     {
       "id": "mk8",
@@ -52,7 +67,11 @@
       "bonus": 8,
       "nodeMax": 4,
       "pcuCost": 15,
-      "bpCost": 8
+      "bpCost": 8,
+      "dnd": {
+        "bonus": 3,
+        "name": "Mk 8310 network node"
+      }
     },
     {
       "id": "mk9",
@@ -60,7 +79,11 @@
       "bonus": 9,
       "nodeMax": 4,
       "pcuCost": 17,
-      "bpCost": 9
+      "bpCost": 9,
+      "dnd": {
+        "bonus": 3,
+        "name": "Mk 9310 network node"
+      }
     },
     {
       "id": "mk10",
@@ -68,7 +91,11 @@
       "bonus": 10,
       "nodeMax": 5,
       "pcuCost": 19,
-      "bpCost": 10
+      "bpCost": 10,
+      "dnd": {
+        "bonus": 3,
+        "name": "Mk 10319 network node"
+      }
     }
   ]
 }

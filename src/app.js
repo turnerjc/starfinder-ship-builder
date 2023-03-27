@@ -292,10 +292,10 @@ export default {
         hasSpaceStationFramework: 0, // other systems (som)
         isSetDefaultCrewSkillValues: 1,
         isUseStrictRules: 1,
+        networkNode: {},
         powerCoreIds: ['none'],
         powerCoreSpecialMaterials: ['none'],
         ctNetworkNodes: 0,
-        // networkNodeId: "none",
         reinforcedBulkheadId: 'none',
         roboticAppendageId: 'none',
         secondaryComputerId: 'basic-computer',
@@ -559,16 +559,55 @@ export default {
       return this.getItemById('computer', this.params.computerId);
     },
 
+    // computed continued...
+    computerName() {
+      var name = this.params.sourceBooksInUse.dnd ? this.computer.dnd.name : this.computer.name;
+      // console.log(name);
+      return name;
+    },
+
+    // computed continued...
+    computerBonus() {
+      var bonus = this.params.sourceBooksInUse.dnd ? this.computer.dnd.bonus : this.computer.bonus;
+      // console.log(bonus);
+      return bonus;
+    },
+
+    // computed continued...
+    computerNodes() {
+      var nodes = this.params.sourceBooksInUse.dnd ? this.computer.dnd.nodes : this.computer.nodes;
+      // console.log(nodes);
+      return nodes;
+    },
+
+    // computed continued...
     computerDescription() {
       var desc = '';
       if (this.computer.id !== 'basic-computer') {
-        var nodes = this.computer.nodes;
+        var nodes = this.computerNodes;
         if (this.params.sourceBooksInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
           nodes += this.networkNodes.ct;
         }
-        var bonus = '+' + this.computer.bonus;
+        var bonus = '+' + this.computerBonus;
         var nodesWord = integerToWord(nodes);
         desc = bonus + ' to any ' + nodesWord + ' check' + (nodes > 1 ? 's' : '') + ' per round';
+        if (
+          this.params.sourceBooksInUse.som &&
+          this.isSupercolossal &&
+          this.secondaryComputerNodes > 0
+        ) {
+          nodes = this.secondaryComputerNodes;
+          bonus = '+' + this.secondaryComputerBonus;
+          nodesWord = integerToWord(nodes);
+          desc +=
+            ', ' +
+            bonus +
+            ' to any ' +
+            nodesWord +
+            ' check' +
+            (nodes > 1 ? 's' : '') +
+            ' per round';
+        }
       }
       return desc;
     },
@@ -616,20 +655,27 @@ export default {
 
     // computed continued...
     computerSkillBonusDesc() {
-      if (this.computer.nodes === undefined || this.computer.nodes == 0) return '+0';
+      if (this.computerNodes === undefined || this.computerNodes == 0) return '+0';
 
       var that = this;
       var bonuses = [];
 
       // main computer
-      for (var index = 0; index < this.computer.nodes; index++) {
-        bonuses.push(that.getPrefixedModifier(that.computer.bonus));
+      for (var index = 0; index < this.computerNodes; index++) {
+        bonuses.push(that.getPrefixedModifier(that.computerBonus));
+      }
+
+      // network nodes (supercolossal ships)
+      if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
+        for (var index = 0; index < this.networkNodes.ct; index++) {
+          bonuses.push(that.getPrefixedModifier(that.computerBonus));
+        }
       }
 
       // secondary computer (supercolossal ships)
       if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
-        for (var index = 0; index < this.secondaryComputer.nodes; index++) {
-          bonuses.push(that.getPrefixedModifier(that.secondaryComputer.bonus));
+        for (var index = 0; index < this.secondaryComputerNodes; index++) {
+          bonuses.push(that.getPrefixedModifier(that.secondaryComputerBonus));
         }
       }
 
@@ -694,12 +740,12 @@ export default {
 
     // computed continued...
     ctComputerNodes() {
-      var ct = 0;
-      ct += this.computer.nodes;
+      var ct = this.computerNodes.toString();
       if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
-        ct += this.secondaryComputer.nodes;
-
-        ct += this.networkNodes.ct;
+        ct += '/';
+        ct += this.networkNodes.ct.toString();
+        ct += '/';
+        ct += this.secondaryComputerNodes.toString();
       }
       return ct;
     },
@@ -799,6 +845,24 @@ export default {
     // computed continued...
     dedicatedComputer() {
       return this.getItemById('computer', this.params.dedicatedComputerId);
+    },
+
+    // computed continued...
+    dedicatedComputerBonus() {
+      var bonus = this.params.sourceBooksInUse.dnd
+        ? this.dedicatedComputer.dnd.bonus
+        : this.dedicatedComputer.bonus;
+      // console.log(bonus);
+      return bonus;
+    },
+
+    // computed continued...
+    dedicatedComputerNodes() {
+      var nodes = this.params.sourceBooksInUse.dnd
+        ? this.dedicatedComputer.dnd.nodes
+        : this.dedicatedComputer.nodes;
+      console.log(nodes);
+      return nodes;
     },
 
     // computed continued...
@@ -1177,11 +1241,6 @@ export default {
     },
 
     // computed continued...
-    // networkNode() {
-    // 	return this.getItemById("networkNode", this.params.networkNodeId);
-    // },
-
-    // computed continued...
     networkNodes() {
       var ctNodes = 0;
 
@@ -1189,13 +1248,28 @@ export default {
         ctNodes = parseInt(this.params.ctNetworkNodes);
       }
 
+      // TODO: Change this to use networkNode.json here
+      var dndBonuses = [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2];
+      var dndNames = [0, 0, 0, 0, 4110, 5110, 6110, 7110, 8210, 9210, 10210];
+      var maxNodes = [0, 0, 0, 0, 2, 2, 3, 3, 4, 4, 5];
       var pcuCosts = [0, 0, 0, 0, 8, 10, 11, 13, 15, 17, 19];
 
       return {
+        bonus: this.params.sourceBooksInUse.dnd
+          ? dndBonuses[this.computer.bonus]
+          : this.computer.bonus,
         bpCost: ctNodes * this.computer.bonus,
         ct: ctNodes,
+        name: this.params.sourceBooksInUse.dnd
+          ? dndNames[this.computer.bonus]
+          : this.computer.bonus,
+        max: maxNodes[this.computer.bonus],
         pcuCost: ctNodes * pcuCosts[this.computer.bonus == 0 ? 0 : this.computer.bonus - 1],
       };
+    },
+
+    networkNodesMax() {
+      return networkNode.max;
     },
 
     // computed continued...
@@ -1341,6 +1415,24 @@ export default {
     },
 
     // computed continued...
+    secondaryComputerBonus() {
+      var bonus = this.params.sourceBooksInUse.dnd
+        ? this.secondaryComputer.dnd.bonus
+        : this.secondaryComputer.bonus;
+      // console.log(bonus);
+      return bonus;
+    },
+
+    // computed continued...
+    secondaryComputerNodes() {
+      var nodes = this.params.sourceBooksInUse.dnd
+        ? this.secondaryComputer.dnd.nodes
+        : this.secondaryComputer.nodes;
+      // console.log(nodes);
+      return nodes;
+    },
+
+    // computed continued...
     securityDescription() {
       var desc = [];
       if (this.params.antiHackingSystemsId !== 'none') {
@@ -1410,7 +1502,6 @@ export default {
         'expansionBay',
         'fortifiedHull',
         'frame',
-        // "networkNode",
         'personalWeapon',
         'powerCore',
         'reinforcedBulkhead',
@@ -1492,10 +1583,15 @@ export default {
 
     // computed continued...
     selectOptionsComputer() {
-      // TODO: Change computer bonus check for D&D 5e
-      return this.selectOptions.computer.filter(
-        (option) => this.frame.size != 'Supercolossal' || option.bonus >= 4
-      );
+      return this.selectOptions.computer.filter((option) => {
+        if (this.frame.size != 'Supercolossal' || option.bonus >= 4) {
+          if (this.params.sourceBooksInUse.dnd) {
+            return option.dnd.name != 'n/a';
+          } else {
+            return true;
+          }
+        }
+      });
     },
 
     // computed continued...
@@ -1506,15 +1602,29 @@ export default {
     },
 
     // computed continued...
-    selectOptionsComputerDedicated() {
-      return this.selectOptions.computer.filter(
-        (option) => option.id == 'basic-computer' || option.id.indexOf('mononode') !== -1
-      );
+    selectOptionsDedicatedComputer() {
+      return this.selectOptions.computer.filter((option) => {
+        if (option.id == 'basic-computer') return true;
+        if (this.params.sourceBooksInUse.dnd) {
+          return option.dnd.name.indexOf('mononode') !== -1;
+        } else {
+          return option.id.indexOf('mononode') !== -1;
+        }
+      });
     },
 
     // computed continued...
-    selectOptionsComputerSecondary() {
-      return this.selectOptions.computer.filter((option) => option.bonus >= this.computer.bonus);
+    selectOptionsSecondaryComputer() {
+      return this.selectOptions.computer.filter((option) => {
+        if (option.bonus < this.computer.bonus) {
+          if (this.params.sourceBooksInUse.dnd) {
+            return option.dnd.name != 'n/a';
+          } else {
+            return true;
+          }
+        }
+        return false;
+      });
     },
 
     // computed continued...
@@ -1700,7 +1810,7 @@ export default {
 
       // computer
       var computerDesc =
-        this.computer.name.toLowerCase() +
+        this.computerName.toLowerCase() +
         (this.computer.id == 'basic-computer' ? '' : ' computer') +
         ' (tier ' +
         this.computerTier +
@@ -1708,8 +1818,9 @@ export default {
       desc.push(computerDesc);
 
       // network nodes
+      // TODO: Change this to use networkNode.json
       if (this.params.sourceBooksInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
-        var networkNodeDesc = ('mk ' + this.computer.bonus + ' network node').pluralise(
+        var networkNodeDesc = ('mk ' + this.networkNodes.name + ' network node').pluralise(
           this.networkNodes.ct
         );
         desc.push(networkNodeDesc + ' (' + this.networkNodes.ct + ')');
@@ -1901,8 +2012,6 @@ export default {
         parseInt(this.frame.bpCost) +
         parseInt(this.hiveJoiningBpCost) +
         (this.params.hasHolographicMantle ? 12 : 0) +
-        // (this.isSupercolossal ? this.networkNode.bpCost : 0) +
-        // (this.isSupercolossal ? parseInt(this.ctNetworkNode) * this.computer.bonus : 0) +
         (this.isSupercolossal ? this.networkNodes.bpCost : 0) +
         parseInt(this.powerCoresBpCost) +
         (this.params.hasPowersap ? 3 * this.sizeCategory.multiplier : 0) +
@@ -3008,39 +3117,19 @@ export default {
 
       return;
     },
-    /*
-    |------------------------------------------------------------------------------
-    | setComputer
-    |------------------------------------------------------------------------------
-    | When a new frame is selected, need to check that existing computer matches legal options
-    |------------------------------------------------------------------------------
-    */
+
     // methods continued...
     setComputer() {
       if (this.frame.size != 'Supercolossal') return;
-      if (this.computer.bonus < 4) this.params.computerId = 'mk-4-mononode';
+      if (this.computerBonus < 4) this.params.computerId = 'mk-4-mononode';
     },
-    /*
-    |------------------------------------------------------------------------------
-    | setNetworkNode
-    |------------------------------------------------------------------------------
-    | When a new frame is selected, need to check that existing network node matches legal options
-    |------------------------------------------------------------------------------
-    */
+
     // methods continued...
     setNetworkNode() {
-      if (this.params.networkNodeId == 'none') return;
-
       if (this.frame.size != 'Supercolossal') {
-        this.params.networkNodeId == 'none';
+        this.params.ctNetworkNodes == 0;
         return;
       }
-
-      if (this.networkNode.bonus != this.computer.bonus) {
-        this.params.networkNodeId = 'mk' + this.computer.bonus;
-      }
-
-      return;
     },
 
     // methods continued...
@@ -3177,19 +3266,6 @@ export default {
         throw 'Property ' + prop + ' is not an array';
       }
     },
-
-    // methods continued...
-    // updateComputer() {
-    // 	if (!this.params.sourceBooksInUse.som) return;
-    // 	if (this.params.networkNodeId == "none") return;
-    // 	if (this.frame.size != "Supercolossal") return;
-
-    // 	if (this.computer.bonus != this.networkNode.bonus) {
-    // 		this.params.networkNodeId = "mk" + this.computer.bonus;
-    // 	}
-
-    // 	return;
-    // },
 
     // methods continued...
     updateFrame() {

@@ -6,6 +6,7 @@
   | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   -->
   <div id="app" class="wrapper">
+    <!-- Graphics -->
     <Graphics></Graphics>
 
     <!--
@@ -21,7 +22,11 @@
         </svg>
       </a>
       <h3>{{ shipName }} (Tier&nbsp;{{ tier.name }})</h3>
+
+      <!-- Nav -->
       <Nav :params="params" :frame="frame"></Nav>
+
+      <!-- Summary -->
       <Summary
         :totalBpCost="totalBpCost"
         :bpBudget="tier.bpBudget"
@@ -55,10 +60,15 @@
           >
         </p>
       </div>
+
+      <!-- Intro -->
       <Intro />
+
       <!--
       <Patreon />
       -->
+
+      <!-- Sources -->
       <Sources :sourceBooks="sourceBooks" :params="params"></Sources>
       <!--
       <Readout />
@@ -120,7 +130,7 @@
             </p>
             <p>
               <strong>Power Core(s)</strong> {{ powerCoreDescription }};
-              <strong>Drift Engine</strong> {{ driftEngine.name }}; <strong>Systems</strong>
+              <strong>Drift Engine</strong> {{ driftEngine.name }}; <strong>Systems </strong>
               <span v-html="systemsDescription"></span
               ><span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span
               ><span v-if="expansionBaysDescription != 'None'"
@@ -1108,9 +1118,21 @@
               class="form-control"
               v-model="params.computerId">
               <option v-for="option in selectOptionsComputer" :value="option.id">
-                {{ option.name }}
+                {{ params.sourceBooksInUse.dnd ? option.dnd.name : option.name }}
               </option>
             </select>
+          </div>
+
+          <!-- network node (Supercolossal ships only) -->
+          <div class="form-group" v-if="isSupercolossal">
+            <label for="ctNetworkNodes">Network Nodes</label>
+            <input
+              type="number"
+              min="0"
+              :max="networkNodes.max"
+              id="ctNetworkNodes"
+              v-model="params.ctNetworkNodes"
+              class="form-control" />
           </div>
 
           <!-- secondary computer (Supercolossal ships only) -->
@@ -1121,20 +1143,10 @@
               id="secondaryComputerSelect"
               class="form-control"
               v-model="params.secondaryComputerId">
-              <option v-for="option in selectOptionsComputerSecondary" :value="option.id">
-                {{ option.name }}
+              <option v-for="option in selectOptionsSecondaryComputer" :value="option.id">
+                {{ params.sourceBooksInUse.dnd ? option.dnd.name : option.name }}
               </option>
             </select>
-          </div>
-
-          <!-- network node (Supercolossal ships only) -->
-          <div class="form-group" v-if="isSupercolossal">
-            <label for="ctNetworkNodes">Network Nodes</label>
-            <input
-              type="number"
-              id="ctNetworkNodes"
-              v-model="params.ctNetworkNodes"
-              class="form-control" />
           </div>
 
           <!-- dedicated computer -->
@@ -1146,7 +1158,7 @@
               class="form-control"
               v-model="params.dedicatedComputerId">
               <option v-for="option in selectOptionsDedicatedComputer" :value="option.id">
-                {{ option.name }}
+                {{ params.sourceBooksInUse.dnd ? option.dnd.name : option.name }}
               </option>
             </select>
           </div>
@@ -1156,7 +1168,7 @@
           <strong>Skill Bonus</strong> {{ computerSkillBonusDesc }};
           <span v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
             <strong>Dedicated Computer Skill Bonus</strong>
-            {{ getPrefixedModifier(dedicatedComputer.bonus) }};
+            {{ getPrefixedModifier(dedicatedComputerBonus) }};
           </span>
           <strong>Nodes</strong> {{ ctComputerNodes }}; <strong>Tier</strong> {{ computerTier }}
         </div>

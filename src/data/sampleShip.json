@@ -15,9 +15,7 @@
         "shipConcept": "Tiny fighters made to resemble bone sarcophagi, Necrogliders are each just large enough for one undead pilot. These notorious pilots jack their brains directly into their ships\u2019 sensors and controls, allowing them to recline in eerie repose as they direct the ships by thought alone.",
         "tierId": "1_2",
         "frameId": "interceptor",
-        "powerCoreIds": [
-          "micron-heavy"
-        ],
+        "powerCoreIds": ["micron-heavy"],
         "thrustersId": "t12",
         "armorId": "mk-3",
         "computerId": "basic-computer",
@@ -171,22 +169,14 @@
         "shipConcept": "Sepulchers are easily recognized by their domelike bridge canopy, which resembles an eerie red eye. Though employed by plenty of private Eoxian corporations, their intimidating bone spurs make it hard to forget the ships\u2019 origin (and still common use) as troop transport for undead marines.",
         "tierId": "5",
         "frameId": "transport",
-        "powerCoreIds": [
-          "pulse-white"
-        ],
+        "powerCoreIds": ["pulse-white"],
         "thrustersId": "m8",
         "armorId": "mk-5",
         "computerId": "basic-computer",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-6",
         "driftEngineId": "signal-booster",
-        "expansionBayIds": [
-          "cargo-hold",
-          "cargo-hold",
-          "cargo-hold",
-          "cargo-hold",
-          "cargo-hold"
-        ],
+        "expansionBayIds": ["cargo-hold", "cargo-hold", "cargo-hold", "cargo-hold", "cargo-hold"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -355,9 +345,7 @@
         "shipConcept": "The Omenbringer sails through the void like the corpse of some vast whale, but its organic aesthetics belie the cutting-edge technology of its construction. Within its gullet hang ranks of Necrogliders and other fighters, their undead pilots able to stay ready at their stations indefinitely. Without life support on many decks, the ship is very difficult to take down, and big sections (such as the hangars) stand airless and open to space by design.",
         "tierId": "14",
         "frameId": "battleship",
-        "powerCoreIds": [
-          "gateway-heavy"
-        ],
+        "powerCoreIds": ["gateway-heavy"],
         "thrustersId": "g4",
         "armorId": "mk-7",
         "computerId": "basic-computer",
@@ -603,9 +591,7 @@
         "shipConcept": "Few ships can match the speed and maneuverability of a Voidrunner, making it the perfect ship for daredevils, elite combat pilots looking to rely on skill rather than heavy arms and armor, and criminals in need of a fast getaway.",
         "tierId": "1_3",
         "frameId": "racer",
-        "powerCoreIds": [
-          "micron-heavy"
-        ],
+        "powerCoreIds": ["micron-heavy"],
         "thrustersId": "t12",
         "armorId": "mk-2",
         "computerId": "basic-computer",
@@ -756,9 +742,7 @@
         "shipConcept": "Big-bellied Vanserais resemble starfighters gone to fat. With prominent wing guns and a bridge canopy made to look like a much smaller cockpit, a Vanserai\u2019s appearance is designed to make it clear that while it may be a freighter, it\u2019s no easy target.",
         "tierId": "4",
         "frameId": "heavy-freighter",
-        "powerCoreIds": [
-          "arcus-ultra"
-        ],
+        "powerCoreIds": ["arcus-ultra"],
         "thrustersId": "l6",
         "armorId": "mk-4",
         "computerId": "basic-computer",
@@ -947,9 +931,7 @@
         "shipConcept": "The Idaran Millennia resembles a sleek bird skull, with delicate, rippled fins. When cruising, the ship remains compact, yet in combat its \u201cbeak\u201d opens to reveal a magnetic launch strip capable of firing a swarm of fighters into the fray with incredible speed. Even more disturbing, its fins detach, floating in a perfect magnetic field lock\u2014their purpose is a highly classified secret.",
         "tierId": "12",
         "frameId": "carrier",
-        "powerCoreIds": [
-          "gateway-heavy"
-        ],
+        "powerCoreIds": ["gateway-heavy"],
         "thrustersId": "g4",
         "armorId": "mk-5",
         "computerId": "mk-2-trinode",
@@ -1171,20 +1153,14 @@
         "shipConcept": "One of Ringworks\u2019 most versatile designs, the Wanderer evolved out of early aerospace fighters and spaceplanes and still maintains much of their sleek design. Many organizations and governments use a slimmed-down and armed-up version of the Wanderer\u2014sometimes called a Starwasp\u2014for planetary defense or as a short-range fighter.",
         "tierId": "1_4",
         "frameId": "shuttle",
-        "powerCoreIds": [
-          "micron-light"
-        ],
+        "powerCoreIds": ["micron-light"],
         "thrustersId": "s6",
         "armorId": "mk-2",
         "computerId": "basic-computer",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-1",
         "driftEngineId": "none",
-        "expansionBayIds": [
-          "cargo-hold",
-          "cargo-hold",
-          "passenger-seating"
-        ],
+        "expansionBayIds": ["cargo-hold", "cargo-hold", "passenger-seating"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -1319,21 +1295,14 @@
         "shipConcept": "Thoroughly industrial in its aesthetics, the Venture is a ship designed to keep its crew alive in unfriendly systems\u2014everything else is secondary. Inside, however, the Venture is surprisingly comfortable, making it perfect for exploration, permanent residency, and long-haul shipping.",
         "tierId": "1",
         "frameId": "explorer",
-        "powerCoreIds": [
-          "pulse-gray"
-        ],
+        "powerCoreIds": ["pulse-gray"],
         "thrustersId": "m6",
         "armorId": "mk-3",
         "computerId": "basic-computer",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-1",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "science-lab-physical",
-          "cargo-hold",
-          "cargo-hold",
-          "cargo-hold"
-        ],
+        "expansionBayIds": ["science-lab-physical", "cargo-hold", "cargo-hold", "cargo-hold"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -1500,9 +1469,7 @@
         "shipConcept": "Severe and pugnacious, the Immortal is the workhorse capital ship of military fleets like those of the Stewards and the Knights of Golarion. Thickly armored and loaded with weapons, this cruiser rarely needs to fire a shot in most conflicts, as its mere appearance in-system can stop a conflict cold and send all but the most militant threats running for the safety of the Drift.",
         "tierId": "10",
         "frameId": "cruiser",
-        "powerCoreIds": [
-          "nova-ultra"
-        ],
+        "powerCoreIds": ["nova-ultra"],
         "thrustersId": "h8",
         "armorId": "mk-4",
         "computerId": "mk-3-duonode",
@@ -1681,20 +1648,14 @@
         "shipConcept": "As befits their name, Drones are extremely common and used as freight, personnel transport, light colonial defense, and more. Despite the ships\u2019 mass production, Starhive takes a natural shirren pride in making sure each ship\u2019s iridescent paint job is unique.",
         "tierId": "1",
         "frameId": "light-freighter",
-        "powerCoreIds": [
-          "pulse-brown"
-        ],
+        "powerCoreIds": ["pulse-brown"],
         "thrustersId": "s8",
         "armorId": "mk-2",
         "computerId": "mk-1-mononode",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-1",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "cargo-hold",
-          "cargo-hold",
-          "escape-pods"
-        ],
+        "expansionBayIds": ["cargo-hold", "cargo-hold", "escape-pods"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -1853,21 +1814,14 @@
         "shipConcept": "Shirrens may prefer peace to war, but they still remember the terrifying capabilities of their former slave masters, the Swarm. These destroyers employ much of the same technology to create swift, deadly warships that can be operated by a small crew.",
         "tierId": "6",
         "frameId": "destroyer",
-        "powerCoreIds": [
-          "arcus-maximum"
-        ],
+        "powerCoreIds": ["arcus-maximum"],
         "thrustersId": "l8",
         "armorId": "mk-4",
         "computerId": "mk-1-trinode",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-4",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "cargo-hold",
-          "escape-pods",
-          "escape-pods",
-          "escape-pods"
-        ],
+        "expansionBayIds": ["cargo-hold", "escape-pods", "escape-pods", "escape-pods"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -2048,9 +2002,7 @@
         "shipConcept": "Despite its formidable array of weapons and sensors, the Titan Hauler is optimized for freight, carrying huge loads within its beetle-like frame. Its partially organic nature aids in this capacity, as sphincter doors and expandable chambers can resize themselves to accommodate any cargo.",
         "tierId": "9",
         "frameId": "bulk-freighter",
-        "powerCoreIds": [
-          "nova-ultra"
-        ],
+        "powerCoreIds": ["nova-ultra"],
         "thrustersId": "h6",
         "armorId": "mk-5",
         "computerId": "mk-3-mononode",
@@ -2223,9 +2175,7 @@
         "shipConcept": "While Maulers can be flown in combat by a single person, making them popular with bounty hunters and other lone wolves, militaries usually staff them with two: a pilot seated upright in the bubble canopy, and a gunner behind the pilot operating via screens.",
         "tierId": "2",
         "frameId": "fighter",
-        "powerCoreIds": [
-          "pulse-brown"
-        ],
+        "powerCoreIds": ["pulse-brown"],
         "thrustersId": "t10",
         "armorId": "mk-5",
         "computerId": "mk-1-mononode",
@@ -2387,9 +2337,7 @@
         "shipConcept": "Styled as a miniature version of larger vesk warships, the Norikama Dropship is designed as a fleet transport ship, but it has no problem picking a fight on its own.",
         "tierId": "8",
         "frameId": "transport",
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
+        "powerCoreIds": ["pulse-orange"],
         "thrustersId": "m12",
         "armorId": "mk-6",
         "computerId": "mk-3-duonode",
@@ -2573,9 +2521,7 @@
         "shipConcept": "Feared across multiple star systems, the Tyrant lives up to its name. Huge weapon batteries tear through even the most formidable capital ships, while its hangars unleash squadrons of Maulers to mop up foes too insignificant to be worth the Tyrant\u2019s direct attention.",
         "tierId": "16",
         "frameId": "dreadnought",
-        "powerCoreIds": [
-          "gateway-ultra"
-        ],
+        "powerCoreIds": ["gateway-ultra"],
         "thrustersId": "c4",
         "armorId": "mk-10",
         "computerId": "basic-computer",
@@ -2863,21 +2809,14 @@
         "shipConcept": "",
         "tierId": "3",
         "frameId": "explorer",
-        "powerCoreIds": [
-          "pulse-green"
-        ],
+        "powerCoreIds": ["pulse-green"],
         "thrustersId": "m10",
         "armorId": "mk-3",
         "computerId": "mk-1-duonode",
         "crewQuartersId": "good",
         "defensiveCountermeasuresId": "mk-3",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "cargo-hold",
-          "cargo-hold",
-          "escape-pods",
-          "recreation-suite-hac"
-        ],
+        "expansionBayIds": ["cargo-hold", "cargo-hold", "escape-pods", "recreation-suite-hac"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -3048,9 +2987,7 @@
         "shipConcept": "The anacite pilot of a specific Autonomous Exploration Vehicle is often created and programmed to fit inside of and operate that vessel. Once its mission has been completed, its consciousness is usually transferred to another shell.",
         "tierId": "1_3",
         "frameId": "racer",
-        "powerCoreIds": [
-          "micron-light"
-        ],
+        "powerCoreIds": ["micron-light"],
         "thrustersId": "t8",
         "armorId": "mk-3",
         "computerId": "basic-computer",
@@ -3209,21 +3146,14 @@
         "shipConcept": "CompEnt engineers design Group Defense Frigates with little regard to aesthetic concerns, though some find their stark utilitarianism an enticing feature.",
         "tierId": "8",
         "frameId": "destroyer",
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
+        "powerCoreIds": ["pulse-orange"],
         "thrustersId": "l6",
         "armorId": "mk-6",
         "computerId": "mk-2-trinode",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-4",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "launch-tubes",
-          "launch-tubes",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["launch-tubes", "launch-tubes", "none", "none"],
         "antiHackingSystemsId": "mk1",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -3403,9 +3333,7 @@
         "shipConcept": "These large freighters are built to serve a practical purpose: conveying and protecting a multitude of mechanical equipment and its operators to new frontiers. Its mostly anacite crew require very little in the way of comforts.",
         "tierId": "11",
         "frameId": "bulk-freighter",
-        "powerCoreIds": [
-          "nova-ultra"
-        ],
+        "powerCoreIds": ["nova-ultra"],
         "thrustersId": "h6",
         "armorId": "mk-7",
         "computerId": "mk-4-trinode",
@@ -3585,9 +3513,7 @@
         "shipConcept": "A standard fighter in the Hellknight navy, an Infernex Burning Nail offers both speed and firepower, though its lack of port and starboard weapons is a known weakness. Burning Nail pilots are trained to compensate for this flaw by employing daring piloting maneuvers.",
         "tierId": "1",
         "frameId": "fighter",
-        "powerCoreIds": [
-          "micron-ultra"
-        ],
+        "powerCoreIds": ["micron-ultra"],
         "thrustersId": "t10",
         "armorId": "mk-3",
         "computerId": "mk-1-mononode",
@@ -3747,10 +3673,7 @@
         "shipConcept": "The Hellknights send in an Infernex Interdictus when they wish to stop other vessels in their tracks and bring in their crews alive. The combination of gravity gun and Drift shadow projector makes an Interdictus difficult to escape from.",
         "tierId": "13",
         "frameId": "cruiser",
-        "powerCoreIds": [
-          "nova-heavy",
-          "nova-light"
-        ],
+        "powerCoreIds": ["nova-heavy", "nova-light"],
         "thrustersId": "h8",
         "armorId": "mk-7",
         "computerId": "mk-4-duonode",
@@ -3935,10 +3858,7 @@
         "shipConcept": "Bristling with weapons&mdash;not to mention wicked-looking barbs&mdash;a Hellknight Keep Diabolical is among the most feared starships both within the Pact Worlds system and in deep space.",
         "tierId": "16",
         "frameId": "battleship",
-        "powerCoreIds": [
-          "gateway-light",
-          "nova-heavy"
-        ],
+        "powerCoreIds": ["gateway-light", "nova-heavy"],
         "thrustersId": "g6",
         "armorId": "mk-9",
         "computerId": "mk-5-duonode",
@@ -4188,9 +4108,7 @@
         "shipConcept": "An Inheritorworks Brightsword's main weapon&mdash;a light plasma cannon&mdash;is mounted within a blade-shaped housing in the front of the vessel. This imposing feature acts as a deterrent to enemy ships when they spot a wave of Brightswords streaking through the sky.",
         "tierId": "2",
         "frameId": "fighter",
-        "powerCoreIds": [
-          "arcus-light"
-        ],
+        "powerCoreIds": ["arcus-light"],
         "thrustersId": "t12",
         "armorId": "mk-7",
         "computerId": "basic-computer",
@@ -4350,9 +4268,7 @@
         "shipConcept": "Iomedaean Shieldcrafts serve as transports for platoons of crusaders journeying to the front in their fight against evil. These soldiers store their suits of powered armor in the ship's cargo bays on the voyage as they await deployment.",
         "tierId": "8",
         "frameId": "transport",
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
+        "powerCoreIds": ["pulse-orange"],
         "thrustersId": "m6",
         "armorId": "mk-7",
         "computerId": "mk-2-trinode",
@@ -4541,11 +4457,7 @@
         "shipConcept": "Massive, grandiose vessels, the Inheritorworks Cathedralships are the pride of the Iomedaean navy. In addition to being capable of carrying 16 Brightswords within its hangars, a Cathedralship has the capital weaponry to be a formidable foe in its own right.",
         "tierId": "16",
         "frameId": "carrier",
-        "powerCoreIds": [
-          "gateway-ultra",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "none", "none"],
         "thrustersId": "g6",
         "armorId": "mk-11",
         "computerId": "mk-5-duonode",
@@ -4766,9 +4678,7 @@
         "shipConcept": "Vercite pilots favor Terminator Star Drakes as their vessels of choice for the Absalom Run, a race from Verces to Absalom Station and back that occurs once every 3 years. The winner of the race becomes an instant celebrity throughout the system.",
         "tierId": "1_4",
         "frameId": "racer",
-        "powerCoreIds": [
-          "micron-light"
-        ],
+        "powerCoreIds": ["micron-light"],
         "thrustersId": "t14",
         "armorId": "mk-3",
         "computerId": "basic-computer",
@@ -4920,9 +4830,7 @@
         "shipConcept": "The most striking feature of a Redshift Pleasure Sail&mdash;its enormous solar sail&mdash;is more of a throwback to its original, antiquated design than an actually functional system. These luxury vessels are popular with the Pact Worlds' rich and powerful.",
         "tierId": "3",
         "frameId": "explorer",
-        "powerCoreIds": [
-          "pulse-green"
-        ],
+        "powerCoreIds": ["pulse-green"],
         "thrustersId": "m12",
         "armorId": "mk-5",
         "computerId": "basic-computer",
@@ -5097,10 +5005,7 @@
         "shipConcept": "The recent disappearance of the Drift Cruiser <i>Utopia</i> while taking guests to see a comet plunge into a brown dwarf star in the Vast has done little to dissuade those clamoring for tickets aboard these opulent vessels.",
         "tierId": "11",
         "frameId": "bulk-freighter",
-        "powerCoreIds": [
-          "nova-ultra",
-          "none"
-        ],
+        "powerCoreIds": ["nova-ultra", "none"],
         "thrustersId": "h6",
         "armorId": "mk-7",
         "computerId": "mk-3-trinode",
@@ -5280,9 +5185,7 @@
         "shipConcept": "Sleek and maneuverable, UC Pods dart around the battlefield and harry their enemies with spore pod launchers, leaving larger ships to finish the fight. Pods tend to have more flighty empathetic responses, much like those of small birds.",
         "tierId": "1_2",
         "frameId": "interceptor",
-        "powerCoreIds": [
-          "micron-heavy"
-        ],
+        "powerCoreIds": ["micron-heavy"],
         "thrustersId": "t12",
         "armorId": "mk-3",
         "computerId": "mk-1-mononode",
@@ -5433,21 +5336,14 @@
         "shipConcept": "Though they are composed of several UC Pod ships fused together, UC Arkships have a single sentience that acts in a very protective manner toward its component vessels. A crew must learn to comfort an Arkship when these pods are lost in battle.",
         "tierId": "10",
         "frameId": "destroyer",
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
+        "powerCoreIds": ["pulse-orange"],
         "thrustersId": "l8",
         "armorId": "mk-9",
         "computerId": "mk-2-tetranode",
         "crewQuartersId": "common",
         "defensiveCountermeasuresId": "mk-6",
         "driftEngineId": "signal-booster",
-        "expansionBayIds": [
-          "cargo-hold",
-          "cargo-hold",
-          "hive-bay",
-          "hive-bay"
-        ],
+        "expansionBayIds": ["cargo-hold", "cargo-hold", "hive-bay", "hive-bay"],
         "antiHackingSystemsId": "none",
         "antiPersonnelWeaponId": "none",
         "hasBiometricLocks": 0,
@@ -5627,10 +5523,7 @@
         "shipConcept": "A UC Gardenship is a sight to behold drifting through space, a mass of bright green set against inky darkness and bringing life wherever it goes. Its foliage is protected from the harshness of vacuum by powerful (and nearly invisible) forcefields.",
         "tierId": "10",
         "frameId": "bulk-freighter",
-        "powerCoreIds": [
-          "nova-heavy",
-          "none"
-        ],
+        "powerCoreIds": ["nova-heavy", "none"],
         "thrustersId": "h4",
         "armorId": "mk-8",
         "computerId": "mk-3-mononode",
@@ -5944,11 +5837,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "none",
-        "expansionBayIds": [
-          "none",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["none", "none", "none"],
         "fortifiedHullId": "none",
         "frameId": "interceptor",
         "hasAlgalShielding": 0,
@@ -5968,12 +5857,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "micron-heavy"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["micron-heavy"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -6179,11 +6064,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "none",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["none", "none", "none"],
         "fortifiedHullId": "none",
         "frameId": "racer",
         "hasAlgalShielding": 0,
@@ -6203,12 +6084,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "micron-light"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["micron-light"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -6415,11 +6292,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "none",
-        "expansionBayIds": [
-          "none",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["none", "none", "none"],
         "fortifiedHullId": "none",
         "frameId": "interceptor",
         "hasAlgalShielding": 0,
@@ -6439,12 +6312,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "arcus-light"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["arcus-light"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -6650,11 +6519,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "none",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["none", "none", "none"],
         "fortifiedHullId": "none",
         "frameId": "interceptor",
         "hasAlgalShielding": 0,
@@ -6674,12 +6539,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "micron-heavy"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["micron-heavy"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -6905,9 +6766,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "none"
-        ],
+        "expansionBayIds": ["none"],
         "fortifiedHullId": "none",
         "frameId": "racer",
         "hasAlgalShielding": 0,
@@ -6927,12 +6786,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "arcus-light"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["arcus-light"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -7151,9 +7006,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-booster",
-        "expansionBayIds": [
-          "none"
-        ],
+        "expansionBayIds": ["none"],
         "fortifiedHullId": "none",
         "frameId": "fighter",
         "hasAlgalShielding": 0,
@@ -7173,12 +7026,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "pulse-brown"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-brown"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -7414,9 +7263,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "none"
-        ],
+        "expansionBayIds": ["none"],
         "fortifiedHullId": "none",
         "frameId": "fighter",
         "hasAlgalShielding": 0,
@@ -7436,12 +7283,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "pulse-brown"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-brown"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -7677,11 +7520,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-booster",
-        "expansionBayIds": [
-          "none",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["none", "none", "none"],
         "fortifiedHullId": "none",
         "frameId": "interceptor",
         "hasAlgalShielding": 0,
@@ -7701,12 +7540,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "pulse-gray"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-gray"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -7932,11 +7767,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "none",
-          "none",
-          "none"
-        ],
+        "expansionBayIds": ["none", "none", "none"],
         "fortifiedHullId": "none",
         "frameId": "fighter",
         "hasAlgalShielding": 0,
@@ -7956,12 +7787,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": true,
-        "powerCoreIds": [
-          "pulse-black"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-black"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -8205,11 +8032,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-booster",
-        "expansionBayIds": [
-          "cargo-hold",
-          "cargo-hold",
-          "cargo-hold"
-        ],
+        "expansionBayIds": ["cargo-hold", "cargo-hold", "cargo-hold"],
         "fortifiedHullId": "none",
         "frameId": "light-freighter",
         "hasAlgalShielding": 0,
@@ -8229,12 +8052,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-black"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-black"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -8509,12 +8328,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": true,
-        "powerCoreIds": [
-          "pulse-green"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-green"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -8787,12 +8602,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-green"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-green"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -9051,11 +8862,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-major",
-        "expansionBayIds": [
-          "cargo-hold",
-          "guest-quarters-luxurious",
-          "recreation-suite-hac"
-        ],
+        "expansionBayIds": ["cargo-hold", "guest-quarters-luxurious", "recreation-suite-hac"],
         "fortifiedHullId": "none",
         "frameId": "shuttle",
         "hasAlgalShielding": 0,
@@ -9075,12 +8882,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "arcus-heavy"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["arcus-heavy"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -9309,10 +9112,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-major",
-        "expansionBayIds": [
-          "hydroponic-garden",
-          "science-lab-general"
-        ],
+        "expansionBayIds": ["hydroponic-garden", "science-lab-general"],
         "fortifiedHullId": "none",
         "frameId": "shuttle",
         "hasAlgalShielding": 0,
@@ -9332,12 +9132,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "arcus-ultra"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["arcus-ultra"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -9593,12 +9389,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-red"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-red"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -9843,12 +9635,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "cargo-hold",
-          "escape-pods",
-          "medical-bay",
-          "passenger-seating"
-        ],
+        "expansionBayIds": ["cargo-hold", "escape-pods", "medical-bay", "passenger-seating"],
         "fortifiedHullId": "none",
         "frameId": "explorer",
         "hasAlgalShielding": 0,
@@ -9868,12 +9655,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": true,
-        "powerCoreIds": [
-          "pulse-red"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-red"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -10177,12 +9960,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-blue"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-blue"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -10487,12 +10266,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -10792,12 +10567,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -11090,11 +10861,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-booster",
-        "expansionBayIds": [
-          "arcane-laboratory",
-          "cargo-hold",
-          "hydroponic-garden"
-        ],
+        "expansionBayIds": ["arcane-laboratory", "cargo-hold", "hydroponic-garden"],
         "fortifiedHullId": "none",
         "frameId": "light-freighter",
         "hasAlgalShielding": 0,
@@ -11114,12 +10881,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -11445,12 +11208,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -11772,12 +11531,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -12086,12 +11841,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -12209,22 +11960,11 @@
           "dt": "n/a",
           "ct": 26,
           "mounts": {
-            "forward": [
-              "heavy",
-              "light"
-            ],
-            "port": [
-              "light"
-            ],
-            "starboard": [
-              "light"
-            ],
-            "aft": [
-              "light"
-            ],
-            "turret": [
-              "light"
-            ]
+            "forward": ["heavy", "light"],
+            "port": ["light"],
+            "starboard": ["light"],
+            "aft": ["light"],
+            "turret": ["light"]
           },
           "expansionBays": "7",
           "minCrew": "6",
@@ -12447,12 +12187,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "pulse-orange"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-orange"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -12769,14 +12505,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "nova-heavy",
-          "nova-heavy"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["nova-heavy", "nova-heavy"],
+        "powerCoreSpecialMaterials": ["none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -13072,12 +12802,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "gateway-heavy"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["gateway-heavy"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -13396,12 +13122,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-heavy"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["gateway-heavy"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -13722,14 +13444,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "nova-ultra",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["nova-ultra", "none"],
+        "powerCoreSpecialMaterials": ["none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -14049,14 +13765,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "gateway-heavy",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-heavy", "none"],
+        "powerCoreSpecialMaterials": ["none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -14365,12 +14075,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": true,
-        "powerCoreIds": [
-          "pulse-blue"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none"
-        ],
+        "powerCoreIds": ["pulse-blue"],
+        "powerCoreSpecialMaterials": ["none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -14476,19 +14182,10 @@
           "dt": "n/a",
           "ct": 17,
           "mounts": {
-            "forward": [
-              "heavy",
-              "light"
-            ],
-            "port": [
-              "light"
-            ],
-            "starboard": [
-              "light"
-            ],
-            "aft": [
-              "light"
-            ]
+            "forward": ["heavy", "light"],
+            "port": ["light"],
+            "starboard": ["light"],
+            "aft": ["light"]
           },
           "expansionBays": 6,
           "minCrew": 1,
@@ -14708,16 +14405,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -15043,11 +14732,7 @@
         "defensiveCountermeasuresMaterialId": "none",
         "deflectorShieldId": "none",
         "driftEngineId": "signal-basic",
-        "expansionBayIds": [
-          "hangar-bay",
-          "hangar-bay",
-          "shuttle-bay"
-        ],
+        "expansionBayIds": ["hangar-bay", "hangar-bay", "shuttle-bay"],
         "fortifiedHullId": "none",
         "frameId": "carrier",
         "hasAlgalShielding": 0,
@@ -15067,16 +14752,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-heavy",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-heavy", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -15438,16 +15115,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-heavy",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-heavy", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -15836,16 +15505,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-heavy",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-heavy", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -16233,16 +15894,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -16631,16 +16284,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -17067,18 +16712,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "none",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "none", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -17517,18 +17152,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "gateway-light",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "gateway-light", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -17964,18 +17589,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "gateway-ultra",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "gateway-ultra", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -18469,18 +18084,8 @@
         "hasSpaceStationFramework": true,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "gateway-ultra",
-          "gateway-ultra",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["gateway-ultra", "gateway-ultra", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -18943,18 +18548,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "titan-ultra",
-          "none",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["titan-ultra", "none", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -19392,18 +18987,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "titan-heavy",
-          "none",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["titan-heavy", "none", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -20118,19 +19703,9 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": false,
-        "powerCoreIds": [
-          "titan-ultra",
-          "none",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
-        "ctNetworkNodes": "4",
+        "powerCoreIds": ["titan-ultra", "none", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
+        "ctNetworkNodes": 4,
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",
@@ -20782,18 +20357,8 @@
         "hasSpaceStationFramework": 0,
         "isSetDefaultCrewSkillValues": 0,
         "isUseStrictRules": 1,
-        "powerCoreIds": [
-          "titan-heavy",
-          "none",
-          "none",
-          "none"
-        ],
-        "powerCoreSpecialMaterials": [
-          "none",
-          "none",
-          "none",
-          "none"
-        ],
+        "powerCoreIds": ["titan-heavy", "none", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
         "reinforcedBulkheadId": "none",
         "roboticAppendageId": "none",
         "secondaryComputerId": "basic-computer",

@@ -1,10 +1,5 @@
 {
-  "props": [
-    "bonus",
-    "nodes",
-    "pcuCost",
-    "bpCost"
-  ],
+  "props": ["bonus", "nodes", "pcuCost", "bpCost"],
   "data": [
     {
       "id": "basic-computer",
@@ -12,7 +7,12 @@
       "bonus": 0,
       "nodes": 0,
       "pcuCost": 0,
-      "bpCost": 0
+      "bpCost": 0,
+      "dnd": {
+        "name": "Mk 1000 computer",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-1-mononode",
@@ -20,7 +20,12 @@
       "bonus": 1,
       "nodes": 1,
       "pcuCost": 10,
-      "bpCost": 1
+      "bpCost": 1,
+      "dnd": {
+        "name": "Mk 1110 mononode",
+        "bonus": 1,
+        "nodes": 1
+      }
     },
     {
       "id": "mk-1-duonode",
@@ -28,7 +33,12 @@
       "bonus": 1,
       "nodes": 2,
       "pcuCost": 10,
-      "bpCost": 2
+      "bpCost": 2,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-1-trinode",
@@ -36,7 +46,12 @@
       "bonus": 1,
       "nodes": 3,
       "pcuCost": 10,
-      "bpCost": 3
+      "bpCost": 3,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-1-tetranode",
@@ -44,7 +59,12 @@
       "bonus": 1,
       "nodes": 4,
       "pcuCost": 10,
-      "bpCost": 4
+      "bpCost": 4,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-2-mononode",
@@ -52,7 +72,12 @@
       "bonus": 2,
       "nodes": 1,
       "pcuCost": 15,
-      "bpCost": 4
+      "bpCost": 4,
+      "dnd": {
+        "name": "Mk 2120 duonode",
+        "bonus": 1,
+        "nodes": 2
+      }
     },
     {
       "id": "mk-2-duonode",
@@ -60,7 +85,12 @@
       "bonus": 2,
       "nodes": 2,
       "pcuCost": 15,
-      "bpCost": 8
+      "bpCost": 8,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-2-trinode",
@@ -68,7 +98,12 @@
       "bonus": 2,
       "nodes": 3,
       "pcuCost": 15,
-      "bpCost": 12
+      "bpCost": 12,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-2-tetranode",
@@ -76,7 +111,12 @@
       "bonus": 2,
       "nodes": 4,
       "pcuCost": 15,
-      "bpCost": 16
+      "bpCost": 16,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-3-mononode",
@@ -84,7 +124,12 @@
       "bonus": 3,
       "nodes": 1,
       "pcuCost": 20,
-      "bpCost": 9
+      "bpCost": 9,
+      "dnd": {
+        "name": "Mk 3130 trinode",
+        "bonus": 1,
+        "nodes": 3
+      }
     },
     {
       "id": "mk-3-duonode",
@@ -92,7 +137,12 @@
       "bonus": 3,
       "nodes": 2,
       "pcuCost": 20,
-      "bpCost": 18
+      "bpCost": 18,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-3-trinode",
@@ -100,7 +150,12 @@
       "bonus": 3,
       "nodes": 3,
       "pcuCost": 20,
-      "bpCost": 27
+      "bpCost": 27,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 1,
+        "nodes": 3
+      }
     },
     {
       "id": "mk-3-tetranode",
@@ -108,7 +163,12 @@
       "bonus": 3,
       "nodes": 4,
       "pcuCost": 20,
-      "bpCost": 36
+      "bpCost": 36,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-4-mononode",
@@ -116,7 +176,12 @@
       "bonus": 4,
       "nodes": 1,
       "pcuCost": 25,
-      "bpCost": 16
+      "bpCost": 16,
+      "dnd": {
+        "name": "Mk 4140 tetranode",
+        "bonus": 1,
+        "nodes": 4
+      }
     },
     {
       "id": "mk-4-duonode",
@@ -124,7 +189,12 @@
       "bonus": 4,
       "nodes": 2,
       "pcuCost": 25,
-      "bpCost": 32
+      "bpCost": 32,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-4-trinode",
@@ -132,7 +202,12 @@
       "bonus": 4,
       "nodes": 3,
       "pcuCost": 25,
-      "bpCost": 48
+      "bpCost": 48,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-5-mononode",
@@ -140,7 +215,12 @@
       "bonus": 5,
       "nodes": 1,
       "pcuCost": 30,
-      "bpCost": 25
+      "bpCost": 25,
+      "dnd": {
+        "name": "Mk 5210 mononode",
+        "bonus": 2,
+        "nodes": 1
+      }
     },
     {
       "id": "mk-5-duonode",
@@ -148,7 +228,12 @@
       "bonus": 5,
       "nodes": 2,
       "pcuCost": 30,
-      "bpCost": 50
+      "bpCost": 50,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-5-trinode",
@@ -156,7 +241,12 @@
       "bonus": 5,
       "nodes": 3,
       "pcuCost": 30,
-      "bpCost": 75
+      "bpCost": 75,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-6-mononode",
@@ -164,7 +254,12 @@
       "bonus": 6,
       "nodes": 1,
       "pcuCost": 35,
-      "bpCost": 36
+      "bpCost": 36,
+      "dnd": {
+        "name": "Mk 6220 duonode",
+        "bonus": 2,
+        "nodes": 2
+      }
     },
     {
       "id": "mk-6-duonode",
@@ -172,7 +267,12 @@
       "bonus": 6,
       "nodes": 2,
       "pcuCost": 35,
-      "bpCost": 72
+      "bpCost": 72,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-7-mononode",
@@ -180,7 +280,12 @@
       "bonus": 7,
       "nodes": 1,
       "pcuCost": 40,
-      "bpCost": 49
+      "bpCost": 49,
+      "dnd": {
+        "name": "Mk 7230 trinode",
+        "bonus": 2,
+        "nodes": 3
+      }
     },
     {
       "id": "mk-7-duonode",
@@ -188,7 +293,12 @@
       "bonus": 7,
       "nodes": 2,
       "pcuCost": 40,
-      "bpCost": 98
+      "bpCost": 98,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-8-mononode",
@@ -196,7 +306,12 @@
       "bonus": 8,
       "nodes": 1,
       "pcuCost": 45,
-      "bpCost": 64
+      "bpCost": 64,
+      "dnd": {
+        "name": "Mk 8310 mononode",
+        "bonus": 3,
+        "nodes": 1
+      }
     },
     {
       "id": "mk-8-duonode",
@@ -204,7 +319,12 @@
       "bonus": 8,
       "nodes": 2,
       "pcuCost": 45,
-      "bpCost": 128
+      "bpCost": 128,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-9-mononode",
@@ -212,7 +332,12 @@
       "bonus": 9,
       "nodes": 1,
       "pcuCost": 50,
-      "bpCost": 81
+      "bpCost": 81,
+      "dnd": {
+        "name": "Mk 9320 duonode",
+        "bonus": 3,
+        "nodes": 2
+      }
     },
     {
       "id": "mk-9-duonode",
@@ -220,7 +345,12 @@
       "bonus": 9,
       "nodes": 2,
       "pcuCost": 50,
-      "bpCost": 162
+      "bpCost": 162,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     },
     {
       "id": "mk-10-mononode",
@@ -228,7 +358,12 @@
       "bonus": 10,
       "nodes": 1,
       "pcuCost": 55,
-      "bpCost": 100
+      "bpCost": 100,
+      "dnd": {
+        "name": "Mk 10330 trinode",
+        "bonus": 3,
+        "nodes": 3
+      }
     },
     {
       "id": "mk-10-duonode",
@@ -236,7 +371,12 @@
       "bonus": 10,
       "nodes": 2,
       "pcuCost": 55,
-      "bpCost": 200
+      "bpCost": 200,
+      "dnd": {
+        "name": "n/a",
+        "bonus": 0,
+        "nodes": 0
+      }
     }
   ]
 }
