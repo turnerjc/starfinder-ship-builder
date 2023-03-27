@@ -16,32 +16,38 @@
   </div>
   <div class="box">
     <p>
+      <strong>5e Compatiblity Changes: </strong>
+    </p>
+    <ul>
+      <li>
+        Modified Armor AC Bonus (+0 to +8); TL Mods (-1 to -2); Turn Mod (odd Mk Armor is one worse
+        than even Mk Armor)
+      </li>
+      <li>
+        Modified DCM TL Bonus (+0 to +8); PCU Cost (even Mk DCM have smaller PCU cost than odd Mk
+        DCM)
+      </li>
+      <li>Modified Computer Bonus (from +1 to +3); one computer option per Mk</li>
+    </ul>
+    <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
     </p>
     <ul>
-      <li>Moved Ship Readout to the top; separated Sample Ships; new Load/Save section</li>
-      <li>
-        Modify Armor Class for 5e (10 to 18); TL Mods (-1 to -3); Turn Mod (odd Mk Armor is one
-        worse than even Mk Armor)
-      </li>
-      <li>
-        Modify Target Lock for 5e (10 to 18); PCU Cost (even Mk DCM have smaller PCU cost than odd
-        Mk DCM)
-      </li>
-      <li>Modify Computer Modifiers for 5e (from +1 to +3)</li>
-      <li>Modify Dedicated Computer Harness for 5e</li>
-      <li>Modify Supercolossal Secondary Computers and Network Nodes for 5e</li>
+      <li>Updated Intro, Ship Readout, Sample Ships, Load/Save sections</li>
+      <li>Improved Supercolossal Secondary Computers and Network Nodes in Readout</li>
     </ul>
     <strong>TODO:</strong>
     <ul>
+      <li>Add Systems and Upgrades from Dark Matter</li>
       <li>Replace Crew Rank with 5e Proficiency Bonus (+2 to +6 based on Ship Tier)</li>
       <li>Option to populate Crew Modifiers</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
-      <li>Load/Save Buttons to replace Input/JSON text areas</li>
-      <li>Implement Ship Sheet layout</li>
       <li>Add Virtues and Flaws</li>
+      <li>Add Dedicated Computer Skill</li>
+      <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
+      <li>Print Button for Ship Readout</li>
+      <li>Implement Ship Sheet layout</li>
       <li>Update logo for Starforger</li>
-      <li>Add Systems and Upgrades from Dark Matter</li>
     </ul>
   </div>
 </template>
