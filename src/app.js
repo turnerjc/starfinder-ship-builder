@@ -456,16 +456,12 @@ export default {
 
     // computed continued...
     armorBpCost() {
-      var cost = this.params.sourceBooksInUse.dnd
-        ? this.armor.dnd.bcCostMultiplier
-        : this.armor.bcCostMultiplier;
-      var armorBpCost = cost * this.sizeCategory.multiplier;
-
+      var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
       if (this.params.sourceBooksInUse.som) {
         var materialBpCost = 0;
         switch (this.params.armorMaterialId) {
           case 'adamantine-alloy':
-            materialBpCost = cost; // (effectively, +1 to size cat multiplier)
+            materialBpCost = this.armor.bpCostMultiplier; // (effectively, +1 to size cat multiplier)
             break;
           case 'noqual':
             materialBpCost = 4;

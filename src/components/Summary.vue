@@ -21,11 +21,9 @@
       <span class="cost__name">Build Points</span>
       <span class="cost__values">
         <svg class="icon"><use xlink:href="#icon-build" /></svg>
-        <span
-          class="cost__current"
-          v-bind:class="{ 'cost__current--danger': isBpCostOverBudget }"
-          >{{ totalBpCost }}</span
-        >
+        <span class="cost__current" v-bind:class="{ 'cost__current--danger': isBpCostOverBudget }">
+          {{ totalBpCost }}
+        </span>
         /
         <span class="cost__budget">{{ bpBudget }}</span>
       </span>
