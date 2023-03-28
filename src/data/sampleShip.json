@@ -20580,7 +20580,7 @@
       "source": "dnd",
       "name": "3 Kingdoms Star Castle",
       "size": 8,
-      "tier": "19",
+      "tier": "20",
       "params": {
         "ablativeArmorId": "none",
         "ablativeArmorByPosition": {
@@ -20821,7 +20821,7 @@
         "thrustersMaterialId": "none",
         "thrustersBoosterId": "none",
         "thrustersBoosterMaterialId": "none",
-        "tierId": "19",
+        "tierId": "20",
         "version": "1.0.1",
         "viId": "none",
         "viHoloProjectorId": "none",
