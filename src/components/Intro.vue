@@ -35,6 +35,7 @@
     <ul>
       <li>Updated Intro, Ship Readout, Sample Ships, Load/Save sections</li>
       <li>Improved Supercolossal Secondary Computers and Network Nodes in Readout</li>
+      <li>Add 3 Kindgoms Star Castle sample ship for testing all the things</li>
     </ul>
     <strong>TODO:</strong>
     <ul>
