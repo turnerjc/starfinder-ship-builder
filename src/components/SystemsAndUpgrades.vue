@@ -5,13 +5,13 @@
   | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   -->
 
-  <div id="other" class="box" v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
+  <div id="other" class="box" v-if="params.sourcesInUse.pw || params.sourcesInUse.som">
     <header class="box__header">
       <h3 id="other">Systems and Upgrades</h3>
     </header>
 
     <!-- algal shielding -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasAlgalShielding">
@@ -27,7 +27,7 @@
     </div>
 
     <!-- algal shielding -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasAutoDestruct">
@@ -43,7 +43,7 @@
     </div>
 
     <!-- colony ship framework -->
-    <div v-if="params.sourceBooksInUse.som && this.sizeCategory.multiplier >= 4">
+    <div v-if="params.sourcesInUse.som && this.sizeCategory.multiplier >= 4">
       <!-- Large or higher -->
       <div class="box__select">
         <div class="checkbox">
@@ -63,7 +63,7 @@
     </div>
 
     <!-- consciousness uplink drive -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasConsciousnessUplink">
@@ -82,7 +82,7 @@
     </div>
 
     <!-- data net -->
-    <div v-if="params.sourceBooksInUse.pw">
+    <div v-if="params.sourcesInUse.pw">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasDataNet">
@@ -98,7 +98,7 @@
     </div>
 
     <!-- hive joining -->
-    <div v-if="params.sourceBooksInUse.pw">
+    <div v-if="params.sourcesInUse.pw">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasHiveJoining">
@@ -113,7 +113,7 @@
     </div>
 
     <!-- powersap -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasPowersap">
@@ -129,7 +129,7 @@
     </div>
 
     <!-- robotic appendage -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="form-group">
           <label for="roboticAppendageSelect">Robotic Appendage</label>
@@ -150,7 +150,7 @@
     </div>
 
     <!-- root system -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasRootSystem">
@@ -167,7 +167,7 @@
     </div>
 
     <!-- space station framework -->
-    <div v-if="params.sourceBooksInUse.som && sizeCategory.multiplier >= 4">
+    <div v-if="params.sourcesInUse.som && sizeCategory.multiplier >= 4">
       <div class="box__select">
         <div class="checkbox">
           <label for="hasSpaceStationFramework">
@@ -186,7 +186,7 @@
     </div>
 
     <!-- training interface modules -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <p>Training Interface Modules</p>
       <div class="box--flex">
         <!-- tim -->
@@ -220,7 +220,7 @@
     </div>
 
     <!-- virtual intelligence -->
-    <div v-if="params.sourceBooksInUse.som">
+    <div v-if="params.sourcesInUse.som">
       <div class="box__select">
         <div class="form-group">
           <label for="viSelect">Virtual Intelligence</label>
@@ -237,7 +237,7 @@
     </div>
 
     <!-- VI upgrade: holographic projector -->
-    <div v-if="params.sourceBooksInUse.som && params.viId != 'none'">
+    <div v-if="params.sourcesInUse.som && params.viId != 'none'">
       <div class="box__select">
         <div class="form-group">
           <label for="viHoloProjectorSelect">VI Upgrade: Holographic Projector</label>
@@ -259,7 +259,7 @@
     </div>
 
     <!-- VI upgrade: skill expander -->
-    <div v-if="params.sourceBooksInUse.som && params.viId != 'none'">
+    <div v-if="params.sourcesInUse.som && params.viId != 'none'">
       <div class="box__select">
         <div class="form-group">
           <label for="viSkillExpanderSelect">VI Upgrade: Skill Expander</label>

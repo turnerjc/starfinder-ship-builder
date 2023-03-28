@@ -5874,7 +5874,7 @@
         "shieldsId": "basic-10",
         "shipConcept": "The Truestrike is a wily short-range interceptor designed to frustrate and confuse the enemy. This sleek, lightweight ship represents one of Inheritorworks\u2019 smallest and most aerodynamic designs. Though not as fast as the Brightsword, the Truestrike is far more agile, especially for a skilled pilot. New pilots often complain about the oversensitivity of the craft\u2019s controls, however, noting that Truestrikes are easy to maneuver but difficult to keep steady.",
         "shipName": "Inheritorworks Truestrike",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -6101,7 +6101,7 @@
         "shieldsId": "basic-10",
         "shipConcept": "The Petaltail is one of the most popular models available from United Interfaith Engineering, as well as one of the most affordable. The small, one-passenger starship is popular among shirrens for independent excursions through the galaxy.",
         "shipName": "UIE Petaltail",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -6329,7 +6329,7 @@
         "shieldsId": "basic-10",
         "shipConcept": "The Kevolari Collective\u2019s K-51 Sky Fisher is an attack and support spacecraft designed specifically for the Pact Worlds defensive fleet. NOTE: Discrepancy in AC and Piloting between tool and SOM.",
         "shipName": "KC K-51 Sky Fisher",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -6556,7 +6556,7 @@
         "shieldsId": "basic-20",
         "shipConcept": "One of Norikama Syndicate\u2019s highest grossing starships to date, the Defrex is a scrappy personal fighter capable of taking a beating while dishing out punishment in kind.",
         "shipName": "Norikama Defrex",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -6803,7 +6803,7 @@
         "shieldsId": "basic-30",
         "shipConcept": "These scaled-down versions of Nebulor Outfitter's popular transport vessels serve as flying ambulances. Although unarmed, the Skymedic can reach and land in unforgiving environments that would otherwise be inaccessible to starships.",
         "shipName": "Nebulor Skymedic",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -7043,7 +7043,7 @@
         "shieldsId": "basic-40",
         "shipConcept": "The X-62 is Redshift Revolution's latest\u2014but certainly not last\u2014model in the X Series of high-performance racing vessels, and it may be the fastest fighter ever built.",
         "shipName": "Redshift Revolution X-62",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -7300,7 +7300,7 @@
         "shieldsId": "basic-40",
         "shipConcept": "From escorting corporate mining expeditions to providing an orbital guard for fledgling colonies operating outside Steward protection, variations of the Dyad have defended against space pirates and raiders for generations.",
         "shipName": "AAC Dyad",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -7557,7 +7557,7 @@
         "shieldsId": "light-60",
         "shipConcept": "The Unshakable\u2019s design is specialized for smaller bounty-hunting operations, surgical strikes in dangerous territory, and solo scouting missions to identify new threats. With substantial armor for such a small ship, the Unshakable is able to close distance rapidly and assault even light freighters\u2014a signature tactic.",
         "shipName": "Infernex Unshakable",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -7804,7 +7804,7 @@
         "shieldsId": "medium-100",
         "shipConcept": "Designed as a versatile and sustainable long-range fighter. The ship\u2019s distinctive teardrop shape, downswept wings, and golden cockpit canopy combine familiar hallmarks of kasathan shipbuilding with the innovative features represented in Idari Crucible Works\u2019 newer models. NOTE: Discrepancy in AC and TL between tool and SOM.",
         "shipName": "Idaran Keris",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -8069,7 +8069,7 @@
         "shieldsId": "light-50",
         "shipConcept": "Piloted entirely by virtual intelligence (VI), the Autohauler comes equipped with a complex VI partitioned into specialized modules for defense, navigation, and technical troubleshooting. NOTE: Discrepancy in VI skill modifiers between rules for VI (SOM, p35) and ship description (SOM, p89). This tool prefers the VI rules.",
         "shipName": "Multifold G7 Autohauler",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -8345,7 +8345,7 @@
         "shieldsId": "medium-90",
         "shipConcept": "As its name would suggest, the Ambassador is popular among diplomats, merchants, and anyone who wishes to travel the galaxy to speak with others rather than fight.",
         "shipName": "Hivonyx Ambassador",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -8619,7 +8619,7 @@
         "shieldsId": "light-60",
         "shipConcept": "The RC-HPR, colloquially known as the rock hopper, is a stockstandard dwarven mining ship that\u2019s been widely adopted by other operations since. Although sizable, the starship\u2019s small enough to fit into (and more importantly, get out of) tight spots in crowded asteroid fields, jagged planetoid surfaces, and other dangerous regions bearing valuable minerals.",
         "shipName": "Ulrikka RC-HPR",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -8899,7 +8899,7 @@
         "shieldsId": "light-60",
         "shipConcept": "Opulence yachts are marketed as playthings of the glitterati\u2014wealthy dilettantes, celebrities, CEOs, and government officials who need to travel frequently and in style. NOTE: Frame already has a turret mount; ship description (SOM, p92) specifies an extra one, which might be a mistake.",
         "shipName": "Opulos Opulence",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -9149,7 +9149,7 @@
         "shieldsId": "light-50",
         "shipConcept": "Designed for preliminary exploration and long-range analysis of new and distant planets and civilizations, the Librama, a biomechanical starship model (Pact Worlds, p152) created by the Unified Conservatory (SOM, p67), serves as a scouting vessel that pushes against the boundaries of known space.",
         "shipName": "UC Librama",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -9406,7 +9406,7 @@
         "shieldsId": "medium-200",
         "shipConcept": "Kasathas have long revered melee techniques over all other forms of combat, and the Thunderbolt not only enables kasathas to engage enemies hand-to-hand, but also allows them to neutralize other vessels without inflicting significant hull damage.",
         "shipName": "Idaran Thunderbolt",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -9672,7 +9672,7 @@
         "shieldsId": "light-80",
         "shipConcept": "The Dashadz Wayfarer is an attempt to bridge the gap between military and civilian ships within the Veskarium. Based on schematics for a military transport vessel designed prior to the Pact Worlds-Veskarium alliance, this highly mobile craft is primarily utilized for  transporting both goods and passengers across short distances.",
         "shipName": "Dashadz Wayfarer",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -9977,7 +9977,7 @@
         "shieldsId": "medium-140",
         "shipConcept": "A speedy transport starship suited for exploration and small-scale colonization, a Peregrinasi has a sleek exterior that sports sweeping fins for in-atmosphere flight, plus a rounded belly designed for water landings and concealed landing gear for terrestrial touchdowns.",
         "shipName": "Idaran Peregrinasi",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -10283,7 +10283,7 @@
         "shieldsId": "medium-100",
         "shipConcept": "Like many Vercite ships, the Slingshot is notable for its combination of speed and luxury, despite being designed for hauling freight rather than transporting elite clientele.",
         "shipName": "Terminator Slingshot",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -10584,7 +10584,7 @@
         "shieldsId": "medium-120",
         "shipConcept": "The ATech Resolute is a simple, sturdy ship with a bold personality and a beloved subculture. AbadarCorp first commissioned the Resolute over a century ago to meet its growing need for a deep space freighter that didn\u2019t need an escort. An especially troubling surge in piracy had made the conglomerate\u2019s colonial ambitions far too costly not to take more direct action. The answer came in the form of this blocky, golden hulk that, no matter how hard it was battered, wouldn\u2019t give up the fight. NOTE: Discrepancy in CT between tool and SOM. I think they forgot to add the fortified hull bonus.",
         "shipName": "Atech Resolute",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -10898,7 +10898,7 @@
         "shieldsId": "medium-200",
         "shipConcept": "The Korinath is among the most common elven starships. True to classic elven design, the Korinath is a sleek and solid freighter that suffers no interference as it transports goods and passengers on lengthy voyages.",
         "shipName": "Sov-El Korinath",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -11225,7 +11225,7 @@
         "shieldsId": "medium-120",
         "shipConcept": "The Death\u2019s Head Charon has the long silhouette of the riverboats of old, but with bony flanges reminiscent of a spinal column. These skeletal ships embark on long, silent voyages into the deep reaches of space, drifting from port to port seeking profit and potentially illicit cargo. NOTE: Total BP cost is overbudget due to additional mounts required for weapons (designer was probably looking at weapon mounts for bulk freighters).",
         "shipName": "Death's Head Charon",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -11548,7 +11548,7 @@
         "shieldsId": "medium-100",
         "shipConcept": "The Sanjaval Spaceflight Systems Redsun-class trader is a study in opportunity costs. On one hand, the heavy freighter contains six expansive cargo holds with removable bulkheads, allowing crews to combine the individual holds into one contiguous, cavernous cargo bay. On the other hand, all of the Redsun\u2019s primary systems, living quarters, and weapons are packed into what little space is left over, making for very cramped living conditions for its crew members. Although it is broad, slow, and ungainly in space, the Redsun makes up for its ponderous performance on long hauls, as its powerful Drift engine cuts typical travel times in half. This speed, along with its prodigious cargo capacity, helps the Redsun stand out from its competitors; as such, it is a favored vessel among independent merchants throughout the Pact Worlds and beyond.",
         "shipName": "Sanjaval Redsun",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -11858,7 +11858,7 @@
         "shieldsId": "medium-100",
         "shipConcept": "Originally constructed and employed by Apostae\u2019s House Brevak to operate as both a show ship and mobile arms-dealing platform, the formidable Vermelance is now a staple in the cutthroat world of drow business. These ships are made from the repurposed corpses of vermeliths\u2014massive, rock-eating, silicon-based space worms\u2014slain by Apostae outriders near the Diaspora.",
         "shipName": "Brevak Vermelance",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -12204,7 +12204,7 @@
         "shieldsId": "medium-140",
         "shipConcept": "Modeled to recover battle scrap to recycle into new starship frames. Its recovery tools are supercharged to include an infamous rotating saw as much as 30 feet in diameter for breaking apart hulls and disarticulating weapon arrays.",
         "shipName": "Dashadz Griffon",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -12522,7 +12522,7 @@
         "shieldsId": "heavy-280",
         "shipConcept": "Dmolangari-class combat supply ship is a near-ubiquitous vessel in both the Veskarium\u2019s military and commercial navies. Since the end of the Silent War in 291 AG, the Dmolangari has regularly appeared hauling freight throughout the Pact Worlds as well as the Veskarium.",
         "shipName": "BMC Dmolangari",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -12819,7 +12819,7 @@
         "shieldsId": "heavy-240",
         "shipConcept": "Justiciar destroyers function as forward bases and training facilities for Hellknights, especially in territories in the lawless or unsettled Vast that have never\u2014as far as the zealots are concerned\u2014felt the touch of true order. Smaller craft often refuel at these ships to carry out missions throughout a system, returning to recuperate and drop off captured convicts for trial and sentencing. NOTE: Discrepancy in HP and CT between tool and SOM. It could be that SOM overlooked HP increase due to higher tier.",
         "shipName": "Infernex Justiciar",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -13139,7 +13139,7 @@
         "shieldsId": "heavy-480",
         "shipConcept": "Designed to serve as the \u201ctip of the spear\u201d for the Iomedaean navy, the new Javelin-class destroyer is a formidable addition that\u2019s designed to respond independently to significant threats.",
         "shipName": "Inheritorworks Javelin",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -13461,7 +13461,7 @@
         "shieldsId": "heavy-240",
         "shipConcept": "Although best known for its luxurious transports, Vanguard Craftworks periodically turns its research and development teams to building new military technology for the Azlanti Star Empire. Among the company\u2019s most infamous designs is the Exsanguinator, a massive cruiser with a sharp and predatory silhouette. Incorporating experimental powersap technology, Exsanguinators excel at pulling alongside enemies and stealing their energy, simultaneously disabling the target\u2019s systems and supercharging the cruiser\u2019s combat capabilities. As a result, the ship has been nicknamed \u201cZura,\u201d a homage to the demon lord of blood and vampires so fearfully immortalized in the Azlanti faith.",
         "shipName": "Vanguard Exsanguinator",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -13782,7 +13782,7 @@
         "shieldsId": "heavy-420",
         "shipConcept": "Developed as a cornerstone of the kasathas' new, post-arrival navy, the Saga is a versatile battle cruiser that has played a critical role in maintaining kasathan interests and supplementing Steward forces in times of war. NOTE: Discrepancy in AC and TL between tool and SOM, p108.",
         "shipName": "Idaran Saga",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -14092,7 +14092,7 @@
         "shieldsId": "heavy-320",
         "shipConcept": "While most oma starships are built from the carcasses of recently deceased omas, the barathu-operated Star-Nambulance Inc gently call to omas using a starsong beacon that exudes telepathic songs similar to the ones the creatures naturally emit themselves. Star-Nambulance trainers gradually build trust with these omas until they earn the right to ride them through space.",
         "shipName": "Star-Nambulance Void-Eater",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -14422,7 +14422,7 @@
         "shieldsId": "heavy-480",
         "shipConcept": "A product of the Allied Arms Corporation (AAC) of Triaxus, the Hoardmaster is the flagship of the Skyfire Legion\u2019s mercenary fleet. The aptly named carrier can launch over a dozen smaller craft into battle. Designed to operate in tandem with AAC Dyads, this specialized carrier has experienced a surge in popularity during the past 50 years.",
         "shipName": "AAC Hoardmaster",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -14769,7 +14769,7 @@
         "shieldsId": "medium-140",
         "shipConcept": "The BMC Devastator brings the unflinching boldness of the vesk to new heights. Designed as a smaller, faster, and cheaper carrier-focused alternative to the mighty Vindicas Tyrant, the Devastator is a newer design developed during the Swarm War. In contrast to most carrier designs that are intended to project power from a relatively safe distance, the Devastator is designed to get up close and personal.",
         "shipName": "BMC Devastator",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -15132,7 +15132,7 @@
         "shieldsId": "heavy-240",
         "shipConcept": "A capable battleship with deadly armaments; a bronze-tinted armored hull; and a sophisticated blue, white, and black interior, the Valkyrie is a sleek, stylish ship capable of holding its own on a battlefield. Designed to bring respect and legitimacy to Norikama and silence dismissive rumors regarding the company\u2019s reputation for manufacturing shoddy knock-offs, the Valkyrie is making a splash throughout the Pact Worlds.",
         "shipName": "Norikama Valkyrie",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -15522,7 +15522,7 @@
         "shieldsId": "heavy-320",
         "shipConcept": "Starhive built the Vespiar to be a powerful warship, capable of fighting back against the Swarm once it attacked the Pact Worlds. The design integrates wasp-like imagery, incorporating black-and-yellow paint jobs and stinger-like tails to intentionally look dangerous. True to form for highly individualistic and decision-loving shirrens, Vespiars are available with many options for their cargo bays and exact weapons configurations, yielding hundreds of different possible combinations and ensuring that very few Vespiars are exactly the same.",
         "shipName": "Starhive Vespiar",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -15911,7 +15911,7 @@
         "shieldsId": "heavy-480",
         "shipConcept": "Despite their enormous size and somewhat cumbersome appearance, Golarion-Class Battleships are highly maneuverable, and their captains have no trouble traversing even moderately dense asteroid and debris fields that other gargantuan starships might avoid.",
         "shipName": "KC Golarion-Class Battleship",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -16301,7 +16301,7 @@
         "shieldsId": "heavy-360",
         "shipConcept": "The product of a decade of Ringworks research and development, the Specter represents the first known successful use of quantum defender technology on a capital ship.",
         "shipName": "Ringworks Specter",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -16729,7 +16729,7 @@
         "shieldsId": "none",
         "shipConcept": "Those Who Are is massive, even for CompEnt. It showcases the company\u2019s trademark ample cargo space but, instead of customizable modular bays, boasts state-of-the-art shielding and armor, advanced weaponry, and housing for hosts of passengers. Lumbering at slow speeds and carrying a cannon designed to assault planetoids, Those Who Are seems built for wartime endurance and little else. NOTE: Discrepancy in piloting modifier between tool and SOM, p116. Not sure why.",
         "shipName": "CompEnt Those Who Are",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -17169,7 +17169,7 @@
         "shieldsId": "superior-600",
         "shipConcept": "Ringworks Industries designed and built Peacebringer dreadnoughts exclusively for use in the Stewards\u2019 Overwatch fleet. These colossal ships specialize in devastating invading capital fleets and reinforcing planetary defense forces, and they are intended to serve as the backbone of any major fleet dedicated to worldwide protection. NOTE: Discrepancy in Piloting modifier between tool and SOM.",
         "shipName": "Ringworks Peacebringer",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -17606,7 +17606,7 @@
         "shieldsId": "superior-540",
         "shipConcept": "If the Cathedralship (Pact Worlds, p159) is the heart of the Iomedaean navy, the Redeemer is unquestionably its fist. Slow but indefatigable, these titanic vessels patrol the galaxy with authority.",
         "shipName": "Inheritorworks Redeemer",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -18101,7 +18101,7 @@
         "shieldsId": "superior-600",
         "shipConcept": "The Golden League\u2019s powerful Akaio family emerged from the Gap in control of Pyre Spike Station, in orbit just beyond Aucturn. Even though they lacked any records for how they built or acquired the station, the Akaios quickly turned it into a lucrative trading hub, an unpoliced refuge for ne\u2019er-do-wells, and the unofficial headquarters for the League.",
         "shipName": "Pyre Spike Station",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -18565,7 +18565,7 @@
         "shieldsId": "superior-600",
         "shipConcept": "Citadel Zirval was designed in the haunting aesthetic of an ancient Hellknight fortress, with thousands of rooms, hallways, training facilities, interrogation chambers, and more. At any time, it sustains 5,000 or more armigers in training, plus unknown thousands of Hellknights ready to deploy across the galaxy. NOTE: Discrepency in AC between tool and ship.",
         "shipName": "Citadel Zirval",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -19004,7 +19004,7 @@
         "shieldsId": "superior-540",
         "shipConcept": "The masterpiece of the Imperial Foundry, the Sovereign Dominator is equipped to lead system-wide assaults. NOTE: Discrepancy in Piloting modifier between tool and SOM.",
         "shipName": "Sovereign Dominator",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -19721,7 +19721,7 @@
         "shieldsId": "superior-540",
         "shipConcept": "An enigmatic starship dedicated to the tripartite AI deity Triune, the Driftmaven moves through space following only its patron\u2019s directives. The modular vessel reconfigures itself regularly and can transform into a protective shell or whirling bloom of laser fire at a moment\u2019s notice.",
         "shipName": "Driftmaven",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -20374,7 +20374,7 @@
         "shieldsId": "heavy-480",
         "shipConcept": "When the first Star Citadel, Heorrhad, had its innards hewn from stone, its dwarven engineers repurposed the waste rock to construct Shalar, a vast and sturdy fortress reinforced with modern, high-tech materials. Rumors suggest that somewhere near Shalar\u2019s center rests a keystone that, should it ever be destroyed or removed, would trigger a cascade of failures that would spell the end of the entire citadel. NOTE: Discrepancy in TL, turn and Piloting modifier between tool and SOM.",
         "shipName": "Shalar",
-        "sources": {
+        "sourcesInUse": {
           "pw": true,
           "som": true
         },
@@ -20564,6 +20564,468 @@
               "weaponId": "mass-driver",
               "weight": "capital",
               "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "3-kingdoms-star-castle",
+      "source": "dnd",
+      "name": "3 Kingdoms Star Castle",
+      "size": 8,
+      "tier": "19",
+      "params": {
+        "ablativeArmorId": "none",
+        "ablativeArmorByPosition": {
+          "forward": 0,
+          "aft": 0,
+          "port": 0,
+          "starboard": 0
+        },
+        "antiHackingSystemsId": "mk4",
+        "antiPersonnelWeaponId": "none",
+        "armorId": "mk-3",
+        "armorMaterialId": "none",
+        "computerCountermeasures": {
+          "alarm": false,
+          "fakeShell": false,
+          "feedback": false,
+          "firewall": false,
+          "lockout": false,
+          "shockGridId": "none",
+          "wipe": false
+        },
+        "computerId": "mk-7-duonode",
+        "crewQuartersId": "luxurious",
+        "crewSkills": {
+          "captain": {
+            "countOfficers": 0,
+            "hasRole": true,
+            "skills": {
+              "bluff": {
+                "modifier": "13",
+                "ranks": "19"
+              },
+              "computers": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "diplomacy": {
+                "modifier": "13",
+                "ranks": "19"
+              },
+              "engineering": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "gunnery": {
+                "modifier": "28"
+              },
+              "intimidate": {
+                "modifier": "18",
+                "ranks": "19"
+              },
+              "perception": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "piloting": {
+                "modifier": "14",
+                "ranks": "19"
+              }
+            }
+          },
+          "engineer": {
+            "countOfficers": "4",
+            "countOfficerCrew": "90",
+            "hasRole": true,
+            "skills": {
+              "computers": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "engineering": {
+                "modifier": "13",
+                "ranks": "19"
+              }
+            }
+          },
+          "gunner": {
+            "countOfficers": "6",
+            "countOfficerCrew": "65",
+            "hasRole": true,
+            "skills": {
+              "computers": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "engineering": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "gunnery": {
+                "modifier": "28"
+              }
+            }
+          },
+          "pilot": {
+            "countOfficers": 1,
+            "countOfficerCrew": "80",
+            "hasRole": true,
+            "skills": {
+              "computers": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "diplomacy": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "engineering": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "gunnery": {
+                "modifier": 0
+              },
+              "intimidate": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "piloting": {
+                "modifier": "14",
+                "ranks": "19"
+              }
+            }
+          },
+          "scienceOfficer": {
+            "countOfficers": "3",
+            "countOfficerCrew": "100",
+            "hasRole": true,
+            "skills": {
+              "computers": {
+                "modifier": "11",
+                "ranks": "19"
+              },
+              "life-science": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "physical-science": {
+                "modifier": 0,
+                "ranks": 0
+              }
+            }
+          },
+          "chiefMate": {
+            "countOfficers": 1,
+            "countOfficerCrew": 0,
+            "hasRole": false,
+            "skills": {
+              "acrobatics": {
+                "modifier": 0,
+                "ranks": 0
+              },
+              "athletics": {
+                "modifier": 0,
+                "ranks": 0
+              }
+            }
+          },
+          "magicOfficer": {
+            "countOfficers": 1,
+            "countOfficerCrew": 0,
+            "hasRole": false,
+            "skills": {
+              "mysticism": {
+                "modifier": 0,
+                "ranks": 0
+              }
+            }
+          }
+        },
+        "ctNetworkNodes": 2,
+        "ctTim": 0,
+        "ctTimAll": 0,
+        "customFrameBaseId": "light-freighter",
+        "customComponents": [],
+        "dedicatedComputerId": "mk-6-mononode",
+        "defensiveCountermeasuresId": "mk-6",
+        "defensiveCountermeasuresMaterialId": "none",
+        "deflectorShieldId": "none",
+        "driftEngineId": "signal-basic",
+        "expansionBayIds": [
+          "arcane-laboratory",
+          "science-lab-general",
+          "guest-quarters-luxurious",
+          "hangar-bay",
+          "hangar-bay",
+          "hangar-bay",
+          "hangar-bay",
+          "hangar-bay",
+          "medical-bay",
+          "recreation-suite-gym",
+          "recreation-suite-hac",
+          "recreation-suite-trivid-den",
+          "sealed-environment-chamber",
+          "synthesis-bay"
+        ],
+        "fortifiedHullId": "none",
+        "frameId": "ultranought",
+        "hasAlgalShielding": 0,
+        "hasAutoDestruct": 1,
+        "hasBiometricLocks": true,
+        "hasColonyShipFramework": 0,
+        "hasConsciousnessUplink": 0,
+        "hasCrew": 1,
+        "hasDataNet": 1,
+        "hasEmergencyAccelerator": 0,
+        "hasHiveJoining": 0,
+        "hasHolographicMantle": 0,
+        "hasPowersap": 0,
+        "hasReconfigurationSystem": 0,
+        "hasRootSystem": 0,
+        "hasSelfDestructSystem": 0,
+        "hasSpaceStationFramework": 0,
+        "isSetDefaultCrewSkillValues": 0,
+        "isUseStrictRules": 1,
+        "powerCoreIds": ["titan-heavy", "none", "none", "none"],
+        "powerCoreSpecialMaterials": ["none", "none", "none", "none"],
+        "reinforcedBulkheadId": "none",
+        "roboticAppendageId": "none",
+        "secondaryComputerId": "mk-3-tetranode",
+        "sensorsId": "basic-medium-range",
+        "sensorsMaterialId": "none",
+        "shieldweaponType": "shields",
+        "shieldsByPosition": {
+          "forward": 135,
+          "aft": 135,
+          "port": 135,
+          "starboard": 135
+        },
+        "shieldsId": "superior-540",
+        "shipConcept": "The quintessential Starforger Ultranought, Star Castles are mobile fortresses protecting the Three Kingdoms",
+        "shipName": "3 Kingdoms Star Castle",
+        "sourcesInUse": {
+          "pw": true,
+          "som": true
+        },
+        "thrustersId": "sc6",
+        "thrustersMaterialId": "none",
+        "thrustersBoosterId": "none",
+        "thrustersBoosterMaterialId": "none",
+        "tierId": "19",
+        "version": "1.0.1",
+        "viId": "none",
+        "viHoloProjectorId": "none",
+        "viSkillExpanderId": "none",
+        "weaponMounts": {
+          "forward": [
+            {
+              "weaponId": "none",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "none",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "heavy-aeon-torpedo-launcher",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": true,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "heavy-aeon-torpedo-launcher",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "ultragraser",
+              "weight": "spinal",
+              "templateWeight": "spinal",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            }
+          ],
+          "aft": [],
+          "port": [
+            {
+              "weaponId": "none",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "none",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "gravity-gun",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "heavy-torpedo-launcher",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "none",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            }
+          ],
+          "starboard": [
+            {
+              "weaponId": "none",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "none",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "gravity-gun",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "heavy-torpedo-launcher",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "none",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            }
+          ],
+          "turret": [
+            {
+              "weaponId": "supermaser",
+              "weight": "capital",
+              "templateWeight": "capital",
+              "isFromTemplate": true,
+              "canBeLinked": false,
+              "isLinked": false,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "heavy-aeon-caster",
+              "weight": "heavy",
+              "templateWeight": "heavy",
+              "isFromTemplate": true,
+              "canBeLinked": true,
+              "isLinked": true,
+              "canHaveOrbitalDiscount": false,
+              "hasOrbitalDiscount": false,
+              "specialMaterial": "none"
+            },
+            {
+              "weaponId": "heavy-aeon-caster",
+              "weight": "heavy",
+              "templateWeight": "heavy",
               "isFromTemplate": true,
               "canBeLinked": false,
               "isLinked": false,

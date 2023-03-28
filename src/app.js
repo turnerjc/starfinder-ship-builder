@@ -311,7 +311,7 @@ export default {
         shieldsId: 'none',
         shipConcept: '',
         shipName: '',
-        sourceBooksInUse: {
+        sourcesInUse: {
           pw: true,
           som: true,
           dnd: true,
@@ -381,7 +381,7 @@ export default {
         },
       }, // paramsReset
       selectSampleShipSortOrder: 'name',
-      sourceBooks: [
+      sources: [
         {
           id: 'pw',
           name: 'Pact Worlds',
@@ -451,13 +451,13 @@ export default {
 
     // computed continued...
     armorBonus() {
-      return this.params.sourceBooksInUse.dnd ? this.armor.dnd.bonusToAc : this.armor.bonusToAc;
+      return this.params.sourcesInUse.dnd ? this.armor.dnd.bonusToAc : this.armor.bonusToAc;
     },
 
     // computed continued...
     armorBpCost() {
       var armorBpCost = this.armor.bpCostMultiplier * this.sizeCategory.multiplier;
-      if (this.params.sourceBooksInUse.som) {
+      if (this.params.sourcesInUse.som) {
         var materialBpCost = 0;
         switch (this.params.armorMaterialId) {
           case 'adamantine-alloy':
@@ -510,14 +510,14 @@ export default {
 
     // computed continued...
     armorTLMod() {
-      return this.params.sourceBooksInUse.dnd
+      return this.params.sourcesInUse.dnd
         ? this.armor.dnd.targetLockModifier
         : this.armor.targetLockModifier;
     },
 
     // computed continued...
     armorTurnDistanceMod() {
-      return this.params.sourceBooksInUse.dnd
+      return this.params.sourcesInUse.dnd
         ? this.armor.dnd.turnDistanceModifier
         : this.armor.turnDistanceModifier;
     },
@@ -557,21 +557,21 @@ export default {
 
     // computed continued...
     computerName() {
-      var name = this.params.sourceBooksInUse.dnd ? this.computer.dnd.name : this.computer.name;
+      var name = this.params.sourcesInUse.dnd ? this.computer.dnd.name : this.computer.name;
       // console.log(name);
       return name;
     },
 
     // computed continued...
     computerBonus() {
-      var bonus = this.params.sourceBooksInUse.dnd ? this.computer.dnd.bonus : this.computer.bonus;
+      var bonus = this.params.sourcesInUse.dnd ? this.computer.dnd.bonus : this.computer.bonus;
       // console.log(bonus);
       return bonus;
     },
 
     // computed continued...
     computerNodes() {
-      var nodes = this.params.sourceBooksInUse.dnd ? this.computer.dnd.nodes : this.computer.nodes;
+      var nodes = this.params.sourcesInUse.dnd ? this.computer.dnd.nodes : this.computer.nodes;
       // console.log(nodes);
       return nodes;
     },
@@ -581,14 +581,14 @@ export default {
       var desc = '';
       if (this.computer.id !== 'basic-computer') {
         var nodes = this.computerNodes;
-        if (this.params.sourceBooksInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+        if (this.params.sourcesInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
           nodes += this.networkNodes.ct;
         }
         var bonus = '+' + this.computerBonus;
         var nodesWord = integerToWord(nodes);
         desc = bonus + ' to any ' + nodesWord + ' check' + (nodes > 1 ? 's' : '') + ' per round';
         if (
-          this.params.sourceBooksInUse.som &&
+          this.params.sourcesInUse.som &&
           this.isSupercolossal &&
           this.secondaryComputerNodes > 0
         ) {
@@ -662,14 +662,14 @@ export default {
       }
 
       // network nodes (supercolossal ships)
-      if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
+      if (this.params.sourcesInUse.som && this.frame.size == 'Supercolossal') {
         for (var index = 0; index < this.networkNodes.ct; index++) {
           bonuses.push(that.getPrefixedModifier(that.computerBonus));
         }
       }
 
       // secondary computer (supercolossal ships)
-      if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
+      if (this.params.sourcesInUse.som && this.frame.size == 'Supercolossal') {
         for (var index = 0; index < this.secondaryComputerNodes; index++) {
           bonuses.push(that.getPrefixedModifier(that.secondaryComputerBonus));
         }
@@ -737,7 +737,7 @@ export default {
     // computed continued...
     ctComputerNodes() {
       var ct = this.computerNodes.toString();
-      if (this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal') {
+      if (this.params.sourcesInUse.som && this.frame.size == 'Supercolossal') {
         ct += '/';
         ct += this.networkNodes.ct.toString();
         ct += '/';
@@ -750,7 +750,7 @@ export default {
     ctExpansionBaySlots() {
       var ctExpansionBaySlots = this.frame.expansionBays;
       if (
-        this.params.sourceBooksInUse.som &&
+        this.params.sourcesInUse.som &&
         this.sizeCategory.multiplier >= 4 &&
         (this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework)
       ) {
@@ -761,7 +761,7 @@ export default {
 
     // computed continued...
     ctExternalExpansionBays() {
-      if (!this.params.sourceBooksInUse.som) return 0;
+      if (!this.params.sourcesInUse.som) return 0;
 
       var ctBays = this.expansionBays.filter(function (bay) {
         return bay.id == 'external-expansion-bay';
@@ -821,7 +821,7 @@ export default {
     // computed continued...
     damageThreshold() {
       var dt = this.frame.dt;
-      if (this.params.sourceBooksInUse.som && this.params.armorMaterialId == 'adamantine-alloy') {
+      if (this.params.sourcesInUse.som && this.params.armorMaterialId == 'adamantine-alloy') {
         if (dt == 'n/a') dt = 0;
         dt += this.armorBonus;
       }
@@ -845,7 +845,7 @@ export default {
 
     // computed continued...
     dedicatedComputerBonus() {
-      var bonus = this.params.sourceBooksInUse.dnd
+      var bonus = this.params.sourcesInUse.dnd
         ? this.dedicatedComputer.dnd.bonus
         : this.dedicatedComputer.bonus;
       // console.log(bonus);
@@ -854,7 +854,7 @@ export default {
 
     // computed continued...
     dedicatedComputerNodes() {
-      var nodes = this.params.sourceBooksInUse.dnd
+      var nodes = this.params.sourcesInUse.dnd
         ? this.dedicatedComputer.dnd.nodes
         : this.dedicatedComputer.nodes;
       console.log(nodes);
@@ -868,7 +868,7 @@ export default {
 
     // computed continued...
     defensiveCountermeasuresBonus() {
-      var bonus = this.params.sourceBooksInUse.dnd
+      var bonus = this.params.sourcesInUse.dnd
         ? this.defensiveCountermeasures.dnd.bonusToTL
         : this.defensiveCountermeasures.bonusToTL;
       // console.log(bonus);
@@ -879,7 +879,7 @@ export default {
     defensiveCountermeasuresBpCost() {
       var dcBpCost = this.defensiveCountermeasures.bpCost;
 
-      if (this.params.sourceBooksInUse.som) {
+      if (this.params.sourcesInUse.som) {
         switch (this.params.defensiveCountermeasuresMaterialId) {
           case 'horacalcum':
             dcBpCost += 4;
@@ -896,7 +896,7 @@ export default {
 
     // computed continued...
     defensiveCountermeasuresPcuCost() {
-      return this.params.sourceBooksInUse.dnd
+      return this.params.sourcesInUse.dnd
         ? this.defensiveCountermeasures.dnd.pcuCost
         : this.defensiveCountermeasures.pcuCost;
     },
@@ -1040,7 +1040,7 @@ export default {
 
     // computed continued...
     hasBoosterThrusterHousing() {
-      if (!this.params.sourceBooksInUse.som) return false;
+      if (!this.params.sourcesInUse.som) return false;
 
       var hasHousing =
         this.expansionBays.find(function (bay) {
@@ -1068,7 +1068,7 @@ export default {
 
     // computed continued...
     hasDedicatedComputerHousing() {
-      if (!this.params.sourceBooksInUse.som) return false;
+      if (!this.params.sourcesInUse.som) return false;
 
       var hasHousing =
         this.expansionBays.find(function (bay) {
@@ -1080,7 +1080,7 @@ export default {
 
     // computed continued...
     hasHealingPod() {
-      if (!this.params.sourceBooksInUse.som) return false;
+      if (!this.params.sourcesInUse.som) return false;
 
       var hasPod =
         this.expansionBays.find(function (bay) {
@@ -1175,7 +1175,7 @@ export default {
 
     // computed continued...
     isOrbitalWeaponDiscountUsed() {
-      if (!this.params.sourceBooksInUse.som) return false;
+      if (!this.params.sourcesInUse.som) return false;
       if (this.sizeCategory.multiplier < 4) return false;
       if (!(this.params.hasColonyShipFramework || this.params.hasSpaceStationFramework))
         return false;
@@ -1199,11 +1199,17 @@ export default {
 
     // computed continued...
     isSupercolossal() {
-      return this.params.sourceBooksInUse.som && this.frame.size == 'Supercolossal';
+      return this.params.sourcesInUse.som && this.frame.size == 'Supercolossal';
     },
 
     // computed continued...
     jsonParams() {
+      // TODO: need to modify JSON output to include sampleShip header, ex.
+      //   "id": "3-kingdoms-star-castle",
+      //   "source": "dnd",
+      //   "name": "3 Kingdoms Star Castle",
+      //   "size": 8,
+      //   "tier": "19",
       var jsonParams = cloneObject(this.params);
       jsonParams['isSetDefaultCrewSkillValues'] = 0; // Because otherwise crew skills get overwritten!
       return JSON.stringify(jsonParams);
@@ -1240,7 +1246,7 @@ export default {
     networkNodes() {
       var ctNodes = 0;
 
-      if (this.params.sourceBooksInUse.som && this.isSupercolossal) {
+      if (this.params.sourcesInUse.som && this.isSupercolossal) {
         ctNodes = parseInt(this.params.ctNetworkNodes);
       }
 
@@ -1251,14 +1257,10 @@ export default {
       var pcuCosts = [0, 0, 0, 0, 8, 10, 11, 13, 15, 17, 19];
 
       return {
-        bonus: this.params.sourceBooksInUse.dnd
-          ? dndBonuses[this.computer.bonus]
-          : this.computer.bonus,
+        bonus: this.params.sourcesInUse.dnd ? dndBonuses[this.computer.bonus] : this.computer.bonus,
         bpCost: ctNodes * this.computer.bonus,
         ct: ctNodes,
-        name: this.params.sourceBooksInUse.dnd
-          ? dndNames[this.computer.bonus]
-          : this.computer.bonus,
+        name: this.params.sourcesInUse.dnd ? dndNames[this.computer.bonus] : this.computer.bonus,
         max: maxNodes[this.computer.bonus],
         pcuCost: ctNodes * pcuCosts[this.computer.bonus == 0 ? 0 : this.computer.bonus - 1],
       };
@@ -1313,7 +1315,7 @@ export default {
         powerCore.sizeList = powerCore.sizes.join(', ');
 
         // special materials
-        if (this.params.sourceBooksInUse.som) {
+        if (this.params.sourcesInUse.som) {
           var specialMat = this.params.powerCoreSpecialMaterials[i];
 
           var name = '';
@@ -1412,7 +1414,7 @@ export default {
 
     // computed continued...
     secondaryComputerBonus() {
-      var bonus = this.params.sourceBooksInUse.dnd
+      var bonus = this.params.sourcesInUse.dnd
         ? this.secondaryComputer.dnd.bonus
         : this.secondaryComputer.bonus;
       // console.log(bonus);
@@ -1421,7 +1423,7 @@ export default {
 
     // computed continued...
     secondaryComputerNodes() {
-      var nodes = this.params.sourceBooksInUse.dnd
+      var nodes = this.params.sourcesInUse.dnd
         ? this.secondaryComputer.dnd.nodes
         : this.secondaryComputer.nodes;
       // console.log(nodes);
@@ -1524,7 +1526,7 @@ export default {
           (option) =>
             option.source === undefined ||
             option.source === 'scr' ||
-            this.params.sourceBooksInUse[option.source]
+            this.params.sourcesInUse[option.source]
         );
       }
 
@@ -1581,7 +1583,7 @@ export default {
     selectOptionsComputer() {
       return this.selectOptions.computer.filter((option) => {
         if (this.frame.size != 'Supercolossal' || option.bonus >= 4) {
-          if (this.params.sourceBooksInUse.dnd) {
+          if (this.params.sourcesInUse.dnd) {
             return option.dnd.name != 'n/a';
           } else {
             return true;
@@ -1601,7 +1603,7 @@ export default {
     selectOptionsDedicatedComputer() {
       return this.selectOptions.computer.filter((option) => {
         if (option.id == 'basic-computer') return true;
-        if (this.params.sourceBooksInUse.dnd) {
+        if (this.params.sourcesInUse.dnd) {
           return option.dnd.name.indexOf('mononode') !== -1;
         } else {
           return option.id.indexOf('mononode') !== -1;
@@ -1613,7 +1615,7 @@ export default {
     selectOptionsSecondaryComputer() {
       return this.selectOptions.computer.filter((option) => {
         if (option.bonus < this.computer.bonus) {
-          if (this.params.sourceBooksInUse.dnd) {
+          if (this.params.sourcesInUse.dnd) {
             return option.dnd.name != 'n/a';
           } else {
             return true;
@@ -1672,7 +1674,7 @@ export default {
     // computed continued...
     sensorsBpCost() {
       var sensorsBpCost = this.sensors.bpCost;
-      if (this.params.sourceBooksInUse.som) {
+      if (this.params.sourcesInUse.som) {
         switch (this.params.sensorsMaterialId) {
           case 'djezet':
             sensorsBpCost += 3;
@@ -1790,7 +1792,7 @@ export default {
       if (this.params.defensiveCountermeasuresId !== 'none') {
         var dcDesc = this.defensiveCountermeasures.name.toLowerCase();
         if (
-          this.params.sourceBooksInUse.som &&
+          this.params.sourcesInUse.som &&
           this.params.defensiveCountermeasuresMaterialId != 'none'
         ) {
           dcDesc +=
@@ -1815,7 +1817,7 @@ export default {
 
       // network nodes
       // TODO: Change this to use networkNode.json
-      if (this.params.sourceBooksInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
+      if (this.params.sourcesInUse.som && this.isSupercolossal && this.networkNodes.ct > 0) {
         var networkNodeDesc = ('mk ' + this.networkNodes.name + ' network node').pluralise(
           this.networkNodes.ct
         );
@@ -1918,7 +1920,7 @@ export default {
       }
 
       // materials
-      if (this.params.sourceBooksInUse.som) {
+      if (this.params.sourcesInUse.som) {
         switch (this.params.thrustersMaterialId) {
           case 'horacalcum':
             thrusters.speed++;
@@ -1944,7 +1946,7 @@ export default {
         this.getItemById('thrusters', this.params.thrustersBoosterId)
       );
 
-      if (this.params.sourceBooksInUse.som) {
+      if (this.params.sourcesInUse.som) {
         switch (this.params.thrustersBoosterMaterialId) {
           case 'horacalcum':
             thrustersBooster.speed++;
@@ -2345,6 +2347,16 @@ export default {
     convertJsonInput() {
       var params = JSON.parse(this.json);
       this.params = params;
+      // TODO: need to modify JSON output to include sampleShip header, ex.
+      //   "id": "3-kingdoms-star-castle",
+      //   "source": "dnd",
+      //   "name": "3 Kingdoms Star Castle",
+      //   "size": 8,
+      //   "tier": "19",
+      // assume DND for the moment
+      if (!this.params.sourcesInUse.hasOwnProperty('dnd')) {
+        this.params.sourcesInUse.dnd = true;
+      }
       this.fixMissingParamsValues();
     },
 
@@ -2439,10 +2451,32 @@ export default {
     },
 
     // methods continued...
+    fixComputerForDND(key) {
+      // the mononode for each Mk is overridden with name, bonus, and nodes for 5e.
+      console.log(`before ${key}: ${this.params[key]}`);
+      var id = this.params[key].replace(/duo|tri|tetra/, 'mono');
+      // the 5e mononodes are 1, 5, and 8, so drop down to the one with a matching bonus
+      if (key == 'dedicatedComputerId') {
+        id = id.replace(/2|3|4/, '1'); // +1
+        id = id.replace(/6|7/, '5'); // +2
+        id = id.replace(/9|10/, '8'); // +3
+      }
+      console.log(`after ${key}: ${id}`);
+      this.params[key] = id;
+    },
+
+    // methods continued...
     fixMissingParamsValues() {
       var that = this;
 
       for (var key in this.paramsReset) {
+        if (this.params.sourcesInUse.dnd) {
+          // fixup computers for DND
+          if (['computerId', 'secondaryComputerId', 'dedicatedComputerId'].indexOf(key) >= 0) {
+            this.fixComputerForDND(key);
+          }
+        }
+
         // crew positions
         if (key == 'crewSkills') this.fixMissingCrewSkills();
 
@@ -2843,6 +2877,9 @@ export default {
         var sampleShipObj = this.getItemById('sampleShip', sampleShipId);
         var sampleShipParams = cloneObject(sampleShipObj.params);
         this.params = sampleShipParams;
+        if (!this.params.sourcesInUse.hasOwnProperty('dnd')) {
+          this.params.sourcesInUse.dnd = sampleShipObj.source == 'dnd';
+        }
         this.fixMissingParamsValues();
       }
     },
@@ -3285,12 +3322,15 @@ export default {
       weaponMount.isLinked = false;
       this.setWeaponLinking(position);
     },
+
+    // methods continued...
     logger() {
       for (let i = 0; i < arguments.length; i++) {
         console.log(arguments[i]);
       }
     },
   },
+
   /*
   |----------------------------------------------------------------------------------
   |  BEFORE MOUNT

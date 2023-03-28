@@ -37,7 +37,7 @@
         </div>
 
         <!-- special materials -->
-        <div class="form" v-if="params.sourceBooksInUse.som">
+        <div class="form" v-if="params.sourcesInUse.som">
           <div class="form-group">
             Special Material:
             <!-- none -->

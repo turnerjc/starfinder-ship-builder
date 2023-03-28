@@ -68,8 +68,6 @@
       <Patreon />
       -->
 
-      <!-- Sources -->
-      <Sources :sourceBooks="sourceBooks" :params="params"></Sources>
       <!--
       <Readout />
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -87,7 +85,7 @@
             <p>{{ frame.size }} {{ frameName }}</p>
             <p>
               <strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed
-              }}<span v-if="params.sourceBooksInUse.som && params.thrustersMaterialId != 'none'">
+              }}<span v-if="params.sourcesInUse.som && params.thrustersMaterialId != 'none'">
                 ({{ params.thrustersMaterialId }} thrusters)</span
               >; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span
                 v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0"
@@ -119,7 +117,7 @@
               {{ deflectorShield.defenseValue }}/&ndash;
             </p>
             <!-- reinforced bulkheads -->
-            <p v-if="params.sourceBooksInUse.som && params.reinforcedBulkheadId != 'none'">
+            <p v-if="params.sourcesInUse.som && params.reinforcedBulkheadId != 'none'">
               <strong>Reinforced Bulkheads</strong> {{ reinforcedBulkhead.name }};
               <strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
             </p>
@@ -167,6 +165,10 @@
           <!-- #readout -->
         </div>
       </div>
+
+      <!-- Sources -->
+      <Sources :sources="sources" :params="params"></Sources>
+
       <!--
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       | SAMPLE SHIPS
@@ -677,7 +679,7 @@
             </div>
 
             <!-- special materials -->
-            <div class="form" v-if="params.sourceBooksInUse.som">
+            <div class="form" v-if="params.sourcesInUse.som">
               <div class="form-group">
                 Special Material:
                 <!-- none -->
@@ -749,7 +751,7 @@
           </div>
 
           <!-- special materials -->
-          <div class="form" v-if="params.sourceBooksInUse.som">
+          <div class="form" v-if="params.sourcesInUse.som">
             <div class="form-group">
               Special Material:
               <!-- none -->
@@ -791,7 +793,7 @@
         </div>
 
         <!-- booster thrusters-->
-        <div class="box__select" v-if="params.sourceBooksInUse.som && hasBoosterThrusterHousing">
+        <div class="box__select" v-if="params.sourcesInUse.som && hasBoosterThrusterHousing">
           <div class="form-group">
             <label for="thrustersBoosterSelect">Thrusters Booster</label>
             <select
@@ -805,7 +807,7 @@
           </div>
 
           <!-- special materials -->
-          <div class="form" v-if="params.sourceBooksInUse.som">
+          <div class="form" v-if="params.sourcesInUse.som">
             <div class="form-group">
               Special Material:
               <!-- none -->
@@ -888,7 +890,7 @@
           </div>
 
           <!-- special materials -->
-          <div class="form" v-if="params.sourceBooksInUse.som">
+          <div class="form" v-if="params.sourcesInUse.som">
             <div class="form-group">
               Special Material:
               <!-- none -->
@@ -958,7 +960,7 @@
       |  ABLATIVE ARMOR
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
-      <div class="box" v-if="params.sourceBooksInUse.som == true">
+      <div class="box" v-if="params.sourcesInUse.som == true">
         <header class="box__header">
           <h3 id="ablativeArmor">Ablative Armor</h3>
         </header>
@@ -1042,7 +1044,7 @@
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
 
-      <div class="box" v-if="params.sourceBooksInUse.som == true">
+      <div class="box" v-if="params.sourcesInUse.som == true">
         <header class="box__header">
           <h3 id="fortified-hull">Fortified Hull</h3>
         </header>
@@ -1071,7 +1073,7 @@
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
 
-      <div class="box" v-if="params.sourceBooksInUse.som == true">
+      <div class="box" v-if="params.sourcesInUse.som == true">
         <header class="box__header">
           <h3 id="reinforced-bulkhead">Reinforced Bulkhead</h3>
         </header>
@@ -1118,7 +1120,7 @@
               class="form-control"
               v-model="params.computerId">
               <option v-for="option in selectOptionsComputer" :value="option.id">
-                {{ params.sourceBooksInUse.dnd ? option.dnd.name : option.name }}
+                {{ params.sourcesInUse.dnd ? option.dnd.name : option.name }}
               </option>
             </select>
           </div>
@@ -1144,13 +1146,13 @@
               class="form-control"
               v-model="params.secondaryComputerId">
               <option v-for="option in selectOptionsSecondaryComputer" :value="option.id">
-                {{ params.sourceBooksInUse.dnd ? option.dnd.name : option.name }}
+                {{ params.sourcesInUse.dnd ? option.dnd.name : option.name }}
               </option>
             </select>
           </div>
 
           <!-- dedicated computer -->
-          <div class="form-group" v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
+          <div class="form-group" v-if="params.sourcesInUse.som && hasDedicatedComputerHousing">
             <label for="dedicatedComputerSelect">Dedicated Computer</label>
             <select
               name="dedicatedComputer"
@@ -1158,7 +1160,7 @@
               class="form-control"
               v-model="params.dedicatedComputerId">
               <option v-for="option in selectOptionsDedicatedComputer" :value="option.id">
-                {{ params.sourceBooksInUse.dnd ? option.dnd.name : option.name }}
+                {{ params.sourcesInUse.dnd ? option.dnd.name : option.name }}
               </option>
             </select>
           </div>
@@ -1166,7 +1168,7 @@
 
         <div class="box__info">
           <strong>Skill Bonus</strong> {{ computerSkillBonusDesc }};
-          <span v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
+          <span v-if="params.sourcesInUse.som && hasDedicatedComputerHousing">
             <strong>Dedicated Computer Skill Bonus</strong>
             {{ getPrefixedModifier(dedicatedComputerBonus) }};
           </span>
@@ -1247,7 +1249,7 @@
           </div>
 
           <!-- special materials -->
-          <div class="form" v-if="params.sourceBooksInUse.som">
+          <div class="form" v-if="params.sourcesInUse.som">
             <div class="form-group">
               Special Material:
               <!-- none -->
@@ -1354,7 +1356,7 @@
         </p>
         <p
           v-if="
-            params.sourceBooksInUse.som &&
+            params.sourcesInUse.som &&
             sizeCategory.multiplier >= 4 &&
             (params.hasColonyShipFramework || params.hasSpaceStationFramework)
           "
@@ -1719,7 +1721,7 @@
           </div>
 
           <!-- special materials -->
-          <div class="form" v-if="params.sourceBooksInUse.som">
+          <div class="form" v-if="params.sourcesInUse.som">
             <div class="form-group">
               Special Material:
               <!-- none -->
@@ -1783,7 +1785,7 @@
         </header>
 
         <!-- select shield type -->
-        <div class="form" v-if="params.sourceBooksInUse.som">
+        <div class="form" v-if="params.sourcesInUse.som">
           Shield Type:
           <div class="radio">
             <label>
@@ -1804,7 +1806,7 @@
         </div>
 
         <!-- Core Rulebook Shields -->
-        <div v-if="!params.sourceBooksInUse.som || params.shieldType == 'shields'">
+        <div v-if="!params.sourcesInUse.som || params.shieldType == 'shields'">
           <div class="box__select">
             <div class="form-group">
               <label for="shieldsSelect">Shields</label>
@@ -1989,7 +1991,7 @@
             </div>
 
             <!-- Special Materials -->
-            <div class="form" v-if="params.sourceBooksInUse.som">
+            <div class="form" v-if="params.sourcesInUse.som">
               <div class="form-group">
                 Special Material:
                 <!-- none -->
@@ -2059,7 +2061,7 @@
             <div
               class="box__select"
               v-if="
-                params.sourceBooksInUse.som &&
+                params.sourcesInUse.som &&
                 sizeCategory.multiplier >= 4 &&
                 (params.hasColonyShipFramework || params.hasSpaceStationFramework) &&
                 isOrbitalWeapon(weaponMount.weapon)
@@ -2154,13 +2156,13 @@
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
 
-      <div id="other" class="box" v-if="params.sourceBooksInUse.pw || params.sourceBooksInUse.som">
+      <div id="other" class="box" v-if="params.sourcesInUse.pw || params.sourcesInUse.som">
         <header class="box__header">
           <h3 id="other">Systems and Upgrades</h3>
         </header>
 
         <!-- algal shielding -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasAlgalShielding">
@@ -2176,7 +2178,7 @@
         </div>
 
         <!-- algal shielding -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasAutoDestruct">
@@ -2192,7 +2194,7 @@
         </div>
 
         <!-- colony ship framework -->
-        <div v-if="params.sourceBooksInUse.som && this.sizeCategory.multiplier >= 4">
+        <div v-if="params.sourcesInUse.som && this.sizeCategory.multiplier >= 4">
           <!-- Large or higher -->
           <div class="box__select">
             <div class="checkbox">
@@ -2212,7 +2214,7 @@
         </div>
 
         <!-- consciousness uplink drive -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasConsciousnessUplink">
@@ -2231,7 +2233,7 @@
         </div>
 
         <!-- data net -->
-        <div v-if="params.sourceBooksInUse.pw">
+        <div v-if="params.sourcesInUse.pw">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasDataNet">
@@ -2247,7 +2249,7 @@
         </div>
 
         <!-- hive joining -->
-        <div v-if="params.sourceBooksInUse.pw">
+        <div v-if="params.sourcesInUse.pw">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasHiveJoining">
@@ -2262,7 +2264,7 @@
         </div>
 
         <!-- powersap -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasPowersap">
@@ -2278,7 +2280,7 @@
         </div>
 
         <!-- robotic appendage -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="form-group">
               <label for="roboticAppendageSelect">Robotic Appendage</label>
@@ -2299,7 +2301,7 @@
         </div>
 
         <!-- root system -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasRootSystem">
@@ -2317,7 +2319,7 @@
         </div>
 
         <!-- space station framework -->
-        <div v-if="params.sourceBooksInUse.som && sizeCategory.multiplier >= 4">
+        <div v-if="params.sourcesInUse.som && sizeCategory.multiplier >= 4">
           <div class="box__select">
             <div class="checkbox">
               <label for="hasSpaceStationFramework">
@@ -2336,7 +2338,7 @@
         </div>
 
         <!-- training interface modules -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <p>Training Interface Modules</p>
           <div class="box--flex">
             <!-- tim -->
@@ -2370,7 +2372,7 @@
         </div>
 
         <!-- virtual intelligence -->
-        <div v-if="params.sourceBooksInUse.som">
+        <div v-if="params.sourcesInUse.som">
           <div class="box__select">
             <div class="form-group">
               <label for="viSelect">Virtual Intelligence</label>
@@ -2387,7 +2389,7 @@
         </div>
 
         <!-- VI upgrade: holographic projector -->
-        <div v-if="params.sourceBooksInUse.som && params.viId != 'none'">
+        <div v-if="params.sourcesInUse.som && params.viId != 'none'">
           <div class="box__select">
             <div class="form-group">
               <label for="viHoloProjectorSelect">VI Upgrade: Holographic Projector</label>
@@ -2409,7 +2411,7 @@
         </div>
 
         <!-- VI upgrade: skill expander -->
-        <div v-if="params.sourceBooksInUse.som && params.viId != 'none'">
+        <div v-if="params.sourcesInUse.som && params.viId != 'none'">
           <div class="box__select">
             <div class="form-group">
               <label for="viSkillExpanderSelect">VI Upgrade: Skill Expander</label>

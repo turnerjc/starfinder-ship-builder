@@ -1,5 +1,5 @@
 <script setup>
-  const props = defineProps(['sourceBooks', 'params']);
+  const props = defineProps(['sources', 'params']);
   // console.log('Sources.vue', props);
 </script>
 <template>
@@ -14,9 +14,9 @@
       <h2 id="sources">Sources</h2>
     </header>
     <div class="form-inline" style="margin: 0.5rem 0">
-      <div class="form-group" v-for="source in sourceBooks">
+      <div class="form-group" v-for="source in sources">
         <label style="display: inline-block; margin-right: 1rem">
-          <input type="checkbox" v-model="params.sourceBooksInUse[source.id]" />
+          <input type="checkbox" v-model="params.sourcesInUse[source.id]" />
           {{ source.name }}
         </label>
       </div>

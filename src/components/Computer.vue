@@ -50,7 +50,7 @@
       </div>
 
       <!-- dedicated computer -->
-      <div class="form-group" v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
+      <div class="form-group" v-if="params.sourcesInUse.som && hasDedicatedComputerHousing">
         <label for="dedicatedComputerSelect">Dedicated Computer</label>
         <select
           name="dedicatedComputer"
@@ -66,7 +66,7 @@
 
     <div class="box__info">
       <strong>Skill Bonus</strong> {{ computerSkillBonusDesc }};
-      <span v-if="params.sourceBooksInUse.som && hasDedicatedComputerHousing">
+      <span v-if="params.sourcesInUse.som && hasDedicatedComputerHousing">
         <strong>Dedicated Computer Skill Bonus</strong>
         {{ getPrefixedModifier(dedicatedComputer.bonus) }};
       </span>

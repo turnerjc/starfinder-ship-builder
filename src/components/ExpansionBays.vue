@@ -16,7 +16,7 @@
     </p>
     <p
       v-if="
-        params.sourceBooksInUse.som &&
+        params.sourcesInUse.som &&
         sizeCategory.multiplier >= 4 &&
         (params.hasColonyShipFramework || params.hasSpaceStationFramework)
       "

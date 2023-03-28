@@ -20,7 +20,7 @@
       </div>
 
       <!-- special materials -->
-      <div class="form" v-if="params.sourceBooksInUse.som">
+      <div class="form" v-if="params.sourcesInUse.som">
         <div class="form-group">
           Special Material:
           <!-- none -->
@@ -62,7 +62,7 @@
     </div>
 
     <!-- booster thrusters-->
-    <div class="box__select" v-if="params.sourceBooksInUse.som && hasBoosterThrusterHousing">
+    <div class="box__select" v-if="params.sourcesInUse.som && hasBoosterThrusterHousing">
       <div class="form-group">
         <label for="thrustersBoosterSelect">Thrusters Booster</label>
         <select
@@ -76,7 +76,7 @@
       </div>
 
       <!-- special materials -->
-      <div class="form" v-if="params.sourceBooksInUse.som">
+      <div class="form" v-if="params.sourcesInUse.som">
         <div class="form-group">
           Special Material:
           <!-- none -->

@@ -84,7 +84,7 @@
         </div>
 
         <!-- Special Materials -->
-        <div class="form" v-if="params.sourceBooksInUse.som">
+        <div class="form" v-if="params.sourcesInUse.som">
           <div class="form-group">
             Special Material:
             <!-- none -->
@@ -154,7 +154,7 @@
         <div
           class="box__select"
           v-if="
-            params.sourceBooksInUse.som &&
+            params.sourcesInUse.som &&
             sizeCategory.multiplier >= 4 &&
             (params.hasColonyShipFramework || params.hasSpaceStationFramework) &&
             isOrbitalWeapon(weaponMount.weapon)

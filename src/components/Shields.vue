@@ -11,7 +11,7 @@
     </header>
 
     <!-- select shield type -->
-    <div class="form" v-if="params.sourceBooksInUse.som">
+    <div class="form" v-if="params.sourcesInUse.som">
       Shield Type:
       <div class="radio">
         <label>
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Core Rulebook Shields -->
-    <div v-if="!params.sourceBooksInUse.som || params.shieldType == 'shields'">
+    <div v-if="!params.sourcesInUse.som || params.shieldType == 'shields'">
       <div class="box__select">
         <div class="form-group">
           <label for="shieldsSelect">Shields</label>

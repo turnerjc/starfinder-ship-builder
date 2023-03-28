@@ -5,7 +5,7 @@
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
 
-  <div class="box" v-if="params.sourceBooksInUse.som == true">
+  <div class="box" v-if="params.sourcesInUse.som == true">
     <header class="box__header">
       <h3 id="reinforced-bulkhead">Reinforced Bulkhead</h3>
     </header>

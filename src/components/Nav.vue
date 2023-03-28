@@ -21,9 +21,9 @@
       <ul class="contents__1">
         <li><a href="#armor">Armor</a></li>
         <ul class="contents__1">
-          <li v-if="params.sourceBooksInUse.som"><a href="#ablativeArmor">Ablative Armor</a></li>
-          <li v-if="params.sourceBooksInUse.som"><a href="#fortified-hull">Fortified Hull</a></li>
-          <li v-if="params.sourceBooksInUse.som">
+          <li v-if="params.sourcesInUse.som"><a href="#ablativeArmor">Ablative Armor</a></li>
+          <li v-if="params.sourcesInUse.som"><a href="#fortified-hull">Fortified Hull</a></li>
+          <li v-if="params.sourcesInUse.som">
             <a href="#reinforced-bulkhead">Reinforced Bulkhead</a>
           </li>
         </ul>
@@ -36,10 +36,7 @@
         <li><a href="#sensors">Sensors</a></li>
         <li><a href="#shields">Shields</a></li>
         <li><a href="#weapons">Weapons</a></li>
-        <li
-          v-if="
-            params.sourceBooksInUse.pw || params.sourceBooksInUse.som || params.sourceBooksInUse.dnd
-          ">
+        <li v-if="params.sourcesInUse.pw || params.sourcesInUse.som || params.sourcesInUse.dnd">
           <a href="#other">Systems and Upgrades</a>
         </li>
       </ul>
