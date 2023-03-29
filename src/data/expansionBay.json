@@ -1,8 +1,5 @@
 {
-  "props": [
-    "pcuCost",
-    "bpCost"
-  ],
+  "props": ["pcuCost", "bpCost"],
   "data": [
     {
       "id": "none",
@@ -135,11 +132,7 @@
       "source": "scr",
       "name": "Hangar Bay",
       "numBays": 4,
-      "sizes": [
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
+      "sizes": ["Gargantuan", "Colossal", "Supercolossal"],
       "pcuCost": 30,
       "bpCost": 10
     },
@@ -202,10 +195,7 @@
       "source": "scr",
       "name": "Power Core Housing",
       "numBays": 1,
-      "sizes": [
-        "Medium",
-        "Large"
-      ],
+      "sizes": ["Medium", "Large"],
       "pcuCost": 0,
       "bpCost": 10
     },
@@ -340,12 +330,7 @@
       "source": "scr",
       "name": "Shuttle Bay",
       "numBays": 2,
-      "sizes": [
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
+      "sizes": ["Huge", "Gargantuan", "Colossal", "Supercolossal"],
       "pcuCost": 10,
       "bpCost": 4
     },
@@ -588,10 +573,7 @@
       "source": "pw",
       "name": "Launch Tubes",
       "numBays": 2,
-      "sizes": [
-        "Medium",
-        "Large"
-      ],
+      "sizes": ["Medium", "Large"],
       "pcuCost": 10,
       "bpCost": 5
     },
@@ -852,15 +834,7 @@
       "source": "som",
       "name": "External Expansion Bay",
       "numBays": 0,
-      "sizes": [
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
+      "sizes": ["Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal", "Supercolossal"],
       "pcuCost": 0,
       "bpCost": 3
     },
@@ -869,12 +843,7 @@
       "source": "som",
       "name": "Ghost Drive",
       "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large"
-      ],
+      "sizes": ["Tiny", "Small", "Medium", "Large"],
       "pcuCost": 10,
       "bpCost": 5
     },
@@ -956,9 +925,7 @@
       "source": "som",
       "name": "Drift Booster",
       "numBays": 1,
-      "sizes": [
-        "Supercolossal"
-      ],
+      "sizes": ["Supercolossal"],
       "pcuCost": 40,
       "bpCost": 20
     },
@@ -967,9 +934,7 @@
       "source": "som",
       "name": "Recycling System",
       "numBays": 1,
-      "sizes": [
-        "Supercolossal"
-      ],
+      "sizes": ["Supercolossal"],
       "pcuCost": 2,
       "bpCost": 1
     },
@@ -990,6 +955,132 @@
       ],
       "pcuCost": 1,
       "bpCost": 1
+    },
+    {
+      "id": "arcane-cannon",
+      "source": "dnd",
+      "name": "Arcane Cannon",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 25,
+      "bpCost": 15
+    },
+    {
+      "id": "cloaking-device",
+      "source": "dnd",
+      "name": "Cloaking Device",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 50,
+      "bpCost": 20
+    },
+    {
+      "id": "fabricator",
+      "source": "dnd",
+      "name": "Fabricator",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 25,
+      "bpCost": 5
+    },
+    {
+      "id": "hypercapacitor",
+      "source": "dnd",
+      "name": "Hypercapacitor",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 10
+    },
+    {
+      "id": "sensor-probe",
+      "source": "dnd",
+      "name": "Sensor Probe",
+      "numBays": 0,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 5
+    },
+    {
+      "id": "sensor-tri-probe",
+      "source": "dnd",
+      "name": "Sensor Tri-Probe",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 5
+    },
+    {
+      "id": "teleport-circle",
+      "source": "dnd",
+      "name": "Teleport Circle",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 10,
+      "bpCost": 20
     }
   ]
 }
