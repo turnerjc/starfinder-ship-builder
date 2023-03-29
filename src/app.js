@@ -5,32 +5,6 @@ import Summary from './components/Summary.vue';
 import Intro from './components/Intro.vue';
 import Patreon from './components/Patreon.vue';
 import Sources from './components/Sources.vue';
-// import Input from './components/Input.vue';
-// import Concept from './components/Concept.vue';
-// import Tier from './components/Tier.vue';
-// import ShipFrame from './components/ShipFrame.vue';
-// import CustomFrame from './components/CustomFrame.vue';
-// import PowerCore from './components/PowerCore.vue';
-// import Thrusters from './components/Thrusters.vue';
-// import AblativeArmor from './components/AblativeArmor.vue';
-// import Armor from './components/Armor.vue';
-// import Computer from './components/Computer.vue';
-// import CrewQuarters from './components/CrewQuarters.vue';
-// import Defenses from './components/Defenses.vue';
-// import DriftEngines from './components/DriftEngines.vue';
-// import ExpansionBays from './components/ExpansionBays.vue';
-// import FortifiedHull from './components/FortifiedHull.vue';
-// import ReinforcedBulkhead from './components/ReinforcedBulkhead.vue';
-// import Security from './components/Security.vue';
-// import Sensors from './components/Sensors.vue';
-// import Shields from './components/Shields.vue';
-// import WeaponMounts from './components/WeaponMounts.vue';
-// import SystemsAndUpgrades from './components/SystemsAndUpgrades.vue';
-// import CustomComponents from './components/CustomComponents.vue';
-// import Crew from './components/Crew.vue';
-// import Output from './components/Output.vue';
-// import JSONOutput from './components/JSONOutput.vue';
-// import Footer from './components/Footer.vue';
 
 // Helper functions
 import {
@@ -61,32 +35,6 @@ export default {
     Intro,
     Patreon,
     Sources,
-    // Input,
-    // Concept,
-    // Tier,
-    // ShipFrame,
-    // CustomFrame,
-    // PowerCore,
-    // Thrusters,
-    // AblativeArmor,
-    // Armor,
-    // Computer,
-    // CrewQuarters,
-    // Defenses,
-    // DriftEngines,
-    // ExpansionBays,
-    // FortifiedHull,
-    // ReinforcedBulkhead,
-    // Security,
-    // Sensors,
-    // Shields,
-    // WeaponMounts,
-    // SystemsAndUpgrades,
-    // CustomComponents,
-    // Crew,
-    // Output,
-    // JSONOutput,
-    // Footer,
   },
   data() {
     return {
@@ -290,6 +238,12 @@ export default {
         hasRootSystem: 0, // other systems (som)
         hasSelfDestructSystem: 0,
         hasSpaceStationFramework: 0, // other systems (som)
+        hasAfterburners: 0, // upgrades (dm)
+        hasCaptainsChair: 0, // upgrades (dm)
+        hasDeadReckoner: 0, // upgrades (dm)
+        hasRadioArray: 0, // upgrades (dm)
+        hasRepairDrones: 0, // upgrades (dm)
+        hasTargetingOptics: 0, // upgrades (dm)
         isSetDefaultCrewSkillValues: 1,
         isUseStrictRules: 1,
         networkNode: {},
@@ -2345,17 +2299,12 @@ export default {
 
     // methods continued...
     convertJsonInput() {
-      var params = JSON.parse(this.json);
-      this.params = params;
-      // TODO: need to modify JSON output to include sampleShip header, ex.
-      //   "id": "3-kingdoms-star-castle",
-      //   "source": "dnd",
-      //   "name": "3 Kingdoms Star Castle",
-      //   "size": 8,
-      //   "tier": "19",
-      // assume DND for the moment
-      if (!this.params.sourcesInUse.hasOwnProperty('dnd')) {
-        this.params.sourcesInUse.dnd = true;
+      var fixDnd = this.params.sourcesInUse?.dnd;
+      // read JSON
+      this.params = JSON.parse(this.json);
+      fixDnd |= this.params.sourcesInUse?.dnd;
+      if (fixDnd) {
+        this.fixDndParams();
       }
       this.fixMissingParamsValues();
     },
@@ -2426,6 +2375,50 @@ export default {
     },
 
     // methods continued...
+    fixDndComputers(computer) {
+      var id = this.params[computer];
+      // the mononode for each Mk is overridden with name, bonus, and nodes for 5e.
+      console.log(`original ${computer}: ${id}`);
+      id = id.replace(/duo|tri|tetra/, 'mono');
+      // the 5e mononodes are 1, 5, and 8, so drop down to the one with a matching bonus
+      if (computer == 'dedicatedComputerId') {
+        id = id.replace(/2|3|4/, '1'); // +1
+        id = id.replace(/6|7/, '5'); // +2
+        id = id.replace(/9|10/, '8'); // +3
+      }
+      console.log(`new ${computer}: ${id}`);
+      this.params[computer] = id;
+    },
+
+    // methods continued...
+    fixDndParams() {
+      // make sure the dnd box is still checked
+      this.params.sourcesInUse.dnd = true;
+      console.log('fix dnd params');
+
+      // fix computers for dnd
+      var computers = ['computerId', 'secondaryComputerId', 'dedicatedComputerId'];
+      for (var i in computers) {
+        this.fixDndComputers(computers[i]);
+      }
+
+      // fix computers for dnd
+      var upgrades = [
+        'hasAfterburners',
+        'hasCaptainsChair',
+        'hasDeadReckoner',
+        'hasRadioArray',
+        'hasRepairDrones',
+        'hasTargetingOptics',
+      ];
+      for (var upgrade in upgrades) {
+        if (!this.params[upgrade]) {
+          this.params[upgrade] = 0;
+        }
+      }
+    },
+
+    // methods continued...
     fixMissingCrewSkills() {
       for (var roleId in this.paramsReset.crewSkills) {
         // if role is missing, add it
@@ -2451,32 +2444,10 @@ export default {
     },
 
     // methods continued...
-    fixComputerForDND(key) {
-      // the mononode for each Mk is overridden with name, bonus, and nodes for 5e.
-      console.log(`before ${key}: ${this.params[key]}`);
-      var id = this.params[key].replace(/duo|tri|tetra/, 'mono');
-      // the 5e mononodes are 1, 5, and 8, so drop down to the one with a matching bonus
-      if (key == 'dedicatedComputerId') {
-        id = id.replace(/2|3|4/, '1'); // +1
-        id = id.replace(/6|7/, '5'); // +2
-        id = id.replace(/9|10/, '8'); // +3
-      }
-      console.log(`after ${key}: ${id}`);
-      this.params[key] = id;
-    },
-
-    // methods continued...
     fixMissingParamsValues() {
       var that = this;
 
       for (var key in this.paramsReset) {
-        if (this.params.sourcesInUse.dnd) {
-          // fixup computers for DND
-          if (['computerId', 'secondaryComputerId', 'dedicatedComputerId'].indexOf(key) >= 0) {
-            this.fixComputerForDND(key);
-          }
-        }
-
         // crew positions
         if (key == 'crewSkills') this.fixMissingCrewSkills();
 
@@ -2876,9 +2847,11 @@ export default {
       if (sampleShipId !== 'none') {
         var sampleShipObj = this.getItemById('sampleShip', sampleShipId);
         var sampleShipParams = cloneObject(sampleShipObj.params);
+        var fixDnd = this.params.sourcesInUse?.dnd;
         this.params = sampleShipParams;
-        if (!this.params.sourcesInUse.hasOwnProperty('dnd')) {
-          this.params.sourcesInUse.dnd = sampleShipObj.source == 'dnd';
+        fixDnd |= this.params.sourcesInUse?.dnd;
+        if (fixDnd) {
+          this.fixDndParams();
         }
         this.fixMissingParamsValues();
       }

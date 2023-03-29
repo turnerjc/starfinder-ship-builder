@@ -1167,12 +1167,16 @@
         </div>
 
         <div class="box__info">
-          <strong>Skill Bonus</strong> {{ computerSkillBonusDesc }};
+          <strong>Skill Bonus</strong> {{ computerSkillBonusDesc }}
           <span v-if="params.sourcesInUse.som && hasDedicatedComputerHousing">
             <strong>Dedicated Computer Skill Bonus</strong>
-            {{ getPrefixedModifier(dedicatedComputerBonus) }};
+            {{ getPrefixedModifier(dedicatedComputerBonus) }}
           </span>
-          <strong>Nodes</strong> {{ ctComputerNodes }}; <strong>Tier</strong> {{ computerTier }}
+          <strong>Nodes</strong> {{ ctComputerNodes }}
+          <span v-if="!params.sourcesInUse.dnd">
+            <strong>Computer Tier</strong>
+            {{ computerTier }}
+          </span>
         </div>
 
         <div class="box__cost">

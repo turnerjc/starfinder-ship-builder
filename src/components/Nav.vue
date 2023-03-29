@@ -8,8 +8,8 @@
   <nav class="contents">
     <ul class="contents__0">
       <li><a href="#title">Intro</a></li>
-      <li><a href="#sources">Sources</a></li>
       <li><a href="#readout">Ship Readout</a></li>
+      <li><a href="#sources">Sources</a></li>
       <li><a href="#sampleships">Sample Ships</a></li>
       <li><a href="#loadsave">Load/Save</a></li>
       <li><a href="#concept">Concept</a></li>
@@ -39,8 +39,8 @@
         <li v-if="params.sourcesInUse.pw || params.sourcesInUse.som || params.sourcesInUse.dnd">
           <a href="#other">Systems and Upgrades</a>
         </li>
+        <li><a href="#custom-components">Custom Components</a></li>
       </ul>
-      <li><a href="#custom-components">Custom Components</a></li>
       <li><a href="#crew">Crew</a></li>
     </ul>
   </nav>
