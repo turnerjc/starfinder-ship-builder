@@ -1554,32 +1554,6 @@ export default {
     },
 
     // computed continued...
-    selectOptionsDedicatedComputer() {
-      return this.selectOptions.computer.filter((option) => {
-        if (option.id == 'basic-computer') return true;
-        if (this.params.sourcesInUse.dnd) {
-          return option.dnd.name.indexOf('mononode') !== -1;
-        } else {
-          return option.id.indexOf('mononode') !== -1;
-        }
-      });
-    },
-
-    // computed continued...
-    selectOptionsSecondaryComputer() {
-      return this.selectOptions.computer.filter((option) => {
-        if (option.bonus < this.computer.bonus) {
-          if (this.params.sourcesInUse.dnd) {
-            return option.dnd.name != 'n/a';
-          } else {
-            return true;
-          }
-        }
-        return false;
-      });
-    },
-
-    // computed continued...
     selectOptionsCrew() {
       var crew = Object.keys(this.params.crewSkills).filter(
         (roleId) => this.params.crewSkills[roleId].hasRole
@@ -1599,6 +1573,18 @@ export default {
     },
 
     // computed continued...
+    selectOptionsDedicatedComputer() {
+      return this.selectOptions.computer.filter((option) => {
+        if (option.id == 'basic-computer') return true;
+        if (this.params.sourcesInUse.dnd) {
+          return option.dnd.name.indexOf('mononode') !== -1;
+        } else {
+          return option.id.indexOf('mononode') !== -1;
+        }
+      });
+    },
+
+    // computed continued...
     selectOptionsDriftEngine() {
       var driftEngines = this.selectOptions.driftEngine.filter(
         (option) =>
@@ -1613,6 +1599,20 @@ export default {
     selectOptionsPersonalWeapon() {
       // TODO: Remove weapon level for D&D 5e or add levels to the personal weapons
       return this.selectOptions.personalWeapon.filter((option) => option.level <= this.tier.id);
+    },
+
+    // computed continued...
+    selectOptionsSecondaryComputer() {
+      return this.selectOptions.computer.filter((option) => {
+        if (option.bonus < this.computer.bonus) {
+          if (this.params.sourcesInUse.dnd) {
+            return option.dnd.name != 'n/a';
+          } else {
+            return true;
+          }
+        }
+        return false;
+      });
     },
 
     // computed continued...
@@ -1762,11 +1762,11 @@ export default {
 
       // computer
       var computerDesc =
-        this.computerName.toLowerCase() +
-        (this.computer.id == 'basic-computer' ? '' : ' computer') +
-        ' (tier ' +
-        this.computerTier +
-        ')';
+        this.computerName.toLowerCase() + (this.computer.id == 'basic-computer' ? '' : ' computer');
+      if (!this.params.sourcesInUse.dnd) {
+        computerDesc += ' (tier ' + this.computerTier + ')';
+      }
+
       desc.push(computerDesc);
 
       // network nodes
@@ -2376,17 +2376,20 @@ export default {
 
     // methods continued...
     fixDndComputers(computer) {
-      var id = this.params[computer];
       // the mononode for each Mk is overridden with name, bonus, and nodes for 5e.
-      console.log(`original ${computer}: ${id}`);
+      var id = this.params[computer];
+
+      // console.log(`original ${computer}: ${id}`);
       id = id.replace(/duo|tri|tetra/, 'mono');
+
       // the 5e mononodes are 1, 5, and 8, so drop down to the one with a matching bonus
       if (computer == 'dedicatedComputerId') {
         id = id.replace(/2|3|4/, '1'); // +1
         id = id.replace(/6|7/, '5'); // +2
         id = id.replace(/9|10/, '8'); // +3
       }
-      console.log(`new ${computer}: ${id}`);
+
+      // console.log(`new ${computer}: ${id}`);
       this.params[computer] = id;
     },
 
@@ -2394,7 +2397,6 @@ export default {
     fixDndParams() {
       // make sure the dnd box is still checked
       this.params.sourcesInUse.dnd = true;
-      console.log('fix dnd params');
 
       // fix computers for dnd
       var computers = ['computerId', 'secondaryComputerId', 'dedicatedComputerId'];
