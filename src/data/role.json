@@ -12,7 +12,9 @@
         "engineering",
         "gunnery",
         "intimidate",
+        "medicine",
         "perception",
+        "physical-science",
         "piloting"
       ]
     },
@@ -21,65 +23,70 @@
       "name": "Engineer",
       "source": "scr",
       "hasRoleQuestion": "Is there an engineer?",
-      "skills": [
-        "computers",
-        "engineering"
-      ]
+      "skills": ["computers", "engineering"]
     },
     {
       "id": "gunner",
       "name": "Gunner",
       "source": "scr",
       "hasRoleQuestion": "Is there a gunner?",
-      "skills": [
-        "computers",
-        "engineering",
-        "gunnery"
-      ]
+      "skills": ["computers", "engineering", "gunnery"]
     },
     {
       "id": "pilot",
       "name": "Pilot",
       "source": "scr",
       "hasRoleQuestion": "Is there a pilot?",
-      "skills": [
-        "computers",
-        "diplomacy",
-        "engineering",
-        "gunnery",
-        "intimidate",
-        "piloting"
-      ]
+      "skills": ["computers", "diplomacy", "engineering", "gunnery", "intimidate", "piloting"]
     },
     {
       "id": "scienceOfficer",
       "name": "Science Officer",
       "source": "scr",
       "hasRoleQuestion": "Is there a science officer?",
-      "skills": [
-        "computers",
-        "life-science",
-        "physical-science"
-      ]
+      "skills": ["computers", "life-science", "physical-science"]
     },
     {
       "id": "chiefMate",
       "name": "Chief Mate",
       "source": "pw",
       "hasRoleQuestion": "Is there a chief mate?",
-      "skills": [
-        "acrobatics",
-        "athletics"
-      ]
+      "skills": ["acrobatics", "athletics"]
     },
     {
       "id": "magicOfficer",
       "name": "Magic Officer",
       "source": "pw",
       "hasRoleQuestion": "Is there a magic officer?",
-      "skills": [
-        "mysticism"
-      ]
+      "skills": ["mysticism"]
+    },
+    {
+      "id": "astrogator",
+      "name": "Astrogator",
+      "source": "dnd",
+      "hasRoleQuestion": "Is there an astrogator?",
+      "skills": ["computers", "physical-science"]
+    },
+    {
+      "id": "astropath",
+      "name": "Astropath",
+      "source": "dnd",
+      "hasRoleQuestion": "Is there an astropath?",
+      "skills": ["physical-science"]
+    },
+    {
+      "id": "co-pilot",
+      "name": "Co-Pilot",
+      "source": "dnd",
+      "hasRoleQuestion": "Is there a co-pilot?",
+      "skills": ["piloting"]
+    },
+    {
+      "id": "medicalOfficer",
+      "name": "Medical Officer",
+      "source": "dnd",
+      "hasRoleQuestion": "Is there a medical officer?",
+      "skills": ["medicine"]
     }
   ]
 }

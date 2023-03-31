@@ -92,7 +92,15 @@ export default {
                 modifier: 0,
                 ranks: 0,
               },
+              medicine: {
+                modifier: 0,
+                ranks: 0,
+              },
               perception: {
+                modifier: 0,
+                ranks: 0,
+              },
+              'physical-science': {
                 modifier: 0,
                 ranks: 0,
               },
@@ -210,6 +218,54 @@ export default {
               },
             },
           }, // magicOfficer
+          astrogator: {
+            countOfficers: 1,
+            countOfficerCrew: 0,
+            hasRole: false,
+            skills: {
+              computers: {
+                modifier: 0,
+                ranks: 0,
+              },
+              'physical-science': {
+                modifier: 0,
+                ranks: 0,
+              },
+            },
+          }, // astrogator
+          astropath: {
+            countOfficers: 1,
+            countOfficerCrew: 0,
+            hasRole: false,
+            skills: {
+              'physical-science': {
+                modifier: 0,
+                ranks: 0,
+              },
+            },
+          }, // astropath
+          'co-pilot': {
+            countOfficers: 1,
+            countOfficerCrew: 0,
+            hasRole: false,
+            skills: {
+              piloting: {
+                modifier: 0,
+                ranks: 0,
+              },
+            },
+          }, // co-pilot
+          medicalOfficer: {
+            countOfficers: 1,
+            countOfficerCrew: 0,
+            hasRole: false,
+            skills: {
+              medicine: {
+                modifier: 0,
+                ranks: 0,
+              },
+            },
+          }, // medicalOfficer
         }, // crewSkills
         ctTim: 0,
         ctTimAll: 0,
