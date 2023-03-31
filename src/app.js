@@ -218,6 +218,28 @@ export default {
               },
             },
           }, // magicOfficer
+          medicalOfficer: {
+            countOfficers: 1,
+            countOfficerCrew: 0,
+            hasRole: false,
+            skills: {
+              medicine: {
+                modifier: 0,
+                ranks: 0,
+              },
+            },
+          }, // medicalOfficer
+          'co-pilot': {
+            countOfficers: 1,
+            countOfficerCrew: 0,
+            hasRole: false,
+            skills: {
+              piloting: {
+                modifier: 0,
+                ranks: 0,
+              },
+            },
+          }, // co-pilot
           astrogator: {
             countOfficers: 1,
             countOfficerCrew: 0,
@@ -242,30 +264,12 @@ export default {
                 modifier: 0,
                 ranks: 0,
               },
+              'life-science': {
+                modifier: 0,
+                ranks: 0,
+              },
             },
           }, // astropath
-          'co-pilot': {
-            countOfficers: 1,
-            countOfficerCrew: 0,
-            hasRole: false,
-            skills: {
-              piloting: {
-                modifier: 0,
-                ranks: 0,
-              },
-            },
-          }, // co-pilot
-          medicalOfficer: {
-            countOfficers: 1,
-            countOfficerCrew: 0,
-            hasRole: false,
-            skills: {
-              medicine: {
-                modifier: 0,
-                ranks: 0,
-              },
-            },
-          }, // medicalOfficer
         }, // crewSkills
         ctTim: 0,
         ctTimAll: 0,
@@ -2838,6 +2842,15 @@ export default {
       }
 
       return desc;
+    },
+
+    getSkillName(skillId) {
+      var skillItem = this.getItemById('skill', skillId);
+      if (this.params.sourcesInUse.dnd) {
+        return skillItem.dnd.name;
+      } else {
+        return skillItem.name;
+      }
     },
 
     // methods continued...

@@ -44,7 +44,21 @@
       "name": "Science Officer",
       "source": "scr",
       "hasRoleQuestion": "Is there a science officer?",
-      "skills": ["computers", "life-science", "physical-science"]
+      "skills": ["computers", "physical-science", "life-science"]
+    },
+    {
+      "id": "magicOfficer",
+      "name": "Magic Officer",
+      "source": "pw",
+      "hasRoleQuestion": "Is there a magic officer?",
+      "skills": ["mysticism"]
+    },
+    {
+      "id": "medicalOfficer",
+      "name": "Medical Officer",
+      "source": "dnd",
+      "hasRoleQuestion": "Is there a medical officer?",
+      "skills": ["medicine"]
     },
     {
       "id": "chiefMate",
@@ -54,11 +68,11 @@
       "skills": ["acrobatics", "athletics"]
     },
     {
-      "id": "magicOfficer",
-      "name": "Magic Officer",
-      "source": "pw",
-      "hasRoleQuestion": "Is there a magic officer?",
-      "skills": ["mysticism"]
+      "id": "co-pilot",
+      "name": "Co-Pilot",
+      "source": "dnd",
+      "hasRoleQuestion": "Is there a co-pilot?",
+      "skills": ["piloting"]
     },
     {
       "id": "astrogator",
@@ -72,21 +86,7 @@
       "name": "Astropath",
       "source": "dnd",
       "hasRoleQuestion": "Is there an astropath?",
-      "skills": ["physical-science"]
-    },
-    {
-      "id": "co-pilot",
-      "name": "Co-Pilot",
-      "source": "dnd",
-      "hasRoleQuestion": "Is there a co-pilot?",
-      "skills": ["piloting"]
-    },
-    {
-      "id": "medicalOfficer",
-      "name": "Medical Officer",
-      "source": "dnd",
-      "hasRoleQuestion": "Is there a medical officer?",
-      "skills": ["medicine"]
+      "skills": ["physical-science", "life-science"]
     }
   ]
 }

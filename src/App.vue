@@ -2612,7 +2612,7 @@
             <!-- Skill -->
             <div v-for="skillId in role.skills" class="crew__skill">
               <!-- Skill name -->
-              <h4 class="crew__skill__label">{{ getItemById('skill', skillId).name }}</h4>
+              <h4 class="crew__skill__label">{{ getSkillName(skillId) }}</h4>
 
               <!-- TODO: default skill buttons -->
 
