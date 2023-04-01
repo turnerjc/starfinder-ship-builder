@@ -69,61 +69,63 @@ export default {
             countOfficers: 0,
             hasRole: true,
             skills: {
-              bluff: {
-                modifier: 0,
+              diplomacy: {
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
+                hasExpertise: false,
+              },
+              intimidate: {
+                modifier: 1,
+                ranks: 0,
+                hasProficiency: true,
+                hasExpertise: false,
+              },
+              bluff: {
+                modifier: 1,
+                ranks: 0,
+                hasProficiency: true,
                 hasExpertise: false,
               },
               computers: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
-                hasExpertise: false,
-              },
-              diplomacy: {
-                modifier: 0,
-                ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               engineering: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               gunnery: {
-                modifier: 0,
-              },
-              intimidate: {
-                modifier: 0,
-                ranks: 0,
-                hasProfiency: false,
+                modifier: 1,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               medicine: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               perception: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               'physical-science': {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               piloting: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
             },
@@ -133,16 +135,16 @@ export default {
             countOfficerCrew: 0,
             hasRole: true,
             skills: {
-              computers: {
-                modifier: 0,
+              engineering: {
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
-              engineering: {
-                modifier: 0,
+              computers: {
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
             },
@@ -152,20 +154,22 @@ export default {
             countOfficerCrew: 0,
             hasRole: true,
             skills: {
+              gunnery: {
+                modifier: 1,
+                hasProficiency: true,
+                hasExpertise: false,
+              },
               computers: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
               },
               engineering: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
                 hasExpertise: false,
-              },
-              gunnery: {
-                modifier: 0,
               },
             },
           }, // gunner
@@ -174,37 +178,39 @@ export default {
             countOfficerCrew: 0,
             hasRole: true,
             skills: {
-              computers: {
-                modifier: 0,
+              piloting: {
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
-                hasExpertise: false,
-              },
-              diplomacy: {
-                modifier: 0,
-                ranks: 0,
-                hasProfiency: false,
-                hasExpertise: false,
-              },
-              engineering: {
-                modifier: 0,
-                ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
               gunnery: {
-                modifier: 0,
-              },
-              intimidate: {
-                modifier: 0,
-                ranks: 0,
-                hasProfiency: false,
+                modifier: 1,
+                hasProficiency: true,
                 hasExpertise: false,
               },
-              piloting: {
-                modifier: 0,
+              computers: {
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: false,
+                hasExpertise: false,
+              },
+              diplomacy: {
+                modifier: 1,
+                ranks: 0,
+                hasProficiency: false,
+                hasExpertise: false,
+              },
+              engineering: {
+                modifier: 1,
+                ranks: 0,
+                hasProficiency: false,
+                hasExpertise: false,
+              },
+              intimidate: {
+                modifier: 1,
+                ranks: 0,
+                hasProficiency: false,
                 hasExpertise: false,
               },
             },
@@ -215,21 +221,21 @@ export default {
             hasRole: true,
             skills: {
               computers: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
-                hasExpertise: false,
-              },
-              'life-science': {
-                modifier: 0,
-                ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
               'physical-science': {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
+                hasExpertise: false,
+              },
+              'life-science': {
+                modifier: 1,
+                ranks: 0,
+                hasProficiency: false,
                 hasExpertise: false,
               },
             },
@@ -240,15 +246,15 @@ export default {
             hasRole: false,
             skills: {
               acrobatics: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
               athletics: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
             },
@@ -259,9 +265,9 @@ export default {
             hasRole: false,
             skills: {
               mysticism: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
             },
@@ -272,9 +278,9 @@ export default {
             hasRole: false,
             skills: {
               medicine: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
             },
@@ -285,9 +291,9 @@ export default {
             hasRole: false,
             skills: {
               piloting: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
             },
@@ -298,15 +304,15 @@ export default {
             hasRole: false,
             skills: {
               computers: {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
               'physical-science': {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
             },
@@ -317,15 +323,15 @@ export default {
             hasRole: false,
             skills: {
               'physical-science': {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
               'life-science': {
-                modifier: 0,
+                modifier: 1,
                 ranks: 0,
-                hasProfiency: false,
+                hasProficiency: true,
                 hasExpertise: false,
               },
             },
@@ -790,11 +796,17 @@ export default {
         var roleDesc = [];
 
         Object.keys(crewSkill.skills).forEach(function (skillId) {
-          var skill = that.params.crewSkills[roleId].skills[skillId];
-          if (skillId == 'gunnery' && skill.modifier == 0) return;
-          if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return;
+          if (that.params.sourcesInUse.dnd) {
+            var skill = that.params.crewSkills[roleId].skills[skillId];
+            if (!skill.hasProficiency) return;
+            roleDesc.push(that.getSkillDesc(skillId, skill));
+          } else {
+            var skill = that.params.crewSkills[roleId].skills[skillId];
+            if (skillId == 'gunnery' && skill.modifier == 0) return;
+            if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return;
 
-          roleDesc.push(that.getSkillDesc(skillId, skill));
+            roleDesc.push(that.getSkillDesc(skillId, skill));
+          }
         });
 
         if (roleDesc.length > 0) descs[roleId] = roleDesc.join(', ');
@@ -1821,6 +1833,12 @@ export default {
     },
 
     // computed continued...
+    skillProficiency() {
+      var shipTier = this.tier.value;
+      return Math.floor((shipTier - 1) / 4) + 2;
+    },
+
+    // computed continued...
     skillTotals() {
       var skillTotals = {};
       for (var role in this.params.crewSkills) {
@@ -1828,8 +1846,17 @@ export default {
         for (var skill in this.params.crewSkills[role].skills) {
           var skillObj = this.params.crewSkills[role].skills[skill];
           skillTotals[role][skill] = parseInt(skillObj.modifier);
-          if (isset(skillObj.ranks)) {
-            skillTotals[role][skill] += parseInt(skillObj.ranks);
+          if (this.params.sourcesInUse.dnd) {
+            if (skillObj.hasProficiency) {
+              skillTotals[role][skill] += this.skillProficiency;
+            }
+            if (skillObj.hasExpertise) {
+              skillTotals[role][skill] += this.skillProficiency;
+            }
+          } else {
+            if (isset(skillObj.ranks)) {
+              skillTotals[role][skill] += parseInt(skillObj.ranks);
+            }
           }
           if (skill == 'computers') {
             skillTotals[role][skill] += this.skillModifierComputers;
@@ -2561,6 +2588,18 @@ export default {
             );
           }
         }
+        if (this.params.sourcesInUse.dnd) {
+          if (!isset(this.params.crewSkills[roleId].skills[skillId].hasProficiency)) {
+            this.params.crewSkills[roleId].skills[skillId].hasProficiency =
+              this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency;
+          }
+          console.log(
+            roleId,
+            skillId,
+            this.params.crewSkills[roleId].skills[skillId].hasProficiency,
+            this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency
+          );
+        }
       }
       return;
     },
@@ -2874,19 +2913,31 @@ export default {
     */
     // methods continued...
     getSkillDesc(skillId, skill) {
-      if (skillId == 'gunnery' && skill.modifier == 0) return '';
-      if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return '';
+      // console.log(skillId, skill);
 
       var skillInfo = this.getItemById('skill', skillId);
       if (!skillInfo) return '';
 
       // name
-      var desc = skillInfo.name + ' ';
+      if (this.params.sourcesInUse.dnd) {
+        var desc = skillInfo.dnd.name + ' ';
+      } else {
+        var desc = skillInfo.name + ' ';
+      }
 
       // modifier
       var modifier = parseInt(skill.modifier);
-      if (skillId != 'gunnery') {
-        modifier += parseInt(skill.ranks);
+      if (this.params.sourcesInUse.dnd) {
+        if (skill.hasProficiency) {
+          modifier += this.skillProficiency;
+        }
+        if (skill.hasExpertise) {
+          modifier += this.skillProficiency;
+        }
+      } else {
+        if (skillId != 'gunnery') {
+          modifier += parseInt(skill.ranks);
+        }
       }
       if (skillId == 'computers') {
         modifier += parseInt(this.skillModifierComputers);
@@ -2897,8 +2948,10 @@ export default {
       desc += this.getPrefixedModifier(modifier);
 
       // skill ranks
-      if (skillId != 'gunnery') {
-        desc += ' (' + skill.ranks + ' ' + 'rank'.pluralise(skill.ranks) + ')';
+      if (!this.params.sourcesInUse.dnd) {
+        if (skillId != 'gunnery') {
+          desc += ' (' + skill.ranks + ' ' + 'rank'.pluralise(skill.ranks) + ')';
+        }
       }
 
       return desc;

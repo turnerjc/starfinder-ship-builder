@@ -2617,29 +2617,55 @@
               <!-- TODO: default skill buttons -->
 
               <div class="box--flex">
-                <!-- Skill ranks -->
-                <div
-                  class="crew__skill__ranks form-group col-sm-1-2"
-                  v-if="getItemById('skill', skillId).hasRanks">
-                  <div v-if="params.sourcesInUse.dnd">
-                    <div class="checkbox">
+                <div v-if="params.sourcesInUse.dnd">
+                  <!-- Skill proficiency -->
+                  <div class="checkbox form-inline">
+                    <label>
+                      <input
+                        type="checkbox"
+                        v-model="params.crewSkills[role.id].skills[skillId].hasProficiency" />{{
+                        `Proficiency +${
+                          params.crewSkills[role.id].skills[skillId].hasProficiency
+                            ? skillProficiency
+                            : 0
+                        }`
+                      }}
+                    </label>
+                    <div
+                      v-if="
+                        params.crewSkills[role.id].skills[skillId].hasProficiency &&
+                        skillId != 'gunnery'
+                      ">
                       <label>
                         <input
                           type="checkbox"
-                          v-model="
-                            params.crewSkills[role.id].skills[skillId].hasProficiency
-                          " />Proficiency
-                      </label>
-                      <label>
-                        <input
-                          type="checkbox"
-                          v-model="
+                          v-model="params.crewSkills[role.id].skills[skillId].hasExpertise" />{{
+                          `Expertise +${
                             params.crewSkills[role.id].skills[skillId].hasExpertise
-                          " />Expertise
+                              ? skillProficiency
+                              : 0
+                          }`
+                        }}
                       </label>
                     </div>
                   </div>
-                  <div v-else>
+                  <!-- Skill mod -->
+                  <div class="crew__skill__mod form-group col-sm-1-2">
+                    <label for="role.id + '_' + skillId + '_mod'">Mod</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      min="-1"
+                      max="5"
+                      :id="role.id + '_' + skillId + '_mod'"
+                      v-model="params.crewSkills[role.id].skills[skillId].modifier" />
+                  </div>
+                </div>
+                <div v-else>
+                  <!-- Skill ranks -->
+                  <div
+                    class="crew__skill__ranks form-group col-sm-1-2"
+                    v-if="getItemById('skill', skillId).hasRanks">
                     <label for="role.id + '_' + skillId + '_ranks'">Ranks</label>
                     <input
                       type="number"
@@ -2647,16 +2673,15 @@
                       :id="role.id + '_' + skillId + '_ranks'"
                       v-model="params.crewSkills[role.id].skills[skillId].ranks" />
                   </div>
-                </div>
-
-                <!-- Skill mod -->
-                <div class="crew__skill__mod form-group col-sm-1-2">
-                  <label for="role.id + '_' + skillId + '_mod'">Mod</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    :id="role.id + '_' + skillId + '_mod'"
-                    v-model="params.crewSkills[role.id].skills[skillId].modifier" />
+                  <!-- Skill mod -->
+                  <div class="crew__skill__mod form-group col-sm-1-2">
+                    <label for="role.id + '_' + skillId + '_mod'">Mod</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      :id="role.id + '_' + skillId + '_mod'"
+                      v-model="params.crewSkills[role.id].skills[skillId].modifier" />
+                  </div>
                 </div>
               </div>
 

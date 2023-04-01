@@ -28,6 +28,8 @@
         DCM)
       </li>
       <li>Modified Computer Bonus (from +1 to +3); one computer option per Mk</li>
+      <li>Replace Crew Rank with 5e Proficiency Bonus (+2 to +6 based on Ship Tier)</li>
+      <li>Reduce Crew Readout to skill proficiencies</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -40,7 +42,7 @@
     <strong>TODO:</strong>
     <ul>
       <li>Add Systems and Upgrades from Dark Matter</li>
-      <li>Replace Crew Rank with 5e Proficiency Bonus (+2 to +6 based on Ship Tier)</li>
+      <li>Crew section looks horrible</li>
       <li>Option to populate Crew Modifiers</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
       <li>Add Virtues and Flaws</li>
