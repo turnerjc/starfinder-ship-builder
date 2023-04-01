@@ -2621,12 +2621,32 @@
                 <div
                   class="crew__skill__ranks form-group col-sm-1-2"
                   v-if="getItemById('skill', skillId).hasRanks">
-                  <label for="role.id + '_' + skillId + '_ranks'">Ranks</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    :id="role.id + '_' + skillId + '_ranks'"
-                    v-model="params.crewSkills[role.id].skills[skillId].ranks" />
+                  <div v-if="params.sourcesInUse.dnd">
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          v-model="
+                            params.crewSkills[role.id].skills[skillId].hasProficiency
+                          " />Proficiency
+                      </label>
+                      <label>
+                        <input
+                          type="checkbox"
+                          v-model="
+                            params.crewSkills[role.id].skills[skillId].hasExpertise
+                          " />Expertise
+                      </label>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <label for="role.id + '_' + skillId + '_ranks'">Ranks</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      :id="role.id + '_' + skillId + '_ranks'"
+                      v-model="params.crewSkills[role.id].skills[skillId].ranks" />
+                  </div>
                 </div>
 
                 <!-- Skill mod -->

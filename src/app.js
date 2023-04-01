@@ -72,18 +72,26 @@ export default {
               bluff: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               computers: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               diplomacy: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               engineering: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               gunnery: {
                 modifier: 0,
@@ -91,22 +99,32 @@ export default {
               intimidate: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               medicine: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               perception: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               'physical-science': {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               piloting: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // captain
@@ -118,10 +136,14 @@ export default {
               computers: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               engineering: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // engineer
@@ -133,10 +155,14 @@ export default {
               computers: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               engineering: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               gunnery: {
                 modifier: 0,
@@ -151,14 +177,20 @@ export default {
               computers: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               diplomacy: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               engineering: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               gunnery: {
                 modifier: 0,
@@ -166,10 +198,14 @@ export default {
               intimidate: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               piloting: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // pilot
@@ -181,14 +217,20 @@ export default {
               computers: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               'life-science': {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               'physical-science': {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // scienceOfficer
@@ -200,10 +242,14 @@ export default {
               acrobatics: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               athletics: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // chiefMate
@@ -215,6 +261,8 @@ export default {
               mysticism: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // magicOfficer
@@ -226,6 +274,8 @@ export default {
               medicine: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // medicalOfficer
@@ -237,6 +287,8 @@ export default {
               piloting: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // co-pilot
@@ -248,10 +300,14 @@ export default {
               computers: {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               'physical-science': {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // astrogator
@@ -263,10 +319,14 @@ export default {
               'physical-science': {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
               'life-science': {
                 modifier: 0,
                 ranks: 0,
+                hasProfiency: false,
+                hasExpertise: false,
               },
             },
           }, // astropath
