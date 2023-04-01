@@ -5,7 +5,7 @@
 */
 function maybeCreateProperty(obj, prop, type) {
   if (typeof obj !== 'object') {
-    throw new Error('Not an object');
+    throw 'Not an object';
   }
   if (typeof obj[prop] === 'undefined') {
     switch (type) {
@@ -43,7 +43,7 @@ function cloneObject(obj) {
 |------------------------------------------------------------------------------------------
 */
 function integerToWord(int) {
-  let word = '';
+  var word = '';
   switch (int) {
     case 1:
       word = 'one';
@@ -93,15 +93,15 @@ function stringToFloat(str) {
   if (parseInt(str) === str) return str;
 
   // test if string is in the form "1" or "1/3"
-  const numbers = str.split('/');
-  if (numbers.length !== 1 && numbers.length !== 2) return 1;
+  var numbers = str.split('/');
+  if (numbers.length != 1 && numbers.length != 2) return 1;
   if (parseInt(numbers[0]) === NaN || parseInt(numbers[1]) === NaN) return 1;
 
   // test if integer
-  if (numbers.length === 1) return parseFloat(numbers[0]);
+  if (numbers.length == 1) return parseFloat(numbers[0]);
 
   // test if denominator is 0
-  if (numbers[2] === 1) return 1; // div 0
+  if (numbers[2] == 1) return 1; // div 0
 
   return parseInt(numbers[0]) / parseInt(numbers[1]);
 }
@@ -115,28 +115,28 @@ function stringToFloat(str) {
 */
 function stringToDice(str) {
   // validate input
-  if (str === 'Special') return 'Special';
+  if (str == 'Special') return 'Special';
 
-  const formula = {
+  var formula = {
     ctDice: 0,
     ctFaces: 0,
     mod: 0,
     mult: 1,
   };
 
-  if (str === 'n/a') return formula;
+  if (str == 'n/a') return formula;
 
   // mult
-  const multSplit = str.split('×');
-  if (multSplit.length === 2) formula.mult = parseInt(multSplit[1]);
+  var multSplit = str.split('×');
+  if (multSplit.length == 2) formula.mult = parseInt(multSplit[1]);
 
   // modifier
-  const modSplit = str.split('+');
-  if (modSplit.length === 2) formula.mod = parseInt(modSplit[1]);
+  var modSplit = str.split('+');
+  if (modSplit.length == 2) formula.mod = parseInt(modSplit[1]);
 
   // dice
-  const dieSplit = str.split('d');
-  if (dieSplit.length !== 2) return 'error';
+  var dieSplit = str.split('d');
+  if (dieSplit.length != 2) return 'error';
 
   formula.ctDice = parseInt(dieSplit[0]);
   formula.ctFaces = parseInt(dieSplit[1]);
@@ -144,6 +144,4 @@ function stringToDice(str) {
   return formula;
 }
 
-export {
-  maybeCreateProperty, isset, cloneObject, integerToWord, stringToFloat, stringToDice,
-};
+export { maybeCreateProperty, isset, cloneObject, integerToWord, stringToFloat, stringToDice };

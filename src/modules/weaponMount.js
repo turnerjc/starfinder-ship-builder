@@ -1,12 +1,10 @@
-import { stringToDice } from './helpers';
-
-const WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard'];
+var WEAPON_ARCS = ['forward', 'aft', 'port', 'starboard'];
 /*
 |------------------------------------------------------------------------------------------
 | WEAPON MOUNT
 |------------------------------------------------------------------------------------------
 |
-| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked,
+| params expects: weaponMountId, position, weaponId, weight, isFromTemplate, canBeLinked, 
 | isLinked, sizeCategoryId
 | maybe expects templateWeight
 |
@@ -33,7 +31,7 @@ function WeaponMount(params) {
     |--------------------------------------------------------------------------------------
     */
   this.getMaterialCost = function () {
-    let materialCost = 0;
+    var materialCost = 0;
 
     switch (this.specialMaterial) {
       // abysium and inubrix: 2, 6, 10, 10
@@ -70,7 +68,7 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.getMaterialDesc = function () {
-    const materialDesc = [];
+    var materialDesc = [];
 
     switch (this.specialMaterial) {
       case 'abysium':
@@ -90,7 +88,7 @@ function WeaponMount(params) {
       case 'adamantine-alloy':
         var damageDice = stringToDice(this.weapon.damage);
         if (damageDice.ctDice !== undefined && damageDice.ctDice > 0) {
-          materialDesc.push(`+${damageDice.ctDice} damage to shieldless quadrants`);
+          materialDesc.push('+' + damageDice.ctDice + ' damage to shieldless quadrants');
         }
         break;
       case 'inubrix':
@@ -106,9 +104,9 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.getNewMountCost = function () {
-    let newMountCost = 0;
+    var newMountCost = 0;
     if (!this.isFromTemplate) {
-      if (this.position === 'turret') {
+      if (this.position == 'turret') {
         newMountCost = 5;
       } else {
         newMountCost = 3;
@@ -120,14 +118,14 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.getUpgradeCost = function () {
-    let upgradeCost = 0;
+    var upgradeCost = 0;
     if (this.weight !== this.templateWeight) {
       // if position is forward, aft, port or starboard arc
       if (WEAPON_ARCS.indexOf(this.position) !== -1) {
         // if templateWeight is light and weight is heavy
-        if (this.templateWeight === 'light' && this.weight === 'heavy') {
+        if (this.templateWeight == 'light' && this.weight == 'heavy') {
           upgradeCost = 4;
-        } else if (this.templateWeight === 'heavy' && this.weight === 'capital') {
+        } else if (this.templateWeight == 'heavy' && this.weight == 'capital') {
           // if templateWeight is heavy and weight is capital
           upgradeCost = 5;
         } else {
@@ -145,8 +143,8 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.testThatPositionIsValid = function () {
-    if (['forward', 'aft', 'port', 'starboard', 'turret', 'spinal'].indexOf(this.position) === -1) {
-      throw `Invalid position in WeaponMount class: ${this.position}`;
+    if (['forward', 'aft', 'port', 'starboard', 'turret', 'spinal'].indexOf(this.position) == -1) {
+      throw 'Invalid position in WeaponMount class: ' + this.position;
     }
   };
 
@@ -154,8 +152,8 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.testThatWeightIsValid = function (weight) {
-    if (['light', 'heavy', 'capital', 'spinal'].indexOf(weight) === -1) {
-      throw `Invalid weight in WeaponMount class: ${weight}`;
+    if (['light', 'heavy', 'capital', 'spinal'].indexOf(weight) == -1) {
+      throw 'Invalid weight in WeaponMount class: ' + weight;
     }
   };
 
@@ -163,7 +161,7 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.testThatTemplateWeightIsSmallerThanWeight = function () {
-    const weightVal = {
+    var weightVal = {
       light: 0,
       heavy: 1,
       capital: 2,
@@ -177,11 +175,11 @@ function WeaponMount(params) {
   |--------------------------------------------------------------------------------------
   */
   this.testThatTurretIsNotCapital = function () {
-    if (this.sizeCategoryId === 'Supercolossal') return;
+    if (this.sizeCategoryId == 'Supercolossal') return;
 
     if (
-      this.position === 'turret'
-      && (this.weight === 'capital' || this.templateWeight === 'capital')
+      this.position == 'turret' &&
+      (this.weight == 'capital' || this.templateWeight == 'capital')
     ) {
       throw "Turrets cannot have weight 'capital' in WeaponMount";
     }
