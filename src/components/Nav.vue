@@ -15,6 +15,8 @@
       <li><a href="#concept">Concept</a></li>
       <li><a href="#tier">Tier</a></li>
       <li><a href="#frame">Frame</a></li>
+      <li><a href="#crew">Crew</a></li>
+      <li><a href="#crewQuarters">Crew Quarters</a></li>
       <li><a href="#powerCore">Power Core</a></li>
       <li><a href="#thrusters">Thrusters</a></li>
       <li><a href="#otherSystems">Other Systems</a></li>
@@ -28,7 +30,6 @@
           </li>
         </ul>
         <li><a href="#computer">Computer</a></li>
-        <li><a href="#crewQuarters">Crew Quarters</a></li>
         <li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
         <li><a href="#driftEngine">Drift Engine</a></li>
         <li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
@@ -41,7 +42,6 @@
         </li>
         <li><a href="#custom-components">Custom Components</a></li>
       </ul>
-      <li><a href="#crew">Crew</a></li>
     </ul>
   </nav>
 </template>
