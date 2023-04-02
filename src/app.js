@@ -1836,14 +1836,21 @@ export default {
 
     // computed continued...
     skillMod() {
-      var shipTier = this.tier.value;
-      return Math.floor((shipTier - 1) / 8) + 1;
+      if (this.params.sourcesInUse.dnd) {
+        return Math.floor((this.tier.value - 1) / 8) + 1;
+      } else {
+        return Math.floor((this.tier.value - 1) / 5) + 1;
+      }
     },
 
     // computed continued...
     skillProficiency() {
-      var shipTier = this.tier.value;
-      return Math.floor((shipTier - 1) / 4) + 2;
+      return Math.floor((this.tier.value - 1) / 4) + 2;
+    },
+
+    // computed continued...
+    skillRanks() {
+      return this.tier.value;
     },
 
     // computed continued...
@@ -2617,9 +2624,12 @@ export default {
               this.params.crewSkills[roleId].skills[skillId].hasExpertise =
                 this.paramsReset.crewSkills[roleId].skills[skillId].hasExpertise;
             }
-            this.params.crewSkills[roleId].skills[skillId].modifier = this.skillMod;
+          } else {
+            this.params.crewSkills[roleId].skills[skillId].ranks = this.skillRanks;
           }
+          this.params.crewSkills[roleId].skills[skillId].modifier = this.skillMod;
         }
+        console.log(this.params.crewSkills[roleId].skills[skillId]);
       }
       return;
     },
