@@ -14,6 +14,8 @@ import {
   integerToWord,
   stringToFloat,
   stringToDice,
+  randomStat,
+  statMod,
 } from './modules/helpers.js';
 
 // Weapon Mount
@@ -1833,6 +1835,12 @@ export default {
     },
 
     // computed continued...
+    skillMod() {
+      var shipTier = this.tier.value;
+      return Math.floor((shipTier - 1) / 8) + 1;
+    },
+
+    // computed continued...
     skillProficiency() {
       var shipTier = this.tier.value;
       return Math.floor((shipTier - 1) / 4) + 2;
@@ -2446,13 +2454,20 @@ export default {
 
     // methods continued...
     convertJsonInput() {
+      // Retain D&D if currently checked
       var fixDnd = this.params.sourcesInUse?.dnd;
+
       // read JSON
       this.params = JSON.parse(this.json);
+
+      // or set D&D if the incoming params have D&D set
       fixDnd |= this.params.sourcesInUse?.dnd;
+
+      // do any fix up for D&D
       if (fixDnd) {
         this.fixDndParams();
       }
+
       this.fixMissingParamsValues();
     },
 
@@ -2542,17 +2557,12 @@ export default {
 
     // methods continued...
     fixDndParams() {
-      // make sure the dnd box is still checked
-      this.params.sourcesInUse.dnd = true;
-
-      // fix computers for dnd
-      var computers = ['computerId', 'secondaryComputerId', 'dedicatedComputerId'];
-      for (var i in computers) {
-        this.fixDndComputers(computers[i]);
-      }
-
-      // fix computers for dnd
-      var upgrades = [
+      // make sure the dnd keys are present
+      var keys = [
+        'sourcesInUse',
+        'computerId',
+        'secondaryComputerId',
+        'dedicatedComputerId',
         'hasAfterburners',
         'hasCaptainsChair',
         'hasDeadReckoner',
@@ -2560,10 +2570,20 @@ export default {
         'hasRepairDrones',
         'hasTargetingOptics',
       ];
-      for (var upgrade in upgrades) {
-        if (!this.params[upgrade]) {
-          this.params[upgrade] = 0;
+      for (var i in keys) {
+        console.log(keys[i]);
+        if (!isset(this.params[keys[i]])) {
+          this.params[keys[i]] = cloneObject(this.paramsReset[keys[i]]);
         }
+      }
+
+      // make sure the dnd box is checked
+      this.params.sourcesInUse.dnd = true;
+
+      // fix computers for dnd
+      var computers = ['computerId', 'secondaryComputerId', 'dedicatedComputerId'];
+      for (var i in computers) {
+        this.fixDndComputers(computers[i]);
       }
     },
 
@@ -2574,7 +2594,7 @@ export default {
         if (!isset(this.params.crewSkills[roleId])) {
           // console.log('Missing crew role, ' + roleId + ', added to ship');
           this.params.crewSkills[roleId] = cloneObject(this.paramsReset.crewSkills[roleId]);
-          continue;
+          // continue;
         }
 
         for (var skillId in this.paramsReset.crewSkills[roleId].skills) {
@@ -2587,18 +2607,18 @@ export default {
               this.paramsReset.crewSkills[roleId].skills[skillId]
             );
           }
-        }
-        if (this.params.sourcesInUse.dnd) {
-          if (!isset(this.params.crewSkills[roleId].skills[skillId].hasProficiency)) {
-            this.params.crewSkills[roleId].skills[skillId].hasProficiency =
-              this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency;
+          if (this.params.sourcesInUse.dnd) {
+            // make sure D&D proficiency and expertise are set
+            if (!isset(this.params.crewSkills[roleId].skills[skillId].hasProficiency)) {
+              this.params.crewSkills[roleId].skills[skillId].hasProficiency =
+                this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency;
+            }
+            if (!isset(this.params.crewSkills[roleId].skills[skillId].hasExpertise)) {
+              this.params.crewSkills[roleId].skills[skillId].hasExpertise =
+                this.paramsReset.crewSkills[roleId].skills[skillId].hasExpertise;
+            }
+            this.params.crewSkills[roleId].skills[skillId].modifier = this.skillMod;
           }
-          console.log(
-            roleId,
-            skillId,
-            this.params.crewSkills[roleId].skills[skillId].hasProficiency,
-            this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency
-          );
         }
       }
       return;
@@ -3031,9 +3051,17 @@ export default {
       if (sampleShipId !== 'none') {
         var sampleShipObj = this.getItemById('sampleShip', sampleShipId);
         var sampleShipParams = cloneObject(sampleShipObj.params);
+
+        // Retain D&D if currently checked
         var fixDnd = this.params.sourcesInUse?.dnd;
+
+        // read sample ship
         this.params = sampleShipParams;
+
+        // Set D&D if previously checked or in sample ship
         fixDnd |= this.params.sourcesInUse?.dnd;
+
+        // fixup D&D parameters
         if (fixDnd) {
           this.fixDndParams();
         }

@@ -144,4 +144,42 @@ function stringToDice(str) {
   return formula;
 }
 
-export { maybeCreateProperty, isset, cloneObject, integerToWord, stringToFloat, stringToDice };
+// get stat mod from a random stat
+function statMod(stat) {
+  return Math.floor((stat - 10) / 2);
+}
+
+// generate a random number between 2 and 10, including both 2 and 10
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// generate a random stat between 8 and 18
+function randomStat() {
+  return 6 + randomInt(1, 6) + randomInt(1, 6);
+}
+
+// generate some random stats
+function randomStats() {
+  return {
+    str: randomStat(),
+    dex: randomStat(),
+    con: randomStat(),
+    int: randomStat(),
+    wis: randomStat(),
+    cha: randomStat(),
+  };
+}
+
+export {
+  maybeCreateProperty,
+  isset,
+  cloneObject,
+  integerToWord,
+  stringToFloat,
+  stringToDice,
+  statMod,
+  randomInt,
+  randomStat,
+  randomStats,
+};
