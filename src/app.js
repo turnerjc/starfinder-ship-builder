@@ -2629,7 +2629,7 @@ export default {
           }
           this.params.crewSkills[roleId].skills[skillId].modifier = this.skillMod;
         }
-        console.log(this.params.crewSkills[roleId].skills[skillId]);
+        // console.log(this.params.crewSkills[roleId].skills[skillId]);
       }
       return;
     },
