@@ -44,7 +44,7 @@
     <strong>TODO:</strong>
     <ul>
       <li>Add Systems from Dark Matter</li>
-      <li>Move Dark Matter Targeting Optics to weapon</li>
+      <li>Move Dark Matter Targeting Optics to weapons</li>
       <li>Crew section looks horrible</li>
       <li>Add button to set default Crew proficiency, expertise, modifier, base on role</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
