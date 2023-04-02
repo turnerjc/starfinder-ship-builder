@@ -27,9 +27,10 @@
         Modified DCM TL Bonus (+0 to +8); PCU Cost (even Mk DCM have smaller PCU cost than odd Mk
         DCM)
       </li>
-      <li>Modified Computer Bonus (from +1 to +3); one computer option per Mk</li>
+      <li>Modified Computer Bonus (+1 to +3); one computer option per Mk</li>
       <li>Replace Crew Rank with 5e Proficiency Bonus (+2 to +6 based on Ship Tier)</li>
-      <li>Reduce Crew Readout to skill proficiencies</li>
+      <li>Automagically Populate Crew Modifiers for 5e by default (+1 to +3)</li>
+      <li>Reduce Crew Readout to skill proficiencies for 5e</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -43,7 +44,7 @@
     <ul>
       <li>Add Systems and Upgrades from Dark Matter</li>
       <li>Crew section looks horrible</li>
-      <li>Option to populate Crew Modifiers</li>
+      <li>Add button to set default Crew proficiency, expertise, modifier, base on role</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
       <li>Add Virtues and Flaws</li>
       <li>Add Dedicated Computer Skill</li>
