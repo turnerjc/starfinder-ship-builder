@@ -2702,6 +2702,24 @@
           </div>
         </div>
 
+        <!-- Sensor Probe -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasSensorProbe">
+                <input type="checkbox" v-model="params.hasSensorProbe" id="hasSensorProbe" />
+                Sensor Probe (see <i>Dark Matter</i>, p 164)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-power" /></svg>
+            {{ params.hasSensorProbe ? 5 : 0 }}
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasSensorProbe ? 5 : 0 }}
+          </div>
+        </div>
+
         <!-- Targeting Optics -->
         <div v-if="params.sourcesInUse.dnd">
           <div class="box__select">

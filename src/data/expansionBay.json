@@ -1029,24 +1029,6 @@
       "bpCost": 10
     },
     {
-      "id": "sensor-probe",
-      "source": "dnd",
-      "name": "Sensor Probe",
-      "numBays": 0,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 5
-    },
-    {
       "id": "sensor-tri-probe",
       "source": "dnd",
       "name": "Sensor Tri-Probe",
