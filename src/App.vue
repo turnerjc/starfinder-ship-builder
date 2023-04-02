@@ -2613,6 +2613,117 @@
             <svg class="icon"><use xlink:href="#icon-build" /></svg> {{ viSkillExpander.bpCost }}
           </div>
         </div>
+
+        <!-- afterburners -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasAfterburners">
+                <input type="checkbox" v-model="params.hasAfterburners" id="hasAfterburners" />
+                Afterburners (see <i>Dark Matter</i>, p 166)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-power" /></svg>
+            {{ params.hasAfterburners ? 2 : 0 }}
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasAfterburners ? 2 : 0 }}
+          </div>
+        </div>
+
+        <!-- Captain's Chair -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasCaptainsChair">
+                <input type="checkbox" v-model="params.hasCaptainsChair" id="hasCaptainsChair" />
+                Captain's Chair (see <i>Dark Matter</i>, p 166)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasCaptainsChair ? 2 : 0 }}
+          </div>
+        </div>
+
+        <!-- Dead Reckoner -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasDeadReckoner">
+                <input type="checkbox" v-model="params.hasDeadReckoner" id="hasDeadReckoner" />
+                Dead Reckoner (see <i>Dark Matter</i>, p 166)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-power" /></svg>
+            {{ params.hasDeadReckoner ? 2 : 0 }}
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasDeadReckoner ? 2 : 0 }}
+          </div>
+        </div>
+
+        <!-- Radio Array -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasRadioArray">
+                <input type="checkbox" v-model="params.hasRadioArray" id="hasRadioArray" />
+                Radio Array (see <i>Dark Matter</i>, p 167)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-power" /></svg>
+            {{ params.hasRadioArray ? 1 : 0 }}
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasRadioArray ? 1 : 0 }}
+          </div>
+        </div>
+
+        <!-- Repair Drones -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasRepairDrones">
+                <input type="checkbox" v-model="params.hasRepairDrones" id="hasRepairDrones" />
+                Repair Drones (see <i>Dark Matter</i>, p 167)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-power" /></svg>
+            {{ params.hasRepairDrones ? 5 : 0 }}
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasRepairDrones ? 10 : 0 }}
+          </div>
+        </div>
+
+        <!-- Targeting Optics -->
+        <div v-if="params.sourcesInUse.dnd">
+          <div class="box__select">
+            <div class="checkbox">
+              <label for="hasTargetingOptics">
+                <input
+                  type="checkbox"
+                  v-model="params.hasTargetingOptics"
+                  id="hasTargetingOptics" />
+                Targeting Optics (see <i>Dark Matter</i>, p 167)
+              </label>
+            </div>
+          </div>
+          <div class="box__cost--list">
+            <svg class="icon"><use xlink:href="#icon-power" /></svg>
+            {{ params.hasTargetingOptics ? 2 : 0 }}
+            <svg class="icon"><use xlink:href="#icon-build" /></svg>
+            {{ params.hasTargetingOptics ? 2 : 0 }}
+          </div>
+        </div>
+
+        <!-- end systems and upgrades -->
       </div>
       <!--
       <CustomComponents />

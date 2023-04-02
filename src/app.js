@@ -366,12 +366,12 @@ export default {
         hasRootSystem: 0, // other systems (som)
         hasSelfDestructSystem: 0,
         hasSpaceStationFramework: 0, // other systems (som)
-        hasAfterburners: 0, // upgrades (dm)
-        hasCaptainsChair: 0, // upgrades (dm)
-        hasDeadReckoner: 0, // upgrades (dm)
-        hasRadioArray: 0, // upgrades (dm)
-        hasRepairDrones: 0, // upgrades (dm)
-        hasTargetingOptics: 0, // upgrades (dm)
+        hasAfterburners: 0, // upgrades (dnd)
+        hasCaptainsChair: 0, // upgrades (dnd)
+        hasDeadReckoner: 0, // upgrades (dnd)
+        hasRadioArray: 0, // upgrades (dnd)
+        hasRepairDrones: 0, // upgrades (dnd)
+        hasTargetingOptics: 0, // upgrades (dnd)
         isSetDefaultCrewSkillValues: 1,
         isUseStrictRules: 1,
         networkNode: {},
@@ -2003,6 +2003,30 @@ export default {
           ']';
         desc.push(viHoloDesc);
       }
+      // afterburners
+      if (this.params.hasAfterburners) {
+        desc.push('afterburners');
+      }
+      // captain's chair
+      if (this.params.hasCaptainsChair) {
+        desc.push("captain's chair");
+      }
+      // dead reckoner
+      if (this.params.hasDeadReckoner) {
+        desc.push('dead reckoner');
+      }
+      // radio array
+      if (this.params.hasRadioArray) {
+        desc.push('radio array');
+      }
+      // repair drones
+      if (this.params.hasRepairDrones) {
+        desc.push('repair drones');
+      }
+      // targeting optics
+      if (this.params.hasTargetingOptics) {
+        desc.push('targeting optics');
+      }
 
       return desc.join(', ');
     },
@@ -2147,7 +2171,13 @@ export default {
         parseInt(this.weaponsTotalCosts.weaponsBp) +
         parseInt(this.weaponsTotalCosts.weaponMountsBp) +
         parseInt(this.weaponsTotalCosts.weaponMaterialsBp) +
-        parseInt(this.weaponsTotalCosts.weaponLinksBp)
+        parseInt(this.weaponsTotalCosts.weaponLinksBp) +
+        (this.params.hasAfterburners ? 2 : 0) +
+        (this.params.hasCaptainsChair ? 2 : 0) +
+        (this.params.hasDeadReckoner ? 2 : 0) +
+        (this.params.hasRadioArray ? 1 : 0) +
+        (this.params.hasRepairDrones ? 10 : 0) +
+        (this.params.hasTargetingOptics ? 2 : 0)
       );
     },
 
@@ -2172,7 +2202,12 @@ export default {
           (this.params.hasHolographicMantle ? 10 : 0) +
           (this.params.hasReconfigurationSystem ? 50 : 0) +
           (this.params.hasRootSystem ? 5 : 0) +
-          (this.isSupercolossal ? this.networkNodes.bpCost : 0),
+          (this.isSupercolossal ? this.networkNodes.bpCost : 0) +
+          (this.params.hasAfterburners ? 2 : 0) +
+          (this.params.hasDeadReckoner ? 2 : 0) +
+          (this.params.hasRadioArray ? 1 : 0) +
+          (this.params.hasRepairDrones ? 5 : 0) +
+          (this.params.hasTargetingOptics ? 2 : 0),
       };
     },
 
