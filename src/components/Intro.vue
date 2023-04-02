@@ -31,7 +31,7 @@
       <li>Replace Crew Rank with 5e Proficiency Bonus (+2 to +6 based on Ship Tier)</li>
       <li>Automagically Populate Crew Modifiers for 5e by default (+1 to +3)</li>
       <li>Reduce Crew Readout to skill proficiencies for 5e</li>
-      <li>Add Upgrades from Dark Matter</li>
+      <li>Add Systems and Upgrades from Dark Matter</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -43,7 +43,6 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
-      <li>Add Systems from Dark Matter</li>
       <li>Move Dark Matter Targeting Optics to weapons</li>
       <li>Crew section looks horrible</li>
       <li>Add button to set default Crew proficiency, expertise, modifier, base on role</li>
