@@ -806,7 +806,7 @@ export default {
           } else {
             var skill = that.params.crewSkills[roleId].skills[skillId];
             if (skillId == 'gunnery' && skill.modifier == 0) return;
-            if (skillId != 'gunnery' && (skill.ranks === undefined || skill.ranks == 0)) return;
+            if (skillId != 'gunnery' && skill.ranks === undefined) return;
 
             roleDesc.push(that.getSkillDesc(skillId, skill));
           }
@@ -1653,7 +1653,7 @@ export default {
 
     // computed continued...
     selectOptionsBaseFrame() {
-      return this.selectOptions.frame.filter((option) => option.id != custom);
+      return this.selectOptions.frame.filter((option) => option.id != 'custom');
     },
 
     // computed continued...
@@ -1813,6 +1813,16 @@ export default {
     },
 
     // computed continued...
+    skillModifierBase() {
+      var tier = this.tier.value < 0 ? 1 : this.tier.value;
+      if (this.params.sourcesInUse.dnd) {
+        return Math.floor((tier - 1) / 6) + 1;
+      } else {
+        return Math.floor(tier * 1.5);
+      }
+    },
+
+    // computed continued...
     skillModifierComputers() {
       return this.sensors.modifier;
     },
@@ -1836,22 +1846,15 @@ export default {
     },
 
     // computed continued...
-    skillMod() {
-      if (this.params.sourcesInUse.dnd) {
-        return Math.floor((this.tier.value - 1) / 8) + 1;
-      } else {
-        return Math.floor((this.tier.value - 1) / 5) + 1;
-      }
-    },
-
-    // computed continued...
     skillProficiency() {
-      return Math.floor((this.tier.value - 1) / 4) + 2;
+      var tier = this.tier.value < 0 ? 1 : this.tier.value;
+      return Math.floor((tier - 1) / 4) + 2;
     },
 
     // computed continued...
     skillRanks() {
-      return this.tier.value;
+      var tier = this.tier.value < 0 ? 1 : this.tier.value;
+      return tier;
     },
 
     // computed continued...
@@ -2621,7 +2624,7 @@ export default {
         'hasTargetingOptics',
       ];
       for (var i in keys) {
-        console.log(keys[i]);
+        // console.log(keys[i]);
         if (!isset(this.params[keys[i]])) {
           this.params[keys[i]] = cloneObject(this.paramsReset[keys[i]]);
         }
@@ -2644,7 +2647,7 @@ export default {
         if (!isset(this.params.crewSkills[roleId])) {
           // console.log('Missing crew role, ' + roleId + ', added to ship');
           this.params.crewSkills[roleId] = cloneObject(this.paramsReset.crewSkills[roleId]);
-          // continue;
+          continue;
         }
 
         for (var skillId in this.paramsReset.crewSkills[roleId].skills) {
@@ -2657,24 +2660,8 @@ export default {
               this.paramsReset.crewSkills[roleId].skills[skillId]
             );
           }
-          if (this.params.sourcesInUse.dnd) {
-            // make sure D&D proficiency and expertise are set
-            if (!isset(this.params.crewSkills[roleId].skills[skillId].hasProficiency)) {
-              this.params.crewSkills[roleId].skills[skillId].hasProficiency =
-                this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency;
-            }
-            if (!isset(this.params.crewSkills[roleId].skills[skillId].hasExpertise)) {
-              this.params.crewSkills[roleId].skills[skillId].hasExpertise =
-                this.paramsReset.crewSkills[roleId].skills[skillId].hasExpertise;
-            }
-          } else {
-            this.params.crewSkills[roleId].skills[skillId].ranks = this.skillRanks;
-          }
-          this.params.crewSkills[roleId].skills[skillId].modifier = this.skillMod;
         }
-        // console.log(this.params.crewSkills[roleId].skills[skillId]);
       }
-      return;
     },
 
     // methods continued...
@@ -3303,17 +3290,24 @@ export default {
 
     // methods continued...
     setDefaultCrewSkillValues() {
-      if (this.params.isSetDefaultCrewSkillValues) {
-        var tier = this.getItemById('tier', this.params.tierId).value;
-        if (tier < 1) {
-          tier = 1;
-        }
+      if (this.params.hasCrew && this.params.isSetDefaultCrewSkillValues) {
         for (var role in this.params.crewSkills) {
           for (var skill in this.params.crewSkills[role].skills) {
             var skillObj = this.params.crewSkills[role].skills[skill];
-            if (skillObj.ranks > 0) {
-              skillObj.ranks = tier;
+            if (this.params.sourcesInUse.dnd) {
+              // set D&D proficiency and expertise
+              if (!isset(skillObj.hasProficiency)) {
+                skillObj.hasProficiency = skillObj.hasProficiency;
+              }
+              if (!isset(skillObj.hasExpertise)) {
+                skillObj.hasExpertise = skillObj.hasExpertise;
+              }
             }
+            // set Starfinder ranks
+            skillObj.ranks = this.skillRanks;
+            // set modifier base
+            skillObj.modifier = this.skillModifierBase;
+            console.log('setDefaultCrewSkillValues', skillObj);
           }
         }
       }

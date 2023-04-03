@@ -32,6 +32,7 @@
       <li>Automagically Populate Crew Modifiers for 5e by default (+1 to +3)</li>
       <li>Reduce Crew Readout to skill proficiencies for 5e</li>
       <li>Add Systems and Upgrades from Dark Matter</li>
+      <li>Modify checkbox to set default crew values without changing tier</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -43,15 +44,14 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
+      <li>Crew section still looks horrible</li>
       <li>Move Dark Matter Targeting Optics to weapons</li>
-      <li>Crew section looks horrible</li>
-      <li>Add button to set default Crew proficiency, expertise, modifier, base on role</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
-      <li>Add Virtues and Flaws</li>
-      <li>Add Dedicated Computer Skill</li>
       <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
       <li>Print Button for Ship Readout</li>
       <li>Implement Ship Sheet layout</li>
+      <li>Add Skill option to Dedicated Computer</li>
+      <li>Add Virtues and Flaws</li>
       <li>Update logo for Starforger</li>
     </ul>
   </div>

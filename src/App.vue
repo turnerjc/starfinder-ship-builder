@@ -310,15 +310,6 @@
               Use strict ship building rules from <em>Starfinder Core Rules</em>?
             </label>
           </div>
-          <div class="checkbox">
-            <label>
-              <input
-                type="checkbox"
-                id="isSetDefaultCrewSkillValues"
-                v-model="params.isSetDefaultCrewSkillValues" />
-              Automatically update crew skill ranks when levelling up?
-            </label>
-          </div>
         </div>
       </div>
       <!--
@@ -343,6 +334,15 @@
                 {{ option.name }}
               </option>
             </select>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input
+                type="checkbox"
+                id="isSetDefaultCrewSkillValues"
+                v-model="params.isSetDefaultCrewSkillValues" />
+              Automatically update crew skill ranks when levelling up?
+            </label>
           </div>
         </div>
         <div class="box__info">
@@ -657,6 +657,16 @@
             Include crew stats?
           </label>
         </div>
+        <div class="checkbox" v-if="params.hasCrew">
+          <label>
+            <input
+              type="checkbox"
+              id="hasCrew"
+              v-model="params.isSetDefaultCrewSkillValues"
+              v-on:change="setDefaultCrewSkillValues" />
+            Set default crew skill values?
+          </label>
+        </div>
         <div class="box__select" v-if="params.hasCrew">
           <div class="cost__item">
             <span class="cost__name">Complement</span>
@@ -722,8 +732,6 @@
             <div v-for="skillId in role.skills" class="crew__skill">
               <!-- Skill name -->
               <h4 class="crew__skill__label">{{ getSkillName(skillId) }}</h4>
-
-              <!-- TODO: default skill buttons -->
 
               <div class="box--flex">
                 <div v-if="params.sourcesInUse.dnd">
