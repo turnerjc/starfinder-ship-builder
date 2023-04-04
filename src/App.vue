@@ -757,17 +757,17 @@
                         params.crewSkills[role.id].skills[skillId].hasProficiency &&
                         skillId != 'gunnery'
                       ">
-                        <input
-                          type="checkbox"
-                          v-model="params.crewSkills[role.id].skills[skillId].hasExpertise" />{{
-                          `Expertise +${
-                            params.crewSkills[role.id].skills[skillId].hasExpertise
-                              ? skillProficiency
-                              : 0
-                          }`
-                        }}
-                      </label>
-                    </div>
+                      <input
+                        type="checkbox"
+                        v-model="params.crewSkills[role.id].skills[skillId].hasExpertise" />{{
+                        `Expertise +${
+                          params.crewSkills[role.id].skills[skillId].hasExpertise
+                            ? skillProficiency
+                            : 0
+                        }`
+                      }}
+                    </label>
+                  </div>
                   <!-- Skill mod -->
                   <div class="crew__skill__mod form-group col-sm-1-2">
                     <label for="role.id + '_' + skillId + '_mod'">Mod</label>
@@ -2729,27 +2729,6 @@
             {{ params.hasSensorProbe ? 5 : 0 }}
             <svg class="icon"><use xlink:href="#icon-build" /></svg>
             {{ params.hasSensorProbe ? 5 : 0 }}
-          </div>
-        </div>
-
-        <!-- Targeting Optics -->
-        <div v-if="params.sourcesInUse.dnd">
-          <div class="box__select">
-            <div class="checkbox">
-              <label for="hasTargetingOptics">
-                <input
-                  type="checkbox"
-                  v-model="params.hasTargetingOptics"
-                  id="hasTargetingOptics" />
-                Targeting Optics (see <i>Dark Matter</i>, p 167)
-              </label>
-            </div>
-          </div>
-          <div class="box__cost--list">
-            <svg class="icon"><use xlink:href="#icon-power" /></svg>
-            {{ params.hasTargetingOptics ? 2 : 0 }}
-            <svg class="icon"><use xlink:href="#icon-build" /></svg>
-            {{ params.hasTargetingOptics ? 2 : 0 }}
           </div>
         </div>
 

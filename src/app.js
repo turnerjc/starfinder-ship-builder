@@ -372,7 +372,6 @@ export default {
         hasRadioArray: 0, // upgrades (dnd)
         hasRepairDrones: 0, // upgrades (dnd)
         hasSensorProbe: 0, // upgrades (dnd)
-        hasTargetingOptics: 0, // upgrades (dnd)
         isSetDefaultCrewSkillValues: 1,
         isUseStrictRules: 1,
         networkNode: {},
@@ -2031,11 +2030,6 @@ export default {
       if (this.params.hasSensorProbe) {
         desc.push('sensor probe');
       }
-      // targeting optics
-      if (this.params.hasTargetingOptics) {
-        desc.push('targeting optics');
-      }
-
       return desc.join(', ');
     },
 
@@ -2185,8 +2179,7 @@ export default {
         (this.params.hasDeadReckoner ? 2 : 0) +
         (this.params.hasRadioArray ? 1 : 0) +
         (this.params.hasRepairDrones ? 10 : 0) +
-        (this.params.hasSensorProbe ? 5 : 0) +
-        (this.params.hasTargetingOptics ? 2 : 0)
+        (this.params.hasSensorProbe ? 5 : 0)
       );
     },
 
@@ -2216,8 +2209,7 @@ export default {
           (this.params.hasDeadReckoner ? 2 : 0) +
           (this.params.hasRadioArray ? 1 : 0) +
           (this.params.hasRepairDrones ? 5 : 0) +
-          (this.params.hasSensorProbe ? 5 : 0) +
-          (this.params.hasTargetingOptics ? 2 : 0),
+          (this.params.hasSensorProbe ? 5 : 0),
       };
     },
 
@@ -2621,7 +2613,6 @@ export default {
         'hasRadioArray',
         'hasRepairDrones',
         'hasSensorProbe',
-        'hasTargetingOptics',
       ];
       for (var i in keys) {
         // console.log(keys[i]);
