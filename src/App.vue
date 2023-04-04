@@ -734,9 +734,10 @@
               <h4 class="crew__skill__label">{{ getSkillName(skillId) }}</h4>
 
               <div class="box--flex">
+                <!-- D&D skill -->
                 <div v-if="params.sourcesInUse.dnd">
                   <!-- Skill proficiency -->
-                  <div class="checkbox form-inline">
+                  <div class="crew__skill__ranks checkbox col-sm-1-2">
                     <label>
                       <input
                         type="checkbox"
@@ -748,12 +749,14 @@
                         }`
                       }}
                     </label>
-                    <div
+                  </div>
+                  <!-- Skill expertise -->
+                  <div class="crew__skill__ranks checkbox col-sm-1-2">
+                    <label
                       v-if="
                         params.crewSkills[role.id].skills[skillId].hasProficiency &&
                         skillId != 'gunnery'
                       ">
-                      <label>
                         <input
                           type="checkbox"
                           v-model="params.crewSkills[role.id].skills[skillId].hasExpertise" />{{
@@ -765,7 +768,6 @@
                         }}
                       </label>
                     </div>
-                  </div>
                   <!-- Skill mod -->
                   <div class="crew__skill__mod form-group col-sm-1-2">
                     <label for="role.id + '_' + skillId + '_mod'">Mod</label>
@@ -778,6 +780,8 @@
                       v-model="params.crewSkills[role.id].skills[skillId].modifier" />
                   </div>
                 </div>
+
+                <!-- Starfinder skill -->
                 <div v-else>
                   <!-- Skill ranks -->
                   <div

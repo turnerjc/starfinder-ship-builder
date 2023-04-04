@@ -1818,7 +1818,7 @@ export default {
       if (this.params.sourcesInUse.dnd) {
         return Math.floor((tier - 1) / 6) + 1;
       } else {
-        return Math.floor(tier * 1.5);
+        return Math.floor((tier - 1) / 3) + 3;
       }
     },
 
@@ -3307,7 +3307,7 @@ export default {
             skillObj.ranks = this.skillRanks;
             // set modifier base
             skillObj.modifier = this.skillModifierBase;
-            console.log('setDefaultCrewSkillValues', skillObj);
+            // console.log('setDefaultCrewSkillValues', skillObj);
           }
         }
       }

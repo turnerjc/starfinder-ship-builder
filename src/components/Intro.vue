@@ -44,7 +44,7 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
-      <li>Crew section still looks horrible</li>
+      <li>Crew section looks a little better; still want to do one line per skill</li>
       <li>Move Dark Matter Targeting Optics to weapons</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
       <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
