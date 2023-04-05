@@ -28,8 +28,11 @@
         DCM)
       </li>
       <li>Modified Computer Bonus (+1 to +3); one computer option per Mk</li>
-      <li>Automagically Populate Crew Modifiers for 5e by default (+1 to +3)</li>
       <li>Add Systems and Upgrades from Dark Matter</li>
+      <li>
+        Checkbox to Set Default Crew Skills; 5e uses proficiency + mod, Starfinder uses ranks + mod
+      </li>
+      <li>Limit Crew Readout to skills with proficiency/ranks</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -41,7 +44,6 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
-      <li>Fix Crew Skill stats... again</li>
       <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
       <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
       <li>Print Button for Ship Readout</li>
