@@ -167,7 +167,10 @@
       </div>
 
       <!-- Sources -->
-      <Sources :sources="sources" :params="params"></Sources>
+      <Sources
+        :sources="sources"
+        :params="params"
+        @updateCrew="setDefaultCrewSkillValues"></Sources>
 
       <!--
       | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -223,7 +226,7 @@
           </div>
 
           <div>
-            <select class="form-control" id="sampleShipSelect" v-on:change="inputSampleShipParams">
+            <select class="form-control" id="sampleShipSelect" @change="inputSampleShipParams">
               <option value="none">None</option>
               <option v-for="option in selectOptionsSampleShip" :value="option.id">
                 {{ getSampleShipOptionName(option) }}
@@ -250,7 +253,7 @@
             <textarea
               class="form-control"
               v-model="json"
-              v-on:change="convertJsonInput"
+              @change="convertJsonInput"
               id="jsonData"
               cols="30"
               rows="5"></textarea>
@@ -329,7 +332,7 @@
               class="form-control"
               id="tierSelect"
               v-model="params.tierId"
-              v-on:change="setDefaultCrewSkillValues">
+              @change="setDefaultCrewSkillValues">
               <option v-for="option in selectOptions.tier" :value="option.id">
                 {{ option.name }}
               </option>
@@ -663,7 +666,7 @@
               type="checkbox"
               id="hasCrew"
               v-model="params.isSetDefaultCrewSkillValues"
-              v-on:change="setDefaultCrewSkillValues" />
+              @change="setDefaultCrewSkillValues" />
             Set default crew skill values?
           </label>
         </div>

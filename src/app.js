@@ -73,19 +73,19 @@ export default {
             skills: {
               diplomacy: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
               intimidate: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
               bluff: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -139,7 +139,7 @@ export default {
             skills: {
               engineering: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -182,7 +182,7 @@ export default {
             skills: {
               piloting: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -224,13 +224,13 @@ export default {
             skills: {
               computers: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
               'physical-science': {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -249,13 +249,13 @@ export default {
             skills: {
               acrobatics: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
               athletics: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -268,7 +268,7 @@ export default {
             skills: {
               mysticism: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -281,7 +281,7 @@ export default {
             skills: {
               medicine: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -294,7 +294,7 @@ export default {
             skills: {
               piloting: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -307,13 +307,13 @@ export default {
             skills: {
               computers: {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
               'physical-science': {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -326,13 +326,13 @@ export default {
             skills: {
               'physical-science': {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
               'life-science': {
                 modifier: 1,
-                ranks: 0,
+                ranks: 1,
                 hasProficiency: true,
                 hasExpertise: false,
               },
@@ -356,7 +356,7 @@ export default {
         hasBiometricLocks: 0,
         hasColonyShipFramework: 0, // other systems (som)
         hasConsciousnessUplink: 0, // other systems (som)
-        hasCrew: 1,
+        hasCrew: true,
         hasDataNet: 0,
         hasEmergencyAccelerator: 0,
         hasHiveJoining: 0, // other systems (pw)
@@ -372,7 +372,7 @@ export default {
         hasRadioArray: 0, // upgrades (dnd)
         hasRepairDrones: 0, // upgrades (dnd)
         hasSensorProbe: 0, // upgrades (dnd)
-        isSetDefaultCrewSkillValues: 1,
+        isSetDefaultCrewSkillValues: true,
         isUseStrictRules: 1,
         networkNode: {},
         powerCoreIds: ['none'],
@@ -804,8 +804,8 @@ export default {
             roleDesc.push(that.getSkillDesc(skillId, skill));
           } else {
             var skill = that.params.crewSkills[roleId].skills[skillId];
-            if (skillId == 'gunnery' && skill.modifier == 0) return;
-            if (skillId != 'gunnery' && skill.ranks === undefined) return;
+            if (skillId === 'gunnery' && skill.modifier === 0) return;
+            if (skillId !== 'gunnery' && skill.ranks === 0) return;
 
             roleDesc.push(that.getSkillDesc(skillId, skill));
           }
@@ -1813,11 +1813,11 @@ export default {
 
     // computed continued...
     skillModifierBase() {
-      var tier = this.tier.value < 0 ? 1 : this.tier.value;
+      var tier = this.tier.value < 1 ? 1 : this.tier.value;
       if (this.params.sourcesInUse.dnd) {
         return Math.floor((tier - 1) / 6) + 1;
       } else {
-        return Math.floor((tier - 1) / 3) + 3;
+        return Math.floor(tier / 3) + 3;
       }
     },
 
@@ -1846,13 +1846,13 @@ export default {
 
     // computed continued...
     skillProficiency() {
-      var tier = this.tier.value < 0 ? 1 : this.tier.value;
+      var tier = this.tier.value < 1 ? 1 : this.tier.value;
       return Math.floor((tier - 1) / 4) + 2;
     },
 
     // computed continued...
     skillRanks() {
-      var tier = this.tier.value < 0 ? 1 : this.tier.value;
+      var tier = this.tier.value < 1 ? 1 : this.tier.value;
       return tier;
     },
 
@@ -3295,7 +3295,9 @@ export default {
               }
             }
             // set Starfinder ranks
-            skillObj.ranks = this.skillRanks;
+            if (skillObj.rank > 0) {
+              skillObj.ranks = this.skillRanks;
+            }
             // set modifier base
             skillObj.modifier = this.skillModifierBase;
             // console.log('setDefaultCrewSkillValues', skillObj);
