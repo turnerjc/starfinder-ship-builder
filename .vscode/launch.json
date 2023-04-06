@@ -10,7 +10,9 @@
       "reAttach": true,
       "name": "Launch Firefox against localhost",
       "url": "http://localhost:5173/sfshipbuilder/",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}",
+      "firefoxExecutable": "developer",
+      "clearConsoleOnReload": true
     },
     {
       "type": "chrome",
