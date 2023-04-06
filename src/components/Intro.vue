@@ -32,7 +32,8 @@
       <li>
         Checkbox to Set Default Crew Skills; 5e uses proficiency + mod, Starfinder uses ranks + mod
       </li>
-      <li>Limit Crew Readout to skills with proficiency/ranks</li>
+      <li>Limit Crew Readout to skills with proficiency/non-zero ranks</li>
+      <li>Modified Virtual Intelligence Skill and Gunnery Modifiers (only uses Mk 3, 8, 13, 18)</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -44,11 +45,11 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
-      <li>Modify Virtual Intelligence Skill and Gunnery Modifiers</li>
       <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
       <li>Print Button for Ship Readout</li>
       <li>Implement Ship Sheet layout</li>
-      <li>Add Skill option to Dedicated Computer</li>
+      <li>Add Skill option to Virtual Intelligence Skill Expander</li>
+      <li>Add Action option to Dedicated Computer</li>
       <li>Add Virtues and Flaws</li>
       <li>Update logo for Starforger</li>
     </ul>

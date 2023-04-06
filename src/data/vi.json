@@ -6,7 +6,10 @@
       "value": 0,
       "skillMod": 0,
       "gunneryMod": 0,
-      "bpCost": 0
+      "bpCost": 0,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "1",
@@ -14,7 +17,10 @@
       "value": 1,
       "skillMod": 7,
       "gunneryMod": 4,
-      "bpCost": 5
+      "bpCost": 5,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "2",
@@ -22,7 +28,10 @@
       "value": 2,
       "skillMod": 8,
       "gunneryMod": 5,
-      "bpCost": 7
+      "bpCost": 7,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "3",
@@ -30,7 +39,10 @@
       "value": 3,
       "skillMod": 10,
       "gunneryMod": 6,
-      "bpCost": 9
+      "bpCost": 9,
+      "dnd": {
+        "skillMod": 4
+      }
     },
     {
       "id": "4",
@@ -38,7 +50,10 @@
       "value": 4,
       "skillMod": 11,
       "gunneryMod": 8,
-      "bpCost": 11
+      "bpCost": 11,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "5",
@@ -46,7 +61,10 @@
       "value": 5,
       "skillMod": 12,
       "gunneryMod": 9,
-      "bpCost": 13
+      "bpCost": 13,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "6",
@@ -54,7 +72,10 @@
       "value": 6,
       "skillMod": 13,
       "gunneryMod": 10,
-      "bpCost": 15
+      "bpCost": 15,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "7",
@@ -62,7 +83,10 @@
       "value": 7,
       "skillMod": 15,
       "gunneryMod": 11,
-      "bpCost": 18
+      "bpCost": 18,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "8",
@@ -70,7 +94,10 @@
       "value": 8,
       "skillMod": 16,
       "gunneryMod": 13,
-      "bpCost": 20
+      "bpCost": 20,
+      "dnd": {
+        "skillMod": 6
+      }
     },
     {
       "id": "9",
@@ -78,7 +105,10 @@
       "value": 9,
       "skillMod": 17,
       "gunneryMod": 14,
-      "bpCost": 23
+      "bpCost": 23,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "10",
@@ -86,7 +116,10 @@
       "value": 10,
       "skillMod": 19,
       "gunneryMod": 14,
-      "bpCost": 27
+      "bpCost": 27,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "11",
@@ -94,7 +127,10 @@
       "value": 11,
       "skillMod": 20,
       "gunneryMod": 15,
-      "bpCost": 31
+      "bpCost": 31,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "12",
@@ -102,7 +138,10 @@
       "value": 12,
       "skillMod": 21,
       "gunneryMod": 16,
-      "bpCost": 35
+      "bpCost": 35,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "13",
@@ -110,7 +149,10 @@
       "value": 13,
       "skillMod": 22,
       "gunneryMod": 18,
-      "bpCost": 40
+      "bpCost": 40,
+      "dnd": {
+        "skillMod": 8
+      }
     },
     {
       "id": "14",
@@ -118,7 +160,10 @@
       "value": 14,
       "skillMod": 24,
       "gunneryMod": 19,
-      "bpCost": 45
+      "bpCost": 45,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "15",
@@ -126,7 +171,10 @@
       "value": 15,
       "skillMod": 25,
       "gunneryMod": 21,
-      "bpCost": 50
+      "bpCost": 50,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "16",
@@ -134,7 +182,10 @@
       "value": 16,
       "skillMod": 26,
       "gunneryMod": 22,
-      "bpCost": 60
+      "bpCost": 60,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "17",
@@ -142,7 +193,10 @@
       "value": 17,
       "skillMod": 27,
       "gunneryMod": 24,
-      "bpCost": 70
+      "bpCost": 70,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "18",
@@ -150,7 +204,10 @@
       "value": 18,
       "skillMod": 28,
       "gunneryMod": 25,
-      "bpCost": 80
+      "bpCost": 80,
+      "dnd": {
+        "skillMod": 10
+      }
     },
     {
       "id": "19",
@@ -158,7 +215,10 @@
       "value": 19,
       "skillMod": 29,
       "gunneryMod": 27,
-      "bpCost": 90
+      "bpCost": 90,
+      "dnd": {
+        "skillMod": 0
+      }
     },
     {
       "id": "20",
@@ -166,7 +226,10 @@
       "value": 20,
       "skillMod": 31,
       "gunneryMod": 28,
-      "bpCost": 100
+      "bpCost": 100,
+      "dnd": {
+        "skillMod": 0
+      }
     }
   ]
 }

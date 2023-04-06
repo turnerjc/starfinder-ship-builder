@@ -945,7 +945,7 @@ export default {
       var nodes = this.params.sourcesInUse.dnd
         ? this.dedicatedComputer.dnd.nodes
         : this.dedicatedComputer.nodes;
-      console.log(nodes);
+      // console.log(nodes);
       return nodes;
     },
 
@@ -1355,7 +1355,7 @@ export default {
     },
 
     networkNodesMax() {
-      return networkNode.max;
+      return this.networkNodes.max;
     },
 
     // computed continued...
@@ -1750,6 +1750,17 @@ export default {
     },
 
     // computed continued...
+    selectOptionsVI() {
+      return this.selectOptions.vi.filter((option) => {
+        if (this.params.sourcesInUse.dnd) {
+          return option.id === 'none' || option.dnd.skillMod > 0;
+        } else {
+          return true;
+        }
+      });
+    },
+
+    // computed continued...
     selfDestructSystemBpCost() {
       return this.params.hasSelfDestructSystem * 5 * this.sizeCategory.multiplier;
     },
@@ -1812,16 +1823,6 @@ export default {
     },
 
     // computed continued...
-    skillModifierBase() {
-      var tier = this.tier.value < 1 ? 1 : this.tier.value;
-      if (this.params.sourcesInUse.dnd) {
-        return Math.floor((tier - 1) / 6) + 1;
-      } else {
-        return Math.floor(tier / 3) + 3;
-      }
-    },
-
-    // computed continued...
     skillModifierComputers() {
       return this.sensors.modifier;
     },
@@ -1853,6 +1854,7 @@ export default {
     // computed continued...
     skillRanks() {
       var tier = this.tier.value < 1 ? 1 : this.tier.value;
+      // console.log('skillRanks', tier);
       return tier;
     },
 
@@ -1990,7 +1992,11 @@ export default {
       }
       // virtual intelligence
       if (this.params.viId != 'none') {
-        desc.push('virtual intelligence (tier ' + this.vi.name + ')');
+        var vi = 'virtual intelligence';
+        if (!this.params.sourcesInUse.dnd) {
+          vi += ` (tier ${this.vi.name})`;
+        }
+        desc.push(vi);
       }
       // vi skill expander
       if (this.params.viSkillExpanderId != 'none') {
@@ -2240,12 +2246,18 @@ export default {
       var that = this;
       var desc = [];
 
-      var viSkillIds = ['bluff', 'computers', 'engineering', 'gunnery', 'piloting', 'sense-motive'];
+      // VI only has computer, piloting and gunnery checks (SOM pg. 34)
+      var viSkillIds = ['computers', 'piloting', 'gunnery'];
 
       viSkillIds.forEach(function (skillId) {
-        var ranks = skillId == 'gunnery' ? 0 : vi.value;
-        var modifier = skillId == 'gunnery' ? vi.gunneryMod : vi.skillMod - vi.value;
-        desc.push(that.getSkillDesc(skillId, { ranks: ranks, modifier: modifier }));
+        if (that.params.sourcesInUse.dnd) {
+          var modifier = vi.dnd.skillMod - that.skillProficiency;
+          desc.push(that.getSkillDesc(skillId, { hasProficiency: true, modifier: modifier }));
+        } else {
+          var ranks = skillId == 'gunnery' ? 0 : vi.value;
+          var modifier = skillId == 'gunnery' ? vi.gunneryMod : vi.skillMod - vi.value;
+          desc.push(that.getSkillDesc(skillId, { ranks: ranks, modifier: modifier }));
+        }
       });
 
       return desc.join(', ');
@@ -3008,6 +3020,27 @@ export default {
       return desc;
     },
 
+    // computed continued...
+    getSkillModifier(skillId) {
+      var tier = this.tier.value < 1 ? 1 : this.tier.value;
+      if (this.params.sourcesInUse.dnd) {
+        // use +1 to +4 based on tier
+        return Math.floor((tier - 1) / 6) + 1;
+      } else {
+        // use the virtual intelligence skill mod or gunnery mod
+        var vi = this.getItemById('vi', tier.toString());
+        var mod = 0;
+        if (!vi) {
+          mod = Math.floor(tier / 3) + 3;
+        } else if (skillId === 'gunnery') {
+          mod = vi.gunneryMod;
+        } else {
+          mod = vi.skillMod - tier;
+        }
+        return mod;
+      }
+    },
+
     getSkillName(skillId) {
       var skillItem = this.getItemById('skill', skillId);
       if (this.params.sourcesInUse.dnd) {
@@ -3295,11 +3328,9 @@ export default {
               }
             }
             // set Starfinder ranks
-            if (skillObj.rank > 0) {
-              skillObj.ranks = this.skillRanks;
-            }
+            skillObj.ranks = this.skillRanks;
             // set modifier base
-            skillObj.modifier = this.skillModifierBase;
+            skillObj.modifier = this.getSkillModifier(skill);
             // console.log('setDefaultCrewSkillValues', skillObj);
           }
         }

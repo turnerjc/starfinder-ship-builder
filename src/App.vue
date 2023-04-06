@@ -2575,7 +2575,7 @@
             <div class="form-group">
               <label for="viSelect">Virtual Intelligence</label>
               <select name="vi" id="viSelect" class="form-control" v-model="params.viId">
-                <option v-for="option in selectOptions.vi" :value="option.id">
+                <option v-for="option in selectOptionsVI" :value="option.id">
                   {{ option.id == 'none' ? 'None' : 'Tier ' + option.name }}
                 </option>
               </select>

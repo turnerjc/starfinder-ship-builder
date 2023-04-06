@@ -3,6 +3,7 @@
     {
       "id": "acrobatics",
       "name": "Acrobatics",
+      "ability": "Dexterity",
       "hasRanks": true,
       "dnd": {
         "name": "Acrobatics"
@@ -11,6 +12,7 @@
     {
       "id": "athletics",
       "name": "Athletics",
+      "ability": "Strength",
       "hasRanks": true,
       "dnd": {
         "name": "Athletics"
@@ -19,6 +21,7 @@
     {
       "id": "bluff",
       "name": "Bluff",
+      "ability": "Charisma",
       "hasRanks": true,
       "dnd": {
         "name": "Deception"
@@ -27,6 +30,7 @@
     {
       "id": "computers",
       "name": "Computers",
+      "ability": "Intelligence",
       "hasRanks": true,
       "dnd": {
         "name": "Data"
@@ -35,6 +39,7 @@
     {
       "id": "diplomacy",
       "name": "Diplomacy",
+      "ability": "Charisma",
       "hasRanks": true,
       "dnd": {
         "name": "Persuasion"
@@ -43,6 +48,7 @@
     {
       "id": "engineering",
       "name": "Engineering",
+      "ability": "Intelligence",
       "hasRanks": true,
       "dnd": {
         "name": "Technology"
@@ -51,6 +57,7 @@
     {
       "id": "gunnery",
       "name": "Gunnery",
+      "ability": "Dexterity",
       "hasRanks": false,
       "dnd": {
         "name": "Gunnery"
@@ -59,6 +66,7 @@
     {
       "id": "intimidate",
       "name": "Intimidate",
+      "ability": "Charisma",
       "hasRanks": true,
       "dnd": {
         "name": "Intimidate"
@@ -67,6 +75,7 @@
     {
       "id": "life-science",
       "name": "Life Science",
+      "ability": "Intelligence",
       "hasRanks": true,
       "dnd": {
         "name": "Nature"
@@ -75,6 +84,7 @@
     {
       "id": "medicine",
       "name": "Medicine",
+      "ability": "Wisdom",
       "hasRanks": true,
       "dnd": {
         "name": "Medicine"
@@ -83,6 +93,7 @@
     {
       "id": "mysticism",
       "name": "Mysticism",
+      "ability": "Intelligence",
       "hasRanks": true,
       "dnd": {
         "name": "Arcana"
@@ -91,6 +102,7 @@
     {
       "id": "perception",
       "name": "Perception",
+      "ability": "Wisdom",
       "hasRanks": true,
       "dnd": {
         "name": "Perception"
@@ -99,6 +111,7 @@
     {
       "id": "physical-science",
       "name": "Physical Science",
+      "ability": "Intelligence",
       "hasRanks": true,
       "dnd": {
         "name": "Science"
@@ -107,6 +120,7 @@
     {
       "id": "piloting",
       "name": "Piloting",
+      "ability": "Dexterity",
       "hasRanks": true,
       "dnd": {
         "name": "Piloting"
@@ -115,6 +129,7 @@
     {
       "id": "sense-motive",
       "name": "Sense Motive",
+      "ability": "Wisdom",
       "hasRanks": true,
       "dnd": {
         "name": "Insight"
