@@ -52,6 +52,7 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
+      <li>Save Button not working on Chrome; works on Firefox</li>
       <li>Print Button for Ship Readout</li>
       <li>Implement Ship Sheet layout</li>
       <li>Add Skill option to Virtual Intelligence Skill Expander</li>
