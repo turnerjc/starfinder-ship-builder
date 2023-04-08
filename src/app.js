@@ -2606,9 +2606,9 @@ export default {
 
     // methods continued...
     fileSave() {
-      shipName = this.params.shipName ? this.params.shipName : 'New Ship';
+      const shipName = this.params.shipName ? this.params.shipName : 'New Ship';
       console.log(shipName);
-      var shipData = {
+      const shipData = {
         id: paramCase(shipName),
         source: 'sfsbuilder',
         name: shipName,
