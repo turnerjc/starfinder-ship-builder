@@ -14,8 +14,6 @@ import {
   integerToWord,
   stringToFloat,
   stringToDice,
-  randomStat,
-  statMod,
 } from './modules/helpers.js';
 
 // Weapon Mount
@@ -23,6 +21,12 @@ import { WeaponMount } from './modules/weaponMount.js';
 
 // Ship Data
 import shipData from './modules/shipData.js';
+
+// File Save
+import { saveAs } from 'file-saver';
+
+// Change Case
+import { camelCase, paramCase } from 'change-case';
 
 /*
 |------------------------------------------------------------------------------------------
@@ -41,7 +45,6 @@ export default {
   data() {
     return {
       data: shipData,
-      json: '',
       params: {},
       paramsReset: {
         ablativeArmorId: 'none',
@@ -1291,19 +1294,6 @@ export default {
     },
 
     // computed continued...
-    jsonParams() {
-      // TODO: need to modify JSON output to include sampleShip header, ex.
-      //   "id": "3-kingdoms-star-castle",
-      //   "source": "dnd",
-      //   "name": "3 Kingdoms Star Castle",
-      //   "size": 8,
-      //   "tier": "19",
-      var jsonParams = cloneObject(this.params);
-      jsonParams['isSetDefaultCrewSkillValues'] = 0; // Because otherwise crew skills get overwritten!
-      return JSON.stringify(jsonParams);
-    },
-
-    // computed continued...
     maneuverabilityRating() {
       if (this.params.hasSpaceStationFramework) {
         return this.getItemById('maneuverabilityRating', 'poor');
@@ -1410,7 +1400,7 @@ export default {
 
           // material
           if (specialMat != 'none') {
-            name += specialMat.toTitleCase() + ' ';
+            name += titleCase(specialMat) + ' ';
           }
 
           // description
@@ -2495,7 +2485,6 @@ export default {
     // methods continued...
     clearAll() {
       this.params = cloneObject(this.paramsReset);
-      this.json = '';
       document.getElementById('sampleShipSelect').value = 'none';
     },
 
@@ -2509,12 +2498,12 @@ export default {
     },
 
     // methods continued...
-    convertJsonInput() {
+    convertJsonInput(newParams) {
       // Retain D&D if currently checked
       var fixDnd = this.params.sourcesInUse?.dnd;
 
       // read JSON
-      this.params = JSON.parse(this.json);
+      this.params = newParams;
 
       // or set D&D if the incoming params have D&D set
       fixDnd |= this.params.sourcesInUse?.dnd;
@@ -2525,6 +2514,7 @@ export default {
       }
 
       this.fixMissingParamsValues();
+      // console.log(this.params);
     },
 
     // methods continued...
@@ -2593,6 +2583,47 @@ export default {
     },
 
     // methods continued...
+    fileLoad(inputEvent) {
+      this.clearAll();
+      let that = this;
+      // console.log(inputEvent.target.files[0]);
+      let file = inputEvent.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function () {
+        var content = reader.result;
+        var newShip = JSON.parse(content);
+        // console.log(newShip);
+        var newShipParams = cloneObject(newShip.params);
+        that.convertJsonInput(newShipParams);
+      };
+      reader.readAsText(file);
+    },
+
+    // methods continued...
+    filePick() {
+      this.$refs.fileInput.click();
+    },
+
+    // methods continued...
+    fileSave() {
+      shipName = this.params.shipName ? this.params.shipName : 'New Ship';
+      console.log(shipName);
+      var shipData = {
+        id: paramCase(shipName),
+        source: 'sfsbuilder',
+        name: shipName,
+        size: this.frame.size,
+        tier: this.params.tierId,
+        params: cloneObject(this.params),
+      };
+      shipData.params['isSetDefaultCrewSkillValues'] = 0; // Because otherwise crew skills get overwritten!
+
+      const blob = new Blob([JSON.stringify(shipData, null, 2)], { type: 'application/json' });
+
+      saveAs(blob, `${camelCase(shipName)}.json`);
+    },
+
+    // methods continued...
     fixDndComputers(computer) {
       // the mononode for each Mk is overridden with name, bonus, and nodes for 5e.
       var id = this.params[computer];
@@ -2648,7 +2679,7 @@ export default {
       for (var roleId in this.paramsReset.crewSkills) {
         // if role is missing, add it
         if (!isset(this.params.crewSkills[roleId])) {
-          // console.log('Missing crew role, ' + roleId + ', added to ship');
+          // console.log(`Add ${roleId}`);
           this.params.crewSkills[roleId] = cloneObject(this.paramsReset.crewSkills[roleId]);
           continue;
         }
@@ -2656,12 +2687,24 @@ export default {
         for (var skillId in this.paramsReset.crewSkills[roleId].skills) {
           // if skill is missing, add it
           if (!isset(this.params.crewSkills[roleId].skills[skillId])) {
-            // console.log(
-            //   'Missing skill, ' + skillId + ', in crew role, ' + roleId + ', added to ship'
-            // );
+            // console.log(`Add ${roleId}.${skillId}`);
             this.params.crewSkills[roleId].skills[skillId] = cloneObject(
               this.paramsReset.crewSkills[roleId].skills[skillId]
             );
+          }
+          if (!isset(this.params.crewSkills[roleId].skills[skillId].hasProficiency)) {
+            this.params.crewSkills[roleId].skills[skillId].hasProficiency =
+              this.paramsReset.crewSkills[roleId].skills[skillId].hasProficiency;
+            // console.log(
+            //   `Add ${roleId}.${skillId}.hasProficiency = ${this.params.crewSkills[roleId].skills[skillId].hasProficiency}`
+            // );
+          }
+          if (!isset(this.params.crewSkills[roleId].skills[skillId].hasExpertise)) {
+            this.params.crewSkills[roleId].skills[skillId].hasExpertise =
+              this.paramsReset.crewSkills[roleId].skills[skillId].hasExpertise;
+            // console.log(
+            //   `Add ${roleId}.${skillId}.hasExpertise = ${this.params.crewSkills[roleId].skills[skillId].hasProficiency}`
+            // );
           }
         }
       }
@@ -3115,21 +3158,7 @@ export default {
       if (sampleShipId !== 'none') {
         var sampleShipObj = this.getItemById('sampleShip', sampleShipId);
         var sampleShipParams = cloneObject(sampleShipObj.params);
-
-        // Retain D&D if currently checked
-        var fixDnd = this.params.sourcesInUse?.dnd;
-
-        // read sample ship
-        this.params = sampleShipParams;
-
-        // Set D&D if previously checked or in sample ship
-        fixDnd |= this.params.sourcesInUse?.dnd;
-
-        // fixup D&D parameters
-        if (fixDnd) {
-          this.fixDndParams();
-        }
-        this.fixMissingParamsValues();
+        this.convertJsonInput(sampleShipParams);
       }
     },
 

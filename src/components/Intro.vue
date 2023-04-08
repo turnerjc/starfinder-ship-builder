@@ -19,21 +19,28 @@
       <strong>5e Compatiblity Changes: </strong>
     </p>
     <ul>
-      <li>
-        Modified Armor AC Bonus (+0 to +8); TL Mods (-1 to -2); Turn Mod (odd Mk Armor is one worse
-        than even Mk Armor)
-      </li>
-      <li>
-        Modified DCM TL Bonus (+0 to +8); PCU Cost (even Mk DCM have smaller PCU cost than odd Mk
-        DCM)
-      </li>
-      <li>Modified Computer Bonus (+1 to +3); one computer option per Mk</li>
-      <li>Add Systems and Upgrades from Dark Matter</li>
-      <li>
-        Checkbox to Set Default Crew Skills; 5e uses proficiency + mod, Starfinder uses ranks + mod
-      </li>
+      <li>Modified Armor AC bonus (+0 to +8 to give AC Base 10-18)</li>
+      <li>Modified Armor TL penalty (-1 to -2)</li>
+      <li>Modified Armor Turn penalty (odd Mk Armor is one worse than even Mk Armor)</li>
+      <li>Modified DCM TL Bonus (+0 to +8 to give TL Base 10-18)</li>
+      <li>Modified DCM PCU Cost (even Mk DCM have smaller PCU cost than odd Mk DCM)</li>
+      <li>Modified Computer Bonus (+1 to +3)</li>
+      <li>Reduced computer options to per Mk</li>
+      <li>Added Systems and Upgrades from Dark Matter</li>
+      <li>Modified VI skill and gunnery modifiers</li>
+      <li>Reduced VI options</li>
+      <li>Modify Crew Skills to use proficiency/expertise instead of ranks</li>
       <li>Limit Crew Readout to skills with proficiency/non-zero ranks</li>
-      <li>Modified Virtual Intelligence Skill and Gunnery Modifiers (only uses Mk 3, 8, 13, 18)</li>
+    </ul>
+    <p>
+      <strong>Recent Updates: </strong><time datetime="2023-04-07">2023-04-07 - Denny Wright</time>
+    </p>
+    <ul>
+      <li>
+        Set Default Crew Skills checkbox; 5e uses proficiency + mod, Starfinder uses ranks + mod
+      </li>
+      <li>Modified Crew skills to use VI modifiers to calculate default ranks/mod</li>
+      <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
     </ul>
     <p>
       <strong>Recent Updates: </strong><time datetime="2023-03-26">2023-03-26 - Denny Wright</time>
@@ -45,7 +52,6 @@
     </ul>
     <strong>TODO:</strong>
     <ul>
-      <li>Load/Save Buttons to replace Input/Output JSON text areas</li>
       <li>Print Button for Ship Readout</li>
       <li>Implement Ship Sheet layout</li>
       <li>Add Skill option to Virtual Intelligence Skill Expander</li>

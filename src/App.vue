@@ -247,34 +247,17 @@
           <h2 id="loadsave">Load/Save</h2>
         </header>
 
-        <div class="box__select">
-          <div class="form-group">
-            <label for="">Paste in JSON from a previous design</label>
-            <textarea
-              class="form-control"
-              v-model="json"
-              @change="convertJsonInput"
-              id="jsonData"
-              cols="30"
-              rows="5"></textarea>
-          </div>
-        </div>
-
-        <div class="box__info">
-          <!-- <button id="copyJsonBtn" class="btn btn-primary">Copy JSON to clipboard</button> -->
-          <p>
-            Come back and work on your starship at a later date: copy and paste the JSON in the box
-            below into a text file. When you're ready to resume, copy and paste it back in to the
-            JSON box in the &lsquo;Input&rsquo; section at the top of the page.
-          </p>
-          <textarea id="outputJson" cols="30" rows="10" class="form-control">{{
-            jsonParams
-          }}</textarea>
-        </div>
-
-        <div class="form-group">
-          <p>Or start building your ship from scratch</p>
-          <button class="btn btn-lg btn-primary" v-on:click="clearAll">Clear All</button>
+        <div class="form-horizontal form-group">
+          <button class="btn btn-lg btn-primary btn-gap" @click="filePick">Load Ship</button>
+          <input
+            type="file"
+            id="fileInput"
+            style="display: none"
+            ref="fileInput"
+            accept="application/json"
+            @change="fileLoad" />
+          <button class="btn btn-lg btn-primary btn-gap" @click="fileSave">Save Ship</button>
+          <button class="btn btn-lg btn-primary" @click="clearAll">Clear All</button>
         </div>
       </div>
 
