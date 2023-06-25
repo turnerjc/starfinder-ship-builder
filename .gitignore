@@ -5,7 +5,7 @@ charsheet.php
 node_modules*/
 node_modules_grunt/
 ships/
-vendor/
+vendor*/
 dist/
 *.xlsx
 *.lnk

@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  starfinder-ship-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
