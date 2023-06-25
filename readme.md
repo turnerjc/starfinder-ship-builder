@@ -1,20 +1,19 @@
 # Starfinder RPG Ship Builder
 
-A single-page web app for building starships for the Starfinder RPG, by Paizo Inc.
+A single-page web app for building starships for the Starfinder RPG.
+Forked from https://github.com/turnerjc/starfinder-ship-builder
+
+
+## Getting Started
+    You can do local development by running 
+    `npm install` and grunt watch.
+
+    If you don't want install all of the dependencies you can rebuild the docker image with
+    `docker-compose up --build`
 
 ## Production and Development Modes
 
 For development, work on the base folder. Run `grunt watch` to compile in dev mode. Run `grunt` to compile once for production deployment.
-
-When ready to deploy, run Grunt. Minified files will appear in the `app` folder. Just copy this folder to the server.
-
-To use Vue.js browser extension (dev mode) add this script towards end of `index.php`:
-
-    <script src="https://unpkg.com/vue"></script>
-
-For production, use:
-
-    <script src="vendor/vue/vue.min.js"></script>
 
 ### Dependencies: Sass
 
@@ -28,18 +27,11 @@ Note that I tried `npm install -g sass`, but this causes an error. Then, to run 
 
 ### Dependencies: vue.js and clipboard.js
 
-Set up these files:
-
-    vendor/vue/vue.min.js
-    vendor/clipboard/dist/clipboard.min.js
-
-Visit respective vendor sites to get files.
-
-Might also need to copy vendor folder into app.
+vue.js and clipboard.js are copied over to dist by grunt, and copied from node_modules folder.
 
 ### Images
 
-SVGs are embedded, so no probs. Might need to copy /img to /app
+SVGs are embedded, so no problems. Grunt copies these over to dist.
 
 ### File structure
 

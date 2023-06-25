@@ -83,7 +83,13 @@ module.exports = function (grunt) {
 					*/
 				}
 			}
-		}
+		},
+		'gh-pages': {
+			options: {
+			  base: 'dist',
+			  src: ['**']
+			}
+		  }
 	});
 
 	// Load the plugin that provides the "uglify" task.
@@ -94,6 +100,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-minjson');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-gh-pages');
 
 	// Default task(s).
 	grunt.registerTask('default', ['uglify', 'sass', 'cssmin', 'minjson', 'htmlmin', 'copy']);

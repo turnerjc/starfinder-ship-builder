@@ -17,6 +17,7 @@
   "dependencies": {
     "clipboard": "^2.0.11",
     "grunt-cli": "^1.4.3",
+    "grunt-gh-pages": "^4.0.0",
     "sass": "^1.63.6",
     "vue": "^2.4.0"
   }
