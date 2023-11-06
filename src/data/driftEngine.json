@@ -19,7 +19,7 @@
       "engineRating": 1,
       "minPcu": 75,
       "maxSize": 10,
-      "bpCostMultiplier": 2
+      "bpCostMultiplier": 1
     },
     {
       "id": "signal-booster",
@@ -27,7 +27,7 @@
       "engineRating": 2,
       "minPcu": 100,
       "maxSize": 5,
-      "bpCostMultiplier": 5
+      "bpCostMultiplier": 2
     },
     {
       "id": "signal-major",
@@ -35,7 +35,7 @@
       "engineRating": 3,
       "minPcu": 150,
       "maxSize": 4,
-      "bpCostMultiplier": 10
+      "bpCostMultiplier": 3
     },
     {
       "id": "signal-superior",
@@ -43,7 +43,7 @@
       "engineRating": 4,
       "minPcu": 175,
       "maxSize": 4,
-      "bpCostMultiplier": 15
+      "bpCostMultiplier": 4
     },
     {
       "id": "signal-ultra",
@@ -51,7 +51,7 @@
       "engineRating": 5,
       "minPcu": 200,
       "maxSize": 3,
-      "bpCostMultiplier": 20
+      "bpCostMultiplier": 5
     },
     {
       "id": "archon-drive",
@@ -59,7 +59,7 @@
       "engineRating": 1,
       "minPcu": 150,
       "maxSize": 10,
-      "bpCostMultiplier": 15,
+      "bpCostMultiplier": 1,
       "source": "som",
       "notes": "Restricted (Church of Iomedae, Knights of Golarion)"
     },
@@ -69,7 +69,7 @@
       "engineRating": 1,
       "minPcu": 75,
       "maxSize": 7,
-      "bpCostMultiplier": 4,
+      "bpCostMultiplier": 1,
       "source": "som",
       "notes": "Restricted (Church of Besmara)"
     },
@@ -79,7 +79,7 @@
       "engineRating": 2,
       "minPcu": 150,
       "maxSize": 5,
-      "bpCostMultiplier": 10,
+      "bpCostMultiplier": 2,
       "source": "som",
       "notes": "Restricted (Church of Ibra)"
     },
@@ -89,7 +89,7 @@
       "engineRating": 1,
       "minPcu": 100,
       "maxSize": 7,
-      "bpCostMultiplier": 5,
+      "bpCostMultiplier": 1,
       "source": "som",
       "notes": "Restricted (Elemental Plane)"
     },
@@ -99,7 +99,7 @@
       "engineRating": 3,
       "minPcu": 175,
       "maxSize": 4,
-      "bpCostMultiplier": 12,
+      "bpCostMultiplier": 3,
       "source": "som",
       "notes": "Restricted (Eldest, fey)"
     },
@@ -109,7 +109,7 @@
       "engineRating": 1,
       "minPcu": 100,
       "maxSize": 7,
-      "bpCostMultiplier": 10,
+      "bpCostMultiplier": 1,
       "source": "som",
       "notes": "Restricted (Church of Asmodeus, Hellknights)"
     },
@@ -119,7 +119,7 @@
       "engineRating": 2,
       "minPcu": 150,
       "maxSize": 10,
-      "bpCostMultiplier": 15,
+      "bpCostMultiplier": 2,
       "source": "som",
       "notes": "Restricted (Tetrad, witchwyrds)"
     },
@@ -129,7 +129,7 @@
       "engineRating": 1,
       "minPcu": 75,
       "maxSize": 7,
-      "bpCostMultiplier": 3,
+      "bpCostMultiplier": 1,
       "source": "som",
       "notes": "Painful, restricted (Church of Zon-Kuthon, velstracs)"
     }
