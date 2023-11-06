@@ -359,7 +359,7 @@ export default {
         hasBiometricLocks: 0,
         hasColonyShipFramework: 0, // other systems (som)
         hasConsciousnessUplink: 0, // other systems (som)
-        hasCrew: true,
+        hasCrew: false,
         hasDataNet: 0,
         hasEmergencyAccelerator: 0,
         hasHiveJoining: 0, // other systems (pw)
