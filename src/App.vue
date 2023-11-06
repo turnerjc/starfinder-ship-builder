@@ -89,7 +89,7 @@
                 ({{ params.thrustersMaterialId }} thrusters)</span
               >; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span
                 v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0"
-                >; <strong>Drift</strong> {{ driftEngine.engineRating }}</span
+                >; <strong>Hyperdrive</strong> {{ driftEngine.engineRating }}</span
               >
             </p>
             <p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
@@ -128,7 +128,7 @@
             </p>
             <p>
               <strong>Power Core(s)</strong> {{ powerCoreDescription }};
-              <strong>Drift Engine</strong> {{ driftEngine.name }}; <strong>Systems </strong>
+              <strong>Hyperdrive</strong> {{ driftEngine.name }}; <strong>Systems </strong>
               <span v-html="systemsDescription"></span
               ><span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span
               ><span v-if="expansionBaysDescription != 'None'"
@@ -1494,11 +1494,11 @@
 
       <div class="box">
         <header class="box__header">
-          <h3 id="driftEngine">Drift Engine</h3>
+          <h3 id="driftEngine">Hyperdrive</h3>
         </header>
         <div class="box__select">
           <div class="form-group">
-            <label for="driftEngineSelect">Drift Engine</label>
+            <label for="driftEngineSelect">Hyperdrive</label>
             <select id="driftEngineSelect" class="form-control" v-model="params.driftEngineId">
               <option v-for="option in selectOptionsDriftEngine" :value="option.id">
                 {{ option.name }}
@@ -1509,7 +1509,7 @@
         <div class="box__info" v-if="driftEngine.notes !== undefined">
           <em>Note: </em>{{ driftEngine.notes }}
         </div>
-        <div class="box__info"><strong>Engine Rating</strong> {{ driftEngine.engineRating }}</div>
+        <div class="box__info"><strong>Hyperdrive Rating</strong> {{ driftEngine.engineRating }}</div>
         <div class="box__cost">
           <svg class="icon">
             <use xlink:href="#icon-build" />

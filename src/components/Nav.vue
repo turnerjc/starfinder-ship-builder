@@ -31,7 +31,7 @@
         </ul>
         <li><a href="#computer">Computer</a></li>
         <li><a href="#defensiveCountermeasures">Defensive Countermeasures</a></li>
-        <li><a href="#driftEngine">Drift Engine</a></li>
+        <li><a href="#driftEngine">Hyperdrive</a></li>
         <li v-if="frame.expansionBays !== 0"><a href="#expansionBays">Expansion Bays</a></li>
         <li><a href="#security">Security</a></li>
         <li><a href="#sensors">Sensors</a></li>
