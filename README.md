@@ -1,6 +1,12 @@
 # Starforger RPG Ship Builder
 
 A single-page web app for building starships for the Starfinder RPG, by Paizo Inc.
+This version has been modified to be compatible with
+      <a href="https://dnd.wizards.com/">D&D 5th Edition</a> for use in our Starforger campaign.
+      Starforger also uses rules from
+      <a href="https://magehandpress.com/product/dark-matter-pdf">Dark Matter</a>
+      by Mage Hand Press. The 5e Compatible checkbox in the Sources section enables AC, TL and
+      various modifier calculations. Systems and Upgrades from Dark Matter are also available.
 
 Thanks to [James Turner](https://twitter.com/james_c_turner) for creating the
 original 
