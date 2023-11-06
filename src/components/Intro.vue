@@ -33,6 +33,16 @@
       <li>Limit Crew Readout to skills with proficiency/non-zero ranks</li>
     </ul>
     <p>
+      <strong>Recent Updates: </strong><time datetime="2023-11-05">2023-11-05 - Denny Wright</time>
+    </p>
+    <ul>
+      <li>Change Drift to Hyperdrive</li>
+      <li>Rename Hyperdrives to Hyper Class I-V</li>
+      <li>Reduce BP cost of Hyperdrives</li>
+      <li>Add Corvette frame</li>
+      <li>Default to no crew</li>
+    </ul>
+    <p>
       <strong>Recent Updates: </strong><time datetime="2023-04-07">2023-04-07 - Denny Wright</time>
     </p>
     <ul>
