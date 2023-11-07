@@ -1,5 +1,8 @@
 {
-  "props": ["pcuCost", "bpCost"],
+  "props": [
+    "pcuCost",
+    "bpCost"
+  ],
   "data": [
     {
       "id": "none",
@@ -20,9 +23,153 @@
       "bpCost": 0
     },
     {
+      "id": "arcane-cannon",
+      "source": "dnd",
+      "name": "Arcane Cannon",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 25,
+      "bpCost": 10
+    },
+    {
       "id": "arcane-laboratory",
       "source": "scr",
       "name": "Arcane Laboratory",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 1,
+      "bpCost": 1
+    },
+    {
+      "id": "arcane-mortuary",
+      "source": "som",
+      "name": "Arcane Mortuary",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 1,
+      "bpCost": 2
+    },
+    {
+      "id": "booster-thruster-housing",
+      "source": "som",
+      "name": "Booster Thruster Housing",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 0,
+      "bpCost": 3
+    },
+    {
+      "id": "breaching-pod",
+      "source": "som",
+      "name": "Breaching Pod",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 5
+    },
+    {
+      "id": "breaching-pod-autonomous",
+      "source": "som",
+      "name": "Breaching Pod with Autonomous Combatants",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 7
+    },
+    {
+      "id": "breaching-pod-skilled",
+      "source": "som",
+      "name": "Breaching Pod with Skilled Autonomous Combatants",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 9
+    },
+    {
+      "id": "breaching-pod-specialized",
+      "source": "som",
+      "name": "Breaching Pod with Specialized Autonomous Combatants",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 11
+    },
+    {
+      "id": "brig",
+      "source": "pw",
+      "name": "Brig",
       "numBays": 1,
       "sizes": [
         "Tiny",
@@ -56,6 +203,215 @@
       "bpCost": 0
     },
     {
+      "id": "cloaking-device",
+      "source": "dnd",
+      "name": "Cloaking Device",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 50,
+      "bpCost": 16
+    },
+    {
+      "id": "combat-training-facility-advanced",
+      "source": "som",
+      "name": "Combat Training Facility (Advanced)",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 8
+    },
+    {
+      "id": "combat-training-facility-basic",
+      "source": "som",
+      "name": "Combat Training Facility (Basic)",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 3,
+      "bpCost": 3
+    },
+    {
+      "id": "combat-training-facility-elite",
+      "source": "som",
+      "name": "Combat Training Facility (Elite)",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 10
+    },
+    {
+      "id": "conference-and-meeting-rooms",
+      "source": "ns",
+      "name": "Conference and Meeting Rooms",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 1,
+      "bpCost": 1
+    },
+    {
+      "id": "corpse-recycler",
+      "source": "som",
+      "name": "Corpse Recycler",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 2,
+      "bpCost": 2
+    },
+    {
+      "id": "cryo-chamber",
+      "source": "som",
+      "name": "Cryo Chamber",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 10,
+      "bpCost": 5
+    },
+    {
+      "id": "dedicated-computer-housing",
+      "source": "som",
+      "name": "Dedicated Computer Housing",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 0,
+      "bpCost": 2
+    },
+    {
+      "id": "drift-booster",
+      "source": "som",
+      "name": "Drift Booster",
+      "numBays": 1,
+      "sizes": [
+        "Supercolossal"
+      ],
+      "pcuCost": 40,
+      "bpCost": 20
+    },
+    {
+      "id": "drift-shadow-projector",
+      "source": "pw",
+      "name": "Drift Shadow Projector",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 15
+    },
+    {
+      "id": "drop-pod",
+      "source": "som",
+      "name": "Drop Pod",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 5
+    },
+    {
+      "id": "drop-pod-colossal",
+      "source": "som",
+      "name": "Drop Pod (Colossal)",
+      "numBays": 2,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 10,
+      "bpCost": 10
+    },
+    {
       "id": "escape-pods",
       "source": "scr",
       "name": "Escape Pods",
@@ -72,6 +428,55 @@
       ],
       "pcuCost": 2,
       "bpCost": 1
+    },
+    {
+      "id": "external-expansion-bay",
+      "source": "som",
+      "name": "External Expansion Bay",
+      "numBays": 0,
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 0,
+      "bpCost": 3
+    },
+    {
+      "id": "fabricator",
+      "source": "dnd",
+      "name": "Fabricator",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 15,
+      "bpCost": 2
+    },
+    {
+      "id": "ghost-drive",
+      "source": "som",
+      "name": "Ghost Drive",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "pcuCost": 10,
+      "bpCost": 5
     },
     {
       "id": "guest-quarters-common",
@@ -132,9 +537,97 @@
       "source": "scr",
       "name": "Hangar Bay",
       "numBays": 4,
-      "sizes": ["Gargantuan", "Colossal", "Supercolossal"],
+      "sizes": [
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
       "pcuCost": 30,
       "bpCost": 10
+    },
+    {
+      "id": "healing-pods",
+      "source": "som",
+      "name": "Healing Pods",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 2,
+      "bpCost": 3
+    },
+    {
+      "id": "hive-bay",
+      "source": "pw",
+      "name": "Hive Bay",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 10
+    },
+    {
+      "id": "hydroponic-garden",
+      "source": "pw",
+      "name": "Hydroponic Garden",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 0,
+      "bpCost": 5
+    },
+    {
+      "id": "hypercapacitor",
+      "source": "dnd",
+      "name": "Hypercapacitor",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 10
+    },
+    {
+      "id": "launch-tubes",
+      "source": "pw",
+      "name": "Launch Tubes",
+      "numBays": 2,
+      "sizes": [
+        "Medium",
+        "Large"
+      ],
+      "pcuCost": 10,
+      "bpCost": 5
     },
     {
       "id": "life-boats",
@@ -195,9 +688,31 @@
       "source": "scr",
       "name": "Power Core Housing",
       "numBays": 1,
-      "sizes": ["Medium", "Large"],
+      "sizes": [
+        "Medium",
+        "Large"
+      ],
       "pcuCost": 0,
       "bpCost": 10
+    },
+    {
+      "id": "quantum-defender",
+      "source": "som",
+      "name": "Quantum Defender",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 0,
+      "bpCost": 0,
+      "notes": "Calculated PCU and BP cost"
     },
     {
       "id": "recreation-suite-gym",
@@ -215,6 +730,24 @@
         "Supercolossal"
       ],
       "pcuCost": 0,
+      "bpCost": 1
+    },
+    {
+      "id": "recreation-suite-hac",
+      "source": "scr",
+      "name": "Recreation Suite (HAC)",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 3,
       "bpCost": 1
     },
     {
@@ -236,21 +769,14 @@
       "bpCost": 1
     },
     {
-      "id": "recreation-suite-hac",
-      "source": "scr",
-      "name": "Recreation Suite (HAC)",
+      "id": "recycling-system",
+      "source": "som",
+      "name": "Recycling System",
       "numBays": 1,
       "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
         "Supercolossal"
       ],
-      "pcuCost": 3,
+      "pcuCost": 2,
       "bpCost": 1
     },
     {
@@ -326,11 +852,34 @@
       "bpCost": 1
     },
     {
+      "id": "sensor-tri-probe",
+      "source": "dnd",
+      "name": "Sensor Tri-Probe",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 5,
+      "bpCost": 5
+    },
+    {
       "id": "shuttle-bay",
       "source": "scr",
       "name": "Shuttle Bay",
       "numBays": 2,
-      "sizes": ["Huge", "Gargantuan", "Colossal", "Supercolossal"],
+      "sizes": [
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
       "pcuCost": 10,
       "bpCost": 4
     },
@@ -461,6 +1010,24 @@
       "bpCost": 8
     },
     {
+      "id": "surveying-sensors",
+      "source": "som",
+      "name": "Surveying Sensors",
+      "numBays": 1,
+      "sizes": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan",
+        "Colossal",
+        "Supercolossal"
+      ],
+      "pcuCost": 3,
+      "bpCost": 3
+    },
+    {
       "id": "synthesis-bay",
       "source": "scr",
       "name": "Synthesis Bay",
@@ -497,270 +1064,9 @@
       "bpCost": 1
     },
     {
-      "id": "brig",
-      "source": "pw",
-      "name": "Brig",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 1,
-      "bpCost": 1
-    },
-    {
-      "id": "drift-shadow-projector",
-      "source": "pw",
-      "name": "Drift Shadow Projector",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 15
-    },
-    {
-      "id": "hive-bay",
-      "source": "pw",
-      "name": "Hive Bay",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 10
-    },
-    {
-      "id": "hydroponic-garden",
-      "source": "pw",
-      "name": "Hydroponic Garden",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 0,
-      "bpCost": 5
-    },
-    {
-      "id": "launch-tubes",
-      "source": "pw",
-      "name": "Launch Tubes",
-      "numBays": 2,
-      "sizes": ["Medium", "Large"],
-      "pcuCost": 10,
-      "bpCost": 5
-    },
-    {
-      "id": "arcane-mortuary",
-      "source": "som",
-      "name": "Arcane Mortuary",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 1,
-      "bpCost": 2
-    },
-    {
-      "id": "booster-thruster-housing",
-      "source": "som",
-      "name": "Booster Thruster Housing",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 0,
-      "bpCost": 3
-    },
-    {
-      "id": "breaching-pod",
-      "source": "som",
-      "name": "Breaching Pod",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 5
-    },
-    {
-      "id": "breaching-pod-autonomous",
-      "source": "som",
-      "name": "Breaching Pod with Autonomous Combatants",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 7
-    },
-    {
-      "id": "breaching-pod-skilled",
-      "source": "som",
-      "name": "Breaching Pod with Skilled Autonomous Combatants",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 9
-    },
-    {
-      "id": "breaching-pod-specialized",
-      "source": "som",
-      "name": "Breaching Pod with Specialized Autonomous Combatants",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 11
-    },
-    {
-      "id": "combat-training-facility-basic",
-      "source": "som",
-      "name": "Combat Training Facility (Basic)",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 3,
-      "bpCost": 3
-    },
-    {
-      "id": "combat-training-facility-advanced",
-      "source": "som",
-      "name": "Combat Training Facility (Advanced)",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 8
-    },
-    {
-      "id": "combat-training-facility-elite",
-      "source": "som",
-      "name": "Combat Training Facility (Elite)",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 10
-    },
-    {
-      "id": "corpse-recycler",
-      "source": "som",
-      "name": "Corpse Recycler",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 2,
-      "bpCost": 2
-    },
-    {
-      "id": "cryo-chamber",
-      "source": "som",
-      "name": "Cryo Chamber",
+      "id": "teleport-circle",
+      "source": "dnd",
+      "name": "Teleport Circle",
       "numBays": 1,
       "sizes": [
         "Tiny",
@@ -773,134 +1079,7 @@
         "Supercolossal"
       ],
       "pcuCost": 10,
-      "bpCost": 5
-    },
-    {
-      "id": "dedicated-computer-housing",
-      "source": "som",
-      "name": "Dedicated Computer Housing",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 0,
-      "bpCost": 2
-    },
-    {
-      "id": "drop-pod",
-      "source": "som",
-      "name": "Drop Pod",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 5
-    },
-    {
-      "id": "drop-pod-colossal",
-      "source": "som",
-      "name": "Drop Pod (Colossal)",
-      "numBays": 2,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 10,
-      "bpCost": 10
-    },
-    {
-      "id": "external-expansion-bay",
-      "source": "som",
-      "name": "External Expansion Bay",
-      "numBays": 0,
-      "sizes": ["Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal", "Supercolossal"],
-      "pcuCost": 0,
-      "bpCost": 3
-    },
-    {
-      "id": "ghost-drive",
-      "source": "som",
-      "name": "Ghost Drive",
-      "numBays": 1,
-      "sizes": ["Tiny", "Small", "Medium", "Large"],
-      "pcuCost": 10,
-      "bpCost": 5
-    },
-    {
-      "id": "healing-pods",
-      "source": "som",
-      "name": "Healing Pods",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 2,
-      "bpCost": 3
-    },
-    {
-      "id": "quantum-defender",
-      "source": "som",
-      "name": "Quantum Defender",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 0,
-      "bpCost": 0,
-      "notes": "Calculated PCU and BP cost"
-    },
-    {
-      "id": "surveying-sensors",
-      "source": "som",
-      "name": "Surveying Sensors",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 3,
-      "bpCost": 3
+      "bpCost": 20
     },
     {
       "id": "thrusters-primer",
@@ -919,150 +1098,6 @@
       ],
       "pcuCost": 5,
       "bpCost": 1
-    },
-    {
-      "id": "drift-booster",
-      "source": "som",
-      "name": "Drift Booster",
-      "numBays": 1,
-      "sizes": ["Supercolossal"],
-      "pcuCost": 40,
-      "bpCost": 20
-    },
-    {
-      "id": "recycling-system",
-      "source": "som",
-      "name": "Recycling System",
-      "numBays": 1,
-      "sizes": ["Supercolossal"],
-      "pcuCost": 2,
-      "bpCost": 1
-    },
-    {
-      "id": "conference-and-meeting-rooms",
-      "source": "ns",
-      "name": "Conference and Meeting Rooms",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 1,
-      "bpCost": 1
-    },
-    {
-      "id": "arcane-cannon",
-      "source": "dnd",
-      "name": "Arcane Cannon",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 25,
-      "bpCost": 15
-    },
-    {
-      "id": "cloaking-device",
-      "source": "dnd",
-      "name": "Cloaking Device",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 50,
-      "bpCost": 20
-    },
-    {
-      "id": "fabricator",
-      "source": "dnd",
-      "name": "Fabricator",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 25,
-      "bpCost": 5
-    },
-    {
-      "id": "hypercapacitor",
-      "source": "dnd",
-      "name": "Hypercapacitor",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 10
-    },
-    {
-      "id": "sensor-tri-probe",
-      "source": "dnd",
-      "name": "Sensor Tri-Probe",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 5,
-      "bpCost": 5
-    },
-    {
-      "id": "teleport-circle",
-      "source": "dnd",
-      "name": "Teleport Circle",
-      "numBays": 1,
-      "sizes": [
-        "Tiny",
-        "Small",
-        "Medium",
-        "Large",
-        "Huge",
-        "Gargantuan",
-        "Colossal",
-        "Supercolossal"
-      ],
-      "pcuCost": 10,
-      "bpCost": 20
     }
   ]
 }
