@@ -89,7 +89,7 @@
                 ({{ params.thrustersMaterialId }} thrusters)</span
               >; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span
                 v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0"
-                >; <strong>Hyperdrive</strong> {{ driftEngine.engineRating }}</span
+                >; <strong>Jump Distance</strong> {{ driftEngine.engineRating }}</span
               >
             </p>
             <p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
@@ -1509,7 +1509,7 @@
         <div class="box__info" v-if="driftEngine.notes !== undefined">
           <em>Note: </em>{{ driftEngine.notes }}
         </div>
-        <div class="box__info"><strong>Hyperdrive Rating</strong> {{ driftEngine.engineRating }}</div>
+        <div class="box__info"><strong>Jump Distance</strong> {{ driftEngine.engineRating }}</div>
         <div class="box__cost">
           <svg class="icon">
             <use xlink:href="#icon-build" />

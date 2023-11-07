@@ -15,7 +15,7 @@
     },
     {
       "id": "signal-basic",
-      "name": "Hyper Class I",
+      "name": "Class I",
       "engineRating": 1,
       "minPcu": 75,
       "maxSize": 10,
@@ -23,7 +23,7 @@
     },
     {
       "id": "signal-booster",
-      "name": "Hyper Class II",
+      "name": "Class II",
       "engineRating": 2,
       "minPcu": 100,
       "maxSize": 5,
@@ -31,7 +31,7 @@
     },
     {
       "id": "signal-major",
-      "name": "Hyper Class III",
+      "name": "Class III",
       "engineRating": 3,
       "minPcu": 150,
       "maxSize": 4,
@@ -39,7 +39,7 @@
     },
     {
       "id": "signal-superior",
-      "name": "Hyper Class IV",
+      "name": "Class IV",
       "engineRating": 4,
       "minPcu": 175,
       "maxSize": 4,
@@ -47,7 +47,7 @@
     },
     {
       "id": "signal-ultra",
-      "name": "Hyper Class V",
+      "name": "Class V",
       "engineRating": 5,
       "minPcu": 200,
       "maxSize": 3,

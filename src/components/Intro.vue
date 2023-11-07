@@ -37,7 +37,7 @@
     </p>
     <ul>
       <li>Change Drift to Hyperdrive</li>
-      <li>Rename Hyperdrives to Hyper Class I-V</li>
+      <li>Rename Hyperdrives to Class I-V</li>
       <li>Reduce BP cost of Hyperdrives</li>
       <li>Add Corvette frame</li>
       <li>Default to no crew</li>
