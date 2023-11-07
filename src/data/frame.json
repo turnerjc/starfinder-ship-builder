@@ -185,10 +185,38 @@
       "bpCost": 12
     },
     {
+      "id": "transport",
+      "name": "Transport",
+      "source": "scr",
+      "size": "Medium",
+      "maneuverability": "average",
+      "hp": 70,
+      "hpIncrement": 15,
+      "dt": "n/a",
+      "ct": 14,
+      "mounts": {
+        "forward": [
+          "heavy",
+          "light"
+        ],
+        "aft": [
+          "light"
+        ],
+        "turret": [
+          "light",
+          "light"
+        ]
+      },
+      "expansionBays": 5,
+      "minCrew": 1,
+      "maxCrew": 6,
+      "bpCost": 15
+    },
+    {
       "id": "corvette",
       "name": "Corvette",
       "source": "dnd",
-      "size": "Large",
+      "size": "Medium",
       "maneuverability": "good",
       "hp": 90,
       "hpIncrement": 15,
@@ -215,34 +243,6 @@
       "expansionBays": 6,
       "minCrew": 4,
       "maxCrew": 20,
-      "bpCost": 20
-    },
-    {
-      "id": "transport",
-      "name": "Transport",
-      "source": "scr",
-      "size": "Medium",
-      "maneuverability": "average",
-      "hp": 70,
-      "hpIncrement": 15,
-      "dt": "n/a",
-      "ct": 14,
-      "mounts": {
-        "forward": [
-          "heavy",
-          "light"
-        ],
-        "aft": [
-          "light"
-        ],
-        "turret": [
-          "light",
-          "light"
-        ]
-      },
-      "expansionBays": 5,
-      "minCrew": 1,
-      "maxCrew": 6,
       "bpCost": 15
     },
     {
