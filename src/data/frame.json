@@ -185,6 +185,39 @@
       "bpCost": 12
     },
     {
+      "id": "corvette",
+      "name": "Corvette",
+      "source": "dnd",
+      "size": "Large",
+      "maneuverability": "good",
+      "hp": 90,
+      "hpIncrement": 15,
+      "dt": "n/a",
+      "ct": 18,
+      "mounts": {
+        "forward": [
+          "heavy",
+          "light"
+        ],
+        "port": [
+          "light"
+        ],
+        "starboard": [
+          "light"
+        ],
+        "aft": [
+          "light"
+        ],
+        "turret": [
+          "heavy"
+        ]
+      },
+      "expansionBays": 6,
+      "minCrew": 4,
+      "maxCrew": 20,
+      "bpCost": 20
+    },
+    {
       "id": "transport",
       "name": "Transport",
       "source": "scr",
@@ -211,39 +244,6 @@
       "minCrew": 1,
       "maxCrew": 6,
       "bpCost": 15
-    },
-    {
-      "id": "corvette",
-      "name": "Corvette",
-      "source": "dnd",
-      "size": "Large",
-      "maneuverability": "average",
-      "hp": 110,
-      "hpIncrement": 20,
-      "dt": "n/a",
-      "ct": 22,
-      "mounts": {
-        "forward": [
-          "heavy",
-          "light"
-        ],
-        "port": [
-          "light"
-        ],
-        "starboard": [
-          "light"
-        ],
-        "aft": [
-          "light"
-        ],
-        "turret": [
-          "heavy"
-        ]
-      },
-      "expansionBays": 6,
-      "minCrew": 4,
-      "maxCrew": 20,
-      "bpCost": 25
     },
     {
       "id": "destroyer",
