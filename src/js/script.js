@@ -2497,7 +2497,9 @@ function Ship(json) {
             	// Quantum defender
             	if (bay.id == 'quantum-defender') {
             		var bpCost = 4 * this.sizeCategory.multiplier;
-            		return bpCost < 10 ? 10 : bpCost;
+                    var cost = bpCost < 10 ? 10 : bpCost;
+                    bay.bpCost = cost;
+                    return cost;
             	}
 
             	// everything else
@@ -2510,7 +2512,8 @@ function Ship(json) {
             	// Quantum defender
             	if (bay.id == 'quantum-defender') {
             		var pcuCost = 5 * this.sizeCategory.multiplier;
-            		return pcuCost < 20 ? 20 : pcuCost;
+                    var cost = pcuCost < 20 ? 20 : pcuCost;
+                    bay.pcuCost = cost;
             	}
 
             	// everything else

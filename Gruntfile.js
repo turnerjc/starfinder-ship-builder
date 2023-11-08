@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
@@ -15,6 +15,26 @@ module.exports = function(grunt) {
 				src: 'src/js/script.js',
 				dest: 'dist/js/script.js'
 			}
+		},
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed'
+				},
+				files: {
+					'src/css/style.css': 'src/sass/style.scss'
+				}
+			}
+		},
+
+		copy: {
+			main: {
+				files: [
+					// includes files within path
+					{ expand: true, cwd: 'src/vendor', src: '**', dest: 'dist/vendor/', filter: 'isFile' },
+					{ expand: true, cwd: 'src/img', src: '**', dest: 'dist/img/', filter: 'isFile' },
+				],
+			},
 		},
 		// minify CSS
 		cssmin: {
@@ -68,13 +88,15 @@ module.exports = function(grunt) {
 
 	// Load the plugin that provides the "uglify" task.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-minjson');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	grunt.registerTask('default', ['uglify', 'cssmin', 'minjson', 'htmlmin']);
+	grunt.registerTask('default', ['uglify', 'sass', 'cssmin', 'minjson', 'htmlmin', 'copy']);
 	grunt.registerTask('watch', ['watch']);
 
 };
